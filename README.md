@@ -4,7 +4,7 @@ Collection of ontologies created by the partner projects of Material Digital 1
 ## List of ontologies
 | Project Name | Namespace | Reference to own public resource |
 | ------------ | --------- | -------------------------------- |
-| Ontology Publication Template | https://w3id.org/pmd/ont_pub_tmpl | https://github.com/materialdigital/ontology_publication_template |
+| [Ontology Publication Template](ont_pub_tmplt/) | https://w3id.org/pmd/ont_pub_tmplt | https://github.com/materialdigital/ontology_publication_template |
 | SensoTwin    |           |                                  |
 | DiProMag     | | |
 | DiStAl       | | |
