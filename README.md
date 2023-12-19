@@ -20,7 +20,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [DigiBatMat](DigiBatMat/) | | |
 
 ## Technical requirements for ontologies
-These requirements as well as the Additional requirements for publishing ontologies below are identical to the information in the spreadsheet, that was attached to the email about the umbrella paper.
+These requirements as well as the [Additional requirements for publishing ontologies](README.md#additional-requirements-for-publishing-ontologies) below are identical to the information in the spreadsheet, that was attached to the email about the umbrella paper.
 
 ### Ontology metadata
 | Requirement | Description | Prefered property | Example |
@@ -64,9 +64,9 @@ These requirements as well as the Additional requirements for publishing ontolog
 
 ## How to contribute
 Please fork the repository and create a pull request after completing the following tasks
-1. Make sure your ontology/ontologies meet/s the requirements given in **FIXME**
+1. Make sure your ontology/ontologies meet/s the requirements given in [Technical requirements for ontologies](README.md#technical-requirements-for-ontologies) and [Additional requirements for publishing ontologies](README.md#additional-requirements-for-publishing-ontologies)
 2. Place your ontology files in your projects folder
-3. Edit the information in this README.md
+3. Edit the information in this [README.md](README.md)
 
 ## Where to find help
 If you have questions about your contribution HAP 4 is happy to help. Please get in touch by using the discussion of the pull requests tool or contact us directly.
