@@ -65,7 +65,7 @@ These requirements as well as the [Additional requirements for publishing ontolo
 ## How to contribute
 Please fork the repository and create a pull request after completing the following tasks
 1. Make sure your ontology/ontologies meet/s the requirements given in [Technical requirements for ontologies](README.md#technical-requirements-for-ontologies) and [Additional requirements for publishing ontologies](README.md#additional-requirements-for-publishing-ontologies)
-2. Place your ontology files in your projects folder
+2. Place your ontology files in your projects folder (feel free to change the directory names, but please keep the links in [README.md](README.md) consistent)
 3. Edit the information in this [README.md](README.md)
 
 ## Where to find help
