@@ -1,0 +1,51 @@
+@prefix : <https://w3id.org/pmd/ont_pub_tmplt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<https://w3id.org/pmd/ont_pub_tmplt> rdf:type owl:Ontology ;
+                           owl:imports <http://purl.org/dc/terms> ;
+                           dcterms:title "Ontology Publication Template for the PMD"@en ;
+                           dcterms:creator <https://orcid.org/0000-0000-0000-0000> ; # alt.: provide the name as string literal e.g. "John Doe"
+                           dcterms:created "2023-12-15" ;
+                           owl:versionInfo "1.0.0" ;
+                           owl:versionIRI <https://w3id.org/pmd/ont_pub_tmplt/1.0.0> ;
+                           rdfs:comment """This is an example ontology to help PMD partner projects to get an overview over the formal requirements imposed by HAP 4. 
+                                           It's meant as a blueprint for updating the partner projects ontologies and thus does not carry any relevant concepts. This 
+                                           file is related to the github repository https://github.com/materialdigital/ontology_publication_template where there is 
+                                           more information about how to work with this example."""@en ;
+                           dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                           dcterms:bibliographicCitation """Doe J. (1960) Foo Ontology. Journal of Everything, 42(42), 3-42.""" .
+
+###  https://example.org/example-ontology-stub/ExampleClassStub
+:ExampleClassStub rdf:type owl:Class ;
+                  skos:definition "An example Class"@en ;
+                  rdfs:comment "An example Class"@en ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/ont_pub_tmplt> ;
+                  obo:IAO_0000114 obo:IAO_0000428 ;
+                  obo:IAO_0000117 "PERSON: John Doe" ;
+                  rdfs:label "Example Class Stub"@en .
+
+### https://example.org/example-ontology-stub/exampleRelation
+:exampleRelation rdf:type owl:ObjectProperty ;
+                 skos:definition "An example relation"@en ;
+                 rdfs:label "Example Relation"@en ;
+                 obo:IAO_0000114 obo:IAO_0000428 ;
+                 obo:IAO_0000117 "PERSON: John Doe" ;
+                 rdfs:domain :ExampleClassStub ;
+                 rdfs:range :ExampleClassStub .
+
+### https://example.org/example-ontology-stub/exampleInverseRelation
+:exampleInverseRelation rdf:type owl:ObjectProperty ;
+                        skos:definition "An example inverse relation"@en ;
+                        rdfs:label "Example Inverse Relation"@en ;
+                        obo:IAO_0000114 obo:IAO_0000428 ;
+                        obo:IAO_0000117 "PERSON: John Doe" ;
+                        owl:inverseOf :exampleRelation ;
+                        rdfs:domain :ExampleClassStub ;
+                        rdfs:range :ExampleClassStub .
