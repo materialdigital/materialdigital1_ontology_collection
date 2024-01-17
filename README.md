@@ -11,7 +11,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [KNOW-NOW](KNOW-NOW/) | | |
 | [ODE_AM](ODE_AM/) | | |
 | [SmaDi](SmaDi/) | | |
-| [GlasDigital](GlasDigital/) | | |
+| [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
 | [LeBeDigital](LeBeDigital/) | | |
 | [DIGITRUBBER](DIGITRUBBER/) | | |
