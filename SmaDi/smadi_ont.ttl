@@ -1,0 +1,714 @@
+@prefix : <urn:absolute/smadiont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:absolute/smadiont#> .
+
+<urn:absolute/smadiont#> rdf:type owl:Ontology ;
+                          owl:imports <http://purl.org/dc/terms> ;
+                          <http://purl.org/dc/terms/bibliographicCitation> "Jana Mertens, Mena Leemhuis, Özgür Özçep, Hedda Schmidtke, and Jürgen Maas \"Digitalized data access of DE material models and their parameters using an OBD(M)A approach\", Proc. SPIE 12482, Electroactive Polymer Actuators and Devices (EAPAD) XXV, 124820Z (28 April 2023); https://doi.org/10.1117/12.2661222" ;
+                          <http://purl.org/dc/terms/created> "2024-01-19" ;
+                          <http://purl.org/dc/terms/creator> "<https://orcid.org/0000-0003-1017-8921>" ;
+                          <http://purl.org/dc/terms/license> "<http://creativecommons.org/licenses/by/4.0/>" ;
+                          <http://purl.org/dc/terms/title> "SmaDi-Ontology" ;
+                          rdfs:comment "This is an ontology for the PMD-project SmaDi, designed for smart materials and with the focus on using it in the context of ontology-based data access (OBDA)." ;
+                          owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:absolute/smadiont#corresponds_with
+:corresponds_with rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#curve_param1
+:curve_param1 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#curve_param2
+:curve_param2 rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#determined_with
+:determined_with rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_boundary_condition
+:has_boundary_condition rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_curve
+:has_curve rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_input
+:has_input rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_input_characteristic_curve
+:has_input_characteristic_curve rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :has_input .
+
+
+###  urn:absolute/smadiont#has_input_parameter
+:has_input_parameter rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :has_input .
+
+
+###  urn:absolute/smadiont#has_output
+:has_output rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_parameter
+:has_parameter rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  urn:absolute/smadiont#has_tuple
+:has_tuple rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:absolute/smadiont#has_column
+:has_column rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_description
+:has_description rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_equation
+:has_equation rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_row
+:has_row rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_symbol
+:has_symbol rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_unit
+:has_unit rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  urn:absolute/smadiont#has_value
+:has_value rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  urn:absolute/smadiont#DE
+:DE rdf:type owl:Class ;
+    rdfs:subClassOf :elements_of_materialtypes .
+
+
+###  urn:absolute/smadiont#DE-material
+:DE-material rdf:type owl:Class ;
+             rdfs:subClassOf :DE .
+
+
+###  urn:absolute/smadiont#E-modulus_austenite
+:E-modulus_austenite rdf:type owl:Class ;
+                     rdfs:subClassOf :elastic_parameters .
+
+
+###  urn:absolute/smadiont#E-modulus_de-twinned_martensite
+:E-modulus_de-twinned_martensite rdf:type owl:Class ;
+                                 rdfs:subClassOf :elastic_parameters .
+
+
+###  urn:absolute/smadiont#E-modulus_twinned_martensite
+:E-modulus_twinned_martensite rdf:type owl:Class ;
+                              rdfs:subClassOf :elastic_parameters .
+
+
+###  urn:absolute/smadiont#MSMA
+:MSMA rdf:type owl:Class ;
+      rdfs:subClassOf :elements_of_materialtypes .
+
+
+###  urn:absolute/smadiont#MSMA-material
+:MSMA-material rdf:type owl:Class ;
+               rdfs:subClassOf :MSMA .
+
+
+###  urn:absolute/smadiont#MSMA-stick
+:MSMA-stick rdf:type owl:Class ;
+            rdfs:subClassOf :MSMA ,
+                            :component_level .
+
+
+###  urn:absolute/smadiont#PC
+:PC rdf:type owl:Class ;
+    rdfs:subClassOf :elements_of_materialtypes .
+
+
+###  urn:absolute/smadiont#PC-material
+:PC-material rdf:type owl:Class ;
+             rdfs:subClassOf :PC .
+
+
+###  urn:absolute/smadiont#SMA
+:SMA rdf:type owl:Class ;
+     rdfs:subClassOf :elements_of_materialtypes .
+
+
+###  urn:absolute/smadiont#SMA-material
+:SMA-material rdf:type owl:Class ;
+              rdfs:subClassOf :SMA .
+
+
+###  urn:absolute/smadiont#Yeoh_vector
+:Yeoh_vector rdf:type owl:Class ;
+             rdfs:subClassOf :elastic_parameters .
+
+
+###  urn:absolute/smadiont#Yeoh_vector_1
+:Yeoh_vector_1 rdf:type owl:Class ;
+               rdfs:subClassOf :Yeoh_vector .
+
+
+###  urn:absolute/smadiont#Yeoh_vector_2
+:Yeoh_vector_2 rdf:type owl:Class ;
+               rdfs:subClassOf :Yeoh_vector .
+
+
+###  urn:absolute/smadiont#Yeoh_vector_3
+:Yeoh_vector_3 rdf:type owl:Class ;
+               rdfs:subClassOf :Yeoh_vector .
+
+
+###  urn:absolute/smadiont#austenite_finish_temperature
+:austenite_finish_temperature rdf:type owl:Class ;
+                              rdfs:subClassOf :phase_transformation_temperature .
+
+
+###  urn:absolute/smadiont#austenite_start_temperature
+:austenite_start_temperature rdf:type owl:Class ;
+                             rdfs:subClassOf :phase_transformation_temperature .
+
+
+###  urn:absolute/smadiont#characteristic_curve
+:characteristic_curve rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#component_curves
+:component_curves rdf:type owl:Class ;
+                  rdfs:subClassOf :characteristic_curve .
+
+
+###  urn:absolute/smadiont#component_level
+:component_level rdf:type owl:Class ;
+                 rdfs:subClassOf :elements_of_levels .
+
+
+###  urn:absolute/smadiont#continuum_level
+:continuum_level rdf:type owl:Class ;
+                 rdfs:subClassOf :elements_of_levels .
+
+
+###  urn:absolute/smadiont#curve_magnetic_stress
+:curve_magnetic_stress rdf:type owl:Class ;
+                       rdfs:subClassOf :material_curves .
+
+
+###  urn:absolute/smadiont#dielectric_strength
+:dielectric_strength rdf:type owl:Class ;
+                     rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#elastic_parameters
+:elastic_parameters rdf:type owl:Class ;
+                    rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#electric_field
+:electric_field rdf:type owl:Class ;
+                rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#electric_permittivity_parameters
+:electric_permittivity_parameters rdf:type owl:Class ;
+                                  rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#electrostatic_pressure_model
+:electrostatic_pressure_model rdf:type owl:Class ;
+                              rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#elements_of_levels
+:elements_of_levels rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#elements_of_materialtypes
+:elements_of_materialtypes rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#flux_density
+:flux_density rdf:type owl:Class ;
+              rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#hardening_parameter
+:hardening_parameter rdf:type owl:Class ;
+                     rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#hysteresis_martensite_content
+:hysteresis_martensite_content rdf:type owl:Class ;
+                               rdfs:subClassOf :component_curves .
+
+
+###  urn:absolute/smadiont#identification_parameters
+:identification_parameters rdf:type owl:Class ;
+                           rdfs:subClassOf :parameter .
+
+
+###  urn:absolute/smadiont#initial_strain
+:initial_strain rdf:type owl:Class ;
+                rdfs:subClassOf :identification_parameters .
+
+
+###  urn:absolute/smadiont#initial_stress
+:initial_stress rdf:type owl:Class ;
+                rdfs:subClassOf :identification_parameters .
+
+
+###  urn:absolute/smadiont#inverse_permittivity_at_constant_mechanic_strain
+:inverse_permittivity_at_constant_mechanic_strain rdf:type owl:Class ;
+                                                  rdfs:subClassOf :electric_permittivity_parameters .
+
+
+###  urn:absolute/smadiont#inverse_permittivity_at_constant_mechanic_stress
+:inverse_permittivity_at_constant_mechanic_stress rdf:type owl:Class ;
+                                                  rdfs:subClassOf :electric_permittivity_parameters .
+
+
+###  urn:absolute/smadiont#lattice_constant
+:lattice_constant rdf:type owl:Class ;
+                  rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#lattice_constant_a
+:lattice_constant_a rdf:type owl:Class ;
+                    rdfs:subClassOf :lattice_constant ;
+                    owl:disjointWith :lattice_constant_c .
+
+
+###  urn:absolute/smadiont#lattice_constant_c
+:lattice_constant_c rdf:type owl:Class ;
+                    rdfs:subClassOf :lattice_constant .
+
+
+###  urn:absolute/smadiont#mag_energy_density
+:mag_energy_density rdf:type owl:Class ;
+                    rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#magnetic_curve
+:magnetic_curve rdf:type owl:Class ;
+                rdfs:subClassOf :material_curves .
+
+
+###  urn:absolute/smadiont#magnetic_curve_easy_axis
+:magnetic_curve_easy_axis rdf:type owl:Class ;
+                          rdfs:subClassOf :magnetic_curve ;
+                          owl:disjointWith :magnetic_curve_hard_axis .
+
+
+###  urn:absolute/smadiont#magnetic_curve_hard_axis
+:magnetic_curve_hard_axis rdf:type owl:Class ;
+                          rdfs:subClassOf :magnetic_curve .
+
+
+###  urn:absolute/smadiont#magnetic_field_strength
+:magnetic_field_strength rdf:type owl:Class ;
+                         rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#magnetic_polarization
+:magnetic_polarization rdf:type owl:Class ;
+                       rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#magnetic_stress
+:magnetic_stress rdf:type owl:Class ;
+                 rdfs:subClassOf :stress_parameter .
+
+
+###  urn:absolute/smadiont#magnetization
+:magnetization rdf:type owl:Class ;
+               rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#martensite_content
+:martensite_content rdf:type owl:Class ;
+                    rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#martensite_finish_temperature
+:martensite_finish_temperature rdf:type owl:Class ;
+                               rdfs:subClassOf :phase_transformation_temperature .
+
+
+###  urn:absolute/smadiont#martensite_start_temperature
+:martensite_start_temperature rdf:type owl:Class ;
+                              rdfs:subClassOf :phase_transformation_temperature .
+
+
+###  urn:absolute/smadiont#material
+:material rdf:type owl:Class ;
+          rdfs:subClassOf :micro_level ;
+          owl:disjointWith :sample .
+
+
+###  urn:absolute/smadiont#material_curves
+:material_curves rdf:type owl:Class ;
+                 rdfs:subClassOf :characteristic_curve .
+
+
+###  urn:absolute/smadiont#material_parameter
+:material_parameter rdf:type owl:Class ;
+                    rdfs:subClassOf :parameter .
+
+
+###  urn:absolute/smadiont#max_magnetic_stress
+:max_magnetic_stress rdf:type owl:Class ;
+                     rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#maximum_blocking_stress
+:maximum_blocking_stress rdf:type owl:Class ;
+                         rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#maximum_blocking_stress_hold
+:maximum_blocking_stress_hold rdf:type owl:Class ;
+                              rdfs:subClassOf :maximum_blocking_stress .
+
+
+###  urn:absolute/smadiont#maximum_blocking_stress_load
+:maximum_blocking_stress_load rdf:type owl:Class ;
+                              rdfs:subClassOf :maximum_blocking_stress .
+
+
+###  urn:absolute/smadiont#maximum_strain_mag
+:maximum_strain_mag rdf:type owl:Class ;
+                    rdfs:subClassOf :strain_parameter .
+
+
+###  urn:absolute/smadiont#measurement
+:measurement rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#mechanic_stress
+:mechanic_stress rdf:type owl:Class ;
+                 rdfs:subClassOf :stress_parameter .
+
+
+###  urn:absolute/smadiont#mechanical_compliance
+:mechanical_compliance rdf:type owl:Class ;
+                       rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#mechanical_compliance_at_constant_electric_field
+:mechanical_compliance_at_constant_electric_field rdf:type owl:Class ;
+                                                  rdfs:subClassOf :mechanical_compliance .
+
+
+###  urn:absolute/smadiont#mechanical_compliance_at_constant_flux_density
+:mechanical_compliance_at_constant_flux_density rdf:type owl:Class ;
+                                                rdfs:subClassOf :mechanical_compliance .
+
+
+###  urn:absolute/smadiont#mechanical_stiffness
+:mechanical_stiffness rdf:type owl:Class ;
+                      rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#mechanical_stiffness_at_constant_electric_field
+:mechanical_stiffness_at_constant_electric_field rdf:type owl:Class ;
+                                                 rdfs:subClassOf :mechanical_stiffness .
+
+
+###  urn:absolute/smadiont#mechanical_stiffness_at_constant_flux_density
+:mechanical_stiffness_at_constant_flux_density rdf:type owl:Class ;
+                                               rdfs:subClassOf :mechanical_stiffness .
+
+
+###  urn:absolute/smadiont#micro_level
+:micro_level rdf:type owl:Class ;
+             rdfs:subClassOf :elements_of_levels .
+
+
+###  urn:absolute/smadiont#model
+:model rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#parameter
+:parameter rdf:type owl:Class ;
+           rdfs:subClassOf :physical_quantity .
+
+
+###  urn:absolute/smadiont#permittivity_at_constant_mechanic_strain
+:permittivity_at_constant_mechanic_strain rdf:type owl:Class ;
+                                          rdfs:subClassOf :electric_permittivity_parameters .
+
+
+###  urn:absolute/smadiont#permittivity_at_constant_mechanic_stress
+:permittivity_at_constant_mechanic_stress rdf:type owl:Class ;
+                                          rdfs:subClassOf :electric_permittivity_parameters .
+
+
+###  urn:absolute/smadiont#phase_transformation_temperature
+:phase_transformation_temperature rdf:type owl:Class ;
+                                  rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#physical_constant
+:physical_constant rdf:type owl:Class ;
+                   rdfs:subClassOf :parameter .
+
+
+###  urn:absolute/smadiont#physical_quantity
+:physical_quantity rdf:type owl:Class .
+
+
+###  urn:absolute/smadiont#piezoelectric_charge_constant
+:piezoelectric_charge_constant rdf:type owl:Class ;
+                               rdfs:subClassOf :piezoelectric_coupling_parameters .
+
+
+###  urn:absolute/smadiont#piezoelectric_coupling
+:piezoelectric_coupling rdf:type owl:Class ;
+                        rdfs:subClassOf :piezoelectric_coupling_parameters .
+
+
+###  urn:absolute/smadiont#piezoelectric_coupling_parameters
+:piezoelectric_coupling_parameters rdf:type owl:Class ;
+                                   rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#piezoelectric_strain_constant
+:piezoelectric_strain_constant rdf:type owl:Class ;
+                               rdfs:subClassOf :piezoelectric_coupling_parameters .
+
+
+###  urn:absolute/smadiont#piezoelectric_stress_constant
+:piezoelectric_stress_constant rdf:type owl:Class ;
+                               rdfs:subClassOf :piezoelectric_coupling_parameters .
+
+
+###  urn:absolute/smadiont#plateau_finish_strain
+:plateau_finish_strain rdf:type owl:Class ;
+                       rdfs:subClassOf :strain_parameter .
+
+
+###  urn:absolute/smadiont#plateau_start_strain
+:plateau_start_strain rdf:type owl:Class ;
+                      rdfs:subClassOf :strain_parameter .
+
+
+###  urn:absolute/smadiont#relative_permeability
+:relative_permeability rdf:type owl:Class ;
+                       rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#relative_permittivity
+:relative_permittivity rdf:type owl:Class ;
+                       rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#sample
+:sample rdf:type owl:Class ;
+        rdfs:subClassOf :micro_level .
+
+
+###  urn:absolute/smadiont#state_dependent_quantity
+:state_dependent_quantity rdf:type owl:Class ;
+                          rdfs:subClassOf :physical_quantity .
+
+
+###  urn:absolute/smadiont#strain
+:strain rdf:type owl:Class ;
+        rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#strain_parameter
+:strain_parameter rdf:type owl:Class ;
+                  rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#stress-strain_curve_elastomer
+:stress-strain_curve_elastomer rdf:type owl:Class ;
+                               rdfs:subClassOf :material_curves .
+
+
+###  urn:absolute/smadiont#stress-strain_curve_martensite
+:stress-strain_curve_martensite rdf:type owl:Class ;
+                                rdfs:subClassOf :material_curves .
+
+
+###  urn:absolute/smadiont#stress_parameter
+:stress_parameter rdf:type owl:Class ;
+                  rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#temperature
+:temperature rdf:type owl:Class ;
+             rdfs:subClassOf :state_dependent_quantity .
+
+
+###  urn:absolute/smadiont#tensile_test
+:tensile_test rdf:type owl:Class ;
+              rdfs:subClassOf :measurement .
+
+
+###  urn:absolute/smadiont#twinning_stress
+:twinning_stress rdf:type owl:Class ;
+                 rdfs:subClassOf :material_parameter .
+
+
+###  urn:absolute/smadiont#vacuum_permeability
+:vacuum_permeability rdf:type owl:Class ;
+                     rdfs:subClassOf :physical_constant .
+
+
+###  urn:absolute/smadiont#vacuum_permittivity
+:vacuum_permittivity rdf:type owl:Class ;
+                     rdfs:subClassOf :physical_constant .
+
+
+###  urn:absolute/smadiont#wire_actuator
+:wire_actuator rdf:type owl:Class ;
+               rdfs:subClassOf :SMA ,
+                               :component_level .
+
+
+###  urn:absolute/smadiont#yeoh_minR
+:yeoh_minR rdf:type owl:Class ;
+           rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#young_modulus
+:young_modulus rdf:type owl:Class ;
+               rdfs:subClassOf :elastic_parameters .
+
+
+###  urn:absolute/smadiont#young_modulus_Neo_Hookean_initial_gradient
+:young_modulus_Neo_Hookean_initial_gradient rdf:type owl:Class ;
+                                            rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#young_modulus_Neo_Hookean_minR
+:young_modulus_Neo_Hookean_minR rdf:type owl:Class ;
+                                rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#young_modulus_initial_gradient
+:young_modulus_initial_gradient rdf:type owl:Class ;
+                                rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#young_modulus_minR
+:young_modulus_minR rdf:type owl:Class ;
+                    rdfs:subClassOf :model .
+
+
+###  urn:absolute/smadiont#young_modulus_neo_Hookean
+:young_modulus_neo_Hookean rdf:type owl:Class ;
+                           rdfs:subClassOf :elastic_parameters .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DE
+                :DE-material
+                :MSMA
+                :MSMA-material
+                :PC
+                :PC-material
+                :SMA
+                :SMA-material
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DE
+                :MSMA
+                :PC
+                :SMA
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Yeoh_vector
+                :Yeoh_vector_1
+                :Yeoh_vector_2
+                :Yeoh_vector_3
+                :young_modulus
+                :young_modulus_neo_Hookean
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :component_curves
+                :hysteresis_martensite_content
+                :magnetic_curve
+                :material_curves
+                :stress-strain_curve_elastomer
+                :stress-strain_curve_martensite
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :dielectric_strength
+                :maximum_blocking_stress
+                :maximum_blocking_stress_hold
+                :maximum_blocking_stress_load
+                :relative_permittivity
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
