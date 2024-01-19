@@ -10,7 +10,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [DiStAl](DiStAl/) | | |
 | [KNOW-NOW](KNOW-NOW/) | | https://git.tu-berlin.de/felipebaca/know-now |
 | [ODE_AM](ODE_AM/) | | |
-| [SmaDi](SmaDi/) | | |
+| [SmaDi](SmaDi/) | <urn:absolute/smadiont#> | https://github.com/SmaDi-OBDMA/SmaDi-OBDMA-system |
 | [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
 | [LeBeDigital](LeBeDigital/) | https://w3id.org/cpto | https://github.com/BAMresearch/LebeDigital |
