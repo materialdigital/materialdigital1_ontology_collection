@@ -13,7 +13,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [SmaDi](SmaDi/) | | |
 | [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
-| [LeBeDigital](LeBeDigital/) | | |
+| [LeBeDigital](LeBeDigital/) | https://w3id.org/cpto | https://github.com/BAMresearch/LebeDigital |
 | [DIGITRUBBER](DIGITRUBBER/) | | |
 | [StahlDigital](StahlDigital/) | | |
 | [KupferDigital](KupferDigital/) | | |
