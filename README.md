@@ -9,7 +9,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [DiProMag](DiProMag/) | https://www.dipromag.de/dipromag_onto/0.1/ | https://www.dipromag.de/dipromag_onto/0.1/ |
 | [DiStAl](DiStAl/) | | |
 | [KNOW-NOW](KNOW-NOW/) | | https://git.tu-berlin.de/felipebaca/know-now |
-| [ODE_AM](ODE_AM/) | | |
+| [ODE_AM](ODE_AM/) | Under Construction | https://github.com/ThomasBjarsch/ODE_AM |
 | [SmaDi](SmaDi/) | <urn:absolute/smadiont#> | https://github.com/SmaDi-OBDMA/SmaDi-OBDMA-system |
 | [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
