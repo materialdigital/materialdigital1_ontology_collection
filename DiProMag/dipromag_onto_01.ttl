@@ -22,7 +22,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix interval: <http://reference.data.gov.uk/def/intervals/> .
 @prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
-@prefix terms: <http://purl.org/dc/terms/> .
 
 <https://www.dipromag.de/dipromag_onto/0.1/> rdf:type owl:Ontology ;
                                            owl:versionIRI <https://www.dipromag.de/dipromag_onto/0.1/> ;
