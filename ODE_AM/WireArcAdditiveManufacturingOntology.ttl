@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wirearcadditivemanufacturingontology#"
+     xml:base="http://www.semanticweb.org/wirearcadditivemanufacturingontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:CommonCoreOntologies="http://www.ontologyrepository.com/CommonCoreOntologies/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohamed Kamal,  Jan Reimann</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-18T19:06:54</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 1.0</dc:date>
+        <dc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CC-BY-4.0</dc:license>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wire Arc Additive Manufacturing Application Ontology (WAAMO)</dc:title>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology, designed for use in data management for metal additive manufacturing with focus on Wire Arc Additive Manufacturing (WAAM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/version -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/version"/>
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/Objective -->
+
+    <owl:Class rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Objective"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter"/>
+        <rdfs:label>Act Of Wire Arc Additive Manufacturing Process Parameter</rdfs:label>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General settings or specific actions in the WAAM process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ArclengthCorrection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ArclengthCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition>Adjustments to maintain consistent arc length during welding</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ContactTubeWorkpiece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ContactTubeWorkpiece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distance between the contact tube an the workpiece</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#DynamicCorrection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#DynamicCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition>Real-time adjustments to welding parameters for process stability</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition>Current level when the welding arc is terminated</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrentTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrentTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition>Time duration for applying the end current</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#EnergyInputPerUnitLengthParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EnergyInputPerUnitLengthParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition>Amount of energy applied per unit length of the weld</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#InterLayerTemperatureParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#InterLayerTemperatureParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature between deposited layers</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#Kuka_KR60 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#Kuka_KR60">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireArcAdditveManufacturingMachine"/>
+        <CommonCoreOntologies:definition>Handling system for additive manufacturing usecase in DED-Arc</CommonCoreOntologies:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#MechanicalSimulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#MechanicalSimulation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Objective"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ThermalSimulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#PrintingTemperatureParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#PrintingTemperatureParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The temperature at which the material is deposited during the additive manufacturing process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasFlowRateParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasFlowRateParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rate of shielding gas flow to protect the weld area</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasTypeParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasTypeParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type of shielding gas used in welding</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope1Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope1Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rates of change in welding current</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope2Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope2Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rates of change in welding voltage</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartCurrentTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartCurrentTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration for applying the starting current</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartingCurrent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartingCurrent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initial current level when the welding arc starts</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#SubstratePlateTemperatureParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#SubstratePlateTemperatureParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature of the base material</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ThermalSimulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ThermalSimulation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#TriggerMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#TriggerMode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Method of initiating the welding process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadHeightParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadHeightParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Height of the individual welding bead</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadWidthParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadWidthParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Width of the single welding bead</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingCurrentParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingCurrentParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current used during the welding process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingMode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type of welding process used</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingPowerParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingPowerParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Total power used in the welding process</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingSpeedParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingSpeedParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speed of the welding torch movement</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingTorchInclinationParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingTorchInclinationParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle of the welding torch</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingVoltageParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingVoltageParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voltage applied during welding</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireArcAdditiveManufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireArcAdditiveManufacturing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing"/>
+        <CommonCoreOntologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process category is direct energie deposition, using a GMAW, in a wire feed process / WAAM - Wire-Arc-Additive-Manufacturing</CommonCoreOntologies:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wire Arc Additive Manufacturing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireArcAdditveManufacturingMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireArcAdditveManufacturingMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireChemicalComposition_Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireChemicalComposition_Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Composition of the welding wire</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireDiameterParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireDiameterParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diameter of the welding wire</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireFeedRateParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireFeedRateParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speed of wire feed into the weld pool</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireStandardizedDesignationParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireStandardizedDesignationParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard classification of the welding wire</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#ZJumpParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ZJumpParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertical movement between layers in additive manufacturing</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wirearcadditivemanufacturingontology#overlapParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#overlapParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ActOfWireArcAdditiveManufacturingProcessParameter"/>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extent of overlap between successive weld passes</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ArclengthCorrection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ContactTubeWorkpiece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#DynamicCorrection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EndCurrentTime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#EnergyInputPerUnitLengthParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#InterLayerTemperatureParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasFlowRateParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ShieldingGasTypeParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope1Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#Slope2Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartCurrentTime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#StartingCurrent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#SubstratePlateTemperatureParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#TriggerMode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadHeightParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingBeadWidthParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingCurrentParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingMode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingPowerParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingSpeedParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingTorchInclinationParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WeldingVoltageParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireChemicalComposition_Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireDiameterParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireFeedRateParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#WireStandardizedDesignationParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#ZJumpParameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wirearcadditivemanufacturingontology#overlapParameter"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
