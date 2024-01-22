@@ -1,0 +1,3113 @@
+@prefix : <https://glasdigi.cms.uni-jena.de/glass/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pmde: <https://material-digital.de/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix glass: <https://glasdigi.cms.uni-jena.de/glass/> .
+@prefix pmdco: <https://material-digital.de/pmdco/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix wikiba: <http://wikiba.se/ontology#> .
+@base <https://glasdigi.cms.uni-jena.de/glass/> .
+
+<https://w3id.org/pmd/glass-ontology/> rdf:type owl:Ontology ;
+                                        owl:versionIRI <https://w3id.org/pmd/glass-ontology/1.0.1> ;
+                                        obo:IAO_0000116 "References/definitions are mostly came from SciGlass database (https://github.com/epam/SciGlass), Bundesanstalt für Materialforschung und -prüfung (BAM) and Platform MaterialDigital (PMD). INTERGLAD database (https://www.newglass.jp/interglad_n/gaiyo/info_e.html) may also be adopted in the future."@en ;
+                                        terms:created "2024-01-21" ;
+                                        terms:creator "Simon Stier (https://orcid.org/0000-0003-0410-3616)" ,
+                                                      "Ya-Fan Chen (https://orcid.org/0000-0003-4295-7815)" ;
+                                        terms:license "https://creativecommons.org/licenses/by/4.0/"@en ;
+                                        terms:title "GlasDigital Ontology"@en ;
+                                        rdfs:comment """The GlasDigital Ontology was developed for the GlasDigital project (https://www.materialdigital.de/project/4). It describes the robotic melting process at Bundesanstalt für Materialforschung und -prüfung (BAM), Berlin and also contains the terminology of the SciGlass database (The data has become open source since 2019. See: https://github.com/epam/SciGlass).
+
+A practical use case of the ontology is the Semantic Knowledge Base (SKB) developed with Fast Ontodocker (https://git.material-digital.de/ya-fanchen/fast-ontodocker), which covers the entire glass manufacturing process parameters and glass property searching, as well as the integration of SciGlass data.
+
+It is based on the PMD Core Ontology (PMDco) v1 and a migration to the latest PMDco is planned.""" ;
+                                        owl:versionIRI "https://w3id.org/pmd/glass-ontology/"@en ;
+                                        owl:versionInfo "1.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                rdfs:label "definition"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                rdfs:label "alternative term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://wikiba.se/ontology#quantityUnit
+wikiba:quantityUnit rdf:type owl:ObjectProperty ;
+                    rdfs:domain wikiba:QuantityValue ;
+                    rdfs:range wikiba:Item ;
+                    rdfs:comment "Unit of measurement."@en ;
+                    rdfs:label "quantityUnit"@en .
+
+
+###  https://material-digital.de/pmdco/compose
+pmdco:compose rdf:type owl:ObjectProperty ;
+              rdfs:comment "This property is used to describe which objects a voxel or a material contributes to compose."@en ;
+              rdfs:label "compose"@en .
+
+
+###  https://material-digital.de/pmdco/composedBy
+pmdco:composedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain pmdco:Object ;
+                 rdfs:comment "This property is used to describe which voxels and materials an object is composed of."@en ;
+                 rdfs:label "composed by"@en .
+
+
+###  https://material-digital.de/pmdco/execute
+pmdco:execute rdf:type owl:ObjectProperty ;
+              rdfs:domain pmdco:ProcessNode ;
+              rdfs:range pmdco:Process ;
+              rdfs:comment "This property represents which process node executes a process"@en ;
+              rdfs:label "execute"@en .
+
+
+###  https://material-digital.de/pmdco/executedBy
+pmdco:executedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain pmdco:Process ;
+                 rdfs:range pmdco:ProcessNode ;
+                 rdfs:comment "This property represents which process is executed by which process node."@en ;
+                 rdfs:label "executed by"@en .
+
+
+###  https://material-digital.de/pmdco/hasDataResource
+pmdco:hasDataResource rdf:type owl:ObjectProperty ;
+                      rdfs:domain pmdco:Process ;
+                      rdfs:range pmdco:DataResource ;
+                      obo:IAO_0000116 "also used to connect glass to the Data Resource"@en ;
+                      rdfs:comment "This property is used to connect a Process to the Data Resource that describe the parameters and measurements produced during the process."@en ;
+                      rdfs:label "has data resource"@en .
+
+
+###  https://material-digital.de/pmdco/hasFinalProcess
+pmdco:hasFinalProcess rdf:type owl:ObjectProperty ;
+                      rdfs:domain pmdco:Process ;
+                      rdfs:range pmdco:Process ;
+                      rdfs:comment "This property is used to indicate the last process conducted by a process node in a series of processes conducted by the same process node."@en ;
+                      rdfs:label "has final process"@en .
+
+
+###  https://material-digital.de/pmdco/hasHeaderField
+pmdco:hasHeaderField rdf:type owl:ObjectProperty ;
+                     rdfs:domain pmdco:DataResource ;
+                     rdfs:range pmdco:HeaderField ;
+                     rdfs:comment "A description for each header field included in the blob represented by the data resource"@en ;
+                     rdfs:label "has header field"@en .
+
+
+###  https://material-digital.de/pmdco/hasInitialProcess
+pmdco:hasInitialProcess rdf:type owl:ObjectProperty ;
+                        rdfs:domain pmdco:Process ;
+                        rdfs:range pmdco:Process ;
+                        rdfs:comment "This property is used to indicate the initial process conducted by a process node in a series of processes conducted by the same process node."@en ;
+                        rdfs:label "has initial process"@en .
+
+
+###  https://material-digital.de/pmdco/hasInputObject
+pmdco:hasInputObject rdf:type owl:ObjectProperty ;
+                     rdfs:domain pmdco:Process ;
+                     rdfs:range pmdco:Object ;
+                     rdfs:comment "This property is used to link the processes to their input objects"@en ;
+                     rdfs:label "has input object"@en .
+
+
+###  https://material-digital.de/pmdco/hasMaterialStructure
+pmdco:hasMaterialStructure rdf:type owl:ObjectProperty ;
+                           rdfs:domain pmdco:Voxel ;
+                           rdfs:range pmdco:MaterialStructure ;
+                           rdfs:comment "This property is used to indicate which material structures a voxel has."@en ;
+                           rdfs:label "has material structure"@en .
+
+
+###  https://material-digital.de/pmdco/hasNextProcess
+pmdco:hasNextProcess rdf:type owl:ObjectProperty ;
+                     rdfs:domain pmdco:Process ;
+                     rdfs:range pmdco:Process ;
+                     rdfs:comment "This property is used to indicate the process that was run after the current process."@en ;
+                     rdfs:label "has next process"@en .
+
+
+###  https://material-digital.de/pmdco/hasOutputObject
+pmdco:hasOutputObject rdf:type owl:ObjectProperty ;
+                      rdfs:domain pmdco:Process ;
+                      rdfs:range pmdco:Object ;
+                      rdfs:comment "This property is used to link the processes to their output objects"@en ;
+                      rdfs:label "has output object"@en .
+
+
+###  https://material-digital.de/pmdco/hasPmdUnit
+pmdco:hasPmdUnit rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( wikiba:QuantityValue
+                                             pmdco:HeaderField
+                                           )
+                             ] ;
+                 rdfs:range pmdco:PmdSiUnit ;
+                 rdfs:comment "The association of a higher concept with a unit of measurement from Wikidata"@en ,
+                              "label modified: replace 'has pmd quantity unit' with 'has pmd unit'"@en ;
+                 rdfs:label "has pmd unit"@en .
+
+
+###  https://material-digital.de/pmdco/hasPreviousProcess
+pmdco:hasPreviousProcess rdf:type owl:ObjectProperty ;
+                         rdfs:domain pmdco:Process ;
+                         rdfs:range pmdco:Process ;
+                         rdfs:comment "This property is used to indicate that which process was previously run."@en ;
+                         rdfs:label "has previous process"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeComponent
+pmdco:hasProcessNodeComponent rdf:type owl:ObjectProperty ;
+                              rdfs:domain pmdco:ProcessNode ;
+                              rdfs:range pmdco:ProcessNodeComponent ;
+                              rdfs:comment "An object property associating a process node with its (potentially modular) components, e.g. the chambers of a heat treatment furnace."@en ;
+                              rdfs:label "has process node component"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeMeasurement
+pmdco:hasQuantitativeMeasurement rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf pmdco:hasQuantitativeParameter ;
+                                 rdfs:domain [ rdf:type owl:Class ;
+                                               owl:unionOf ( pmdco:Object
+                                                             pmdco:Process
+                                                           )
+                                             ] ;
+                                 rdfs:range [ rdf:type owl:Class ;
+                                              owl:unionOf ( wikiba:QuantityValue
+                                                            pmdco:HeaderField
+                                                          )
+                                            ] ;
+                                 rdfs:comment "This property is used to describe a quantity value that has been measured during the execution of a process."@en ;
+                                 rdfs:label "has quantitative measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement
+pmdco:hasQuantitativeMetadataMeasurement rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf pmdco:hasQuantitativeMeasurement ;
+                                         rdfs:domain [ rdf:type owl:Class ;
+                                                       owl:unionOf ( pmdco:Object
+                                                                     pmdco:Process
+                                                                   )
+                                                     ] ;
+                                         rdfs:range [ rdf:type owl:Class ;
+                                                      owl:unionOf ( wikiba:QuantityValue
+                                                                    pmdco:HeaderField
+                                                                  )
+                                                    ] ;
+                                         rdfs:label "has quantitative metadata measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter
+pmdco:hasQuantitativeNominalMetadataParameter rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf pmdco:hasQuantitativeNominalParameter ;
+                                              rdfs:domain [ rdf:type owl:Class ;
+                                                            owl:unionOf ( pmdco:Object
+                                                                          pmdco:Process
+                                                                        )
+                                                          ] ;
+                                              rdfs:range [ rdf:type owl:Class ;
+                                                           owl:unionOf ( wikiba:QuantityValue
+                                                                         pmdco:HeaderField
+                                                                       )
+                                                         ] ;
+                                              rdfs:comment "This property is used to describe a quantity value that is input of a process describing a metadata process parameter."@en ;
+                                              rdfs:label "has quantitative nominal metadata parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeNominalParameter
+pmdco:hasQuantitativeNominalParameter rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf pmdco:hasQuantitativeParameter ;
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( pmdco:Object
+                                                                  pmdco:Process
+                                                                )
+                                                  ] ;
+                                      rdfs:range [ rdf:type owl:Class ;
+                                                   owl:unionOf ( wikiba:QuantityValue
+                                                                 pmdco:HeaderField
+                                                               )
+                                                 ] ;
+                                      rdfs:comment "This property is used to describe a quantity value that was input of process."@en ;
+                                      rdfs:label "has quantitative nominal parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeNominalPrimaryParameter
+pmdco:hasQuantitativeNominalPrimaryParameter rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf pmdco:hasQuantitativeNominalParameter ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( pmdco:Object
+                                                                         pmdco:Process
+                                                                       )
+                                                         ] ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( wikiba:QuantityValue
+                                                                        pmdco:HeaderField
+                                                                      )
+                                                        ] ;
+                                             rdfs:comment "This property is used to describe a quantity value that is input of a process describing a primary process parameter."@en ;
+                                             rdfs:label "has quantitative nominal primary parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter
+pmdco:hasQuantitativeNominalSecondaryParameter rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf pmdco:hasQuantitativeNominalParameter ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( pmdco:Object
+                                                                           pmdco:Process
+                                                                         )
+                                                           ] ;
+                                               rdfs:range [ rdf:type owl:Class ;
+                                                            owl:unionOf ( wikiba:QuantityValue
+                                                                          pmdco:HeaderField
+                                                                        )
+                                                          ] ;
+                                               rdfs:comment "This property is used to describe a quantity value that was input of process describing a secondary process parameter."@en ;
+                                               rdfs:label "has quantitative nominal secondary parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeParameter
+pmdco:hasQuantitativeParameter rdf:type owl:ObjectProperty ;
+                               owl:equivalentProperty :hasProcessParameter ;
+                               rdfs:domain [ rdf:type owl:Class ;
+                                             owl:unionOf ( pmdco:Object
+                                                           pmdco:Process
+                                                         )
+                                           ] ;
+                               rdfs:range [ rdf:type owl:Class ;
+                                            owl:unionOf ( wikiba:QuantityValue
+                                                          pmdco:HeaderField
+                                                        )
+                                          ] ;
+                               rdfs:comment "This property is used to relate values with units to process measurements and paramaeters."@en ;
+                               rdfs:label "has quantitative parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement
+pmdco:hasQuantitativePrimaryDataSeriesMeasurement rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf pmdco:hasQuantitativePrimaryMetadata ;
+                                                  rdfs:domain pmdco:Process ;
+                                                  rdfs:range pmdco:HeaderField ;
+                                                  rdfs:label "has quantitative primary data series measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativePrimaryMetadata
+pmdco:hasQuantitativePrimaryMetadata rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf pmdco:hasQuantitativeMeasurement ;
+                                     rdfs:domain [ rdf:type owl:Class ;
+                                                   owl:unionOf ( pmdco:Object
+                                                                 pmdco:Process
+                                                               )
+                                                 ] ;
+                                     rdfs:range [ rdf:type owl:Class ;
+                                                  owl:unionOf ( wikiba:QuantityValue
+                                                                pmdco:HeaderField
+                                                              )
+                                                ] ;
+                                     rdfs:label "has quantitative primary measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement
+pmdco:hasQuantitativeSecondaryMeasurement rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf pmdco:hasQuantitativeMeasurement ;
+                                          rdfs:domain [ rdf:type owl:Class ;
+                                                        owl:unionOf ( pmdco:Object
+                                                                      pmdco:Process
+                                                                    )
+                                                      ] ;
+                                          rdfs:range [ rdf:type owl:Class ;
+                                                       owl:unionOf ( wikiba:QuantityValue
+                                                                     pmdco:HeaderField
+                                                                   )
+                                                     ] ;
+                                          rdfs:label "has quantitative secondary measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasSubordinateProcess
+pmdco:hasSubordinateProcess rdf:type owl:ObjectProperty ;
+                            rdfs:domain pmdco:Process ;
+                            rdfs:range pmdco:Process ;
+                            rdfs:comment "This property is used to link a process to its subordinate processes."@en ;
+                            rdfs:label "has subordinate process"@en .
+
+
+###  https://material-digital.de/pmdco/measuredProcessDuration
+pmdco:measuredProcessDuration rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf pmdco:hasQuantitativePrimaryMetadata ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( pmdco:Process
+                                                          pmdco:ProcessNode
+                                                        )
+                                          ] ;
+                              rdfs:range wikiba:QuantityValue ;
+                              rdfs:comment "moved to \"ProcessParameter\" Class in Glass Ontology"@en ;
+                              rdfs:label "measured process duration"@en .
+
+
+###  https://material-digital.de/pmdco/nominalProcessDuration
+pmdco:nominalProcessDuration rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf pmdco:hasQuantitativeNominalPrimaryParameter ;
+                             rdfs:domain pmdco:Process ;
+                             rdfs:range wikiba:QuantityValue ;
+                             rdfs:comment "moved to \"ProcessParameter\" Class in Glass Ontology"@en ;
+                             rdfs:label "nominal process duration"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasCoolOven
+:hasCoolOven rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf pmdco:hasProcessNodeComponent ;
+             rdfs:domain :GlassManufacturingProcessNode ;
+             rdfs:range :CoolOven ;
+             rdfs:label "has cool oven"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasCrucible
+:hasCrucible rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf pmdco:hasProcessNodeComponent ;
+             rdfs:domain :GlassManufacturingProcessNode ;
+             rdfs:range :crucible ;
+             rdfs:label "has crucible"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasFurnace
+:hasFurnace rdf:type owl:ObjectProperty ;
+            owl:equivalentProperty :hasOven ;
+            rdfs:subPropertyOf pmdco:hasProcessNodeComponent ;
+            rdfs:domain :GlassManufacturingProcessNode ;
+            rdfs:range :oven ;
+            rdfs:label "has furnace"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasInputBatch
+:hasInputBatch rdf:type owl:ObjectProperty ;
+               owl:equivalentProperty :hasInputRawMaterial ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Glass_batch_calculation"@en ;
+               rdfs:comment "The raw materials mixture for glass melting is termed \"batch\". The batch must be measured properly to achieve a given, desired glass formulation."@en ;
+               rdfs:label "has input batch"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasInputRawMaterial
+:hasInputRawMaterial rdf:type owl:ObjectProperty ;
+                     rdfs:domain pmdco:Process ;
+                     rdfs:range :RawMaterial ;
+                     rdfs:comment "e.g. Na2CO3 (Na2O), Al2O3, H3BO3 (B2O3), SiO2, etc."@en ;
+                     rdfs:label "has input raw material"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasMaterialProperty
+:hasMaterialProperty rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Glass ;
+                     rdfs:range pmdco:MaterialProperty ;
+                     rdfs:label "has material property"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasOptionalProcess
+:hasOptionalProcess rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Newly created object property for Glass ontology. Possible merging with the PMD core ontology?"@en ,
+                                 """This property is used to indicate the process that was optionally run after the current process.
+e.g. \"cooling process\" \"has optional process\" \"crystallization process\"."""@en ;
+                    rdfs:label "has optional process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasOven
+:hasOven rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf pmdco:hasProcessNodeComponent ;
+         rdfs:domain :GlassManufacturingProcessNode ;
+         rdfs:range :oven ;
+         rdfs:label "has oven"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasProcessParameter
+:hasProcessParameter rdf:type owl:ObjectProperty ;
+                     rdfs:label "has process parameter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasTimestep
+:hasTimestep rdf:type owl:ObjectProperty ;
+             rdfs:range wikiba:QuantityValue ;
+             rdfs:comment "the value is a string list e.g., \"[1670938828.988, 1670938846.4, 1670938861.762, 1670938871.274, 1670938881.126, 1670938890.952, 1670938898.254, 1670938906.882, 1670938913.484]\". Where a single value indicates a Posix timestamp."@en ;
+             rdfs:label "has timestep"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:range wikiba:QuantityValue ;
+          rdfs:label "has value"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://wikiba.se/ontology/quantityAmount
+<http://wikiba.se/ontology/quantityAmount> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain [ rdf:type owl:Class ;
+                                                         owl:unionOf ( wikiba:QuantityValue
+                                                                       pmdco:MaterialProperty
+                                                                     )
+                                                       ] ;
+                                           rdfs:comment "Amount of quantity."@en ,
+                                                        "In Glass ontology, 'MaterialProperty' is also associated with quantityAmount."@en ;
+                                           rdfs:label "quantityAmount"@en .
+
+
+###  https://glasdigi.cms.uni-jena.de/hasProcessName
+<https://glasdigi.cms.uni-jena.de/hasProcessName> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:label "has process name"@en .
+
+
+###  https://glasdigi.cms.uni-jena.de/hasRawMaterialName
+<https://glasdigi.cms.uni-jena.de/hasRawMaterialName> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:comment """e.g. SiO2 - Millisil, Optibor TG (H3BO3), B2O3 - Alfa Aesar, SiO2F38S, Na2CO3_Merck, etc.
+
+
+\"hasRawMaterialName\" is the raw material used in the process; the name may contain spaces, so it is better to use a list to combine them instead of a space-separated plain string
+
+e.g., \"hasRawMaterialName\": \"['SiO2', 'Na2CO3', 'B2O3']\""""@en ;
+                                                      rdfs:label "has raw material name"@en .
+
+
+###  https://material-digital.de/pmdco/dataResourceCharacteristic
+pmdco:dataResourceCharacteristic rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain pmdco:DataResource ;
+                                 rdfs:range rdfs:Literal ;
+                                 rdfs:label "has data resource characteristic"@en .
+
+
+###  https://material-digital.de/pmdco/generatedObjectIdentifier
+pmdco:generatedObjectIdentifier rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf pmdco:objectCharacteristics ;
+                                rdfs:domain pmdco:Object ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "A machine-readable identifier associated with a discernable, tangible or simulated entity that is intended to be unique in a given scope. Examples for scope include: a database storing object data or a supply chain principal creating its own identifiers for the reports it generates"@en ;
+                                rdfs:label "generated object identifier"@en .
+
+
+###  https://material-digital.de/pmdco/hasAcquisitionDate
+pmdco:hasAcquisitionDate rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                         rdfs:domain pmdco:ProcessNode ;
+                         rdfs:range xsd:positiveInteger ;
+                         rdfs:comment "The point in time a process node was commissioned (e.g. the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'."@en ;
+                         rdfs:label "has acquisition date"@en .
+
+
+###  https://material-digital.de/pmdco/hasCollectionInterfaceHint
+pmdco:hasCollectionInterfaceHint rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                                 rdfs:domain pmdco:ProcessNode ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:comment "A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies"@en ;
+                                 rdfs:label "has collection interface hint"@en .
+
+
+###  https://material-digital.de/pmdco/hasDataResourceLocation
+pmdco:hasDataResourceLocation rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                              rdfs:domain pmdco:DataResource ;
+                              rdfs:range xsd:anyURI ;
+                              rdfs:comment "This property indicates that a file can be retrieved or downloaded from a specific address."@en ;
+                              rdfs:label "has data resource location" .
+
+
+###  https://material-digital.de/pmdco/hasDataResourceSerialization
+pmdco:hasDataResourceSerialization rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                                   rdfs:domain pmdco:DataResource ;
+                                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                                owl:oneOf [ rdf:type rdf:List ;
+                                                            rdf:first "CBOR" ;
+                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                       rdf:first "JSON" ;
+                                                                       rdf:rest rdf:nil
+                                                                     ]
+                                                          ]
+                                              ] ;
+                                   rdfs:comment "File name extension"@en ;
+                                   rdfs:label "has data resource serialization"@en .
+
+
+###  https://material-digital.de/pmdco/hasHeaderFieldDescription
+pmdco:hasHeaderFieldDescription rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf pmdco:headerFieldCharacteristic ;
+                                rdfs:domain pmdco:HeaderField ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "A data property representing an optional human-readable description of the header field's intent."@en ;
+                                rdfs:label "has header field description"@en .
+
+
+###  https://material-digital.de/pmdco/hasHeaderFieldSequenceNumber
+pmdco:hasHeaderFieldSequenceNumber rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf pmdco:headerFieldCharacteristic ;
+                                   rdfs:domain pmdco:HeaderField ;
+                                   rdfs:range xsd:positiveInteger ;
+                                   rdfs:comment "A mandatory numbering representing the index of the columns in sequence"@en ;
+                                   rdfs:label "has header field sequence number"@en .
+
+
+###  https://material-digital.de/pmdco/hasMeasurement
+pmdco:hasMeasurement rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf pmdco:hasParameter ;
+                     rdfs:domain pmdco:Process ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:comment "This property is used to describe parameters that are created by measurements of a process."@en ;
+                     rdfs:label "has measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasMetadataMeasurement
+pmdco:hasMetadataMeasurement rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf pmdco:hasMeasurement ;
+                             rdfs:domain pmdco:Process ;
+                             rdfs:range rdfs:Literal ;
+                             rdfs:label "has metadata measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasNominalEndPosixTimestamp
+pmdco:hasNominalEndPosixTimestamp rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                                  rdfs:domain pmdco:Process ;
+                                  rdfs:range xsd:decimal ;
+                                  rdfs:comment "IRI modified typo: missing 'm', replaced with 'hasNominalEndPosixTimestamp'"@en ,
+                                               "The point in time a process node finished to conduct a process, represented in IEEE 1003 'Seconds since Epoch'"@en ;
+                                  rdfs:label "has nominal end posix timestamp"@en .
+
+
+###  https://material-digital.de/pmdco/hasNominalParameter
+pmdco:hasNominalParameter rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf pmdco:hasParameter ;
+                          rdfs:range rdfs:Literal ;
+                          rdfs:comment """A qualitative nominal variable is a qualitative variable where no ordering is possible or implied in the levels. For example, the variable gender is nominal because there is no order in the levels female/male. Eye color is another example of a nominal variable because there is no order among blue, brown or green eyes.
+https://statsandr.com/blog/variable-types-and-examples/"""@en ,
+                                       "This property is used to describe nominal parameters that are not associated to a quantity value."@en ;
+                          rdfs:label "has nominal parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasNominalPrimaryParameter
+pmdco:hasNominalPrimaryParameter rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf pmdco:hasNominalParameter ;
+                                 rdfs:range rdfs:Literal ;
+                                 rdfs:label "has nominal primary parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasNominalSecondaryParameter
+pmdco:hasNominalSecondaryParameter rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf pmdco:hasNominalParameter ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:label "has nominal secondary parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasNominalStartPosixTimestamp
+pmdco:hasNominalStartPosixTimestamp rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                                    rdfs:domain pmdco:Process ;
+                                    rdfs:range xsd:decimal ;
+                                    rdfs:comment "The point in time a process node began to conduct a process, represented in IEEE 1003 'Seconds since Epoch'"@en ;
+                                    rdfs:label "has nominal start posix timestamp"@en .
+
+
+###  https://material-digital.de/pmdco/hasParameter
+pmdco:hasParameter rdf:type owl:DatatypeProperty ;
+                   rdfs:domain pmdco:Process ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "This Property is used to describe the process parameters that are not associated to quantitative values."@en ;
+                   rdfs:label "has parameter"@en .
+
+
+###  https://material-digital.de/pmdco/hasPrimaryMeasurement
+pmdco:hasPrimaryMeasurement rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf pmdco:hasMeasurement ;
+                            rdfs:domain pmdco:Process ;
+                            rdfs:range rdfs:Literal ;
+                            rdfs:label "has primary measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeCharacteristic
+pmdco:hasProcessNodeCharacteristic rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain pmdco:ProcessNode ;
+                                   rdfs:range rdfs:Literal ;
+                                   rdfs:comment "The point in time a process node was commissioned (e.g. the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'."@en ;
+                                   rdfs:label "has process node characteristic"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeIdentifier
+pmdco:hasProcessNodeIdentifier rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                               rdfs:comment "A string intended to uniquely identify a process node in a given scope, e.g. global scope: serial number, organization scope, asset management identifier."@en ;
+                               rdfs:label "has process node identifier"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeManufacturer
+pmdco:hasProcessNodeManufacturer rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                                 rdfs:comment "Newly added in pre-release pmd ontology"@en ,
+                                              "Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\""@en ;
+                                 rdfs:label "has process node manufacturer"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeModel
+pmdco:hasProcessNodeModel rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                          rdfs:domain pmdco:ProcessNode ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "In pre-release of heat-treatment ontology, \"hasModel\" has been moved to the \"Annotation properties\" section. Replaced by \"has process node model\""@en ,
+                                       "Process Node short description, e.g. \"Vacuum Furnace\""@en ;
+                          rdfs:label "has process node model"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeName
+pmdco:hasProcessNodeName rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                         rdfs:domain pmdco:ProcessNode ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "A human-generated identifier associated with a discernible, tangible or simulated entity intended to be unique in a given scope"@en ;
+                         rdfs:label "has process node name"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeType
+pmdco:hasProcessNodeType rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                         rdfs:domain pmdco:ProcessNode ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Process Node typename, e.g. \"ProTherm500\""@en ;
+                         rdfs:label "has process node type"@en .
+
+
+###  https://material-digital.de/pmdco/hasProcessNodeVersion
+pmdco:hasProcessNodeVersion rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                            rdfs:domain pmdco:ProcessNode ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Process Node Version Number, e.g. \"2.24\""@en ;
+                            rdfs:label "has process node version"@en .
+
+
+###  https://material-digital.de/pmdco/hasQualifyingProcessAnnotation
+pmdco:hasQualifyingProcessAnnotation rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                                     rdfs:domain pmdco:Process ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:label "has qualifying process annotation"@en .
+
+
+###  https://material-digital.de/pmdco/hasQualifyingProcessNodeAnnotation
+pmdco:hasQualifyingProcessNodeAnnotation rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                                         rdfs:comment "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""@en ,
+                                                      "Newly added in pre-release pmd ontology"@en ;
+                                         rdfs:label "has qualifying process node annotation"@en .
+
+
+###  https://material-digital.de/pmdco/hasSecondaryMeasurement
+pmdco:hasSecondaryMeasurement rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf pmdco:hasMeasurement ;
+                              rdfs:domain pmdco:Process ;
+                              rdfs:range rdfs:Literal ;
+                              rdfs:label "has secondary measurement"@en .
+
+
+###  https://material-digital.de/pmdco/hasSequenceNumber
+pmdco:hasSequenceNumber rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                        rdfs:range xsd:integer ;
+                        rdfs:label "has sequence number"@en .
+
+
+###  https://material-digital.de/pmdco/hasStartingTime
+pmdco:hasStartingTime rdf:type owl:DatatypeProperty ;
+                      rdfs:domain pmdco:Process ;
+                      rdfs:range rdfs:Literal ;
+                      rdfs:label "has starting time"@en .
+
+
+###  https://material-digital.de/pmdco/hasSuppliedIdentifier
+pmdco:hasSuppliedIdentifier rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( pmdco:Object
+                                                        pmdco:Process
+                                                        pmdco:ProcessNode
+                                                      )
+                                        ] ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "A colloquial, human-generated, descriptive text qualifying the nature of a process instance used as an identifier that is not strictly intended to be unique, e.g. \"1050°C30 840°C10/ÖL\"."@en ;
+                            rdfs:label "has supplied identifier"@en .
+
+
+###  https://material-digital.de/pmdco/hasSuppliedObjectIdentifier
+pmdco:hasSuppliedObjectIdentifier rdf:type owl:DatatypeProperty ;
+                                  owl:equivalentProperty :hasGlassId ,
+                                                         :hasSciGlassId ;
+                                  rdfs:subPropertyOf pmdco:objectCharacteristics ;
+                                  rdfs:domain pmdco:Object ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "A human-generated identifier associated with a discernable, tangible or simulated entity"@en ,
+                                               """For Sciglass database:
+sciglass ID is a combination of \"Glass ID\", \"Glass NO\" and \"Ref ID\".
+one \"Glass ID\" in sciglass could contain multiple \"Glass NO\".
+one \"Glass ID\" in sciglass could contain multiple \"Ref ID\".
+But one \"Ref ID\"only contains one referece source.
+
+e.g. For \"Glass ID\" = 279, \"Glass NO\" = 20988, \"Ref ID\" = 64.
+The generated sciglass ID will be:  sciglassID_279_20988_64
+
+For melting data of BAM:
+just simply be the glass ID"""@en ;
+                                  rdfs:label "has supplied object identifier"@en .
+
+
+###  https://material-digital.de/pmdco/hasTypeDescription
+pmdco:hasTypeDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:hasProcessNodeCharacteristic ;
+                         rdfs:domain pmdco:ProcessNode ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""@en ,
+                                      """In pre-release of heat-treatment ontology, \"hasTypeDescription\" has been moved to the \"Annotation properties\" section.
+Replaced by type description, and moved under \"heattreatmentProcessNodeParameter\"
+Not included in pre-release of pmd core ontology."""@en ;
+                         rdfs:label "has type description"@en .
+
+
+###  https://material-digital.de/pmdco/hasUcumCode
+pmdco:hasUcumCode rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf pmdco:hasUnitLabel ;
+                  rdfs:domain pmdco:PmdSiUnit ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "In pre-release pmd ontology, this has been moved under 'has unit label'"@en ,
+                               "This property is used the enrich a unit with its common used label within the UCUM vocabulary"@en ;
+                  rdfs:label "has ucum code"@en .
+
+
+###  https://material-digital.de/pmdco/hasUnitLabel
+pmdco:hasUnitLabel rdf:type owl:DatatypeProperty ;
+                   rdfs:domain pmdco:PmdSiUnit ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "This property is used the enrich a unit with its common used label."@en ;
+                   rdfs:label "has unit label"@en .
+
+
+###  https://material-digital.de/pmdco/headerFieldCharacteristic
+pmdco:headerFieldCharacteristic rdf:type owl:DatatypeProperty ;
+                                rdfs:domain pmdco:HeaderField ;
+                                rdfs:range rdfs:Literal ;
+                                rdfs:label "has header field characteristic"@en .
+
+
+###  https://material-digital.de/pmdco/isFinalProcessNode
+pmdco:isFinalProcessNode rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:comment """In pre-release of heat-treatment ontology, \"isFinalProcessNode\" has been moved to the \"Annotation properties\" section.
+Not included in pre-release of pmd core ontology."""@en ;
+                         rdfs:label "is final process node"@en .
+
+
+###  https://material-digital.de/pmdco/isInitialProcessNode
+pmdco:isInitialProcessNode rdf:type owl:DatatypeProperty ;
+                           rdfs:range xsd:boolean ;
+                           rdfs:comment """In pre-release of heat-treatment ontology, \"isInitialProcessNode\" has been moved to the \"Annotation properties\" section.
+Not included in pre-release of pmd core ontology."""@en ;
+                           rdfs:label "is initial process node"@en .
+
+
+###  https://material-digital.de/pmdco/methodDescriptor
+pmdco:methodDescriptor rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                       rdfs:domain pmdco:Process ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "A label or key-word that is part of a finite list of descriptors categorizing the procedure used by a process node, e.g. carbourising"@en ;
+                       rdfs:label "method descriptor"@en .
+
+
+###  https://material-digital.de/pmdco/objectCharacteristics
+pmdco:objectCharacteristics rdf:type owl:DatatypeProperty ;
+                            rdfs:label "has object characteristic"@en .
+
+
+###  https://material-digital.de/pmdco/@hasGeneratedIdentifier
+<https://material-digital.de/pmdco/@hasGeneratedIdentifier> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment "A machine-readable identifier that is intended to be unique in a given scope. Examples for scope include: a database storing process data or a *process node* creating its own identifiers for the reports it generates"@en ;
+                                                            rdfs:label "has generated identifier"@en .
+
+
+###  https://material-digital.de/pmdco/@hasNominalMetadataParameter
+<https://material-digital.de/pmdco/@hasNominalMetadataParameter> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf pmdco:hasNominalParameter ;
+                                                                 rdfs:range rdfs:Literal ;
+                                                                 rdfs:label "has nominal metadata parameter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/conductedBy
+:conductedBy rdf:type owl:DatatypeProperty ;
+             rdfs:comment "In pre-release of heat-treatment ontology, \"conductedBy\" has been created and put to the \"Annotation properties\" section."@en ;
+             rdfs:label "conducted by"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasApplicant
+:hasApplicant rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasPatentCharacteristic ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The applicant is the person or entity who filed the patent application with the United States Patent and Trademark Office (USPTO). The applicant may or may not be the same as the assignee."@en ;
+              rdfs:label "has applicant"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasAssignee
+:hasAssignee rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasPatentCharacteristic ;
+             rdfs:comment "The assignee is the entity or individual who owns the rights to the patent. This may be the inventor(s), a company, or an individual who has acquired the rights to the patent from the original owner(s)."@en ;
+             rdfs:label "has assignee"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasColumnCount
+:hasColumnCount rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasPatentCharacteristic ;
+                rdfs:comment "This is used to split the table and display it as it was in the pdf patent file"@en ;
+                rdfs:label "has column count"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceDate
+:hasDataResourceDate rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                     rdfs:label "has data resource date"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceDatetime
+:hasDataResourceDatetime rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                         rdfs:range xsd:dateTimeStamp ;
+                         rdfs:comment "e.g., \"hasDataResourceDatetime\": \"2022-09-26T08:44:33.777000+0200\""@en ;
+                         rdfs:label "has data resource datetime"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceDescription
+:hasDataResourceDescription rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                            rdfs:comment "similar to \"hasTypeDescription\" which is the description for process node, \"hasDataResourceDescription\" is the description for \"DataResource\"."@en ;
+                            rdfs:label "has data resource description"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceName
+:hasDataResourceName rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                     rdfs:comment "File name of the data"@en ;
+                     rdfs:label "has data resource name"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourcePosixTimestamp
+:hasDataResourcePosixTimestamp rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                               rdfs:label "has data resource posix timestamp"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceProvider
+:hasDataResourceProvider rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                         rdfs:comment "Specify the provider of the data resource, e.g. BAM, Sciglass Database"@en ;
+                         rdfs:label "has data resource provider"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceReference
+:hasDataResourceReference rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                          rdfs:domain pmdco:DataResource ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Specify the reference (of sciglass database), e.g. from journals, patents"@en ;
+                          rdfs:label "has data resource reference"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDataResourceTime
+:hasDataResourceTime rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                     rdfs:label "has data resource time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasDatetime
+:hasDatetime rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+             rdfs:range xsd:dateTimeStamp ;
+             rdfs:label "has datetime"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasEndingTime
+:hasEndingTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain pmdco:Process ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "in contrast to the pmd core ontology 'hasStartingTime'."@en ;
+               rdfs:label "has ending time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasFillNumber
+:hasFillNumber rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+               rdfs:domain pmdco:Process ;
+               rdfs:range xsd:integer ;
+               rdfs:label "has fill number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasGeneratedProcessIdentifier
+:hasGeneratedProcessIdentifier rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                               rdfs:domain pmdco:Process ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "id and recipe string"@en ;
+                               rdfs:label "has generated process identifier"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasGlassComponent
+:hasGlassComponent rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "e.g., \"hasGlassComponent\": \"SiO2 Na2CO3 B2O3\". Components are separated by spaces."@en ;
+                   rdfs:label "has glass component"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasGlassId
+:hasGlassId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+            rdfs:comment "The id of each glass melting data from BAM"@en ;
+            rdfs:label "has glass id"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasInventor
+:hasInventor rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasPatentCharacteristic ;
+             rdfs:range xsd:string ;
+             rdfs:comment "In some cases, the inventor may be both the applicant and the assignee. This is often the case when the inventor is an independent inventor or a small business owner. In other cases, a larger company or corporation may file the patent application on behalf of the inventors and then become the assignee if the patent is granted."@en ;
+             rdfs:label "has inventor"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasJobNumber
+:hasJobNumber rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+              rdfs:domain pmdco:Process ;
+              rdfs:range xsd:integer ;
+              rdfs:comment """similar to 'hasSequenceNumber'.
+But the job number can be repeated during the process"""@en ;
+              rdfs:label "has job number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasMaterialNumber
+:hasMaterialNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "Specifies which material (number) is to be used. One material number corresponds to one material"@en ;
+                   rdfs:label "has material number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasMeltNumber
+:hasMeltNumber rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+               rdfs:domain pmdco:Process ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "correspond to/followed after the fill number"@en ;
+               rdfs:label "has melt number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasNumberOfComponent
+:hasNumberOfComponent rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "For NABS glass, has number of component = 4"@en ;
+                      rdfs:label "has number of component"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasNumberOfMelt
+:hasNumberOfMelt rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "has number of melt"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasNumberOfSequence
+:hasNumberOfSequence rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                     rdfs:domain pmdco:Process ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "Total sequence number or (number of steps)"@en ;
+                     rdfs:label "has number of sequence"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasOvenNumber
+:hasOvenNumber rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "The oven number is the reference of the oven where the melting process takes place."@en ;
+               rdfs:label "has oven number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasPatentCharacteristic
+:hasPatentCharacteristic rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf pmdco:dataResourceCharacteristic ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has patent characteristic"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasPatentNumber
+:hasPatentNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasPatentCharacteristic ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "e.g. Pub. No.: US 2020/0317558 A1. The patent id = \"US20200317558A1\", Comma or slash are ignored"@en ;
+                 rdfs:label "has patent number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasPatentTitle
+:hasPatentTitle rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasPatentCharacteristic ;
+                rdfs:range xsd:string ;
+                rdfs:label "has patent title"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasSciGlassId
+:hasSciGlassId rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+               rdfs:range xsd:string ;
+               rdfs:comment """For Sciglass database.
+sciglass ID is a combination of \"Glass ID\", \"Glass NO\" and \"Ref ID\".
+one \"Glass ID\" in sciglass could contain multiple \"Glass NO\".
+one \"Glass ID\" in sciglass could contain multiple \"Ref ID\".
+But one \"Ref ID\"only contains one referece source.
+
+e.g. For \"Glass ID\" = 279, \"Glass NO\" = 20988, \"Ref ID\" = 64.
+The generated sciglass ID will be:  sciglassID_279_20988_64"""@en ;
+               rdfs:label "has SciGlass Id"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasSuppliedProcessIdentifier
+:hasSuppliedProcessIdentifier rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf <https://material-digital.de/pmdco/@hasNominalMetadataParameter> ;
+                              rdfs:domain pmdco:Process ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "This is missing in pmd core ontolog, but it exists in mapper.py"@en ;
+                              rdfs:label "has supplied process identifier"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasTotalMolePercent
+:hasTotalMolePercent rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:positiveInteger ;
+                     rdfs:label "has total mole percent"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasTotalWeightPercent
+:hasTotalWeightPercent rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:positiveInteger ;
+                       rdfs:label "has total weight percent"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/hasTrademark
+:hasTrademark rdf:type owl:DatatypeProperty ;
+              obo:IAO_0000119 "Sciglass 7.0"@en ;
+              rdfs:label "has trademark"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/isOvenDoorOpen
+:isOvenDoorOpen rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment """a boolean variable to see if oven door is open or closed.
+Only two statuses, so no \" IsOvenDoorClosed\""""@en ;
+                rdfs:label "is oven door open"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/@chamberType
+<https://w3id.org/pmd/glass-ontology/@chamberType> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain :GlassManufacturingChamber ;
+                                                   rdfs:range rdfs:Literal ;
+                                                   rdfs:comment "e.g. cooling oven, melting oven"@en ;
+                                                   rdfs:label "chamber type"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://wikiba.se/ontology#Item
+wikiba:Item rdf:type owl:Class .
+
+
+###  http://wikiba.se/ontology#QuantityValue
+wikiba:QuantityValue rdf:type owl:Class ;
+                     rdfs:subClassOf wikiba:Value ;
+                     rdfs:comment "Wikibase extended value representing quantity."@en ;
+                     rdfs:label "QuantityValue"@en .
+
+
+###  http://wikiba.se/ontology#Value
+wikiba:Value rdf:type owl:Class ;
+             rdfs:label "Value"@en .
+
+
+###  https://material-digital.de/pmdco/AnalysisProcess
+pmdco:AnalysisProcess rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:Process ;
+                      rdfs:comment """A process that is driven by the primary intent to gain new measurements
+An analysis process is either a transformative process or a non-transformative process."""@en ;
+                      rdfs:label "Analysis Process"@en .
+
+
+###  https://material-digital.de/pmdco/AtomisticLevelMaterialStructure
+pmdco:AtomisticLevelMaterialStructure rdf:type owl:Class ;
+                                      rdfs:subClassOf pmdco:MaterialStructure ;
+                                      rdfs:comment "It is a material length scale. Includes individual atoms and their spatial arrangement, information on the chemical elements, information on the lattice and crystal structure, 0-dimensional crystal defects"@en ;
+                                      rdfs:label "Atomistic Level Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/Component
+pmdco:Component rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:Object ;
+                rdfs:comment "An object that serves a specific technical application. Constituent part of a compound of parts that builds a technical application"@en ;
+                rdfs:label "Component"@en .
+
+
+###  https://material-digital.de/pmdco/ContinuumLevelMaterialStructure
+pmdco:ContinuumLevelMaterialStructure rdf:type owl:Class ;
+                                      rdfs:subClassOf pmdco:MaterialStructure ;
+                                      rdfs:comment "A material structure that is at the length level of the the entire geometry."@en ;
+                                      rdfs:label "Continuum Level Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/DataResource
+pmdco:DataResource rdf:type owl:Class ;
+                   rdfs:comment "A data resource is file which contains parameters and measurements of a process."@en ;
+                   rdfs:label "Data Resource"@en .
+
+
+###  https://material-digital.de/pmdco/HeaderField
+pmdco:HeaderField rdf:type owl:Class ;
+                  rdfs:comment "A class bundling the semantics for a specific column in a table inside a (multidimensional) blob. Includes column number, pointer to concept, pointer to unit, and human readable description."@en ;
+                  rdfs:label "Header Field"@en .
+
+
+###  https://material-digital.de/pmdco/ManufactureNode
+pmdco:ManufactureNode rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:ProcessNode ;
+                      rdfs:comment """A process node that implements transformative processes as well as consumes and creates tangible objects and typically requires inputs
+In general but not necessarily, a manufacture node includes intrinsic analysis nodes that create corresponding measurements with respect to the process implemented by the manufacture node."""@en ;
+                      rdfs:label "Manufacture Node"@en .
+
+
+###  https://material-digital.de/pmdco/ManufactureProcess
+pmdco:ManufactureProcess rdf:type owl:Class ;
+                         rdfs:subClassOf pmdco:Process ;
+                         rdfs:comment """A process that is driven by the primary intent to transform objects
+A manufacture process is always a transformative process."""@en ;
+                         rdfs:label "Manufacture Process"@en .
+
+
+###  https://material-digital.de/pmdco/Material
+pmdco:Material rdf:type owl:Class ;
+               rdfs:comment """It is a substance or mixture of substances that constitutes an object.
+represented by the sum of material properties and material structure"""@en ;
+               rdfs:label "Material"@en .
+
+
+###  https://material-digital.de/pmdco/MaterialProperty
+pmdco:MaterialProperty rdf:type owl:Class ;
+                       rdfs:comment """In Glass ontology, 'MaterialProperty' is also associated with quantityAmount.
+This term is mainly used for storing the data properties of the Sciglass database."""@en ,
+                                    "Modified: Physical and chemical properties of a material"@en ,
+                                    "Original: Physical property of a material"@en ;
+                       rdfs:label "Material Property"@en .
+
+
+###  https://material-digital.de/pmdco/MaterialStructure
+pmdco:MaterialStructure rdf:type owl:Class ;
+                        rdfs:comment "Structural and compositional information on a material within the regarded material level, includes 0,1,2,3 dimensional descriptions involves all material levels."@en ;
+                        rdfs:label "Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/MesoscopicLevelMaterialStructure
+pmdco:MesoscopicLevelMaterialStructure rdf:type owl:Class ;
+                                       rdfs:subClassOf pmdco:MaterialStructure ;
+                                       rdfs:comment "A material structure that covers multiple grains or phases of the material"@en ;
+                                       rdfs:label "Mesoscopic Level Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/MicroscopicLevelMaterialStructure
+pmdco:MicroscopicLevelMaterialStructure rdf:type owl:Class ;
+                                        rdfs:subClassOf pmdco:MaterialStructure ;
+                                        rdfs:comment "A material structure on a single grain level"@en ;
+                                        rdfs:label "Microscopic Level Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/NanoLevelMaterialStructure
+pmdco:NanoLevelMaterialStructure rdf:type owl:Class ;
+                                 rdfs:subClassOf pmdco:MaterialStructure ;
+                                 rdfs:comment "A Material Structure that involves individual features within one single grain or phase like dislocations or precipitates."@en ;
+                                 rdfs:label "Nano Level Material Structure"@en .
+
+
+###  https://material-digital.de/pmdco/Object
+pmdco:Object rdf:type owl:Class ;
+             rdfs:comment "A discernable, tangible or simulated entity that is processed in a process by a process node. An Object is composed of Voxels."@en ;
+             rdfs:label "Object"@en .
+
+
+###  https://material-digital.de/pmdco/PmdSiUnit
+pmdco:PmdSiUnit rdf:type owl:Class ;
+                rdfs:comment "Equivalent to the definition found at https://www.wikidata.org/wiki/Q61610698. Instances of this class represent a tuple of prefix and SI unit"@en ;
+                rdfs:label "PmdSiUnit"@en .
+
+
+###  https://material-digital.de/pmdco/Process
+pmdco:Process rdf:type owl:Class ;
+              rdfs:comment """A series of actions or operations conducing to an end
+In PMD, a process is conducted via process nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements. A process is either a transformative process or a non-transformative process with respect to objects processed via a process node. There are primarily two types of distinguishable processes: manufacture process, analysis process. A process is a series of operations that are subordinate processes."""@en ;
+              rdfs:label "Process"@en .
+
+
+###  https://material-digital.de/pmdco/ProcessNode
+pmdco:ProcessNode rdf:type owl:Class ;
+                  rdfs:comment "A workflow constituent that facilitates process instances, e.g. a service, tool, or machine."@en ;
+                  rdfs:label "ProcessNode"@en .
+
+
+###  https://material-digital.de/pmdco/ProcessNodeComponent
+pmdco:ProcessNodeComponent rdf:type owl:Class ;
+                           rdfs:label "Process Node Component"@en .
+
+
+###  https://material-digital.de/pmdco/SimulationNode
+pmdco:SimulationNode rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:ProcessNode ;
+                     rdfs:comment "A process node that implements foo as well as consumes and creates simulation objects and parameters."@en ;
+                     rdfs:label "Simulation Node"@en .
+
+
+###  https://material-digital.de/pmdco/Test
+pmdco:Test rdf:type owl:Class ;
+           rdfs:label "Test"@en .
+
+
+###  https://material-digital.de/pmdco/Voxel
+pmdco:Voxel rdf:type owl:Class ;
+            rdfs:comment """An element representing a value on a grid in three dimensional space.
+In PMD, an infinitesimal part of an object which is made of a homogenuous material. Size depends on the observed material level. For now, geometrically, a cubus is assumed.
+Made of a material
+Different Voxels can have different material properties and material structure
+A (partial) logical object that describes (a part of) a physical object"""@en ;
+            rdfs:label "Voxel"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AbbeNumber
+:AbbeNumber rdf:type owl:Class ;
+            rdfs:subClassOf pmdco:MaterialProperty ;
+            obo:IAO_0000118 "V-number"@en ,
+                            "nu-value"@en ;
+            obo:IAO_0000119 "Sciglass 7.0"@en ,
+                            "https://en.wikipedia.org/wiki/Abbe_number"@en ;
+            rdfs:comment """Abbe number is an approximate measure of the material's dispersion (change of refractive index versus wavelength), with high values of V indicating low dispersion. It is named after Ernst Abbe (1840–1905), the German physicist who defined it.
+
+Expressed by the Greek letter ν or by the English letter V. Designates reciprocal dispersive power as follows:
+ν = (n_D - 1)/ (n_F - n_C)
+[Standard definition (ASTM; C162-52)]
+
+In Sciglass database, Abbe's number at 20°C"""@en ;
+            rdfs:label "Abbe number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Absorbance
+:Absorbance rdf:type owl:Class ;
+            rdfs:subClassOf :OpticalProperty ;
+            obo:IAO_0000119 "https://en.wikipedia.org/wiki/Absorbance"@en ;
+            rdfs:comment "In optics, absorbance or decadic absorbance is the common logarithm of the ratio of incident to transmitted radiant power through a material, and spectral absorbance or spectral decadic absorbance is the common logarithm of the ratio of incident to transmitted spectral radiant power through a material. Absorbance is dimensionless, and in particular is not a length, though it is a monotonically increasing function of path length, and approaches zero as the path length approaches zero. The use of the term \"optical density\" for absorbance is discouraged."@en ,
+                         """Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer.
+see https://sciencing.com/difference-between-optical-density-absorbance-7842652.html"""@en ;
+            rdfs:label "absorbance"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AcousticalProperty
+:AcousticalProperty rdf:type owl:Class ;
+                    rdfs:subClassOf pmdco:MaterialProperty ;
+                    rdfs:comment "A group of properties in the Main Database of SciGlass which includes values of sound velocity and sound absorption. Values of these properties are not included in the Auxiliary Database."@en ;
+                    rdfs:label "acoustical property"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ActivationEnergy
+:ActivationEnergy rdf:type owl:Class ;
+                  rdfs:subClassOf pmdco:MaterialProperty ;
+                  obo:IAO_0000119 "SciGlass 7.0"@en ;
+                  rdfs:comment "This term is used to describe the amount of energy necessary for an atom, vibrating in the vicinity of a certain position in a glass-forming network, to acquire to surpass a potential barrier surrounding it and move to another position. When a group of atoms can form two or more stable configurations, the energy of vibrations needed for this group of atoms to change from a certain configuration to another is also called the activation energy. Activation energy can be determined by the temperature dependence of a property whose value is directly connected with surpassing potential barriers by atoms or ions of glass. These are the so-called transport properties."@en ;
+                  rdfs:label "activation energy"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AnnealingPoint
+:AnnealingPoint rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "Sciglass 7.0"@en ,
+                                "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties"@en ;
+                rdfs:comment """The annealing point is the temperature to which a glass may be heated after working to relieve any internal stresses that arose as a result of the forming process.
+unit = °C"""@en ;
+                rdfs:label "annealing point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AnnealingRange
+:AnnealingRange rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "SciGlass 7.0"@en ;
+                rdfs:comment "The temperature interval between the annealing point and the strain point."@en ;
+                rdfs:label "annealing range"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AverageRefractiveIndexAtHighLambda
+:AverageRefractiveIndexAtHighLambda rdf:type owl:Class ;
+                                    rdfs:subClassOf :RefractiveIndex ;
+                                    owl:disjointWith :AverageRefractiveIndexAtLowLambda ;
+                                    obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                    rdfs:comment "average n at λ>1μm (20°C)"@en ;
+                                    rdfs:label "average refractive index at high lambda"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/AverageRefractiveIndexAtLowLambda
+:AverageRefractiveIndexAtLowLambda rdf:type owl:Class ;
+                                   rdfs:subClassOf :RefractiveIndex ;
+                                   obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                   rdfs:comment "average n at 0.6<λ<1μm (20°C)"@en ;
+                                   rdfs:label "average refractive index at low lambda"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/BendingRate
+:BendingRate rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:MaterialProperty ;
+             rdfs:comment "bending rate from parallel plate & beam bending viscometry (viscometer)"@en ;
+             rdfs:label "bending rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/BulkModulus
+:BulkModulus rdf:type owl:Class ;
+             rdfs:subClassOf :ElasticConstant ;
+             obo:IAO_0000119 "https://en.wikipedia.org/wiki/Bulk_modulus"@en ;
+             rdfs:comment "The bulk modulus (K or B) of a substance is a measure of how resistant to compression that substance is."@en ;
+             rdfs:label "bulk modulus"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Compressibility
+:Compressibility rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:MaterialProperty ;
+                 obo:IAO_0000119 "SciGlass 7.0"@en ;
+                 rdfs:comment "The inverse of bulk modulus."@en ;
+                 rdfs:label "compressibility"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CoolOven
+:CoolOven rdf:type owl:Class ;
+          rdfs:subClassOf pmdco:ProcessNodeComponent ;
+          obo:IAO_0000118 "cool furnace"@en ;
+          rdfs:label "cool oven"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CoolingRate
+:CoolingRate rdf:type owl:Class ;
+             rdfs:subClassOf :NominalProcessParameter ;
+             rdfs:comment "Cooling at a constant rate."@en ,
+                          "It contains two values in the raw melting json data of BAM, and it is displayed as a list."@en ;
+             rdfs:label "cooling rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CoolingStartHoldingTime
+:CoolingStartHoldingTime rdf:type owl:Class ;
+                         rdfs:subClassOf :NominalProcessParameter ;
+                         rdfs:label "cooling start holding time"@en ,
+                                    "duration of the first few lines of \"CoolingStartTemperature\" from melting json data of BAM"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CoolingStartTemperature
+:CoolingStartTemperature rdf:type owl:Class ;
+                         rdfs:subClassOf :NominalProcessParameter ;
+                         rdfs:comment "It contains two values in the raw melting json data of BAM, and it is displayed as a list."@en ,
+                                      "setpoint of the first few lines of cooling section from melting json data of BAM."@en ;
+                         rdfs:label "cooling start temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CriticalCoolingRate
+:CriticalCoolingRate rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:MaterialProperty ;
+                     obo:IAO_0000119 "SciGlass 7.0"@en ;
+                     rdfs:comment "The minimal cooling rate of a substance initially existing in a liquid state which ensures obtaining this substance in a glassy state without visible signs of crystallization. The higher the tendency of the substance to crystallize, the higher its critical cooling rate."@en ;
+                     rdfs:label "critical cooling rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CriticalTemperature
+:CriticalTemperature rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:MaterialProperty ;
+                     obo:IAO_0000118 "critical point"@en ,
+                                     "critical state"@en ;
+                     obo:IAO_0000119 "https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)"@en ;
+                     rdfs:comment "In thermodynamics, a critical point (or critical state) is the end point of a phase equilibrium curve."@en ;
+                     rdfs:label "critical temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CrucibleWeight
+:CrucibleWeight rdf:type owl:Class ;
+                rdfs:subClassOf :MeasuredProcessParameter ;
+                rdfs:label "crucible weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/CrystallizationTemperature
+:CrystallizationTemperature rdf:type owl:Class ;
+                            rdfs:subClassOf pmdco:MaterialProperty ;
+                            obo:IAO_0000119 "Sciglass 7.0"@en ;
+                            rdfs:label "crystallization temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DeformationPoint
+:DeformationPoint rdf:type owl:Class ;
+                  rdfs:subClassOf pmdco:MaterialProperty ;
+                  obo:IAO_0000119 "SciGlass 7.0"@en ;
+                  rdfs:comment """The temperature observed during the measurement of expansivity by the interferometer method, at which viscous flow exactly counteracts thermal expansion. The deformation point generally corresponds to a viscosity in the range from 10^11 to 10^12 poises. [Standard definition (ASTM; C162-52)]
+See also dilatometric softening temperature."""@en ;
+                  rdfs:label "deformation point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Density
+:Density rdf:type owl:Class ;
+         rdfs:subClassOf pmdco:MaterialProperty ;
+         obo:IAO_0000119 "Sciglass 7.0"@en ;
+         rdfs:comment """Mass of a unit volume of a substance.
+unit = g/cm^3"""@en ;
+         rdfs:label "density"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DensityAt1000C
+:DensityAt1000C rdf:type owl:Class ;
+                rdfs:subClassOf :Density ;
+                rdfs:label "density at 1000C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DensityAt1200C
+:DensityAt1200C rdf:type owl:Class ;
+                rdfs:subClassOf :Density ;
+                rdfs:label "density at 1200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DensityAt1400C
+:DensityAt1400C rdf:type owl:Class ;
+                rdfs:subClassOf :Density ;
+                rdfs:label "density at 1400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DensityAt20C
+:DensityAt20C rdf:type owl:Class ;
+              rdfs:subClassOf :Density ;
+              rdfs:label "density at 20C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DensityAt800C
+:DensityAt800C rdf:type owl:Class ;
+               rdfs:subClassOf :Density ;
+               rdfs:label "density at 800C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DiffusionCoefficient
+:DiffusionCoefficient rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:MaterialProperty ;
+                      obo:IAO_0000119 "SciGlass 7.0"@en ;
+                      rdfs:comment "The coefficient describing intensity of diffusion."@en ;
+                      rdfs:label "diffusion coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DilatometricSofteningTemperature
+:DilatometricSofteningTemperature rdf:type owl:Class ;
+                                  rdfs:subClassOf pmdco:MaterialProperty ;
+                                  obo:IAO_0000119 "SciGlass 7.0"@en ;
+                                  rdfs:comment """The temperature at which the length of a sample in a dilatometer, with considerable external force applied to the sample in the course of heating at constant rate, reaches a maximal value and begins to decrease with further increases in temperature. The appearance of the maximum on the dilatometric curve is connected with the parallel influence of sample dilatation with increasing temperature and sample deformation due to the viscous flow. The position of the maximum can correspond approximately to a certain viscosity of the studied glass. Usually this viscosity is assumed to be equal to 10^11 P. However this value depends a great deal on the external load applied to the sample (the greater the load the higher corresponding viscosity), on the area of sample section (the greater the area the lower viscosity), on the value of TEC for the studied substance in its liquid state (the higher TEC the lower viscosity), on the rate of heating and on the previous thermal history of the sample (the higher the heating rate the lower viscosity; the lower the fictive temperature of the substance the lower viscosity). Thus the actual  viscosity  values at dilatometric softening temperatures could differ from the value stated above as greatly as  one order of magnitude.
+See also deformation point.
+
+unit = °C, symbol = Mg"""@en ;
+                                  rdfs:label "dilatometric softening temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Dispersion
+:Dispersion rdf:type owl:Class ;
+            rdfs:subClassOf :OpticalProperty ;
+            obo:IAO_0000119 "https://en.wikipedia.org/wiki/Dispersion_(optics)"@en ;
+            rdfs:comment "In optics, dispersion is the phenomenon in which the phase velocity of a wave depends on its frequency."@en ;
+            rdfs:label "dispersion"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DosingSpeed
+:DosingSpeed rdf:type owl:Class ;
+             rdfs:subClassOf :NominalProcessParameter ;
+             rdfs:comment "If time series values are contained, they are displayed as a list."@en ;
+             rdfs:label "dosing speed"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/DosingTime
+:DosingTime rdf:type owl:Class ;
+            rdfs:subClassOf :NominalProcessParameter ;
+            rdfs:comment "If time series values are contained, they are displayed as a list."@en ;
+            rdfs:label "dosing time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ElasticConstant
+:ElasticConstant rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:MaterialProperty ;
+                 obo:IAO_0000118 "elastic modulus"@en ,
+                                 "modulus of elasticity"@en ;
+                 obo:IAO_0000119 "https://en.wikipedia.org/wiki/Elastic_modulus"@en ;
+                 rdfs:label "elastic constant"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ElectricalConductivity
+:ElectricalConductivity rdf:type owl:Class ;
+                        rdfs:subClassOf pmdco:MaterialProperty ;
+                        obo:IAO_0000119 "SciGlass 7.0"@en ;
+                        rdfs:comment "The characteristics of the ability of a substance to conduct electrical current. It is the conductance of the cube when two opposite surfaces are connected to electrodes (cf.: electrical resistivity).Units of electrical conductivity are reciprocal to those of electrical resistivity: Ohm^-1*cm^-1 in CGS and S/m in SI."@en ;
+                        rdfs:label "electrical conductivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ExtinctionCoefficient
+:ExtinctionCoefficient rdf:type owl:Class ;
+                       rdfs:subClassOf pmdco:MaterialProperty ;
+                       obo:IAO_0000119 "SciGlass 7.0"@en ;
+                       rdfs:comment "A characteristics of the influence of a certain coloring component on the optical absorption of a glass or melt at the selected wavelength. There are two kinds of extinction coefficients, one is used for determination of optical density D, the other for determination of absorbance A."@en ;
+                       rdfs:label "extinction coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/FiberSofteningPoint
+:FiberSofteningPoint rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:MaterialProperty ;
+                     rdfs:comment """Similar to Softening Point, but the fiber softening point specifically refers to the temperature at which the glass fiber begins to soften 
+and lose its dimensional stability, while the softening point of glass generally refers to the temperature 
+at which the bulk glass begins to soften and can be molded or shaped."""@en ;
+                     rdfs:label "fiber softening point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/FictiveTemperature
+:FictiveTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf pmdco:MaterialProperty ;
+                    obo:IAO_0000119 "SciGlass 7.0"@en ;
+                    rdfs:comment """The temperature which is used for characterization of the structure of a glass-forming melt.
+Tf"""@en ;
+                    rdfs:label "fictive temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/FractureToughness
+:FractureToughness rdf:type owl:Class ;
+                   rdfs:subClassOf pmdco:MaterialProperty ;
+                   obo:IAO_0000119 "https://en.wikipedia.org/wiki/Fracture_toughness"@en ;
+                   rdfs:comment "In materials science, fracture toughness is the critical stress intensity factor of a sharp crack where propagation of the crack suddenly becomes rapid and unlimited."@en ;
+                   rdfs:label "fracture toughness"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GO_00079
+:GO_00079 rdf:type owl:Class ;
+          rdfs:subClassOf :model ;
+          obo:IAO_0000119 "SciGlass 7.0" ;
+          rdfs:comment "The abbreviation: VFT equation is often used. The most broadly this equation is used for the description of temperature dependence of viscosity."@en ;
+          rdfs:label "Vogel-Fulcher-Tammann equation"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Glass
+:Glass rdf:type owl:Class ;
+       rdfs:subClassOf pmdco:Object ;
+       obo:IAO_0000119 "SciGlass 7.0"@en ;
+       rdfs:comment """Glass is an inorganic product of fusion which has cooled to a rigid condition without crystallizing. [Standard definition (ASTM; C162-52)]
+Note: In recent years there has been a definite tendency to broaden the meaning of the term glass and have it cover all kinds of non-crystalline solids {see for example (Varshneya, 1994: References)}. However, in SciGlass the definition of ASTM is strictly followed. All information presented in this Information System concern the properties of non-crystalline solids cooled to a rigid condition from temperatures higher than the glass transition region or the properties of glass-forming melts."""@en ;
+       rdfs:label "Glass"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassAnalysisEquipment
+:GlassAnalysisEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf pmdco:ProcessNodeComponent ;
+                        rdfs:comment "Any kind of equipment"@en ;
+                        rdfs:label "glass analysis equipment"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassHomogeneity
+:GlassHomogeneity rdf:type owl:Class ;
+                  rdfs:subClassOf pmdco:MaterialProperty ;
+                  rdfs:comment """A refractive index variation within an optical component leads
+to a deformation of the wavefront passing through the glass
+piece.
+Higher the homogeneity, lower the refractive index variation."""@en ;
+                  rdfs:label "glass homogeneity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassManufacturingChamber
+:GlassManufacturingChamber rdf:type owl:Class ;
+                           rdfs:subClassOf pmdco:ProcessNodeComponent ;
+                           rdfs:label "Glass Manufacturing Chamber"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassManufacturingProcess
+:GlassManufacturingProcess rdf:type owl:Class ;
+                           rdfs:subClassOf pmdco:ManufactureProcess ;
+                           rdfs:label "Glass Manufacturing Process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassManufacturingProcessNode
+:GlassManufacturingProcessNode rdf:type owl:Class ;
+                               rdfs:subClassOf pmdco:ManufactureNode ;
+                               rdfs:comment "A subclass of process node representing glass manufacturing process nodes."@en ;
+                               rdfs:label "Glass Manufacturing Process Node"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassTransitionRegion
+:GlassTransitionRegion rdf:type owl:Class ;
+                       rdfs:subClassOf pmdco:MaterialProperty ;
+                       obo:IAO_0000119 "SciGlass 7.0"@en ;
+                       rdfs:comment "The temperature range where the temperature dependencies of properties of a glass-forming substance, which are specific for a liquid state, transform gradually into temperature dependences of properties specific for a glassy state. As a convenient and theoretically reasonable approximation it is possible to determine the width of the glass transition region by the width of a hysteresis loop obtained for the same cooling and heating rates and for the same property. A deficiency of this approach is the fact that the borderlines of hysteresis loop depend on the precision of measurements of the corresponding property. However, in the most cases, it is not essential to know exact positions of the boundaries of the glass transition regions and the method mentioned above is quite acceptable. Position of the glass transition region for any selected glass-forming substance depends of the rates of temperature change and, to a certain extent, on the selected property."@en ;
+                       rdfs:label "glass transition region"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/GlassTransitionTemperature
+:GlassTransitionTemperature rdf:type owl:Class ;
+                            rdfs:subClassOf pmdco:MaterialProperty ;
+                            obo:IAO_0000119 "Sciglass 7.0"@en ,
+                                            "https://www.sciencedirect.com/topics/chemistry/glass-transition-temperature"@en ;
+                            rdfs:comment """The glass transition temperature (Tg) is the temperature range where the polymer substrate changes from a rigid glassy material to a soft (not melted) material.
+unit = °C"""@en ;
+                            rdfs:label "glass transition temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/HeatingRate
+:HeatingRate rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:MaterialProperty ;
+             obo:IAO_0000119 "SciGlass 7.0"@en ;
+             rdfs:comment "Heating with a constant rate."@en ;
+             rdfs:label "heating rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/IndentationHardnessTest
+:IndentationHardnessTest rdf:type owl:Class ;
+                         rdfs:subClassOf pmdco:AnalysisProcess ;
+                         obo:IAO_0000119 "https://en.wikipedia.org/wiki/Indentation_hardnes"@en ;
+                         rdfs:comment "Indentation hardness tests are used in mechanical engineering to determine the hardness of a material to deformation."@en ;
+                         rdfs:label "indentation hardness test"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/InternalFriction
+:InternalFriction rdf:type owl:Class ;
+                  rdfs:subClassOf pmdco:MaterialProperty ;
+                  obo:IAO_0000119 "SciGlass 7.0"@en ;
+                  rdfs:comment "Characteristic of the loss of energy of sinusoidal vibrations in a substance due to its inelastic deformations. It is equal to 2*pi*tanδ, where tanδ is the loss tangent (see \"quality factor\")."@en ;
+                  rdfs:label "Internal friction"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/KnoopHardnessNumber
+:KnoopHardnessNumber rdf:type owl:Class ;
+                     rdfs:subClassOf :Microhardness ;
+                     rdfs:comment "hardness number according to Knoop hardness test."@en ;
+                     rdfs:label "Knoop hardness number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/KnoopHardnessTest
+:KnoopHardnessTest rdf:type owl:Class ;
+                   rdfs:subClassOf :microhardnessTest ;
+                   obo:IAO_0000119 "https://en.wikipedia.org/wiki/Knoop_hardness_test"@en ;
+                   rdfs:comment "hardness test according to Knoop"@en ;
+                   rdfs:label "Knoop hardness test"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficient
+:LinearThermalExpansionCoefficient rdf:type owl:Class ;
+                                   rdfs:subClassOf :ThermalExpansionCoefficient ;
+                                   obo:IAO_0000118 "coefficient of linear thermal expansion"@en ;
+                                   obo:IAO_0000119 "SciGlass 7.0"@en ;
+                                   rdfs:comment """The relative change in length of a sample per 1 K of change in temperature. Very often abbreviated LTEC or simply TEC.
+
+In Sciglass database, α*1e7  at ?°C
+unit = K^-1
+symbol = α"""@en ;
+                                   rdfs:label "linear thermal expansion coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientAt100C
+:LinearThermalExpansionCoefficientAt100C rdf:type owl:Class ;
+                                         rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                         rdfs:comment "α*1e7  at 100°C"@en ;
+                                         rdfs:label "linear thermal expansion coefficient at 100C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientAt160C
+:LinearThermalExpansionCoefficientAt160C rdf:type owl:Class ;
+                                         rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                         rdfs:comment "α*1e7  at 160°C"@en ;
+                                         rdfs:label "linear thermal expansion coefficient at 160C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientAt210C
+:LinearThermalExpansionCoefficientAt210C rdf:type owl:Class ;
+                                         rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                         rdfs:comment "α*1e7  at 210°C"@en ;
+                                         rdfs:label "linear thermal expansion coefficient at 210C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientAt350C
+:LinearThermalExpansionCoefficientAt350C rdf:type owl:Class ;
+                                         rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                         rdfs:comment "α*1e7  at 350°C"@en ;
+                                         rdfs:label "linear thermal expansion coefficient at 350C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientAt55C
+:LinearThermalExpansionCoefficientAt55C rdf:type owl:Class ;
+                                        rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                        rdfs:comment "α*1e7  at 55°C"@en ;
+                                        rdfs:label "linear thermal expansion coefficient at 55C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LinearThermalExpansionCoefficientBelowTg
+:LinearThermalExpansionCoefficientBelowTg rdf:type owl:Class ;
+                                          rdfs:subClassOf :LinearThermalExpansionCoefficient ;
+                                          rdfs:comment "α*1e7  at T <Tg"@en ;
+                                          rdfs:label "linear thermal expansion coefficient below Tg"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LiquidusTemperature
+:LiquidusTemperature rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:MaterialProperty ;
+                     obo:IAO_0000119 "SciGlass 7.0"@en ;
+                     rdfs:comment """The maximum temperature at which equilibrium exists between the molten glass and its primary crystalline phase. [Standard definition (ASTM; C162-52)]
+
+unit = °C"""@en ;
+                     rdfs:label "liquidus temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt1000C
+:LogSpecificElectricalResistivityAt1000C rdf:type owl:Class ;
+                                         rdfs:subClassOf :SpecificElectricalResistivity ;
+                                         rdfs:label "log specific electrical resistivity at 1000C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt100C
+:LogSpecificElectricalResistivityAt100C rdf:type owl:Class ;
+                                        rdfs:subClassOf :SpecificElectricalResistivity ;
+                                        rdfs:label "log specific electrical resistivity at 100C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt1400C
+:LogSpecificElectricalResistivityAt1400C rdf:type owl:Class ;
+                                         rdfs:subClassOf :SpecificElectricalResistivity ;
+                                         rdfs:label "log specific electrical resistivity at 1400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt150C
+:LogSpecificElectricalResistivityAt150C rdf:type owl:Class ;
+                                        rdfs:subClassOf :SpecificElectricalResistivity ;
+                                        rdfs:label "log specific electrical resistivity at 150C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt20C
+:LogSpecificElectricalResistivityAt20C rdf:type owl:Class ;
+                                       rdfs:subClassOf :SpecificElectricalResistivity ;
+                                       rdfs:label "log specific electrical resistivity at 20C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt300C
+:LogSpecificElectricalResistivityAt300C rdf:type owl:Class ;
+                                        rdfs:subClassOf :SpecificElectricalResistivity ;
+                                        rdfs:label "log specific electrical resistivity at 300C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogSpecificElectricalResistivityAt800C
+:LogSpecificElectricalResistivityAt800C rdf:type owl:Class ;
+                                        rdfs:subClassOf :SpecificElectricalResistivity ;
+                                        rdfs:label "log specific electrical resistivity at 800C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1000C
+:LogViscosityAt1000C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1000C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1100C
+:LogViscosityAt1100C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1100C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1200C
+:LogViscosityAt1200C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1300C
+:LogViscosityAt1300C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1300C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1400C
+:LogViscosityAt1400C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1500C
+:LogViscosityAt1500C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1500C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1600C
+:LogViscosityAt1600C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1600C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt1800C
+:LogViscosityAt1800C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 1800C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt2000C
+:LogViscosityAt2000C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 2000C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt2200C
+:LogViscosityAt2200C rdf:type owl:Class ;
+                     rdfs:subClassOf :Viscosity ;
+                     rdfs:label "log viscosity at 2200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt500C
+:LogViscosityAt500C rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    rdfs:label "log viscosity at 500C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt600C
+:LogViscosityAt600C rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    rdfs:label "log viscosity at 600C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt700C
+:LogViscosityAt700C rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    rdfs:label "log viscosity at 700C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt800C
+:LogViscosityAt800C rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    rdfs:label "log viscosity at 800C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LogViscosityAt900C
+:LogViscosityAt900C rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    rdfs:label "log viscosity at 900C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LossAngle
+:LossAngle rdf:type owl:Class ;
+           rdfs:subClassOf pmdco:MaterialProperty ;
+           obo:IAO_0000119 "Sciglass 7.0"@en ;
+           rdfs:comment """The angle 𝛿 between the excitations and response vectors of a circle diagram describing the response of a body in alternating electrical or mechanical fields. 
+tan 𝛿 is the ratio of imaginary to real parts of complex dielectric constant or complex elastic modulus. 
+Sometimes tan 𝛿 is also called the loss angle: see reference:
+Varshneya A.K. 1994. Fundamentals of Inorganic Glasses. Academic Press, N.Y., London."""@en ;
+           rdfs:label "loss angle"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/LossTangent
+:LossTangent rdf:type owl:Class ;
+             rdfs:subClassOf :LossAngle ;
+             obo:IAO_0000119 "Sciglass 7.0"@en ;
+             rdfs:comment """tangent of loss angle (for electrical, acoustical, and another kinds of sinusoidal excitation)
+
+Loss tangent (tan(δ)) (also referred to as dissipation factor (Df) by many PCB manufacturers) 
+is a measure of signal attenuation as the signal propagates down the transmission line.
+This attenuation is the result of electromagnetic wave absorption in the dielectric material and is commonly known as dielectric loss.
+
+In Sciglass database, value = Tan𝛿*1E4"""@en ;
+             rdfs:label "loss tangent"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MaximumCrystalGrowthRate
+:MaximumCrystalGrowthRate rdf:type owl:Class ;
+                          rdfs:subClassOf pmdco:MaterialProperty ;
+                          obo:IAO_0000119 "Sciglass 7.0"@en ;
+                          rdfs:comment "unit = cm/s"@en ;
+                          rdfs:label "maximum crystal growth rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MaximumCrystalGrowthTemperature
+:MaximumCrystalGrowthTemperature rdf:type owl:Class ;
+                                 rdfs:subClassOf pmdco:MaterialProperty ;
+                                 obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                 rdfs:comment "unit = °C"@en ;
+                                 rdfs:label "maximum crystal growth temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeanDispersion
+:MeanDispersion rdf:type owl:Class ;
+                rdfs:subClassOf :OpticalProperty ;
+                obo:IAO_0000119 "SciGlass 7.0"@en ;
+                rdfs:comment """Difference of refractive indices nF- nC for F and C wavelengths (see Standard wavelengths for optical properties). The quantity is used to determine the Nu-value.
+wavelength F = 486.13nm
+wavelength C = 656.27nm
+
+in Sciglass database, Mean dispersion*1E4  at 20°C"""@en ;
+                rdfs:label "mean dispersion"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeanDispersionAt20C
+:MeanDispersionAt20C rdf:type owl:Class ;
+                     rdfs:subClassOf :MeanDispersion ;
+                     rdfs:comment "in Sciglass database, Mean dispersion*1E4  at 20°C"@en ;
+                     rdfs:label "mean dispersion at 20C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeasuredProcessDuration
+:MeasuredProcessDuration rdf:type owl:Class ;
+                         rdfs:subClassOf :MeasuredProcessParameter ;
+                         rdfs:label "measured process duration"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeasuredProcessParameter
+:MeasuredProcessParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ProcessParameter ;
+                          rdfs:comment "This property is used to describe a quantity value that has been measured during the execution of a process."@en ;
+                          rdfs:label "Measured Process Parameter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeltHeatingRate
+:MeltHeatingRate rdf:type owl:Class ;
+                 rdfs:subClassOf :NominalProcessParameter ;
+                 rdfs:comment "Heating at a constant rate."@en ;
+                 rdfs:label "melt heating rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeltHoldingTime
+:MeltHoldingTime rdf:type owl:Class ;
+                 rdfs:subClassOf :NominalProcessParameter ;
+                 rdfs:label "melt holding time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MeltTemperature
+:MeltTemperature rdf:type owl:Class ;
+                 rdfs:subClassOf :MeasuredProcessParameter ;
+                 obo:IAO_0000118 "liquefaction point"@en ,
+                                 "liquefaction temperature"@en ,
+                                 "melt point"@en ,
+                                 "melting point"@en ,
+                                 "melting temperature"@en ;
+                 obo:IAO_0000119 "SciGlass 7.0"@en ;
+                 rdfs:comment "If time series values are contained, they are displayed as a list."@en ,
+                              """The range of furnace temperatures at which melting takes place at a commercially desirable rate, and at which the resulting glass generally has a viscosity between 10^1.5 to 10^2.5 poises. For purposes of comparing glasses, it is assumed that a glass at melting temperature has a viscosity of 10^2 poises. [Standard definition (ASTM; C162-52)]
+
+unit = °C"""@en ;
+                 rdfs:label "melt temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Microhardness
+:Microhardness rdf:type owl:Class ;
+               rdfs:subClassOf pmdco:MaterialProperty ;
+               obo:IAO_0000118 "microindentation hardness"@en ;
+               obo:IAO_0000119 "SciGlass 7.0"@en ;
+               rdfs:comment """The characteristic of the deformation of the glass surface under the influence of a pyramidal diamond indentor. The size of indentation is usually of the order of several micrometers. In the most cases two kinds of pyramids are used, namely Vickers and Knoop pyramids.
+
+The Vickers hardness number (VHN) = 1.8544F/D kgf/mm^2
+where F is the force in kgf and D is the average diagonal of impression in mm.
+
+The Knoop hardness number (KHN) = 14.23F/L kgf/mm^2
+where L is the length of the long diagonal.
+
+The difference between values obtained by these two kinds of measurements is not great and usually is within the limits of the scatter of data reported by various authors for the same glass composition. Thus in the Auxiliary Database all microhardness data are presented together independently on the kind of indentor used for the corresponding measurements.
+
+In Sciglass database, unit = GPa"""@en ;
+               rdfs:label "microhardness"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MolarExtinctionCoefficient
+:MolarExtinctionCoefficient rdf:type owl:Class ;
+                            rdfs:subClassOf pmdco:MaterialProperty ;
+                            obo:IAO_0000118 "molar absorptivity"@en ,
+                                            "molar attenuation coefficient"@en ;
+                            obo:IAO_0000119 "https://en.wikipedia.org/wiki/Molar_attenuation_coefficient"@en ;
+                            rdfs:comment "The molar attenuation coefficient is a measurement of how strongly a chemical species attenuates light at a given wavelength."@en ;
+                            rdfs:label "molar extinction coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MolarMass
+:MolarMass rdf:type owl:Class ;
+           rdfs:subClassOf pmdco:MaterialProperty ;
+           obo:IAO_0000118 "molar weight"@en ;
+           obo:IAO_0000119 "SciGlass 7.0"@en ;
+           rdfs:comment "The averaged value of molar weights of glass components (oxides, halides etc.)."@en ;
+           rdfs:label "molar mass"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MolarVolume
+:MolarVolume rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:MaterialProperty ;
+             obo:IAO_0000119 "SciGlass 7.0"@en ;
+             rdfs:comment """The volume of a mole of glass.
+
+Equation:
+molar volume (V_M) = M/d. where M = molar mass, d = density."""@en ;
+             rdfs:label "molar volume"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/MolePercent
+:MolePercent rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:MaterialProperty ;
+             rdfs:comment "mol%"@en ;
+             rdfs:label "mole percent"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/NetWeight
+:NetWeight rdf:type owl:Class ;
+           rdfs:subClassOf :MeasuredProcessParameter ;
+           rdfs:comment "It is measured after taking out of the oven and before the next filling step."@en ;
+           rdfs:label "net weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/NominalProcessDuration
+:NominalProcessDuration rdf:type owl:Class ;
+                        rdfs:subClassOf :NominalProcessParameter ;
+                        rdfs:label "nominal process duration"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/NominalProcessParameter
+:NominalProcessParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :ProcessParameter ;
+                         rdfs:comment "This property is used to describe a quantity value that was input of process."@en ;
+                         rdfs:label "Nominal Process Parameter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/NucleationRate
+:NucleationRate rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "SciGlass 7.0"@en ;
+                rdfs:comment """The nucleation rate is determined by the number of crystals forming per unit of time in a unit of melt volume (in the case of bulk nucleation) or on a unity of melt surface (in the case of surface nucleation).
+
+unit = cm^-3*min^-1"""@en ;
+                rdfs:label "nucleation rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/NucleationTemperature
+:NucleationTemperature rdf:type owl:Class ;
+                       rdfs:subClassOf pmdco:MaterialProperty ;
+                       obo:IAO_0000119 "Sciglass 7.0"@en ;
+                       rdfs:comment "unit = °C"@en ;
+                       rdfs:label "nucleation temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/OnsetCrystallizationTemperature
+:OnsetCrystallizationTemperature rdf:type owl:Class ;
+                                 rdfs:subClassOf :CrystallizationTemperature ;
+                                 obo:IAO_0000118 "onset crystallisation temperature"@en ;
+                                 obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                 rdfs:comment "Tx, unit = °C"@en ;
+                                 rdfs:label "onset crystallization temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/OpticalDensity
+:OpticalDensity rdf:type owl:Class ;
+                rdfs:subClassOf :OpticalProperty ;
+                obo:IAO_0000119 "https://www.photonics.com/EDU/optical_density/d5788"@en ;
+                rdfs:comment "A measure of the transmittance through an optical medium. Optical density equals the log to the base 10 of the reciprocal of the transmittance"@en ,
+                             """D=-log(I/I_0)
+where
+OPTICAL DENSITY
+where I is the intensity of light transmitted through the medium, Io the intensity of incident light, D the optical density. D = 0.4343k/d = α/d where k is the absorption coefficient, α the decimal absorption coefficient, and d the distance of transmission of light through the medium."""@en ,
+                             """Though optical density and absorbance both measure the absorption of light when that light passes through an optical component, these two terms are not the same. Optical density measures the amount of attenuation, or intensity lost, when light passes through an optical component. It also tracks attenuation based on the scattering of light, whereas absorbance considers only the absorption of light within the optical component. Both optical density and absorbance can be tracked through the use of a spectrometer.
+see https://sciencing.com/difference-between-optical-density-absorbance-7842652.html"""@en ;
+                rdfs:label "optical density"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/OpticalProperty
+:OpticalProperty rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:MaterialProperty ;
+                 obo:IAO_0000119 "https://en.wikipedia.org/wiki/Optical_properties"@en ;
+                 rdfs:comment "A group of properties in the Main Database of SciGlass which includes refractive index, dispersion, and absorption and transmission of optical waves. In the Auxiliary Database only data on refractive index at room temperature at D-line of the spectrum (see Standard wavelengths for optical properties) and mean dispersion are included."@en ;
+                 rdfs:label "optical property"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ParallelPlateViscometry
+:ParallelPlateViscometry rdf:type owl:Class ;
+                         rdfs:subClassOf :viscometry ;
+                         rdfs:label "parallel plate viscometry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/PeakCrystallizationTemperature
+:PeakCrystallizationTemperature rdf:type owl:Class ;
+                                rdfs:subClassOf :CrystallizationTemperature ;
+                                obo:IAO_0000118 "peak crystallisation temperature"@en ;
+                                obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                rdfs:comment "Tc, unit = °C"@en ;
+                                rdfs:label "peak crystallization temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/PochettinoViscometer
+:PochettinoViscometer rdf:type owl:Class ;
+                      rdfs:subClassOf :viscometer ;
+                      obo:IAO_0000119 "SciGlass 7.0"@en ;
+                      rdfs:comment "The device based on the method of measuring high viscosity values at conditions of pure shear. The investigated glass is introduced into a ring-shaped space between two concentric cylinders; the shearing force is applied axially, and the axial displacement of the inner cylinder towards the outer cylinder is measured by interferometry."@en ,
+                                   "seems to be a pretty old device. Not much information about it"@en ;
+                      rdfs:label "Pochettino viscometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/PoissonRatio
+:PoissonRatio rdf:type owl:Class ;
+              rdfs:subClassOf :ElasticConstant ;
+              obo:IAO_0000119 "https://en.wikipedia.org/wiki/Poisson%27s_ratio"@en ;
+              rdfs:comment "Poisson's ratio of a material defines the ratio of transverse strain (x direction) to the axial strain (y direction)"@en ;
+              rdfs:label "Poisson's ratio"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/PremeltHeatingRate
+:PremeltHeatingRate rdf:type owl:Class ;
+                    rdfs:subClassOf :NominalProcessParameter ;
+                    rdfs:label "premelt heating rate"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/PremeltHoldingTime
+:PremeltHoldingTime rdf:type owl:Class ;
+                    rdfs:subClassOf :NominalProcessParameter ;
+                    rdfs:label "premelt holding time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ProcessParameter
+:ProcessParameter rdf:type owl:Class ;
+                  rdfs:comment "Glass process parameters from BAM"@en ;
+                  rdfs:label "Process Parameter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/QualityFactor
+:QualityFactor rdf:type owl:Class ;
+               rdfs:subClassOf pmdco:MaterialProperty ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Q_factor"@en ;
+               rdfs:comment "The Q factor is a parameter that describes the resonance behavior of an underdamped harmonic oscillator (resonator)."@en ;
+               rdfs:label "quality factor"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/RawMaterial
+:RawMaterial rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:Material ;
+             rdfs:comment "raw material forms the glass (Object)"@en ;
+             rdfs:label "raw material"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/RefractiveIndex
+:RefractiveIndex rdf:type owl:Class ;
+                 rdfs:subClassOf :OpticalProperty ;
+                 obo:IAO_0000118 "index of refraction"@en ,
+                                 "refraction index"@en ;
+                 obo:IAO_0000119 "Sciglass 7.0"@en ;
+                 rdfs:comment "The ratio of the velocities of light in a vacuum to that in the substance. It is dimensionless."@en ;
+                 rdfs:label "refractive index"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/RefractiveIndexAt20C
+:RefractiveIndexAt20C rdf:type owl:Class ;
+                      rdfs:subClassOf :RefractiveIndex ;
+                      obo:IAO_0000119 "Sciglass 7.0"@en ;
+                      rdfs:label "refractive index at 20C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/RelativePermittivity
+:RelativePermittivity rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:MaterialProperty ;
+                      obo:IAO_0000118 "dielectric constant"@en ;
+                      obo:IAO_0000119 "Sciglass 7.0"@en ;
+                      rdfs:comment """only the data on dielectric permittivity and dielectric losses corresponding to room temperature and frequency 10^6 Hz (or to the nearest frequency in the range 10^4~10^7 Hz) are compiled.
+
+The relative permittivity (in older texts, dielectric constant) is the permittivity of a material expressed as a ratio with the electric permittivity of a vacuum. 
+A dielectric is an insulating material, and the dielectric constant of an insulator measures the ability of the insulator to store electric energy in an electrical field."""@en ;
+                      rdfs:label "relative permittivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/RelaxationTime
+:RelaxationTime rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "SciGlass 7.0"@en ;
+                rdfs:comment "Relaxation is the process of moving to equilibrium for a system driven out of equilibrium. Relaxation time t is a constant characterizing the speed of this moving. In the simplest case when the relaxation of the system can be described by only one relaxation time and this value does not change with time during the whole relaxation process."@en ;
+                rdfs:label "relaxation time"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ResonantFrequencyAndDampingAnalysis
+:ResonantFrequencyAndDampingAnalysis rdf:type owl:Class ;
+                                     rdfs:subClassOf pmdco:AnalysisProcess ;
+                                     obo:IAO_0000119 "https://www.imce.eu/products/rfda-professional"@en ;
+                                     rdfs:comment """Resonant Frequency and Damping Analysis (RFDA) professional system measures the resonant frequencies and internal friction or damping of samples and calculates the Young's modulus, shear modulus, Poisson's ratio of rectangular bars, cylindrical rods and discs according to the ASTM E1876-15 standard.
+
+non-destructive test method.
+
+measurement of the resonance frequency and its decay behaviour after a short mechanical impulse.
+
+determination of elasticity and shear modulus, the lateral contraction number and damping."""@en ;
+                                     rdfs:label "resonant frequency and damping analysis"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SampleMass
+:SampleMass rdf:type owl:Class ;
+            rdfs:subClassOf pmdco:MaterialProperty ;
+            rdfs:comment "the mass of sample used in the analysis process"@en ;
+            rdfs:label "sample mass"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ShearModulus
+:ShearModulus rdf:type owl:Class ;
+              rdfs:subClassOf :ElasticConstant ;
+              obo:IAO_0000118 "modulus of rigidity"@en ,
+                              "rigidity modulus"@en ;
+              obo:IAO_0000119 "Sciglass 7.0"@en ,
+                              "https://en.wikipedia.org/wiki/Shear_modulus"@en ;
+              rdfs:comment "In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain."@en ,
+                           """SHEAR MODULUS
+The ratio of shear stress to shear strain. The term rigidity modulus is also used.
+In Sciglass, Shear modulus at 20°C
+unit = GPa"""@en ;
+              rdfs:label "shear modulus"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SofteningPoint
+:SofteningPoint rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000118 "Littleton point"@en ,
+                                "Littleton softening point"@en ,
+                                "Littleton softening temperature"@en ,
+                                "Littleton temperature"@en ,
+                                "softening temperature"@en ;
+                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Softening_point"@en ,
+                                "https://www.manufacturingterms.com/Softening-point-(glass).html"@en ;
+                rdfs:comment """The maximum temperature at which a glass piece may be handled without permanent deformation; this corresponds to a viscosity of approximately 4x 10^6 Pa -s ( 4X 10^7 or 10^7.6 P).
+unit = °C"""@en ,
+                             "The softening point is the temperature at which a material softens beyond some arbitrary softness."@en ;
+                rdfs:label "softening point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SoundAbsorption
+:SoundAbsorption rdf:type owl:Class ;
+                 rdfs:subClassOf :AcousticalProperty ;
+                 rdfs:label "sound absorption"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SoundVelocity
+:SoundVelocity rdf:type owl:Class ;
+               rdfs:subClassOf :AcousticalProperty ;
+               rdfs:label "sound velocity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificElectricalResistivity
+:SpecificElectricalResistivity rdf:type owl:Class ;
+                               rdfs:subClassOf pmdco:MaterialProperty ;
+                               obo:IAO_0000119 "SciGlass 7.0"@en ;
+                               rdfs:comment """The specific value characterizing the electrical resistance of a substance. It is the resistance of the cube when two opposite surfaces are connected to electrodes.
+Units of electrical resistivity (ρ): Ohm*cm in CGS and Oh*m in SI.
+unit = Ohm*cm
+symbol = ρ"""@en ;
+                               rdfs:label "specific electrical resistivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificElectricalResistivityTemperature
+:SpecificElectricalResistivityTemperature rdf:type owl:Class ;
+                                          rdfs:subClassOf pmdco:MaterialProperty ;
+                                          obo:IAO_0000119 "Sciglass 7.0"@en ;
+                                          rdfs:comment "temperature corresponding to specific electric resistivity of a substance equal to 10^8 Ohm.cm or 10^6 Ohm.m, unit = °C"@en ;
+                                          rdfs:label "specific electrical resistivity temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacity
+:SpecificHeatCapacity rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:MaterialProperty ;
+                      obo:IAO_0000119 "SciGlass 7.0"@en ,
+                                      "https://en.wikipedia.org/wiki/Specific_heat_capacity"@en ;
+                      rdfs:comment "(Specific) Heat capacity is the amount of heat (joules or calories) required to increase the temperature of a body by 1 K. Heat capacity can be either specific (related to a unit mass) or molar (related to a unit mole). In most cases it is measured at constant pressure and in this case is denoted by Cp."@en ,
+                                   "In thermodynamics, the specific heat capacity (symbol c_p) of a substance is the heat capacity of a sample of the substance divided by the mass of the sample."@en ,
+                                   """In thermodynamics, the specific heat capacity (symbol cp) of a substance is the heat capacity of a sample of the substance divided by the mass of the sample. 
+
+Specific heat capacity (Cp) at constant pressure, unit = J/(Kg*K)"""@en ;
+                      rdfs:label "specific heat capacity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt1000C
+:SpecificHeatCapacityAt1000C rdf:type owl:Class ;
+                             rdfs:subClassOf :SpecificHeatCapacity ;
+                             rdfs:label "specific heat capacity at 1000C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt1200C
+:SpecificHeatCapacityAt1200C rdf:type owl:Class ;
+                             rdfs:subClassOf :SpecificHeatCapacity ;
+                             rdfs:label "specific heat capacity at 1200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt1400C
+:SpecificHeatCapacityAt1400C rdf:type owl:Class ;
+                             rdfs:subClassOf :SpecificHeatCapacity ;
+                             rdfs:label "specific heat capacity at 1400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt200C
+:SpecificHeatCapacityAt200C rdf:type owl:Class ;
+                            rdfs:subClassOf :SpecificHeatCapacity ;
+                            rdfs:label "specific heat capacity at 200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt20C
+:SpecificHeatCapacityAt20C rdf:type owl:Class ;
+                           rdfs:subClassOf :SpecificHeatCapacity ;
+                           rdfs:label "specific heat capacity at 20C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt400C
+:SpecificHeatCapacityAt400C rdf:type owl:Class ;
+                            rdfs:subClassOf :SpecificHeatCapacity ;
+                            rdfs:label "specific heat capacity at 400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificHeatCapacityAt800C
+:SpecificHeatCapacityAt800C rdf:type owl:Class ;
+                            rdfs:subClassOf :SpecificHeatCapacity ;
+                            rdfs:label "specific heat capacity at 800C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SpecificVolume
+:SpecificVolume rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "Sciglass 7.0"@en ;
+                rdfs:comment """Specific volume at 20°C
+unit = cm^3/g"""@en ;
+                rdfs:label "specific volume"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/StrainPoint
+:StrainPoint rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:MaterialProperty ;
+             obo:IAO_0000118 "low-temperature border of annealing range"@en ,
+                             "lower annealing temperature point"@en ;
+             obo:IAO_0000119 "SciGlass 7.0"@en ,
+                             "https://www.materials.unsw.edu.au/study-us/high-school-students-and-teachers/online-tutorials/ceramics/glass/properties"@en ;
+             rdfs:comment "The strain point is the maximum temperature at which a glass can be used for structural applications without undergoing creep."@en ,
+                          """strain point or lower annealing temperature point is the temperature corresponding to the viscosity of 10^14.5 P. It is the temperature at which the stress in a glass is substantially removed in about 4 h. (Volf, 1961)
+unit = °C"""@en ;
+             rdfs:label "strain point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/StressOpticCoefficient
+:StressOpticCoefficient rdf:type owl:Class ;
+                        rdfs:subClassOf pmdco:MaterialProperty ;
+                        obo:IAO_0000118 "Brewster's constant"@en ;
+                        obo:IAO_0000119 "SciGlass 7.0"@en ;
+                        rdfs:comment "Ideally, homogeneous glass is isotropic. However, at the presence of non-hydrostatic stresses it becomes non-isotropic. It means that perpendicular vibrations of a non-polarized light are going through the glass sample with different velocities. Accordingly the sample is characterized by two different refractive indexes (develops a double refraction). A constant which shows correlation between the optical path difference between vibrations along two perpendicular axes (with minimal and maximal velocities) and stresses which gave rise to this difference is called the stress-optic coefficient, or Brewster's constant."@en ;
+                        rdfs:label "stress-optic coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceElectricalConductivity
+:SurfaceElectricalConductivity rdf:type owl:Class ;
+                               rdfs:subClassOf pmdco:MaterialProperty ;
+                               obo:IAO_0000119 "SciGlass 7.0"@en ;
+                               rdfs:comment "The conductivity of a square on the glass surface when a voltage is applied to two opposite sides. It is expressed in S (Ohm^-1)."@en ;
+                               rdfs:label "surface electrical conductivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTension
+:SurfaceTension rdf:type owl:Class ;
+                rdfs:subClassOf pmdco:MaterialProperty ;
+                obo:IAO_0000119 "SciGlass 7.0"@en ;
+                rdfs:comment """Amount of work (or energy) needed to form a unit surface.
+
+P.S. SI unit is newton per meter but the cgs unit of dyne per centimeter is also used
+
+In Sciglass database, unt = mN/m, symbol = σ"""@en ;
+                rdfs:label "surface tension"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTensionAboveTg
+:SurfaceTensionAboveTg rdf:type owl:Class ;
+                       rdfs:subClassOf :SurfaceTension ;
+                       rdfs:comment "σ at T>Tg"@en ;
+                       rdfs:label "surface tension above Tg"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTensionAt1200C
+:SurfaceTensionAt1200C rdf:type owl:Class ;
+                       rdfs:subClassOf :SurfaceTension ;
+                       rdfs:comment "σ at 1200°C"@en ;
+                       rdfs:label "surface tension at 1200C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTensionAt1300C
+:SurfaceTensionAt1300C rdf:type owl:Class ;
+                       rdfs:subClassOf :SurfaceTension ;
+                       rdfs:comment "σ at 1300°C"@en ;
+                       rdfs:label "surface tension at 1300C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTensionAt1400C
+:SurfaceTensionAt1400C rdf:type owl:Class ;
+                       rdfs:subClassOf :SurfaceTension ;
+                       rdfs:comment "σ at 1400°C"@en ;
+                       rdfs:label "surface tension at 1400C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/SurfaceTensionAt900C
+:SurfaceTensionAt900C rdf:type owl:Class ;
+                      rdfs:subClassOf :SurfaceTension ;
+                      rdfs:comment "σ at 900°C"@en ;
+                      rdfs:label "surface tension at 900C"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TargetCoolingTemperature
+:TargetCoolingTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :NominalProcessParameter ;
+                          rdfs:label "target cooling temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TargetMeltTemperature
+:TargetMeltTemperature rdf:type owl:Class ;
+                       rdfs:subClassOf :NominalProcessParameter ;
+                       rdfs:label "target melt temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TargetPremeltTemperature
+:TargetPremeltTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :NominalProcessParameter ;
+                          rdfs:label "target premelt temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TargetTotalWeight
+:TargetTotalWeight rdf:type owl:Class ;
+                   rdfs:subClassOf :NominalProcessParameter ;
+                   rdfs:comment "this is the target total weight of the mixture from all raw materials"@en ;
+                   rdfs:label "target total weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TargetWeight
+:TargetWeight rdf:type owl:Class ;
+              rdfs:subClassOf :NominalProcessParameter ;
+              rdfs:comment "If time series values are contained, they are displayed as a list."@en ,
+                           "The target weight of each raw material or filling step"@en ;
+              rdfs:label "target weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TensileStrength
+:TensileStrength rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:MaterialProperty ;
+                 obo:IAO_0000119 "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"@en ;
+                 rdfs:comment "the maximum stress that a material can withstand while being stretched or pulled before breaking."@en ;
+                 rdfs:label "tensile strength"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ThermalConductivity
+:ThermalConductivity rdf:type owl:Class ;
+                     rdfs:subClassOf pmdco:MaterialProperty ;
+                     obo:IAO_0000119 "SciGlass 7.0"@en ,
+                                     "https://en.wikipedia.org/wiki/Thermal_conductivity"@en ;
+                     rdfs:comment "The thermal conductivity of a material is a measure of its ability to conduct heat."@en ,
+                                  """Thermal conductivity is the amount of heat transmitted per unit cross-sectional area of a body per unit time under the influence of a unit temperature gradient. In an opaque body the process of heat transmittance is obeyed to Fourier's first law.
+
+In Sciglass databse, unit = W/(m*K)"""@en ;
+                     rdfs:label "thermal conductivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ThermalDiffusivity
+:ThermalDiffusivity rdf:type owl:Class ;
+                    rdfs:subClassOf pmdco:MaterialProperty ;
+                    obo:IAO_0000119 "SciGlass 7.0"@en ,
+                                    "https://en.wikipedia.org/wiki/Thermal_diffusivity"@en ;
+                    rdfs:comment "For solution of problems of non-stationary heat transfer it is more convenient to use instead of thermal conductivity values."@en ,
+                                 "In heat transfer analysis, thermal diffusivity is the thermal conductivity divided by density and specific heat capacity at constant pressure."@en ;
+                    rdfs:label "thermal diffusivity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ThermalExpansionCoefficient
+:ThermalExpansionCoefficient rdf:type owl:Class ;
+                             rdfs:subClassOf pmdco:MaterialProperty ;
+                             obo:IAO_0000119 "https://en.wikipedia.org/wiki/Thermal_expansion"@en ;
+                             rdfs:comment "Kinds of thermal expansion coefficient"@en ,
+                                          "Thermal expansion is the tendency of matter to change its shape, area, volume, and density in response to a change in temperature, usually not including phase transitions."@en ;
+                             rdfs:label "thermal expansion coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ThermalShockResistance
+:ThermalShockResistance rdf:type owl:Class ;
+                        rdfs:subClassOf pmdco:MaterialProperty ;
+                        obo:IAO_0000118 "thermal endurance"@en ;
+                        obo:IAO_0000119 "Sciglass 7.0"@en ;
+                        rdfs:comment """THERMAL ENDURANCE (THERMAL SHOCK RESISTANCE)
+The relative ability of glassware to withstand thermal shock. [Standard definition (ASTM; C162-52)]. Thermal endurance (the other term - thermal shock resistance) is expressed in K which describes the maximum difference between temperature of heated glassware or a sample of certain standard dimensions and the temperature of cool water into which the studied object could be quickly inserted without any visible indication of disintegration.
+
+unit = K"""@en ;
+                        rdfs:label "thermal shock resistance"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/TotalWeight
+:TotalWeight rdf:type owl:Class ;
+             rdfs:subClassOf :MeasuredProcessParameter ;
+             rdfs:comment "which is the actual total weight of the mixture from all raw materials. Calculated by summing the actual value of each raw material at the final dosing step."@en ;
+             rdfs:label "total weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/VickersHardnessNumber
+:VickersHardnessNumber rdf:type owl:Class ;
+                       rdfs:subClassOf :Microhardness ;
+                       rdfs:comment "hardness number according to Vickers hardness test"@en ;
+                       rdfs:label "Vickers hardness number"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/VickersHardnessTest
+:VickersHardnessTest rdf:type owl:Class ;
+                     rdfs:subClassOf :microhardnessTest ;
+                     obo:IAO_0000119 "https://en.wikipedia.org/wiki/Vickers_hardness_test"@en ;
+                     rdfs:comment "hardness test according to Vickers"@en ;
+                     rdfs:label "Vickers hardness test"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Viscosity
+:Viscosity rdf:type owl:Class ;
+           rdfs:subClassOf pmdco:MaterialProperty ;
+           obo:IAO_0000119 "Sciglass 7.0"@en ,
+                           "https://en.wikipedia.org/wiki/Viscosity"@en ;
+           rdfs:comment "The viscosity of a fluid is a measure of its resistance to deformation at a given rate. For liquids, it corresponds to the informal concept of \"thickness\": for example, syrup has a higher viscosity than water."@en ;
+           rdfs:label "viscosity"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT1
+:ViscosityT1 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T1"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT10
+:ViscosityT10 rdf:type owl:Class ;
+              rdfs:subClassOf :ViscosityTemperature ;
+              rdfs:label "viscosity T10"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT11
+:ViscosityT11 rdf:type owl:Class ;
+              rdfs:subClassOf :ViscosityTemperature ;
+              rdfs:label "viscosity T11"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT12
+:ViscosityT12 rdf:type owl:Class ;
+              rdfs:subClassOf :ViscosityTemperature ;
+              rdfs:label "viscosity T12"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT13
+:ViscosityT13 rdf:type owl:Class ;
+              rdfs:subClassOf :ViscosityTemperature ;
+              rdfs:label "viscosity T13"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT2
+:ViscosityT2 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T2"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT3
+:ViscosityT3 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T3"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT4
+:ViscosityT4 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T4"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT5
+:ViscosityT5 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T5"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT6
+:ViscosityT6 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T6"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT7
+:ViscosityT7 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T7"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT8
+:ViscosityT8 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T8"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityT9
+:ViscosityT9 rdf:type owl:Class ;
+             rdfs:subClassOf :ViscosityTemperature ;
+             rdfs:label "viscosity T9"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ViscosityTemperature
+:ViscosityTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf pmdco:MaterialProperty ;
+                      obo:IAO_0000119 "Sciglass 7.0"@en ;
+                      rdfs:comment """Ti (log η = i)
+temperature (°C) corresponding to viscosity (η) logarithm value equal to i.
+Which means viscosity is equal to 10^i Pa"""@en ;
+                      rdfs:label "viscosity temperature"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/VolumeThermalExpansionCoefficient
+:VolumeThermalExpansionCoefficient rdf:type owl:Class ;
+                                   rdfs:subClassOf :ThermalExpansionCoefficient ;
+                                   obo:IAO_0000118 "volumetric thermal expansion coefficient"@en ;
+                                   obo:IAO_0000119 "SciGlass 7.0"@en ;
+                                   rdfs:comment "The relative change in volume of a sample per 1 K of change in temperature. Sometimes an abbreviation VTEC is used."@en ;
+                                   rdfs:label "volume thermal expansion coefficient"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/Weight
+:Weight rdf:type owl:Class ;
+        rdfs:subClassOf :MeasuredProcessParameter ;
+        rdfs:comment "P.S. When it contain time series values, it will be displayed as a list."@en ,
+                     "The actual weight of each raw material or filling step"@en ;
+        rdfs:label "weight"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/WeightPercent
+:WeightPercent rdf:type owl:Class ;
+               rdfs:subClassOf pmdco:MaterialProperty ;
+               rdfs:comment "wt%"@en ;
+               rdfs:label "weight percent"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/WorkingPoint
+:WorkingPoint rdf:type owl:Class ;
+              rdfs:subClassOf pmdco:MaterialProperty ;
+              obo:IAO_0000119 "SciGlass 7.0"@en ;
+              rdfs:comment "The temperature corresponding to viscosity of 10^4 P. At this temperature the glass is sufficiently soft for the shaping (blowing, pressing) in a glass-forming process. (Volf,1961): see References"@en ;
+              rdfs:label "working point"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/YoungModulus
+:YoungModulus rdf:type owl:Class ;
+              rdfs:subClassOf :ElasticConstant ;
+              obo:IAO_0000119 "SciGlass 7.0"@en ;
+              rdfs:comment "Denoted by E"@en ,
+                           """The ratio of the linear stress to the linear strain in cases when a uniaxial stress is applied to a body.
+In Sciglass database, Young's modulus at 20°C.
+unit = GPa"""@en ;
+              rdfs:label "Young's modulus"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/batchProcess
+:batchProcess rdf:type owl:Class ;
+              rdfs:subClassOf :GlassManufacturingProcess ;
+              rdfs:label "batch process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/beamBendingViscometer
+:beamBendingViscometer rdf:type owl:Class ;
+                       rdfs:subClassOf :viscometer ;
+                       rdfs:label "beam bending viscometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/beamBendingViscometry
+:beamBendingViscometry rdf:type owl:Class ;
+                       rdfs:subClassOf :viscometry ;
+                       rdfs:label "beam bending viscometry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/calorimeter
+:calorimeter rdf:type owl:Class ;
+             rdfs:subClassOf :GlassAnalysisEquipment ;
+             obo:IAO_0000119 "https://en.wikipedia.org/wiki/Calorimeter"@en ;
+             rdfs:comment "A calorimeter is an object used for calorimetry, or the process of measuring the heat of chemical reactions or physical changes as well as heat capacity."@en ,
+                          "Any kind of calorimeter"@en ;
+             rdfs:label "calorimeter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/calorimetry
+:calorimetry rdf:type owl:Class ;
+             rdfs:subClassOf :thermalAnalysis ;
+             obo:IAO_0000119 "https://en.wikipedia.org/wiki/Calorimetry"@en ;
+             rdfs:comment "Calorimetry is the science or act of measuring changes in state variables of a body for the purpose of deriving the heat transfer associated with changes of its state due, for example, to chemical reactions, physical changes, or phase transitions under specified constraints. Calorimetry is performed with a calorimeter."@en ;
+             rdfs:label "calorimetry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/coolingProcess
+:coolingProcess rdf:type owl:Class ;
+                rdfs:subClassOf :GlassManufacturingProcess ;
+                rdfs:label "cooling process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/crucible
+:crucible rdf:type owl:Class ;
+          rdfs:subClassOf pmdco:ProcessNodeComponent ;
+          obo:IAO_0000119 "https://en.wikipedia.org/wiki/Crucible"@en ;
+          rdfs:comment "A crucible is a ceramic or metal container in which metals or other substances may be melted or subjected to very high temperatures."@en ;
+          rdfs:label "crucible"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/crystalGrowth
+:crystalGrowth rdf:type owl:Class ;
+               rdfs:subClassOf :crystallizationProcess ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Crystal_growth"@en ;
+               rdfs:comment "Crystal growth is a major stage of a crystallization process, and consists in the addition of new atoms, ions, or polymer strings into the characteristic arrangement of the crystalline lattice.[1][2] The growth typically follows an initial stage of either homogeneous or heterogeneous (surface catalyzed) nucleation, unless a \"seed\" crystal, purposely added to start the growth, was already present."@en ;
+               rdfs:label "crystal growth"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/crystallizationProcess
+:crystallizationProcess rdf:type owl:Class ;
+                        rdfs:subClassOf :GlassManufacturingProcess ;
+                        obo:IAO_0000118 "crystallisation process"@en ;
+                        obo:IAO_0000119 "https://en.wikipedia.org/wiki/Crystallization"@en ;
+                        rdfs:comment "Crystallization occurs in two major steps. The first is nucleation, the appearance of a crystalline phase from either a supercooled liquid or a supersaturated solvent. The second step is known as crystal growth, which is the increase in the size of particles and leads to a crystal state."@en ;
+                        rdfs:label "crystallization process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/differentialScanningCalorimeter
+:differentialScanningCalorimeter rdf:type owl:Class ;
+                                 rdfs:subClassOf :calorimeter ;
+                                 rdfs:comment "An equipment for conducting differential scanning calorimetry (DSC)"@en ;
+                                 rdfs:label "differential scanning calorimeter"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/differentialScanningCalorimetry
+:differentialScanningCalorimetry rdf:type owl:Class ;
+                                 rdfs:subClassOf :calorimetry ;
+                                 obo:IAO_0000119 "https://en.wikipedia.org/wiki/Differential_scanning_calorimetry"@en ;
+                                 rdfs:comment "Differential scanning calorimetry (DSC) is a thermoanalytical technique in which the difference in the amount of heat required to increase the temperature of a sample and reference is measured as a function of temperature."@en ;
+                                 rdfs:label "differential scanning calorimetry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/diffusion
+:diffusion rdf:type owl:Class ;
+           rdfs:subClassOf :GlassManufacturingProcess ;
+           obo:IAO_0000119 "SciGlass 7.0"@en ;
+           rdfs:comment "Any kind of diffusion"@en ,
+                        "The process of movement of ionic or molecular species in a substance from an area with higher concentration to area with lower concentration of these species. See Diffusion coefficient."@en ;
+           rdfs:label "diffusion"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/dilatometer
+:dilatometer rdf:type owl:Class ;
+             rdfs:subClassOf :GlassAnalysisEquipment ;
+             rdfs:label "dilatometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/dilatometry
+:dilatometry rdf:type owl:Class ;
+             rdfs:subClassOf :thermalAnalysis ;
+             rdfs:label "dilatometry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/fillProcess
+:fillProcess rdf:type owl:Class ;
+             rdfs:subClassOf :meltingProcess ;
+             rdfs:label "fill process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/glassyState
+:glassyState rdf:type owl:Class ;
+             rdfs:subClassOf :coolingProcess ;
+             obo:IAO_0000119 "SciGlass 7.0"@en ;
+             rdfs:comment "Thermodynamically unstable but kinetically stable state of a non-crystalline substance obtained by cooling a liquid to a rigid condition without crystallization (cf.: glass)."@en ;
+             rdfs:label "glassy state"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/intermediateProcess
+:intermediateProcess rdf:type owl:Class ;
+                     rdfs:subClassOf :GlassManufacturingProcess ;
+                     rdfs:comment "intermediate process is the process between the main processes \"batch\", \"melting\", \"cooling\", \"crystallization\" (optional). And it usually does not contain important information, since only MeasuredProcessDuration, JobNumber and SequenceNumber are recorded."@en ;
+                     rdfs:label "intermediate process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/ionDiffusion
+:ionDiffusion rdf:type owl:Class ;
+              rdfs:subClassOf :diffusion ;
+              obo:IAO_0000119 "SciGlass 7.0"@en ;
+              rdfs:comment "Diffusion of ions inside the glass or into the glass bulk from the surface."@en ;
+              rdfs:label "ion diffusion"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/liquidState
+:liquidState rdf:type owl:Class ;
+             rdfs:subClassOf :meltingProcess ;
+             obo:IAO_0000119 "SciGlass 7.0"@en ;
+             rdfs:comment """Thermodynamically stable (above liquidus temperature) or metastable (below liquidus temperature) state of a non-crystalline substance. It should be noted that this thermodynamic definition of liquid state does not agree with the most common definitions of liquids as substances, the main characteristic of which is the fluidity. According to the thermodynamic definition a liquid could be thoroughly rigid (for example, after a very long isothermal hold, a glass-forming substance can reach a metastable state at viscosity of 10^15 P or higher).
+
+In the present Information System, the thermodynamic definition of the term liquid state is used."""@en ;
+             rdfs:label "liquid state"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/meltingProcess
+:meltingProcess rdf:type owl:Class ;
+                rdfs:subClassOf :GlassManufacturingProcess ;
+                rdfs:label "melting process"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/microhardnessTest
+:microhardnessTest rdf:type owl:Class ;
+                   rdfs:subClassOf :IndentationHardnessTest ;
+                   obo:IAO_0000118 "microindentation hardness test"@en ;
+                   obo:IAO_0000119 "https://en.wikipedia.org/wiki/Indentation_hardness#Microindentation_tests"@en ;
+                   rdfs:label "microhardness test"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/microscope
+:microscope rdf:type owl:Class ;
+            rdfs:subClassOf :GlassAnalysisEquipment ;
+            rdfs:label "microscope"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/microscopy
+:microscopy rdf:type owl:Class ;
+            rdfs:subClassOf pmdco:AnalysisProcess ;
+            rdfs:label "microscopy"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/model
+:model rdf:type owl:Class ;
+       rdfs:subClassOf pmdco:SimulationNode ;
+       rdfs:comment "Any kind of model"@en ;
+       rdfs:label "model"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/nucleation
+:nucleation rdf:type owl:Class ;
+            rdfs:subClassOf :crystallizationProcess ;
+            obo:IAO_0000119 "https://en.wikipedia.org/wiki/Nucleation"@en ;
+            rdfs:comment "Nucleation is the first step in the formation of either a new thermodynamic phase or a new structure via self-assembly or self-organization. Nucleation is typically defined to be the process that determines how long an observer has to wait before the new phase or self-organized structure appears."@en ;
+            rdfs:label "nucleation"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/oven
+:oven rdf:type owl:Class ;
+      rdfs:subClassOf pmdco:ProcessNodeComponent ;
+      obo:IAO_0000118 "furnace"@en ;
+      rdfs:label "oven"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/parallelPlateViscometer
+:parallelPlateViscometer rdf:type owl:Class ;
+                         rdfs:subClassOf :viscometer ;
+                         rdfs:label "parallel plate viscometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/resonantFrequencyAndDampingAnalyser
+:resonantFrequencyAndDampingAnalyser rdf:type owl:Class ;
+                                     rdfs:subClassOf :GlassAnalysisEquipment ;
+                                     obo:IAO_0000119 "https://www.imce.eu/products/rfda-professional"@en ;
+                                     rdfs:comment "The Resonant Frequency and Damping Analyser (RFDA) professional system measures the resonant frequencies and internal friction or damping of samples and calculates the Young's modulus, shear modulus, Poisson's ratio of rectangular bars, cylindrical rods and discs according to the ASTM E1876-15 standard. (or other standards)"@en ;
+                                     rdfs:label "resonant frequency and damping analyser"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/rotationalViscometer
+:rotationalViscometer rdf:type owl:Class ;
+                      rdfs:subClassOf :viscometer ;
+                      obo:IAO_0000119 "https://en.wikipedia.org/wiki/Viscometer#Rotational_viscometers"@en ;
+                      rdfs:comment "Rotational viscometers use the idea that the torque required to turn an object in a fluid is a function of the viscosity of that fluid. They measure the torque required to rotate a disk or bob in a fluid at a known speed."@en ;
+                      rdfs:label "rotational viscometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/rotationalViscometry
+:rotationalViscometry rdf:type owl:Class ;
+                      rdfs:subClassOf :viscometry ;
+                      rdfs:label "rotational viscometry"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/spectrometer
+:spectrometer rdf:type owl:Class ;
+              rdfs:subClassOf :GlassAnalysisEquipment ;
+              rdfs:label "spectrometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/spectroscopy
+:spectroscopy rdf:type owl:Class ;
+              rdfs:subClassOf pmdco:AnalysisProcess ;
+              rdfs:label "spectroscopy"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/standard
+:standard rdf:type owl:Class ;
+          rdfs:subClassOf pmdco:AnalysisProcess ;
+          rdfs:comment """Any kind of standard used in measuring glass properties
+e.g. ASTM, DIN, …"""@en ;
+          rdfs:label "standard"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/thermalAnalysis
+:thermalAnalysis rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:AnalysisProcess ;
+                 rdfs:label "thermal analysis"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/viscometer
+:viscometer rdf:type owl:Class ;
+            rdfs:subClassOf :GlassAnalysisEquipment ;
+            rdfs:comment "Any kind of viscometer"@en ;
+            rdfs:label "viscometer"@en .
+
+
+###  https://w3id.org/pmd/glass-ontology/viscometry
+:viscometry rdf:type owl:Class ;
+            rdfs:subClassOf pmdco:AnalysisProcess ;
+            rdfs:label "viscometry"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DensityAt1000C
+                :DensityAt1200C
+                :DensityAt1400C
+                :DensityAt20C
+                :DensityAt800C
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LinearThermalExpansionCoefficientAt100C
+                :LinearThermalExpansionCoefficientAt160C
+                :LinearThermalExpansionCoefficientAt210C
+                :LinearThermalExpansionCoefficientAt350C
+                :LinearThermalExpansionCoefficientAt55C
+                :LinearThermalExpansionCoefficientBelowTg
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LogSpecificElectricalResistivityAt1000C
+                :LogSpecificElectricalResistivityAt100C
+                :LogSpecificElectricalResistivityAt1400C
+                :LogSpecificElectricalResistivityAt150C
+                :LogSpecificElectricalResistivityAt20C
+                :LogSpecificElectricalResistivityAt300C
+                :LogSpecificElectricalResistivityAt800C
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LogViscosityAt1000C
+                :LogViscosityAt1100C
+                :LogViscosityAt1200C
+                :LogViscosityAt1300C
+                :LogViscosityAt1400C
+                :LogViscosityAt1500C
+                :LogViscosityAt1600C
+                :LogViscosityAt1800C
+                :LogViscosityAt2000C
+                :LogViscosityAt2200C
+                :LogViscosityAt500C
+                :LogViscosityAt600C
+                :LogViscosityAt700C
+                :LogViscosityAt800C
+                :LogViscosityAt900C
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :SpecificHeatCapacityAt1000C
+                :SpecificHeatCapacityAt1200C
+                :SpecificHeatCapacityAt1400C
+                :SpecificHeatCapacityAt200C
+                :SpecificHeatCapacityAt20C
+                :SpecificHeatCapacityAt400C
+                :SpecificHeatCapacityAt800C
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :SurfaceTensionAboveTg
+                :SurfaceTensionAt1200C
+                :SurfaceTensionAt1300C
+                :SurfaceTensionAt1400C
+                :SurfaceTensionAt900C
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ViscosityT1
+                :ViscosityT10
+                :ViscosityT11
+                :ViscosityT12
+                :ViscosityT13
+                :ViscosityT2
+                :ViscosityT3
+                :ViscosityT4
+                :ViscosityT5
+                :ViscosityT6
+                :ViscosityT7
+                :ViscosityT8
+                :ViscosityT9
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
