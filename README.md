@@ -13,7 +13,7 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [SmaDi](SmaDi/) | <urn:absolute/smadiont#> | https://github.com/SmaDi-OBDMA/SmaDi-OBDMA-system |
 | [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
-| [LeBeDigital](LeBeDigital/) | https://w3id.org/cpto | https://github.com/BAMresearch/LebeDigital |
+| [LeBeDigital](LeBeDigital/) | https://w3id.org/cpto | https://github.com/BAMresearch/LebeDigital/tree/main/lebedigital/ConcreteOntology |
 | [DIGITRUBBER](DIGITRUBBER/) | | |
 | [StahlDigital](StahlDigital/) | | |
 | [KupferDigital](KupferDigital/) | | |
