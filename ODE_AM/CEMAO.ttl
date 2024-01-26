@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#> .
+@prefix : <https://w3id.org/ODE_AM/CEMAO/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,16 +11,16 @@
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix CommonCoreOntologies: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
-@base <http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling> .
+@base <https://w3id.org/ODE_AM/CEMAO> .
 
-<http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling> rdf:type owl:Ontology ;
-                                                                                   dc:creator "Mohamed Kamal, Heiko Beinersdorf"^^xsd:string ;
-                                                                                   dc:date "2024-01-18T19:06:54"^^xsd:dateTime ;
-                                                                                   dc:license "CC-BY-4.0"^^xsd:string ;
-                                                                                   dc:title "Composite Extrusion Modeling Ontology"^^xsd:string ;
-                                                                                   dc:version "version 1.0"^^xsd:string ;
-                                                                                   rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
-                                                                                                "This ontology, designed for use in data management for metal additive manufacturing with focus on Composite Extrusion Modeling (CEM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string .
+<https://w3id.org/ODE_AM/CEMAO> rdf:type owl:Ontology ;
+                                 dc:creator "Mohamed Kamal, Heiko Beinersdorf"^^xsd:string ;
+                                 dc:date "2024-01-18T19:06:54"^^xsd:dateTime ;
+                                 dc:license "CC-BY-4.0" ;
+                                 dc:title "Composite Extrusion Modeling Ontology"^^xsd:string ;
+                                 dc:version "version 1.0.0"^^xsd:string ;
+                                 rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
+                                              "This ontology, designed for use in data management for metal additive manufacturing with focus on Composite Extrusion Modeling (CEM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -74,210 +74,210 @@ CommonCoreOntologies:PerformanceSpecification rdf:type owl:Class .
 CommonCoreOntologies:Weight rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing
-<http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing> rdf:type owl:Class .
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing
+<https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter
-<http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter> rdf:type owl:Class .
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter
+<https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine
-<http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine> rdf:type owl:Class .
+###  https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine
+<https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume
-<http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume> rdf:type owl:Class .
+###  https://w3id.org/ODE_AM/MAO/Volume
+<https://w3id.org/ODE_AM/MAO/Volume> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#AIM3D
+###  https://w3id.org/ODE_AM/CEMAO/AIM3D
 :AIM3D rdf:type owl:Class ;
        rdfs:subClassOf :CompositeExtrusionModelingMachine ;
        CommonCoreOntologies:definition "Model of a composite extrusion modeling machine." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ActOfCompositeExtrusionModeling
+###  https://w3id.org/ODE_AM/CEMAO/ActOfCompositeExtrusionModeling
 :ActOfCompositeExtrusionModeling rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturing> ;
+                                 rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing> ;
                                  CommonCoreOntologies:definition "Additive manufacturing process in which combines the maetal injection moulding process (MIM process) with the process technologies from additive manufacturing." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ActofCompositeExtrusionModelingProcessParameter
+###  https://w3id.org/ODE_AM/CEMAO/ActofCompositeExtrusionModelingProcessParameter
 :ActofCompositeExtrusionModelingProcessParameter rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#ActOfAdditiveManufacturingProcessParameter> ;
+                                                 rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter> ;
                                                  CommonCoreOntologies:definition "parameters for Additive manufacturing process in which combines the metal injection moulding process (MIM process) with the process technologies from additive manufacturing."^^xsd:string .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ActofDebinding
+###  https://w3id.org/ODE_AM/CEMAO/ActofDebinding
 :ActofDebinding rdf:type owl:Class ;
                 rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification ;
                 CommonCoreOntologies:definition "The process of removing the binding agents from a part after the initial print." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ActofSintering
+###  https://w3id.org/ODE_AM/CEMAO/ActofSintering
 :ActofSintering rdf:type owl:Class ;
                 rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification ;
                 CommonCoreOntologies:definition "A heat treatment process that fuses particles together to form a solid part after debinding." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#BrownPartDensity
+###  https://w3id.org/ODE_AM/CEMAO/BrownPartDensity
 :BrownPartDensity rdf:type owl:Class ;
                   rdfs:subClassOf CommonCoreOntologies:Density ;
                   CommonCoreOntologies:definition "The density of the part after debinding but before the sintering process." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#BrownPartVolume
+###  https://w3id.org/ODE_AM/CEMAO/BrownPartVolume
 :BrownPartVolume rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume> ;
+                 rdfs:subClassOf <https://w3id.org/ODE_AM/MAO/Volume> ;
                  CommonCoreOntologies:definition "The volume of the part after debinding but before sintering." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#BrownPartWeight
+###  https://w3id.org/ODE_AM/CEMAO/BrownPartWeight
 :BrownPartWeight rdf:type owl:Class ;
                  rdfs:subClassOf CommonCoreOntologies:Weight ;
                  owl:disjointWith :GreenPartWeight ;
                  CommonCoreOntologies:definition "The weight of the part after debinding." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#CompositeExtrusionModelingMachine
+###  https://w3id.org/ODE_AM/CEMAO/CompositeExtrusionModelingMachine
 :CompositeExtrusionModelingMachine rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#AdditiveManufacturingMachine> ;
+                                   rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine> ;
                                    CommonCoreOntologies:definition "Specific CEM additive manufacturing machine." ;
                                    CommonCoreOntologies:definition_source "machine data" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#DebindingProcessParameter
+###  https://w3id.org/ODE_AM/CEMAO/DebindingProcessParameter
 :DebindingProcessParameter rdf:type owl:Class ;
                            rdfs:subClassOf CommonCoreOntologies:PerformanceSpecification ;
                            CommonCoreOntologies:definition "Variables and settings that control the debinding phase of the process." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#DebindingTechnology
+###  https://w3id.org/ODE_AM/CEMAO/DebindingTechnology
 :DebindingTechnology rdf:type owl:Class ;
                      rdfs:subClassOf :DebindingProcessParameter ;
                      CommonCoreOntologies:definition "The specific method or equipment used to remove the binder from a part." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#DebindingTemperatureProfile
+###  https://w3id.org/ODE_AM/CEMAO/DebindingTemperatureProfile
 :DebindingTemperatureProfile rdf:type owl:Class ;
                              rdfs:subClassOf :DebindingProcessParameter ;
                              CommonCoreOntologies:definition "The temperatures and durations applied during the debinding process." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ExtruderMultiplierParameter
+###  https://w3id.org/ODE_AM/CEMAO/ExtruderMultiplierParameter
 :ExtruderMultiplierParameter rdf:type owl:Class ;
                              rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                              CommonCoreOntologies:definition "A setting that adjusts the flow rate of the extruder to control the amount of material deposited." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ExtruderTemperatureParameter
+###  https://w3id.org/ODE_AM/CEMAO/ExtruderTemperatureParameter
 :ExtruderTemperatureParameter rdf:type owl:Class ;
                               rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                               CommonCoreOntologies:definition "Temperature of the extruder" ;
                               CommonCoreOntologies:definition_source "printer operater" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ExtruderTypeParameter
+###  https://w3id.org/ODE_AM/CEMAO/ExtruderTypeParameter
 :ExtruderTypeParameter rdf:type owl:Class ;
                        rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                        CommonCoreOntologies:definition "Specific used Extruder type and which extruder are used." ;
                        CommonCoreOntologies:definition_source "extruder data" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ExtrusionSpeedParameter
+###  https://w3id.org/ODE_AM/CEMAO/ExtrusionSpeedParameter
 :ExtrusionSpeedParameter rdf:type owl:Class ;
                          rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                          CommonCoreOntologies:definition "The rate at which material is extruded and deposited during the printing process" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#FirstLayerHeightParameter
+###  https://w3id.org/ODE_AM/CEMAO/FirstLayerHeightParameter
 :FirstLayerHeightParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                            CommonCoreOntologies:definition "The specific height of the first layer of the print" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#GreenPartDensity
+###  https://w3id.org/ODE_AM/CEMAO/GreenPartDensity
 :GreenPartDensity rdf:type owl:Class ;
                   rdfs:subClassOf CommonCoreOntologies:Density ;
                   CommonCoreOntologies:definition "The density of the part immediately after printing and before any post-processing." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#GreenPartVolume
+###  https://w3id.org/ODE_AM/CEMAO/GreenPartVolume
 :GreenPartVolume rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume> ;
+                 rdfs:subClassOf <https://w3id.org/ODE_AM/MAO/Volume> ;
                  CommonCoreOntologies:definition "The volume of the part immediately after printing." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#GreenPartWeight
+###  https://w3id.org/ODE_AM/CEMAO/GreenPartWeight
 :GreenPartWeight rdf:type owl:Class ;
                  rdfs:subClassOf CommonCoreOntologies:Weight ;
                  CommonCoreOntologies:definition "The weight of the part after debinding." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ModelOversizeFactorParameter
+###  https://w3id.org/ODE_AM/CEMAO/ModelOversizeFactorParameter
 :ModelOversizeFactorParameter rdf:type owl:Class ;
                               rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                               CommonCoreOntologies:definition "Oversize factor of the Model to the end product geometrie." ;
                               CommonCoreOntologies:definition_source "printer operater" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#NozzleDiameterParameter
+###  https://w3id.org/ODE_AM/CEMAO/NozzleDiameterParameter
 :NozzleDiameterParameter rdf:type owl:Class ;
                          rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                          CommonCoreOntologies:definition "The diameter of the extruder nozzle" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#PrinterBedTemperatureParameter
+###  https://w3id.org/ODE_AM/CEMAO/PrinterBedTemperatureParameter
 :PrinterBedTemperatureParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                                 CommonCoreOntologies:definition "The temperature of the printing bed" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#PrintingProfileParameter
+###  https://w3id.org/ODE_AM/CEMAO/PrintingProfileParameter
 :PrintingProfileParameter rdf:type owl:Class ;
                           rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                           CommonCoreOntologies:definition "File with all machine configurations" ;
                           CommonCoreOntologies:definition_source "Fff-file" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SinteredPartDensity
+###  https://w3id.org/ODE_AM/CEMAO/SinteredPartDensity
 :SinteredPartDensity rdf:type owl:Class ;
                      rdfs:subClassOf CommonCoreOntologies:Density ;
                      CommonCoreOntologies:definition "The density of the final part after the sintering process." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SinteredPartVolume
+###  https://w3id.org/ODE_AM/CEMAO/SinteredPartVolume
 :SinteredPartVolume rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume> ;
+                    rdfs:subClassOf <https://w3id.org/ODE_AM/MAO/Volume> ;
                     CommonCoreOntologies:definition "The volume of the part after the sintering process is complete." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SinteredPartWeight
+###  https://w3id.org/ODE_AM/CEMAO/SinteredPartWeight
 :SinteredPartWeight rdf:type owl:Class ;
                     rdfs:subClassOf CommonCoreOntologies:Weight ;
                     CommonCoreOntologies:definition "The weight of the part after debinding." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SinteringProcessParameter
+###  https://w3id.org/ODE_AM/CEMAO/SinteringProcessParameter
 :SinteringProcessParameter rdf:type owl:Class ;
                            rdfs:subClassOf CommonCoreOntologies:PerformanceSpecification ;
                            CommonCoreOntologies:definition "Settings and conditions that govern the sintering phase." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SinteringTemperatureProfile
+###  https://w3id.org/ODE_AM/CEMAO/SinteringTemperatureProfile
 :SinteringTemperatureProfile rdf:type owl:Class ;
                              rdfs:subClassOf :SinteringProcessParameter ;
                              CommonCoreOntologies:definition "The controlled temperatures used to sinter a part over time." .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#SlicerSoftware
+###  https://w3id.org/ODE_AM/CEMAO/SlicerSoftware
 :SlicerSoftware rdf:type owl:Class ;
                 rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                 CommonCoreOntologies:definition "Name and Version of the used slicer software product." ;
                 CommonCoreOntologies:definition_source "Fff-file; gcode-file" .
 
 
-###  http://www.semanticweb.org/csk4101/ontologies/2023/2/CompositeExtrusionModeling#ToolPathParameter
+###  https://w3id.org/ODE_AM/CEMAO/ToolPathParameter
 :ToolPathParameter rdf:type owl:Class ;
                    rdfs:subClassOf :ActofCompositeExtrusionModelingProcessParameter ;
                    CommonCoreOntologies:definition "Toolpath G-code file with all printer and controling information. G-code (also RS-274) is the most widely used computer numerical control (CNC) programming language." ;

@@ -1,7 +1,7 @@
-@prefix : <http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#> .
+@prefix : <https://w3id.org/ODE_AM/PBFAO/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix mo: <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#> .
-@prefix amo: <http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology#> .
+@prefix mo: <https://w3id.org/ODE_AM/MAO/> .
+@prefix amo: <https://w3id.org/ODE_AM/AMAO#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,37 +13,106 @@
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
-@base <http://igj/PowderBedFusionOntology> .
+@base <https://w3id.org/ODE_AM/PBFAO> .
 
-<http://igj/PowderBedFusionOntology> rdf:type owl:Ontology ;
-                                      owl:imports <http://www.semanticweb.org/bjarsch/ontologies/2021/9/AdditiveManufacturingOntology> ;
-                                      dc:creator "Thomas Bjarsch" ;
-                                      dc:date "16.01.2024"^^xsd:string ;
-                                      dc:license "CC-BY-4.0" ;
-                                      dc:title "Fraunhofer IGCV Powder Bed Fusion Application Ontology"^^xsd:string ;
-                                      rdfs:comment "Fraunhofer IGCV AM Application Ontology is used as a direct import."^^xsd:string ,
-                                                   "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
-                                                   "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string ,
-                                                   "This ontology, tailored for the powder bed fusion domain at Fraunhofer IGCV, comprises key classes that encapsulate various parameters integral to this specific additive manufacturing process."^^xsd:string .
+<https://w3id.org/ODE_AM/PBFAO> rdf:type owl:Ontology ;
+                                 owl:imports <https://w3id.org/ODE_AM/AMAO> ;
+                                 dc:creator "Thomas Bjarsch" ;
+                                 dc:date "16.01.2024"^^xsd:string ;
+                                 dc:license "CC-BY-4.0" ;
+                                 dc:title "Fraunhofer IGCV Powder Bed Fusion Application Ontology"^^xsd:string ;
+                                 rdfs:comment "Fraunhofer IGCV AM Application Ontology is used as a direct import."^^xsd:string ,
+                                              "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
+                                              "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string ,
+                                              "This ontology, tailored for the powder bed fusion domain at Fraunhofer IGCV, comprises key classes that encapsulate various parameters integral to this specific additive manufacturing process."^^xsd:string ;
+                                 owl:versionInfo "1.0.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/alternative_label
+Comm:alternative_label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition
+Comm:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition_source
+Comm:definition_source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_token_unit
+Comm:has_token_unit rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+core:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+core:example rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#clearly_identifies
+###  http://www.ontologyrepository.com/CommonCoreOntologies/designates
+Comm:designates rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_input
+Comm:has_input rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_output
+Comm:has_output rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_about
+Comm:is_about rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_input_of
+Comm:is_input_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of
+Comm:is_made_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of
+Comm:is_subject_of rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/clearly_identifies
 :clearly_identifies rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf Comm:is_about .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#is_clearly_identified_by
+###  https://w3id.org/ODE_AM/PBFAO/is_clearly_identified_by
 :is_clearly_identified_by rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf Comm:is_subject_of .
 
@@ -52,7 +121,39 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ActOfPowderBedFusion
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Artifact
+Comm:Artifact rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CartesianCoordinateSystem
+Comm:CartesianCoordinateSystem rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PartNumber
+Comm:PartNumber rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#ActOfAdditiveManufacturing
+amo:ActOfAdditiveManufacturing rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#ActOfAdditiveManufacturingProcessParameter
+amo:ActOfAdditiveManufacturingProcessParameter rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#AdditiveManufacturingMachine
+amo:AdditiveManufacturingMachine rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/MAO/PortionOfPowder
+mo:PortionOfPowder rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/MAO/PortionOfSteelMaterial
+mo:PortionOfSteelMaterial rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusion
 :ActOfPowderBedFusion rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( amo:ActOfAdditiveManufacturing
                                                                  [ rdf:type owl:Restriction ;
@@ -68,7 +169,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                       rdfs:label "Powder Bed Fusion"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ActOfPowderBedFusionLaserBeamMetal
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusionLaserBeamMetal
 :ActOfPowderBedFusionLaserBeamMetal rdf:type owl:Class ;
                                     owl:equivalentClass [ owl:intersectionOf ( :ActOfPowderBedFusion
                                                                                [ rdf:type owl:Restriction ;
@@ -95,7 +196,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                     rdfs:label "Powder Bed Fusion Laser Beam Metal"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ActOfPowderBedFusionProcessParameter
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusionProcessParameter
 :ActOfPowderBedFusionProcessParameter rdf:type owl:Class ;
                                       rdfs:subClassOf amo:ActOfAdditiveManufacturingProcessParameter ;
                                       Comm:definition "A performance specification prescribing the operational conditions of an entity during an powder bed fusion process"@en ,
@@ -103,7 +204,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                                       "PBF parameter"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ContourCorridorParameter
+###  https://w3id.org/ODE_AM/PBFAO/ContourCorridorParameter
 :ContourCorridorParameter rdf:type owl:Class ;
                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                           Comm:definition "Contour parameter prescribing the range in x,y-plane, in which the exposed areas underneath and above the current layer are considered, to determine the conture exposure type"^^xsd:string ;
@@ -113,7 +214,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                           core:example "0,07 mm"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#EOSM290
+###  https://w3id.org/ODE_AM/PBFAO/EOSM290
 :EOSM290 rdf:type owl:Class ;
          rdfs:subClassOf :PowderBedFusionLaserBeamMetalMachine ;
          rdfs:comment "https://www.eos.info/en/industrial-3d-printer/metal/eos-m-290?utm_source=google&utm_medium=cpc&utm_campaign=brand_DACH&utm_content=wyn&utm_term=m290%20printer&utm_campaign=%5Bwyn%5D+Brand+%5BDACH%5D+%5BS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=3851378066&hsa_cam=16340963737&hsa_grp=137137441137&hsa_ad=612094563041&hsa_src=g&hsa_tgt=kwd-1643562642707&hsa_kw=m290%20printer&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAzJOtBhALEiwAtwj8tgNBUfQcsWosEG-JT-zOlCNMyhfndTYMy4n0iaotzx-nGXD5bmLW2xoCsUcQAvD_BwE"@en ;
@@ -121,7 +222,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
          core:definition "Specific Machine type of supplier Electro Optical Systems GmbH"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#EdgeFactorParameter
+###  https://w3id.org/ODE_AM/PBFAO/EdgeFactorParameter
 :EdgeFactorParameter rdf:type owl:Class ;
                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                      Comm:definition "Edge parameter prescribing the completeness of apex-exposure. The higher this factor, the further the beam will advance into the apex."^^xsd:string ;
@@ -131,7 +232,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                      core:example "2"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ExposurePatternDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternDownSkinParameter
 :ExposurePatternDownSkinParameter rdf:type owl:Class ;
                                   rdfs:subClassOf :ExposurePatternParameter ;
                                   Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for DownSkin fiat object parts"^^xsd:string ;
@@ -141,7 +242,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                   core:example "\"Stripes\""@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ExposurePatternInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternInFillParameter
 :ExposurePatternInFillParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :SkywritingParameter ;
                                 Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for InFill fiat object parts"^^xsd:string ;
@@ -151,7 +252,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "\"Stripes\""@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ExposurePatternParameter
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternParameter
 :ExposurePatternParameter rdf:type owl:Class ;
                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                           Comm:definition_source "EOSPRINT 2"@en ;
@@ -159,7 +260,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                           core:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ExposurePatternUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternUpSkinParameter
 :ExposurePatternUpSkinParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :ExposurePatternParameter ;
                                 Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for UpSkin fiat object parts"^^xsd:string ;
@@ -169,7 +270,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "\"Stripes\""@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#FlowOptimizationDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationDownSkinParameter
 :FlowOptimizationDownSkinParameter rdf:type owl:Class ;
                                    rdfs:subClassOf :FlowOptimizationParameter ;
                                    Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for DownSkin fiat object parts"^^xsd:string ;
@@ -179,7 +280,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                    core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#FlowOptimizationInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationInFillParameter
 :FlowOptimizationInFillParameter rdf:type owl:Class ;
                                  rdfs:subClassOf :FlowOptimizationParameter ;
                                  Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for InFill fiat object parts"^^xsd:string ;
@@ -189,7 +290,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                  core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#FlowOptimizationParameter
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationParameter
 :FlowOptimizationParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                            Comm:definition "PBF-LB/M Parameter prescribing a vector exposure order against the flow direction"^^xsd:string ;
@@ -198,7 +299,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            rdfs:label "Flow optimization"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#FlowOptimizationUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationUpSkinParameter
 :FlowOptimizationUpSkinParameter rdf:type owl:Class ;
                                  rdfs:subClassOf :FlowOptimizationParameter ;
                                  Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for UpSkin fiat object parts"^^xsd:string ;
@@ -208,7 +309,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                  core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchDistanceDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceDownSkinParameter
 :HatchDistanceDownSkinParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :HatchDistanceParameter ;
                                 Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for DownSkin fiat object parts"^^xsd:string ;
@@ -218,7 +319,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchDistanceInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceInFillParameter
 :HatchDistanceInFillParameter rdf:type owl:Class ;
                               rdfs:subClassOf :HatchDistanceParameter ;
                               Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for InFill fiat object parts"^^xsd:string ;
@@ -228,7 +329,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                               core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchDistanceParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceParameter
 :HatchDistanceParameter rdf:type owl:Class ;
                         rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                         Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors"^^xsd:string ;
@@ -236,7 +337,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                         rdfs:label "Hatch distance"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchDistanceUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceUpSkinParameter
 :HatchDistanceUpSkinParameter rdf:type owl:Class ;
                               rdfs:subClassOf :HatchDistanceParameter ;
                               Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for UpSkin fiat object parts"^^xsd:string ;
@@ -246,7 +347,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                               core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchOffsetAngleParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchOffsetAngleParameter
 :HatchOffsetAngleParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                            Comm:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary" ;
@@ -256,7 +357,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "0 °"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchOffsetParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchOffsetParameter
 :HatchOffsetParameter rdf:type owl:Class ;
                       rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                       Comm:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary"^^xsd:string ;
@@ -266,7 +367,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                       core:example "45 °"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchRestrictionAngleParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchRestrictionAngleParameter
 :HatchRestrictionAngleParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                                 Comm:definition "Hatch Parameter prescribing the angle range in which vector ranges are excluded"^^xsd:string ;
@@ -276,7 +377,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "10 °"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#HatchRotationAngleParameter
+###  https://w3id.org/ODE_AM/PBFAO/HatchRotationAngleParameter
 :HatchRotationAngleParameter rdf:type owl:Class ;
                              rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                              Comm:definition "Hatch Parameter prescribing the vector rotation angle in successive layers"^^xsd:string ;
@@ -286,7 +387,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                              core:example "10°"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#InfillSkippingLayersParameter
+###  https://w3id.org/ODE_AM/PBFAO/InfillSkippingLayersParameter
 :InfillSkippingLayersParameter rdf:type owl:Class ;
                                rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                                Comm:definition "Hatch Parameter prescribing the layer number of successive, not exposed infill"^^xsd:string ;
@@ -296,7 +397,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                core:example "2"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerContourParameter
 :LaserPowerContourParameter rdf:type owl:Class ;
                             rdfs:subClassOf :LaserPowerParameter ;
                             Comm:definition "Laser power parameter prescribing with which vectors are exposed for Contour fiat object parts"^^xsd:string ;
@@ -306,7 +407,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                             core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerDownContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerDownContourParameter
 :LaserPowerDownContourParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :LaserPowerParameter ;
                                 Comm:definition "Laser power parameter prescribing with which vectors are exposed for Down Contour fiat object parts"^^xsd:string ;
@@ -316,7 +417,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerDownSkinParameter
 :LaserPowerDownSkinParameter rdf:type owl:Class ;
                              rdfs:subClassOf :LaserPowerParameter ;
                              Comm:definition "Laser power parameter prescribing the power with which vectors are exposed for DownSkin fiat object parts"^^xsd:string ;
@@ -326,7 +427,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                              core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerEdgeParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerEdgeParameter
 :LaserPowerEdgeParameter rdf:type owl:Class ;
                          rdfs:subClassOf :LaserPowerParameter ;
                          Comm:definition "Laser power parameter prescribing with which vectors are exposed for Edge fiat object parts"^^xsd:string ;
@@ -336,7 +437,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                          core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerInFillParameter
 :LaserPowerInFillParameter rdf:type owl:Class ;
                            rdfs:subClassOf :LaserPowerParameter ;
                            Comm:definition "Laser power parameter prescribing with which vectors are exposed for InFill fiat object parts"^^xsd:string ;
@@ -346,7 +447,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerOnPartContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerOnPartContourParameter
 :LaserPowerOnPartContourParameter rdf:type owl:Class ;
                                   rdfs:subClassOf :LaserPowerParameter ;
                                   Comm:definition "Laser power parameter prescribing with which vectors are exposed for OnPart Contour fiat object parts"^^xsd:string ;
@@ -356,7 +457,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                   core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerParameter
 :LaserPowerParameter rdf:type owl:Class ;
                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                      Comm:definition "Laser power parameter prescribing the power with which vectors are exposed"@en ;
@@ -364,7 +465,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                      rdfs:label "Laser Power"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerParameterParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerParameterParameter
 :LaserPowerParameterParameter rdf:type owl:Class ;
                               rdfs:subClassOf :LaserPowerParameter ;
                               Comm:definition "Energy input parameter prescribing the power with which vectors are exposed"^^xsd:string ;
@@ -374,7 +475,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                               core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserPowerUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerUpSkinParameter
 :LaserPowerUpSkinParameter rdf:type owl:Class ;
                            rdfs:subClassOf :LaserPowerParameter ;
                            Comm:definition "Laser power parameter prescribing the power with which vectors are exposed for UpSKin fiat object parts"^^xsd:string ;
@@ -384,7 +485,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "300 W"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedContourParameter
 :LaserSpeedContourParameter rdf:type owl:Class ;
                             rdfs:subClassOf :LaserSpeedParameter ;
                             Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Contour fiat object parts"^^xsd:string ;
@@ -394,7 +495,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                             core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedDownContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedDownContourParameter
 :LaserSpeedDownContourParameter rdf:type owl:Class ;
                                 rdfs:subClassOf :LaserSpeedParameter ;
                                 Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Down Contour fiat object parts"^^xsd:string ;
@@ -404,7 +505,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                 core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedDownSkinParameter
 :LaserSpeedDownSkinParameter rdf:type owl:Class ;
                              rdfs:subClassOf :LaserSpeedParameter ;
                              Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of DownSkin fiat object parts"^^xsd:string ;
@@ -414,7 +515,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                              core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedEdgeParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedEdgeParameter
 :LaserSpeedEdgeParameter rdf:type owl:Class ;
                          rdfs:subClassOf :LaserSpeedParameter ;
                          Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Edge fiat object parts"^^xsd:string ;
@@ -424,7 +525,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                       "Laser Speed Edge"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedInFillParameter
 :LaserSpeedInFillParameter rdf:type owl:Class ;
                            rdfs:subClassOf :LaserSpeedParameter ;
                            Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of InFill fiat object parts"^^xsd:string ;
@@ -434,7 +535,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedOnPartContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedOnPartContourParameter
 :LaserSpeedOnPartContourParameter rdf:type owl:Class ;
                                   rdfs:subClassOf :LaserSpeedParameter ;
                                   Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of On Part Contour fiat object parts"^^xsd:string ;
@@ -443,7 +544,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                   core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedParameter
 :LaserSpeedParameter rdf:type owl:Class ;
                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                      Comm:definition "Energy input parameter prescribing the speed of the laser during vector exposion"^^xsd:string ;
@@ -453,7 +554,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                      core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#LaserSpeedUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedUpSkinParameter
 :LaserSpeedUpSkinParameter rdf:type owl:Class ;
                            rdfs:subClassOf :LaserSpeedParameter ;
                            Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of UpSKin fiat object parts"^^xsd:string ;
@@ -463,7 +564,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "400 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#Min.RadiusFactorParameter
+###  https://w3id.org/ODE_AM/PBFAO/Min.RadiusFactorParameter
 :Min.RadiusFactorParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                            Comm:definition "Edge parameter prescribing the completeness of apex-exosure depending on the ratio of apex outline to beam radius. Alternatively, this can be triggered over the edge factor."^^xsd:string ;
@@ -473,7 +574,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "0"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#Min.VectorLengthParameter
+###  https://w3id.org/ODE_AM/PBFAO/Min.VectorLengthParameter
 :Min.VectorLengthParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                            Comm:definition "Hatch Parameter prescribing that if an UpDownSkin vector is smaller than the minimum length, then this UD vector is added to the neighbouring Infill vector"^^xsd:string ;
@@ -483,7 +584,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "0,1 mm"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#OffsetContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/OffsetContourParameter
 :OffsetContourParameter rdf:type owl:Class ;
                         rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                         Comm:definition "Contour parameter prescribing an offset of the contour relative to the exposure part boundary"^^xsd:string ;
@@ -493,7 +594,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                         core:example "0,1 mm"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#OffsetEdgeParameter
+###  https://w3id.org/ODE_AM/PBFAO/OffsetEdgeParameter
 :OffsetEdgeParameter rdf:type owl:Class ;
                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                      Comm:definition "Edge parameter prescribing the spacial offset from beam path to the contour outline taking into account the current zone"^^xsd:string ;
@@ -503,7 +604,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                      core:example "0,1 mm"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#OverlapWithInfillParameter
+###  https://w3id.org/ODE_AM/PBFAO/OverlapWithInfillParameter
 :OverlapWithInfillParameter rdf:type owl:Class ;
                             rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                             Comm:definition "Hatch Parameter prescribing the overlap between the UpDownSkin and infill area in x,y plane"^^xsd:string ;
@@ -513,7 +614,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                             core:example "0,1 mm"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#PatternfeaturesShiftedDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedDownSkinParameter
 :PatternfeaturesShiftedDownSkinParameter rdf:type owl:Class ;
                                          rdfs:subClassOf :PatternfeaturesShiftedParameter ;
                                          Comm:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane for DownSkin fiat object parts"^^xsd:string ;
@@ -524,7 +625,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                          core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#PatternfeaturesShiftedInFillParameter
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedInFillParameter
 :PatternfeaturesShiftedInFillParameter rdf:type owl:Class ;
                                        rdfs:subClassOf :PatternfeaturesShiftedParameter ;
                                        Comm:definition "Pattern features Shifted parameter prescribing a shift off the exposure pattern width in x,y plane for InFill fiat object parts"^^xsd:string ;
@@ -535,7 +636,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                        core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#PatternfeaturesShiftedParameter
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedParameter
 :PatternfeaturesShiftedParameter rdf:type owl:Class ;
                                  rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                                  Comm:definition "PBF-LB/M Parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane"^^xsd:string ;
@@ -546,7 +647,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                  core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#PatternfeaturesShiftedUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedUpSkinParameter
 :PatternfeaturesShiftedUpSkinParameter rdf:type owl:Class ;
                                        rdfs:subClassOf :PatternfeaturesShiftedParameter ;
                                        Comm:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern width in x,y plane for UpSkin fiat object parts"^^xsd:string ;
@@ -557,7 +658,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                        core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#PowderBedFusionLaserBeamMetalMachine
+###  https://w3id.org/ODE_AM/PBFAO/PowderBedFusionLaserBeamMetalMachine
 :PowderBedFusionLaserBeamMetalMachine rdf:type owl:Class ;
                                       owl:equivalentClass [ owl:intersectionOf ( amo:AdditiveManufacturingMachine
                                                                                  [ rdf:type owl:Restriction ;
@@ -574,7 +675,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                                       rdfs:label "Powder Bed Fusion laser beam melting machine"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#RecoatingSpeedParameter
+###  https://w3id.org/ODE_AM/PBFAO/RecoatingSpeedParameter
 :RecoatingSpeedParameter rdf:type owl:Class ;
                          rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                          Comm:definition "Additive Manufacturing Process Parameter prescribing the recoater speed during the recoater step"^^xsd:string ;
@@ -584,7 +685,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                          core:example "150 mm/s"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#RidgeDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/RidgeDownSkinParameter
 :RidgeDownSkinParameter rdf:type owl:Class ;
                         rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                         Comm:definition "DownSkin Parameter that moves the downskin reation point, in the through the donwkin thickness defined layer, in the x-y plane"^^xsd:string ;
@@ -594,7 +695,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                         core:example "3"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#RidgeUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/RidgeUpSkinParameter
 :RidgeUpSkinParameter rdf:type owl:Class ;
                       rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                       Comm:definition "UpSkin Parameter that moves the downskin reation point, in the through the UpSkin thickness defined layer, in the x-y plane"^^xsd:string ;
@@ -604,7 +705,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                       core:example "3"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#SkywritingDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingDownSkinParameter
 :SkywritingDownSkinParameter rdf:type owl:Class ;
                              rdfs:subClassOf :SkywritingParameter ;
                              Comm:definition "Skywriting parameter compensating the inertia of the optical system for DownSkin fiat object parts"^^xsd:string ;
@@ -615,7 +716,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                              core:example "false"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#SkywritingInfillParameter
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingInfillParameter
 :SkywritingInfillParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ExposurePatternUpSkinParameter ;
                            Comm:definition "Skywriting parameter compensating the inertia of the optical system for InFill fiat object parts"^^xsd:string ;
@@ -626,7 +727,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "false"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#SkywritingParameter
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingParameter
 :SkywritingParameter rdf:type owl:Class ;
                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                      Comm:definition_source "EOSPRINT 2"@en ;
@@ -634,7 +735,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                      core:definition "Skywriting parameter compensating the inertia of the optical system"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#SkywritingUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingUpSkinParameter
 :SkywritingUpSkinParameter rdf:type owl:Class ;
                            rdfs:subClassOf :SkywritingParameter ;
                            Comm:definition "Skywriting parameter compensating the inertia of the optical system for UpSkin fiat object parts"^^xsd:string ;
@@ -645,7 +746,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "true"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ThicknessContourParameter
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessContourParameter
 :ThicknessContourParameter rdf:type owl:Class ;
                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                            Comm:definition "Contour parameter prescribing the layer number in z-direction, in which the exposed areas underneath and above the current layer are considered, to determinde the conture exposure type"^^xsd:string ;
@@ -655,7 +756,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            core:example "2"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ThicknessDownSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessDownSkinParameter
 :ThicknessDownSkinParameter rdf:type owl:Class ;
                             rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                             Comm:definition "DownSkin Parameter prescribing the layer number in z direction where Downskin is exposed"^^xsd:string ;
@@ -665,7 +766,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                             core:example "2"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ThicknessUpSkinParameter
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessUpSkinParameter
 :ThicknessUpSkinParameter rdf:type owl:Class ;
                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                           Comm:definition "UpSkin Parameter prescribing the layer number in z direction where UpSkin is exposed"^^xsd:string ;
@@ -675,7 +776,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                           core:example "2"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#ThresholdParameter
+###  https://w3id.org/ODE_AM/PBFAO/ThresholdParameter
 :ThresholdParameter rdf:type owl:Class ;
                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
                     Comm:definition "Edge parameter prescribing that if the ratio beam-outline to contour-outline extends \"threshold time beamoffset\", edges will be exposed with edgefactor of 1,45"^^xsd:string ;
@@ -689,7 +790,7 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/PowderBedFusionOntology#EOS_M290_CartesianCoordinateSystem
+###  https://w3id.org/ODE_AM/PBFAO/EOS_M290_CartesianCoordinateSystem
 :EOS_M290_CartesianCoordinateSystem rdf:type owl:NamedIndividual ,
                                              Comm:CartesianCoordinateSystem .
 
