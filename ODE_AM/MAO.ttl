@@ -1,6 +1,6 @@
-@prefix : <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#> .
+@prefix : <https://w3id.org/ODE_AM/MAO/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix mo: <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#> .
+@prefix mo: <https://w3id.org/ODE_AM/MAO/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,33 +11,45 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@base <http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology> .
+@base <https://w3id.org/ODE_AM/MAO> .
 
-<http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology> rdf:type owl:Ontology ;
-                                                                              owl:imports <http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl> ,
-                                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/AgentOntology> ,
-                                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology> ,
-                                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/EventOntology> ,
-                                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/QualityOntology> ,
-                                                                                          <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/UnitsOfMeasurementOntology> ;
-                                                                              dc:creator "Thomas Bjarsch" ;
-                                                                              dc:date "15.01.2024" ;
-                                                                              dc:license "CC-BY-4.0" ;
-                                                                              dc:title "Fraunhofer IGCV Manufacturing Application Ontology" ;
-                                                                              rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
-                                                                                           "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string ,
-                                                                                           "This ontology, developed for use at Fraunhofer IGCV, comprises a detailed collection of entities and their associated descriptions, tailored to support a range of projects like ODE_AM and HybridDigital within the manufacturing domain. It includes specific categories such as materials, processes, machinery, and quality standards, all of which are vital for research and development in advanced manufacturing techniques."^^xsd:string ;
-                                                                              owl:versionInfo 1.0 .
+<https://w3id.org/ODE_AM/MAO> rdf:type owl:Ontology ;
+                               owl:imports <http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl> ,
+                                           <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/AgentOntology> ,
+                                           <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology> ,
+                                           <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/EventOntology> ,
+                                           <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/QualityOntology> ,
+                                           <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/UnitsOfMeasurementOntology> ;
+                               dc:creator "Thomas Bjarsch" ;
+                               dc:date "15.01.2024" ;
+                               dc:license "CC-BY-4.0" ;
+                               dc:title "Fraunhofer IGCV Manufacturing Application Ontology" ;
+                               rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
+                                            "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string ,
+                                            "This ontology, developed for use at Fraunhofer IGCV, comprises a detailed collection of entities and their associated descriptions, tailored to support a range of projects like ODE_AM and HybridDigital within the manufacturing domain. It includes specific categories such as materials, processes, machinery, and quality standards, all of which are vital for research and development in advanced manufacturing techniques."^^xsd:string ;
+                               owl:versionInfo "1.0.0"^^xsd:string .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#saved_at
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/ODE_AM/MAO/saved_at
 mo:saved_at rdf:type owl:AnnotationProperty .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#url
+###  https://w3id.org/ODE_AM/MAO/url
 mo:url rdf:type owl:AnnotationProperty .
 
 
@@ -53,56 +65,56 @@ comm:designated_by rdfs:subPropertyOf mo:named_by .
 comm:designates rdfs:subPropertyOf mo:names .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#has_indirect_output
+###  https://w3id.org/ODE_AM/MAO/has_indirect_output
 mo:has_indirect_output rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf comm:has_output ;
                        owl:inverseOf mo:is_indirect_output_of .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#is_indirect_output_of
+###  https://w3id.org/ODE_AM/MAO/is_indirect_output_of
 mo:is_indirect_output_of rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf comm:is_output_of .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#named_by
+###  https://w3id.org/ODE_AM/MAO/named_by
 mo:named_by rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf comm:is_subject_of .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#names
+###  https://w3id.org/ODE_AM/MAO/names
 mo:names rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf comm:is_about .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#primary_sql_key_of
+###  https://w3id.org/ODE_AM/MAO/primary_sql_key_of
 mo:primary_sql_key_of rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf mo:sql_key_of ;
                       owl:inverseOf mo:uses_primary_sql_key .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#secondary_sql_key_of
+###  https://w3id.org/ODE_AM/MAO/secondary_sql_key_of
 mo:secondary_sql_key_of rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf mo:sql_key_of ;
                         owl:inverseOf mo:uses_secondary_sql_key .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#sql_key_of
+###  https://w3id.org/ODE_AM/MAO/sql_key_of
 mo:sql_key_of rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf comm:is_used_by ;
               owl:inverseOf mo:uses_sql_key .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#uses_primary_sql_key
+###  https://w3id.org/ODE_AM/MAO/uses_primary_sql_key
 mo:uses_primary_sql_key rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf mo:uses_sql_key .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#uses_secondary_sql_key
+###  https://w3id.org/ODE_AM/MAO/uses_secondary_sql_key
 mo:uses_secondary_sql_key rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf mo:uses_sql_key .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#uses_sql_key
+###  https://w3id.org/ODE_AM/MAO/uses_sql_key
 mo:uses_sql_key rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf comm:uses .
 
@@ -111,17 +123,17 @@ mo:uses_sql_key rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#has_x_coordinate_value
+###  https://w3id.org/ODE_AM/MAO/has_x_coordinate_value
 mo:has_x_coordinate_value rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#has_y_coordinate_value
+###  https://w3id.org/ODE_AM/MAO/has_y_coordinate_value
 mo:has_y_coordinate_value rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#has_z_coordinate_value
+###  https://w3id.org/ODE_AM/MAO/has_z_coordinate_value
 mo:has_z_coordinate_value rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty .
 
@@ -165,7 +177,7 @@ comm:Spreadsheet comm:alternative_label "Table"@en .
 comm:ThreeDimensionalExtent owl:equivalentClass mo:Volume .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#AbsorbedFractureEnergy
+###  https://w3id.org/ODE_AM/MAO/AbsorbedFractureEnergy
 mo:AbsorbedFractureEnergy rdf:type owl:Class ;
                           rdfs:subClassOf mo:Energy ;
                           comm:definition "Bei der Prüfung mit einem Pendelschlagwerk für das Brechen der Probe erforderliche Energie, die bezüglich der Reibung korrigiert ist"@de ;
@@ -175,7 +187,7 @@ mo:AbsorbedFractureEnergy rdf:type owl:Class ;
                           skos:definition "The energy required to break the specimen in a pendulum impact test, corrected for friction"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfAddition
+###  https://w3id.org/ODE_AM/MAO/ActOfAddition
 mo:ActOfAddition rdf:type owl:Class ;
                  rdfs:subClassOf mo:ActOfMathematicalOperation ;
                  rdfs:label "Addition"@en ;
@@ -183,7 +195,7 @@ mo:ActOfAddition rdf:type owl:Class ;
                  skos:example "4+5" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfBendingTesting
+###  https://w3id.org/ODE_AM/MAO/ActOfBendingTesting
 mo:ActOfBendingTesting rdf:type owl:Class ;
                        rdfs:subClassOf comm:ActOfMeasuring ,
                                        [ rdf:type owl:Restriction ;
@@ -194,7 +206,7 @@ mo:ActOfBendingTesting rdf:type owl:Class ;
                        skos:definition "Act of measuring that provides values for the modulus of elasticity in bending, flexural stress, flexural strain and the flexural stress–strain response of a portion of material" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfCharpyImpactTesting
+###  https://w3id.org/ODE_AM/MAO/ActOfCharpyImpactTesting
 mo:ActOfCharpyImpactTesting rdf:type owl:Class ;
                             rdfs:subClassOf comm:ActOfMeasuring ;
                             comm:alternative_label "Charpy V-notch test" ;
@@ -202,7 +214,7 @@ mo:ActOfCharpyImpactTesting rdf:type owl:Class ;
                             skos:definition "Standardized high strain rate test which determines the amount of energy absorbed by a material during fracture. Uses Standard DIN EN ISO 148" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfCompressionTesting
+###  https://w3id.org/ODE_AM/MAO/ActOfCompressionTesting
 mo:ActOfCompressionTesting rdf:type owl:Class ;
                            rdfs:subClassOf comm:ActOfMeasuring ,
                                            [ rdf:type owl:Restriction ;
@@ -213,7 +225,7 @@ mo:ActOfCompressionTesting rdf:type owl:Class ;
                            skos:definition "Act of measuring in which a material experiences opposing forces that push inward upon the specimen from opposite sides or is otherwise compressed, “squashed”, crushed, or flattened" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfConsolidation
+###  https://w3id.org/ODE_AM/MAO/ActOfConsolidation
 mo:ActOfConsolidation rdf:type owl:Class ;
                       rdfs:subClassOf comm:ActOfArtifactProcessing ;
                       comm:definition "Process that compacts and solidifies a material, often by applying pressure, to decrease porosity and enhance mechanical properties."@de ;
@@ -221,7 +233,7 @@ mo:ActOfConsolidation rdf:type owl:Class ;
                                  "Verdichtung"@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfCuring
+###  https://w3id.org/ODE_AM/MAO/ActOfCuring
 mo:ActOfCuring rdf:type owl:Class ;
                rdfs:subClassOf comm:ActOfArtifactProcessing ;
                comm:definition "Process wherein a material undergoes a chemical change to become hard and stable, often achieved through maintaining a specific temperature and humidity level for a set period."@de ;
@@ -229,7 +241,7 @@ mo:ActOfCuring rdf:type owl:Class ;
                           "Curing"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfDensityMeasuring
+###  https://w3id.org/ODE_AM/MAO/ActOfDensityMeasuring
 mo:ActOfDensityMeasuring rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( comm:ActOfMeasuring
                                                                     [ rdf:type owl:Restriction ;
@@ -247,14 +259,14 @@ mo:ActOfDensityMeasuring rdf:type owl:Class ;
                          rdfs:label "Density measuring"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfDivision
+###  https://w3id.org/ODE_AM/MAO/ActOfDivision
 mo:ActOfDivision rdf:type owl:Class ;
                  rdfs:subClassOf mo:ActOfMathematicalOperation ;
                  rdfs:label "Division"@en ;
                  skos:definition "Mathematical process where a number or quantity is separated or distributed into equal parts, determining how many times one number (the divisor) can be subtracted from another number (the dividend) to obtain a quotient or result." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfDynamicScanningCalorimetry
+###  https://w3id.org/ODE_AM/MAO/ActOfDynamicScanningCalorimetry
 mo:ActOfDynamicScanningCalorimetry rdf:type owl:Class ;
                                    rdfs:subClassOf mo:ActOfSpecificHeatCapacityMeasuring ,
                                                    [ rdf:type owl:Restriction ;
@@ -270,14 +282,14 @@ mo:ActOfDynamicScanningCalorimetry rdf:type owl:Class ;
                                    rdfs:label "Dynamic Scanning Calorimetry"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfFatigueTesting
+###  https://w3id.org/ODE_AM/MAO/ActOfFatigueTesting
 mo:ActOfFatigueTesting rdf:type owl:Class ;
                        rdfs:subClassOf comm:ActOfMeasuring ;
                        rdfs:label "Fatigue Test"@en ;
                        skos:definition "Mechanical testing that involves subjecting a material or component to repeated cyclic loading or stress, typically at varying levels, to evaluate its resistance to fatigue failure and to determine its fatigue life and behavior under real-world operating conditions." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfForming
+###  https://w3id.org/ODE_AM/MAO/ActOfForming
 mo:ActOfForming rdf:type owl:Class ;
                 rdfs:subClassOf comm:ActOfArtifactModification ;
                 comm:definition "Process involving the physical manipulation of an object. With forming, an object is physically deformed to achieve a different size and/or shape."@de ;
@@ -286,7 +298,7 @@ mo:ActOfForming rdf:type owl:Class ;
                            "Verformen"@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfGrinding
+###  https://w3id.org/ODE_AM/MAO/ActOfGrinding
 mo:ActOfGrinding rdf:type owl:Class ;
                  rdfs:subClassOf mo:ActOfMachining ;
                  comm:definition_source "https://www.corrosionpedia.com/definition/611/grinding" ;
@@ -294,7 +306,7 @@ mo:ActOfGrinding rdf:type owl:Class ;
                  skos:definition "Act of abrasive machining  that uses a grinding wheel or grinder as the cutting tool to improve surface qualities" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfLaserFlashAnalysis
+###  https://w3id.org/ODE_AM/MAO/ActOfLaserFlashAnalysis
 mo:ActOfLaserFlashAnalysis rdf:type owl:Class ;
                            rdfs:subClassOf comm:ActOfMeasuring ;
                            comm:acronym "LFA"@en ;
@@ -302,7 +314,7 @@ mo:ActOfLaserFlashAnalysis rdf:type owl:Class ;
                            rdfs:label "Laser flash analysis"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfMachining
+###  https://w3id.org/ODE_AM/MAO/ActOfMachining
 mo:ActOfMachining rdf:type owl:Class ;
                   rdfs:subClassOf comm:ActOfArtifactModification ;
                   comm:definition_source "https://en.wikipedia.org/wiki/Machining"@en ;
@@ -310,7 +322,7 @@ mo:ActOfMachining rdf:type owl:Class ;
                   skos:definition "Process whereby a desired shape or part is achieved by the controlled removal of material from a larger piece of raw material by cutting" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfMathematicalOperation
+###  https://w3id.org/ODE_AM/MAO/ActOfMathematicalOperation
 mo:ActOfMathematicalOperation rdf:type owl:Class ;
                               rdfs:subClassOf comm:IntentionalAct ,
                                               [ rdf:type owl:Restriction ;
@@ -321,7 +333,7 @@ mo:ActOfMathematicalOperation rdf:type owl:Class ;
                               skos:definition "Act following a systematic set of steps or rules to transform input data or expressions into meaningful output, facilitating mathematical calculations and problem-solving." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfMilling
+###  https://w3id.org/ODE_AM/MAO/ActOfMilling
 mo:ActOfMilling rdf:type owl:Class ;
                 rdfs:subClassOf mo:ActOfMachining ;
                 rdfs:label "Milling" ;
@@ -329,7 +341,7 @@ mo:ActOfMilling rdf:type owl:Class ;
                                 "https://mime.oregonstate.edu/mill-manufacturing-process" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfMultiplication
+###  https://w3id.org/ODE_AM/MAO/ActOfMultiplication
 mo:ActOfMultiplication rdf:type owl:Class ;
                        rdfs:subClassOf mo:ActOfMathematicalOperation ;
                        rdfs:label "Multiplication"@en ;
@@ -337,7 +349,7 @@ mo:ActOfMultiplication rdf:type owl:Class ;
                        skos:example "3*12" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfPressing
+###  https://w3id.org/ODE_AM/MAO/ActOfPressing
 mo:ActOfPressing rdf:type owl:Class ;
                  rdfs:subClassOf comm:ActOfArtifactProcessing ;
                  comm:definition "Process where pressure is applied to a material to alter its shape, form, or properties, often using a machine press to compress, compact, or shape it."@de ;
@@ -345,13 +357,13 @@ mo:ActOfPressing rdf:type owl:Class ;
                             "Pressing"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfSieving
+###  https://w3id.org/ODE_AM/MAO/ActOfSieving
 mo:ActOfSieving rdf:type owl:Class ;
                 rdfs:subClassOf comm:ActOfArtifactProcessing ;
                 skos:definition "Powder sieving is the process of separating particles of a powdered material into different size fractions by passing the powder through a mesh or sieve, ensuring uniformity and desired particle size distribution." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfSpecificHeatCapacityMeasuring
+###  https://w3id.org/ODE_AM/MAO/ActOfSpecificHeatCapacityMeasuring
 mo:ActOfSpecificHeatCapacityMeasuring rdf:type owl:Class ;
                                       rdfs:subClassOf comm:ActOfMeasuring ,
                                                       [ owl:intersectionOf ( comm:ActOfMeasuring
@@ -369,7 +381,7 @@ mo:ActOfSpecificHeatCapacityMeasuring rdf:type owl:Class ;
                                       skos:definition "Material charakterization Process in which the difference in the amount of heat required to increase the temperature of a sample and reference is measured as a function of temperature." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfSubtraction
+###  https://w3id.org/ODE_AM/MAO/ActOfSubtraction
 mo:ActOfSubtraction rdf:type owl:Class ;
                     rdfs:subClassOf mo:ActOfMathematicalOperation ;
                     rdfs:label "Subtraction"@en ;
@@ -377,7 +389,7 @@ mo:ActOfSubtraction rdf:type owl:Class ;
                     skos:example "10-4" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfTemperatureMeasuring
+###  https://w3id.org/ODE_AM/MAO/ActOfTemperatureMeasuring
 mo:ActOfTemperatureMeasuring rdf:type owl:Class ;
                              owl:equivalentClass [ owl:intersectionOf ( comm:ActOfMeasuring
                                                                         [ rdf:type owl:Restriction ;
@@ -395,7 +407,7 @@ mo:ActOfTemperatureMeasuring rdf:type owl:Class ;
                              skos:definition "The act of measuring temperature involves using specialized instruments or devices to quantify the level of heat or coldness in an object or environment, expressing the result in a numerical value typically using a specific unit of measurement such as degrees Celsius or Fahrenheit." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfTensileTesting
+###  https://w3id.org/ODE_AM/MAO/ActOfTensileTesting
 mo:ActOfTensileTesting rdf:type owl:Class ;
                        rdfs:subClassOf comm:ActOfMeasuring ,
                                        [ rdf:type owl:Restriction ;
@@ -406,7 +418,7 @@ mo:ActOfTensileTesting rdf:type owl:Class ;
                        skos:definition "Act of measuring in domains materials science and engineering test in which a sample is subjected to a controlled tension until failure" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfThermomechanicalAnalysis
+###  https://w3id.org/ODE_AM/MAO/ActOfThermomechanicalAnalysis
 mo:ActOfThermomechanicalAnalysis rdf:type owl:Class ;
                                  rdfs:subClassOf comm:ActOfMeasuring ;
                                  comm:acronym "TMA"@en ;
@@ -414,7 +426,7 @@ mo:ActOfThermomechanicalAnalysis rdf:type owl:Class ;
                                  rdfs:label "Thermomechanical Analysis"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfTurning
+###  https://w3id.org/ODE_AM/MAO/ActOfTurning
 mo:ActOfTurning rdf:type owl:Class ;
                 rdfs:subClassOf mo:ActOfMachining ;
                 comm:definition_source "https://www.huyett.com/blog/manufacturing-process-turning" ;
@@ -422,21 +434,21 @@ mo:ActOfTurning rdf:type owl:Class ;
                 skos:definition "Act of machining performed on a lathe in which the workpiece rotates at high speeds while a fixed cutting tool removes material" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfVibratoryGrinding
+###  https://w3id.org/ODE_AM/MAO/ActOfVibratoryGrinding
 mo:ActOfVibratoryGrinding rdf:type owl:Class ;
                           rdfs:subClassOf mo:ActOfGrinding ;
                           comm:definition "Vibratory grinding is a process of material removal and surface finishing where parts are placed in a vibrating container filled with abrasive media, which smooths and polishes the surfaces through continuous and rapid movements."@en ;
                           rdfs:label "Vibratory Grinding" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ActOfVirtualGeometryManipulation
+###  https://w3id.org/ODE_AM/MAO/ActOfVirtualGeometryManipulation
 mo:ActOfVirtualGeometryManipulation rdf:type owl:Class ;
                                     rdfs:subClassOf comm:IntentionalAct ;
                                     rdfs:label "Virtual Geometry Manipulation"@en ;
                                     skos:example "Scaling an STL-Model, change the shape of an CAD Model" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Autoclave
+###  https://w3id.org/ODE_AM/MAO/Autoclave
 mo:Autoclave rdf:type owl:Class ;
              rdfs:subClassOf mo:Machine ;
              comm:definition "An autoclave is a machine used to carry out industrial and scientific processes requiring elevated temperature and pressure in relation to ambient pressure and/or temperature." ;
@@ -444,7 +456,7 @@ mo:Autoclave rdf:type owl:Class ;
              rdfs:label "Autoclave"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#BendingTestSpecimen
+###  https://w3id.org/ODE_AM/MAO/BendingTestSpecimen
 mo:BendingTestSpecimen rdf:type owl:Class ;
                        owl:equivalentClass [ owl:intersectionOf ( mo:TestSpecimen
                                                                   [ rdf:type owl:Restriction ;
@@ -459,21 +471,21 @@ mo:BendingTestSpecimen rdf:type owl:Class ;
                        skos:definition "Artifact designed to be used in a bending test to determine characteristics about the material it's made of" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Broken
+###  https://w3id.org/ODE_AM/MAO/Broken
 mo:Broken rdf:type owl:Class ;
           rdfs:subClassOf obo:Disposition ;
           rdfs:label "Broken"@en ;
           skos:definition "State of being damaged, fractured, or not in proper working condition, typically describing an object, device, or system that is no longer functioning as intended due to physical or functional impairment." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Column
+###  https://w3id.org/ODE_AM/MAO/Column
 mo:Column rdf:type owl:Class ;
           rdfs:subClassOf comm:InformationBearingArtifact ;
           rdfs:label "Column"@en ;
           skos:definition "A column in a database table is a vertical entity that stores a specific attribute of data, all of the same data type, for each record in the table."@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#CompressionTestSpecimen
+###  https://w3id.org/ODE_AM/MAO/CompressionTestSpecimen
 mo:CompressionTestSpecimen rdf:type owl:Class ;
                            owl:equivalentClass [ owl:intersectionOf ( mo:TestSpecimen
                                                                       [ rdf:type owl:Restriction ;
@@ -488,14 +500,14 @@ mo:CompressionTestSpecimen rdf:type owl:Class ;
                            skos:definition "Artifact designed to be used in a compression test to determine characteristics about the material it's made of" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#CompressiveCharacteristic
+###  https://w3id.org/ODE_AM/MAO/CompressiveCharacteristic
 mo:CompressiveCharacteristic rdf:type owl:Class ;
                              rdfs:subClassOf mo:MaterialCharacteristic ;
                              rdfs:label "Compressive Characteristic"@en ;
                              skos:definition "Behavior and response of a material or structure under applied compressive forces, determining its ability to resist compression and withstand compressive loads before undergoing deformation or failure." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#CompressiveModulus
+###  https://w3id.org/ODE_AM/MAO/CompressiveModulus
 mo:CompressiveModulus rdf:type owl:Class ;
                       rdfs:subClassOf mo:CompressiveCharacteristic ;
                       comm:alternative_label "modulus of elasticity in compression"^^rdfs:Literal ;
@@ -505,7 +517,7 @@ mo:CompressiveModulus rdf:type owl:Class ;
                       rdfs:label "Compressive Modulus"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#CompressiveStrength
+###  https://w3id.org/ODE_AM/MAO/CompressiveStrength
 mo:CompressiveStrength rdf:type owl:Class ;
                        rdfs:subClassOf mo:CompressiveCharacteristic ;
                        comm:has_token_unit "MPa" ;
@@ -513,7 +525,7 @@ mo:CompressiveStrength rdf:type owl:Class ;
                        skos:definition "Maximum amount of compressive stress a material can withstand before it fails or experiences permanent deformation, measured in units of force per unit area (e.g., pounds per square inch or megapascals)." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ConvectionOven
+###  https://w3id.org/ODE_AM/MAO/ConvectionOven
 mo:ConvectionOven rdf:type owl:Class ;
                   rdfs:subClassOf mo:Machine ;
                   comm:definition "a gas, electric, or microwave oven equipped with a fan that circulates and intensifies the heat" ;
@@ -521,21 +533,21 @@ mo:ConvectionOven rdf:type owl:Class ;
                   rdfs:label "Convection Oven"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#CrossSectionalArea
+###  https://w3id.org/ODE_AM/MAO/CrossSectionalArea
 mo:CrossSectionalArea rdf:type owl:Class ;
                       rdfs:subClassOf obo:Quality ;
                       rdfs:label "Cross Sectional Area"@en ;
                       skos:definition "Area of a two-dimensional shape that is exposed when cutting through an object along a plane." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Cycles
+###  https://w3id.org/ODE_AM/MAO/Cycles
 mo:Cycles rdf:type owl:Class ;
           rdfs:subClassOf obo:ProcessProfile ;
           comm:definition "The total number of cycles an oszillation has done during a specified amount of time." ;
           rdfs:label "Cycles"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Directory
+###  https://w3id.org/ODE_AM/MAO/Directory
 mo:Directory rdf:type owl:Class ;
              rdfs:subClassOf obo:ImmaterialEntity ;
              comm:alternative_label "Folder"^^rdfs:Literal ;
@@ -543,7 +555,7 @@ mo:Directory rdf:type owl:Class ;
              rdfs:label "Directory"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#DoubleBeltPress
+###  https://w3id.org/ODE_AM/MAO/DoubleBeltPress
 mo:DoubleBeltPress rdf:type owl:Class ;
                    rdfs:subClassOf mo:Press ;
                    comm:definition "A double belt press comprises two endless steel belts revolving in opposing directions with mutually facing sides thereof pressed against each other and against material passed therebetween by means of stationary, temperature-controlled press plates." ;
@@ -552,7 +564,7 @@ mo:DoubleBeltPress rdf:type owl:Class ;
                               "Double Belt Press"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Energy
+###  https://w3id.org/ODE_AM/MAO/Energy
 mo:Energy rdf:type owl:Class ;
           rdfs:subClassOf obo:RealizableEntity ;
           comm:definition_source "https://ingeniumcanada.org/scitech/education/tell-me-about/physics-of-energy"^^rdfs:Literal ;
@@ -561,7 +573,7 @@ mo:Energy rdf:type owl:Class ;
           skos:definition "Ability to do work, which is the ability to exert a force causing displacement of an object"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ExcelSpreadsheet
+###  https://w3id.org/ODE_AM/MAO/ExcelSpreadsheet
 mo:ExcelSpreadsheet rdf:type owl:Class ;
                     rdfs:subClassOf comm:Spreadsheet ;
                     comm:definition "Digital file or document created using Microsoft Excel software, designed to store, manipulate, and present data in an interactive, tabular format, allowing users to perform calculations, create charts, and organize information."@de ;
@@ -569,7 +581,7 @@ mo:ExcelSpreadsheet rdf:type owl:Class ;
                     skos:example "test_file.xlsx"@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#FiftiethPercentile
+###  https://w3id.org/ODE_AM/MAO/FiftiethPercentile
 mo:FiftiethPercentile rdf:type owl:Class ;
                       rdfs:subClassOf mo:Percentile ;
                       comm:alternative_label "Median"^^rdfs:Literal ;
@@ -578,7 +590,7 @@ mo:FiftiethPercentile rdf:type owl:Class ;
                       skos:example "In a dataset of exam scores (85, 90, 92, 78, 88, 95, 82), the 50th percentile (median) is 88, separating the data into two equal halves."^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#FlexuralModulus
+###  https://w3id.org/ODE_AM/MAO/FlexuralModulus
 mo:FlexuralModulus rdf:type owl:Class ;
                    rdfs:subClassOf mo:MaterialCharacteristic ;
                    comm:definition "Material Characteristic that is computed as the ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending"^^rdfs:Literal ;
@@ -587,7 +599,7 @@ mo:FlexuralModulus rdf:type owl:Class ;
                    skos:altLabel "BendingModulus" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#FractureSurface
+###  https://w3id.org/ODE_AM/MAO/FractureSurface
 mo:FractureSurface rdf:type owl:Class ;
                    rdfs:subClassOf obo:FiatSurface ;
                    comm:alternative_label "Bruchfläche"@de ;
@@ -596,7 +608,7 @@ mo:FractureSurface rdf:type owl:Class ;
                    skos:example "The fracture surface of a broken tensile test specimen"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#FracturedPartOfTestSpecimen
+###  https://w3id.org/ODE_AM/MAO/FracturedPartOfTestSpecimen
 mo:FracturedPartOfTestSpecimen rdf:type owl:Class ;
                                owl:equivalentClass [ owl:intersectionOf ( obo:Object
                                                                           [ rdf:type owl:Restriction ;
@@ -618,7 +630,7 @@ mo:FracturedPartOfTestSpecimen rdf:type owl:Class ;
                                skos:example "A half of a fractured tensile test specimen" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#GeneratedID
+###  https://w3id.org/ODE_AM/MAO/GeneratedID
 mo:GeneratedID rdf:type owl:Class ;
                rdfs:subClassOf comm:PartNumber ;
                comm:alternative_label "Unique Part ID"^^rdfs:Literal ;
@@ -627,7 +639,7 @@ mo:GeneratedID rdf:type owl:Class ;
                skos:example "4124k-24143k-4jk41"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#HallFlowRate
+###  https://w3id.org/ODE_AM/MAO/HallFlowRate
 mo:HallFlowRate rdf:type owl:Class ;
                 rdfs:subClassOf mo:MaterialCharacteristic ;
                 comm:SI_unit_label "s/50g" ;
@@ -636,7 +648,7 @@ mo:HallFlowRate rdf:type owl:Class ;
                 skos:definition "Gemessen wird die Zeit, die erforderlich ist, damit 50 g eines metallischen Pulvers durch die Ausflussöffnung eines kalibrierten Trichters (Hall Flowmeter) mit genormten Maßen fließen" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#HashValue
+###  https://w3id.org/ODE_AM/MAO/HashValue
 mo:HashValue rdf:type owl:Class ;
              rdfs:subClassOf comm:CodeIdentifier ;
              comm:definition "A numeric or alphanumeric string obtained by applying a hash function to a piece of data"@en ;
@@ -645,14 +657,14 @@ mo:HashValue rdf:type owl:Class ;
              skos:example "3a7bd3e2360a3d29eea436fcfb7c621338b4784dfc684136ac1a4f6d8e7b6ad8"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#LossOfUnbroken
+###  https://w3id.org/ODE_AM/MAO/LossOfUnbroken
 mo:LossOfUnbroken rdf:type owl:Class ;
                   rdfs:subClassOf comm:LossOfDisposition ;
                   comm:definition "Loss of an objects quality to be unbroken and not damaged"@en ;
                   rdfs:label "Loss of broken"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Machine
+###  https://w3id.org/ODE_AM/MAO/Machine
 mo:Machine rdf:type owl:Class ;
            rdfs:subClassOf comm:Artifact ;
            comm:definition_source "https://dictionary.cambridge.org/de/worterbuch/englisch/machine"@en ;
@@ -660,7 +672,7 @@ mo:Machine rdf:type owl:Class ;
            skos:definition "A piece of equipment with several moving parts that uses power to do a particular type of work" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MassFraction
+###  https://w3id.org/ODE_AM/MAO/MassFraction
 mo:MassFraction rdf:type owl:Class ;
                 rdfs:subClassOf obo:RelationalQuality ;
                 comm:has_token_unit "mo:PercentMeasurementUnit" ;
@@ -668,7 +680,7 @@ mo:MassFraction rdf:type owl:Class ;
                 skos:definition "Ratio w_i of the mass m_i of a portion of material to the total mass m_tot of the total portion of material" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MaterialCharacteristic
+###  https://w3id.org/ODE_AM/MAO/MaterialCharacteristic
 mo:MaterialCharacteristic rdf:type owl:Class ;
                           owl:equivalentClass [ owl:intersectionOf ( obo:Quality
                                                                      [ rdf:type owl:Restriction ;
@@ -683,7 +695,7 @@ mo:MaterialCharacteristic rdf:type owl:Class ;
                           skos:definition "Quality that is an intensive property of some material, allowing to compare different materials" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MeasurementInstrument
+###  https://w3id.org/ODE_AM/MAO/MeasurementInstrument
 mo:MeasurementInstrument rdf:type owl:Class ;
                          rdfs:subClassOf mo:Machine ,
                                          [ rdf:type owl:Restriction ;
@@ -694,7 +706,7 @@ mo:MeasurementInstrument rdf:type owl:Class ;
                          rdfs:label "Measurement Instrument"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MeasurementInstrumentForSpecificHeatCapacity
+###  https://w3id.org/ODE_AM/MAO/MeasurementInstrumentForSpecificHeatCapacity
 mo:MeasurementInstrumentForSpecificHeatCapacity rdf:type owl:Class ;
                                                 rdfs:subClassOf mo:MeasurementInstrument ,
                                                                 [ rdf:type owl:Restriction ;
@@ -705,7 +717,7 @@ mo:MeasurementInstrumentForSpecificHeatCapacity rdf:type owl:Class ;
                                                 rdfs:label "Specific Heat Capacity Measurement Instrument"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MeasurementUnitOfSpecificHeatCapactity
+###  https://w3id.org/ODE_AM/MAO/MeasurementUnitOfSpecificHeatCapactity
 mo:MeasurementUnitOfSpecificHeatCapactity rdf:type owl:Class ;
                                           rdfs:subClassOf comm:MeasurementUnit ;
                                           comm:definition "A Measurement Unit used in measurements of an object's specific heat capacity"^^rdfs:Literal ;
@@ -713,14 +725,14 @@ mo:MeasurementUnitOfSpecificHeatCapactity rdf:type owl:Class ;
                                           rdfs:label "Measurement Unit of Specific Heat Capacity"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MeasurementUnitOfThermalDiffusivity
+###  https://w3id.org/ODE_AM/MAO/MeasurementUnitOfThermalDiffusivity
 mo:MeasurementUnitOfThermalDiffusivity rdf:type owl:Class ;
                                        rdfs:subClassOf comm:MeasurementUnit ;
                                        comm:definition "A Measurement Unit used in measurements of an object's thermal diffusivity,"^^rdfs:Literal ;
                                        rdfs:label "Measurement Unit of thermal diffusivity"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#NETZSCHDSC204F1Phoenix
+###  https://w3id.org/ODE_AM/MAO/NETZSCHDSC204F1Phoenix
 mo:NETZSCHDSC204F1Phoenix rdf:type owl:Class ;
                           rdfs:subClassOf mo:MeasurementInstrumentForSpecificHeatCapacity ;
                           comm:definition "Differential scanning calorimeter manufactured by Netzsch, designed to measure heat flow changes in materials during temperature variations, providing valuable insights into their thermal properties and behavior." ;
@@ -728,7 +740,7 @@ mo:NETZSCHDSC204F1Phoenix rdf:type owl:Class ;
                           rdfs:label "Netzsch DSC 204F1 Phoenix" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#NinetiethPercentile
+###  https://w3id.org/ODE_AM/MAO/NinetiethPercentile
 mo:NinetiethPercentile rdf:type owl:Class ;
                        rdfs:subClassOf mo:Percentile ;
                        rdfs:label "90th Percentile" ;
@@ -736,7 +748,7 @@ mo:NinetiethPercentile rdf:type owl:Class ;
                        skos:example "In a dataset of test scores (65, 70, 75, 80, 85, 90, 95, 100, 105, 110), the 90th percentile is 105, indicating that 90% of the scores are below or equal to this value."^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#NormalizedChangeInLength
+###  https://w3id.org/ODE_AM/MAO/NormalizedChangeInLength
 mo:NormalizedChangeInLength rdf:type owl:Class ;
                             rdfs:subClassOf obo:Quality ;
                             rdfs:comment "By default built by dividing the total change of length of a specimen by its original length"@en ;
@@ -744,14 +756,14 @@ mo:NormalizedChangeInLength rdf:type owl:Class ;
                             skos:definition "Quality characterizing the change in objects length to its original length." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PDFFile
+###  https://w3id.org/ODE_AM/MAO/PDFFile
 mo:PDFFile rdf:type owl:Class ;
            rdfs:subClassOf comm:InformationBearingArtifact ;
            comm:definition "Portable Document, standardized as ISO 32000, is a file developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems." ;
            rdfs:label "PDF File"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PartIDInBuildjob
+###  https://w3id.org/ODE_AM/MAO/PartIDInBuildjob
 mo:PartIDInBuildjob rdf:type owl:Class ;
                     rdfs:subClassOf comm:PartNumber ;
                     rdfs:label "Part ID in Buildjob"^^rdfs:Literal ;
@@ -759,14 +771,14 @@ mo:PartIDInBuildjob rdf:type owl:Class ;
                     skos:example "42g54-2523-124"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Percentile
+###  https://w3id.org/ODE_AM/MAO/Percentile
 mo:Percentile rdf:type owl:Class ;
               rdfs:subClassOf comm:ProbabilityMeasurementInformationContentEntity ;
               comm:definition_source "https://en.wikipedia.org/wiki/Percentile"^^rdfs:Literal ;
               skos:definition "In statistics, a k-th percentile (percentile score or centile) is a score below which a given percentage k of scores in its frequency distribution falls (exclusive definition) or a score at or below which a given percentage falls (inclusive definition)." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Porosity
+###  https://w3id.org/ODE_AM/MAO/Porosity
 mo:Porosity rdf:type owl:Class ;
             rdfs:subClassOf mo:MaterialCharacteristic ;
             comm:alternative_label "void fraction" ;
@@ -775,7 +787,7 @@ mo:Porosity rdf:type owl:Class ;
             skos:definition "Fraction of the volume of voids contained in a portion of material over the total volume of the portion of material" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOf316LMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOf316LMaterial
 mo:PortionOf316LMaterial rdf:type owl:Class ;
                          rdfs:subClassOf mo:PortionOfSteelMaterial ;
                          comm:alternative_label 1.4404 ;
@@ -783,7 +795,7 @@ mo:PortionOf316LMaterial rdf:type owl:Class ;
                          skos:definition "Portion of a specific metallic alloy of stainless steel that is austenitic and contains nickel and molybdenum, which make it corrosion resistant" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfAluminum
+###  https://w3id.org/ODE_AM/MAO/PortionOfAluminum
 mo:PortionOfAluminum rdf:type owl:Class ;
                      rdfs:subClassOf mo:PortionOfMetal ;
                      comm:acronym "Al" ;
@@ -791,7 +803,7 @@ mo:PortionOfAluminum rdf:type owl:Class ;
                      rdfs:label "Aluminum" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfCarbonMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfCarbonMaterial
 mo:PortionOfCarbonMaterial rdf:type owl:Class ;
                            rdfs:subClassOf comm:PortionOfMaterial ;
                            comm:acronym "C"@de ;
@@ -800,7 +812,7 @@ mo:PortionOfCarbonMaterial rdf:type owl:Class ;
                            rdfs:label "Carbon"@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfChromeMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfChromeMaterial
 mo:PortionOfChromeMaterial rdf:type owl:Class ;
                            rdfs:subClassOf mo:PortionOfMetal ;
                            comm:acronym "Cr" ;
@@ -808,7 +820,7 @@ mo:PortionOfChromeMaterial rdf:type owl:Class ;
                            rdfs:label "Chrome"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfEpoxyResinMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfEpoxyResinMaterial
 mo:PortionOfEpoxyResinMaterial rdf:type owl:Class ;
                                rdfs:subClassOf mo:PortionOfThermosetMaterial ;
                                comm:acronym "EP" ;
@@ -816,7 +828,7 @@ mo:PortionOfEpoxyResinMaterial rdf:type owl:Class ;
                                skos:definition "Portion of reactive prepolymers and polymers which contain epoxide groups" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfFiber
+###  https://w3id.org/ODE_AM/MAO/PortionOfFiber
 mo:PortionOfFiber rdf:type owl:Class ;
                   rdfs:subClassOf comm:Artifact ;
                   comm:definition "One or more filaments in an ordered assemblage." ;
@@ -824,7 +836,7 @@ mo:PortionOfFiber rdf:type owl:Class ;
                   rdfs:label "Fibre"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfFilament
+###  https://w3id.org/ODE_AM/MAO/PortionOfFilament
 mo:PortionOfFilament rdf:type owl:Class ;
                      rdfs:subClassOf comm:PortionOfMaterial ;
                      rdfs:label "Filament"@en ;
@@ -833,7 +845,7 @@ mo:PortionOfFilament rdf:type owl:Class ;
                                   "Carbon Filament: An older type of filament used in historical incandescent light bulbs before tungsten became popular."@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfIronMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfIronMaterial
 mo:PortionOfIronMaterial rdf:type owl:Class ;
                          rdfs:subClassOf mo:PortionOfMetal ;
                          comm:acronym "FE" ;
@@ -842,7 +854,7 @@ mo:PortionOfIronMaterial rdf:type owl:Class ;
                          rdfs:label "Iron"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfManganeseMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfManganeseMaterial
 mo:PortionOfManganeseMaterial rdf:type owl:Class ;
                               rdfs:subClassOf mo:PortionOfMetal ;
                               comm:acronym "Mn" ;
@@ -850,7 +862,7 @@ mo:PortionOfManganeseMaterial rdf:type owl:Class ;
                               skos:definition "Portion of material consisting out of chemical element with the symbol Mn and atomic number 25. It is a hard brittle silvery metal, often found in minerals in combination with iron." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfMetal
+###  https://w3id.org/ODE_AM/MAO/PortionOfMetal
 mo:PortionOfMetal rdf:type owl:Class ;
                   rdfs:subClassOf comm:PortionOfMaterial ;
                   comm:definition "Opaque, fusible, ductile, and typically lustrous substances that are good conductors of electricity and heat, form cations by loss of electrons, and yield basic oxides and hydroxides"@de ;
@@ -859,7 +871,7 @@ mo:PortionOfMetal rdf:type owl:Class ;
                   skos:example "Iron"@de .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfMolybdenumMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfMolybdenumMaterial
 mo:PortionOfMolybdenumMaterial rdf:type owl:Class ;
                                rdfs:subClassOf mo:PortionOfMetal ;
                                comm:acronym "Mo" ;
@@ -867,7 +879,7 @@ mo:PortionOfMolybdenumMaterial rdf:type owl:Class ;
                                skos:definition "Portion of material consisting out of chemical element with the symbol Mo and atomic number 42" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfNickelMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfNickelMaterial
 mo:PortionOfNickelMaterial rdf:type owl:Class ;
                            rdfs:subClassOf mo:PortionOfMetal ;
                            comm:acronym "Ni" ;
@@ -876,7 +888,7 @@ mo:PortionOfNickelMaterial rdf:type owl:Class ;
                            rdfs:label "Nickel"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfPolyactideMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfPolyactideMaterial
 mo:PortionOfPolyactideMaterial rdf:type owl:Class ;
                                rdfs:subClassOf mo:PortionOfThermoplastMaterial ;
                                comm:acronym "PLA" ;
@@ -884,7 +896,7 @@ mo:PortionOfPolyactideMaterial rdf:type owl:Class ;
                                skos:definition "Portion of thermoplastic polyester with backbone formula (C3H4O2)n or [–C(CH3)HC(=O)O–]n, formally obtained by condensation" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfPolycarbonateMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfPolycarbonateMaterial
 mo:PortionOfPolycarbonateMaterial rdf:type owl:Class ;
                                   rdfs:subClassOf mo:PortionOfThermoplastMaterial ;
                                   comm:acronym "PC" ;
@@ -892,12 +904,12 @@ mo:PortionOfPolycarbonateMaterial rdf:type owl:Class ;
                                   skos:definition "Portion of thermoplastic polymers containing carbonate groups in their chemical structures" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfPolymer
+###  https://w3id.org/ODE_AM/MAO/PortionOfPolymer
 mo:PortionOfPolymer rdf:type owl:Class ;
                     rdfs:subClassOf comm:PortionOfMaterial .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfPowder
+###  https://w3id.org/ODE_AM/MAO/PortionOfPowder
 mo:PortionOfPowder rdf:type owl:Class ;
                    rdfs:subClassOf comm:PortionOfMaterial ;
                    comm:definition_source "https://www.collinsdictionary.com/de/worterbuch/englisch/powder" ;
@@ -905,7 +917,7 @@ mo:PortionOfPowder rdf:type owl:Class ;
                    skos:definition "Portion of Material that consists of many tiny particles of a solid substance" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfShieldingGas
+###  https://w3id.org/ODE_AM/MAO/PortionOfShieldingGas
 mo:PortionOfShieldingGas rdf:type owl:Class ;
                          rdfs:subClassOf comm:PortionOfMaterial ;
                          comm:definition_source "https://en.wikipedia.org/wiki/Shielding_gas" ;
@@ -913,7 +925,7 @@ mo:PortionOfShieldingGas rdf:type owl:Class ;
                          skos:definition "Portion of inert or semi-inert gases that are commonly used in several welding processes to protect the welding area from oxygon and water vapour" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfSiliconMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfSiliconMaterial
 mo:PortionOfSiliconMaterial rdf:type owl:Class ;
                             rdfs:subClassOf comm:PortionOfMaterial ;
                             comm:acronym "Si" ;
@@ -922,12 +934,12 @@ mo:PortionOfSiliconMaterial rdf:type owl:Class ;
                             rdfs:label "Silicon"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfSteelMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfSteelMaterial
 mo:PortionOfSteelMaterial rdf:type owl:Class ;
                           rdfs:subClassOf mo:PortionOfMetal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfThermoplastMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfThermoplastMaterial
 mo:PortionOfThermoplastMaterial rdf:type owl:Class ;
                                 rdfs:subClassOf mo:PortionOfPolymer ;
                                 comm:definition """A plastic that repeatedly can be softened by
@@ -940,7 +952,7 @@ extrusion."""@en ;
                                            "Thermoplast"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PortionOfThermosetMaterial
+###  https://w3id.org/ODE_AM/MAO/PortionOfThermosetMaterial
 mo:PortionOfThermosetMaterial rdf:type owl:Class ;
                               rdfs:subClassOf mo:PortionOfPolymer ;
                               comm:definition """A class of polymers that, when cured using heat,
@@ -954,7 +966,7 @@ infusible and insoluble material"""@en ;
                               skos:example "Epoxy"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PowderManufacturer
+###  https://w3id.org/ODE_AM/MAO/PowderManufacturer
 mo:PowderManufacturer rdf:type owl:Class ;
                       rdfs:subClassOf comm:CommercialOrganization ;
                       rdfs:label "Powder Manufacturer"@en ;
@@ -962,7 +974,7 @@ mo:PowderManufacturer rdf:type owl:Class ;
                       skos:example "m4p"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Press
+###  https://w3id.org/ODE_AM/MAO/Press
 mo:Press rdf:type owl:Class ;
          rdfs:subClassOf comm:Tool ;
          comm:definition "Machine tool that changes the shape of a work-piece by the application of pressure"@en ;
@@ -970,7 +982,7 @@ mo:Press rdf:type owl:Class ;
          rdfs:label "Press"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#RRatio
+###  https://w3id.org/ODE_AM/MAO/RRatio
 mo:RRatio rdf:type owl:Class ;
           rdfs:subClassOf comm:RatioMeasurementInformationContentEntity ;
           comm:alternative_label "RFactor" ;
@@ -979,7 +991,7 @@ mo:RRatio rdf:type owl:Class ;
           skos:definition "In fatigue analysis, the \"R-ratio\" or \"R-factor\" refers to the ratio of the minimum stress to the maximum stress experienced by a material during a fatigue loading cycle. It is typically denoted as R=stress_min/stress_max." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#RelativeDensity
+###  https://w3id.org/ODE_AM/MAO/RelativeDensity
 mo:RelativeDensity rdf:type owl:Class ;
                    rdfs:subClassOf mo:MaterialCharacteristic ;
                    comm:definition "The ratio of the density (mass of a unit volume) of a substance to the density of a given reference material."^^rdfs:Literal ;
@@ -988,21 +1000,21 @@ mo:RelativeDensity rdf:type owl:Class ;
                    rdfs:label "Relative Density"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#RemainUnbroken
+###  https://w3id.org/ODE_AM/MAO/RemainUnbroken
 mo:RemainUnbroken rdf:type owl:Class ;
                   rdfs:subClassOf comm:StasisOfDisposition ;
                   rdfs:comment "Bearing the quality of being unbroken and undamaged"@en ;
                   rdfs:label "Remain unbroken"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SQLDatabase
+###  https://w3id.org/ODE_AM/MAO/SQLDatabase
 mo:SQLDatabase rdf:type owl:Class ;
                rdfs:subClassOf comm:Database ;
                rdfs:label "SQL Database"@en ;
                skos:definition "An SQL database is a structured collection of data that uses a schema to define and manipulate data using the Structured Query Language (SQL)."@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#STLFile
+###  https://w3id.org/ODE_AM/MAO/STLFile
 mo:STLFile rdf:type owl:Class ;
            rdfs:subClassOf comm:InformationBearingArtifact ;
            comm:definition_source "VDI 3405" ;
@@ -1010,7 +1022,7 @@ mo:STLFile rdf:type owl:Class ;
            skos:definition "The STL file format (surface tessellation language, or stereolithography) has established itself as a quasi-industrial standard for transferring data in additive manufacturing processes. It is a system neutral data format for exchanging pure geometric data. The boundary surfaces of volume models are described by triangles (planar facets) and their normal vectors. STL datasets can be stored using either ASCII or binary representations. The binary format is preferable because the volume of data is greatly reduced. The STL data format is not recommended for exchanging data between CAD/CAM systems because the geometry is irreversibly facetted." .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SemiFinishedPart
+###  https://w3id.org/ODE_AM/MAO/SemiFinishedPart
 mo:SemiFinishedPart rdf:type owl:Class ;
                     rdfs:subClassOf comm:Artifact ;
                     comm:alternative_label "Workpiece"@en ;
@@ -1020,7 +1032,7 @@ mo:SemiFinishedPart rdf:type owl:Class ;
                                "Semi Finished Part"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SpecificHeatCapacity
+###  https://w3id.org/ODE_AM/MAO/SpecificHeatCapacity
 mo:SpecificHeatCapacity rdf:type owl:Class ;
                         rdfs:subClassOf mo:MaterialCharacteristic ;
                         comm:definition "The specific heat capacity is defined as the quantity of heat (J) absorbed per unit mass (kg) of the material when its temperature increases 1 K (or 1 °C), and its units are J/(kg K) or J/(kg °C)." ;
@@ -1029,7 +1041,7 @@ mo:SpecificHeatCapacity rdf:type owl:Class ;
                         rdfs:label "Specific Heat Capacity"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SpecimenID
+###  https://w3id.org/ODE_AM/MAO/SpecimenID
 mo:SpecimenID rdf:type owl:Class ;
               rdfs:subClassOf comm:CodeIdentifier ;
               comm:alternative_label "Non Unique Specimen ID"^^rdfs:Literal ;
@@ -1038,7 +1050,7 @@ mo:SpecimenID rdf:type owl:Class ;
               skos:example "\"2\" or \"8\""^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Standard
+###  https://w3id.org/ODE_AM/MAO/Standard
 mo:Standard rdf:type owl:Class ;
             rdfs:subClassOf comm:DirectiveInformationContentEntity ;
             comm:alternative_label "Norm"@de ;
@@ -1047,7 +1059,7 @@ mo:Standard rdf:type owl:Class ;
             skos:example "DIN 50100"^^rdfs:Literal .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#StasisOfTemperature
+###  https://w3id.org/ODE_AM/MAO/StasisOfTemperature
 mo:StasisOfTemperature rdf:type owl:Class ;
                        rdfs:subClassOf comm:StasisOfQuality ;
                        comm:definition "A Stasis of Quality that holds during a Temporal Interval when an object maintains the same Temperature." ;
@@ -1055,7 +1067,7 @@ mo:StasisOfTemperature rdf:type owl:Class ;
                        rdfs:label "Stasis of temperature"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Stress
+###  https://w3id.org/ODE_AM/MAO/Stress
 mo:Stress rdf:type owl:Class ;
           rdfs:subClassOf obo:ProcessProfile ;
           comm:definition "stress, in physical sciences and engineering, force per unit area within materials that arises from externally applied forces, uneven heating, or permanent deformation and that permits an accurate description and prediction of elastic, plastic, and fluid behaviour. A stress is expressed as a quotient of a force divided by an area." ;
@@ -1064,7 +1076,7 @@ mo:Stress rdf:type owl:Class ;
                      "Stress"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SurfaceArea
+###  https://w3id.org/ODE_AM/MAO/SurfaceArea
 mo:SurfaceArea rdf:type owl:Class ;
                rdfs:subClassOf obo:Quality ;
                comm:SI_unit_symbol "'comm:Square Meter Measurement Unit'" ;
@@ -1072,7 +1084,7 @@ mo:SurfaceArea rdf:type owl:Class ;
                skos:definition "A quality that measures  the total area that the surface of an object occupies" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TensileCharacteristic
+###  https://w3id.org/ODE_AM/MAO/TensileCharacteristic
 mo:TensileCharacteristic rdf:type owl:Class ;
                          rdfs:subClassOf mo:MaterialCharacteristic ;
                          comm:definition "Behavior and response of a material or structure under applied tensile forces, determining its ability to resist stretching or elongation and withstand tensile loads before undergoing failure or fracturing." ;
@@ -1080,7 +1092,7 @@ mo:TensileCharacteristic rdf:type owl:Class ;
                          skos:example "Tensile Modulus"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TensileModulus
+###  https://w3id.org/ODE_AM/MAO/TensileModulus
 mo:TensileModulus rdf:type owl:Class ;
                   rdfs:subClassOf mo:TensileCharacteristic ;
                   comm:alternative_label "modulus of elasticity in tension"^^rdfs:Literal ;
@@ -1090,7 +1102,7 @@ mo:TensileModulus rdf:type owl:Class ;
                   rdfs:label "Tensile Modulus"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TensileStrength
+###  https://w3id.org/ODE_AM/MAO/TensileStrength
 mo:TensileStrength rdf:type owl:Class ;
                    rdfs:subClassOf mo:TensileCharacteristic ;
                    comm:definition "Maximum stress that a material can withstand while being stretched or pulled before breaking"^^rdfs:Literal ;
@@ -1099,7 +1111,7 @@ mo:TensileStrength rdf:type owl:Class ;
                    rdfs:label "Tensile Strength"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TensileTestSpecimen
+###  https://w3id.org/ODE_AM/MAO/TensileTestSpecimen
 mo:TensileTestSpecimen rdf:type owl:Class ;
                        owl:equivalentClass [ owl:intersectionOf ( mo:TestSpecimen
                                                                   [ rdf:type owl:Restriction ;
@@ -1114,21 +1126,21 @@ mo:TensileTestSpecimen rdf:type owl:Class ;
                        skos:definition "Artifact designed to be used in a tensile test to determine characteristics about the material it's made of" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TenthPercentile
+###  https://w3id.org/ODE_AM/MAO/TenthPercentile
 mo:TenthPercentile rdf:type owl:Class ;
                    rdfs:subClassOf mo:Percentile ;
                    comm:definition "Represents the value below which 90% of the data points in a dataset fall, indicating that 10% of the values are lower than or equal to this specific value."^^rdfs:Literal ;
                    rdfs:label "10th Percentile" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#TestSpecimen
+###  https://w3id.org/ODE_AM/MAO/TestSpecimen
 mo:TestSpecimen rdf:type owl:Class ;
                 rdfs:subClassOf comm:Artifact ;
                 comm:definition "Representative sample or component used in experimental testing to assess and evaluate the properties, behavior, or performance of materials, products, or systems under specific conditions." ;
                 rdfs:label "Specimen"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#ThermalDiffusivity
+###  https://w3id.org/ODE_AM/MAO/ThermalDiffusivity
 mo:ThermalDiffusivity rdf:type owl:Class ;
                       rdfs:subClassOf mo:MaterialCharacteristic ;
                       comm:SI_unit_label "m^2/s" ;
@@ -1136,7 +1148,7 @@ mo:ThermalDiffusivity rdf:type owl:Class ;
                       rdfs:label "Thermal Diffusivity"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Unbroken
+###  https://w3id.org/ODE_AM/MAO/Unbroken
 mo:Unbroken rdf:type owl:Class ;
             rdfs:subClassOf obo:Disposition ;
             comm:alternative_label "Intact"@en ;
@@ -1144,7 +1156,7 @@ mo:Unbroken rdf:type owl:Class ;
             skos:definition "Not been broken or damaged, maintaining its complete or original state without interruption or weakening"@en .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#Volume
+###  https://w3id.org/ODE_AM/MAO/Volume
 mo:Volume rdf:type owl:Class ;
           rdfs:subClassOf obo:Quality ;
           comm:SI_unit_label "V" ;
@@ -1157,66 +1169,66 @@ mo:Volume rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#GigapascalMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/GigapascalMeasurementUnit
 mo:GigapascalMeasurementUnit rdf:type owl:NamedIndividual ,
                                       comm:MeasurementUnitOfPressure ;
                              comm:SI_unit_symbol "GPa" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#JoulePerGramPerKelvinMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/JoulePerGramPerKelvinMeasurementUnit
 mo:JoulePerGramPerKelvinMeasurementUnit rdf:type owl:NamedIndividual ,
                                                  mo:MeasurementUnitOfSpecificHeatCapactity ;
                                         comm:SI_unit_symbol "J/(g/K)" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#JoulePerKilogramPerKelvinMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/JoulePerKilogramPerKelvinMeasurementUnit
 mo:JoulePerKilogramPerKelvinMeasurementUnit rdf:type owl:NamedIndividual ,
                                                      mo:MeasurementUnitOfSpecificHeatCapactity ;
                                             comm:SI_unit_symbol "J/(kg/K)" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MegapascalMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/MegapascalMeasurementUnit
 mo:MegapascalMeasurementUnit rdf:type owl:NamedIndividual ,
                                       comm:MeasurementUnitOfPressure ;
                              comm:SI_unit_symbol "MPa" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MicrometerMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/MicrometerMeasurementUnit
 mo:MicrometerMeasurementUnit rdf:type owl:NamedIndividual ,
                                       comm:MeasurementUnitOfLength ;
                              comm:SI_unit_symbol "um" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#MillimeterPerSecondMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/MillimeterPerSecondMeasurementUnit
 mo:MillimeterPerSecondMeasurementUnit rdf:type owl:NamedIndividual ,
                                                comm:MeasurementUnitOfSpeed ;
                                       comm:SI_unit_symbol "mm/s" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#NETZSCH_DSC_204F1_Phoenix_IGCV
+###  https://w3id.org/ODE_AM/MAO/NETZSCH_DSC_204F1_Phoenix_IGCV
 mo:NETZSCH_DSC_204F1_Phoenix_IGCV rdf:type owl:NamedIndividual ,
                                            mo:NETZSCHDSC204F1Phoenix .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#PercentMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/PercentMeasurementUnit
 mo:PercentMeasurementUnit rdf:type owl:NamedIndividual ,
                                    comm:MeasurementUnit ;
                           comm:SI_unit_symbol "%" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SecondsPerFiftyGrams
+###  https://w3id.org/ODE_AM/MAO/SecondsPerFiftyGrams
 mo:SecondsPerFiftyGrams rdf:type owl:NamedIndividual ,
                                  comm:MeasurementUnitOfMassFlowRate ;
                         comm:SI_unit_symbol "s/50g" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SquareMeterPerSecondMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/SquareMeterPerSecondMeasurementUnit
 mo:SquareMeterPerSecondMeasurementUnit rdf:type owl:NamedIndividual ,
                                                 mo:MeasurementUnitOfThermalDiffusivity ;
                                        comm:SI_unit_symbol "m^2/s" .
 
 
-###  http://www.semanticweb.org/bjarsch/ontologies/2021/9/ManufacturingOntology#SquareMillimeterPerSecondMeasurementUnit
+###  https://w3id.org/ODE_AM/MAO/SquareMillimeterPerSecondMeasurementUnit
 mo:SquareMillimeterPerSecondMeasurementUnit rdf:type owl:NamedIndividual ,
                                                      mo:MeasurementUnitOfThermalDiffusivity ;
                                             comm:SI_unit_symbol "mm^2/s" .
