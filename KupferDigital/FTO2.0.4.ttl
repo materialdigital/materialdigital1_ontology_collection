@@ -1,0 +1,1351 @@
+@prefix csvw: <https://w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fto: <https://gitlab.com/kupferdigital/process-graphs/lcf-test/> .
+@prefix ns1: <http://www.w3.org/ns/prov#> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix prov: <https://w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfs:label a owl:AnnotationProperty .
+
+xsd:string a rdfs:Datatype .
+
+ns3:definition a owl:AnnotationProperty .
+
+ns1:actedOnBehalfOf a owl:ObjectProperty .
+
+ns1:value a owl:DatatypeProperty .
+
+fto: a owl:Ontology ;
+    dcterms:biblographicCitation "Hossein Beygi Nasrabadi. (2024.01.15) Fatigue Test Ontology (FTO). Version 2.0.4, www.gitlab.com/kupferdigital/process-graphs/lcf-test" ;
+    dcterms:created "2024.01.15" ;
+    dcterms:creator "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+    dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+    dcterms:title "Fatigue Test Ontology (FTO)" ;
+    rdfs:comment "Fatigue Test Ontology (FTO) has developed for representing the fatigue testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 12106 standard.",
+        "KuferDigital project (www.materialdigital.de/project/1)" ;
+    owl:imports "https://raw.githubusercontent.com/materialdigital/core-ontology/main/pmd_core.ttl" ;
+    owl:versionInfo "2.0.4 (PROV, PMDco)" .
+
+fto:AxialStrain a owl:Class ;
+    rdfs:label "Axial Strain" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "linear strain in the direction of the applied force" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:Cycle a owl:Class ;
+    rdfs:label "Cycle" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "smallest segment of the strain-time function that is repeated periodically" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:ElasticStrain a owl:Class ;
+    rdfs:label "Elastic Strain" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "elastic component of a total strain" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:ElectroMechanicalActuator a owl:Class ;
+    rdfs:label "Electro-Mechanical Actuator" ;
+    rdfs:subClassOf fto:Actuator ;
+    ns3:definition "devices that convert electric energy into mechanical force in such a way as to execute work, mostly moving an object or a device" .
+
+fto:EngineeringStrain a owl:Class ;
+    rdfs:label "Engineering Strain" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "axial strain calculated as the change in length divided by the original length" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:EngineeringStress a owl:Class ;
+    rdfs:label "Engineering Stress" ;
+    rdfs:subClassOf pmd:Stress ;
+    ns3:definition "instantaneous force divided by the initial cross-sectional area of the gauge length" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:FailureTime a owl:Class ;
+    rdfs:label "Time To Failure" ;
+    rdfs:subClassOf pmd:Time ;
+    ns3:definition "time duration required to obtain the number of cycles, Nf" ;
+    pmd:definitionSource "ISO 17140:2014" .
+
+fto:FatigueTestExperiment a owl:NamedIndividual,
+        fto:FatigueTest ;
+    pmd:characteristic fto:Laboratory_,
+        fto:TestDate,
+        fto:TestOperator_,
+        fto:TestStandard ;
+    pmd:executedBy fto:FatigueTestingMachine ;
+    pmd:input fto:FatigueTestPiece ;
+    pmd:output fto:FracturedTestPiece,
+        fto:TestDataFile ;
+    pmd:process fto:FatigueTestMeasuringProcess .
+
+fto:FlatSheet a owl:Class ;
+    rdfs:label "Flat-Sheet" ;
+    rdfs:subClassOf pmd:GeometryShape ;
+    ns3:definition "sheets with two plane, substantially parallel surfaces" ;
+    pmd:definitionSource "ISO 7823-2:2003" .
+
+fto:ForceCapicity a owl:Class ;
+    rdfs:label "Force Capacity" ;
+    rdfs:subClassOf pmd:Force ;
+    ns3:definition "Force capacity refers to the fact that the machine must be able to generate enough force to fracture the specimen." .
+
+fto:ForceControlledFatigueTest a owl:Class ;
+    rdfs:label "Force-Controlled Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns3:definition "conducting axial, constant-amplitude, force-controlled, cyclic fatigue tests on specimens of a metal for the sake of generating fatigue-life data (i.e. stress vs. cycles to failure) for material characterization." ;
+    pmd:definitionSource "ISO 1099:2017" .
+
+fto:Fracture a owl:Class ;
+    rdfs:label "Fracture" ;
+    rdfs:subClassOf fto:Failure ;
+    ns3:definition "natural fractures in a formation resulting from external stress, usually being associated with a displacement" ;
+    pmd:definitionSource "ISO 18875:2015" .
+
+fto:Frequency a owl:Class ;
+    rdfs:label "Frequency" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "number of force or strain cycles per unit time applied to the test piece during fatigue testing" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:GrindingProcess a owl:Class ;
+    rdfs:label "Grinding Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "Grinding is the process of removing the surface of a hard material using a wheel made from or covered in hard grit." ;
+    pmd:definitionSource "Collins dictionary" .
+
+fto:GrippingDevice a owl:Class ;
+    rdfs:label "Gripping Device" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    ns3:definition "device to hold a test specimen and to transfer a uniaxial tensile force to a test specimen during the test" ;
+    pmd:definitionSource "ISO 22215:2006" .
+
+fto:HandelingProcess a owl:Class ;
+    rdfs:label "Handling Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "a process by which something is handled in a commercial transaction." .
+
+fto:HighCycleFatigueTest a owl:Class ;
+    rdfs:label "High-Cycle Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns3:definition "fatigue test carried out in the region where the stress behaviour is dominant and fatigue life is relatively longer" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:Humidity a owl:Class ;
+    rdfs:label "Humidity" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "general term for the amount of water vapour in the air" ;
+    pmd:definitionSource "ISO/TR 18931:2001" .
+
+fto:HydraulicActuator a owl:Class ;
+    rdfs:label "Hydraulic Actuator" ;
+    rdfs:subClassOf fto:Actuator ;
+    ns3:definition "cylindrical tube and piston assemblies that utilize hydraulic power to generate linear, rotary, or oscillatory motion" .
+
+fto:ISO12106FatigueTest a owl:Class ;
+    rdfs:label "ISO 12106:2017 Fatigue Test" ;
+    rdfs:subClassOf fto:StrainControlledFatigueTest ;
+    ns3:definition "Fatigue testing of metallic materials by an axial-strain-controlled method according to ISO 12106:2017 standard" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:LowCycleFatigueTest a owl:Class ;
+    rdfs:label "Low-Cycle Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns3:definition "fatigue test carried out in the region where the cyclic plastic strain behaviour is dominant and fatigue life is relatively shorter" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:MachiningProcess a owl:Class ;
+    rdfs:label "Machining Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "Machining is the process of cutting, shaping, or removing material from a workpiece using a machine tool." ;
+    pmd:definitionSource "Collins dictionary" .
+
+fto:MarkingProcess a owl:Class ;
+    rdfs:label "Marking Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "The action of putting a mark on samples" .
+
+fto:Mean a owl:Class ;
+    rdfs:label "Mean" ;
+    rdfs:subClassOf fto:MathematicsValueObject ;
+    ns3:definition "one-half of the algebraic sum of the maximum and minimum values of a variable" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:Number a owl:Class ;
+    rdfs:subClassOf fto:MathematicsValueObject .
+
+fto:PeakStress a owl:Class ;
+    rdfs:label "Peak Stress" ;
+    rdfs:subClassOf pmd:Stress ;
+    ns3:definition "highest stress in the region or component under consideration" ;
+    pmd:definitionSource "ISO 13624-1:2009" .
+
+fto:PlasticStrain a owl:Class ;
+    rdfs:label "Plastic Strain" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "plastic strain component of a controlled strain" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:PolishingProcess a owl:Class ;
+    rdfs:label "Polishing Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "make the surface of (something) smooth and shiny by rubbing it." .
+
+fto:Range a owl:Class ;
+    rdfs:label "Range" ;
+    rdfs:subClassOf fto:MathematicsValueObject ;
+    ns3:definition "algebraic difference between the maximum and minimum values of a variable" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:ResidualStress a owl:Class ;
+    rdfs:label "Residual Stress" ;
+    rdfs:subClassOf pmd:Stress ;
+    ns3:definition "stress that remains in a structure after processing, fabrication, assembly, testing or operation" ;
+    pmd:definitionSource "ISO 14623:2003" .
+
+fto:RoundBar a owl:Class ;
+    rdfs:label "Round Bar" ;
+    rdfs:subClassOf pmd:GeometryShape ;
+    ns3:definition "bar having a circular cross section of diameter generally 8 mm or over" ;
+    pmd:definitionSource "ISO 6929:2013" .
+
+fto:SamplingProcess a owl:Class ;
+    rdfs:label "Sampling Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "the action or process of taking samples of something for analysis." .
+
+fto:StoringProcess a owl:Class ;
+    rdfs:label "Storing Process" ;
+    rdfs:subClassOf fto:SpecimenPreparationProcess ;
+    ns3:definition "the action or method of storing something for future use." .
+
+fto:StrainAmplitude a owl:Class ;
+    rdfs:label "Strain Amplitude" ;
+    rdfs:subClassOf fto:Amplitude ;
+    ns3:definition "one-half of the algebraic difference between the maximum strain and the minimum strain in the strain cycle" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:StrainRange a owl:Class ;
+    rdfs:label "Strain Range" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "algebraic difference between the maximum and minimum values of strain" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:StressAmplitude a owl:Class ;
+    rdfs:label "Stress Amplitude" ;
+    rdfs:subClassOf fto:Amplitude ;
+    ns3:definition "one-half of the algebraic difference between the maximum stress and the minimum stress in the stress cycle" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:StressStrainCurve a owl:Class ;
+    rdfs:subClassOf pmd:Image .
+
+fto:ThermoMechanicalFatigueTest a owl:Class ;
+    rdfs:label "Thermo Mechanical Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns3:definition "fatigue test under the conditions where cyclic, theoretically uniform temperatures within the test section and strain fields are externally imposed, simultaneously varied and controlled" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:TransitionRadious a owl:Class ;
+    rdfs:label "Transition Radius" ;
+    rdfs:subClassOf pmd:Radius ;
+    ns3:definition "from parallel length into the grip end of the test specimen" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:TrueStrain a owl:Class ;
+    rdfs:label "True Strain" ;
+    rdfs:subClassOf fto:Strain ;
+    ns3:definition "natural logarithm of the ratio of an instantaneous length to its original length in the direction of the applied force up to the onset of necking" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:TrueStress a owl:Class ;
+    rdfs:label "True Stress" ;
+    rdfs:subClassOf pmd:Stress ;
+    ns3:definition "instantaneous force divided by the instantaneous cross-sectional area of the gauge length" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:UniaxialTensionCompressionMachine a owl:Class ;
+    rdfs:label "Uniaxial Tension-Compression Machine" ;
+    rdfs:subClassOf pmd:TestingMachine ;
+    ns3:definition "machine for smooth startup of fatigue test with no backlash when passing through zero stress." ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+prov:hasAssociatedWith a owl:ObjectProperty .
+
+prov:influenced a owl:ObjectProperty .
+
+pmd:Elongation a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Furnace a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:Grips a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:MaximumForce a owl:Class ;
+    rdfs:subClassOf pmd:Force .
+
+pmd:Roughness a owl:Class .
+
+pmd:Rp02 a owl:Class ;
+    rdfs:subClassOf pmd:ProofStrengthPlasticExtension .
+
+pmd:Specimen a owl:Class ;
+    rdfs:subClassOf pmd:Sample .
+
+pmd:TemperatureChangingProcess a owl:Class ;
+    rdfs:subClassOf pmd:ConditioningProcess .
+
+pmd:Thermocouple a owl:Class ;
+    rdfs:subClassOf pmd:MeasuringDevice .
+
+pmd:characteristic a owl:ObjectProperty .
+
+pmd:component a owl:ObjectProperty .
+
+pmd:definitionSource a owl:AnnotationProperty .
+
+pmd:executedBy a owl:ObjectProperty .
+
+pmd:hasFunction a owl:ObjectProperty .
+
+pmd:hasIdentifier a owl:ObjectProperty .
+
+pmd:input a owl:ObjectProperty .
+
+pmd:nextProcess a owl:ObjectProperty .
+
+pmd:output a owl:ObjectProperty .
+
+pmd:participant a owl:ObjectProperty .
+
+pmd:process a owl:ObjectProperty .
+
+pmd:resource a owl:ObjectProperty .
+
+pmd:subordinateProcess a owl:ObjectProperty .
+
+pmd:unit a owl:ObjectProperty .
+
+ns2:Unit a owl:Class .
+
+ns1:Activity a owl:Class .
+
+ns1:Person a owl:Class ;
+    rdfs:subClassOf ns1:Agent .
+
+ns1:SoftwareAgent a owl:Class ;
+    rdfs:subClassOf ns1:Agent .
+
+fto:Atmosphere a owl:Class ;
+    rdfs:label "Atmosphere" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "ambient conditions defined by the parameters of temperature and relative humidity" ;
+    pmd:definitionSource "ISO 18454:2018" .
+
+fto:CollibrationProcess a owl:Class ;
+    rdfs:label "Calibration Process" ;
+    rdfs:subClassOf pmd:Process ;
+    ns3:definition "set of operations that establish, under specified conditions, the relationship between values indicated by a measuring instrument or measuring system, or values represented by a material measure, and the corresponding known values of a reference standard" ;
+    pmd:definitionSource "ISO 22716:2007" .
+
+fto:CycleNumber a owl:Class ;
+    rdfs:label "Cycle Number" ;
+    rdfs:subClassOf fto:MathematicsValueObject ;
+    ns3:definition "number of cycles of stress in fatigue test" ;
+    pmd:definitionSource "ISO 22214:2006" .
+
+fto:CycleTime a owl:NamedIndividual,
+        fto:SignalPeriod,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    ns1:value "CycleTime"^^xsd:string ;
+    pmd:unit pmd:PixelUnit .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10%> a owl:NamedIndividual,
+        fto:FatigueLife,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns1:value "FatigueLife"^^xsd:string ;
+    pmd:input fto:CalculateFatigueTestUncertainity,
+        fto:DeterminationOfFatigueStrengthCoefficient ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:CycleToFracture a owl:NamedIndividual,
+        fto:FatigueLife,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns1:value "FinalCycle"^^xsd:string ;
+    pmd:input fto:CalculateFatigueTestUncertainity ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:CyclicStrainHardeningExponentFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:CyclicStrengthCoefficientFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:CyclicYieldStrength a owl:Class ;
+    rdfs:label "Cyclic Yield Strength" ;
+    rdfs:subClassOf pmd:YieldStrength ;
+    ns3:definition "0,2 % offset is typically used" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:CyclicYieldStrengthFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:CyclicYieldStrength_ a owl:NamedIndividual,
+        fto:CyclicYieldStrength,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns1:value "CyclicYieldStrength"^^xsd:string ;
+    pmd:resource fto:RowDataTable_ ;
+    pmd:unit pmd:PixelUnit .
+
+fto:DataAcquisitionDevice a owl:Class ;
+    rdfs:label "Data Acquisition Device" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    ns3:definition "system for storing and/or providing permanent copies of test information" ;
+    pmd:definitionSource "ISO 13533:2001" .
+
+fto:DataAcquisitorID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "DataAcquisitorName&Manufactore&ID"^^xsd:string .
+
+fto:DataAcquisitor_ a owl:NamedIndividual,
+        fto:DataAcquisitionDevice ;
+    pmd:hasIdentifier fto:DataAcquisitorID .
+
+fto:Displacement a owl:Class ;
+    rdfs:label "Displacement" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "axial movement of the pile head measured during testing" ;
+    pmd:definitionSource "ISO 22477-4:2018" .
+
+fto:ExtensometerGaugeLength a owl:NamedIndividual,
+        pmd:ExtensometerGaugeLength,
+        pmd:PrimaryData,
+        pmd:SetPoint ;
+    ns1:value "ExtensometerGaugeLength"^^xsd:string ;
+    pmd:unit pmd:PixelUnit .
+
+fto:ExtensometerID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "ExtensometerName&Manufactore&ID"^^xsd:string .
+
+fto:Failure a owl:Class ;
+    rdfs:label "Failure" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "permanent deformation resulting from fracture; plastic deformation or loosening beyond the ultimate displacement that would render the spinal implant assembly ineffective or unable to adequately resist load" ;
+    pmd:definitionSource "ISO 12189:2008" .
+
+fto:FatigueDuctilityCoefficientFunction a owl:NamedIndividual,
+        pmd:Algorithm .
+
+fto:FatigueDuctilityExponentFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:FatigueStrengthCoefficientFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:FatigueStrengthExponentFunction a owl:NamedIndividual,
+        pmd:Algorithm .
+
+fto:FatigueTestControllingMode a owl:NamedIndividual,
+        fto:FatigueTest,
+        pmd:Metadata ;
+    ns1:value "StrainControlledFatigueTest"^^xsd:string .
+
+fto:FatigueTestMachineID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "MachineName&Manufactore&ID"^^xsd:string .
+
+fto:FatigueTestMeasurementAnalysis a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    prov:hasAssociatedWith fto:MachineSoftware_ ;
+    pmd:subordinateProcess fto:CalculateFatigueTestUncertainity,
+        fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfCyclicYieldStrength,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStrainFatigueLifeCurve,
+        fto:PlottingStressStrainHystersisLoopCurve,
+        fto:StrainCalculation,
+        fto:StressCalculation .
+
+fto:FatigueTestMeasuringProcess a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:executedBy fto:FatigueTestingMachine ;
+    pmd:nextProcess fto:FatigueTestMeasurementAnalysis ;
+    pmd:participant fto:FatigueTestPiece ;
+    pmd:subordinateProcess fto:AccuracyOfTestingApparatus,
+        fto:ChoiceOfTheMethodAndRate,
+        fto:DeterminationOfOriginalCrossSectionArea,
+        fto:Gripping,
+        fto:Loading,
+        fto:MarkingTheOriginalGaugeLength,
+        fto:MeasuringFracturedTestPiece,
+        fto:RecordingEnvironmentConditions,
+        fto:SettingTheForceZeroPoint .
+
+fto:FatigueTestUncertainity a owl:NamedIndividual,
+        fto:Uncertainity,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns1:value "FatigueTestUncertainity"^^xsd:string .
+
+fto:FatigueTestUncertainityFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:ForceTransducer a owl:Class ;
+    rdfs:label "Force Transducer" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    ns3:definition "device used to determine mass by measuring the force applied either by tension or pressure" ;
+    pmd:definitionSource "ISO 6016:2008" .
+
+fto:ForceTransducerID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "ForceTransducerName&Manufactore&ID"^^xsd:string .
+
+fto:ForceTransducer_ a owl:NamedIndividual,
+        fto:ForceTransducer ;
+    pmd:hasIdentifier fto:ForceTransducerID .
+
+fto:FractureLocation a owl:NamedIndividual,
+        pmd:Location,
+        pmd:Measurement,
+        pmd:Metadata ;
+    ns1:value "FractureLocation"^^xsd:string .
+
+fto:FractureSupplimentaryNote a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:Note,
+        pmd:PrimaryData ;
+    ns1:value "FractureSupplimentaryNote"^^xsd:string .
+
+fto:MaterialProvider a owl:NamedIndividual,
+        ns1:Organization,
+        pmd:Metadata ;
+    ns1:value "MaterialProvider"^^xsd:string .
+
+fto:Maximum a owl:Class ;
+    rdfs:label "Maximum" ;
+    rdfs:subClassOf fto:Extremum ;
+    ns3:definition "greatest algebraic value of a variable within one cycle" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:MaximumStrain a owl:NamedIndividual,
+        fto:Maximum,
+        fto:Strain,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    ns1:value "MaximumStrain"^^xsd:string ;
+    pmd:input fto:CalculateFatigueTestUncertainity ;
+    pmd:unit pmd:PixelUnit .
+
+fto:Minimum a owl:Class ;
+    rdfs:label "Minimum" ;
+    rdfs:subClassOf fto:Extremum ;
+    ns3:definition "least algebraic value of a variable within one cycle" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:MinimumStrain a owl:NamedIndividual,
+        fto:Minimum,
+        fto:Strain,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    ns1:value "MinimumStrain"^^xsd:string ;
+    pmd:input fto:CalculateFatigueTestUncertainity ;
+    pmd:unit pmd:PixelUnit .
+
+fto:ModuludOfElasticityFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:ModulusOfElasticity a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:ModulusOfElasticity,
+        pmd:SecondaryData ;
+    ns1:value "ModulusOfElasticity"^^xsd:string ;
+    pmd:input fto:DeterminationOfCyclicYieldStrength ;
+    pmd:resource fto:RowDataTable_ ;
+    pmd:unit pmd:PixelUnit .
+
+fto:OriginalCrossSectionArea a owl:NamedIndividual,
+        pmd:CrossSectionArea,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    ns1:value "OriginalCrossSectionArea"^^xsd:string ;
+    pmd:input fto:StressCalculation ;
+    pmd:unit pmd:PixelUnit .
+
+fto:OriginalGaugeLength a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:OriginalGaugeLength,
+        pmd:PrimaryData ;
+    ns1:value "OriginalGaugeLength"^^xsd:string ;
+    pmd:input fto:StrainCalculation ;
+    pmd:unit pmd:PixelUnit .
+
+fto:RecordingEnvironmentConditions a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic fto:TestEnvironment,
+        fto:TestTemperature ;
+    pmd:nextProcess fto:DeterminationOfOriginalCrossSectionArea .
+
+fto:SignalPeriod a owl:Class ;
+    rdfs:label "Signal Period" ;
+    rdfs:subClassOf fto:TimePeriod ;
+    ns3:definition "duration of the wavelength" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:SlopOfElasticPartOfTheStressStreainCurve a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:SecondaryData,
+        pmd:SlopeOfTheElasticPart ;
+    ns1:value "SlopOfElasticPartOfTheStressStreainCurve"^^xsd:string ;
+    pmd:resource fto:RowDataTable_ ;
+    pmd:unit pmd:PixelUnit .
+
+fto:SoftwareID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "SoftwareName&Manufactore&ID"^^xsd:string .
+
+fto:StrainControlledFatigueTest a owl:Class ;
+    rdfs:label "Axial-Strain-Controlled Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns3:definition "method|of testing uniaxially deformed specimens under strain control at constant|amplitude" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:StrainFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:StrainRate a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:SetPoint,
+        pmd:StrainRate ;
+    ns1:value "StrainRate"^^xsd:string ;
+    pmd:unit pmd:PixelUnit .
+
+fto:StressFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+fto:TestCycleNumber a owl:NamedIndividual,
+        fto:CycleNumber,
+        pmd:Dataset,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    pmd:input fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient,
+        fto:PlottingStrainFatigueLifeCurve ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TestDate a owl:NamedIndividual,
+        pmd:Date,
+        pmd:Metadata ;
+    ns1:value "TestDateIdentifier"^^xsd:string .
+
+fto:TestDisplacement a owl:NamedIndividual,
+        fto:Displacement,
+        pmd:Dataset,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    pmd:input fto:StrainCalculation ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TestEnvironment a owl:NamedIndividual,
+        fto:Atmosphere,
+        pmd:Measurement,
+        pmd:Metadata ;
+    ns1:value "TestEnvironment"^^xsd:string .
+
+fto:TestPieceComposition a owl:NamedIndividual,
+        pmd:ChemicalComposition,
+        pmd:Metadata ;
+    ns1:value "TestPieceComposition"^^xsd:string .
+
+fto:TestPieceCrossSectionShape a owl:NamedIndividual,
+        pmd:GeometryShape,
+        pmd:Metadata ;
+    ns1:value "TestPieceCrossSectionShape"^^xsd:string ;
+    prov:influenced fto:DeterminationOfOriginalCrossSectionArea .
+
+fto:TestPieceHeatTreatment a owl:NamedIndividual,
+        pmd:HeatTreatmentProcess,
+        pmd:Metadata ;
+    ns1:value "TestPieceHeatTreatmentNote"^^xsd:string .
+
+fto:TestPieceID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:TestPieceName ;
+    ns1:value "TestPieceIndenter"^^xsd:string .
+
+fto:TestPieceParallelLength a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:ParallelLength ;
+    ns1:value "TestPieceParallelLength"^^xsd:string ;
+    prov:influenced fto:MarkingTheOriginalGaugeLength ;
+    pmd:unit pmd:PixelUnit .
+
+fto:TestPiecePreparation a owl:NamedIndividual,
+        fto:SpecimenPreparationProcess,
+        pmd:Metadata ;
+    ns1:value "TestPiecePreparation"^^xsd:string .
+
+fto:TestPieceSupplimentaryNote a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Note ;
+    ns1:value "TestPieceSupplimentaryNote"^^xsd:string .
+
+fto:TestPieceTotalLength a owl:NamedIndividual,
+        pmd:Length,
+        pmd:Metadata ;
+    ns1:value "TestPieceTotalLength"^^xsd:string ;
+    prov:influenced fto:MarkingTheOriginalGaugeLength ;
+    pmd:unit pmd:PixelUnit .
+
+fto:TestStandard a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Norm ;
+    ns1:value "TestStandardIdentifier"^^xsd:string .
+
+fto:TestStrain a owl:NamedIndividual,
+        fto:Strain,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    pmd:input fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStrainFatigueLifeCurve,
+        fto:PlottingStressStrainHystersisLoopCurve ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TestStress a owl:NamedIndividual,
+        pmd:SecondaryData,
+        pmd:Stress ;
+    pmd:input fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStressStrainHystersisLoopCurve ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TestTemperature a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:Metadata,
+        pmd:Temperature ;
+    ns1:value "TestTemperature"^^xsd:string ;
+    pmd:unit pmd:PixelUnit .
+
+fto:TestTime a owl:NamedIndividual,
+        pmd:Dataset,
+        pmd:Measurement,
+        pmd:PrimaryData,
+        pmd:Time ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TimePeriod a owl:Class ;
+    rdfs:subClassOf pmd:Time .
+
+fto:Uncertainity a owl:Class ;
+    rdfs:label "Uncertainty" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "non-negative parameter characterizing the dispersion of the quantity values being attributed to a measurand, based on the information used" ;
+    pmd:definitionSource "ISO 29473:2010" .
+
+fto:WaveformDevice a owl:Class ;
+    rdfs:label "Waveform" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    ns3:definition "shape of the wave when seen on an oscilloscope or digitized display" ;
+    pmd:definitionSource "ISO 26824:2022" .
+
+fto:WaveformID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:NodeName ;
+    ns1:value "WaveformName&Manufactore&ID"^^xsd:string .
+
+csvw:Table a owl:Class .
+
+pmd:Area a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ChemicalComposition a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:CrossSectionArea a owl:Class ;
+    rdfs:subClassOf pmd:Area .
+
+pmd:Date a owl:Class ;
+    rdfs:subClassOf pmd:Time .
+
+pmd:EngineeredMaterial a owl:Class ;
+    rdfs:subClassOf pmd:Object .
+
+pmd:Extensometer a owl:Class ;
+    rdfs:subClassOf pmd:MeasuringDevice .
+
+pmd:ExtensometerGaugeLength a owl:Class ;
+    rdfs:subClassOf pmd:GaugeLength .
+
+pmd:GeometryChangingProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:GripsAlignment a owl:Class ;
+    rdfs:subClassOf pmd:AssemblingProcess .
+
+pmd:HeatTreatmentProcess a owl:Class ;
+    rdfs:subClassOf pmd:ConditioningProcess .
+
+pmd:Laboratory a owl:Class ;
+    rdfs:subClassOf ns1:Organization .
+
+pmd:Location a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:MechanicalTestingProcess a owl:Class ;
+    rdfs:subClassOf pmd:AnalysingProcess .
+
+pmd:ModulusOfElasticity a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:MountingProcess a owl:Class ;
+    rdfs:subClassOf pmd:AssemblingProcess .
+
+pmd:Norm a owl:Class ;
+    rdfs:subClassOf pmd:Method .
+
+pmd:Object a owl:Class ;
+    rdfs:subClassOf ns1:Entity .
+
+pmd:Operator a owl:Class ;
+    rdfs:subClassOf ns1:Person .
+
+pmd:OriginalGaugeLength a owl:Class ;
+    rdfs:subClassOf pmd:GaugeLength .
+
+pmd:ParallelLength a owl:Class ;
+    rdfs:subClassOf pmd:Length .
+
+pmd:ProjectIdentifier a owl:Class ;
+    rdfs:subClassOf pmd:Identifier .
+
+pmd:ProofStrength a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ProofStrengthPlasticExtension a owl:Class ;
+    rdfs:subClassOf pmd:ProofStrength .
+
+pmd:Radius a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:SlopeOfTheElasticPart a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:StrainRate a owl:Class ;
+    rdfs:subClassOf pmd:TestingRate .
+
+pmd:Temperature a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:TestPieceInfo a owl:Class .
+
+pmd:TestPieceName a owl:Class ;
+    rdfs:subClassOf pmd:Identifier .
+
+pmd:TestingRate a owl:Class .
+
+pmd:YieldStrength a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+ns1:Organization a owl:Class ;
+    rdfs:subClassOf ns1:Agent .
+
+fto:AccuracyOfTestingApparatus a owl:NamedIndividual,
+        fto:CollibrationProcess ;
+    pmd:nextProcess fto:SettingTheForceZeroPoint .
+
+fto:Actuator a owl:Class ;
+    rdfs:label "Actuator" ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    ns3:definition "device that provides a physical output in response to a input signal in a predetermined way" ;
+    pmd:definitionSource "ISO/IEC 29182‑2" .
+
+fto:Amplitude a owl:Class ;
+    rdfs:label "Amplitude" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "half the range of a variable" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:ChoiceOfTheMethodAndRate a owl:NamedIndividual,
+        pmd:ConditioningProcess ;
+    ns1:actedOnBehalfOf fto:TestOperator_ ;
+    pmd:characteristic fto:CycleTime,
+        fto:FatigueTestControllingMode,
+        fto:MaximumStrain,
+        fto:MinimumStrain,
+        fto:StrainRate,
+        fto:StrainRatio ;
+    pmd:nextProcess fto:Loading .
+
+fto:CyclicStrainHardeningExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:CyclicStrainHardeningExponent,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    rdfs:label "Cyclic Strain Hardening Exponent" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "slope of cyclic curve log(σ a) as a function of log(σpa)" ;
+    ns1:value "CyclicStrainHardeningExponent"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:CyclicStrengthCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:CyclicStrengthCoefficient,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    rdfs:label "Cyclic Strength Coefficient" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "value of stress that intercepts at εpa = 1 on a cyclic graph log(σa) as a function of log(εpa)" ;
+    ns1:value "CyclicStrengthCoefficient"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ ;
+    pmd:unit pmd:PixelUnit .
+
+fto:Extensometer_ a owl:NamedIndividual,
+        pmd:Extensometer ;
+    pmd:hasIdentifier fto:ExtensometerID .
+
+fto:Extremum a owl:Class ;
+    rdfs:subClassOf fto:MathematicsValueObject .
+
+fto:FatigueDuctilityCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueDuctilityCoefficient,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    rdfs:label "Fatigue Ductility Coefficient" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "Plastic-strain intercept at 2Nf = 1 on lg (Δεp/2) − lg 2Nf plot" ;
+    ns1:value "FatigueDuctilityCoefficient"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:FatigueDuctilityExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueDuctilityExponent,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    rdfs:label "Fatigue Ductility Exponent" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "Slope of lg (Δεp/2) − lg 2Nf plot (Specify 2Nf range)" ;
+    ns1:value "FatigueDuctilityExponent"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:FatigueLife a owl:Class ;
+    rdfs:label "Fatigue Life" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "number of cycles that have to be applied to achieve a failure" ;
+    pmd:definitionSource "ISO 12106:2017" .
+
+fto:FatigueStrengthCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueStrengthCoefficient,
+        pmd:SecondaryData ;
+    rdfs:label "Fatigue Strength Coefficient" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "Stress intercept at 2Nf = 1 on lg σa − lg 2Nf plot" ;
+    ns1:value "FatigueStrengthCoefficient"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ ;
+    pmd:unit pmd:PixelUnit .
+
+fto:FatigueStrengthExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueStrengthExponent,
+        pmd:Measurement ;
+    rdfs:label "Fatigue Strength Exponent" ;
+    rdfs:subClassOf fto:FatigueValueObject ;
+    ns3:definition "value of slope of curve log(εe) as a function of log(2Nf)" ;
+    ns1:value "FatigueStrengthExponent"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:FatigueTestPiece a owl:NamedIndividual,
+        pmd:TestPiece ;
+    pmd:characteristic fto:MaterialProvider,
+        fto:TestPieceComposition,
+        fto:TestPieceCrossSectionShape,
+        fto:TestPieceHeatTreatment,
+        fto:TestPieceID,
+        fto:TestPieceParallelLength,
+        fto:TestPiecePreparation,
+        fto:TestPieceSupplimentaryNote,
+        fto:TestPieceTotalLength ;
+    pmd:output fto:FracturedTestPiece .
+
+fto:FractureMode a owl:Class,
+        owl:NamedIndividual,
+        fto:FractureMode ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns1:value "FractureMode"^^xsd:string .
+
+fto:Gripping a owl:NamedIndividual,
+        pmd:GripsAlignment ;
+    pmd:executedBy fto:FatigueTestingMachine ;
+    pmd:nextProcess fto:ChoiceOfTheMethodAndRate .
+
+fto:Laboratory_ a owl:NamedIndividual,
+        pmd:Laboratory,
+        pmd:Metadata ;
+    ns1:value "LaboratoryNameAndLocation"^^xsd:string .
+
+fto:Loading a owl:NamedIndividual,
+        pmd:GeometryChangingProcess ;
+    pmd:characteristic fto:TestCycleNumber,
+        fto:TestDisplacement,
+        fto:TestTime ;
+    pmd:executedBy fto:Waveform_ ;
+    pmd:nextProcess fto:MeasuringFracturedTestPiece ;
+    pmd:output fto:TestDataFile .
+
+fto:MachineSoftware_ a owl:NamedIndividual,
+        ns1:SoftwareAgent ;
+    pmd:hasIdentifier fto:SoftwareID .
+
+fto:MeasuringFracturedTestPiece a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic fto:FractureLocation,
+        fto:FractureMode,
+        fto:FractureSupplimentaryNote ;
+    pmd:participant fto:FracturedTestPiece .
+
+fto:SettingTheForceZeroPoint a owl:NamedIndividual,
+        pmd:MountingProcess ;
+    pmd:executedBy fto:FatigueTestingMachine ;
+    pmd:nextProcess fto:Gripping .
+
+fto:StrainFatigueLifeCurve a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainFatigueLifeCurve ;
+    rdfs:label "Strain-Fatigue Life Curve" ;
+    rdfs:subClassOf pmd:Image ;
+    ns3:definition "plastic deformation that may occur during fatigue loading" ;
+    pmd:input fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:StrainRatio a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainRatio,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    rdfs:label "Strain Ratio" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "ratio of minimum to maximum strain during any single cycle of fatigue operation" ;
+    ns1:value "StrainRatio"^^xsd:string ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:StressCalculation a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:StressFunction ;
+    pmd:nextProcess fto:StrainCalculation ;
+    pmd:output fto:TestStress .
+
+fto:StressStrainHystersisLoopCurve a owl:Class,
+        owl:NamedIndividual,
+        fto:StressStrainHystersisLoopCurve ;
+    rdfs:label "Stress-Strain Hysteresis Loop Curve" ;
+    rdfs:subClassOf pmd:Image ;
+    ns3:definition "closed curve of the stress-strain response during one complete cycle" ;
+    pmd:definitionSource "ISO 12106:2017" ;
+    pmd:input fto:DeterminationOfCyclicYieldStrength,
+        fto:DeterminationOfModulusOfElasticity ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:TestDataFile a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:PrimaryData,
+        pmd:ValueObject ;
+    pmd:resource fto:RowDataTable_ .
+
+fto:Waveform_ a owl:NamedIndividual,
+        fto:WaveformDevice ;
+    pmd:hasIdentifier fto:WaveformID .
+
+pmd:AssemblingProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:DigitalEntity a owl:Class ;
+    rdfs:subClassOf ns1:Entity .
+
+pmd:Force a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:GaugeLength a owl:Class ;
+    rdfs:subClassOf pmd:Length .
+
+pmd:Identifier a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:MeasuringDevice a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:Method a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Note a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Sample a owl:Class ;
+    rdfs:subClassOf pmd:EngineeredMaterial .
+
+pmd:TestPiece a owl:Class ;
+    rdfs:subClassOf pmd:Sample .
+
+pmd:TestingMachine a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:ValueScope a owl:Class ;
+    rdfs:subClassOf ns1:Entity .
+
+fto:DeterminationOfOriginalCrossSectionArea a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic fto:OriginalCrossSectionArea ;
+    pmd:nextProcess fto:MarkingTheOriginalGaugeLength .
+
+fto:FracturedTestPiece a owl:NamedIndividual,
+        pmd:TestPiece .
+
+fto:TestOperator_ a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Operator ;
+    ns1:actedOnBehalfOf fto:Laboratory_ ;
+    ns1:value "TestOperator"^^xsd:string .
+
+pmd:ConditioningProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:DataScope a owl:Class .
+
+pmd:GeometryShape a owl:Class ;
+    rdfs:subClassOf pmd:TestPieceInfo .
+
+pmd:Image a owl:Class ;
+    rdfs:subClassOf pmd:DigitalEntity .
+
+pmd:Length a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+ns1:Agent a owl:Class .
+
+ns1:Entity a owl:Class .
+
+fto:DeterminationOfCyclicStrainHardeningExponent a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:CyclicStrainHardeningExponentFunction ;
+    pmd:nextProcess fto:DeterminationOfCyclicStrengthCoefficient ;
+    pmd:output fto:CyclicStrainHardeningExponent .
+
+fto:DeterminationOfCyclicStrengthCoefficient a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:CyclicStrengthCoefficientFunction ;
+    pmd:nextProcess fto:CalculateFatigueTestUncertainity ;
+    pmd:output fto:CyclicStrengthCoefficient .
+
+fto:DeterminationOfCyclicYieldStrength a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:CyclicYieldStrengthFunction ;
+    pmd:nextProcess fto:DeterminationOfFatigueStrengthCoefficient ;
+    pmd:output fto:CyclicYieldStrength_ .
+
+fto:DeterminationOfFatigueDuctilityCoefficient a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:FatigueDuctilityCoefficientFunction ;
+    pmd:nextProcess fto:DeterminationOfFatigueStrengthExponent ;
+    pmd:output fto:FatigueDuctilityCoefficient .
+
+fto:DeterminationOfFatigueDuctilityExponent a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:FatigueDuctilityExponentFunction ;
+    pmd:nextProcess fto:DeterminationOfCyclicStrainHardeningExponent ;
+    pmd:output fto:FatigueDuctilityExponent .
+
+fto:DeterminationOfFatigueStrengthExponent a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:FatigueStrengthExponentFunction ;
+    pmd:nextProcess fto:DeterminationOfFatigueDuctilityExponent ;
+    pmd:output fto:FatigueStrengthExponent .
+
+fto:MarkingTheOriginalGaugeLength a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic fto:ExtensometerGaugeLength,
+        fto:OriginalGaugeLength ;
+    pmd:executedBy fto:Extensometer_ ;
+    pmd:nextProcess fto:AccuracyOfTestingApparatus .
+
+fto:PlottingStrainFatigueLifeCurve a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess fto:DeterminationOfFatigueLife ;
+    pmd:output fto:StrainFatigueLifeCurve .
+
+fto:PlottingStressStrainHystersisLoopCurve a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess fto:PlottingStrainFatigueLifeCurve ;
+    pmd:output fto:StressStrainHystersisLoopCurve .
+
+fto:StrainCalculation a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:StrainFunction ;
+    pmd:nextProcess fto:PlottingStressStrainHystersisLoopCurve ;
+    pmd:output fto:TestStrain .
+
+pmd:Dataset a owl:Class ;
+    rdfs:subClassOf pmd:DigitalEntity .
+
+pmd:Time a owl:Class .
+
+fto:DeterminationOfModulusOfElasticity a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:ModuludOfElasticityFunction ;
+    pmd:nextProcess fto:DeterminationOfCyclicYieldStrength ;
+    pmd:output fto:ModulusOfElasticity,
+        fto:SlopOfElasticPartOfTheStressStreainCurve .
+
+fto:FatigueTestingMachine a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueTestingMachine ;
+    rdfs:label "Fatige Test Machine" ;
+    rdfs:subClassOf pmd:TestingMachine ;
+    ns3:definition "machine for performing the fatigue test" ;
+    ns1:actedOnBehalfOf fto:TestOperator_ ;
+    pmd:component fto:DataAcquisitor_,
+        fto:Extensometer_,
+        fto:ForceTransducer_,
+        fto:MachineSoftware_,
+        fto:Waveform_ ;
+    pmd:hasIdentifier fto:FatigueTestMachineID .
+
+fto:MathematicsValueObject a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:MeasuringProcess a owl:Class ;
+    rdfs:subClassOf pmd:AnalysingProcess .
+
+pmd:Stress a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+fto:CalculateFatigueTestUncertainity a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:FatigueTestUncertainityFunction ;
+    pmd:output fto:FatigueTestUncertainity .
+
+fto:DeterminationOfFatigueLife a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess fto:DeterminationOfModulusOfElasticity ;
+    pmd:output <https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10%>,
+        fto:CycleToFracture .
+
+fto:DeterminationOfFatigueStrengthCoefficient a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction fto:FatigueStrengthCoefficientFunction ;
+    pmd:nextProcess fto:DeterminationOfFatigueDuctilityCoefficient ;
+    pmd:output fto:FatigueStrengthCoefficient .
+
+pmd:NodeName a owl:Class ;
+    rdfs:subClassOf pmd:ProjectIdentifier .
+
+pmd:Process a owl:Class ;
+    rdfs:subClassOf ns1:Activity .
+
+pmd:SetPoint a owl:Class ;
+    rdfs:subClassOf pmd:ValueScope .
+
+fto:FatigueTest a owl:Class ;
+    rdfs:label "Fatigue Test" ;
+    rdfs:subClassOf pmd:MechanicalTestingProcess ;
+    ns3:definition "test where repeated stress is applied to a test specimen, and the number of cycles to fracture is measured" ;
+    pmd:definitionSource "ISO 22214:2006" .
+
+fto:FatigueValueObject a owl:Class ;
+    rdfs:label "Fatigue Value Object" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "The mechanical properties related to the fatigue bahaviour of materials" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+fto:SpecimenPreparationProcess a owl:Class ;
+    rdfs:label "Specimen Preparation Process" ;
+    rdfs:subClassOf pmd:Process ;
+    ns3:definition "The process of preparing qualified specimen for testing purpuse" .
+
+fto:Strain a owl:Class ;
+    rdfs:label "Strain" ;
+    rdfs:subClassOf pmd:ValueObject ;
+    ns3:definition "relative deformation caused by a force applied to a test piece" ;
+    pmd:definitionSource "ISO 23718:2007" .
+
+pmd:PrimaryData a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:subClassOf ns1:Agent .
+
+pmd:Algorithm a owl:Class ;
+    rdfs:subClassOf pmd:Method .
+
+pmd:SecondaryData a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+
+pmd:PixelUnit a ns2:Unit,
+        owl:NamedIndividual .
+
+pmd:AnalysingProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+fto:RowDataTable_ a owl:NamedIndividual,
+        csvw:Table,
+        pmd:Dataset,
+        pmd:PrimaryData .
+
+pmd:Measurement a owl:Class ;
+    rdfs:subClassOf pmd:ValueScope .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:subClassOf ns1:Entity .
+
+pmd:Metadata a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+
