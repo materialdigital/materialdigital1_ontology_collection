@@ -1,0 +1,129 @@
+{
+  "reasoner": {
+    "reasoner": "elk",
+    "version": "0.5.0"
+  },
+  "imports": {
+    "count": 0,
+    "items": []
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 636,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 6,
+    "items": [
+      "https://orcid.org/0000-0002-6601-2165",
+      "https://orcid.org/0000-0002-6601-2165",
+      "https://orcid.org/0000-0002-6601-2165",
+      "https://orcid.org/0000-0002-8688-6599",
+      "https://orcid.org/0000-0002-8688-6599",
+      "https://orcid.org/0000-0002-8688-6599"
+    ]
+  },
+  "namespaces": {
+    "count": 15,
+    "items": [
+      {
+        "prefix": "dcat",
+        "uri": "http://www.w3.org/ns/dcat#"
+      },
+      {
+        "prefix": "foaf",
+        "uri": "http://xmlns.com/foaf/0.1/"
+      },
+      {
+        "prefix": "",
+        "uri": "http://purl.obolibrary.org/obo/digitrubber/digitrubber-full.owl#"
+      },
+      {
+        "prefix": "obo",
+        "uri": "http://purl.obolibrary.org/obo/"
+      },
+      {
+        "prefix": "pav",
+        "uri": "http://purl.org/pav/"
+      },
+      {
+        "prefix": "chebi",
+        "uri": "http://purl.obolibrary.org/obo/chebi/"
+      },
+      {
+        "prefix": "swrlb",
+        "uri": "http://www.w3.org/2003/11/swrlb#"
+      },
+      {
+        "prefix": "chebi1",
+        "uri": "http://purl.obolibrary.org/obo/chebi#"
+      },
+      {
+        "prefix": "chebi2",
+        "uri": "http://purl.obolibrary.org/obo/chebi#2"
+      },
+      {
+        "prefix": "chebi3",
+        "uri": "http://purl.obolibrary.org/obo/chebi#3"
+      },
+      {
+        "prefix": "chebi4",
+        "uri": "http://purl.obolibrary.org/obo/chebi#1"
+      },
+      {
+        "prefix": "protege",
+        "uri": "http://protege.stanford.edu/plugins/owl/protege#"
+      },
+      {
+        "prefix": "subsets",
+        "uri": "http://purl.obolibrary.org/obo/ro/subsets#"
+      },
+      {
+        "prefix": "oboInOwl",
+        "uri": "http://www.geneontology.org/formats/oboInOwl#"
+      },
+      {
+        "prefix": "digitrubber",
+        "uri": "https://www.tib.eu/digitrubber#"
+      }
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 2628
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 2628
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "https://creativecommons.org/licenses/unspecified"
+    ]
+  }
+}

@@ -228,6 +228,16 @@ def analyze_graph(
 
 
 if __name__ == '__main__':
+    with open('DIGITRUBBER/DIGITRUBBER.json', 'w', encoding='utf-8') as fp:
+        json.dump(
+            analyze_graph(
+                graph_file='DIGITRUBBER/digitrubber-full.owl',
+                reasoned_graph_file='DIGITRUBBER/digitrubber-full.elk-0.5.0.ttl',
+                startswith_filter='https://www.tib.eu/digitrubber'
+            ),
+            fp,
+            indent=2
+        )
     with open('KupferDigital/KupferDigital.json', 'w', encoding='utf-8') as fp:
         json.dump(
             analyze_graph(
