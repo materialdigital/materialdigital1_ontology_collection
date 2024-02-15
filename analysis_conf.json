@@ -1,0 +1,44 @@
+{
+    "skip_namespaces": [
+        "http://purl.org/dc/terms/",
+        "http://www.w3.org/XML/1998/namespace",
+        "http://www.w3.org/2001/XMLSchema#",
+        "http://www.w3.org/2000/01/rdf-schema#",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "http://www.w3.org/2002/07/owl#",
+        "http://www.w3.org/2004/02/skos/core#",
+        "http://www.w3.org/ns/shacl#",
+        "https://schema.org/",
+        "http://www.w3.org/ns/prov#",
+        "http://www.w3.org/ns/csvw#",
+        "https://brickschema.org/schema/Brick#",
+        "http://purl.org/dc/elements/1.1/",
+        "http://purl.org/dc/dcmitype/",
+        "http://purl.org/dc/dcam/",
+        "http://usefulinc.com/ns/doap#",
+        "http://www.w3.org/ns/org#",
+        "http://purl.org/linked-data/cube#",
+        "http://www.w3.org/ns/sosa/",
+        "http://www.w3.org/ns/ssn/",
+        "http://www.w3.org/2006/time#",
+        "http://purl.org/vocab/vann/",
+        "http://rdfs.org/ns/void#",
+        "http://purl.org/dc/terms/",
+        "http://www.w3.org/2003/11/swrl#",
+        "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+        "http://www.opengis.net/ont/geosparql#",
+        "http://www.w3.org/ns/odrl/2/",
+        "http://www.w3.org/ns/dx/prof/",
+        "https://www.w3.org/2003/01/geo/wgs84_pos#"
+    ],
+    "additional_bindings": [
+        {
+            "prefix": "pmd",
+            "uri": "https://w3id.org/pmd/co/"
+        },
+        {
+            "prefix": "pmdbeta",
+            "uri": "https://material-digital.de/pmdco/"
+        }
+    ]
+}

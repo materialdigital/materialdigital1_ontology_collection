@@ -1,0 +1,136 @@
+{
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 9,
+      "items": [
+        "https://w3id.org/cpto/CastingDevice",
+        "https://w3id.org/cpto/ConcreteMixer",
+        "https://w3id.org/cpto/NonAgitatingEquipment",
+        "https://w3id.org/cpto/TruckMixer",
+        "https://w3id.org/cpto/Batch",
+        "https://w3id.org/cpto/Delivery",
+        "https://w3id.org/cpto/Calorimeter",
+        "https://w3id.org/cpto/Extensometer",
+        "https://w3id.org/cpto/CompressiveTestingMachine"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 42,
+      "items": [
+        "https://w3id.org/cpto/ConcreteCompressiveStrength",
+        "https://w3id.org/cpto/CharacteristicStrength",
+        "https://w3id.org/cpto/CompressiveStregthClass",
+        "https://w3id.org/cpto/CompressiveStrengthCube",
+        "https://w3id.org/cpto/CompressiveStrengthCylinder",
+        "https://w3id.org/cpto/Heat",
+        "https://w3id.org/cpto/HeatFlow",
+        "https://w3id.org/cpto/HeatOfHydration",
+        "https://w3id.org/cpto/MaterialComposition",
+        "https://w3id.org/cpto/Content",
+        "https://w3id.org/cpto/EntrainedAir",
+        "https://w3id.org/cpto/EntrappedAir",
+        "https://w3id.org/cpto/EquivalentWaterCementRatio",
+        "https://w3id.org/cpto/QuantityInMix",
+        "https://w3id.org/cpto/WaterCementRatio",
+        "https://w3id.org/cpto/SpecificGravity",
+        "https://w3id.org/cpto/Volume",
+        "https://w3id.org/cpto/Site",
+        "https://w3id.org/cpto/Consistency",
+        "https://w3id.org/cpto/ConsistencyClass",
+        "https://w3id.org/cpto/DegreeOfCompactability",
+        "https://w3id.org/cpto/DegreeOfCompactabilityClass",
+        "https://w3id.org/cpto/ExposureClass",
+        "https://w3id.org/cpto/FlowClass",
+        "https://w3id.org/cpto/FlowSpread",
+        "https://w3id.org/cpto/PassingAbility",
+        "https://w3id.org/cpto/SegregationResistance",
+        "https://w3id.org/cpto/SlumpClass",
+        "https://w3id.org/cpto/SlumpFlow",
+        "https://w3id.org/cpto/StressRate",
+        "https://w3id.org/cpto/VebeClass",
+        "https://w3id.org/cpto/kValueAccountingForFlyAsh",
+        "https://w3id.org/cpto/kValueAccountingForSilicaFume",
+        "https://w3id.org/cpto/kValueAccountingForTypeIIAdditons",
+        "https://w3id.org/cpto/kValueAccountingForFlyAsh+SilicaFume",
+        "https://w3id.org/cpto/AggregateSize",
+        "https://w3id.org/cpto/FinesInConcrete",
+        "https://w3id.org/cpto/RelativeDensity",
+        "https://w3id.org/cpto/ViscosityOfConcrete",
+        "https://w3id.org/cpto/DINStandard",
+        "https://w3id.org/cpto/ENStandard",
+        "https://w3id.org/cpto/SpecimenAge"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 114,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 6,
+    "items": [
+      "Mattheo Kr\u00fcger, Melissa Telong Donfack, Aida Zoriyatkha, Birgit Meng, Stephan Pirskawetz",
+      "https://orcid.org/0009-0003-7121-0283",
+      "https://orcid.org/0009-0006-4524-9143",
+      "https://orcid.org/0009-0004-9700-2439",
+      "https://orcid.org/0000-0003-2445-6734",
+      "https://orcid.org/0000-0003-0626-5002"
+    ]
+  },
+  "namespaces": {
+    "count": 3,
+    "items": [
+      {
+        "prefix": "dcat",
+        "uri": "http://www.w3.org/ns/dcat#"
+      },
+      {
+        "prefix": "foaf",
+        "uri": "http://xmlns.com/foaf/0.1/"
+      },
+      {
+        "prefix": "con",
+        "uri": "https://w3id.org/cpto#"
+      }
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 112,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 0
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 268,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 0
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ]
+  }
+}

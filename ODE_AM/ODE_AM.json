@@ -1,0 +1,121 @@
+{
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 8,
+    "items": [
+      "MAO.ttl",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/AgentOntology.ttl",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/ArtifactOntology.ttl",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/EventOntology.ttl",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/QualityOntology.ttl",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/UnitsOfMeasureOntology.ttl",
+      "protege-dc.owl",
+      "AMAO.ttl"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 256,
+    "owl:ObjectProperty": 12,
+    "owl:DatatypeProperty": 3
+  },
+  "creators_contributors": {
+    "count": 5,
+    "items": [
+      "Thomas Bjarsch",
+      "Thomas Bjarsch",
+      "Thomas Bjarsch",
+      "Mohamed Kamal, Heiko Beinersdorf",
+      "Mohamed Kamal,  Jan Reimann"
+    ]
+  },
+  "namespaces": {
+    "count": 10,
+    "items": [
+      {
+        "prefix": "dcat",
+        "uri": "http://www.w3.org/ns/dcat#"
+      },
+      {
+        "prefix": "foaf",
+        "uri": "http://xmlns.com/foaf/0.1/"
+      },
+      {
+        "prefix": "",
+        "uri": "https://w3id.org/ODE_AM/AMAO/"
+      },
+      {
+        "prefix": "CommonCoreOntologies",
+        "uri": "http://www.ontologyrepository.com/CommonCoreOntologies/"
+      },
+      {
+        "prefix": "amo",
+        "uri": "https://w3id.org/ODE_AM/AMAO#"
+      },
+      {
+        "prefix": "default1",
+        "uri": "https://w3id.org/ODE_AM/CEMAO/"
+      },
+      {
+        "prefix": "default2",
+        "uri": "https://w3id.org/ODE_AM/PBFAO/"
+      },
+      {
+        "prefix": "default3",
+        "uri": "https://w3id.org/ODE_AM/WAAMAO/"
+      },
+      {
+        "prefix": "mo",
+        "uri": "https://w3id.org/ODE_AM/MAO/"
+      },
+      {
+        "prefix": "obo",
+        "uri": "http://purl.obolibrary.org/obo/"
+      }
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 181,
+      "obo": 32
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 316,
+      "obo": 130
+    }
+  },
+  "license": {
+    "count": 5,
+    "items": [
+      "CC-BY-4.0",
+      "CC-BY-4.0",
+      "CC-BY-4.0",
+      "CC-BY-4.0",
+      "CC-BY-4.0"
+    ]
+  }
+}

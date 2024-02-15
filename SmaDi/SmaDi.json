@@ -1,0 +1,82 @@
+{
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "http://purl.org/dc/terms"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 105,
+    "owl:ObjectProperty": 12,
+    "owl:DatatypeProperty": 8
+  },
+  "creators_contributors": {
+    "count": 1,
+    "items": [
+      "<https://orcid.org/0000-0003-1017-8921>"
+    ]
+  },
+  "namespaces": {
+    "count": 4,
+    "items": [
+      {
+        "prefix": "dcat",
+        "uri": "http://www.w3.org/ns/dcat#"
+      },
+      {
+        "prefix": "foaf",
+        "uri": "http://xmlns.com/foaf/0.1/"
+      },
+      {
+        "prefix": "",
+        "uri": "urn:absolute/smadiont#"
+      },
+      {
+        "prefix": "obda",
+        "uri": "https://w3id.org/obda/vocabulary#"
+      }
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 0
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 0,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "obo": 0
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "<http://creativecommons.org/licenses/by/4.0/>"
+    ]
+  }
+}
