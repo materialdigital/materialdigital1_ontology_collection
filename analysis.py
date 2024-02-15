@@ -228,6 +228,16 @@ def analyze_graph(
 
 
 if __name__ == '__main__':
+    with open('KupferDigital/KupferDigital.json', 'w', encoding='utf-8') as fp:
+        json.dump(
+            analyze_graph(
+                graph_file='KupferDigital/KupferDigital_rdflib/KupferDigital.ttl',
+                reasoned_graph_file='KupferDigital/KupferDigital_rdflib/KupferDigital.pellet-2.2.0.ttl',
+                startswith_filter='https://gitlab.com/kupferdigital/'
+            ),
+            fp,
+            indent=2
+        )
     with open('GlasDigital/GlasDigital.json', 'w', encoding='utf-8') as fp:
         json.dump(
             analyze_graph(
