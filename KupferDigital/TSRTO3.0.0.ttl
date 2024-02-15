@@ -1,0 +1,1297 @@
+@prefix : <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix csvw: <https://w3.org/ns/csvw#> .
+@prefix prov: <https://w3.org/ns/prov#> .
+@prefix qudt: <https://qudt.org/2.1/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tsrto: <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/> .
+
+<https://gitlab.com/kupferdigital/process-graphs/relaxation-test/> rdf:type owl:Ontology ;
+                                                                    owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                                                                    dcterms:biblographicCitation "Hossein Beygi Nasrabadi, (2024.01.29) Tensile Stress Relaxation Test Ontology (TSRTO). Version 3.0.0, www.gitlab.com/kupferdigital/process-graphs/relaxation-test" ;
+                                                                    dcterms:created "2024.01.29" ;
+                                                                    dcterms:creator "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+                                                                    dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+                                                                    dcterms:title "Tensile Stress Relaxation Test Ontology (TSRTO)" ;
+                                                                    rdfs:comment "KuferDigital project (www.materialdigital.de/project/1)" ,
+                                                                                 "Tensile Stress Relaxation Test Ontology (TSRTO) has developed for representing the tensile stress relaxation testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 10319-1 standard." ;
+                                                                    owl:imports "https://raw.githubusercontent.com/materialdigital/core-ontology/main/pmd_core.ttl" ;
+                                                                    owl:versionInfo "3.0.0 (BPROV, PMDco)" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/biblographicCitation
+dcterms:biblographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/licence
+dcterms:licence rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#imports
+owl:imports rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#actedOnBehalfOf
+ns2:actedOnBehalfOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#atLocation
+prov:atLocation rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#hasAssociatedWith
+prov:hasAssociatedWith rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#influenced
+prov:influenced rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#wasDrivedFrom
+prov:wasDrivedFrom rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/characteristic
+pmd:characteristic rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/component
+pmd:component rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/composedOf
+pmd:composedOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/executedBy
+pmd:executedBy rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/hasFunction
+pmd:hasFunction rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/hasIdentifier
+pmd:hasIdentifier rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/input
+pmd:input rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/nextProcess
+pmd:nextProcess rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/output
+pmd:output rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/participant
+pmd:participant rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/process
+pmd:process rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/resource
+pmd:resource rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/subordinateProcess
+pmd:subordinateProcess rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/unit
+pmd:unit rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#value
+ns2:value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit
+ns1:Unit rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+ns2:Activity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+ns2:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+ns2:Entity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+ns2:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf ns2:Agent .
+
+
+###  http://www.w3.org/ns/prov#Person
+ns2:Person rdf:type owl:Class ;
+           rdfs:subClassOf ns2:Agent .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+ns2:SoftwareAgent rdf:type owl:Class ;
+                  rdfs:subClassOf ns2:Agent .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/CollibrationProcess
+tsrto:CollibrationProcess rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:Process .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/Displacement
+tsrto:Displacement rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExperimentTime
+tsrto:ExperimentTime rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Duration .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/GaugeLength
+tsrto:GaugeLength rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Length .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/HeatingDevice
+tsrto:HeatingDevice rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/LoadDisplacementCurve
+tsrto:LoadDisplacementCurve rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/MechanicalStrength
+tsrto:MechanicalStrength rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/Number
+tsrto:Number rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ParallelLength
+tsrto:ParallelLength rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Length .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ProportionalityCoefficient
+tsrto:ProportionalityCoefficient rdf:type owl:Class ;
+                                 rdfs:subClassOf pmd:Index .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/RelaxedStress
+tsrto:RelaxedStress rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualStrain
+tsrto:ResidualStrain rdf:type owl:Class ;
+                     rdfs:subClassOf tsrto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualStress
+tsrto:ResidualStress rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/Resolution
+tsrto:Resolution rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SlopeOfTheElasticPart
+tsrto:SlopeOfTheElasticPart rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:ModulusOfElasticity .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SpecimenPreparationProcess
+tsrto:SpecimenPreparationProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf pmd:Process .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/Strain
+tsrto:Strain rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StrainRate
+tsrto:StrainRate rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationCurve
+tsrto:StressRelaxationCurve rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressStrainCurve
+tsrto:StressStrainCurve rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TensileStrength
+tsrto:TensileStrength rdf:type owl:Class ;
+                      rdfs:subClassOf tsrto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TensileStressRelaxationTest
+tsrto:TensileStressRelaxationTest rdf:type owl:Class ;
+                                  rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TensileTestingMachine
+tsrto:TensileTestingMachine rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestForceApplicationTime
+tsrto:TestForceApplicationTime rdf:type owl:Class ;
+                               rdfs:subClassOf tsrto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestForceDuration
+tsrto:TestForceDuration rdf:type owl:Class ;
+                        rdfs:subClassOf tsrto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/UncertaintyOfMeasurement
+tsrto:UncertaintyOfMeasurement rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/UniaxialTensionCompressionMachine
+tsrto:UniaxialTensionCompressionMachine rdf:type owl:Class ;
+                                        rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/YieldStrenght
+tsrto:YieldStrenght rdf:type owl:Class ;
+                    rdfs:subClassOf tsrto:MechanicalStrength .
+
+
+###  https://w3.org/ns/csvw#Table
+csvw:Table rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Algorithm
+pmd:Algorithm rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+pmd:AnalysingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Area
+pmd:Area rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ChemicalComposition
+pmd:ChemicalComposition rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ConditioningProcess
+pmd:ConditioningProcess rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/CrossSectionArea
+pmd:CrossSectionArea rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Area .
+
+
+###  https://w3id.org/pmd/co/DataScope
+pmd:DataScope rdf:type owl:Class ;
+              rdfs:subClassOf ns2:Entity .
+
+
+###  https://w3id.org/pmd/co/Dataset
+pmd:Dataset rdf:type owl:Class ;
+            rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Date
+pmd:Date rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Time .
+
+
+###  https://w3id.org/pmd/co/DigitalEntity
+pmd:DigitalEntity rdf:type owl:Class ;
+                  rdfs:subClassOf ns2:Entity .
+
+
+###  https://w3id.org/pmd/co/Duration
+pmd:Duration rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Time .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+pmd:EngineeredMaterial rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:Object .
+
+
+###  https://w3id.org/pmd/co/Extensometer
+pmd:Extensometer rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Force
+pmd:Force rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/GeometryChangingProcess
+pmd:GeometryChangingProcess rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Identifier
+pmd:Identifier rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Image
+pmd:Image rdf:type owl:Class ;
+          rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Index
+pmd:Index rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Laboratory
+pmd:Laboratory rdf:type owl:Class ;
+               rdfs:subClassOf ns2:Organization .
+
+
+###  https://w3id.org/pmd/co/Length
+pmd:Length rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/MaterialProperty
+pmd:MaterialProperty rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:MaterialRelated .
+
+
+###  https://w3id.org/pmd/co/MaterialRelated
+pmd:MaterialRelated rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Measurement
+pmd:Measurement rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/MeasuringDevice
+pmd:MeasuringDevice rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/MeasuringProcess
+pmd:MeasuringProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/Mechanical
+pmd:Mechanical rdf:type owl:Class ;
+               rdfs:subClassOf pmd:MaterialProperty .
+
+
+###  https://w3id.org/pmd/co/MechanicalTestingProcess
+pmd:MechanicalTestingProcess rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/Metadata
+pmd:Metadata rdf:type owl:Class ;
+             rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Method
+pmd:Method rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ModulusOfElasticity
+pmd:ModulusOfElasticity rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Norm
+pmd:Norm rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/Object
+pmd:Object rdf:type owl:Class ;
+           rdfs:subClassOf ns2:Entity .
+
+
+###  https://w3id.org/pmd/co/Operator
+pmd:Operator rdf:type owl:Class ;
+             rdfs:subClassOf ns2:Person .
+
+
+###  https://w3id.org/pmd/co/PrimaryData
+pmd:PrimaryData rdf:type owl:Class ;
+                rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Process
+pmd:Process rdf:type owl:Class ;
+            rdfs:subClassOf ns2:Activity .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+pmd:ProcessingNode rdf:type owl:Class ;
+                   rdfs:subClassOf ns2:Agent .
+
+
+###  https://w3id.org/pmd/co/Sample
+pmd:Sample rdf:type owl:Class ;
+           rdfs:subClassOf pmd:EngineeredMaterial .
+
+
+###  https://w3id.org/pmd/co/SecondaryData
+pmd:SecondaryData rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/SetPoint
+pmd:SetPoint rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/Shape
+pmd:Shape rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Stress
+pmd:Stress rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Temperature
+pmd:Temperature rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TemperatureChangingProcess
+pmd:TemperatureChangingProcess rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:ConditioningProcess .
+
+
+###  https://w3id.org/pmd/co/TestPiece
+pmd:TestPiece rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Sample .
+
+
+###  https://w3id.org/pmd/co/TestPieceInfo
+pmd:TestPieceInfo rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TestPieceName
+pmd:TestPieceName rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Identifier .
+
+
+###  https://w3id.org/pmd/co/TestingMachine
+pmd:TestingMachine rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/TestingRate
+pmd:TestingRate rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Thermocouple
+pmd:Thermocouple rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Time
+pmd:Time rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+pmd:ValueObject rdf:type owl:Class ;
+                rdfs:subClassOf ns2:Entity .
+
+
+###  https://w3id.org/pmd/co/ValueScope
+pmd:ValueScope rdf:type owl:Class ;
+               rdfs:subClassOf ns2:Entity .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/CoefficientOfProportionality
+tsrto:CoefficientOfProportionality rdf:type owl:NamedIndividual ,
+                                            tsrto:ProportionalityCoefficient ,
+                                            pmd:Metadata ;
+                                   prov:influenced tsrto:DeterminationOfOriginalCrossSectionArea ;
+                                   ns2:value "CoefficientOfProportionality"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfInitialStress
+tsrto:DeterminationOfInitialStress rdf:type owl:NamedIndividual ,
+                                            pmd:AnalysingProcess ;
+                                   pmd:nextProcess tsrto:DeterminationOfResidualStress ;
+                                   pmd:output tsrto:InitialStress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfModulusOfElasticity
+tsrto:DeterminationOfModulusOfElasticity rdf:type owl:NamedIndividual ,
+                                                  pmd:AnalysingProcess ;
+                                         pmd:hasFunction tsrto:ModuludOfElasticityFunction ;
+                                         pmd:nextProcess tsrto:DeterminationOfInitialStress ;
+                                         pmd:output tsrto:ModulusOfElasticity ,
+                                                    tsrto:SlopOfElasticPartOfTheStressStreainCurve .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfOriginalCrossSectionArea
+tsrto:DeterminationOfOriginalCrossSectionArea rdf:type owl:NamedIndividual ,
+                                                       pmd:MeasuringProcess ;
+                                              pmd:characteristic tsrto:OriginalCrossSectionArea ;
+                                              pmd:nextProcess tsrto:MarkingTheOriginalGaugeLength .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfResidualStrain
+tsrto:DeterminationOfResidualStrain rdf:type owl:NamedIndividual ,
+                                             pmd:AnalysingProcess ;
+                                    pmd:hasFunction tsrto:ResidualStrainFunction ;
+                                    pmd:output tsrto:ResidualElasticStrain ,
+                                               tsrto:ResidualPlasticStrain .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfResidualStress
+tsrto:DeterminationOfResidualStress rdf:type owl:NamedIndividual ,
+                                             pmd:AnalysingProcess ;
+                                    pmd:hasFunction tsrto:ResidualStressFunction ;
+                                    pmd:nextProcess tsrto:DeterminationOfResidualStrain ;
+                                    pmd:output tsrto:PercentageRelaxedStress ,
+                                               tsrto:StressRelaxationTestResidualStress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/DeterminationOfYieldStrength
+tsrto:DeterminationOfYieldStrength rdf:type owl:NamedIndividual ,
+                                            pmd:AnalysingProcess ;
+                                   pmd:nextProcess tsrto:DeterminationOfModulusOfElasticity ;
+                                   pmd:output tsrto:YieldStrength_Rp0.2 .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensionApplication
+tsrto:ExtensionApplication rdf:type owl:NamedIndividual ,
+                                    pmd:ConditioningProcess ;
+                           pmd:characteristic tsrto:InitialStrain ,
+                                              tsrto:StrainRate ,
+                                              tsrto:TimeToApplyInitialStrain ;
+                           pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+                           pmd:nextProcess tsrto:StressRelaxationMeasuring .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensometerCalibration
+tsrto:ExtensometerCalibration rdf:type owl:NamedIndividual ,
+                                       tsrto:CollibrationProcess ;
+                              ns2:value "ExtensometerCollibrationData"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensometerGaugeLength
+tsrto:ExtensometerGaugeLength rdf:type owl:NamedIndividual ,
+                                       tsrto:GaugeLength ,
+                                       pmd:PrimaryData ,
+                                       pmd:SetPoint ;
+                              pmd:unit qudt:MiliM ;
+                              ns2:value "ExtensometerGaugeLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensometerID
+tsrto:ExtensometerID rdf:type owl:NamedIndividual ,
+                              pmd:Identifier ,
+                              pmd:Metadata ;
+                     ns2:value "ExtensometerName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensometerResolution
+tsrto:ExtensometerResolution rdf:type owl:NamedIndividual ,
+                                      tsrto:Resolution ,
+                                      pmd:Metadata ;
+                             ns2:value "ExtensometerResolutionValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ExtensometerUncertainty
+tsrto:ExtensometerUncertainty rdf:type owl:NamedIndividual ,
+                                       tsrto:UncertaintyOfMeasurement ,
+                                       pmd:Metadata ;
+                              ns2:value "ExtensometerUncertainityValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/Extensometer_
+tsrto:Extensometer_ rdf:type owl:NamedIndividual ,
+                             pmd:Extensometer ;
+                    pmd:characteristic tsrto:ExtensometerResolution ,
+                                       tsrto:ExtensometerUncertainty ;
+                    pmd:hasIdentifier tsrto:ExtensometerID ;
+                    pmd:process tsrto:ExtensometerCalibration .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/FracturedTestPiece
+tsrto:FracturedTestPiece rdf:type owl:NamedIndividual ,
+                                  pmd:TestPiece .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/HeatingDevice
+tsrto:HeatingDevice rdf:type owl:NamedIndividual ,
+                             tsrto:HeatingDevice ;
+                    pmd:characteristic tsrto:PermissibleTemperatureDeviation ;
+                    pmd:hasIdentifier tsrto:HeatingDeviceID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/HeatingDeviceID
+tsrto:HeatingDeviceID rdf:type owl:NamedIndividual ,
+                               pmd:Identifier ,
+                               pmd:Metadata ;
+                      ns2:value "HeatingDeviceID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/HeatingTheSample
+tsrto:HeatingTheSample rdf:type owl:NamedIndividual ,
+                                pmd:MeasuringProcess ;
+                       pmd:characteristic tsrto:SoakingTimeAtTestTemperature ,
+                                          tsrto:TestTemperature ;
+                       pmd:executedBy tsrto:HeatingDevice ,
+                                      tsrto:TemperatureMeasuringDevice ;
+                       pmd:nextProcess tsrto:ExtensionApplication .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/InitialStrain
+tsrto:InitialStrain rdf:type owl:NamedIndividual ,
+                             tsrto:Strain ,
+                             pmd:Metadata ,
+                             pmd:SetPoint ;
+                    pmd:unit qudt:PERCENT ;
+                    ns2:value "InitialStrainValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/InitialStress
+tsrto:InitialStress rdf:type owl:NamedIndividual ,
+                             pmd:Measurement ,
+                             pmd:SecondaryData ,
+                             pmd:Stress ;
+                    pmd:input tsrto:DeterminationOfResidualStress ;
+                    pmd:resource tsrto:RowDataTable_ ;
+                    pmd:unit qudt:MegaPa ;
+                    ns2:value "InitialStress"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/LoadDisplacementCurve
+tsrto:LoadDisplacementCurve rdf:type owl:NamedIndividual ,
+                                     tsrto:LoadDisplacementCurve ,
+                                     pmd:Measurement ;
+                            pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/MachineSoftware_
+tsrto:MachineSoftware_ rdf:type owl:NamedIndividual ,
+                                ns2:SoftwareAgent ;
+                       pmd:hasIdentifier tsrto:SoftwareID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/MarkingTheOriginalGaugeLength
+tsrto:MarkingTheOriginalGaugeLength rdf:type owl:NamedIndividual ,
+                                             pmd:MeasuringProcess ;
+                                    pmd:characteristic tsrto:ExtensometerGaugeLength ,
+                                                       tsrto:OriginalGaugeLength ;
+                                    pmd:executedBy tsrto:Extensometer_ ;
+                                    pmd:nextProcess tsrto:HeatingTheSample .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/MaterialProvider
+tsrto:MaterialProvider rdf:type owl:NamedIndividual ,
+                                ns2:Organization ,
+                                pmd:Metadata ;
+                       ns2:value "MaterialProvider"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ModuludOfElasticityFunction
+tsrto:ModuludOfElasticityFunction rdf:type owl:NamedIndividual ,
+                                           pmd:Algorithm ,
+                                           pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ModulusOfElasticity
+tsrto:ModulusOfElasticity rdf:type owl:NamedIndividual ,
+                                   pmd:ModulusOfElasticity ;
+                          pmd:resource tsrto:RowDataTable_ ;
+                          pmd:unit qudt:GigaPa ;
+                          ns2:value "ModulusOfElasticity"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/NumberOfThermocouples
+tsrto:NumberOfThermocouples rdf:type owl:NamedIndividual ,
+                                     tsrto:Number ;
+                            ns2:value "NumberOfThermocouplesValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/OriginalCrossSectionArea
+tsrto:OriginalCrossSectionArea rdf:type owl:NamedIndividual ,
+                                        pmd:CrossSectionArea ,
+                                        pmd:Measurement ,
+                                        pmd:PrimaryData ;
+                               pmd:input tsrto:StressCalculation ;
+                               pmd:unit qudt:MiliM2 ;
+                               ns2:value "OriginalCrossSectionArea"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/OriginalGaugeLength
+tsrto:OriginalGaugeLength rdf:type owl:NamedIndividual ,
+                                   tsrto:ParallelLength ,
+                                   pmd:Measurement ,
+                                   pmd:PrimaryData ;
+                          pmd:input tsrto:StrainCalculation ;
+                          pmd:unit qudt:MiliM ;
+                          ns2:value "OriginalGaugeLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/PercentageRelaxedStress
+tsrto:PercentageRelaxedStress rdf:type owl:NamedIndividual ,
+                                       tsrto:RelaxedStress ,
+                                       tsrto:ResidualStress ,
+                                       pmd:Measurement ,
+                                       pmd:SecondaryData ;
+                              pmd:resource tsrto:RowDataTable_ ;
+                              pmd:unit qudt:PERCENT ;
+                              ns2:value "PercentageResidualStress"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/PermissibleTemperatureDeviation
+tsrto:PermissibleTemperatureDeviation rdf:type owl:NamedIndividual ,
+                                               pmd:Metadata ,
+                                               pmd:Temperature ;
+                                      pmd:unit qudt:DEG_C ;
+                                      ns2:value "PermissibleTemperatureDeviation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/PlottingTestCurve
+tsrto:PlottingTestCurve rdf:type owl:NamedIndividual ,
+                                 pmd:AnalysingProcess ;
+                        pmd:nextProcess tsrto:DeterminationOfYieldStrength ;
+                        pmd:output tsrto:LoadDisplacementCurve ,
+                                   tsrto:StressRelaxationCurve ,
+                                   tsrto:StressStrainCurve .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualElasticStrain
+tsrto:ResidualElasticStrain rdf:type owl:NamedIndividual ,
+                                     tsrto:ResidualStrain ,
+                                     pmd:Measurement ,
+                                     pmd:SecondaryData ;
+                            pmd:resource tsrto:RowDataTable_ ;
+                            pmd:unit qudt:PERCENT ;
+                            ns2:value "ResidualElasticStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualPlasticStrain
+tsrto:ResidualPlasticStrain rdf:type owl:NamedIndividual ,
+                                     tsrto:ResidualStrain ,
+                                     pmd:Measurement ,
+                                     pmd:SecondaryData ;
+                            pmd:resource tsrto:RowDataTable_ ;
+                            pmd:unit qudt:PERCENT ;
+                            ns2:value "ResidualPlasticStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualStrainFunction
+tsrto:ResidualStrainFunction rdf:type owl:NamedIndividual ,
+                                      pmd:Algorithm ,
+                                      pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualStressFunction
+tsrto:ResidualStressFunction rdf:type owl:NamedIndividual ,
+                                      pmd:Algorithm ,
+                                      pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/RowDataTable_
+tsrto:RowDataTable_ rdf:type owl:NamedIndividual ,
+                             csvw:Table ,
+                             pmd:Dataset ,
+                             pmd:PrimaryData .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SlopOfElasticPartOfTheStressStreainCurve
+tsrto:SlopOfElasticPartOfTheStressStreainCurve rdf:type owl:NamedIndividual ,
+                                                        tsrto:SlopeOfTheElasticPart ,
+                                                        pmd:SecondaryData ;
+                                               pmd:resource tsrto:RowDataTable_ ;
+                                               pmd:unit qudt:GigaPa ;
+                                               ns2:value "SlopOfElasticPartOfTheStressStreainCurve"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SoakingTimeAtTestTemperature
+tsrto:SoakingTimeAtTestTemperature rdf:type owl:NamedIndividual ,
+                                            tsrto:ExperimentTime ,
+                                            pmd:Metadata ;
+                                   pmd:unit qudt:SEC ;
+                                   ns2:value "SoakingTimeAtTestTemperatureValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SoftwareID
+tsrto:SoftwareID rdf:type owl:NamedIndividual ,
+                          pmd:Metadata ,
+                          pmd:TestPieceName ;
+                 ns2:value "SoftwareName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StrainCalculation
+tsrto:StrainCalculation rdf:type owl:NamedIndividual ,
+                                 pmd:AnalysingProcess ;
+                        pmd:hasFunction tsrto:StrainFunction ;
+                        pmd:nextProcess tsrto:PlottingTestCurve ;
+                        pmd:output tsrto:TestStrain .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StrainFunction
+tsrto:StrainFunction rdf:type owl:NamedIndividual ,
+                              pmd:Algorithm ,
+                              pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StrainRate
+tsrto:StrainRate rdf:type owl:NamedIndividual ,
+                          tsrto:StrainRate ,
+                          pmd:Metadata ,
+                          pmd:SetPoint ;
+                 pmd:unit qudt:PER-SEC ;
+                 ns2:value "StrainRateValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressCalculation
+tsrto:StressCalculation rdf:type owl:NamedIndividual ,
+                                 pmd:AnalysingProcess ;
+                        pmd:hasFunction tsrto:StressFunction ;
+                        pmd:nextProcess tsrto:StrainCalculation ;
+                        pmd:output tsrto:TestStress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressFunction
+tsrto:StressFunction rdf:type owl:NamedIndividual ,
+                              pmd:Algorithm ,
+                              pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationCurve
+tsrto:StressRelaxationCurve rdf:type owl:NamedIndividual ,
+                                     tsrto:StressRelaxationCurve ;
+                            pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationMeasurementAnalysis
+tsrto:StressRelaxationMeasurementAnalysis rdf:type owl:NamedIndividual ,
+                                                   pmd:AnalysingProcess ;
+                                          prov:hasAssociatedWith tsrto:MachineSoftware_ ;
+                                          pmd:subordinateProcess tsrto:DeterminationOfInitialStress ,
+                                                                 tsrto:DeterminationOfModulusOfElasticity ,
+                                                                 tsrto:DeterminationOfResidualStrain ,
+                                                                 tsrto:DeterminationOfResidualStress ,
+                                                                 tsrto:DeterminationOfYieldStrength ,
+                                                                 tsrto:PlottingTestCurve ,
+                                                                 tsrto:StrainCalculation ,
+                                                                 tsrto:StressCalculation .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationMeasuring
+tsrto:StressRelaxationMeasuring rdf:type owl:NamedIndividual ,
+                                         pmd:GeometryChangingProcess ;
+                                pmd:characteristic tsrto:StressRelaxationTime ,
+                                                   tsrto:TestDisplacement ,
+                                                   tsrto:TestForce ;
+                                pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+                                pmd:nextProcess tsrto:StressCalculation ;
+                                pmd:output tsrto:TestDataFile .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationMeasuringprocess
+tsrto:StressRelaxationMeasuringprocess rdf:type owl:NamedIndividual ,
+                                                pmd:MeasuringProcess ;
+                                       ns2:actedOnBehalfOf tsrto:TestingOperator ;
+                                       pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+                                       pmd:nextProcess tsrto:StressRelaxationMeasurementAnalysis ;
+                                       pmd:participant tsrto:StressRelaxationTestPiece ;
+                                       pmd:subordinateProcess tsrto:DeterminationOfOriginalCrossSectionArea ,
+                                                              tsrto:ExtensionApplication ,
+                                                              tsrto:HeatingTheSample ,
+                                                              tsrto:MarkingTheOriginalGaugeLength ,
+                                                              tsrto:StressRelaxationMeasuring .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTestExperiment
+tsrto:StressRelaxationTestExperiment rdf:type owl:NamedIndividual ,
+                                              tsrto:TensileStressRelaxationTest ;
+                                     prov:atLocation tsrto:TestingLaboratory ;
+                                     pmd:characteristic tsrto:TestingDate ,
+                                                        tsrto:TestingOperator ,
+                                                        tsrto:TestingStandard ;
+                                     pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+                                     pmd:input tsrto:StressRelaxationTestPiece ;
+                                     pmd:output tsrto:FracturedTestPiece ,
+                                                tsrto:TestDataFile ;
+                                     pmd:process tsrto:StressRelaxationMeasuringprocess .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTestMachineID
+tsrto:StressRelaxationTestMachineID rdf:type owl:NamedIndividual ,
+                                             pmd:Identifier ,
+                                             pmd:Metadata ;
+                                    ns2:value "MachineName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTestPiece
+tsrto:StressRelaxationTestPiece rdf:type owl:NamedIndividual ,
+                                         pmd:TestPiece ;
+                                pmd:characteristic tsrto:CoefficientOfProportionality ,
+                                                   tsrto:MaterialProvider ,
+                                                   tsrto:TestPieceCrossSectionShape ,
+                                                   tsrto:TestPieceParallelLength ,
+                                                   tsrto:TestPiecePreparation ,
+                                                   tsrto:TestPieceTotalLength ;
+                                pmd:composedOf tsrto:TestPieceMaterialComposition ;
+                                pmd:hasIdentifier tsrto:TestPieceID ;
+                                pmd:output tsrto:FracturedTestPiece .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTestResidualStress
+tsrto:StressRelaxationTestResidualStress rdf:type owl:NamedIndividual ,
+                                                  tsrto:ResidualStress ,
+                                                  pmd:Measurement ,
+                                                  pmd:SecondaryData ;
+                                         pmd:resource tsrto:RowDataTable_ ;
+                                         pmd:unit qudt:MegaPa ;
+                                         ns2:value "ResidualStress"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTestingMachine
+tsrto:StressRelaxationTestingMachine rdf:type owl:NamedIndividual ,
+                                              tsrto:TensileTestingMachine ;
+                                     ns2:actedOnBehalfOf tsrto:TestingOperator ;
+                                     pmd:component tsrto:Extensometer_ ,
+                                                   tsrto:HeatingDevice ,
+                                                   tsrto:MachineSoftware_ ,
+                                                   tsrto:TemperatureMeasuringDevice ;
+                                     pmd:hasIdentifier tsrto:StressRelaxationTestMachineID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressRelaxationTime
+tsrto:StressRelaxationTime rdf:type owl:NamedIndividual ,
+                                    tsrto:TestForceDuration ,
+                                    pmd:Dataset ,
+                                    pmd:Measurement ,
+                                    pmd:PrimaryData ;
+                           pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/StressStrainCurve
+tsrto:StressStrainCurve rdf:type owl:NamedIndividual ,
+                                 tsrto:StressStrainCurve ;
+                        pmd:input tsrto:DeterminationOfModulusOfElasticity ,
+                                  tsrto:DeterminationOfResidualStrain ,
+                                  tsrto:DeterminationOfYieldStrength ;
+                        pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TemperatureMeasuringDevice
+tsrto:TemperatureMeasuringDevice rdf:type owl:NamedIndividual ,
+                                          pmd:Thermocouple ;
+                                 pmd:characteristic tsrto:NumberOfThermocouples ,
+                                                    tsrto:ThermocouplesAccuracy ;
+                                 pmd:hasIdentifier tsrto:TemperatureMeasuringDeviceID ;
+                                 pmd:process tsrto:ThermocoupleCalibration .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TemperatureMeasuringDeviceID
+tsrto:TemperatureMeasuringDeviceID rdf:type owl:NamedIndividual ,
+                                            pmd:Identifier ,
+                                            pmd:Metadata ;
+                                   ns2:value "ThermocoupID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestDataFile
+tsrto:TestDataFile rdf:type owl:NamedIndividual ,
+                            pmd:Measurement ,
+                            pmd:PrimaryData ,
+                            pmd:ValueObject ;
+                   pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestDisplacement
+tsrto:TestDisplacement rdf:type owl:NamedIndividual ,
+                                tsrto:Displacement ,
+                                pmd:Dataset ,
+                                pmd:Measurement ,
+                                pmd:PrimaryData ;
+                       pmd:input tsrto:PlottingTestCurve ,
+                                 tsrto:StrainCalculation ;
+                       pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestForce
+tsrto:TestForce rdf:type owl:NamedIndividual ,
+                         pmd:Dataset ,
+                         pmd:Force ,
+                         pmd:Measurement ,
+                         pmd:PrimaryData ;
+                pmd:input tsrto:PlottingTestCurve ,
+                          tsrto:StressCalculation ;
+                pmd:resource tsrto:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPieceCrossSectionShape
+tsrto:TestPieceCrossSectionShape rdf:type owl:NamedIndividual ,
+                                          pmd:Metadata ,
+                                          pmd:Shape ;
+                                 prov:influenced tsrto:DeterminationOfOriginalCrossSectionArea ;
+                                 ns2:value "TestPieceCrossSectionShape"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPieceID
+tsrto:TestPieceID rdf:type owl:NamedIndividual ,
+                           pmd:Metadata ,
+                           pmd:TestPieceName ;
+                  ns2:value "TestPieceIndenter"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPieceMaterialComposition
+tsrto:TestPieceMaterialComposition rdf:type owl:NamedIndividual ,
+                                            pmd:ChemicalComposition ,
+                                            pmd:Metadata ;
+                                   ns2:value "TestPieceComposition"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPieceParallelLength
+tsrto:TestPieceParallelLength rdf:type owl:NamedIndividual ,
+                                       tsrto:ParallelLength ,
+                                       pmd:Metadata ;
+                              prov:influenced tsrto:MarkingTheOriginalGaugeLength ;
+                              pmd:unit qudt:MiliM ;
+                              ns2:value "TestPieceParallelLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPiecePreparation
+tsrto:TestPiecePreparation rdf:type owl:NamedIndividual ,
+                                    tsrto:SpecimenPreparationProcess ,
+                                    pmd:Metadata ;
+                           ns2:value "TestPiecePreparation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestPieceTotalLength
+tsrto:TestPieceTotalLength rdf:type owl:NamedIndividual ,
+                                    pmd:Length ,
+                                    pmd:Metadata ;
+                           prov:influenced tsrto:MarkingTheOriginalGaugeLength ;
+                           pmd:unit qudt:MiliM ;
+                           ns2:value "TestPieceTotalLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestStrain
+tsrto:TestStrain rdf:type owl:NamedIndividual ,
+                          tsrto:Strain ,
+                          pmd:Measurement ,
+                          pmd:SecondaryData ;
+                 pmd:input tsrto:DeterminationOfModulusOfElasticity ,
+                           tsrto:DeterminationOfResidualStrain ,
+                           tsrto:PlottingTestCurve ;
+                 pmd:resource tsrto:RowDataTable_ ;
+                 pmd:unit qudt:PERCENT ;
+                 ns2:value "TestStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestStress
+tsrto:TestStress rdf:type owl:NamedIndividual ,
+                          pmd:SecondaryData ,
+                          pmd:Stress ;
+                 pmd:input tsrto:DeterminationOfInitialStress ,
+                           tsrto:DeterminationOfModulusOfElasticity ,
+                           tsrto:DeterminationOfResidualStress ,
+                           tsrto:DeterminationOfYieldStrength ,
+                           tsrto:PlottingTestCurve ;
+                 pmd:resource tsrto:RowDataTable_ ;
+                 pmd:unit qudt:MegaPa ;
+                 ns2:value "TestStress"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestTemperature
+tsrto:TestTemperature rdf:type owl:NamedIndividual ,
+                               pmd:Measurement ,
+                               pmd:Metadata ,
+                               pmd:Temperature ;
+                      pmd:unit qudt:DEG_C ;
+                      ns2:value "TestTemperatureValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestingDate
+tsrto:TestingDate rdf:type owl:NamedIndividual ,
+                           pmd:Date ,
+                           pmd:Metadata ;
+                  ns2:value "TestDateIdentifier"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestingLaboratory
+tsrto:TestingLaboratory rdf:type owl:NamedIndividual ,
+                                 pmd:Laboratory ,
+                                 pmd:Metadata ;
+                        ns2:value "LaboratoryNameAndLocation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestingOperator
+tsrto:TestingOperator rdf:type owl:NamedIndividual ,
+                               pmd:Metadata ,
+                               pmd:Operator ;
+                      ns2:actedOnBehalfOf tsrto:TestingLaboratory ;
+                      ns2:value "TestOperator"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestingStandard
+tsrto:TestingStandard rdf:type owl:NamedIndividual ,
+                               pmd:Metadata ,
+                               pmd:Norm ;
+                      prov:wasDrivedFrom tsrto:ResidualStrainFunction ,
+                                         tsrto:ResidualStressFunction ,
+                                         tsrto:StrainFunction ,
+                                         tsrto:StressFunction ;
+                      pmd:resource tsrto:StressRelaxationMeasurementAnalysis ;
+                      ns2:value "DIN EN ISO 10319-1:2003"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ThermocoupleCalibration
+tsrto:ThermocoupleCalibration rdf:type owl:NamedIndividual ,
+                                       tsrto:CollibrationProcess ;
+                              ns2:value "ThermocoupleCalibrationData"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ThermocouplesAccuracy
+tsrto:ThermocouplesAccuracy rdf:type owl:NamedIndividual ,
+                                     tsrto:UncertaintyOfMeasurement ;
+                            ns2:value "ThermocoupleAccuracyValue"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TimeToApplyInitialStrain
+tsrto:TimeToApplyInitialStrain rdf:type owl:NamedIndividual ,
+                                        tsrto:TestForceApplicationTime ,
+                                        pmd:Metadata ,
+                                        pmd:SetPoint ;
+                               pmd:unit qudt:SEC ;
+                               ns2:value "TimeToApplyingInitialStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/relaxation-test/YieldStrength_Rp0.2
+tsrto:YieldStrength_Rp0.2 rdf:type owl:NamedIndividual ,
+                                   tsrto:YieldStrenght ,
+                                   pmd:Measurement ,
+                                   pmd:SecondaryData ;
+                          pmd:resource tsrto:RowDataTable_ ;
+                          pmd:unit qudt:MegaPa ;
+                          ns2:value "YieldStrength_Rp0.2"^^xsd:string .
+
+
+###  https://qudt.org/2.1/schema/qudt/DEG_C
+qudt:DEG_C rdf:type owl:NamedIndividual ,
+                    ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/GigaPa
+qudt:GigaPa rdf:type owl:NamedIndividual ,
+                     ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/MegaPa
+qudt:MegaPa rdf:type owl:NamedIndividual ,
+                     ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/MiliM
+qudt:MiliM rdf:type owl:NamedIndividual ,
+                    ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/MiliM2
+qudt:MiliM2 rdf:type owl:NamedIndividual ,
+                     ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/PER-SEC
+qudt:PER-SEC rdf:type owl:NamedIndividual ,
+                      ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/PERCENT
+qudt:PERCENT rdf:type owl:NamedIndividual ,
+                      ns1:Unit .
+
+
+###  https://qudt.org/2.1/schema/qudt/SEC
+qudt:SEC rdf:type owl:NamedIndividual ,
+                  ns1:Unit .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

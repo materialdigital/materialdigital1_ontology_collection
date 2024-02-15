@@ -1,0 +1,1378 @@
+@prefix : <https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/> .
+@prefix ns1: <http://www.w3.org/ns/prov#> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix csvw: <https://w3.org/ns/csvw#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/> .
+
+<https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/> rdf:type owl:Ontology ;
+                                                                            owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                                                                            dcterms:biblographicCitation "Hossein Beygi Nasrabadi. (2024.01.24) Mechanical Testing Ontology (MTO). Version 3.0.2, www.gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology" ;
+                                                                            dcterms:created "2024.01.24" ;
+                                                                            dcterms:creator "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+                                                                            dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+                                                                            dcterms:title "Mechanical Testing Ontology (MTO)" ;
+                                                                            rdfs:comment "KuferDigital project (www.materialdigital.de/project/1)" ,
+                                                                                         "The materials mechanical testing ontology (MTO) was developed by collecting the mechanical testing vocabulary from ISO 23718 standard, as well as the standardized testing processes described for various mechanical testing of materials like tensile testing, Brinell hardness test, Vickers hardness test, stress relaxation test, and fatigue testing." ;
+                                                                            owl:imports "https://raw.githubusercontent.com/materialdigital/core-ontology/main/pmd_core.ttl" ;
+                                                                            owl:versionInfo "3.0.2 (BPROV, PMDco)" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/biblographicCitation
+dcterms:biblographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/licence
+dcterms:licence rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#imports
+owl:imports rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit
+ns2:Unit rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+ns1:Activity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+ns1:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+ns1:Entity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+ns1:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf ns1:Agent .
+
+
+###  http://www.w3.org/ns/prov#Person
+ns1:Person rdf:type owl:Class ;
+           rdfs:subClassOf ns1:Agent .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+ns1:SoftwareAgent rdf:type owl:Class ;
+                  rdfs:subClassOf ns1:Agent .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/AbsorbedImpactEnergy
+mto:AbsorbedImpactEnergy rdf:type owl:Class ;
+                         rdfs:subClassOf mto:ImpactEnergy .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ActualAbsorbedImpactEnergy
+mto:ActualAbsorbedImpactEnergy rdf:type owl:Class ;
+                               rdfs:subClassOf mto:AbsorbedImpactEnergy .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Actuator
+mto:Actuator rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Amplitude
+mto:Amplitude rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Atmosphere
+mto:Atmosphere rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/AxialStrain
+mto:AxialStrain rdf:type owl:Class ;
+                rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/AxialStress
+mto:AxialStress rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BendingTest
+mto:BendingTest rdf:type owl:Class ;
+                rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BreakingStrength
+mto:BreakingStrength rdf:type owl:Class ;
+                     rdfs:subClassOf mto:Toughness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BrinellHardness
+mto:BrinellHardness rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Hardness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BrinellHardnessTest
+mto:BrinellHardnessTest rdf:type owl:Class ;
+                        rdfs:subClassOf mto:HardnessTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BrinellHardnessTestingMachine
+mto:BrinellHardnessTestingMachine rdf:type owl:Class ;
+                                  rdfs:subClassOf mto:HardnessTestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BrittleFracture
+mto:BrittleFracture rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Fracture .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CalibrationAccessory
+mto:CalibrationAccessory rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CharpyTest
+mto:CharpyTest rdf:type owl:Class ;
+               rdfs:subClassOf mto:ImpactTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CollibrationProcess
+mto:CollibrationProcess rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Process .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CompressionTest
+mto:CompressionTest rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CrackExtensionResistanceCurve
+mto:CrackExtensionResistanceCurve rdf:type owl:Class ;
+                                  rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CrackLength
+mto:CrackLength rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Length .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepCurve
+mto:CreepCurve rdf:type owl:Class ;
+               rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepElongationTime
+mto:CreepElongationTime rdf:type owl:Class ;
+                        rdfs:subClassOf mto:CreepRuptureTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepRuptureTime
+mto:CreepRuptureTime rdf:type owl:Class ;
+                     rdfs:subClassOf mto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepStrain
+mto:CreepStrain rdf:type owl:Class ;
+                rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepStrength
+mto:CreepStrength rdf:type owl:Class ;
+                  rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepTest
+mto:CreepTest rdf:type owl:Class ;
+              rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CrossheadSeparationRate
+mto:CrossheadSeparationRate rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Cycle
+mto:Cycle rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CycleNumber
+mto:CycleNumber rdf:type owl:Class ;
+                rdfs:subClassOf mto:Number .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CyclicStrainHardeningExponent
+mto:CyclicStrainHardeningExponent rdf:type owl:Class ;
+                                  rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CyclicStrengthCoefficient
+mto:CyclicStrengthCoefficient rdf:type owl:Class ;
+                              rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CyclicYieldStrength
+mto:CyclicYieldStrength rdf:type owl:Class ;
+                        rdfs:subClassOf mto:YieldStrenght .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/DataAcquisitionDevice
+mto:DataAcquisitionDevice rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Depth
+mto:Depth rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Diagonal
+mto:Diagonal rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/DirectVerification
+mto:DirectVerification rdf:type owl:Class ;
+                       rdfs:subClassOf mto:CollibrationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Displacement
+mto:Displacement rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/DuctileFracture
+mto:DuctileFracture rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Fracture .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ElasticLimit
+mto:ElasticLimit rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ElasticStrain
+mto:ElasticStrain rdf:type owl:Class ;
+                  rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ElectroMechanicalActuator
+mto:ElectroMechanicalActuator rdf:type owl:Class ;
+                              rdfs:subClassOf mto:Actuator .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Elongation
+mto:Elongation rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Energy
+mto:Energy rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/EngineeringStrain
+mto:EngineeringStrain rdf:type owl:Class ;
+                      rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/EngineeringStress
+mto:EngineeringStress rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/EstimatedStrainRateOverTheParallelLength
+mto:EstimatedStrainRateOverTheParallelLength rdf:type owl:Class ;
+                                             rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ExperimentTime
+mto:ExperimentTime rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:Duration .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Extremum
+mto:Extremum rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Failure
+mto:Failure rdf:type owl:Class ;
+            rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FailureTime
+mto:FailureTime rdf:type owl:Class ;
+                rdfs:subClassOf mto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Fatigue
+mto:Fatigue rdf:type owl:Class ;
+            rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueDuctilityCoefficient
+mto:FatigueDuctilityCoefficient rdf:type owl:Class ;
+                                rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueDuctilityExponent
+mto:FatigueDuctilityExponent rdf:type owl:Class ;
+                             rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueLife
+mto:FatigueLife rdf:type owl:Class ;
+                rdfs:subClassOf mto:Number .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueStrength
+mto:FatigueStrength rdf:type owl:Class ;
+                    rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueStrengthCoefficient
+mto:FatigueStrengthCoefficient rdf:type owl:Class ;
+                               rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueStrengthExponent
+mto:FatigueStrengthExponent rdf:type owl:Class ;
+                            rdfs:subClassOf mto:Fatigue .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueTest
+mto:FatigueTest rdf:type owl:Class ;
+                rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueTestingMachine
+mto:FatigueTestingMachine rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FlatSheet
+mto:FlatSheet rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Shape .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ForceCapicity
+mto:ForceCapicity rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Force .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ForceControlledFatigueTest
+mto:ForceControlledFatigueTest rdf:type owl:Class ;
+                               rdfs:subClassOf mto:FatigueTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ForceTransducer
+mto:ForceTransducer rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Fracture
+mto:Fracture rdf:type owl:Class ;
+             rdfs:subClassOf mto:Failure .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FractureStrength
+mto:FractureStrength rdf:type owl:Class ;
+                     rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FractureToughness
+mto:FractureToughness rdf:type owl:Class ;
+                      rdfs:subClassOf mto:Toughness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FractureToughnessTest
+mto:FractureToughnessTest rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Frequency
+mto:Frequency rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/GaugeLength
+mto:GaugeLength rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Length .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/GrindingProcess
+mto:GrindingProcess rdf:type owl:Class ;
+                    rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/GrippingDevice
+mto:GrippingDevice rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HandelingProcess
+mto:HandelingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Hardness
+mto:Hardness rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HardnessTest
+mto:HardnessTest rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HardnessTestingMachine
+mto:HardnessTestingMachine rdf:type owl:Class ;
+                           rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HighCycleFatigueTest
+mto:HighCycleFatigueTest rdf:type owl:Class ;
+                         rdfs:subClassOf mto:FatigueTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Humidity
+mto:Humidity rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HydraulicActuator
+mto:HydraulicActuator rdf:type owl:Class ;
+                      rdfs:subClassOf mto:Actuator .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ImpactEnergy
+mto:ImpactEnergy rdf:type owl:Class ;
+                 rdfs:subClassOf mto:Energy .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ImpactTest
+mto:ImpactTest rdf:type owl:Class ;
+               rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/IndentationModulus
+mto:IndentationModulus rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:ModulusOfElasticity .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Indenter
+mto:Indenter rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/IndirectVerification
+mto:IndirectVerification rdf:type owl:Class ;
+                         rdfs:subClassOf mto:CollibrationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/IzodTest
+mto:IzodTest rdf:type owl:Class ;
+             rdfs:subClassOf mto:ImpactTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/JRCurve
+mto:JRCurve rdf:type owl:Class ;
+            rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/KnoopHardness
+mto:KnoopHardness rdf:type owl:Class ;
+                  rdfs:subClassOf mto:Hardness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/KnoopHardnessTest
+mto:KnoopHardnessTest rdf:type owl:Class ;
+                      rdfs:subClassOf mto:HardnessTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/LatheralExpansion
+mto:LatheralExpansion rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/LinearStrain
+mto:LinearStrain rdf:type owl:Class ;
+                 rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/LowCycleFatigueTest
+mto:LowCycleFatigueTest rdf:type owl:Class ;
+                        rdfs:subClassOf mto:FatigueTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/LowerYieldStrenght
+mto:LowerYieldStrenght rdf:type owl:Class ;
+                       rdfs:subClassOf mto:YieldStrenght .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MachiningProcess
+mto:MachiningProcess rdf:type owl:Class ;
+                     rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MarkingProcess
+mto:MarkingProcess rdf:type owl:Class ;
+                   rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MartensHardness
+mto:MartensHardness rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Hardness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MartensHardnessTest
+mto:MartensHardnessTest rdf:type owl:Class ;
+                        rdfs:subClassOf mto:HardnessTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Maximum
+mto:Maximum rdf:type owl:Class ;
+            rdfs:subClassOf mto:Extremum .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MaximumForce
+mto:MaximumForce rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Force .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Mean
+mto:Mean rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MechanicalStrength
+mto:MechanicalStrength rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Minimum
+mto:Minimum rdf:type owl:Class ;
+            rdfs:subClassOf mto:Extremum .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/NanoindentationTest
+mto:NanoindentationTest rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/NormalStress
+mto:NormalStress rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Notch
+mto:Notch rdf:type owl:Class ;
+          rdfs:subClassOf pmd:Location .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Number
+mto:Number rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ParallelLength
+mto:ParallelLength rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:Length .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PeakStress
+mto:PeakStress rdf:type owl:Class ;
+               rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageCreepElongation
+mto:PercentageCreepElongation rdf:type owl:Class ;
+                              rdfs:subClassOf mto:Elongation .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageElongation
+mto:PercentageElongation rdf:type owl:Class ;
+                         rdfs:subClassOf mto:Elongation .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageElongationAfterCreepRepture
+mto:PercentageElongationAfterCreepRepture rdf:type owl:Class ;
+                                          rdfs:subClassOf mto:Elongation .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageInitialPlasticElongation
+mto:PercentageInitialPlasticElongation rdf:type owl:Class ;
+                                       rdfs:subClassOf mto:Elongation .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentagePlasticExtensionAtMaximumForce
+mto:PercentagePlasticExtensionAtMaximumForce rdf:type owl:Class ;
+                                             rdfs:subClassOf pmd:PecentageExtension .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageTotalExtensionAtFracture
+mto:PercentageTotalExtensionAtFracture rdf:type owl:Class ;
+                                       rdfs:subClassOf pmd:PecentageExtension .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageTotalExtensionAtMaximumForce
+mto:PercentageTotalExtensionAtMaximumForce rdf:type owl:Class ;
+                                           rdfs:subClassOf pmd:PecentageExtension .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PercentageYieldPointExtension
+mto:PercentageYieldPointExtension rdf:type owl:Class ;
+                                  rdfs:subClassOf pmd:PecentageExtension .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PermanentSetStrength
+mto:PermanentSetStrength rdf:type owl:Class ;
+                         rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PlaneStrainFractureToughness
+mto:PlaneStrainFractureToughness rdf:type owl:Class ;
+                                 rdfs:subClassOf mto:FractureToughness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PlaneStrainIndentationModulus
+mto:PlaneStrainIndentationModulus rdf:type owl:Class ;
+                                  rdfs:subClassOf mto:IndentationModulus .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PlasticElongationTime
+mto:PlasticElongationTime rdf:type owl:Class ;
+                          rdfs:subClassOf mto:CreepRuptureTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PlasticStrain
+mto:PlasticStrain rdf:type owl:Class ;
+                  rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PoissonRatio
+mto:PoissonRatio rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Index .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PolishingProcess
+mto:PolishingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ProofStrength
+mto:ProofStrength rdf:type owl:Class ;
+                  rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ProofStrengthPlasticExtension
+mto:ProofStrengthPlasticExtension rdf:type owl:Class ;
+                                  rdfs:subClassOf mto:ProofStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ProofStrengthTotalExtension
+mto:ProofStrengthTotalExtension rdf:type owl:Class ;
+                                rdfs:subClassOf mto:ProofStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ProportionalLimit
+mto:ProportionalLimit rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ProportionalityCoefficient
+mto:ProportionalityCoefficient rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:Index .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Range
+mto:Range rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Ratio
+mto:Ratio rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ReductionOfArea
+mto:ReductionOfArea rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ReferenceBlock
+mto:ReferenceBlock rdf:type owl:Class ;
+                   rdfs:subClassOf mto:CalibrationAccessory .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ResidualStress
+mto:ResidualStress rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Resolution
+mto:Resolution rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/RockwellHardness
+mto:RockwellHardness rdf:type owl:Class ;
+                     rdfs:subClassOf mto:Hardness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/RockwellHardnessTest
+mto:RockwellHardnessTest rdf:type owl:Class ;
+                         rdfs:subClassOf mto:HardnessTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/RoundBar
+mto:RoundBar rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Shape .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SamplingProcess
+mto:SamplingProcess rdf:type owl:Class ;
+                    rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ShearFracture
+mto:ShearFracture rdf:type owl:Class ;
+                  rdfs:subClassOf mto:Fracture .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SignalPeriod
+mto:SignalPeriod rdf:type owl:Class ;
+                 rdfs:subClassOf mto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SlopeOfTheElasticPart
+mto:SlopeOfTheElasticPart rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:ModulusOfElasticity .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SpecimenPreparationProcess
+mto:SpecimenPreparationProcess rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:Process .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Speed
+mto:Speed rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StainAmplitude
+mto:StainAmplitude rdf:type owl:Class ;
+                   rdfs:subClassOf mto:Amplitude .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StoringProcess
+mto:StoringProcess rdf:type owl:Class ;
+                   rdfs:subClassOf mto:SpecimenPreparationProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Strain
+mto:Strain rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainControlledFatigueTest
+mto:StrainControlledFatigueTest rdf:type owl:Class ;
+                                rdfs:subClassOf mto:FatigueTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainFatigueLifeCurve
+mto:StrainFatigueLifeCurve rdf:type owl:Class ;
+                           rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainRange
+mto:StrainRange rdf:type owl:Class ;
+                rdfs:subClassOf mto:Range .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainRate
+mto:StrainRate rdf:type owl:Class ;
+               rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainRatio
+mto:StrainRatio rdf:type owl:Class ;
+                rdfs:subClassOf mto:Ratio ,
+                                pmd:Index .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressAmplitude
+mto:StressAmplitude rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Amplitude .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressRate
+mto:StressRate rdf:type owl:Class ;
+               rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressRelaxationTest
+mto:StressRelaxationTest rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressStrainCurve
+mto:StressStrainCurve rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressStrainHystersisLoopCurve
+mto:StressStrainHystersisLoopCurve rdf:type owl:Class ;
+                                   rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TensileStrength
+mto:TensileStrength rdf:type owl:Class ;
+                    rdfs:subClassOf mto:BreakingStrength ,
+                                    mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TensileTest
+mto:TensileTest rdf:type owl:Class ;
+                rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TensileTestingMachine
+mto:TensileTestingMachine rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TestForceApplicationTime
+mto:TestForceApplicationTime rdf:type owl:Class ;
+                             rdfs:subClassOf mto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TestForceDuration
+mto:TestForceDuration rdf:type owl:Class ;
+                      rdfs:subClassOf mto:ExperimentTime .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ThermoMechanicalFatigueTest
+mto:ThermoMechanicalFatigueTest rdf:type owl:Class ;
+                                rdfs:subClassOf mto:FatigueTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TorsionTest
+mto:TorsionTest rdf:type owl:Class ;
+                rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/Toughness
+mto:Toughness rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Mechanical .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TransitionCurve
+mto:TransitionCurve rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TransitionRadius
+mto:TransitionRadius rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Radius .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TransitionTemperature
+mto:TransitionTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:Temperature .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TransverseStrain
+mto:TransverseStrain rdf:type owl:Class ;
+                     rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TrueStrain
+mto:TrueStrain rdf:type owl:Class ;
+               rdfs:subClassOf mto:Strain .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TrueStress
+mto:TrueStress rdf:type owl:Class ;
+               rdfs:subClassOf pmd:Stress .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/UNotch
+mto:UNotch rdf:type owl:Class ;
+           rdfs:subClassOf mto:Notch .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/UncertaintyOfMeasurement
+mto:UncertaintyOfMeasurement rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/UniaxialTensionCompressionMachine
+mto:UniaxialTensionCompressionMachine rdf:type owl:Class ;
+                                      rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/UpperYieldStrength
+mto:UpperYieldStrength rdf:type owl:Class ;
+                       rdfs:subClassOf mto:YieldStrenght .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/VNotch
+mto:VNotch rdf:type owl:Class ;
+           rdfs:subClassOf mto:Notch .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/VickersHardness
+mto:VickersHardness rdf:type owl:Class ;
+                    rdfs:subClassOf mto:Hardness .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/VickersHardnessTest
+mto:VickersHardnessTest rdf:type owl:Class ;
+                        rdfs:subClassOf mto:HardnessTest .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/VickersHardnessTestingMachine
+mto:VickersHardnessTestingMachine rdf:type owl:Class ;
+                                  rdfs:subClassOf mto:HardnessTestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/WaveformDevice
+mto:WaveformDevice rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/WohlerCurve
+mto:WohlerCurve rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/YieldStrenght
+mto:YieldStrenght rdf:type owl:Class ;
+                  rdfs:subClassOf mto:MechanicalStrength .
+
+
+###  https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/indentation
+mto:indentation rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Location .
+
+
+###  https://w3.org/ns/csvw#Table
+csvw:Table rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Algorithm
+pmd:Algorithm rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+pmd:AnalysingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Area
+pmd:Area rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/AssemblingProcess
+pmd:AssemblingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Caliper
+pmd:Caliper rdf:type owl:Class ;
+            rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/ChemicalComposition
+pmd:ChemicalComposition rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Component
+pmd:Component rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Object .
+
+
+###  https://w3id.org/pmd/co/ConditioningProcess
+pmd:ConditioningProcess rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/CreepStress
+pmd:CreepStress rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Stress .
+
+
+###  https://w3id.org/pmd/co/CrossSectionArea
+pmd:CrossSectionArea rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Area .
+
+
+###  https://w3id.org/pmd/co/DataScope
+pmd:DataScope rdf:type owl:Class ;
+              rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/Dataset
+pmd:Dataset rdf:type owl:Class ;
+            rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Date
+pmd:Date rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Time .
+
+
+###  https://w3id.org/pmd/co/Diameter
+pmd:Diameter rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/DigitalEntity
+pmd:DigitalEntity rdf:type owl:Class ;
+                  rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/DimensionMeasuringDevice
+pmd:DimensionMeasuringDevice rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Distance
+pmd:Distance rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Document
+pmd:Document rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Duration
+pmd:Duration rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Time .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+pmd:EngineeredMaterial rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:Object .
+
+
+###  https://w3id.org/pmd/co/Extension
+pmd:Extension rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Extensometer
+pmd:Extensometer rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Force
+pmd:Force rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Function
+pmd:Function rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Furnace
+pmd:Furnace rdf:type owl:Class ;
+            rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/GeometryChangingProcess
+pmd:GeometryChangingProcess rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Grips
+pmd:Grips rdf:type owl:Class ;
+          rdfs:subClassOf pmd:Component .
+
+
+###  https://w3id.org/pmd/co/GripsAlignment
+pmd:GripsAlignment rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:AssemblingProcess .
+
+
+###  https://w3id.org/pmd/co/HeatTreatmentProcess
+pmd:HeatTreatmentProcess rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:ConditioningProcess .
+
+
+###  https://w3id.org/pmd/co/Identifier
+pmd:Identifier rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Image
+pmd:Image rdf:type owl:Class ;
+          rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Index
+pmd:Index rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Laboratory
+pmd:Laboratory rdf:type owl:Class ;
+               rdfs:subClassOf ns1:Organization .
+
+
+###  https://w3id.org/pmd/co/Length
+pmd:Length rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/LoadCell
+pmd:LoadCell rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/LoadCellCapicity
+pmd:LoadCellCapicity rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Location
+pmd:Location rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/MaterialProperty
+pmd:MaterialProperty rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:MaterialRelated .
+
+
+###  https://w3id.org/pmd/co/MaterialRelated
+pmd:MaterialRelated rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Measurement
+pmd:Measurement rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/MeasuringDevice
+pmd:MeasuringDevice rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/MeasuringProcess
+pmd:MeasuringProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/Mechanical
+pmd:Mechanical rdf:type owl:Class ;
+               rdfs:subClassOf pmd:MaterialProperty .
+
+
+###  https://w3id.org/pmd/co/MechanicalTestingProcess
+pmd:MechanicalTestingProcess rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/Metadata
+pmd:Metadata rdf:type owl:Class ;
+             rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Method
+pmd:Method rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ModulusOfElasticity
+pmd:ModulusOfElasticity rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/MountingProcess
+pmd:MountingProcess rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:AssemblingProcess .
+
+
+###  https://w3id.org/pmd/co/NodeInfo
+pmd:NodeInfo rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Norm
+pmd:Norm rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/Note
+pmd:Note rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Object
+pmd:Object rdf:type owl:Class ;
+           rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/Operator
+pmd:Operator rdf:type owl:Class ;
+             rdfs:subClassOf ns1:Person .
+
+
+###  https://w3id.org/pmd/co/PecentageExtension
+pmd:PecentageExtension rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:Extension .
+
+
+###  https://w3id.org/pmd/co/PrimaryData
+pmd:PrimaryData rdf:type owl:Class ;
+                rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Process
+pmd:Process rdf:type owl:Class ;
+            rdfs:subClassOf ns1:Activity .
+
+
+###  https://w3id.org/pmd/co/ProcessDuration
+pmd:ProcessDuration rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+pmd:ProcessingNode rdf:type owl:Class ;
+                   rdfs:subClassOf ns1:Agent .
+
+
+###  https://w3id.org/pmd/co/Radius
+pmd:Radius rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Roughness
+pmd:Roughness rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Sample
+pmd:Sample rdf:type owl:Class ;
+           rdfs:subClassOf pmd:EngineeredMaterial .
+
+
+###  https://w3id.org/pmd/co/SecondaryData
+pmd:SecondaryData rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/SetPoint
+pmd:SetPoint rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/Shape
+pmd:Shape rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Specimen
+pmd:Specimen rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Sample .
+
+
+###  https://w3id.org/pmd/co/Stiffness
+pmd:Stiffness rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Stress
+pmd:Stress rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Temperature
+pmd:Temperature rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TemperatureChangingProcess
+pmd:TemperatureChangingProcess rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:ConditioningProcess .
+
+
+###  https://w3id.org/pmd/co/TestPiece
+pmd:TestPiece rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Sample .
+
+
+###  https://w3id.org/pmd/co/TestPieceInfo
+pmd:TestPieceInfo rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TestPieceName
+pmd:TestPieceName rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Identifier .
+
+
+###  https://w3id.org/pmd/co/TestingMachine
+pmd:TestingMachine rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/TestingRate
+pmd:TestingRate rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Thermocouple
+pmd:Thermocouple rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Thickness
+pmd:Thickness rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Time
+pmd:Time rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+pmd:ValueObject rdf:type owl:Class ;
+                rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/ValueScope
+pmd:ValueScope rdf:type owl:Class ;
+               rdfs:subClassOf ns1:Entity .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
