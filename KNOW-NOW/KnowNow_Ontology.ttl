@@ -1,0 +1,3424 @@
+@prefix : <https://w3id.org/pmd/co/> .
+@prefix AG: <http://www.w3.org/ns/prov#> .
+@prefix KN: <http://www.semanticweb.org/ontologies/KnowNow#> .
+@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns3: <http://purl.org/dc/elements/1.1/> .
+@prefix ns4: <http://emmo.info/emmo/top/annotations#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/ontologies/KnowNow> .
+
+<http://www.semanticweb.org/ontologies/KnowNow> rdf:type owl:Ontology ;
+                                                 ns3:title "KnowNow"@en ;
+                                                 rdfs:comment "Based on Platform Material Digital Core Ontology (pmdco) https://w3id.org/pmd/co"@en ,
+                                                              "Ontology of project Know Now"@en ,
+                                                              "The PMD Core Ontology (PMDco) is a comprehensive framework for representing knowledge that encompasses fundamental concepts from the domains of materials science and engineering (MSE). The PMDco has been designed as a mid-level ontology to establish a connection between specific MSE application ontologies and the domain neutral concepts found in established top-level ontologies. The primary goal of the PMDco is to promote interoperability between diverse domains. PMDco's class structure is both understandable and extensible, making it an efficient tool for organizing MSE knowledge. It serves as a semantic intermediate layer that unifies MSE knowledge representations, enabling data and metadata to be systematically integrated on key terms within the MSE domain. With PMDco, it is possible to seamlessly trace data generation. The design of PMDco is based on the W3C Provenance Ontology (PROV-O), which provides a standard framework for capturing the generation, derivation, and attribution of resources. By building on this foundation, PMDco facilitates the integration of data from various sources and the creation of complex workflows. In summary, PMDco is a valuable tool for researchers and practitioners in the MSE domains. It provides a common language for representing and sharing knowledge, allowing for efficient collaboration and promoting interoperability between diverse domains. Its design allows for the systematic integration of data and metadata, enabling seamless traceability of data generation. Overall, PMDco is a crucial step towards a unified and comprehensive understanding of the MSE domain. PMDco at GitHub: https://github.com/materialdigital/core-ontology"@en ;
+                                                 owl:versionInfo "2.0.0-alpha2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://emmo.info/emmo/top/annotations#EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9
+ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 rdf:type owl:AnnotationProperty .
+
+
+###  http://emmo.info/emmo/top/annotations#EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a
+ns4:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+ns3:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+ns3:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+ns3:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_name
+KN:has_name rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+ns2:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+ns2:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+ns2:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+ns2:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#category
+AG:category rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#component
+AG:component rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#constraints
+AG:constraints rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#definition
+AG:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#dm
+AG:dm rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#editorialNote
+AG:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#inverse
+AG:inverse rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#n
+AG:n rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#qualifiedForm
+AG:qualifiedForm rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#sharesDefinitionWith
+AG:sharesDefinitionWith rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/co/abbreviation
+:abbreviation rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:subPropertyOf ns2:altLabel .
+
+
+###  https://w3id.org/pmd/co/definitionSource
+:definitionSource rdf:type owl:AnnotationProperty ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                  ns2:definition "Indicates the source of the definition."@en .
+
+
+###  https://w3id.org/pmd/co/symbol
+:symbol rdf:type owl:AnnotationProperty ;
+        rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+        rdfs:subPropertyOf ns2:altLabel .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#float
+xsd:float rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#hasModel
+KN:hasModel rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Siebung
+KN:has_Siebung rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Software_Agent
+KN:has_Software_Agent rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#isEstimatedBy
+KN:isEstimatedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#isMeasuredBy
+KN:isMeasuredBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/oa#hasSelector
+<http://www.w3.org/ns/oa#hasSelector> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> .
+
+
+###  http://www.w3.org/ns/oa#hasSource
+<http://www.w3.org/ns/oa#hasSource> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/oa#> .
+
+
+###  http://www.w3.org/ns/prov#actedOnBehalfOf
+AG:actedOnBehalfOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain AG:Agent ;
+                   rdfs:range AG:Agent ;
+                   rdfs:isDefinedBy AG: ;
+                   rdfs:label "actedOnBehalfOf"@en .
+
+
+###  http://www.w3.org/ns/prov#wasAssociatedWith
+AG:wasAssociatedWith rdf:type owl:ObjectProperty ;
+                     rdfs:domain AG:Activity ;
+                     rdfs:range AG:Agent ;
+                     rdfs:isDefinedBy AG: ;
+                     rdfs:label "wasAssociatedWith" ;
+                     ns2:definition "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+AG:wasAttributedTo rdf:type owl:ObjectProperty ;
+                   rdfs:domain AG:Entity ;
+                   rdfs:range AG:Agent ;
+                   rdfs:isDefinedBy AG: ;
+                   rdfs:label "wasAttributedTo" ;
+                   ns2:definition "Attribution is the ascribing of an entity to an agent."@en .
+
+
+###  https://w3id.org/pmd/co/composedOf
+:composedOf rdf:type owl:ObjectProperty ;
+            owl:inverseOf :composes ;
+            rdfs:domain :Object ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "composed of"@en ;
+            ns2:definition "This property is used to describe which voxels and materials an object is composed of."@en .
+
+
+###  https://w3id.org/pmd/co/composes
+:composes rdf:type owl:ObjectProperty ;
+          rdfs:range :Object ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "composes"@en ;
+          ns2:definition "This property is used to describe which objects a voxel or a material contributes to compose."@en .
+
+
+###  https://w3id.org/pmd/co/executedBy
+:executedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :executes ;
+            rdfs:domain :Process ;
+            rdfs:range :ProcessingNode ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "executed by"@en ;
+            ns2:definition "This property represents which process is executed by which process node."@en .
+
+
+###  https://w3id.org/pmd/co/executes
+:executes rdf:type owl:ObjectProperty ;
+          rdfs:domain :ProcessingNode ;
+          rdfs:range :Process ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "executes"@en ;
+          ns2:definition "This property represents which process node executes a process"@en .
+
+
+###  https://w3id.org/pmd/co/hasCharacteristic
+:hasCharacteristic rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf :isCharacteristicOf ;
+                   rdfs:range :ValueObject ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                   rdfs:label "has characteristic"@en .
+
+
+###  https://w3id.org/pmd/co/hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :ProcessingNode ;
+              rdfs:range :ProcessingNode ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "has component"@en ;
+              ns2:definition "An object property associating a process node with its (potentially modular) components, e.g. the chambers of a heat treatment furnace."@en .
+
+
+###  https://w3id.org/pmd/co/hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasParticipant ;
+          owl:inverseOf :isInputOf ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "has input"@en ;
+          ns2:definition "This property is used to link the processes to their input objects"@en .
+
+
+###  https://w3id.org/pmd/co/hasNextProcess
+:hasNextProcess rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasPreviousProcess ;
+                rdfs:domain :Process ;
+                rdfs:range :Process ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                rdfs:label "has next process"@en ;
+                ns2:definition "This property is used to indicate the process that was run after the current process."@en .
+
+
+###  https://w3id.org/pmd/co/hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasParticipant ;
+           owl:inverseOf :isOutputOf ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "has output"@en ;
+           ns2:definition "This property is used to link the processes to their output objects"@en .
+
+
+###  https://w3id.org/pmd/co/hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isParticipantOf ;
+                rdfs:domain :Process ;
+                rdfs:range :Object ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                rdfs:label "has participant"@en ;
+                ns2:definition "A relation between a process and an object, in which the objects is somehow involved in the process."@en .
+
+
+###  https://w3id.org/pmd/co/hasPreviousProcess
+:hasPreviousProcess rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Process ;
+                    rdfs:range :Process ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "has previous process"@en ;
+                    ns2:definition "This property is used to indicate that which process was previously run."@en .
+
+
+###  https://w3id.org/pmd/co/hasProcess
+:hasProcess rdf:type owl:ObjectProperty ;
+            rdfs:range :Process ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "has process"@en .
+
+
+###  https://w3id.org/pmd/co/hasResource
+:hasResource rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :ValueObject ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "has resource"@en .
+
+
+###  https://w3id.org/pmd/co/hasState
+:hasState rdf:type owl:ObjectProperty ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "has state"@en .
+
+
+###  https://w3id.org/pmd/co/hasSubordinateProcess
+:hasSubordinateProcess rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :hasSuperordinateProcess ;
+                       rdfs:domain :Process ;
+                       rdfs:range :Process ;
+                       rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                       rdfs:label "has subordinate process"@en ;
+                       ns2:definition "This property is used to link a process to its subordinate processes."@en .
+
+
+###  https://w3id.org/pmd/co/hasSuperordinateProcess
+:hasSuperordinateProcess rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                         rdfs:label "has superordinate process"@en ;
+                         ns2:definition "This property is used to link a process to its super ordinated processes."@en .
+
+
+###  https://w3id.org/pmd/co/hasUnit
+:hasUnit rdf:type owl:ObjectProperty ;
+         rdfs:domain :ValueObject ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+         rdfs:label "has unit"@en ;
+         ns2:definition """Unit of measurement.
+Examples for rdsf:range are units from qudt or wikidata or own defindes units."""@en .
+
+
+###  https://w3id.org/pmd/co/isCharacteristicOf
+:isCharacteristicOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "is characteristic of"@en .
+
+
+###  https://w3id.org/pmd/co/isInputOf
+:isInputOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :isParticipantOf ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "is input of"@en .
+
+
+###  https://w3id.org/pmd/co/isOutputOf
+:isOutputOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :isParticipantOf ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "is output of"@en .
+
+
+###  https://w3id.org/pmd/co/isParticipantOf
+:isParticipantOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                 rdfs:label "is participant of"@en .
+
+
+###  https://w3id.org/pmd/co/relatesTo
+:relatesTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :ValueObject ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "relates to"@en ;
+           ns2:definition "Describes a general relationship between domain objects."@en .
+
+
+###  https://w3id.org/pmd/co/relatesToElement
+:relatesToElement rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :relatesTo ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                  rdfs:label "relates to element"@en .
+
+
+###  https://w3id.org/pmd/co/relatesToExtension
+:relatesToExtension rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :relatesTo ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "relates to extension"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_A_BET
+KN:has_A_BET rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Datum
+KN:has_Datum rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Dichte
+KN:has_Dichte rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Dichte_Werte
+KN:has_Dichte_Werte rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Einwaage
+KN:has_Einwaage rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Error
+KN:has_Error rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Feinmahlungs-Prozessparameter
+KN:has_Feinmahlungs-Prozessparameter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Feinmahlungsdauer
+KN:has_Feinmahlungsdauer rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_HomogenisierungsParameter
+KN:has_HomogenisierungsParameter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Imaginärteil_probe1
+KN:has_Imaginärteil_probe1 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Imaginärteil_probe2
+KN:has_Imaginärteil_probe2 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Kalzinierungs_Behälter_Material
+KN:has_Kalzinierungs_Behälter_Material rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Label
+KN:has_Label rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Messbedingungen
+KN:has_Messbedingungen rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Messergebnisse
+KN:has_Messergebnisse rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Messgerät
+KN:has_Messgerät rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Mu1_1MHz_Mittelwert
+KN:has_Mu1_1MHz_Mittelwert rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Mu2_1MHz_Mittelwert
+KN:has_Mu2_1MHz_Mittelwert rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Name
+KN:has_Name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Proben-Charge_extern
+KN:has_Proben-Charge_extern rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Proben-Charge_intern
+KN:has_Proben-Charge_intern rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Prozessparameter
+KN:has_Prozessparameter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Pulver_je_Behälter
+KN:has_Pulver_je_Behälter rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Realteil_probe1
+KN:has_Realteil_probe1 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Realteil_probe2
+KN:has_Realteil_probe2 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Sieb-Maschenweite
+KN:has_Sieb-Maschenweite rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Theoret_Dichte
+KN:has_Theoret_Dichte rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Trocknung
+KN:has_Trocknung rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Unit
+KN:has_Unit rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Untersuchungsgegenstand_Pulver_d50
+KN:has_Untersuchungsgegenstand_Pulver_d50 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Untersuchungsgegenstand_d50
+KN:has_Untersuchungsgegenstand_d50 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_Windungen
+KN:has_Windungen rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_chemischeZusammensetzung
+KN:has_chemischeZusammensetzung rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_contact_pressure
+KN:has_contact_pressure rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_d_50
+KN:has_d_50 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_dumprate_trajectory
+KN:has_dumprate_trajectory rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_dumprate_vtk_and_stl
+KN:has_dumprate_vtk_and_stl rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_forces
+KN:has_forces rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_fraction_class_1
+KN:has_fraction_class_1 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_fraction_class_2
+KN:has_fraction_class_2 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_fraction_class_3
+KN:has_fraction_class_3 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_fraction_class_4
+KN:has_fraction_class_4 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_fraction_class_5
+KN:has_fraction_class_5 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_max_rel_Schwindung
+KN:has_max_rel_Schwindung rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_offene_Por
+KN:has_offene_Por rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_size_class_1
+KN:has_size_class_1 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_size_class_2
+KN:has_size_class_2 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_size_class_3
+KN:has_size_class_3 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_size_class_4
+KN:has_size_class_4 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_size_class_5
+KN:has_size_class_5 rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_timesteps
+KN:has_timesteps rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_total_number_of_hard_particles
+KN:has_total_number_of_hard_particles rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_velocity_of_pressing_plate
+KN:has_velocity_of_pressing_plate rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_x-y-Messdaten
+KN:has_x-y-Messdaten rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#has_x-y-Messdaten_SinterSim
+KN:has_x-y-Messdaten_SinterSim rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/prov#endedAtTime
+AG:endedAtTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain AG:Activity ;
+               rdfs:range xsd:dateTime ;
+               rdfs:isDefinedBy AG: ;
+               rdfs:label "endedAtTime" ;
+               ns2:definition "The time at which an activity ended. See also prov:startedAtTime."@en ;
+               AG:category "starting-point" ;
+               AG:component "entities-activities" ;
+               AG:editorialNote "It is the intent that the property chain holds: (prov:qualifiedEnd o prov:atTime) rdfs:subPropertyOf prov:endedAtTime."@en ;
+               AG:qualifiedForm AG:End ,
+                                AG:atTime .
+
+
+###  http://www.w3.org/ns/prov#startedAtTime
+AG:startedAtTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain AG:Activity ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:isDefinedBy AG: ;
+                 rdfs:label "startedAtTime" ;
+                 ns2:definition "The time at which an activity started. See also prov:endedAtTime."@en ;
+                 AG:category "starting-point" ;
+                 AG:component "entities-activities" ;
+                 AG:editorialNote "It is the intent that the property chain holds: (prov:qualifiedStart o prov:atTime) rdfs:subPropertyOf prov:startedAtTime."@en ;
+                 AG:qualifiedForm AG:Start ,
+                                  AG:atTime .
+
+
+###  https://w3id.org/pmd/co/hasMaxValue
+:hasMaxValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasValue ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "has max value"@en ;
+             ns2:definition "refers to all values equal or smaller than the given one"@en .
+
+
+###  https://w3id.org/pmd/co/hasMinValue
+:hasMinValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasValue ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "has min value"@en ;
+             ns2:definition "refers to all values equal or larger than the given one"@en .
+
+
+###  https://w3id.org/pmd/co/hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :ValueObject ;
+          rdfs:range rdfs:Literal ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "has value"@en ,
+                     "hat Wert"@de .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://emmo.info/emmo/middle/math#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a
+<http://emmo.info/emmo/middle/math#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf :ValueObject ;
+                                                                              ns4:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a "viscosity in the Navier-Stokes equation"@en ;
+                                                                              rdfs:comment "A 'variable' whose value is assumed to be known independently from the equation, but whose value is not explicitated in the equation."@en ;
+                                                                              ns2:prefLabel "Parameter"@en .
+
+
+###  http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c
+<http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf :AnalysingProcess ;
+                                                                                   ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A language object used in metrology."@en ;
+                                                                                   rdfs:comment """Metrology includes all theoretical and practical aspects of measurement, whatever the measurement uncertainty and field of application.
+
+-- International vocabulary of metrology (VIM)"""@en ,
+                                                                                                "This language domain makes use of ISO 80000 concepts."@en ;
+                                                                                   ns2:prefLabel "Metrological"@en .
+
+
+###  http://emmo.info/emmo/middle/models#ContinuumModel
+<http://emmo.info/emmo/middle/models#ContinuumModel> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://emmo.info/emmo/middle/models#PhysicsOfModel> ;
+                                                     ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of continuum volume."@en ;
+                                                     ns2:prefLabel "ContinuumModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_4456a5d2_16a6_4ee1_9a8e_5c75956b28ea
+<http://emmo.info/emmo/middle/models#EMMO_4456a5d2_16a6_4ee1_9a8e_5c75956b28ea> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6> ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of continuum volume."@en ;
+                                                                                ns2:prefLabel "ContinuumModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_53935db0_af45_4426_b9e9_244a0d77db00
+<http://emmo.info/emmo/middle/models#EMMO_53935db0_af45_4426_b9e9_244a0d77db00> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6> ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of mesoscopic entities, i.e. a set of bounded atoms like a molecule, bead or nanoparticle."@en ;
+                                                                                ns2:prefLabel "MesoscopicModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_6eca09be_17e9_445e_abc9_000aa61b7a11
+<http://emmo.info/emmo/middle/models#EMMO_6eca09be_17e9_445e_abc9_000aa61b7a11> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6> ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of electrons."@en ;
+                                                                                ns4:EMMO_b432d2d5_25f4_4165_99c5_5935a7763c1a """Density functional theory.
+Hartree-Fock."""@en ;
+                                                                                ns2:prefLabel "ElectronicModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_84cadc45_6758_46f2_ba2a_5ead65c70213
+<http://emmo.info/emmo/middle/models#EMMO_84cadc45_6758_46f2_ba2a_5ead65c70213> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6> ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of atoms."@en ;
+                                                                                ns2:prefLabel "AtomisticModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_939483b1_0148_43d1_8b35_851d2cd5d939
+<http://emmo.info/emmo/middle/models#EMMO_939483b1_0148_43d1_8b35_851d2cd5d939> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf :SimulationNode ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """A 'sign' that not only stands for a 'physical' or a 'process', but it is also a simplified representation, aimed to assist calculations for its description or for predictions of its behaviour.
+
+A 'model' represents a 'physical' or a 'process' by direct similitude (e.g. small scale replica) or by capturing in a logical framework the relations between its properties (e.g. mathematical model)."""@en ;
+                                                                                rdfs:comment "A 'model' prediction is always a prediction of the properties of an entity, since an entity is known by an interpreter only through perception."@en ;
+                                                                                ns2:prefLabel "Model"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6
+<http://emmo.info/emmo/middle/models#EMMO_b29fd350_39aa_4af7_9459_3faa0544cba6> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0> ;
+                                                                                ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A solvable set of one Physics Equation and one or more Materials Relations."@en ;
+                                                                                ns2:prefLabel "PhysicsBasedModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0
+<http://emmo.info/emmo/middle/models#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://emmo.info/emmo/middle/models#EMMO_939483b1_0148_43d1_8b35_851d2cd5d939> ;
+                                                                                rdfs:comment """A mathematical model can be defined as a description of a system using mathematical concepts and language to facilitate proper explanation of a system or to study the effects of different components and to make predictions on patterns of behaviour. 
+
+Abramowitz and Stegun, 1968"""@en ;
+                                                                                ns2:prefLabel "MathematicalModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#MesoscopicModel
+<http://emmo.info/emmo/middle/models#MesoscopicModel> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://emmo.info/emmo/middle/models#PhysicsOfModel> ;
+                                                      ns4:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A physics-based model based on a physics equation describing the behaviour of mesoscopic entities, i.e. a set of bounded atoms like a molecule, bead or nanoparticle."@en ;
+                                                      ns2:prefLabel "MesoscopicModel"@en .
+
+
+###  http://emmo.info/emmo/middle/models#PhysicsOfModel
+<http://emmo.info/emmo/middle/models#PhysicsOfModel> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :ValueObject ;
+                                                     rdfs:label "Physics of Model"@en .
+
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://qudt.org/schema/qudt> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analysis
+KN:BET-Analysis rdf:type owl:Class ;
+                rdfs:subClassOf KN:PowderMeasurement .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#CTE
+KN:CTE rdf:type owl:Class ;
+       rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Compressibility
+KN:Compressibility rdf:type owl:Class ;
+                   rdfs:subClassOf :ValueObject .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ComsolSimulationParameter
+KN:ComsolSimulationParameter rdf:type owl:Class ;
+                             rdfs:subClassOf <http://emmo.info/emmo/middle/math#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ContinousThickness
+KN:ContinousThickness rdf:type owl:Class ;
+                      rdfs:subClassOf KN:Thickness ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty KN:isMeasuredBy ;
+                                        owl:someValuesFrom KN:InLineMeasurement
+                                      ] ;
+                      rdfs:comment "Describes the thickness along the film."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Designation
+KN:Designation rdf:type owl:Class ;
+               rdfs:subClassOf :ValueObject ;
+               rdfs:comment "Naming and chemical description of a mono-constituent substance."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#DesignationOfPowder
+KN:DesignationOfPowder rdf:type owl:Class ;
+                       rdfs:subClassOf KN:Designation ;
+                       rdfs:comment "Naming and chemical description of powder."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#E-Modul
+KN:E-Modul rdf:type owl:Class ;
+           rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ElectricalCircuitModel
+KN:ElectricalCircuitModel rdf:type owl:Class ;
+                          rdfs:subClassOf :SimulationNode ;
+                          rdfs:comment "Describes the electrical circuits on each layer of the laminated stack."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Failure
+KN:Failure rdf:type owl:Class ;
+           rdfs:subClassOf :ValueObject ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty KN:isMeasuredBy ;
+                             owl:someValuesFrom KN:InLineMeasurement
+                           ] ;
+           rdfs:comment "Describes the number and position of failures on a workpiece or object."@en ,
+                        "Is a property?"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#FoilCast
+KN:FoilCast rdf:type owl:Class ;
+            rdfs:subClassOf :ManufacturingProcess ;
+            rdfs:comment "Engineering process, where a slurry is mould in a foil."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#GeometricalDensityDetermination
+KN:GeometricalDensityDetermination rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                                   rdfs:comment "Calculation of density based on measured or weighed values."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#GeometryModel
+KN:GeometryModel rdf:type owl:Class ;
+                 rdfs:subClassOf :SimulationNode ;
+                 rdfs:comment "Describes the visbile extirior shape of an object or work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#GreenDensity
+KN:GreenDensity rdf:type owl:Class ;
+                rdfs:subClassOf KN:density .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#GreenTape
+KN:GreenTape rdf:type owl:Class ;
+             rdfs:subClassOf :EngineeredMaterial ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:Compressibility
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:ContinousThickness
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:Failure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:GreenDensity
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:MeanMeasuredDensity
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:MeanThickness
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:SolidContent
+                             ] ;
+             rdfs:comment "Describes the foil as a commoditiy of the later component."@en ;
+             rdfs:label "GreenTape"@en ,
+                        "GrünFolie"@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#InLineMeasurement
+KN:InLineMeasurement rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Laminate
+KN:Laminate rdf:type owl:Class ;
+            rdfs:subClassOf :EngineeredMaterial ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCharacteristic ;
+                              owl:someValuesFrom KN:MeanDensity
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCharacteristic ;
+                              owl:someValuesFrom KN:Thickness
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCharacteristic ;
+                              owl:someValuesFrom KN:Wrapage
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCharacteristic ;
+                              owl:someValuesFrom KN:as_is_geometry
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCharacteristic ;
+                              owl:someValuesFrom KN:to_be_geometry
+                            ] ;
+            rdfs:label "Laminat"@de ,
+                       "Laminate"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#LaminateMeasurement
+KN:LaminateMeasurement rdf:type owl:Class ;
+                       rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                       rdfs:comment "Sammelt alle Messvorgänge, die am laminierten Folienstapel durchgeführt werden."@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#LaminateParameter
+KN:LaminateParameter rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/math#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#LaminatePhotograph
+KN:LaminatePhotograph rdf:type owl:Class ;
+                      rdfs:subClassOf KN:Photograph ;
+                      rdfs:comment "Photograph of the laminated stack."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Laminating
+KN:Laminating rdf:type owl:Class ;
+              rdfs:subClassOf :ManufacturingProcess ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasInput ;
+                                owl:someValuesFrom KN:GreenTape
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOutput ;
+                                owl:someValuesFrom KN:Laminate
+                              ] ;
+              rdfs:comment "Describes the process of joining several, partially coated folis to one stack."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Laminierkurve
+KN:Laminierkurve rdf:type owl:Class ;
+                 rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Laminierzyklus
+KN:Laminierzyklus rdf:type owl:Class ;
+                  rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#LaminierzyklusParameter
+KN:LaminierzyklusParameter rdf:type owl:Class ;
+                           rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#LaserDiffraction
+KN:LaserDiffraction rdf:type owl:Class ;
+                    rdfs:subClassOf KN:PowderMeasurement ;
+                    rdfs:comment "Grinding of calcinated powder. Is used for the estimation of the particle size."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MLCeramic
+KN:MLCeramic rdf:type owl:Class ;
+             rdfs:subClassOf :EngineeredMaterial ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty KN:hasModel ;
+                               owl:someValuesFrom KN:WorkPieceMultiPhysicsModel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :composedOf ;
+                               owl:someValuesFrom KN:GreenTape
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :composedOf ;
+                               owl:someValuesFrom KN:Laminate
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :composedOf ;
+                               owl:someValuesFrom KN:Powder
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :composedOf ;
+                               owl:someValuesFrom KN:Sinternteil
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :composedOf ;
+                               owl:someValuesFrom KN:Slurry
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:Shrinkage
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:as_is_geometry
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCharacteristic ;
+                               owl:someValuesFrom KN:inner_geometry
+                             ] ;
+             rdfs:comment "Describes and contains any information related to the mulity-layer-ceramics."@en ,
+                          "Multi-Layer Ceramics"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MaterialParameter
+KN:MaterialParameter rdf:type owl:Class ;
+                     rdfs:subClassOf KN:Laminierkurve .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Materialtyp
+KN:Materialtyp rdf:type owl:Class ;
+               rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MeanDensity
+KN:MeanDensity rdf:type owl:Class ;
+               rdfs:subClassOf KN:density ;
+               rdfs:comment "Describes the measured, mean density of an object or work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MeanMeasuredDensity
+KN:MeanMeasuredDensity rdf:type owl:Class ;
+                       rdfs:subClassOf KN:MeanDensity ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty KN:isMeasuredBy ;
+                                         owl:someValuesFrom KN:GeometricalDensityDetermination
+                                       ] ;
+                       rdfs:comment "Describes the measured, mean density of an object or work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MeanSimulatedDensity
+KN:MeanSimulatedDensity rdf:type owl:Class ;
+                        rdfs:subClassOf KN:MeanDensity ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty KN:isEstimatedBy ;
+                                          owl:someValuesFrom KN:PyLaminatingSimulationModel
+                                        ] ;
+                        rdfs:comment "Describes the simulated, mean density of an object or work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MeanThickness
+KN:MeanThickness rdf:type owl:Class ;
+                 rdfs:subClassOf KN:Thickness ;
+                 rdfs:comment "Describes the mean thickness of an object or workpiece."@en ,
+                              "Tape Thickness"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MeasuredThickness
+KN:MeasuredThickness rdf:type owl:Class ;
+                     rdfs:subClassOf KN:Thickness ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty KN:isMeasuredBy ;
+                                       owl:someValuesFrom KN:MicrometerCaliper
+                                     ] ;
+                     rdfs:comment "Describes the measured thickness of an object or work piece"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#MicrometerCaliper
+KN:MicrometerCaliper rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                     rdfs:comment "Caliper of the sintered micrometer."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#OpticalProfilometrie
+KN:OpticalProfilometrie rdf:type owl:Class ;
+                        rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                        rdfs:comment "Profilometrie of the sintered opti cal."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ParticleProperty
+KN:ParticleProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :ValueObject ;
+                    rdfs:label "Particle Property"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD10
+KN:ParticleSizeDistributionD10 rdf:type owl:Class ;
+                               rdfs:subClassOf KN:ParticleProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty KN:isMeasuredBy ;
+                                                 owl:someValuesFrom KN:LaserDiffraction
+                                               ] ;
+                               rdfs:comment "Smallest 10% particle size within distribution"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD50
+KN:ParticleSizeDistributionD50 rdf:type owl:Class ;
+                               rdfs:subClassOf KN:ParticleProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty KN:isMeasuredBy ;
+                                                 owl:someValuesFrom KN:LaserDiffraction
+                                               ] ;
+                               rdfs:comment "Mean particle size distribution"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD90
+KN:ParticleSizeDistributionD90 rdf:type owl:Class ;
+                               rdfs:subClassOf KN:ParticleProperty ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty KN:isMeasuredBy ;
+                                                 owl:someValuesFrom KN:LaserDiffraction
+                                               ] ;
+                               rdfs:comment "Largest 10% particle size within distribution"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Permeability
+KN:Permeability rdf:type owl:Class ;
+                rdfs:subClassOf :ValueObject .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Pfad
+KN:Pfad rdf:type owl:Class ;
+        rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Photograph
+KN:Photograph rdf:type owl:Class ;
+              rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+              rdfs:comment "Photographs collecting the outer geometry of an object or work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Powder
+KN:Powder rdf:type owl:Class ;
+          rdfs:subClassOf :EngineeredMaterial ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom KN:DesignationOfPowder
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom KN:ParticleProperty
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom KN:Shrinkage
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom KN:TrueDensity
+                          ] ;
+          rdfs:comment "Collectes and describes the powder material attributes"@en ;
+          rdfs:label "Powder"@en ,
+                     "Pulver"@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#PowderMeasurement
+KN:PowderMeasurement rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                     rdfs:comment "Can be deleted"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#PyEvaluationModel
+KN:PyEvaluationModel rdf:type owl:Class ;
+                     rdfs:subClassOf :SimulationNode ;
+                     rdfs:comment "Beinhaltet die mathamatische und visuelle Aufbereitung der Simulationsergebnisse."@de ;
+                     rdfs:label "Py evaluation model"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#PyLaminatingSimulationModel
+KN:PyLaminatingSimulationModel rdf:type owl:Class ;
+                               rdfs:subClassOf :SimulationNode ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :executes ;
+                                                 owl:someValuesFrom KN:Laminating
+                                               ] ;
+                               rdfs:comment "Describes the physical relations of the laminating process in one python modell."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Querkontraktionszahl
+KN:Querkontraktionszahl rdf:type owl:Class ;
+                        rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#RawDensity
+KN:RawDensity rdf:type owl:Class ;
+              rdfs:subClassOf KN:density .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#RelativeDensity
+KN:RelativeDensity rdf:type owl:Class ;
+                   rdfs:subClassOf KN:density .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Rheometrie
+KN:Rheometrie rdf:type owl:Class ;
+              rdfs:subClassOf KN:SlurryMeasurement ;
+              rdfs:comment "Messverfahren zur Bestimmung der rheologischen Eigenschaften des Schlickers."@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schichtfolge
+KN:Schichtfolge rdf:type owl:Class ;
+                rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SchichtfolgeParameter
+KN:SchichtfolgeParameter rdf:type owl:Class ;
+                         rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Shrinkage
+KN:Shrinkage rdf:type owl:Class ;
+             rdfs:subClassOf :ValueObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty KN:isMeasuredBy ;
+                               owl:someValuesFrom KN:Photograph
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty KN:isMeasuredBy ;
+                               owl:someValuesFrom KN:ShrinkageMeasurement
+                             ] ;
+             rdfs:comment "Same as percentage of reduction?" ,
+                          "Shrinkage is the reduction of the volume of a material, object or work piece effect after a process without any removal of material or pressure carried out."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ShrinkageMeasurement
+KN:ShrinkageMeasurement rdf:type owl:Class ;
+                        rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                        rdfs:comment "In-process procedure of pressing a tablet and measuring the % value of powder shrinkage."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SimulatedThickness
+KN:SimulatedThickness rdf:type owl:Class ;
+                      rdfs:subClassOf KN:Thickness ;
+                      rdfs:comment "Describes the simulated thickness of an object or work piece"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Simulationsparameter
+KN:Simulationsparameter rdf:type owl:Class ;
+                        rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintering
+KN:Sintering rdf:type owl:Class ;
+             rdfs:subClassOf :HeatTreatmentProcess ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasInput ;
+                               owl:someValuesFrom KN:Laminate
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasOutput ;
+                               owl:someValuesFrom KN:MLCeramic
+                             ] ;
+             rdfs:comment "Firing process of a work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SinteringSimulationModel
+KN:SinteringSimulationModel rdf:type owl:Class ;
+                            rdfs:subClassOf :SimulationNode ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :executes ;
+                                              owl:someValuesFrom KN:Sintering
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasCharacteristic ;
+                                              owl:someValuesFrom <http://emmo.info/emmo/middle/models#ContinuumModel>
+                                            ] ;
+                            rdfs:comment "Describes the physical relations of the sintering process in one FEM model."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sinterkurve
+KN:Sinterkurve rdf:type owl:Class ;
+               rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sinternteil
+KN:Sinternteil rdf:type owl:Class ;
+               rdfs:subClassOf :EngineeredMaterial ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCharacteristic ;
+                                 owl:someValuesFrom KN:Permeability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCharacteristic ;
+                                 owl:someValuesFrom KN:RawDensity
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCharacteristic ;
+                                 owl:someValuesFrom :Temperature
+                               ] ;
+               rdfs:label "SinteredPart"@en ,
+                          "Sinternteil"@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sinterspannung
+KN:Sinterspannung rdf:type owl:Class ;
+                  rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sinterzyklus
+KN:Sinterzyklus rdf:type owl:Class ;
+                rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SinterzyklusParameter
+KN:SinterzyklusParameter rdf:type owl:Class ;
+                         rdfs:subClassOf KN:LaminateParameter .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SizeOfPrimaryParticles
+KN:SizeOfPrimaryParticles rdf:type owl:Class ;
+                          rdfs:subClassOf KN:ParticleProperty ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty KN:isMeasuredBy ;
+                                            owl:someValuesFrom KN:BET-Analysis
+                                          ] ;
+                          rdfs:comment "Medium diameter of individual particles."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Slurry
+KN:Slurry rdf:type owl:Class ;
+          rdfs:subClassOf :EngineeredMaterial ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom KN:Viscosity
+                          ] ;
+          rdfs:comment "Descibes the material attributes of a homogenous mixture composed of ceramic powders and  filling."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SlurryMeasurement
+KN:SlurryMeasurement rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/metrology#EMMO_985bec21_989f_4b9e_a4b3_735d88099c3c> ;
+                     rdfs:label "Slurry measurements"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#SolidContent
+KN:SolidContent rdf:type owl:Class ;
+                rdfs:subClassOf :ValueObject ;
+                rdfs:comment "Describes the amount of solid particles within fluid material mixture."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Spule
+KN:Spule rdf:type owl:Class ;
+         rdfs:subClassOf :Component ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCharacteristic ;
+                           owl:someValuesFrom KN:ParticleSizeDistributionD50
+                         ] ;
+         rdfs:label "Coil"@en ,
+                    "Spule"@de .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Stress-Strain-Curve
+KN:Stress-Strain-Curve rdf:type owl:Class ;
+                       rdfs:subClassOf :ValueObject ;
+                       rdfs:label "Spannungs-Dehnungs-Kurve"@de ,
+                                  "Stress-Strain-Curve"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Stress_Strain_parameter
+KN:Stress_Strain_parameter rdf:type owl:Class ;
+                           rdfs:subClassOf <http://emmo.info/emmo/middle/math#EMMO_d1d436e7_72fc_49cd_863b_7bfb4ba5276a> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Thickness
+KN:Thickness rdf:type owl:Class ;
+             rdfs:subClassOf :ValueObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty KN:isEstimatedBy ;
+                               owl:someValuesFrom KN:PyLaminatingSimulationModel
+                             ] .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#TrueDensity
+KN:TrueDensity rdf:type owl:Class ;
+               rdfs:subClassOf KN:density .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Viscosity
+KN:Viscosity rdf:type owl:Class ;
+             rdfs:subClassOf :ValueObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty KN:isMeasuredBy ;
+                               owl:someValuesFrom KN:Rheometrie
+                             ] ;
+             rdfs:comment "Viscosity is defined as the measure of the resistance of a fluid to gradual deformation by shear or tensile stress."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#WorkPieceMultiPhysicsModel
+KN:WorkPieceMultiPhysicsModel rdf:type owl:Class ;
+                              rdfs:subClassOf :SimulationNode ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :executes ;
+                                                owl:someValuesFrom KN:ComsolSimulationParameter
+                                              ] .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#WorkpiecePhotograph
+KN:WorkpiecePhotograph rdf:type owl:Class ;
+                       rdfs:subClassOf KN:Photograph ;
+                       rdfs:comment "Photograph of the sintered work piece."@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Wrapage
+KN:Wrapage rdf:type owl:Class ;
+           rdfs:subClassOf :ValueObject ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty KN:isEstimatedBy ;
+                             owl:someValuesFrom KN:PyLaminatingSimulationModel
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty KN:isMeasuredBy ;
+                             owl:someValuesFrom KN:OpticalProfilometrie
+                           ] ;
+           rdfs:comment "Describes the outer wrapage of a physical object or work piece."@en ,
+                        "Not specified in the xls file"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#as_is_geometry
+KN:as_is_geometry rdf:type owl:Class ;
+                  rdfs:subClassOf :Geometry .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#density
+KN:density rdf:type owl:Class ;
+           rdfs:subClassOf :ValueObject ;
+           rdfs:comment "Describes the density of an object or work piece."@en ,
+                        "There is a class Density in EMMO" ;
+           rdfs:label "Density"@en .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#inner_geometry
+KN:inner_geometry rdf:type owl:Class ;
+                  rdfs:subClassOf :Geometry .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#to_be_geometry
+KN:to_be_geometry rdf:type owl:Class ;
+                  rdfs:subClassOf :Geometry .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#viskoseQuerkontraktionszahl
+KN:viskoseQuerkontraktionszahl rdf:type owl:Class ;
+                               rdfs:subClassOf KN:MaterialParameter .
+
+
+###  http://www.w3.org/ns/oa#FragmentSelector
+<http://www.w3.org/ns/oa#FragmentSelector> rdf:type owl:Class ;
+                                           rdfs:label "Fragment Selector"@en ;
+                                           ns2:example <http://www.w3.org/ns/oa#> .
+
+
+###  http://www.w3.org/ns/prov#Activity
+AG:Activity rdf:type owl:Class ;
+            owl:disjointWith AG:Entity ;
+            rdfs:isDefinedBy AG: ;
+            rdfs:label "Activity"@en ,
+                       "Aktivität"@de ;
+            AG:category "starting-point" ;
+            AG:component "entities-activities" ;
+            AG:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+            AG:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+            AG:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity"^^xsd:anyURI ;
+            AG:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Agent
+AG:Agent rdf:type owl:Class ;
+         rdfs:isDefinedBy AG: ;
+         rdfs:label "Agent" ,
+                    "Agent"@de ;
+         AG:category "starting-point" ;
+         AG:component "agents-responsibility" ;
+         AG:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+         AG:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+         AG:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Entity
+AG:Entity rdf:type owl:Class ;
+          rdfs:isDefinedBy AG: ;
+          rdfs:label "Entity" ;
+          AG:category "starting-point" ;
+          AG:component "entities-activities" ;
+          AG:constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+          AG:definition "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. "@en ;
+          AG:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity"^^xsd:anyURI ;
+          AG:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Organization
+AG:Organization rdf:type owl:Class ;
+                rdfs:subClassOf AG:Agent ;
+                rdfs:isDefinedBy AG: ;
+                rdfs:label "Organisation"@de ,
+                           "Organization" ;
+                AG:category "expanded" ;
+                AG:component "agents-responsibility" ;
+                AG:definition "An organization is a social or legal institution such as a company, society, etc." ;
+                AG:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                AG:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+AG:SoftwareAgent rdf:type owl:Class ;
+                 rdfs:subClassOf AG:Agent ;
+                 rdfs:isDefinedBy AG: ;
+                 rdfs:label "Software Agent"@de ,
+                            "Software Agent"@en ;
+                 AG:category "expanded" ;
+                 AG:component "agents-responsibility" ;
+                 AG:definition "A software agent is running software."@en ;
+                 AG:dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                 AG:n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"^^xsd:anyURI .
+
+
+###  https://w3id.org/pmd/co/AccreditationDocument
+:AccreditationDocument rdf:type owl:Class ;
+                       rdfs:subClassOf :Document ;
+                       rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                       rdfs:label "Accreditation Document"@en ,
+                                  "Akkreditierungsdokument"@de ;
+                       ns2:definition "Diese Entität beschreibt ein Dokument, welches aussagt, dass einer Organisation, Person oder Einrichtung eine offizielle Konformität mit einer Norm anerkannt wurde. Dies kann z. B. Prozesse, Ausrüstungen oder ganze Laboratorien umfassen."@de ,
+                                      "This entity describes a document used to state that an official authorization or approval to recognize or vouch for a conformation with a standard was granted to an organization, person, or entity. This may include, e.g., processes, (sets of) equipment, or entire laboratories."@en ;
+                       :definitionSource "https://www.merriam-webster.com/dictionary/accreditation"@en .
+
+
+###  https://w3id.org/pmd/co/AgingInterval
+:AgingInterval rdf:type owl:Class ;
+               rdfs:subClassOf :AgingTime ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+               rdfs:label "Aging Interval"@en ,
+                          "Alterungsintervall"@de ;
+               ns2:definition "Timespan a Temperature during  an Aging Process is hold."@en .
+
+
+###  https://w3id.org/pmd/co/AgingTemperature
+:AgingTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf :Temperature ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                  rdfs:label "Aging Temperature"@en ,
+                             "Alterungstemperatur"@de ;
+                  ns2:definition "Variable Temperature during an Aging Process depending on the desired deposition formations."@en .
+
+
+###  https://w3id.org/pmd/co/AgingTime
+:AgingTime rdf:type owl:Class ;
+           rdfs:subClassOf :Time ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Aging Time"@en ,
+                      "Alterungszeit"@de ;
+           ns2:definition "The timespan that an Aging Process executes to completion."@en .
+
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+:AnalysingProcess rdf:type owl:Class ;
+                  rdfs:subClassOf :Process ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                  rdfs:label "Analyseprozess"@de ,
+                             "Analysing Process"@en ;
+                  ns2:definition """A process that is driven by the primary intent to gain new measurements
+An analysis process is either a transformative process or a non-transformative process."""@en .
+
+
+###  https://w3id.org/pmd/co/CalibrationDocument
+:CalibrationDocument rdf:type owl:Class ;
+                     rdfs:subClassOf :Document ;
+                     rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                     rdfs:label "Calibration Document"@en ,
+                                "Kalibrierschein"@de ,
+                                "Kalibrierungsdokument"@de ;
+                     ns2:definition "Diese Entität beschreibt ein Dokument, welches Abweichungen eines Messgerätes oder einer Maßverkörperung gegenüber einem anderen Gerät oder einer anderen Maßverkörperung feststellt und dokumentiert. Typischerweise ist die Person, welche die Kalibrierung durchführte, angegeben."@de ,
+                                    "This entity describes a document used to state that a set of graduations to indicate values or positions has been performed. Typically, the calibration operator is included."@en ;
+                     :definitionSource "https://www.merriam-webster.com/dictionary/calibration"@en .
+
+
+###  https://w3id.org/pmd/co/Caliper
+:Caliper rdf:type owl:Class ;
+         rdfs:subClassOf :MeasuringDevice ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+         rdfs:label "Caliper"@en ,
+                    "Messschieber"@de ;
+         ns2:definition "any of various measuring instruments having two usually adjustable arms, legs, or jaws used especially to measure the dimensions of objects, such as diameters or thicknesses"@en ,
+                        "ein Messgerät mit zwei in der Regel verstellbaren Armen, Schenkeln oder Klemmbacken, das vor allem zur Messung der Abmessungen von Gegenständen, wie z. B. des Durchmessers oder der Dicke, verwendet wird"@de ;
+         :definitionSource "https://www.merriam-webster.com/dictionary/caliper"@en .
+
+
+###  https://w3id.org/pmd/co/ClassificationDocument
+:ClassificationDocument rdf:type owl:Class ;
+                        rdfs:subClassOf :Document ;
+                        rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                        rdfs:label "Classification Document"@en ,
+                                   "Klassifzierungsdokument"@de ;
+                        ns2:definition "Diese Entität beschreibt ein Dokument, das dazu dient, den Arbeits- oder Anwendungsbereich eines Prozessknotens in Übereinstimmung mit genormten Abstufungen zu definieren."@de ,
+                                       "This entity describes a document used to define the working or application range of a process node in accordance with standardized graduations."@en .
+
+
+###  https://w3id.org/pmd/co/CommissionTime
+:CommissionTime rdf:type owl:Class ;
+                rdfs:subClassOf :Time ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                rdfs:label "Commission Time"@en ,
+                           "Kommissionszeit"@de ;
+                ns2:definition "Date and time an order or plan has been dispatched at."@en .
+
+
+###  https://w3id.org/pmd/co/Component
+:Component rdf:type owl:Class ;
+           rdfs:subClassOf :Object ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Component"@en ,
+                      "Komponente"@de ;
+           ns2:definition "An object that serves a specific technical application. Constituent part of a compound of parts that builds a technical application"@en .
+
+
+###  https://w3id.org/pmd/co/ComputingNode
+:ComputingNode rdf:type owl:Class ;
+               rdfs:subClassOf :ProcessingNode ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+               rdfs:label "Computerknoten"@de ,
+                          "Computing Node"@en ;
+               ns2:definition """A computing system that provides an execution environment for, e.g., simulation processes or prediction models.
+A Computing Node can be virtual (e.g., a container or virtual machine) or physical (e.g., a bare-metal servers), uses digital represenations of objects as inputs and produces digital measurements, such as simulation results or predictions, as outputs."""@en ,
+                              """Ein Rechnersystem, das eine Ausführungsumgebung bspw. für Simulationsprozesse oder Vorhersagemodelle bereitstellt.
+Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine) oder physisch (z. B. ein Bare-Metal-Server) ausgestaltet sein und verwendet in der Regel digitale Repräsentationen von Objekten als Eingaben und erzeugt digitale Messungen, wie z.B. Simulationsergebnisse oder Vorhersagen, als Ausgaben."""@de .
+
+
+###  https://w3id.org/pmd/co/ComsolSimulation
+:ComsolSimulation rdf:type owl:Class ;
+                  rdfs:subClassOf :SimulationProcess ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasCharacteristic ;
+                                    owl:someValuesFrom KN:ComsolSimulationParameter
+                                  ] .
+
+
+###  https://w3id.org/pmd/co/ConditioningProcess
+:ConditioningProcess rdf:type owl:Class ;
+                     rdfs:subClassOf :Process ;
+                     rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                     rdfs:label "Conditioning Process"@en ,
+                                "Konditionierungsprozess"@de ;
+                     ns2:definition "Diese Aktivität beschreibt den Prozess und die Maßnahmen, die ergriffen werden, um einen materiellen Gegenstand auf vordefinierte Umgebungsbedingungen einzustellen."@de ,
+                                    "This activity describes the process of and the measures taken to set a tangible object to pre-defined environmental conditions."@en .
+
+
+###  https://w3id.org/pmd/co/DataScope
+:DataScope rdf:type owl:Class ;
+           rdfs:subClassOf AG:Entity ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Data Scope"@en ,
+                      "Datenkategorie"@de ;
+           ns2:definition "This property is used to categorize data with respect to their intended usage in accordance with a regarded object or process."@en .
+
+
+###  https://w3id.org/pmd/co/Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:subClassOf :Object ;
+         rdfs:comment "A collection of data published in one or more files. Usually instances of this class are also instances of DCAT dataset (see https://www.w3.org/TR/vocab-dcat-2/)."@en ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+         rdfs:label "Dataset"@en ,
+                    "Datensatz"@de .
+
+
+###  https://w3id.org/pmd/co/Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf :Time ;
+      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+      rdfs:label "Date"@en ,
+                 "Datum"@de ;
+      ns2:definition "A statement of the day of execution or making. Based on an the gregorian calender system."@en ,
+                     "Eine Erklärung über den Tag der Ausführung oder Herstellung. Basierend auf dem gregorianischen Kalendersystem."@de .
+
+
+###  https://w3id.org/pmd/co/Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf AG:Organization ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "Abteilung"@de ,
+                       "Department"@en ;
+            ns2:definition "A sub section of an organization [FIXME]"@en .
+
+
+###  https://w3id.org/pmd/co/DimensionMeasuringDevice
+:DimensionMeasuringDevice rdf:type owl:Class ;
+                          rdfs:subClassOf :MeasuringDevice ;
+                          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                          rdfs:label "Dimension Measuring Device"@en ,
+                                     "Dimensionsmesswerkzeug"@de ;
+                          ns2:definition "Diese Entität beschreibt allgemein jedes Werkzeug, das für die Messung der Abmessungen eines greifbaren Objekts verwendet wird, z. B. eines Messschiebers."@de ,
+                                         "This entity generically describes any tool that is used for the measurement of the dimensions of a tangible object, e.g., a caliper."@en .
+
+
+###  https://w3id.org/pmd/co/Document
+:Document rdf:type owl:Class ;
+          rdfs:subClassOf :ValueObject ;
+          rdfs:comment "DataResourse on later versions"@en ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "Document"@en ,
+                     "Dokument"@de ;
+          ns2:definition "An original or official paper relied on as the basis, proof, or support of something"@en ,
+                         "Ein Original oder offizielles Papier, auf das man sich als Grundlage, Beweis oder Unterstützung von etwas stützt."@de ;
+          :definitionSource "“Document.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/document. Accessed 16 Jan. 2023."@en .
+
+
+###  https://w3id.org/pmd/co/Duration
+:Duration rdf:type owl:Class ;
+          rdfs:subClassOf :Time ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "Dauer"@de ,
+                     "Duration"@en ;
+          ns2:definition "A period of time with its own timescale and an epoch anchored in another timescale. A duration can be expressed via a single value as the first value of the period of time is always zero."@en ,
+                         "Eine Zeitspanne mit einer eigenen Zeitskala und einer in einer anderen Zeitskala verankerten Epoche. Eine Dauer kann mit einem einzigen Wert ausgedrückt werden, da der erste Wert der Zeitspanne immer Null ist."@de .
+
+
+###  https://w3id.org/pmd/co/Elongation
+:Elongation rdf:type owl:Class ;
+            rdfs:subClassOf :ValueObject ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "Elongation"@en ,
+                       "Verlängerung"@de ;
+            ns2:definition "Zunahme der Anfangsmesslänge zu einem beliebigen Zeitpunkt während des Versuchs"@de ,
+                           "increase in the original gauge length at any moment during the test"@en ;
+            :definitionSource "DIN EN ISO 6892-1:2019"@en .
+
+
+###  https://w3id.org/pmd/co/EndTime
+:EndTime rdf:type owl:Class ;
+         rdfs:subClassOf :Time ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+         rdfs:label "End Time"@en ,
+                    "Endzeit"@de ;
+         ns2:definition "The date and time when the plan/recipe is supposed to have been finished"@en .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+:EngineeredMaterial rdf:type owl:Class ;
+                    rdfs:subClassOf :Object ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "Engineered Material"@en ;
+                    ns2:definition "A material that is synthesized within a manufacturing process."@en ,
+                                   "Ein Material, das im Rahmen eines Herstellungsprozesses synthetisiert wird."@de .
+
+
+###  https://w3id.org/pmd/co/EnvironmentalTemperature
+:EnvironmentalTemperature rdf:type owl:Class ;
+                          rdfs:subClassOf :Temperature ;
+                          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                          rdfs:label "Environmental Temperature"@en ,
+                                     "Umgebungstemperatur"@de ;
+                          ns2:definition "Diese Eigenschaft beschreibt die beobachtete Temperatur in der Umgebung eines betrachteten materiellen Objekts. Dazu können die Raumtemperatur und die in Prüfkammern gemessenen Temperaturen gehören."@de ,
+                                         "This property describes the observed temperature surrounding a tangible object considered. This may include room temperature and temperatures measured in test chambers."@en .
+
+
+###  https://w3id.org/pmd/co/ErrorReportDocument
+:ErrorReportDocument rdf:type owl:Class ;
+                     rdfs:subClassOf :Document ;
+                     rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                     rdfs:label "Error Report Document"@en ,
+                                "Fehlerberichtdokument"@de ;
+                     ns2:definition "Diese Entität beschreibt ein Dokument, das Informationen über Fehler bereitstellt, die während der Anwendung eines Prozessknotens aufgetreten sind, wie z. B. eine Überschreitung des Arbeitsbereichs eines Messgeräts."@de ,
+                                    "This entity describes a document used to provide information on errors that occurred during the application of a process node, such as, e.g., an overshooting exceeding the working range of a measurement device."@en .
+
+
+###  https://w3id.org/pmd/co/Extensometer
+:Extensometer rdf:type owl:Class ;
+              rdfs:subClassOf :MeasuringDevice ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "Extensometer"@en ;
+              ns2:definition "An instrument for measuring minute deformations of test specimens caused by tension, compression, bending, or twisting."@en ;
+              :definitionSource "“Extensometer.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/extensometer. Accessed 5 Dec. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/FinalProcess
+:FinalProcess rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Process
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasNextProcess ;
+                                                           owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                           owl:onClass :Process
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Process ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "Final Process"@en ,
+                         "Finaler Prozess"@de ;
+              ns2:definition "Diese Klasse wird verwendet, um den letzten von einem Prozessknoten durchgeführten Prozess in einer Reihe von Prozessen anzugeben, die von demselben Prozessknoten durchgeführt werden."@de ,
+                             "This class is used to indicate the last process conducted by a process node in a series of processes conducted by the same process node."@en .
+
+
+###  https://w3id.org/pmd/co/FurnaceCharacteristic
+:FurnaceCharacteristic rdf:type owl:Class ;
+                       rdfs:subClassOf :ValueObject ;
+                       rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                       rdfs:label "Furnace Characteristic"@en ,
+                                  "Ofencharakteristik"@de ;
+                       ns2:definition "Properties that describe the functions and capabilities of a heat treatment process node."@en .
+
+
+###  https://w3id.org/pmd/co/Geometry
+:Geometry rdf:type owl:Class ;
+          rdfs:subClassOf :ValueObject .
+
+
+###  https://w3id.org/pmd/co/HeatCapacity
+:HeatCapacity rdf:type owl:Class ;
+              rdfs:subClassOf :FurnaceCharacteristic ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "Heat Capacity"@en ,
+                         "Wärmekapazität"@de ;
+              ns2:definition "Heat capacity or thermal capacity is a physical property of matter, defined as the amount of heat to be supplied to an object to produce a unit change in its temperature."@en ;
+              :definitionSource "https://en.wikipedia.org/wiki/Heat_capacity"@en .
+
+
+###  https://w3id.org/pmd/co/HeatTreatmentProcess
+:HeatTreatmentProcess rdf:type owl:Class ;
+                      rdfs:subClassOf :ConditioningProcess ;
+                      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                      rdfs:label "Heat Treatment Process"@en ,
+                                 "Wärmebehandlung"@de ;
+                      ns2:definition "The process of heat treatment means a defined temperature change and a holding to achieve a change in the microstructure, residual stresses, defect distribution or local chemical composition of a material."@en ,
+                                     "To treat (a material, such as metal) by heating and cooling in a way that will produce desired properties."@en ;
+                      :definitionSource "“Heat-treat.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/heat-treat. Accessed 24 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :Object ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+       rdfs:label "Bild"@de ,
+                  "Image"@en ;
+       ns2:definition "A visual representation of something"@en ;
+       :definitionSource "“Image.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/image. Accessed 25 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/InspectionDocument
+:InspectionDocument rdf:type owl:Class ;
+                    rdfs:subClassOf :Document ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "Inspection Document"@en ,
+                               "Inspektionsdokument"@de ;
+                    ns2:definition "Diese Entität beschreibt ein Dokument, das Informationen über die Prüfung eines materiellen Objekts enthält, in der Regel versehen mit einem Prüfungsdatum, einem typischen Prüfungsintervall und dem Zustand des geprüften Objekts. Typischerweise wird ein solches Dokument für Prozessknoten verwendet."@de ,
+                                   "This entity describes a document used to give information on the examination of a tangible object, usually including an examination date, a typical examination interval and the state of the examined object. Typically, this is used for process nodes."@en .
+
+
+###  https://w3id.org/pmd/co/Laboratory
+:Laboratory rdf:type owl:Class ;
+            rdfs:subClassOf AG:Organization ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "Labor"@de ,
+                       "Laboratory"@en ;
+            ns2:definition "A place equipped for experimental study in a science or for testing and analysis."@en ;
+            :definitionSource "“Laboratory.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/laboratory. Accessed 24 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/Manufacturer
+:Manufacturer rdf:type owl:Class ;
+              rdfs:subClassOf AG:Organization ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "Hersteller"@de ,
+                         "Manufacturer"@en ;
+              ns2:definition "Process Node's manufacturer name, e.g.: \"Ipsen\", \"UPC\" or \"Bosch\""@en .
+
+
+###  https://w3id.org/pmd/co/ManufacturingProcess
+:ManufacturingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf :Process ;
+                      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                      rdfs:label "Herstellungsprozess"@de ,
+                                 "Manufacture Process"@en ;
+                      ns2:definition """A process that is driven by the primary intent to transform objects
+A manufacture process is always a transformative process."""@en .
+
+
+###  https://w3id.org/pmd/co/Measurement
+:Measurement rdf:type owl:Class ;
+             rdfs:subClassOf :ValueScope ;
+             owl:disjointWith :SetPoint ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "Measurement"@en ,
+                        "Messwert"@de ;
+             ns2:definition "Measurement is the quantification of attributes of an object or event, which can be used to compare with other objects or events."@en ;
+             :definitionSource "https://en.wikipedia.org/wiki/Measurement"@en .
+
+
+###  https://w3id.org/pmd/co/MeasuringDevice
+:MeasuringDevice rdf:type owl:Class ;
+                 rdfs:subClassOf :ProcessingNode ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                 rdfs:label "Measuring Device"@en ,
+                            "Messgerät"@de ;
+                 ns2:definition "A process node capable of determining a specific quality." .
+
+
+###  https://w3id.org/pmd/co/MeasuringProcess
+:MeasuringProcess rdf:type owl:Class ;
+                  rdfs:subClassOf :AnalysingProcess ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                  rdfs:label "Measuring Process"@en ,
+                             "Messprozess"@de ;
+                  ns2:definition "A measurement process acquires data (usually expressed in numbers) by using tools."@en .
+
+
+###  https://w3id.org/pmd/co/MediaMovement
+:MediaMovement rdf:type owl:Class ;
+               rdfs:subClassOf :FurnaceCharacteristic ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+               rdfs:label "Media Movement"@en ,
+                          "Medienbewegung"@de ;
+               ns2:definition "Displacement of media surrounding objects inside the system boundaries of a process node."@en ;
+               ns2:example "Circulation of a gaseous media within the systems boundaries."@en .
+
+
+###  https://w3id.org/pmd/co/Metadata
+:Metadata rdf:type owl:Class ;
+          rdfs:subClassOf :DataScope ,
+                          :ValueObject ;
+          owl:disjointWith :PrimaryData ,
+                           :SecondaryData ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "Metadata"@en ,
+                     "Metadaten"@de ;
+          ns2:definition "Attributes and additional data (provenance) concerning the factory, laboratory, the process system and the objects which allow the evaluation of the quality / reliability of the measurements and a systematic search task of a database."@en .
+
+
+###  https://w3id.org/pmd/co/MicrometerGauge
+:MicrometerGauge rdf:type owl:Class ;
+                 rdfs:subClassOf :MeasuringDevice ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                 rdfs:label "Bügelmessschraube"@de ,
+                            "Micrometer Gauge"@en ;
+                 ns2:definition "Diese Entität beschreibt ein Werkzeug zur Durchführung präziser Messungen mit einer Spindel, die durch eine Feingewindeschraube bewegt wird."@de ,
+                                "This entity describes a tool for making precise measurements having a spindle moved by a finely threaded screw."@en ;
+                 :definitionSource "https://www.merriam-webster.com/dictionary/micrometer%20caliper"@en .
+
+
+###  https://w3id.org/pmd/co/Note
+:Note rdf:type owl:Class ;
+      rdfs:subClassOf :ValueObject ;
+      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+      rdfs:label "Bemerkung"@de ,
+                 "Note"@en ,
+                 "Notiz"@de ;
+      ns2:definition "Additional information & knowledge for and by humans. Not expected to be parsable"@en .
+
+
+###  https://w3id.org/pmd/co/Object
+:Object rdf:type owl:Class ;
+        rdfs:subClassOf AG:Entity ;
+        rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+        rdfs:label "Object"@en ,
+                   "Objekt"@de ;
+        ns2:definition "A discernable, tangible or simulated entity that is processed in a process by a process node."@en .
+
+
+###  https://w3id.org/pmd/co/OriginalWidth
+:OriginalWidth rdf:type owl:Class ;
+               rdfs:subClassOf :Width ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+               rdfs:label "Anfangs-Breite"@de ,
+                          "Original Width"@en ;
+               ns2:definition "Diese Eigenschaft beschreibt eine horizontale Messung eines Objekts (Prüfkörpers) im rechten Winkel zur Länge des Objekts (Prüfkörpers), wie sie vor einer Prüfung gemessen wird."@de ,
+                              "This property describes a horizontal measurement of an object (test piece) taken at right angles to the length of the object (test piece), as measured before a test."@en .
+
+
+###  https://w3id.org/pmd/co/PercentageElongation
+:PercentageElongation rdf:type owl:Class ;
+                      rdfs:subClassOf :Elongation ;
+                      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                      rdfs:label "Dehnung"@de ,
+                                 "Percentage Elongation"@en ;
+                      ns2:definition "Verlängerung, angegeben in Prozent, bezogen auf die Anfangsmesslänge"@de ,
+                                     "elongation expressed as a percentage of the original gauge length"@en ;
+                      :definitionSource "DIN EN ISO 6892-1:2019"@en .
+
+
+###  https://w3id.org/pmd/co/PercentageElongationAfterFracture
+:PercentageElongationAfterFracture rdf:type owl:Class ;
+                                   rdfs:subClassOf :Elongation ;
+                                   rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                                   rdfs:label "Bruchdehnung"@de ,
+                                              "Percentage Elongation After Fracture"@en ;
+                                   ns2:definition "Symbol: A"@en ,
+                                                  "bleibende Verlängerung der Messlänge nach dem Bruch (L_u − L_o), angegeben in Prozent, bezogen auf die Anfangsmesslänge"@de ,
+                                                  "permanent elongation of the gauge length after fracture (L_u − L_o), expressed as a percentage of the original gauge length"@en ;
+                                   :definitionSource "DIN EN ISO 6892-1:2019"@en .
+
+
+###  https://w3id.org/pmd/co/PercentagePermanentElongation
+:PercentagePermanentElongation rdf:type owl:Class ;
+                               rdfs:subClassOf :Elongation ;
+                               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                               rdfs:label "Bleibende Dehnung"@de ,
+                                          "Percentage Permanent Elongation"@en ;
+                               ns2:definition "Zunahme der Anfangsmesslänge einer Probe nach Entfernen einer festgelegten Zugspannung, angegeben in Prozent, bezogen auf die Anfangsmesslänge"@de ,
+                                              "increase in the original gauge length of a test piece after removal of a specified stress, expressed as a percentage of the original gauge length"@en ;
+                               :definitionSource "DIN EN ISO 6892-1:2019"@en .
+
+
+###  https://w3id.org/pmd/co/PercentageReductionOfArea
+:PercentageReductionOfArea rdf:type owl:Class ;
+                           rdfs:subClassOf :ValueObject ;
+                           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                           rdfs:label "Brucheinschnürung"@de ,
+                                      "Percentage Reduction Of Area"@en ;
+                           ns2:definition "größte während des Versuchs aufgetretene Änderung des Querschnitts (S_o − S_u), angegeben in Prozent, bezogen auf den Anfangsquerschnitt S_o"@de ,
+                                          "maximum change in cross-sectional area which has occurred during the test (S_o − S_u), expressed as a percentage of the original cross-sectional area, S_o"@en ;
+                           :definitionSource "DIN EN ISO 6892-1:2019"@en ;
+                           :symbol "Z" .
+
+
+###  https://w3id.org/pmd/co/PrimaryData
+:PrimaryData rdf:type owl:Class ;
+             rdfs:subClassOf :DataScope ;
+             owl:disjointWith :SecondaryData ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "Primary Data"@en ,
+                        "Primärdaten"@de ;
+             ns2:definition "Data acquired before / after a process either refering to the geometry of the object (e.g. ao, bo, do, au, bu, du, Lu) or as a register of the complete setup (e.g. sketches, photos or videos)"@en ,
+                            "Data directly acquired during a process by sensors (time, force, length, temperature)"@en .
+
+
+###  https://w3id.org/pmd/co/Process
+:Process rdf:type owl:Class ;
+         rdfs:subClassOf AG:Activity ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+         rdfs:label "Process"@en ,
+                    "Prozess"@de ;
+         ns2:definition """A series of actions or operations conducing to an end
+In PMD, a process is conducted via process nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements. A process is either a transformative process or a non-transformative process with respect to objects processed via a process node. There are primarily two types of distinguishable processes: manufacture process, analysis process. A process is a series of operations that are subordinate processes."""@en .
+
+
+###  https://w3id.org/pmd/co/ProcessDuration
+:ProcessDuration rdf:type owl:Class ;
+                 rdfs:subClassOf :ValueObject ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                 rdfs:label "Process Duration"@en ,
+                            "Prozessdauer"@de ;
+                 ns2:definition "A length of an interval of time in which a process is conducted."@en .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+:ProcessingNode rdf:type owl:Class ;
+                rdfs:subClassOf AG:Entity ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                rdfs:label "Processing Node"@en ,
+                           "Prozessknoten"@de ;
+                ns2:definition "A workflow constituent that hosts tools in the form of software to facilitate, e.g. simulation, prediction, or machine learning."@en .
+
+
+###  https://w3id.org/pmd/co/RetortType
+:RetortType rdf:type owl:Class ;
+            rdfs:subClassOf :FurnaceCharacteristic ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "Retort Type"@en ,
+                       "Retortentyp"@de ;
+            ns2:definition "Geometry and and orientation of the inner system boundaries of the heat treatment process node."@en .
+
+
+###  https://w3id.org/pmd/co/Roughness
+:Roughness rdf:type owl:Class ;
+           rdfs:subClassOf :ValueObject ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Oberflächenrauheit"@de ,
+                      "Roughness"@en ;
+           ns2:definition "Die Oberflächenrauheit, oft abgekürzt als Rauheit, ist eine Komponente zur Beschreibung der Oberflächenbeschaffenheit (Oberflächentextur). Sie wird durch die Abweichungen in der Richtung des Normalenvektors einer realen Oberfläche von ihrer idealen Form quantifiziert. Sind diese Abweichungen groß, ist die Oberfläche rau (große Rauheit), sind sie klein, ist die Oberfläche glatt (geringe Rauheit)."@de ,
+                          "Surface roughness, often shortened to roughness, is a component of surface finish (surface texture). It is quantified by the deviations in the direction of the normal vector of a real surface from its ideal form. If these deviations are large, the surface is rough; if they are small, the surface is smooth."@en ;
+           :definitionSource "https://en.wikipedia.org/wiki/Surface_roughness"@en .
+
+
+###  https://w3id.org/pmd/co/SecondaryData
+:SecondaryData rdf:type owl:Class ;
+               rdfs:subClassOf :DataScope ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+               rdfs:label "Secondary Data"@en ,
+                          "Sekundärdaten"@de ;
+               ns2:definition "Characteristic values (e.g. test results) determined by equations or algorithms using primary data and metadata for a process"@en .
+
+
+###  https://w3id.org/pmd/co/SetPoint
+:SetPoint rdf:type owl:Class ;
+          rdfs:subClassOf :ValueScope ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "Set Point"@en ,
+                     "Sollwert"@de ;
+          ns2:definition "In cybernetics and control theory, a setpoint (SP;[1] also set point) is the desired or target value for an essential variable, or process value (PV) of a control system."@en ,
+                         "Sollwert bezeichnet allgemein den angestrebten Wert eines quantitativen Merkmales eines Systems, von dem der tatsächliche Istwert so wenig wie möglich abweichen soll. Der Sollwert wird von einem anderen System (z. B. Technik, Mensch) vorgegeben."@de ;
+          :definitionSource "https://de.wikipedia.org/wiki/Sollwert"@de ,
+                            "https://en.wikipedia.org/wiki/Setpoint_(control_system)"@en .
+
+
+###  https://w3id.org/pmd/co/SimulationNode
+:SimulationNode rdf:type owl:Class ;
+                rdfs:subClassOf :ComputingNode ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                rdfs:label "Simulation Node"@en ,
+                           "Simulationsknoten"@de ;
+                ns2:definition "A process node that implements foo as well as consumes and creates simulation objects and parameters."@en .
+
+
+###  https://w3id.org/pmd/co/SimulationProcess
+:SimulationProcess rdf:type owl:Class ;
+                   rdfs:subClassOf :Process ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                   rdfs:label "Simulation Process"@en ,
+                              "Simulationsprozess"@de ;
+                   ns2:definition "An analysis process that is used for a simulation" .
+
+
+###  https://w3id.org/pmd/co/StartTime
+:StartTime rdf:type owl:Class ;
+           rdfs:subClassOf :Time ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Start Time"@en ,
+                      "Startzeit"@de ;
+           ns2:definition "The date and time when the plan/recipe is supposed to be executed."@en .
+
+
+###  https://w3id.org/pmd/co/Stiffness
+:Stiffness rdf:type owl:Class ;
+           rdfs:subClassOf :ValueObject ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+           rdfs:label "Steifigkeit"@de ,
+                      "Stiffness"@en ;
+           ns2:definition "Die Steifigkeit ist das Maß, bis zu dem ein Objekt einer Verformung als Reaktion auf eine einwirkende Kraft widersteht."@de ,
+                          "Stiffness is the extent to which an object resists deformation in response to an applied force."@en .
+
+
+###  https://w3id.org/pmd/co/TemperatueMeasuringDevice
+:TemperatueMeasuringDevice rdf:type owl:Class ;
+                           rdfs:subClassOf :MeasuringDevice ;
+                           rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                           rdfs:label "Temperatue Measuring Device"@en ,
+                                      "Temperaturmesswerkzeug"@de ;
+                           ns2:definition "Diese Entität beschreibt allgemein jedes Werkzeug, das zur Messung der Temperatur eines materiellen Objekts oder der Umgebung verwendet wird, z. B. ein Thermoelement und Thermometer."@de ,
+                                          "This entity generically describes any tool that is used for the measurement of the temperature of a tangible object or the environment, e.g., a thermocouple and thermometers."@en .
+
+
+###  https://w3id.org/pmd/co/Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :ValueObject ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "Temperatur"@de ,
+                        "Temperature"@en ;
+             ns2:definition "The degree of hotness or coldness measured on a definite scale."@en ;
+             :definitionSource "“Temperature.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/temperature. Accessed 25 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/TemperatureChangeDevice
+:TemperatureChangeDevice rdf:type owl:Class ;
+                         rdfs:subClassOf :TemperatueMeasuringDevice ;
+                         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                         rdfs:label "Temperature Change Device"@en ,
+                                    "Temperaturänderungswerkzeug"@de ;
+                         ns2:definition "Diese Entität beschreibt allgemein jedes Werkzeug, das zur Änderung und Einstellung der Temperatur eines materiellen Objekts oder der Umgebung verwendet wird, z. B. einen Ofen und Kühlmittel."@de ,
+                                        "This entity generically describes any tool that is used for the alteration and adjustment of the temperature of a tangible object or the environment, e.g., a furnace and cooling media."@en .
+
+
+###  https://w3id.org/pmd/co/TemperatureChangingProcess
+:TemperatureChangingProcess rdf:type owl:Class ;
+                            rdfs:subClassOf :ConditioningProcess ;
+                            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                            rdfs:label "Temperature Changing Process"@en ,
+                                       "Temperaturänderungsprozess"@de ;
+                            ns2:definition "This properpy is used to describe a process which is run to increase or decrease the temperature of an object or a space. Usually, this involves heating or cooling devices such as furnaces or cooling media."@en .
+
+
+###  https://w3id.org/pmd/co/ThermalInsulation
+:ThermalInsulation rdf:type owl:Class ;
+                   rdfs:subClassOf :FurnaceCharacteristic ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                   rdfs:label "Thermal Insulation"@en ,
+                              "Thermische Isolierung"@de ;
+                   ns2:definition "Thermal insulation is the reduction of heat transfer (i.e., the transfer of thermal energy between objects of differing temperature) between objects in thermal contact or in range of radiative influence. Thermal insulation can be achieved with specially engineered methods or processes, as well as with suitable object shapes and materials."@en ;
+                   :definitionSource "https://en.wikipedia.org/wiki/Thermal_insulation"@en .
+
+
+###  https://w3id.org/pmd/co/Thermocouple
+:Thermocouple rdf:type owl:Class ;
+              rdfs:subClassOf :MeasuringDevice ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+              rdfs:label "Thermocouple"@en ,
+                         "Thermoelement"@de ;
+              ns2:definition "A device for measuring temperature in which a pair of wires of dissimilar metals (such as copper and iron) are joined and the free ends of the wires are connected to an instrument (such as a voltmeter) that measures the difference in potential created at the junction of the two metals."@en ,
+                             "Ein Gerät zur Temperaturmessung, bei dem ein Paar Drähte aus unterschiedlichen Metallen (z. B. Kupfer und Eisen) verbunden und die freien Enden der Drähte mit einem Instrument (z. B. einem Voltmeter) verbunden werden, das die an der Verbindungsstelle erzeugte der beiden Metalle Potentialdifferenz misst ."@de ;
+              :definitionSource "“Thermocouple.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/thermocouple. Accessed 13 Jan. 2023."@en .
+
+
+###  https://w3id.org/pmd/co/Time
+:Time rdf:type owl:Class ;
+      rdfs:subClassOf :ValueObject ;
+      rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+      rdfs:label "Time"@en ,
+                 "Zeit"@de ;
+      ns2:definition "A nonspatial continuum that is measured in terms of events which succeed one another from past through present to future."@en ;
+      :definitionSource "“Time.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/time. Accessed 25 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+:ValueObject rdf:type owl:Class ;
+             rdfs:subClassOf AG:Entity ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+             rdfs:label "Value Object"@en ,
+                        "Wertobjekt"@de ;
+             ns2:definition """A :ValueObject is a simple entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :hasValue datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :hasResource object property has to be used.
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessNode, or :Object (e.g. :Specimen). The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :hasParticipant object property.
+A value object might also refer to a certain unit. The :hasUnit property might be used (e.g. with QUDT ontology).
+Instances of a value object might be specified as a specific Parameter, namely a SetPoint (nominal value), or Measurement. With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+Instances of a value object might also be specified in a specific DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en ;
+             ns2:example """- the length of a specimen
+- the model number of a machine
+- a person involved in a process
+- a force on an object"""@en ,
+                         """:Length rdfs:subClass :ValueObject .
+ex:vo1 a :Length .
+ex:vo1 a :Measurement .
+ex:vo1 a :PrimaryData .
+ex:vo1 :hasUnit qudt:MilliM . 
+ex:vo1 :hasValue \"123.45\"
+ex:spec1 a :Specimen .
+ex:spec1 :hasCharacteristic ex:vo1 ."""@en ,
+                         "The length of a specimen, which has been measured as primary data. Its actual value is 123.45 millimeters."@en .
+
+
+###  https://w3id.org/pmd/co/ValueScope
+:ValueScope rdf:type owl:Class ;
+            rdfs:subClassOf AG:Entity ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:label "Value Scope"@en ,
+                       "Wertekategorie"@de ;
+            ns2:definition "Any of a set of physical properties whose values determine the characteristics or behavior of something."@en ;
+            :definitionSource "“Parameter.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/parameter. Accessed 25 Nov. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/Weight
+:Weight rdf:type owl:Class ;
+        rdfs:subClassOf :ValueObject ;
+        rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+        rdfs:label "Gewicht"@de ,
+                   "Weight"@en ;
+        ns2:definition "The force with which a body is attracted toward the earth or a celestial body by gravitation and which is equal to the product of the mass and the local gravitational acceleration."@en ;
+        :definitionSource "“Weight.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/weight. Accessed 5 Dec. 2022."@en .
+
+
+###  https://w3id.org/pmd/co/Width
+:Width rdf:type owl:Class ;
+       rdfs:subClassOf :ValueObject ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+       rdfs:label "Breite"@de ,
+                  "Width"@en ;
+       ns2:definition "Diese Eigenschaft bezeichnet eine horizontale Messung, die im rechten Winkel zur Länge eines Objekts vorgenommen wird."@de ,
+                      "This property describes a horizontal measurement of an object taken at right angles to the length of the object."@en ;
+       :definitionSource "https://www.merriam-webster.com/dictionary/width"@en .
+
+
+###  https://w3id.org/pmd/co/WidthAfterFracture
+:WidthAfterFracture rdf:type owl:Class ;
+                    rdfs:subClassOf :Width ;
+                    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                    rdfs:label "End-Breite"@de ,
+                               "Width After Fracture"@en ;
+                    ns2:definition "Diese Eigenschaft beschreibt eine horizontale Messung eines Objekts (Prüfkörpers) im rechten Winkel zur Länge des Objekts (Prüfkörpers), wie sie nach einer Prüfung gemessen wird."@de ,
+                                   "This property describes a horizontal measurement of an object (test piece) taken at right angles to the length of the object (test piece), as measured after a test."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Advanced_Parameter
+KN:Advanced_Parameter rdf:type owl:NamedIndividual ,
+                               KN:Stress_Strain_parameter ;
+                      KN:has_dumprate_trajectory 500 ;
+                      KN:has_dumprate_vtk_and_stl 10000 ;
+                      KN:has_fraction_class_1 "0.1"^^xsd:double ;
+                      KN:has_fraction_class_2 "0.2"^^xsd:double ;
+                      KN:has_fraction_class_3 "0.4"^^xsd:double ;
+                      KN:has_fraction_class_4 "0.2"^^xsd:double ;
+                      KN:has_fraction_class_5 "0.1"^^xsd:double ;
+                      KN:has_size_class_1 "0.1"^^xsd:double ;
+                      KN:has_size_class_2 "0.2"^^xsd:double ;
+                      KN:has_size_class_3 "0.3"^^xsd:double ;
+                      KN:has_size_class_4 "0.4"^^xsd:double ;
+                      KN:has_size_class_5 "0.5"^^xsd:double ;
+                      KN:has_timesteps 20000 ;
+                      KN:has_total_number_of_hard_particles "10000" ;
+                      KN:has_velocity_of_pressing_plate "5.0"^^xsd:double ;
+                      :hasValue "/home/knownow/KnowNow/TUB/KnowNow_Daten/RawData/DEM_stress_strain/input/input_Advanced.yml" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_probe_1_052021
+KN:BET-Analyse_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:BET-Analysis ;
+                                             KN:has_A_BET "4.5229[m²/g]" ;
+                                             KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/BET-Analyse_Messprotokolle_Messergebnisse_1.xlsx" ;
+                                             KN:has_Messgerät "NOVA Quantachrome " .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_probe_2_052021
+KN:BET-Analyse_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:BET-Analysis ;
+                                             KN:has_A_BET "6.6662[m²/g]" ;
+                                             KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/BET-Analyse_Messprotokolle_Messergebnisse_2.xlsx" ;
+                                             KN:has_Messgerät "NOVA Quantachrome " .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_probe_3_052021
+KN:BET-Analyse_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:BET-Analysis ;
+                                             KN:has_A_BET "5.56945[m²/g]" ;
+                                             KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/BET-Analyse_Messprotokolle_Messergebnisse_3.xlsx" ;
+                                             KN:has_Messgerät "NOVA Quantachrome " .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_probe_4_052021
+KN:BET-Analyse_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:BET-Analysis ;
+                                             KN:has_A_BET "3.6367[m²/g]" ;
+                                             KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/BET-Analyse_Messprotokolle_Messergebnisse_4.xlsx" ;
+                                             KN:has_Messgerät "NOVA Quantachrome " .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_probe_5_052021
+KN:BET-Analyse_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:BET-Analysis ;
+                                             KN:has_A_BET "4.2077[m²/g]" ;
+                                             KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/BET-Analyse_Messprotokolle_Messergebnisse_5.xlsx" ;
+                                             KN:has_Messgerät "NOVA Quantachrome " .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_ws1_062021
+KN:BET-Analyse_Messprotokolle_ws1_062021 rdf:type owl:NamedIndividual ,
+                                                  KN:BET-Analysis ;
+                                         KN:has_A_BET "3.91"^^xsd:double ;
+                                         KN:has_Error "0.01"^^xsd:double ;
+                                         KN:has_Unit "m²/g" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_ws2_062021
+KN:BET-Analyse_Messprotokolle_ws2_062021 rdf:type owl:NamedIndividual ,
+                                                  KN:BET-Analysis ;
+                                         KN:has_A_BET "6.67"^^xsd:double ;
+                                         KN:has_Error "0.1"^^xsd:double ;
+                                         KN:has_Unit "m²/g" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_ws3_062021
+KN:BET-Analyse_Messprotokolle_ws3_062021 rdf:type owl:NamedIndividual ,
+                                                  KN:BET-Analysis ;
+                                         KN:has_A_BET "5.57"^^xsd:double ;
+                                         KN:has_Error "0.1"^^xsd:double ;
+                                         KN:has_Unit "m²/g" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_ws4_062021
+KN:BET-Analyse_Messprotokolle_ws4_062021 rdf:type owl:NamedIndividual ,
+                                                  KN:BET-Analysis ;
+                                         KN:has_A_BET "3.67"^^xsd:double ;
+                                         KN:has_Error "0.02"^^xsd:double ;
+                                         KN:has_Unit "m²/g" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#BET-Analyse_Messprotokolle_ws5_062021
+KN:BET-Analyse_Messprotokolle_ws5_062021 rdf:type owl:NamedIndividual ,
+                                                  KN:BET-Analysis ;
+                                         KN:has_A_BET "4.21"^^xsd:double ;
+                                         KN:has_Error "0.02"^^xsd:double ;
+                                         KN:has_Unit "m²/g" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#DEM_Stress_Strain
+KN:DEM_Stress_Strain rdf:type owl:NamedIndividual ,
+                              <http://emmo.info/emmo/middle/models#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0> ;
+                     KN:has_Software_Agent KN:Person_DEM ;
+                     :executes KN:Stress_Strain .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Dichte_Messprotokolle_probe_1_052021
+KN:Dichte_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                 KN:TrueDensity ;
+                                        KN:has_Datum "2021-06-08" ;
+                                        KN:has_Dichte "5.039650466957834[g/cm3]" ;
+                                        KN:has_Dichte_Werte "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Dichte_Messprotokolle_x-y-Messdaten_1.xlsx" ;
+                                        KN:has_Theoret_Dichte "94.37547690932271[%]" ;
+                                        KN:has_Untersuchungsgegenstand_Pulver_d50 "0.7[µm]" ;
+                                        KN:has_offene_Por "2.726693120645841[%]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Dichte_Messprotokolle_probe_2_052021
+KN:Dichte_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                 KN:TrueDensity ;
+                                        KN:has_Datum "2021-06-24" ;
+                                        KN:has_Dichte "5.216812496542454[g/cm3]" ;
+                                        KN:has_Dichte_Werte "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Dichte_Messprotokolle_x-y-Messdaten_2.xlsx" ;
+                                        KN:has_Theoret_Dichte "97.69311791278004[%]" ;
+                                        KN:has_Untersuchungsgegenstand_Pulver_d50 "0.5[µm]" ;
+                                        KN:has_offene_Por "0.7549899202769624[%]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Dichte_Messprotokolle_probe_3_052021
+KN:Dichte_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                 KN:TrueDensity ;
+                                        KN:has_Datum "2021-07-16" ;
+                                        KN:has_Dichte "5.111634420757872[g/cm3]" ;
+                                        KN:has_Dichte_Werte "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Dichte_Messprotokolle_x-y-Messdaten_3.xlsx" ;
+                                        KN:has_Theoret_Dichte "95.72349102542834[%]" ;
+                                        KN:has_Untersuchungsgegenstand_Pulver_d50 "0.6[µm]" ;
+                                        KN:has_offene_Por "2.164523902481133[%]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Dichte_Messprotokolle_probe_4_052021
+KN:Dichte_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                 KN:TrueDensity ;
+                                        KN:has_Datum "Datum" ;
+                                        KN:has_Dichte "None[g/cm3]" ;
+                                        KN:has_Dichte_Werte "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Dichte_Messprotokolle_x-y-Messdaten_4.xlsx" ;
+                                        KN:has_Theoret_Dichte "452.19584441072345[%]" ;
+                                        KN:has_Untersuchungsgegenstand_Pulver_d50 "Pulver-d50 [µm][µm]" ;
+                                        KN:has_offene_Por "84.68086973983586[%]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Dichte_Messprotokolle_probe_5_052021
+KN:Dichte_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                 KN:TrueDensity ;
+                                        KN:has_Datum "2021-08-25" ;
+                                        KN:has_Dichte "4.6535340593418075[g/cm3]" ;
+                                        KN:has_Dichte_Werte "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Dichte_Messprotokolle_x-y-Messdaten_5.xlsx" ;
+                                        KN:has_Theoret_Dichte "87.14483257194397[%]" ;
+                                        KN:has_Untersuchungsgegenstand_Pulver_d50 "0.8[µm]" ;
+                                        KN:has_offene_Por "12.82900036539785[%]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Engineered_Material_062021
+KN:Engineered_Material_062021 rdf:type owl:NamedIndividual ,
+                                       :EngineeredMaterial ;
+                              :composedOf KN:ws1_062021 ,
+                                          KN:ws2_062021 ,
+                                          KN:ws3_062021 ,
+                                          KN:ws4_062021 ,
+                                          KN:ws5_062021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Engineered_Material__052021
+KN:Engineered_Material__052021 rdf:type owl:NamedIndividual ,
+                                        :EngineeredMaterial ;
+                               :composedOf KN:probe_1_052021 ,
+                                           KN:probe_2_052021 ,
+                                           KN:probe_3_052021 ,
+                                           KN:probe_4_052021 ,
+                                           KN:probe_5_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Eval_Parameter
+KN:Eval_Parameter rdf:type owl:NamedIndividual ,
+                           KN:Stress_Strain_parameter ;
+                  KN:has_contact_pressure "0.5"^^xsd:double ;
+                  KN:has_forces "forces.csv" ;
+                  :hasValue "/home/knownow/KnowNow/TUB/KnowNow_Daten//RawData/DEM_stress_strain/input/input_Eval.yml" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_Messprotokolle_probe_1_052021
+KN:Feinmahlung_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:PowderMeasurement ;
+                                             KN:has_Datum "2021-06-03" ;
+                                             KN:has_Feinmahlungs-Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Prozessparameter_1.xlsx" ;
+                                             KN:has_Feinmahlungsdauer "1.25[h]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_Messprotokolle_probe_2_052021
+KN:Feinmahlung_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:PowderMeasurement ;
+                                             KN:has_Datum "2021-06-21" ;
+                                             KN:has_Feinmahlungs-Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Prozessparameter_2.xlsx" ;
+                                             KN:has_Feinmahlungsdauer "4[h]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_Messprotokolle_probe_3_052021
+KN:Feinmahlung_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:PowderMeasurement ;
+                                             KN:has_Datum "2021-07-13" ;
+                                             KN:has_Feinmahlungs-Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Prozessparameter_3.xlsx" ;
+                                             KN:has_Feinmahlungsdauer "2[h]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_Messprotokolle_probe_4_052021
+KN:Feinmahlung_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:PowderMeasurement ;
+                                             KN:has_Datum "2021-07-30" ;
+                                             KN:has_Feinmahlungs-Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Prozessparameter_4.xlsx" ;
+                                             KN:has_Feinmahlungsdauer "0.5[h]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_Messprotokolle_probe_5_052021
+KN:Feinmahlung_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                      KN:PowderMeasurement ;
+                                             KN:has_Datum "2021-08-23" ;
+                                             KN:has_Feinmahlungs-Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Prozessparameter_5.xlsx" ;
+                                             KN:has_Feinmahlungsdauer "0.75[h]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_XRD_Messprotokolle_probe_1_052021
+KN:Feinmahlung_XRD_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                          KN:PowderMeasurement ;
+                                                 KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Messbedingungen_1.xlsx" ;
+                                                 KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                 KN:has_Untersuchungsgegenstand_d50 "0.7[µm]" ;
+                                                 KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_x-y-Messdaten_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_XRD_Messprotokolle_probe_2_052021
+KN:Feinmahlung_XRD_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                          KN:PowderMeasurement ;
+                                                 KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Messbedingungen_2.xlsx" ;
+                                                 KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                 KN:has_Untersuchungsgegenstand_d50 "0.5[µm]" ;
+                                                 KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_x-y-Messdaten_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_XRD_Messprotokolle_probe_3_052021
+KN:Feinmahlung_XRD_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                          KN:PowderMeasurement ;
+                                                 KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Messbedingungen_3.xlsx" ;
+                                                 KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                 KN:has_Untersuchungsgegenstand_d50 "0.6[µm]" ;
+                                                 KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_x-y-Messdaten_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_XRD_Messprotokolle_probe_4_052021
+KN:Feinmahlung_XRD_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                          KN:PowderMeasurement ;
+                                                 KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Messbedingungen_4.xlsx" ;
+                                                 KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                 KN:has_Untersuchungsgegenstand_d50 "0.9[µm]" ;
+                                                 KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_x-y-Messdaten_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Feinmahlung_XRD_Messprotokolle_probe_5_052021
+KN:Feinmahlung_XRD_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                          KN:PowderMeasurement ;
+                                                 KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_Messbedingungen_5.xlsx" ;
+                                                 KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                 KN:has_Untersuchungsgegenstand_d50 "0.8[µm]" ;
+                                                 KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Feinmahl_Messprotokolle_x-y-Messdaten_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Herz
+KN:Herz rdf:type owl:NamedIndividual ,
+                 <http://qudt.org/schema/qudt/Unit> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Homogenisierung_probe_1_052021
+KN:Homogenisierung_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                           KN:PowderMeasurement ;
+                                  KN:has_Siebung KN:Siebung_Homogenisierung_probe_1_052021 ;
+                                  KN:has_Datum "2021-05-28" ;
+                                  KN:has_Einwaage "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Einwaage_1.xlsx" ;
+                                  KN:has_HomogenisierungsParameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_HomogenisierungsParameter_1.xlsx" ;
+                                  KN:has_Trocknung "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Trocknung_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Homogenisierung_probe_2_052021
+KN:Homogenisierung_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                           KN:PowderMeasurement ;
+                                  KN:has_Siebung KN:Siebung_Homogenisierung_probe_2_052021 ;
+                                  KN:has_Datum "2021-06-14" ;
+                                  KN:has_Einwaage "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Einwaage_2.xlsx" ;
+                                  KN:has_HomogenisierungsParameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_HomogenisierungsParameter_2.xlsx" ;
+                                  KN:has_Trocknung "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Trocknung_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Homogenisierung_probe_3_052021
+KN:Homogenisierung_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                           KN:PowderMeasurement ;
+                                  KN:has_Siebung KN:Siebung_Homogenisierung_probe_3_052021 ;
+                                  KN:has_Datum "2021-06-28" ;
+                                  KN:has_Einwaage "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Einwaage_3.xlsx" ;
+                                  KN:has_HomogenisierungsParameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_HomogenisierungsParameter_3.xlsx" ;
+                                  KN:has_Trocknung "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Trocknung_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Homogenisierung_probe_4_052021
+KN:Homogenisierung_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                           KN:PowderMeasurement ;
+                                  KN:has_Siebung KN:Siebung_Homogenisierung_probe_4_052021 ;
+                                  KN:has_Datum "2021-07-21" ;
+                                  KN:has_Einwaage "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Einwaage_4.xlsx" ;
+                                  KN:has_HomogenisierungsParameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_HomogenisierungsParameter_4.xlsx" ;
+                                  KN:has_Trocknung "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Trocknung_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Homogenisierung_probe_5_052021
+KN:Homogenisierung_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                           KN:PowderMeasurement ;
+                                  KN:has_Siebung KN:Siebung_Homogenisierung_probe_5_052021 ;
+                                  KN:has_Datum "2021-08-17" ;
+                                  KN:has_Einwaage "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Einwaage_5.xlsx" ;
+                                  KN:has_HomogenisierungsParameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_HomogenisierungsParameter_5.xlsx" ;
+                                  KN:has_Trocknung "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Homog_Trocknung_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#InductivitySpirale
+KN:InductivitySpirale rdf:type owl:NamedIndividual ,
+                               :Document ;
+                      :hasValue "C:\\Users\\Baca\\Desktop\\Felipe\\Server\\Workflows\\TestSimulationCOMSOL55.mph" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_XRD_Messprotokolle_probe_1_052021
+KN:Kalzinierung_XRD_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                           KN:PowderMeasurement ;
+                                                  KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_Messbedingungen_1.xlsx" ;
+                                                  KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                  KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_x-y-Messdaten_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_XRD_Messprotokolle_probe_2_052021
+KN:Kalzinierung_XRD_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                           KN:PowderMeasurement ;
+                                                  KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_Messbedingungen_2.xlsx" ;
+                                                  KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                  KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_x-y-Messdaten_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_XRD_Messprotokolle_probe_3_052021
+KN:Kalzinierung_XRD_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                           KN:PowderMeasurement ;
+                                                  KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_Messbedingungen_3.xlsx" ;
+                                                  KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                  KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_x-y-Messdaten_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_XRD_Messprotokolle_probe_4_052021
+KN:Kalzinierung_XRD_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                           KN:PowderMeasurement ;
+                                                  KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_Messbedingungen_4.xlsx" ;
+                                                  KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                  KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_x-y-Messdaten_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_XRD_Messprotokolle_probe_5_052021
+KN:Kalzinierung_XRD_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                           KN:PowderMeasurement ;
+                                                  KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_Messbedingungen_5.xlsx" ;
+                                                  KN:has_Messgerät "Bruker AXS Advance D8" ;
+                                                  KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Messprotokolle_x-y-Messdaten_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_probe_1_052021
+KN:Kalzinierung_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                        KN:PowderMeasurement ;
+                               KN:has_Datum "2021-06-02" ;
+                               KN:has_Kalzinierungs_Behälter_Material "Korund (Al2O3)" ;
+                               KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Prozessparameter_1.xlsx" ;
+                               KN:has_Pulver_je_Behälter "50[g]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_probe_2_052021
+KN:Kalzinierung_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                        KN:PowderMeasurement ;
+                               KN:has_Datum "2021-06-18" ;
+                               KN:has_Kalzinierungs_Behälter_Material "Korund (Al2O3)" ;
+                               KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Prozessparameter_2.xlsx" ;
+                               KN:has_Pulver_je_Behälter "50[g]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_probe_3_052021
+KN:Kalzinierung_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                        KN:PowderMeasurement ;
+                               KN:has_Datum "2021-07-01" ;
+                               KN:has_Kalzinierungs_Behälter_Material "Korund (Al2O3)" ;
+                               KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Prozessparameter_3.xlsx" ;
+                               KN:has_Pulver_je_Behälter "50[g]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_probe_4_052021
+KN:Kalzinierung_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                        KN:PowderMeasurement ;
+                               KN:has_Datum "2021-07-25" ;
+                               KN:has_Kalzinierungs_Behälter_Material "Korund (Al2O3)" ;
+                               KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Prozessparameter_4.xlsx" ;
+                               KN:has_Pulver_je_Behälter "50[g]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Kalzinierung_probe_5_052021
+KN:Kalzinierung_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                        KN:PowderMeasurement ;
+                               KN:has_Datum "2021-08-23" ;
+                               KN:has_Kalzinierungs_Behälter_Material "Korund (Al2O3)" ;
+                               KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Kalzi_Prozessparameter_5.xlsx" ;
+                               KN:has_Pulver_je_Behälter "50[g]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_probe_1_052021
+KN:Partikelgrößenverteilung_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                                   KN:ParticleSizeDistributionD50 ;
+                                                          KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_Messergebnisse_1.xlsx" ;
+                                                          KN:has_Messgerät "Malvern Mastersizer 2000 Laserdiffraction" ;
+                                                          KN:has_d_50 "0.702[µm]" ;
+                                                          KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_x-y-Messdaten_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_probe_2_052021
+KN:Partikelgrößenverteilung_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                                   KN:ParticleSizeDistributionD50 ;
+                                                          KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_Messergebnisse_2.xlsx" ;
+                                                          KN:has_Messgerät "Malvern Mastersizer 2000 Laserdiffraction" ;
+                                                          KN:has_d_50 "0.508[µm]" ;
+                                                          KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_x-y-Messdaten_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_probe_3_052021
+KN:Partikelgrößenverteilung_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                                   KN:ParticleSizeDistributionD50 ;
+                                                          KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_Messergebnisse_3.xlsx" ;
+                                                          KN:has_Messgerät "Malvern Mastersizer 2000 Laserdiffraction" ;
+                                                          KN:has_d_50 "0.6[µm]" ;
+                                                          KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_x-y-Messdaten_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_probe_4_052021
+KN:Partikelgrößenverteilung_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                                   KN:ParticleSizeDistributionD50 ;
+                                                          KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_Messergebnisse_4.xlsx" ;
+                                                          KN:has_Messgerät "Malvern Mastersizer 2000 Laserdiffraction" ;
+                                                          KN:has_d_50 "0.887[µm]" ;
+                                                          KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_x-y-Messdaten_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_probe_5_052021
+KN:Partikelgrößenverteilung_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                                   KN:ParticleSizeDistributionD50 ;
+                                                          KN:has_Messergebnisse "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_Messergebnisse_5.xlsx" ;
+                                                          KN:has_Messgerät "Malvern Mastersizer 2000 Laserdiffraction" ;
+                                                          KN:has_d_50 "0.8[µm]" ;
+                                                          KN:has_x-y-Messdaten "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Partikelgrößenverteilung_Messprotokolle_x-y-Messdaten_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_ws1_062021
+KN:Partikelgrößenverteilung_Messprotokolle_ws1_062021 rdf:type owl:NamedIndividual ,
+                                                               KN:ParticleSizeDistributionD50 ;
+                                                      KN:has_Error "0.02"^^xsd:double ;
+                                                      KN:has_Unit "m²/g" ;
+                                                      KN:has_d_50 "0.7"^^xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_ws2_062021
+KN:Partikelgrößenverteilung_Messprotokolle_ws2_062021 rdf:type owl:NamedIndividual ,
+                                                               KN:ParticleSizeDistributionD50 ;
+                                                      KN:has_Error "0.01"^^xsd:double ;
+                                                      KN:has_Unit "m²/g" ;
+                                                      KN:has_d_50 "0.51"^^xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_ws3_062021
+KN:Partikelgrößenverteilung_Messprotokolle_ws3_062021 rdf:type owl:NamedIndividual ,
+                                                               KN:ParticleSizeDistributionD50 ;
+                                                      KN:has_Error "0.01"^^xsd:double ;
+                                                      KN:has_Unit "m²/g" ;
+                                                      KN:has_d_50 "0.6"^^xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_ws4_062021
+KN:Partikelgrößenverteilung_Messprotokolle_ws4_062021 rdf:type owl:NamedIndividual ,
+                                                               KN:ParticleSizeDistributionD50 ;
+                                                      KN:has_Error "0.02"^^xsd:double ;
+                                                      KN:has_Unit "m²/g" ;
+                                                      KN:has_d_50 "0.89"^^xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Partikelgrößenverteilung_Messprotokolle_ws5_062021
+KN:Partikelgrößenverteilung_Messprotokolle_ws5_062021 rdf:type owl:NamedIndividual ,
+                                                               KN:ParticleSizeDistributionD50 ;
+                                                      KN:has_Error "0.01"^^xsd:double ;
+                                                      KN:has_Unit "m²/g" ;
+                                                      KN:has_d_50 "0.8"^^xsd:double .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Person_1
+KN:Person_1 rdf:type owl:NamedIndividual ,
+                     AG:SoftwareAgent ;
+            KN:has_Name "Ernst Abbe Hochschule" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Person_DEM
+KN:Person_DEM rdf:type owl:NamedIndividual ,
+                       AG:SoftwareAgent ;
+              KN:has_Name "Bjoern Mieller" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Prozessgegenstand_probe_1_052021
+KN:Prozessgegenstand_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                             KN:PowderMeasurement ;
+                                    KN:has_Proben-Charge_extern "KN.V01" ;
+                                    KN:has_Proben-Charge_intern "KN.01-2" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Prozessgegenstand_probe_2_052021
+KN:Prozessgegenstand_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                             KN:PowderMeasurement ;
+                                    KN:has_Proben-Charge_extern "KN.V02" ;
+                                    KN:has_Proben-Charge_intern "KN.01-3" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Prozessgegenstand_probe_3_052021
+KN:Prozessgegenstand_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                             KN:PowderMeasurement ;
+                                    KN:has_Proben-Charge_extern "KN.V03" ;
+                                    KN:has_Proben-Charge_intern "KN.01-4" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Prozessgegenstand_probe_4_052021
+KN:Prozessgegenstand_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                             KN:PowderMeasurement ;
+                                    KN:has_Proben-Charge_extern "KN.V04" ;
+                                    KN:has_Proben-Charge_intern "KN.01-5" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Prozessgegenstand_probe_5_052021
+KN:Prozessgegenstand_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                             KN:PowderMeasurement ;
+                                    KN:has_Proben-Charge_extern "KN.V05" ;
+                                    KN:has_Proben-Charge_intern "KN.01-7" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Result
+KN:Result rdf:type owl:NamedIndividual ,
+                   KN:Stress_Strain_parameter ;
+          :hasValue "/home/knownow/KnowNow/TUB/KnowNow_Daten/RawData/DEM_stress_strain/output/results.txt" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schwindungsverhalten_Messprotokolle_probe_1_052021
+KN:Schwindungsverhalten_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                               KN:PowderMeasurement ;
+                                                      KN:has_Datum "2021-06-06" ;
+                                                      KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_Messbedingungen_1.xlsx" ;
+                                                      KN:has_Messgerät "Netzsch DIL 402 E" ;
+                                                      KN:has_max_rel_Schwindung "-16.68113[%]" ;
+                                                      KN:has_x-y-Messdaten_SinterSim "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_x-y-Messdaten_SinterSim_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schwindungsverhalten_Messprotokolle_probe_2_052021
+KN:Schwindungsverhalten_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                               KN:PowderMeasurement ;
+                                                      KN:has_Datum "2021-06-23" ;
+                                                      KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_Messbedingungen_2.xlsx" ;
+                                                      KN:has_Messgerät "Netzsch DIL 402 E" ;
+                                                      KN:has_max_rel_Schwindung "-17.03029[%]" ;
+                                                      KN:has_x-y-Messdaten_SinterSim "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_x-y-Messdaten_SinterSim_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schwindungsverhalten_Messprotokolle_probe_3_052021
+KN:Schwindungsverhalten_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                               KN:PowderMeasurement ;
+                                                      KN:has_Datum "2021-07-14" ;
+                                                      KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_Messbedingungen_3.xlsx" ;
+                                                      KN:has_Messgerät "Netzsch DIL 402 E" ;
+                                                      KN:has_max_rel_Schwindung "-17.70074[%]" ;
+                                                      KN:has_x-y-Messdaten_SinterSim "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_x-y-Messdaten_SinterSim_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schwindungsverhalten_Messprotokolle_probe_4_052021
+KN:Schwindungsverhalten_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                               KN:PowderMeasurement ;
+                                                      KN:has_Datum "2021-08-02" ;
+                                                      KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_Messbedingungen_4.xlsx" ;
+                                                      KN:has_Messgerät "Netzsch DIL 402 E" ;
+                                                      KN:has_max_rel_Schwindung "-16.68214[%]" ;
+                                                      KN:has_x-y-Messdaten_SinterSim "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_x-y-Messdaten_SinterSim_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Schwindungsverhalten_Messprotokolle_probe_5_052021
+KN:Schwindungsverhalten_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                               KN:PowderMeasurement ;
+                                                      KN:has_Datum "2021-08-25" ;
+                                                      KN:has_Messbedingungen "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_Messbedingungen_5.xlsx" ;
+                                                      KN:has_Messgerät "Netzsch DIL 402 E" ;
+                                                      KN:has_max_rel_Schwindung "-17.43847[%]" ;
+                                                      KN:has_x-y-Messdaten_SinterSim "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Schwindungsverhalten_Messprotokolle_x-y-Messdaten_SinterSim_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Second_per_meter
+KN:Second_per_meter rdf:type owl:NamedIndividual ,
+                             <http://qudt.org/schema/qudt/Unit> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Siebung_Homogenisierung_probe_1_052021
+KN:Siebung_Homogenisierung_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                   KN:Slurry ;
+                                          KN:has_Sieb-Maschenweite "630[µm]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Siebung_Homogenisierung_probe_2_052021
+KN:Siebung_Homogenisierung_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                   KN:Slurry ;
+                                          KN:has_Sieb-Maschenweite "630[µm]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Siebung_Homogenisierung_probe_3_052021
+KN:Siebung_Homogenisierung_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                   KN:Slurry ;
+                                          KN:has_Sieb-Maschenweite "630[µm]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Siebung_Homogenisierung_probe_4_052021
+KN:Siebung_Homogenisierung_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                   KN:Slurry ;
+                                          KN:has_Sieb-Maschenweite "630[µm]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Siebung_Homogenisierung_probe_5_052021
+KN:Siebung_Homogenisierung_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                   KN:Slurry ;
+                                          KN:has_Sieb-Maschenweite "630[µm]" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Simulation_WorkPiece1
+KN:Simulation_WorkPiece1 rdf:type owl:NamedIndividual ,
+                                  :ComsolSimulation ;
+                         :hasCharacteristic KN:active_body_dist ,
+                                            KN:air_epsilon ,
+                                            KN:air_mur ,
+                                            KN:air_sigma ,
+                                            KN:coil_d ,
+                                            KN:coil_d_ges ,
+                                            KN:coil_h ,
+                                            KN:coil_pitch ,
+                                            KN:coil_wire_d ,
+                                            KN:coil_wire_dist ,
+                                            KN:f_max ,
+                                            KN:f_min ,
+                                            KN:ferro_epsilon ,
+                                            KN:ferro_mur ,
+                                            KN:ferro_sigma ,
+                                            KN:me_epsilon ,
+                                            KN:me_mur ,
+                                            KN:me_sigma ;
+                         :hasInput KN:WorkPiece1 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintern_Prozessprotokolle_probe_1_052021
+KN:Sintern_Prozessprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                     KN:Sintering ;
+                                            KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Sintern_Prozessprotokolle_Prozessparameter_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintern_Prozessprotokolle_probe_2_052021
+KN:Sintern_Prozessprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                     KN:Sintering ;
+                                            KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Sintern_Prozessprotokolle_Prozessparameter_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintern_Prozessprotokolle_probe_3_052021
+KN:Sintern_Prozessprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                     KN:Sintering ;
+                                            KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Sintern_Prozessprotokolle_Prozessparameter_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintern_Prozessprotokolle_probe_4_052021
+KN:Sintern_Prozessprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                     KN:Sintering ;
+                                            KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Sintern_Prozessprotokolle_Prozessparameter_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Sintern_Prozessprotokolle_probe_5_052021
+KN:Sintern_Prozessprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                     KN:Sintering ;
+                                            KN:has_Prozessparameter "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/Sintern_Prozessprotokolle_Prozessparameter_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Spule_N_10
+KN:Spule_N_10 rdf:type owl:NamedIndividual ,
+                       KN:Spule ;
+              :hasCharacteristic KN:Partikelgrößenverteilung_Messprotokolle_probe_1_052021 ,
+                                 KN:Partikelgrößenverteilung_Messprotokolle_probe_2_052021 ,
+                                 KN:Partikelgrößenverteilung_Messprotokolle_probe_3_052021 ,
+                                 KN:Partikelgrößenverteilung_Messprotokolle_probe_4_052021 ,
+                                 KN:Partikelgrößenverteilung_Messprotokolle_probe_5_052021 ;
+              KN:has_Windungen 10 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Spule_N_3
+KN:Spule_N_3 rdf:type owl:NamedIndividual ,
+                      KN:Spule ;
+             :hasCharacteristic KN:Partikelgrößenverteilung_Messprotokolle_probe_1_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_2_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_3_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_4_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_5_052021 ;
+             KN:has_Windungen 3 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Spule_N_5
+KN:Spule_N_5 rdf:type owl:NamedIndividual ,
+                      KN:Spule ;
+             :hasCharacteristic KN:Partikelgrößenverteilung_Messprotokolle_probe_1_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_2_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_3_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_4_052021 ,
+                                KN:Partikelgrößenverteilung_Messprotokolle_probe_5_052021 ;
+             KN:has_Windungen 5 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Stress_Strain
+KN:Stress_Strain rdf:type owl:NamedIndividual ,
+                          KN:ShrinkageMeasurement ;
+                 :hasOutput KN:Result ;
+                 :hasSubordinateProcess KN:Stress_Strain_part1 ,
+                                        KN:Stress_Strain_part2 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Stress_Strain_part1
+KN:Stress_Strain_part1 rdf:type owl:NamedIndividual ,
+                                KN:ShrinkageMeasurement ;
+                       :hasInput KN:Advanced_Parameter ;
+                       :hasNextProcess KN:Stress_Strain_part2 ;
+                       :hasOutput KN:Eval_Parameter ;
+                       :hasValue "/home/knownow/KnowNow/TUB/KnowNow_Daten/RawData/DEM_stress_strain/model/KNOW-NOW_Advanced.zip" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Stress_Strain_part2
+KN:Stress_Strain_part2 rdf:type owl:NamedIndividual ,
+                                KN:ShrinkageMeasurement ;
+                       :hasInput KN:Eval_Parameter ;
+                       :hasOutput KN:Result ;
+                       :hasValue "/home/knownow/KnowNow/TUB/KnowNow_Daten/RawData/DEM_stress_strain/model/KNOW-NOW_Eval.zip" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Testsimulation_COMSOL_55
+KN:Testsimulation_COMSOL_55 rdf:type owl:NamedIndividual ,
+                                     KN:WorkPieceMultiPhysicsModel ;
+                            :executes KN:Simulation_WorkPiece1 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Werkstoff_ws1_062021
+KN:Werkstoff_ws1_062021 rdf:type owl:NamedIndividual ,
+                                 :Component ;
+                        KN:has_Label "KN-V01" ;
+                        KN:has_chemischeZusammensetzung "Ni0,3Cu0,2Zn0,52Fe1,98O3,99" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Werkstoff_ws2_062021
+KN:Werkstoff_ws2_062021 rdf:type owl:NamedIndividual ,
+                                 :Component ;
+                        KN:has_Label "KN-V02" ;
+                        KN:has_chemischeZusammensetzung "Ni0,3Cu0,2Zn0,52Fe1,98O3,99" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Werkstoff_ws3_062021
+KN:Werkstoff_ws3_062021 rdf:type owl:NamedIndividual ,
+                                 :Component ;
+                        KN:has_Label "KN-V03" ;
+                        KN:has_chemischeZusammensetzung "Ni0,3Cu0,2Zn0,52Fe1,98O3,99" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Werkstoff_ws4_062021
+KN:Werkstoff_ws4_062021 rdf:type owl:NamedIndividual ,
+                                 :Component ;
+                        KN:has_Label "KN-V04" ;
+                        KN:has_chemischeZusammensetzung "Ni0,3Cu0,2Zn0,52Fe1,98O3,99" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#Werkstoff_ws5_062021
+KN:Werkstoff_ws5_062021 rdf:type owl:NamedIndividual ,
+                                 :Component ;
+                        KN:has_Label "KN-V05" ;
+                        KN:has_chemischeZusammensetzung "Ni0,3Cu0,2Zn0,52Fe1,98O3,99" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#WorkPiece1
+KN:WorkPiece1 rdf:type owl:NamedIndividual ,
+                       KN:MLCeramic ;
+              :hasResource KN:InductivitySpirale .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#active_body_dist
+KN:active_body_dist rdf:type owl:NamedIndividual ,
+                             KN:ComsolSimulationParameter ;
+                    :hasValue "max(coil_pitch,coil_wire_d)"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#air_epsilon
+KN:air_epsilon rdf:type owl:NamedIndividual ,
+                        KN:ComsolSimulationParameter ;
+               :hasValue "2"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#air_mur
+KN:air_mur rdf:type owl:NamedIndividual ,
+                    KN:ComsolSimulationParameter ;
+           :hasValue "1"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#air_sigma
+KN:air_sigma rdf:type owl:NamedIndividual ,
+                      KN:ComsolSimulationParameter ;
+             :hasValue "0"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_d
+KN:coil_d rdf:type owl:NamedIndividual ,
+                   KN:ComsolSimulationParameter ;
+          :hasValue "1000"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_d_ges
+KN:coil_d_ges rdf:type owl:NamedIndividual ,
+                       KN:ComsolSimulationParameter ;
+              :hasValue "coil_d+coil_wire_d"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_h
+KN:coil_h rdf:type owl:NamedIndividual ,
+                   KN:ComsolSimulationParameter ;
+          :hasValue "coil_n*coil_pitch+coil_wire_d"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_pitch
+KN:coil_pitch rdf:type owl:NamedIndividual ,
+                       KN:ComsolSimulationParameter ;
+              :hasValue "coil_wire_d+coil_wire_dist"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_wire_d
+KN:coil_wire_d rdf:type owl:NamedIndividual ,
+                        KN:ComsolSimulationParameter ;
+               :hasValue "150"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#coil_wire_dist
+KN:coil_wire_dist rdf:type owl:NamedIndividual ,
+                           KN:ComsolSimulationParameter ;
+                  :hasValue "100"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#f_max
+KN:f_max rdf:type owl:NamedIndividual ,
+                  KN:ComsolSimulationParameter ;
+         :hasValue "1E6"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#f_min
+KN:f_min rdf:type owl:NamedIndividual ,
+                  KN:ComsolSimulationParameter ;
+         :hasValue "1"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ferro_epsilon
+KN:ferro_epsilon rdf:type owl:NamedIndividual ,
+                          KN:ComsolSimulationParameter ;
+                 :hasValue "20"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ferro_mur
+KN:ferro_mur rdf:type owl:NamedIndividual ,
+                      KN:ComsolSimulationParameter ;
+             :hasValue "500"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ferro_sigma
+KN:ferro_sigma rdf:type owl:NamedIndividual ,
+                        KN:ComsolSimulationParameter ;
+               :hasValue "0"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#magnetische_Permeabilität_Messprotokolle_probe_1_052021
+KN:magnetische_Permeabilität_Messprotokolle_probe_1_052021 rdf:type owl:NamedIndividual ,
+                                                                    KN:PowderMeasurement ;
+                                                           KN:has_Imaginärteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe1_1.xlsx" ;
+                                                           KN:has_Imaginärteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe2_1.xlsx" ;
+                                                           KN:has_Mu1_1MHz_Mittelwert "277.8508"^^xsd:double ;
+                                                           KN:has_Mu2_1MHz_Mittelwert "12.85849"^^xsd:double ;
+                                                           KN:has_Realteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe1_1.xlsx" ;
+                                                           KN:has_Realteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe2_1.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#magnetische_Permeabilität_Messprotokolle_probe_2_052021
+KN:magnetische_Permeabilität_Messprotokolle_probe_2_052021 rdf:type owl:NamedIndividual ,
+                                                                    KN:PowderMeasurement ;
+                                                           KN:has_Imaginärteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe1_2.xlsx" ;
+                                                           KN:has_Imaginärteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe2_2.xlsx" ;
+                                                           KN:has_Mu1_1MHz_Mittelwert "386.7963"^^xsd:double ;
+                                                           KN:has_Mu2_1MHz_Mittelwert "23.6339"^^xsd:double ;
+                                                           KN:has_Realteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe1_2.xlsx" ;
+                                                           KN:has_Realteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe2_2.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#magnetische_Permeabilität_Messprotokolle_probe_3_052021
+KN:magnetische_Permeabilität_Messprotokolle_probe_3_052021 rdf:type owl:NamedIndividual ,
+                                                                    KN:PowderMeasurement ;
+                                                           KN:has_Imaginärteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe1_3.xlsx" ;
+                                                           KN:has_Imaginärteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe2_3.xlsx" ;
+                                                           KN:has_Mu1_1MHz_Mittelwert "339.3492"^^xsd:double ;
+                                                           KN:has_Mu2_1MHz_Mittelwert "14.27971"^^xsd:double ;
+                                                           KN:has_Realteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe1_3.xlsx" ;
+                                                           KN:has_Realteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe2_3.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#magnetische_Permeabilität_Messprotokolle_probe_4_052021
+KN:magnetische_Permeabilität_Messprotokolle_probe_4_052021 rdf:type owl:NamedIndividual ,
+                                                                    KN:PowderMeasurement ;
+                                                           KN:has_Imaginärteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe1_4.xlsx" ;
+                                                           KN:has_Imaginärteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe2_4.xlsx" ;
+                                                           KN:has_Mu1_1MHz_Mittelwert "138.287"^^xsd:double ;
+                                                           KN:has_Mu2_1MHz_Mittelwert "12.84136"^^xsd:double ;
+                                                           KN:has_Realteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe1_4.xlsx" ;
+                                                           KN:has_Realteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe2_4.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#magnetische_Permeabilität_Messprotokolle_probe_5_052021
+KN:magnetische_Permeabilität_Messprotokolle_probe_5_052021 rdf:type owl:NamedIndividual ,
+                                                                    KN:PowderMeasurement ;
+                                                           KN:has_Imaginärteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe1_5.xlsx" ;
+                                                           KN:has_Imaginärteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Imaginärteil_probe2_5.xlsx" ;
+                                                           KN:has_Mu1_1MHz_Mittelwert "152.5506"^^xsd:double ;
+                                                           KN:has_Mu2_1MHz_Mittelwert "11.45649"^^xsd:double ;
+                                                           KN:has_Realteil_probe1 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe1_5.xlsx" ;
+                                                           KN:has_Realteil_probe2 "file://localhost/home/knownow/KnowNow/TUB/Iheb_WD/created_DataResources/magnetische_Permeabilität_Realteil_probe2_5.xlsx" .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#me_epsilon
+KN:me_epsilon rdf:type owl:NamedIndividual ,
+                       KN:ComsolSimulationParameter ;
+              :hasValue "60"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#me_mur
+KN:me_mur rdf:type owl:NamedIndividual ,
+                   KN:ComsolSimulationParameter ;
+          :hasValue "1"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#me_sigma
+KN:me_sigma rdf:type owl:NamedIndividual ,
+                     KN:ComsolSimulationParameter ;
+            :hasValue "61.6E6"^^rdfs:Literal .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#micrometer
+KN:micrometer rdf:type owl:NamedIndividual ,
+                       <http://qudt.org/schema/qudt/Unit> .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#probe_1_052021
+KN:probe_1_052021 rdf:type owl:NamedIndividual ,
+                           KN:Powder ;
+                  :composedOf KN:BET-Analyse_Messprotokolle_probe_1_052021 ,
+                              KN:Dichte_Messprotokolle_probe_1_052021 ,
+                              KN:Feinmahlung_Messprotokolle_probe_1_052021 ,
+                              KN:Feinmahlung_XRD_Messprotokolle_probe_1_052021 ,
+                              KN:Homogenisierung_probe_1_052021 ,
+                              KN:Kalzinierung_XRD_Messprotokolle_probe_1_052021 ,
+                              KN:Kalzinierung_probe_1_052021 ,
+                              KN:Partikelgrößenverteilung_Messprotokolle_probe_1_052021 ,
+                              KN:Prozessgegenstand_probe_1_052021 ,
+                              KN:Schwindungsverhalten_Messprotokolle_probe_1_052021 ,
+                              KN:Sintern_Prozessprotokolle_probe_1_052021 ,
+                              KN:magnetische_Permeabilität_Messprotokolle_probe_1_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#probe_2_052021
+KN:probe_2_052021 rdf:type owl:NamedIndividual ,
+                           KN:Powder ;
+                  :composedOf KN:BET-Analyse_Messprotokolle_probe_2_052021 ,
+                              KN:Dichte_Messprotokolle_probe_2_052021 ,
+                              KN:Feinmahlung_Messprotokolle_probe_2_052021 ,
+                              KN:Feinmahlung_XRD_Messprotokolle_probe_2_052021 ,
+                              KN:Homogenisierung_probe_2_052021 ,
+                              KN:Kalzinierung_XRD_Messprotokolle_probe_2_052021 ,
+                              KN:Kalzinierung_probe_2_052021 ,
+                              KN:Partikelgrößenverteilung_Messprotokolle_probe_2_052021 ,
+                              KN:Prozessgegenstand_probe_2_052021 ,
+                              KN:Schwindungsverhalten_Messprotokolle_probe_2_052021 ,
+                              KN:Sintern_Prozessprotokolle_probe_2_052021 ,
+                              KN:magnetische_Permeabilität_Messprotokolle_probe_2_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#probe_3_052021
+KN:probe_3_052021 rdf:type owl:NamedIndividual ,
+                           KN:Powder ;
+                  :composedOf KN:BET-Analyse_Messprotokolle_probe_3_052021 ,
+                              KN:Dichte_Messprotokolle_probe_3_052021 ,
+                              KN:Feinmahlung_Messprotokolle_probe_3_052021 ,
+                              KN:Feinmahlung_XRD_Messprotokolle_probe_3_052021 ,
+                              KN:Homogenisierung_probe_3_052021 ,
+                              KN:Kalzinierung_XRD_Messprotokolle_probe_3_052021 ,
+                              KN:Kalzinierung_probe_3_052021 ,
+                              KN:Partikelgrößenverteilung_Messprotokolle_probe_3_052021 ,
+                              KN:Prozessgegenstand_probe_3_052021 ,
+                              KN:Schwindungsverhalten_Messprotokolle_probe_3_052021 ,
+                              KN:Sintern_Prozessprotokolle_probe_3_052021 ,
+                              KN:magnetische_Permeabilität_Messprotokolle_probe_3_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#probe_4_052021
+KN:probe_4_052021 rdf:type owl:NamedIndividual ,
+                           KN:Powder ;
+                  :composedOf KN:BET-Analyse_Messprotokolle_probe_4_052021 ,
+                              KN:Dichte_Messprotokolle_probe_4_052021 ,
+                              KN:Feinmahlung_Messprotokolle_probe_4_052021 ,
+                              KN:Feinmahlung_XRD_Messprotokolle_probe_4_052021 ,
+                              KN:Homogenisierung_probe_4_052021 ,
+                              KN:Kalzinierung_XRD_Messprotokolle_probe_4_052021 ,
+                              KN:Kalzinierung_probe_4_052021 ,
+                              KN:Partikelgrößenverteilung_Messprotokolle_probe_4_052021 ,
+                              KN:Prozessgegenstand_probe_4_052021 ,
+                              KN:Schwindungsverhalten_Messprotokolle_probe_4_052021 ,
+                              KN:Sintern_Prozessprotokolle_probe_4_052021 ,
+                              KN:magnetische_Permeabilität_Messprotokolle_probe_4_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#probe_5_052021
+KN:probe_5_052021 rdf:type owl:NamedIndividual ,
+                           KN:Powder ;
+                  :composedOf KN:BET-Analyse_Messprotokolle_probe_5_052021 ,
+                              KN:Dichte_Messprotokolle_probe_5_052021 ,
+                              KN:Feinmahlung_Messprotokolle_probe_5_052021 ,
+                              KN:Feinmahlung_XRD_Messprotokolle_probe_5_052021 ,
+                              KN:Homogenisierung_probe_5_052021 ,
+                              KN:Kalzinierung_XRD_Messprotokolle_probe_5_052021 ,
+                              KN:Kalzinierung_probe_5_052021 ,
+                              KN:Partikelgrößenverteilung_Messprotokolle_probe_5_052021 ,
+                              KN:Prozessgegenstand_probe_5_052021 ,
+                              KN:Schwindungsverhalten_Messprotokolle_probe_5_052021 ,
+                              KN:Sintern_Prozessprotokolle_probe_5_052021 ,
+                              KN:magnetische_Permeabilität_Messprotokolle_probe_5_052021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ws1_062021
+KN:ws1_062021 rdf:type owl:NamedIndividual ,
+                       KN:GreenTape ;
+              KN:has_Software_Agent KN:Person_1 ;
+              :composedOf KN:BET-Analyse_Messprotokolle_ws1_062021 ,
+                          KN:Partikelgrößenverteilung_Messprotokolle_ws1_062021 ,
+                          KN:Werkstoff_ws1_062021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ws2_062021
+KN:ws2_062021 rdf:type owl:NamedIndividual ,
+                       KN:GreenTape ;
+              KN:has_Software_Agent KN:Person_1 ;
+              :composedOf KN:BET-Analyse_Messprotokolle_ws2_062021 ,
+                          KN:Partikelgrößenverteilung_Messprotokolle_ws2_062021 ,
+                          KN:Werkstoff_ws2_062021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ws3_062021
+KN:ws3_062021 rdf:type owl:NamedIndividual ,
+                       KN:GreenTape ;
+              KN:has_Software_Agent KN:Person_1 ;
+              :composedOf KN:BET-Analyse_Messprotokolle_ws3_062021 ,
+                          KN:Partikelgrößenverteilung_Messprotokolle_ws3_062021 ,
+                          KN:Werkstoff_ws3_062021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ws4_062021
+KN:ws4_062021 rdf:type owl:NamedIndividual ,
+                       KN:GreenTape ;
+              KN:has_Software_Agent KN:Person_1 ;
+              :composedOf KN:BET-Analyse_Messprotokolle_ws4_062021 ,
+                          KN:Partikelgrößenverteilung_Messprotokolle_ws4_062021 ,
+                          KN:Werkstoff_ws4_062021 .
+
+
+###  http://www.semanticweb.org/ontologies/KnowNow#ws5_062021
+KN:ws5_062021 rdf:type owl:NamedIndividual ,
+                       KN:GreenTape ;
+              KN:has_Software_Agent KN:Person_1 ;
+              :composedOf KN:BET-Analyse_Messprotokolle_ws5_062021 ,
+                          KN:Partikelgrößenverteilung_Messprotokolle_ws5_062021 ,
+                          KN:Werkstoff_ws5_062021 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing ns3:creator "Guejiep Dowouo, Simplice" ,
+                      "Baca Duque, Lui Felipe" ,
+                      "Ben Hassine, Sahar" .
+
+
+<https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
+
+
+<https://orcid.org/0000-0002-3717-7104> rdfs:label "Bernd Bayerlein" .
+
+
+<https://orcid.org/0000-0002-7094-5371> rdfs:label "Markus Schilling" .
+
+
+<https://orcid.org/0000-0002-9014-2920> rdfs:label "Henk Birkholz" .
+
+
+<https://orcid.org/0000-0003-1649-6832> rdfs:label "Thomas Hanke" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
