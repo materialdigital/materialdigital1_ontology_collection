@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:10:05.165794",
+  "analysis_date": "2024-02-28T16:06:49.658448",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -250,6 +250,87 @@
       ]
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 52,
+      "items": [
+        "http://w3id.org/sensotwin/applicationontology#FinalProcess",
+        "http://w3id.org/sensotwin/applicationontology#InitialProcess",
+        "http://w3id.org/sensotwin/applicationontology#PrepareSpecimenProcess",
+        "http://w3id.org/sensotwin/applicationontology#CuringProcess",
+        "http://w3id.org/sensotwin/applicationontology#CuringWithConstantTemperature",
+        "http://w3id.org/sensotwin/applicationontology#CuringWithDecreasingTemperature",
+        "http://w3id.org/sensotwin/applicationontology#CuringWithIncreasingTemperature",
+        "http://w3id.org/sensotwin/applicationontology#CutSpecimen",
+        "http://w3id.org/sensotwin/applicationontology#FixateGluePlateTool",
+        "http://w3id.org/sensotwin/applicationontology#GlueFlashtape",
+        "http://w3id.org/sensotwin/applicationontology#GlueGluePlateOnPlate",
+        "http://w3id.org/sensotwin/applicationontology#MixGlue",
+        "http://w3id.org/sensotwin/applicationontology#PlacePlate",
+        "http://w3id.org/sensotwin/applicationontology#PlaceSpacer",
+        "http://w3id.org/sensotwin/applicationontology#PrepareGluePlate",
+        "http://w3id.org/sensotwin/applicationontology#Sand",
+        "http://w3id.org/sensotwin/applicationontology#TensileTest",
+        "http://w3id.org/sensotwin/applicationontology#CyclicTensileTest",
+        "http://w3id.org/sensotwin/applicationontology#StaticTensileTest",
+        "http://w3id.org/sensotwin/applicationontology#LeakageTestProcess",
+        "http://w3id.org/sensotwin/applicationontology#CheckVacuumLoss",
+        "http://w3id.org/sensotwin/applicationontology#RunVacuumPump",
+        "http://w3id.org/sensotwin/applicationontology#AssemblingProcess",
+        "http://w3id.org/sensotwin/applicationontology#ApplyingReleaseAgent",
+        "http://w3id.org/sensotwin/applicationontology#CleansingGlassPlate",
+        "http://w3id.org/sensotwin/applicationontology#CutGersterband",
+        "http://w3id.org/sensotwin/applicationontology#CutPeelPly",
+        "http://w3id.org/sensotwin/applicationontology#CutResinDistributionMedia",
+        "http://w3id.org/sensotwin/applicationontology#CutVacuumFilm",
+        "http://w3id.org/sensotwin/applicationontology#FixateVacuumFilm",
+        "http://w3id.org/sensotwin/applicationontology#GlueTackyTape",
+        "http://w3id.org/sensotwin/applicationontology#LayerFibre",
+        "http://w3id.org/sensotwin/applicationontology#LayerPeelPly",
+        "http://w3id.org/sensotwin/applicationontology#LayerResinDistributionMedia",
+        "http://w3id.org/sensotwin/applicationontology#PlacePTFEHose",
+        "http://w3id.org/sensotwin/applicationontology#PreparePTFEHose",
+        "http://w3id.org/sensotwin/applicationontology#DemoldingProcess",
+        "http://w3id.org/sensotwin/applicationontology#CutFibre",
+        "http://w3id.org/sensotwin/applicationontology#DegasingProcess",
+        "http://w3id.org/sensotwin/applicationontology#DegaseMatrix",
+        "http://w3id.org/sensotwin/applicationontology#MixMatrix",
+        "http://w3id.org/sensotwin/applicationontology#InfiltrationProcess",
+        "http://w3id.org/sensotwin/applicationontology#IncreasePressure",
+        "http://w3id.org/sensotwin/applicationontology#MaterialDataMicroscaleSimulation",
+        "http://w3id.org/sensotwin/applicationontology#VirtualStructuralMaterialTestProcess",
+        "http://w3id.org/sensotwin/applicationontology#Step1",
+        "http://w3id.org/sensotwin/applicationontology#Step2",
+        "http://w3id.org/sensotwin/applicationontology#Step3",
+        "http://w3id.org/sensotwin/applicationontology#Step4",
+        "http://w3id.org/sensotwin/applicationontology#Step5",
+        "http://w3id.org/sensotwin/applicationontology#Step6",
+        "http://w3id.org/sensotwin/applicationontology#Step7"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 15,
+      "items": [
+        "http://w3id.org/sensotwin/applicationontology#Testklasse",
+        "http://w3id.org/sensotwin/applicationontology#Glue",
+        "http://w3id.org/sensotwin/applicationontology#MixedMaterial",
+        "http://w3id.org/sensotwin/applicationontology#Matrix",
+        "http://w3id.org/sensotwin/applicationontology#RawMaterial",
+        "http://w3id.org/sensotwin/applicationontology#FibreLength",
+        "http://w3id.org/sensotwin/applicationontology#EndlessFibre",
+        "http://w3id.org/sensotwin/applicationontology#FibreMaterial",
+        "http://w3id.org/sensotwin/applicationontology#Carbon",
+        "http://w3id.org/sensotwin/applicationontology#Glass",
+        "http://w3id.org/sensotwin/applicationontology#LongFibre",
+        "http://w3id.org/sensotwin/applicationontology#ShortFibre",
+        "http://w3id.org/sensotwin/applicationontology#MatrixMaterial",
+        "http://w3id.org/sensotwin/applicationontology#MatrixHardener",
+        "http://w3id.org/sensotwin/applicationontology#Resin"
+      ]
+    }
+  },
   "definitioncounts": {
     "owl:Class": 193,
     "owl:ObjectProperty": 18,
@@ -264,22 +345,22 @@
   "namespaces": {
     "count": 16,
     "items": [
-      "https://w3id.org/pmd/",
-      "http://w3id.org/sensotwin/",
       "http://purl.org/dc/elements/1.1/",
-      "https://material-digital.de/pmdco/",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/ns/prov#",
-      "http://w3id.org/sensotwin/applicationontology#",
-      "http://w3id.org/sensotwin/applicationontology/",
       "http://purl.org/dc/terms/",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://material-digital.de/pmdco/",
       "http://www.w3.org/2000/01/rdf-schema#",
+      "http://w3id.org/sensotwin/applicationontology#",
+      "http://material-digital.de/pmdco/",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/ns/prov#",
+      "http://w3id.org/sensotwin/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "http://w3id.org/sensotwin/applicationontology/",
       "https://orcid.org/",
       "http://www.w3.org/2002/07/owl#",
-      "http://creativecommons.org/licenses/by/4.0/",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://material-digital.de/pmdco/"
+      "https://w3id.org/pmd/co/"
     ]
   },
   "tlos": {

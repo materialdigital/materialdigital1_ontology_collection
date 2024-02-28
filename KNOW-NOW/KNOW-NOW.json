@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:07:33.570210",
+  "analysis_date": "2024-02-28T16:04:13.676244",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -83,6 +83,44 @@
       ]
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 17,
+      "items": [
+        "http://www.semanticweb.org/ontologies/KnowNow#GeometricalDensityDetermination",
+        "http://www.semanticweb.org/ontologies/KnowNow#InLineMeasurement",
+        "http://www.semanticweb.org/ontologies/KnowNow#LaminateMeasurement",
+        "http://www.semanticweb.org/ontologies/KnowNow#MicrometerCaliper",
+        "http://www.semanticweb.org/ontologies/KnowNow#OpticalProfilometrie",
+        "http://www.semanticweb.org/ontologies/KnowNow#Photograph",
+        "http://www.semanticweb.org/ontologies/KnowNow#LaminatePhotograph",
+        "http://www.semanticweb.org/ontologies/KnowNow#WorkpiecePhotograph",
+        "http://www.semanticweb.org/ontologies/KnowNow#PowderMeasurement",
+        "http://www.semanticweb.org/ontologies/KnowNow#BET-Analysis",
+        "http://www.semanticweb.org/ontologies/KnowNow#LaserDiffraction",
+        "http://www.semanticweb.org/ontologies/KnowNow#ShrinkageMeasurement",
+        "http://www.semanticweb.org/ontologies/KnowNow#SlurryMeasurement",
+        "http://www.semanticweb.org/ontologies/KnowNow#Rheometrie",
+        "http://www.semanticweb.org/ontologies/KnowNow#Sintering",
+        "http://www.semanticweb.org/ontologies/KnowNow#FoilCast",
+        "http://www.semanticweb.org/ontologies/KnowNow#Laminating"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 7,
+      "items": [
+        "http://www.semanticweb.org/ontologies/KnowNow#Spule",
+        "http://www.semanticweb.org/ontologies/KnowNow#GreenTape",
+        "http://www.semanticweb.org/ontologies/KnowNow#Laminate",
+        "http://www.semanticweb.org/ontologies/KnowNow#MLCeramic",
+        "http://www.semanticweb.org/ontologies/KnowNow#Powder",
+        "http://www.semanticweb.org/ontologies/KnowNow#Sinternteil",
+        "http://www.semanticweb.org/ontologies/KnowNow#Slurry"
+      ]
+    }
+  },
   "definitioncounts": {
     "owl:Class": 81,
     "owl:ObjectProperty": 3,
@@ -99,26 +137,26 @@
   "namespaces": {
     "count": 20,
     "items": [
+      "http://emmo.info/emmo/middle/metrology#",
       "http://www.w3.org/ns/prov#",
-      "http://qudt.org/schema/qudt/",
       "http://emmo.info/emmo/top/annotations#",
-      "http://purl.org/dc/terms/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "https://orcid.org/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2004/02/skos/core#",
-      "http://emmo.info/emmo/middle/math#",
-      "http://purl.org/dc/elements/1.1/",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://emmo.info/emmo/middle/metrology#",
-      "https://w3id.org/pmd/co/",
-      "http://qudt.org/schema/",
       "http://www.semanticweb.org/ontologies/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://purl.org/dc/terms/",
+      "http://emmo.info/emmo/middle/math#",
+      "http://qudt.org/schema/",
+      "http://www.w3.org/ns/oa#",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://qudt.org/schema/qudt/",
       "http://emmo.info/emmo/middle/models#",
-      "https://w3id.org/pmd/",
+      "https://w3id.org/pmd/co/",
       "http://www.semanticweb.org/ontologies/KnowNow#",
-      "http://www.w3.org/ns/oa#"
+      "http://purl.org/dc/elements/1.1/",
+      "https://w3id.org/pmd/"
     ]
   },
   "tlos": {

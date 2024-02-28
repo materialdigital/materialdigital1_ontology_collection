@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:07:05.762362",
+  "analysis_date": "2024-02-28T16:03:46.370137",
   "reasoner": {
     "reasoner": "elk",
     "version": "0.5.0"
@@ -102,6 +102,39 @@
       ]
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 15,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/DSCMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EDXMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EDXPointMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELSEnergyLossMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELSMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcessIsofield",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcessIsothermal",
+        "https://www.dipromag.de/dipromag_onto/0.1/XPSMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRDMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRFMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRRMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/HomogeneityMechanism",
+        "https://www.dipromag.de/dipromag_onto/0.1/CompositionModification",
+        "https://www.dipromag.de/dipromag_onto/0.1/Goal"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 4,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleBulkCompound",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilm",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilmLayer",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilmSubstrateLayer"
+      ]
+    }
+  },
   "definitioncounts": {
     "owl:Class": 217,
     "owl:ObjectProperty": 3,
@@ -133,16 +166,16 @@
   "namespaces": {
     "count": 10,
     "items": [
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://purl.org/dc/terms/",
       "https://w3id.org/pmd/co/",
-      "https://www.dipromag.de/ottr-templates/",
+      "http://www.w3.org/ns/dcat#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://www.dipromag.de/dipromag_onto/0.1/",
       "http://qudt.org/vocab/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://purl.org/dc/terms/",
-      "https://www.dipromag.de/dipromag_onto/0.1/",
-      "http://www.w3.org/ns/dcat#",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2001/XMLSchema#"
+      "https://www.dipromag.de/ottr-templates/",
+      "http://www.w3.org/2002/07/owl#"
     ]
   },
   "tlos": {

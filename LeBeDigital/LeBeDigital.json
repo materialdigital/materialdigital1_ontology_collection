@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:08:26.325139",
+  "analysis_date": "2024-02-28T16:05:01.420626",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -79,6 +79,80 @@
       ]
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 13,
+      "items": [
+        "https://w3id.org/cpto/MeasuringNode",
+        "https://w3id.org/cpto/ConfirmityTest",
+        "https://w3id.org/cpto/DestructiveTesting",
+        "https://w3id.org/cpto/DeterminationOfCompressiveStrength",
+        "https://w3id.org/cpto/DeterminationOfHeatOfHydration",
+        "https://w3id.org/cpto/DeterminationOfSecantModulusOfElasticity",
+        "https://w3id.org/cpto/EvaluationOfConfirmity",
+        "https://w3id.org/cpto/FlowTableTest",
+        "https://w3id.org/cpto/IdentityTest",
+        "https://w3id.org/cpto/InitialTest",
+        "https://w3id.org/cpto/MeasurementInstrumentPreparation",
+        "https://w3id.org/cpto/NonDestructiveTesting",
+        "https://w3id.org/cpto/Verification"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 47,
+      "items": [
+        "https://w3id.org/cpto/CompositeMaterial",
+        "https://w3id.org/cpto/Concrete",
+        "https://w3id.org/cpto/DesignedConcrete",
+        "https://w3id.org/cpto/FreshConcrete",
+        "https://w3id.org/cpto/HardenedConcrete",
+        "https://w3id.org/cpto/HeavyWeightConcrete",
+        "https://w3id.org/cpto/InSituConcrete",
+        "https://w3id.org/cpto/LightweightConcrete",
+        "https://w3id.org/cpto/NormalWeightConcrete",
+        "https://w3id.org/cpto/PrescribedConcrete",
+        "https://w3id.org/cpto/ReadyMixedConcrete",
+        "https://w3id.org/cpto/SelfcompactingConcrete",
+        "https://w3id.org/cpto/SiteMixedConcrete",
+        "https://w3id.org/cpto/StandardizedPrescribedConcrete",
+        "https://w3id.org/cpto/Mortar",
+        "https://w3id.org/cpto/PrecastElement",
+        "https://w3id.org/cpto/Additives",
+        "https://w3id.org/cpto/Addition",
+        "https://w3id.org/cpto/TypeIAddition",
+        "https://w3id.org/cpto/TypeIIAdition",
+        "https://w3id.org/cpto/Admixture",
+        "https://w3id.org/cpto/Aggregate",
+        "https://w3id.org/cpto/AllInAggregate",
+        "https://w3id.org/cpto/HeavyWeightAggregate",
+        "https://w3id.org/cpto/LightWeightAggregate",
+        "https://w3id.org/cpto/NormalWeightAggregate",
+        "https://w3id.org/cpto/ReclaimedCrushedAggregate",
+        "https://w3id.org/cpto/ReclaimedWashedAggregate",
+        "https://w3id.org/cpto/RecycledAggregate",
+        "https://w3id.org/cpto/Fibres",
+        "https://w3id.org/cpto/PolymerFibres",
+        "https://w3id.org/cpto/SteelFibres",
+        "https://w3id.org/cpto/InorganicMaterial",
+        "https://w3id.org/cpto/Air",
+        "https://w3id.org/cpto/BlastFurnaceSlag",
+        "https://w3id.org/cpto/GGBS/GGBFS",
+        "https://w3id.org/cpto/Cement",
+        "https://w3id.org/cpto/SlagCement",
+        "https://w3id.org/cpto/FlyAsh",
+        "https://w3id.org/cpto/LimestonePowder",
+        "https://w3id.org/cpto/Pigments",
+        "https://w3id.org/cpto/QuartzFlour",
+        "https://w3id.org/cpto/SilicaFume",
+        "https://w3id.org/cpto/Water",
+        "https://w3id.org/cpto/MetallicMaterial",
+        "https://w3id.org/cpto/NonMetalicMaterial",
+        "https://w3id.org/cpto/OrganicMaterial"
+      ]
+    }
+  },
   "definitioncounts": {
     "owl:Class": 114,
     "owl:ObjectProperty": 0,
@@ -98,17 +172,17 @@
   "namespaces": {
     "count": 11,
     "items": [
-      "https://w3id.org/cpto/GGBS/",
-      "https://w3id.org/pmd/",
-      "https://w3id.org/",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/ns/prov#",
       "http://purl.org/dc/terms/",
+      "https://w3id.org/cpto/GGBS/",
+      "https://w3id.org/pmd/co/",
       "http://www.w3.org/2000/01/rdf-schema#",
-      "https://orcid.org/",
+      "https://w3id.org/",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/ns/prov#",
       "https://w3id.org/cpto/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://creativecommons.org/licenses/by/4.0/"
+      "http://creativecommons.org/licenses/by/4.0/",
+      "https://orcid.org/",
+      "http://www.w3.org/2002/07/owl#"
     ]
   },
   "tlos": {

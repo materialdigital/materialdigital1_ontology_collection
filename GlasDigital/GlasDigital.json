@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:07:20.469977",
+  "analysis_date": "2024-02-28T16:04:00.854761",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -28,6 +28,18 @@
       "items": []
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
   "definitioncounts": {
     "owl:Class": 213,
     "owl:ObjectProperty": 10,
@@ -43,19 +55,19 @@
   "namespaces": {
     "count": 13,
     "items": [
-      "https://glasdigi.cms.uni-jena.de/",
+      "http://www.w3.org/2001/XMLSchema#",
       "http://purl.obolibrary.org/obo/",
-      "http://www.w3.org/2004/02/skos/core#",
+      "http://purl.org/dc/terms/",
       "http://wikiba.se/ontology/",
       "https://material-digital.de/pmdco/",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "http://www.w3.org/2000/01/rdf-schema#",
-      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "http://wikiba.se/ontology#",
       "https://w3id.org/pmd/glass-ontology/",
-      "http://www.w3.org/2002/07/owl#",
+      "https://glasdigi.cms.uni-jena.de/",
       "https://glasdigi.cms.uni-jena.de/glass/",
-      "http://www.w3.org/2001/XMLSchema#"
+      "http://www.w3.org/2002/07/owl#"
     ]
   },
   "tlos": {

@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-02-28T15:07:52.707276",
+  "analysis_date": "2024-02-28T16:04:31.211327",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -257,6 +257,74 @@
       ]
     }
   },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 55,
+      "items": [
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CollibrationProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/DirectVerification",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/IndirectVerification",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SpecimenPreparationProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/GrindingProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HandelingProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MachiningProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MarkingProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/PolishingProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/SamplingProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StoringProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/CollibrationProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/SpecimenPreparationProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/GrindingProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/HandelingProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/MachiningProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/MarkingProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/PolishingProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/SamplingProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/StoringProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/CollibrationProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/SpecimenPreparationProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/tensile-test/CollibrationProcess",
+        "https://gitlab.com/kupferdigital/process-graphs/tensile-test/TestPiecePreparationProcess",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BendingTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CompressionTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CreepTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ForceControlledFatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HighCycleFatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/LowCycleFatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StrainControlledFatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ThermoMechanicalFatigueTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/FractureToughnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/HardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/BrinellHardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/KnoopHardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/MartensHardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/RockwellHardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/VickersHardnessTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/ImpactTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/CharpyTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/IzodTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/NanoindentationTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/StressRelaxationTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TensileTest",
+        "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/TorsionTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/FatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/ForceControlledFatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/HighCycleFatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/LowCycleFatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/StrainControlledFatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/ISO12106FatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/lcf-test/ThermoMechanicalFatigueTest",
+        "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TensileStressRelaxationTest"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
   "definitioncounts": {
     "owl:Class": 293,
     "owl:ObjectProperty": 0,
@@ -274,21 +342,21 @@
   "namespaces": {
     "count": 15,
     "items": [
-      "https://w3.org/ns/csvw#",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/ns/prov#",
-      "http://qudt.org/schema/qudt/",
-      "https://gitlab.com/kupferdigital/process-graphs/tensile-test/",
+      "http://www.w3.org/2001/XMLSchema#",
       "http://purl.org/dc/terms/",
-      "https://gitlab.com/kupferdigital/process-graphs/lcf-test/",
+      "https://w3.org/ns/prov#",
+      "https://w3id.org/pmd/co/",
       "http://www.w3.org/2000/01/rdf-schema#",
+      "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/",
+      "https://gitlab.com/kupferdigital/process-graphs/tensile-test/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://www.w3.org/ns/prov#",
+      "https://w3.org/ns/csvw#",
+      "http://qudt.org/schema/qudt/",
       "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/",
       "https://qudt.org/2.1/schema/qudt/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2001/XMLSchema#",
-      "https://w3.org/ns/prov#"
+      "https://gitlab.com/kupferdigital/process-graphs/lcf-test/",
+      "http://www.w3.org/2002/07/owl#"
     ]
   },
   "tlos": {

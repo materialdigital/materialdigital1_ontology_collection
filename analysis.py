@@ -76,6 +76,36 @@ def get_valueobjects(g, startswith_filter):
         }
     }
 
+def get_processes(g, startswith_filter):
+    qres = g.query(f"""
+    SELECT ?a
+    WHERE {{
+        ?b rdfs:subClassOf+ <https://w3id.org/pmd/co/Process> .
+        BIND(STR(?b) AS ?a) .
+        FILTER STRSTARTS( ?a, "{startswith_filter}" ) .
+    }}""")
+    return {
+        'pmdco-2.0.7': {
+            'count': len(qres),
+            'items': [str(row.a) for row in qres]
+        }
+    }
+
+def get_objects(g, startswith_filter):
+    qres = g.query(f"""
+    SELECT ?a
+    WHERE {{
+        ?b rdfs:subClassOf+ <https://w3id.org/pmd/co/Object> .
+        BIND(STR(?b) AS ?a) .
+        FILTER STRSTARTS( ?a, "{startswith_filter}" ) .
+    }}""")
+    return {
+        'pmdco-2.0.7': {
+            'count': len(qres),
+            'items': [str(row.a) for row in qres]
+        }
+    }
+
 def get_counts(g, startswith_filter):
     return {
         'owl:Class': sum(int(row.c) for row in g.query(
@@ -209,6 +239,8 @@ def analyze_graph(
         'imports': get_imports(graph),
         'processingnodes': get_processingnodes(reasoned_graph, startswith_filter),
         'valueobjects': get_valueobjects(reasoned_graph, startswith_filter),
+        'processes': get_processes(reasoned_graph, startswith_filter),
+        'objects': get_objects(reasoned_graph, startswith_filter),
         'definitioncounts': get_counts(reasoned_graph, startswith_filter),
         'creators_contributors': get_creators(graph),
         'namespaces': get_namespaces(graph, skip=skip_namespaces),
