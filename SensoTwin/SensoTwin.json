@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:10:05.165794",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -261,28 +262,24 @@
     ]
   },
   "namespaces": {
-    "count": 5,
+    "count": 16,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "",
-        "uri": "http://w3id.org/sensotwin/applicationontology#"
-      },
-      {
-        "prefix": "wao",
-        "uri": "http://www.w3.org/ns/oa#"
-      },
-      {
-        "prefix": "stao",
-        "uri": "http://w3id.org/sensotwin/applicationontology"
-      }
+      "https://w3id.org/pmd/",
+      "http://w3id.org/sensotwin/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://material-digital.de/pmdco/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/ns/prov#",
+      "http://w3id.org/sensotwin/applicationontology#",
+      "http://w3id.org/sensotwin/applicationontology/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://orcid.org/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://material-digital.de/pmdco/"
     ]
   },
   "tlos": {
@@ -291,14 +288,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 181,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 499,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 332,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {

@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:05:32.407517",
   "reasoner": {
     "reasoner": "elk",
     "version": "0.5.0"
@@ -40,68 +41,61 @@
     ]
   },
   "namespaces": {
-    "count": 15,
+    "count": 53,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "",
-        "uri": "http://purl.obolibrary.org/obo/digitrubber/digitrubber-full.owl#"
-      },
-      {
-        "prefix": "obo",
-        "uri": "http://purl.obolibrary.org/obo/"
-      },
-      {
-        "prefix": "pav",
-        "uri": "http://purl.org/pav/"
-      },
-      {
-        "prefix": "chebi",
-        "uri": "http://purl.obolibrary.org/obo/chebi/"
-      },
-      {
-        "prefix": "swrlb",
-        "uri": "http://www.w3.org/2003/11/swrlb#"
-      },
-      {
-        "prefix": "chebi1",
-        "uri": "http://purl.obolibrary.org/obo/chebi#"
-      },
-      {
-        "prefix": "chebi2",
-        "uri": "http://purl.obolibrary.org/obo/chebi#2"
-      },
-      {
-        "prefix": "chebi3",
-        "uri": "http://purl.obolibrary.org/obo/chebi#3"
-      },
-      {
-        "prefix": "chebi4",
-        "uri": "http://purl.obolibrary.org/obo/chebi#1"
-      },
-      {
-        "prefix": "protege",
-        "uri": "http://protege.stanford.edu/plugins/owl/protege#"
-      },
-      {
-        "prefix": "subsets",
-        "uri": "http://purl.obolibrary.org/obo/ro/subsets#"
-      },
-      {
-        "prefix": "oboInOwl",
-        "uri": "http://www.geneontology.org/formats/oboInOwl#"
-      },
-      {
-        "prefix": "digitrubber",
-        "uri": "https://www.tib.eu/digitrubber#"
-      }
+      "http://ontologydesignpatterns.org/wiki/",
+      "http://xmlns.com/foaf/0.1/",
+      "https://www.materials.fraunhofer.de/ontologies/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://orcid.org/",
+      "http://purl.obolibrary.org/obo/ro/docs/",
+      "http://purl.dataone.org/odo/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/",
+      "http://edamontology.org/",
+      "http://www.geneontology.org/formats/oboInOwl#",
+      "http://www.w3.org/ns/shacl#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://purl.org/dc/elements/1.1/",
+      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+      "http://www.w3.org/2003/11/swrl#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://wiki.geneontology.org/index.php/",
+      "http://www.ncbi.nlm.nih.gov/pubmed/",
+      "http://purl.allotrope.org/",
+      "http://protege.stanford.edu/plugins/owl/protege#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://github.com/oborel/obo-relations/issues/",
+      "http://nmrML.org/nmrCV#",
+      "http://purl.obolibrary.org/obo/ro/subsets#",
+      "http://purl.obolibrary.org/obo/chebi/",
+      "http://purl.obolibrary.org/obo/",
+      "http://w3id.org/nfdi4ing/metadata4ing#",
+      "http://purl.obolibrary.org/obo/digitrubber/",
+      "http://www.opengis.net/ont/geosparql#",
+      "http://www.ebi.ac.uk/efo/",
+      "http://www.referent-tracking.com/_RTU/papers/",
+      "https://w3id.org/okn/o/",
+      "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "http://www.w3.org/ns/ssn/systems/",
+      "http://purl.obolibrary.org/obo/bfo/axiom/",
+      "http://purl.obolibrary.org/obo/ro/docs/direct-and-indirect-relations/",
+      "http://iirds.tekom.de/iirds#",
+      "https://www.tib.eu/digitrubber#",
+      "https://github.com/obi-ontology/obi/issues/",
+      "http://purl.obolibrary.org/obo/ro/docs/reflexivity/",
+      "https://ontobee.org/ontology/",
+      "http://purl.allotrope.org/ontologies/",
+      "http://purl.obolibrary.org/obo/ro.owl#",
+      "http://www.ontology-of-units-of-measure.org/resource/",
+      "https://en.wikipedia.org/wiki/",
+      "http://purl.org/pav/",
+      "http://www.aidimme.es/",
+      "http://purl.obolibrary.org/obo/digitrubber/releases/2023-06-01/",
+      "http://www.w3.org/ns/sosa/",
+      "http://purl.obolibrary.org/obo/chebi#",
+      "https://creativecommons.org/licenses/"
     ]
   },
   "tlos": {
@@ -110,14 +104,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 2628
+      "bfo": 2030,
+      "ro": 0,
+      "iao": 328,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 232
     },
     "reasoned": {
       "pmdco-2.0.7": 0,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 2628
+      "bfo": 2030,
+      "ro": 0,
+      "iao": 328,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 232
     }
   },
   "license": {

@@ -1,0 +1,154 @@
+{
+  "analysis_date": "2024-02-28T15:07:33.570210",
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 0,
+    "items": []
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 6,
+      "items": [
+        "http://www.semanticweb.org/ontologies/KnowNow#ElectricalCircuitModel",
+        "http://www.semanticweb.org/ontologies/KnowNow#GeometryModel",
+        "http://www.semanticweb.org/ontologies/KnowNow#PyEvaluationModel",
+        "http://www.semanticweb.org/ontologies/KnowNow#PyLaminatingSimulationModel",
+        "http://www.semanticweb.org/ontologies/KnowNow#SinteringSimulationModel",
+        "http://www.semanticweb.org/ontologies/KnowNow#WorkPieceMultiPhysicsModel"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 51,
+      "items": [
+        "http://www.semanticweb.org/ontologies/KnowNow#ComsolSimulationParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#LaminateParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Laminierkurve",
+        "http://www.semanticweb.org/ontologies/KnowNow#MaterialParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#CTE",
+        "http://www.semanticweb.org/ontologies/KnowNow#E-Modul",
+        "http://www.semanticweb.org/ontologies/KnowNow#Materialtyp",
+        "http://www.semanticweb.org/ontologies/KnowNow#Querkontraktionszahl",
+        "http://www.semanticweb.org/ontologies/KnowNow#Sinterspannung",
+        "http://www.semanticweb.org/ontologies/KnowNow#viskoseQuerkontraktionszahl",
+        "http://www.semanticweb.org/ontologies/KnowNow#Laminierzyklus",
+        "http://www.semanticweb.org/ontologies/KnowNow#LaminierzyklusParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Pfad",
+        "http://www.semanticweb.org/ontologies/KnowNow#Schichtfolge",
+        "http://www.semanticweb.org/ontologies/KnowNow#SchichtfolgeParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Simulationsparameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Sinterkurve",
+        "http://www.semanticweb.org/ontologies/KnowNow#Sinterzyklus",
+        "http://www.semanticweb.org/ontologies/KnowNow#SinterzyklusParameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Stress_Strain_parameter",
+        "http://www.semanticweb.org/ontologies/KnowNow#Compressibility",
+        "http://www.semanticweb.org/ontologies/KnowNow#Designation",
+        "http://www.semanticweb.org/ontologies/KnowNow#DesignationOfPowder",
+        "http://www.semanticweb.org/ontologies/KnowNow#Failure",
+        "http://www.semanticweb.org/ontologies/KnowNow#ParticleProperty",
+        "http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD10",
+        "http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD50",
+        "http://www.semanticweb.org/ontologies/KnowNow#ParticleSizeDistributionD90",
+        "http://www.semanticweb.org/ontologies/KnowNow#SizeOfPrimaryParticles",
+        "http://www.semanticweb.org/ontologies/KnowNow#Permeability",
+        "http://www.semanticweb.org/ontologies/KnowNow#Shrinkage",
+        "http://www.semanticweb.org/ontologies/KnowNow#SolidContent",
+        "http://www.semanticweb.org/ontologies/KnowNow#Stress-Strain-Curve",
+        "http://www.semanticweb.org/ontologies/KnowNow#Thickness",
+        "http://www.semanticweb.org/ontologies/KnowNow#ContinousThickness",
+        "http://www.semanticweb.org/ontologies/KnowNow#MeanThickness",
+        "http://www.semanticweb.org/ontologies/KnowNow#MeasuredThickness",
+        "http://www.semanticweb.org/ontologies/KnowNow#SimulatedThickness",
+        "http://www.semanticweb.org/ontologies/KnowNow#Viscosity",
+        "http://www.semanticweb.org/ontologies/KnowNow#Wrapage",
+        "http://www.semanticweb.org/ontologies/KnowNow#density",
+        "http://www.semanticweb.org/ontologies/KnowNow#GreenDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#MeanDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#MeanMeasuredDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#MeanSimulatedDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#RawDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#RelativeDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#TrueDensity",
+        "http://www.semanticweb.org/ontologies/KnowNow#as_is_geometry",
+        "http://www.semanticweb.org/ontologies/KnowNow#inner_geometry",
+        "http://www.semanticweb.org/ontologies/KnowNow#to_be_geometry"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 81,
+    "owl:ObjectProperty": 3,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 3,
+    "items": [
+      "Guejiep Dowouo, Simplice",
+      "Baca Duque, Lui Felipe",
+      "Ben Hassine, Sahar"
+    ]
+  },
+  "namespaces": {
+    "count": 20,
+    "items": [
+      "http://www.w3.org/ns/prov#",
+      "http://qudt.org/schema/qudt/",
+      "http://emmo.info/emmo/top/annotations#",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://orcid.org/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://emmo.info/emmo/middle/math#",
+      "http://purl.org/dc/elements/1.1/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://emmo.info/emmo/middle/metrology#",
+      "https://w3id.org/pmd/co/",
+      "http://qudt.org/schema/",
+      "http://www.semanticweb.org/ontologies/",
+      "http://emmo.info/emmo/middle/models#",
+      "https://w3id.org/pmd/",
+      "http://www.semanticweb.org/ontologies/KnowNow#",
+      "http://www.w3.org/ns/oa#"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 121,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 81,
+      "qudt": 0,
+      "chebi": 0
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 121,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 81,
+      "qudt": 0,
+      "chebi": 0
+    }
+  },
+  "license": {
+    "count": 0,
+    "items": []
+  }
+}

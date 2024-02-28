@@ -1,0 +1,175 @@
+{
+  "analysis_date": "2024-02-28T15:16:15.759842",
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co/2.0.7"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 37,
+      "items": [
+        "https://w3id.org/pmd/mo/ElectronMicroprobe",
+        "https://w3id.org/pmd/mo/ElectronProbeMicroAnalyzer",
+        "https://w3id.org/pmd/mo/ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/ScanningProbeMicroscope",
+        "https://w3id.org/pmd/mo/ScanningTunnelingMicroscope",
+        "https://w3id.org/pmd/mo/TransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/CryoTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/ElectronTomograph",
+        "https://w3id.org/pmd/mo/EnergyFilteredTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/HighResolutionTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/HighAngleAnnularDarkFieldScanningTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/TransmissionElectronAberrationCorrectedMicroscope",
+        "https://w3id.org/pmd/mo/IonMicroscope",
+        "https://w3id.org/pmd/mo/FieldIonMicroscope",
+        "https://w3id.org/pmd/mo/FocusedIonBeam-ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/HeliumIonMicroscope",
+        "https://w3id.org/pmd/mo/OpticalMicroscope",
+        "https://w3id.org/pmd/mo/LightMicroscope",
+        "https://w3id.org/pmd/mo/PolarizedLightMicroscope",
+        "https://w3id.org/pmd/mo/CondensorLense",
+        "https://w3id.org/pmd/mo/Electrode",
+        "https://w3id.org/pmd/mo/Anode",
+        "https://w3id.org/pmd/mo/Cathode",
+        "https://w3id.org/pmd/mo/Gun",
+        "https://w3id.org/pmd/mo/FieldEmissionGun",
+        "https://w3id.org/pmd/mo/ImageFilter",
+        "https://w3id.org/pmd/mo/GatanImageFilter",
+        "https://w3id.org/pmd/mo/Monochromator",
+        "https://w3id.org/pmd/mo/PolePiece",
+        "https://w3id.org/pmd/mo/Scintillator",
+        "https://w3id.org/pmd/mo/SiliconDriftDetector",
+        "https://w3id.org/pmd/mo/Source",
+        "https://w3id.org/pmd/mo/Spectrometer",
+        "https://w3id.org/pmd/mo/SoftXRayEmissionSpectrometer"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 38,
+      "items": [
+        "https://w3id.org/pmd/mo/DiskOfLeastConfusion",
+        "https://w3id.org/pmd/mo/FocalPlane",
+        "https://w3id.org/pmd/mo/WorkingDistance",
+        "https://w3id.org/pmd/mo/CameraLength",
+        "https://w3id.org/pmd/mo/FocalLength",
+        "https://w3id.org/pmd/mo/DwellTime",
+        "https://w3id.org/pmd/mo/FlybackTime",
+        "https://w3id.org/pmd/mo/FrameFlybackTime",
+        "https://w3id.org/pmd/mo/FrameTime",
+        "https://w3id.org/pmd/mo/WaitTime",
+        "https://w3id.org/pmd/mo/Aberration",
+        "https://w3id.org/pmd/mo/ChromaticAberration",
+        "https://w3id.org/pmd/mo/SphericalAberration",
+        "https://w3id.org/pmd/mo/Angle",
+        "https://w3id.org/pmd/mo/ConvergenceAngle",
+        "https://w3id.org/pmd/mo/Current",
+        "https://w3id.org/pmd/mo/BeamCurrent",
+        "https://w3id.org/pmd/mo/EmissionCurrent",
+        "https://w3id.org/pmd/mo/FilamentCurrent",
+        "https://w3id.org/pmd/mo/ProbeCurrent",
+        "https://w3id.org/pmd/mo/Efficiency",
+        "https://w3id.org/pmd/mo/CollectionEfficiency",
+        "https://w3id.org/pmd/mo/DetectorQuantumEfficiency",
+        "https://w3id.org/pmd/mo/Energy",
+        "https://w3id.org/pmd/mo/BeamEnergy",
+        "https://w3id.org/pmd/mo/EnergyLoss",
+        "https://w3id.org/pmd/mo/Magnification",
+        "https://w3id.org/pmd/mo/PixelSize",
+        "https://w3id.org/pmd/mo/ProbeSize",
+        "https://w3id.org/pmd/mo/Resolution",
+        "https://w3id.org/pmd/mo/AtomicResolution",
+        "https://w3id.org/pmd/mo/EnergyResolution",
+        "https://w3id.org/pmd/mo/SpatialResolution",
+        "https://w3id.org/pmd/mo/Voltage",
+        "https://w3id.org/pmd/mo/AccelerationVoltage",
+        "https://w3id.org/pmd/mo/ExtractionVoltage",
+        "https://w3id.org/pmd/mo/Volume",
+        "https://w3id.org/pmd/mo/InteractionVolume"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 145,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 2,
+    "items": [
+      "https://orcid.org/0000-0002-3717-7104",
+      "https://orcid.org/0000-0002-7094-5371"
+    ]
+  },
+  "namespaces": {
+    "count": 20,
+    "items": [
+      "https://doi.org/10.1017/",
+      "https://cmrf.research.uiowa.edu/",
+      "http://creativecommons.org/licenses/by/",
+      "https://doi.org/10.1007/",
+      "https://en.wikipedia.org/wiki/",
+      "https://www.jeol.co.jp/en/words/emterms/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://w3id.org/pmd/mo/",
+      "http://purl.org/dc/terms/",
+      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
+      "https://www.iso.org/obp/ui/",
+      "https://w3id.org/pmd/",
+      "https://www.globalsino.com/EM/",
+      "https://doi.org/10.1016/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "http://purl.org/dc/elements/1.1/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://orcid.org/"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": 145,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
+    },
+    "reasoned": {
+      "pmdco-2.0.7": 337,
+      "pmdco-v0.1-beta": 0,
+      "emmo": 0,
+      "cco": 0,
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 145,
+      "qudt": 0,
+      "chebi": 0
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0"
+    ]
+  }
+}

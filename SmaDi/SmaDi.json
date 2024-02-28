@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:10:39.676048",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -37,24 +38,15 @@
     ]
   },
   "namespaces": {
-    "count": 4,
+    "count": 7,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "",
-        "uri": "urn:absolute/smadiont#"
-      },
-      {
-        "prefix": "obda",
-        "uri": "https://w3id.org/obda/vocabulary#"
-      }
+      "http://purl.org/dc/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://orcid.org/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2002/07/owl#",
+      "http://creativecommons.org/licenses/by/4.0/"
     ]
   },
   "tlos": {
@@ -63,14 +55,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 0,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {

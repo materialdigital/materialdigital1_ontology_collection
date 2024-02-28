@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 import re
 import json
 import rdflib
@@ -117,51 +118,42 @@ def get_creators(g):
     }
 
 def get_namespaces(g, skip=None):
+    #if skip is None:
+    #    skip = []
+    #return {
+    #    'count': sum(1 for _, u in g.namespaces() if u not in skip),
+    #    'items': [{'prefix': p, 'uri': str(u)} for p, u in g.namespaces() if u not in skip]
+    #}
     if skip is None:
         skip = []
+    namespaces = list(set(n[0] for n in re.findall(r'<(https?:\/\/([0-9A-z-_~\.]+[\/|#])+)', g.serialize(format='turtle'))))
     return {
-        'count': sum(1 for _, u in g.namespaces() if u not in skip),
-        'items': [{'prefix': p, 'uri': str(u)} for p, u in g.namespaces() if u not in skip]
+        'count': sum(1 for ns in namespaces if ns not in skip),
+        'items': [ns for ns in namespaces if ns not in skip]
     }
 
+
 def get_tlos(g, startswith_filter):
+    tlos_list = [
+        ('pmdco-2.0.7', 'https://w3id.org/pmd/co/'),
+        ('pmdco-v0.1-beta', 'https://material-digital.de/'),
+        ('emmo', 'http://www.w3.org/2002/07/emmo'),
+        ('cco', 'http://www.ontologyrepository.com/CommonCoreOntologies/'),
+        ('bfo', 'http://purl.obolibrary.org/obo/BFO_'),
+        ('ro', 'http://purl.obolibrary.org/obo/RO_'),
+        ('iao', 'http://purl.obolibrary.org/obo/IAO_'),
+        ('prov-o', 'http://www.w3.org/ns/prov#'),
+        ('qudt', 'http://qudt.org/'),
+        ('chebi', 'http://purl.obolibrary.org/obo/CHEBI_')
+    ]
     return {
-        'pmdco-2.0.7': sum(int(row.c) for row in g.query(f"""
+        tlo: sum(int(row.c) for row in g.query(f"""
                             SELECT (COUNT(*) as ?c) WHERE {{
                                 ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                                FILTER( STRSTARTS( STR(?b), "https://w3id.org/pmd/co" ) ) .
+                                FILTER( STRSTARTS( STR(?b), "{tlo_namespace}" ) ) .
                                 FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
                             }}
-                        """)),
-        'pmdco-v0.1-beta': sum(int(row.c) for row in g.query(f"""
-                                SELECT (COUNT(*) as ?c) WHERE {{
-                                    ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                                    FILTER( STRSTARTS( STR(?b), "https://material-digital.de/" ) ) .
-                                    FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
-                                }}
-                            """)),
-        'emmo': sum(int(row.c) for row in g.query(f"""
-                    SELECT (COUNT(*) as ?c) WHERE {{
-                        ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                        FILTER( STRSTARTS( STR(?b), "http://www.w3.org/2002/07/emmo" ) ) .
-                        FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
-                    }}
-                """)),
-        'cco': sum(int(row.c) for row in g.query(f"""
-                    SELECT (COUNT(*) as ?c) WHERE {{
-                        ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                        FILTER( STRSTARTS( STR(?b), "http://www.ontologyrepository.com/CommonCoreOntologies/" ) ) .
-                        FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
-                    }}
-                """)),
-        'obo': sum(int(row.c) for row in g.query(f"""
-                    SELECT (COUNT(*) as ?c) WHERE {{
-                        ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                        FILTER( STRSTARTS( STR(?b), "http://purl.obolibrary.org/obo/" ) ) .
-                        FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
-                    }}
-                """))
-    }
+                        """)) for tlo, tlo_namespace in tlos_list }
 
 def get_license(g):
     qres = g.query(
@@ -212,6 +204,7 @@ def analyze_graph(
         reasoned_graph.bind(p, ns)
 
     return {
+        'analysis_date': datetime.now().isoformat(),
         'reasoner': reasoner,
         'imports': get_imports(graph),
         'processingnodes': get_processingnodes(reasoned_graph, startswith_filter),
@@ -228,84 +221,11 @@ def analyze_graph(
 
 
 if __name__ == '__main__':
-    with open('DIGITRUBBER/DIGITRUBBER.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='DIGITRUBBER/digitrubber-full.owl',
-                reasoned_graph_file='DIGITRUBBER/digitrubber-full.elk-0.5.0.ttl',
-                startswith_filter='https://www.tib.eu/digitrubber'
-            ),
-            fp,
-            indent=2
-        )
-    with open('KupferDigital/KupferDigital.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='KupferDigital/KupferDigital_rdflib/KupferDigital.ttl',
-                reasoned_graph_file='KupferDigital/KupferDigital_rdflib/KupferDigital.pellet-2.2.0.ttl',
-                startswith_filter='https://gitlab.com/kupferdigital/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('GlasDigital/GlasDigital.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='GlasDigital/pmd_go.ttl',
-                reasoned_graph_file='GlasDigital/pmd_go.pellet-2.2.0.ttl',
-                additional_parse=['https://raw.githubusercontent.com/materialdigital/core-ontology/v0.1-beta/pmdco_core.ttl'],
-                startswith_filter='https://glasdigi.cms.uni-jena.de/glass/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('LeBeDigital/LeBeDigital.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='LeBeDigital/CPTO.ttl',
-                reasoned_graph_file='LeBeDigital/CPTO.pellet-2.2.0.ttl',
-                startswith_filter='https://w3id.org/cpto/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('DiProMag/DiProMag.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='DiProMag/dipromag_onto_01.ttl',
-                reasoned_graph_file='DiProMag/dipromag_onto_01.elk-0.5.0.ttl',
-                startswith_filter='https://www.dipromag.de/dipromag_onto/0.1/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('ODE_AM/ODE_AM.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='ODE_AM/ODE_AM_rdflib/ODE_AM.ttl',
-                reasoned_graph_file='ODE_AM/ODE_AM_rdflib/ODE_AM.pellet-2.2.0.ttl',
-                startswith_filter='https://w3id.org/ODE_AM/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('SensoTwin/SensoTwin.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='SensoTwin/PMDCollectionSensoTwin.ttl',
-                reasoned_graph_file='SensoTwin/PMDCollectionSensoTwin-noindividuals.pellet-2.2.0.ttl',
-                startswith_filter='http://w3id.org/sensotwin/'
-            ),
-            fp,
-            indent=2
-        )
-    with open('SmaDi/SmaDi.json', 'w', encoding='utf-8') as fp:
-        json.dump(
-            analyze_graph(
-                graph_file='SmaDi/smadi_ont.ttl',
-                reasoned_graph_file='SmaDi/smadi_ont.pellet-2.2.0.ttl',
-                startswith_filter='urn:absolute/smadiont'
-            ),
-            fp,
-            indent=2
-        )
+    for project, kwargs in conf['projects'].items():
+        with open(f'{project}/{project}.json', 'w', encoding='utf-8') as fp:
+            json.dump(
+                analyze_graph(**kwargs),
+                fp,
+                indent=2
+            )
+        print(f'Finished {project}')

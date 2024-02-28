@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:08:43.763252",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -48,48 +49,28 @@
     ]
   },
   "namespaces": {
-    "count": 10,
+    "count": 20,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "",
-        "uri": "https://w3id.org/ODE_AM/AMAO/"
-      },
-      {
-        "prefix": "CommonCoreOntologies",
-        "uri": "http://www.ontologyrepository.com/CommonCoreOntologies/"
-      },
-      {
-        "prefix": "amo",
-        "uri": "https://w3id.org/ODE_AM/AMAO#"
-      },
-      {
-        "prefix": "default1",
-        "uri": "https://w3id.org/ODE_AM/CEMAO/"
-      },
-      {
-        "prefix": "default2",
-        "uri": "https://w3id.org/ODE_AM/PBFAO/"
-      },
-      {
-        "prefix": "default3",
-        "uri": "https://w3id.org/ODE_AM/WAAMAO/"
-      },
-      {
-        "prefix": "mo",
-        "uri": "https://w3id.org/ODE_AM/MAO/"
-      },
-      {
-        "prefix": "obo",
-        "uri": "http://purl.obolibrary.org/obo/"
-      }
+      "https://w3id.org/ODE_AM/MAO/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://w3id.org/ODE_AM/WAAMAO/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://purl.org/dc/elements/1.1/",
+      "https://w3id.org/ODE_AM/AMAO#",
+      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+      "http://www.w3.org/2003/11/swrl#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://purl.obolibrary.org/obo/bfo.owl#",
+      "http://purl.obolibrary.org/obo/",
+      "http://org.semanticweb.owlapi/error#",
+      "https://w3id.org/ODE_AM/CEMAO/",
+      "https://w3id.org/ODE_AM/AMAO/",
+      "https://w3id.org/ODE_AM/PBFAO/",
+      "http://www.ontologyrepository.com/CommonCoreOntologies/",
+      "https://w3id.org/ODE_AM/"
     ]
   },
   "tlos": {
@@ -98,14 +79,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 181,
-      "obo": 32
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 0,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 316,
-      "obo": 130
+      "bfo": 97,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {

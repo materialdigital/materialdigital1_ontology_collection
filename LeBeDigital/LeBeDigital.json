@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:08:26.325139",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -95,20 +96,19 @@
     ]
   },
   "namespaces": {
-    "count": 3,
+    "count": 11,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "con",
-        "uri": "https://w3id.org/cpto#"
-      }
+      "https://w3id.org/cpto/GGBS/",
+      "https://w3id.org/pmd/",
+      "https://w3id.org/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/ns/prov#",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://orcid.org/",
+      "https://w3id.org/cpto/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://creativecommons.org/licenses/by/4.0/"
     ]
   },
   "tlos": {
@@ -117,14 +117,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 2,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 268,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 115,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {

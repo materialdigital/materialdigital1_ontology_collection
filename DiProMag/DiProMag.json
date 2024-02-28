@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:07:05.762362",
   "reasoner": {
     "reasoner": "elk",
     "version": "0.5.0"
@@ -130,80 +131,18 @@
     ]
   },
   "namespaces": {
-    "count": 18,
+    "count": 10,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "qudt",
-        "uri": "http://qudt.org/vocab/"
-      },
-      {
-        "prefix": "o-rdfs",
-        "uri": "http://tpl.ottr.xyz/rdfs/0.2/"
-      },
-      {
-        "prefix": "pmd",
-        "uri": "https://w3id.org/pmd/co/"
-      },
-      {
-        "prefix": "o-docttr",
-        "uri": "http://tpl.ottr.xyz/p/docttr/0.1/"
-      },
-      {
-        "prefix": "ottr",
-        "uri": "http://ns.ottr.xyz/0.4/"
-      },
-      {
-        "prefix": "sdmx-concept",
-        "uri": "http://purl.org/linked-data/sdmx/2009/concept#"
-      },
-      {
-        "prefix": "o-owl-ma",
-        "uri": "http://tpl.ottr.xyz/owl/macro/0.1/"
-      },
-      {
-        "prefix": "dcterms",
-        "uri": "http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/"
-      },
-      {
-        "prefix": "prov1",
-        "uri": "http://www.w3.org/ns/prov-o#"
-      },
-      {
-        "prefix": "sdmx-dimension",
-        "uri": "http://purl.org/linked-data/sdmx/2009/dimension#"
-      },
-      {
-        "prefix": "dpm",
-        "uri": "https://www.dipromag.de/dipromag_onto/0.1/"
-      },
-      {
-        "prefix": "o-rdf",
-        "uri": "http://tpl.ottr.xyz/rdf/0.1/"
-      },
-      {
-        "prefix": "emmo",
-        "uri": "http://www.w3.org/2002/07/emmo"
-      },
-      {
-        "prefix": "sdmx-measure",
-        "uri": "http://purl.org/linked-data/sdmx/2009/measure#"
-      },
-      {
-        "prefix": "interval",
-        "uri": "http://reference.data.gov.uk/def/intervals/"
-      },
-      {
-        "prefix": "o-owl-ax",
-        "uri": "http://tpl.ottr.xyz/owl/axiom/0.1/"
-      }
+      "https://w3id.org/pmd/co/",
+      "https://www.dipromag.de/ottr-templates/",
+      "http://qudt.org/vocab/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://purl.org/dc/terms/",
+      "https://www.dipromag.de/dipromag_onto/0.1/",
+      "http://www.w3.org/ns/dcat#",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2001/XMLSchema#"
     ]
   },
   "tlos": {
@@ -212,14 +151,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 83,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 164,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 96,
+      "qudt": 83,
+      "chebi": 0
     }
   },
   "license": {

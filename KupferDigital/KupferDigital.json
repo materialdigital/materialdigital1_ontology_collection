@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:07:52.707276",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -271,52 +272,23 @@
     ]
   },
   "namespaces": {
-    "count": 11,
+    "count": 15,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "csvw1",
-        "uri": "https://w3.org/ns/csvw#"
-      },
-      {
-        "prefix": "fto",
-        "uri": "https://gitlab.com/kupferdigital/process-graphs/lcf-test/"
-      },
-      {
-        "prefix": "mto",
-        "uri": "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/"
-      },
-      {
-        "prefix": "ns2",
-        "uri": "http://qudt.org/schema/qudt/"
-      },
-      {
-        "prefix": "pmd",
-        "uri": "https://w3id.org/pmd/co/"
-      },
-      {
-        "prefix": "prov",
-        "uri": "https://w3.org/ns/prov#"
-      },
-      {
-        "prefix": "qudt",
-        "uri": "https://qudt.org/2.1/schema/qudt/"
-      },
-      {
-        "prefix": "tsrto",
-        "uri": "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/"
-      },
-      {
-        "prefix": "tto",
-        "uri": "https://gitlab.com/kupferdigital/process-graphs/tensile-test/"
-      }
+      "https://w3.org/ns/csvw#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/ns/prov#",
+      "http://qudt.org/schema/qudt/",
+      "https://gitlab.com/kupferdigital/process-graphs/tensile-test/",
+      "http://purl.org/dc/terms/",
+      "https://gitlab.com/kupferdigital/process-graphs/lcf-test/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/",
+      "https://qudt.org/2.1/schema/qudt/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://w3.org/ns/prov#"
     ]
   },
   "tlos": {
@@ -325,14 +297,24 @@
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 293,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 773,
       "pmdco-v0.1-beta": 0,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 293,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {

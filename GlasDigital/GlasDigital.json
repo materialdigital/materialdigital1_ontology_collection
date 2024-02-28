@@ -1,4 +1,5 @@
 {
+  "analysis_date": "2024-02-28T15:07:20.469977",
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -40,36 +41,21 @@
     ]
   },
   "namespaces": {
-    "count": 7,
+    "count": 13,
     "items": [
-      {
-        "prefix": "dcat",
-        "uri": "http://www.w3.org/ns/dcat#"
-      },
-      {
-        "prefix": "foaf",
-        "uri": "http://xmlns.com/foaf/0.1/"
-      },
-      {
-        "prefix": "obo",
-        "uri": "http://purl.obolibrary.org/obo/"
-      },
-      {
-        "prefix": "pmde",
-        "uri": "https://material-digital.de/entity/"
-      },
-      {
-        "prefix": "glass",
-        "uri": "https://glasdigi.cms.uni-jena.de/glass/"
-      },
-      {
-        "prefix": "wikiba",
-        "uri": "http://wikiba.se/ontology#"
-      },
-      {
-        "prefix": "",
-        "uri": "https://material-digital.de/pmdco/"
-      }
+      "https://glasdigi.cms.uni-jena.de/",
+      "http://purl.obolibrary.org/obo/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://wikiba.se/ontology/",
+      "https://material-digital.de/pmdco/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://purl.org/dc/terms/",
+      "http://wikiba.se/ontology#",
+      "https://w3id.org/pmd/glass-ontology/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://glasdigi.cms.uni-jena.de/glass/",
+      "http://www.w3.org/2001/XMLSchema#"
     ]
   },
   "tlos": {
@@ -78,14 +64,24 @@
       "pmdco-v0.1-beta": 282,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     },
     "reasoned": {
       "pmdco-2.0.7": 0,
       "pmdco-v0.1-beta": 284,
       "emmo": 0,
       "cco": 0,
-      "obo": 0
+      "bfo": 0,
+      "ro": 0,
+      "iao": 0,
+      "prov-o": 0,
+      "qudt": 0,
+      "chebi": 0
     }
   },
   "license": {
