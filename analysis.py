@@ -138,7 +138,7 @@ def get_creators(g):
     qres = g.query(
         """
         SELECT ?b WHERE {
-            ?a <http://purl.org/dc/terms/creator>|<http://purl.org/dc/terms/contributor>|<http://purl.org/dc/elements/1.1/creator> ?b .
+            ?a <http://purl.org/dc/terms/creator>|<http://purl.org/dc/terms/contributor>|<http://purl.org/dc/elements/1.1/creator>|<http://purl.org/dc/elements/1.1/contributor> ?b .
         }
         """
     )
@@ -210,6 +210,7 @@ def analyze_graph(
         skip_namespaces=None,
         startswith_filter='',
         additional_parse=None,
+        changes=None
     ):
     if additional_bindings is None:
         additional_bindings = ADDITIONAL_BINDINGS
@@ -235,6 +236,7 @@ def analyze_graph(
 
     return {
         'analysis_date': datetime.now().isoformat(),
+        'changes': changes,
         'reasoner': reasoner,
         'imports': get_imports(graph),
         'processingnodes': get_processingnodes(reasoned_graph, startswith_filter),
@@ -254,10 +256,11 @@ def analyze_graph(
 
 if __name__ == '__main__':
     for project, kwargs in conf['projects'].items():
+        start = datetime.now()
         with open(f'{project}/{project}.json', 'w', encoding='utf-8') as fp:
             json.dump(
                 analyze_graph(**kwargs),
                 fp,
                 indent=2
             )
-        print(f'Finished {project}')
+        print(f'Finished {project} after {str(datetime.now() - start):s}')

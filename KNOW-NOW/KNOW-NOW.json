@@ -1,5 +1,8 @@
 {
-  "analysis_date": "2024-02-28T16:04:13.676244",
+  "analysis_date": "2024-03-04T18:07:51.538868",
+  "changes": [
+    "removed individuals"
+  ],
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -137,26 +140,26 @@
   "namespaces": {
     "count": 20,
     "items": [
-      "http://emmo.info/emmo/middle/metrology#",
       "http://www.w3.org/ns/prov#",
+      "http://qudt.org/schema/qudt/",
       "http://emmo.info/emmo/top/annotations#",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "https://orcid.org/",
-      "http://www.semanticweb.org/ontologies/",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://purl.org/dc/elements/1.1/",
       "http://emmo.info/emmo/middle/math#",
-      "http://qudt.org/schema/",
+      "http://emmo.info/emmo/middle/models#",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://w3id.org/pmd/co/",
       "http://www.w3.org/ns/oa#",
+      "https://orcid.org/",
+      "https://w3id.org/pmd/",
+      "http://www.semanticweb.org/ontologies/",
+      "http://purl.org/dc/terms/",
       "http://www.w3.org/2002/07/owl#",
       "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2004/02/skos/core#",
-      "http://qudt.org/schema/qudt/",
-      "http://emmo.info/emmo/middle/models#",
-      "https://w3id.org/pmd/co/",
-      "http://www.semanticweb.org/ontologies/KnowNow#",
-      "http://purl.org/dc/elements/1.1/",
-      "https://w3id.org/pmd/"
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://emmo.info/emmo/middle/metrology#",
+      "http://qudt.org/schema/",
+      "http://www.semanticweb.org/ontologies/KnowNow#"
     ]
   },
   "tlos": {

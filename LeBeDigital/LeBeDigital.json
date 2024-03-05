@@ -1,5 +1,6 @@
 {
-  "analysis_date": "2024-02-28T16:05:01.420626",
+  "analysis_date": "2024-03-04T18:08:54.232211",
+  "changes": null,
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -172,17 +173,17 @@
   "namespaces": {
     "count": 11,
     "items": [
-      "http://purl.org/dc/terms/",
-      "https://w3id.org/cpto/GGBS/",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "https://w3id.org/",
-      "https://w3id.org/pmd/",
       "http://www.w3.org/ns/prov#",
       "https://w3id.org/cpto/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2002/07/owl#",
+      "http://purl.org/dc/terms/",
+      "https://w3id.org/",
+      "https://w3id.org/pmd/co/",
       "http://creativecommons.org/licenses/by/4.0/",
+      "https://w3id.org/cpto/GGBS/",
       "https://orcid.org/",
-      "http://www.w3.org/2002/07/owl#"
+      "https://w3id.org/pmd/"
     ]
   },
   "tlos": {

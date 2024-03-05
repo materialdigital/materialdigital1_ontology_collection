@@ -1,5 +1,11 @@
 {
     "projects": {
+        "DigiBatMat":{
+            "graph_file": "DigiBatMat/BPCOv1.0.1-noqudt.ttl",
+            "reasoned_graph_file": "DigiBatMat/BPCOv1.0.1-noqudt.pellet-2.2.0.ttl",
+            "startswith_filter": "https://purl.org/bpco",
+            "changes": ["removed qudt import definitions"]
+        },
         "DIGITRUBBER": {
             "graph_file": "DIGITRUBBER/digitrubber-full.owl",
             "reasoned_graph_file": "DIGITRUBBER/digitrubber-full.elk-0.5.0.ttl",
@@ -19,12 +25,14 @@
         "KNOW-NOW": {
             "graph_file": "KNOW-NOW/KnowNow_Ontology-noindividuals.ttl",
             "reasoned_graph_file": "KNOW-NOW/KnowNow_Ontology-noindividuals.pellet-2.2.0.ttl",
-            "startswith_filter": "http://www.semanticweb.org/ontologies/KnowNow"
+            "startswith_filter": "http://www.semanticweb.org/ontologies/KnowNow",
+            "changes": ["removed individuals"]
         },
         "KupferDigital": {
             "graph_file": "KupferDigital/KupferDigital_rdflib/KupferDigital.ttl",
             "reasoned_graph_file": "KupferDigital/KupferDigital_rdflib/KupferDigital.pellet-2.2.0.ttl",
-            "startswith_filter": "https://gitlab.com/kupferdigital/"
+            "startswith_filter": "https://gitlab.com/kupferdigital/",
+            "changes": ["combined modular files into one", "removed invalid symbols from two individuals uris"]
         },
         "LeBeDigital": {
             "graph_file": "LeBeDigital/CPTO.ttl",
@@ -34,7 +42,8 @@
         "ODE_AM": {
             "graph_file": "ODE_AM/ODE_AM_rdflib/ODE_AM.ttl",
             "reasoned_graph_file": "ODE_AM/ODE_AM_rdflib/ODE_AM.pellet-2.2.0.ttl",
-            "startswith_filter": "https://w3id.org/ODE_AM/"
+            "startswith_filter": "https://w3id.org/ODE_AM/",
+            "changes": ["combined modular files into one"]
         },
         "PMDao_MO": {
             "graph_file": "PMDao_MO/pmd_mo.ttl",
