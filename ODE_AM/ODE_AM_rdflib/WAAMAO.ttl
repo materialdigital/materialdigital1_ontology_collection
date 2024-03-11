@@ -1,0 +1,331 @@
+@prefix : <https://w3id.org/ODE_AM/WAAMAO/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix CommonCoreOntologies: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@base <https://w3id.org/ODE_AM/WAAMAO> .
+
+<https://w3id.org/ODE_AM/WAAMAO> rdf:type owl:Ontology ;
+                                  dc:creator "Mohamed Kamal,  Jan Reimann"^^xsd:string ;
+                                  dc:date "2024-01-18T19:06:54"^^xsd:dateTime ,
+                                          "version 1.0.0"^^xsd:string ;
+                                  dc:license "CC-BY-4.0" ;
+                                  dc:title "Wire Arc Additive Manufacturing Application Ontology (WAAMAO)"^^xsd:string ;
+                                  rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
+                                               "This ontology, designed for use in data management for metal additive manufacturing with focus on Wire Arc Additive Manufacturing (WAAM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/version
+dc:version rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition
+CommonCoreOntologies:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Objective
+CommonCoreOntologies:Objective rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing
+<https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing> rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter
+<https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter> rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine
+<https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine> rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ActOfWireArcAdditiveManufacturingProcessParameter
+:ActOfWireArcAdditiveManufacturingProcessParameter rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter> ;
+                                                   rdfs:label "Act Of Wire Arc Additive Manufacturing Process Parameter" ;
+                                                   skos:definition "General settings or specific actions in the WAAM process"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ArclengthCorrection
+:ArclengthCorrection rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                     skos:definition "Adjustments to maintain consistent arc length during welding" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ContactTubeWorkpiece
+:ContactTubeWorkpiece rdf:type owl:Class ;
+                      rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                      skos:definition "distance between the contact tube an the workpiece"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/DynamicCorrection
+:DynamicCorrection rdf:type owl:Class ;
+                   rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                   skos:definition "Real-time adjustments to welding parameters for process stability" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/EndCurrent
+:EndCurrent rdf:type owl:Class ;
+            rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+            skos:definition "Current level when the welding arc is terminated" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/EndCurrentTime
+:EndCurrentTime rdf:type owl:Class ;
+                rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                skos:definition "Time duration for applying the end current" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/EnergyInputPerUnitLengthParameter
+:EnergyInputPerUnitLengthParameter rdf:type owl:Class ;
+                                   rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                   skos:definition "Amount of energy applied per unit length of the weld" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/InterLayerTemperatureParameter
+:InterLayerTemperatureParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                skos:definition "Temperature between deposited layers"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/Kuka_KR60
+:Kuka_KR60 rdf:type owl:Class ;
+           rdfs:subClassOf :WireArcAdditveManufacturingMachine ;
+           CommonCoreOntologies:definition "Handling system for additive manufacturing usecase in DED-Arc" .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/MechanicalSimulation
+:MechanicalSimulation rdf:type owl:Class ;
+                      rdfs:subClassOf CommonCoreOntologies:Objective ;
+                      owl:disjointWith :ThermalSimulation .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/PrintingTemperatureParameter
+:PrintingTemperatureParameter rdf:type owl:Class ;
+                              rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                              skos:definition "The temperature at which the material is deposited during the additive manufacturing process"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ShieldingGasFlowRateParameter
+:ShieldingGasFlowRateParameter rdf:type owl:Class ;
+                               rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                               skos:definition "Rate of shielding gas flow to protect the weld area"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ShieldingGasTypeParameter
+:ShieldingGasTypeParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                           skos:definition "Type of shielding gas used in welding"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/Slope1Parameter
+:Slope1Parameter rdf:type owl:Class ;
+                 rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                 skos:definition "Rates of change in welding current"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/Slope2Parameter
+:Slope2Parameter rdf:type owl:Class ;
+                 rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                 skos:definition "Rates of change in welding voltage"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/StartCurrentTime
+:StartCurrentTime rdf:type owl:Class ;
+                  rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                  skos:definition "Duration for applying the starting current"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/StartingCurrent
+:StartingCurrent rdf:type owl:Class ;
+                 rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                 skos:definition "Initial current level when the welding arc starts"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/SubstratePlateTemperatureParameter
+:SubstratePlateTemperatureParameter rdf:type owl:Class ;
+                                    rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                    skos:definition "Temperature of the base material"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ThermalSimulation
+:ThermalSimulation rdf:type owl:Class ;
+                   rdfs:subClassOf CommonCoreOntologies:Objective .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/TriggerMode
+:TriggerMode rdf:type owl:Class ;
+             rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+             skos:definition "Method of initiating the welding process"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingBeadHeightParameter
+:WeldingBeadHeightParameter rdf:type owl:Class ;
+                            rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                            skos:definition "Height of the individual welding bead"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingBeadWidthParameter
+:WeldingBeadWidthParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                           skos:definition "Width of the single welding bead"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingCurrentParameter
+:WeldingCurrentParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                         skos:definition "Current used during the welding process"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingMode
+:WeldingMode rdf:type owl:Class ;
+             rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+             skos:definition "Type of welding process used"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingPowerParameter
+:WeldingPowerParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                       skos:definition "Total power used in the welding process"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingSpeedParameter
+:WeldingSpeedParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                       skos:definition "Speed of the welding torch movement"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingTorchInclinationParameter
+:WeldingTorchInclinationParameter rdf:type owl:Class ;
+                                  rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                  skos:definition "Angle of the welding torch"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WeldingVoltageParameter
+:WeldingVoltageParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                         skos:definition "Voltage applied during welding"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireArcAdditiveManufacturing
+:WireArcAdditiveManufacturing rdf:type owl:Class ;
+                              rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing> ;
+                              CommonCoreOntologies:definition "The process category is direct energie deposition, using a GMAW, in a wire feed process / WAAM - Wire-Arc-Additive-Manufacturing"^^xsd:string ;
+                              rdfs:label "Wire Arc Additive Manufacturing"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireArcAdditveManufacturingMachine
+:WireArcAdditveManufacturingMachine rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine> .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireChemicalComposition_Parameter
+:WireChemicalComposition_Parameter rdf:type owl:Class ;
+                                   rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                   skos:definition "Composition of the welding wire"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireDiameterParameter
+:WireDiameterParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                       skos:definition "Diameter of the welding wire"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireFeedRateParameter
+:WireFeedRateParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                       skos:definition "Speed of wire feed into the weld pool"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/WireStandardizedDesignationParameter
+:WireStandardizedDesignationParameter rdf:type owl:Class ;
+                                      rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                                      skos:definition "Standard classification of the welding wire"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/ZJumpParameter
+:ZJumpParameter rdf:type owl:Class ;
+                rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                skos:definition "Vertical movement between layers in additive manufacturing"^^xsd:string .
+
+
+###  https://w3id.org/ODE_AM/WAAMAO/overlapParameter
+:overlapParameter rdf:type owl:Class ;
+                  rdfs:subClassOf :ActOfWireArcAdditiveManufacturingProcessParameter ;
+                  skos:definition "Extent of overlap between successive weld passes"^^xsd:string .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ArclengthCorrection
+                :ContactTubeWorkpiece
+                :DynamicCorrection
+                :EndCurrent
+                :EndCurrentTime
+                :EnergyInputPerUnitLengthParameter
+                :InterLayerTemperatureParameter
+                :ShieldingGasFlowRateParameter
+                :ShieldingGasTypeParameter
+                :Slope1Parameter
+                :Slope2Parameter
+                :StartCurrentTime
+                :StartingCurrent
+                :SubstratePlateTemperatureParameter
+                :TriggerMode
+                :WeldingBeadHeightParameter
+                :WeldingBeadWidthParameter
+                :WeldingCurrentParameter
+                :WeldingMode
+                :WeldingPowerParameter
+                :WeldingSpeedParameter
+                :WeldingTorchInclinationParameter
+                :WeldingVoltageParameter
+                :WireChemicalComposition_Parameter
+                :WireDiameterParameter
+                :WireFeedRateParameter
+                :WireStandardizedDesignationParameter
+                :ZJumpParameter
+                :overlapParameter
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

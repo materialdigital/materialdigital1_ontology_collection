@@ -1,0 +1,1932 @@
+@prefix : <https://w3id.org/ODE_AM/AMAO/> .
+@prefix CommonCoreOntologies: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix amo: <https://w3id.org/ODE_AM/AMAO#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix default1: <https://w3id.org/ODE_AM/CEMAO/> .
+@prefix default2: <https://w3id.org/ODE_AM/PBFAO/> .
+@prefix default3: <https://w3id.org/ODE_AM/WAAMAO/> .
+@prefix mo: <https://w3id.org/ODE_AM/MAO/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:AnnotationProperty .
+
+dc:license a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+dc:version a owl:AnnotationProperty .
+
+swrla:isRuleEnabled a owl:AnnotationProperty .
+
+CommonCoreOntologies:ActOfArtifactAssembly rdfs:label "Joining"@en .
+
+CommonCoreOntologies:ThreeDimensionalExtent owl:equivalentClass mo:Volume .
+
+CommonCoreOntologies:alternative_label a owl:AnnotationProperty .
+
+CommonCoreOntologies:definition a owl:AnnotationProperty .
+
+CommonCoreOntologies:definition_source a owl:AnnotationProperty .
+
+CommonCoreOntologies:designated_by rdfs:subPropertyOf mo:named_by .
+
+CommonCoreOntologies:has_token_unit a owl:AnnotationProperty .
+
+owl:minQualifiedCardinality a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:example a owl:AnnotationProperty .
+
+<https://w3id.org/ODE_AM/AMAO> a owl:Ontology ;
+    dc:creator "Thomas Bjarsch" ;
+    dc:date "16.01.2024" ;
+    dc:license "CC-BY-4.0" ;
+    dc:title "Fraunhofer ICGV AM Application Ontology" ;
+    rdfs:comment "It uses Basic Formal Ontology as a Top- and Common Core Ontologies as Mid-Level-Ontologies. Fraunhofer IGCV Manufacturing Application Ontology is used as direct import.",
+        "This ontology, created for use at Fraunhofer IGCV, includes essential classes specifically relevant to Project ODE_AM within the domain of Additive Manufacturing. It is designed with the capability for successive expansions to accommodate future developments and additional requirements in this field.",
+        "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements." ;
+    owl:imports "MAO.ttl" ;
+    owl:versionInfo "1.0.0" .
+
+:ActOfSlicing a owl:Class ;
+    rdfs:label "Slicing"@en ;
+    CommonCoreOntologies:definition_source "VDI 3405" ;
+    rdfs:subClassOf CommonCoreOntologies:IntentionalAct ;
+    skos:definition "Slicing is an essential prefabrication stage for all additive manufacturing processes. It involves slicing the facet (volume) model into several successive layers and recording the information contained within each layer, i.e. identifying the parameters required to generate the individual contour lines within each layer. Since the sliced contour data are no longer connected to one another in the z-axis, subsequent scaling is no longer possible. With some technologies, this process is automatically performed by the software once the necessary parameters (e.g. layer thickness) have been set. Some fabrication systems require separate software specified by the manufacturer to prepare and store this layer data." .
+
+:AdditiveManufacturedPart a owl:Class ;
+    rdfs:label "Additive Manufactured Part"@en ;
+    CommonCoreOntologies:definition_source "ISO/ASTM 529000:2015(E)" ;
+    rdfs:subClassOf CommonCoreOntologies:Artifact ;
+    skos:definition "Joined material forming a functional element that could constitute all or a section of an intended product" .
+
+:BuildPlatformTemperatureParameter a owl:Class ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the temperature of the buildplatform during an additive manufacturing process." ;
+    CommonCoreOntologies:has_token_unit "'comm:Degree Celsius Measurement Unit'" ;
+    rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+    skos:example "An Additive Manufacturing Process Parameter prescribing a build platform temperature of 70 °C" .
+
+:InclinationRelativeToBuildDirection a owl:Class ;
+    rdfs:label "Inclination relative to build direction"@en ;
+    rdfs:subClassOf CommonCoreOntologies:SpatialOrientation ;
+    skos:definition "Angle between the axis of a subject and the build direction (perpendicular to buidlplatofrm surface)."@en ;
+    skos:example "25°"@en .
+
+:LayerHeightParameter a owl:Class ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the height of single joined layers during an additive manufacturing process" ;
+    CommonCoreOntologies:has_token_unit "'comm:Millimeter Measurement Unit'" ;
+    rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+    skos:example "An Additive Manufacturing Process Parameter prescribing a layer height of 0.2 mm" .
+
+:OpenJobFile a owl:Class ;
+    rdfs:label "Openjob file"@en ;
+    CommonCoreOntologies:definition "Additive manufacturing instruction file with ending .openjob"@en ;
+    rdfs:subClassOf :AdditiveManufacturingInstructionFile ;
+    skos:example "i.e. used for machine EOS M290"@en .
+
+:ParametersetInAdditiveManufacturing a owl:Class ;
+    rdfs:label "Parameterset in additive manufacturing"@en ;
+    CommonCoreOntologies:definition "Collection of process parameters and their specific values that are used to configure or define the behavior of an additive manufacturing process." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( <http://org.semanticweb.owlapi/error#Error1> mo:Standard [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:prescribes ;
+                        owl:someValuesFrom :ActOfAdditiveManufacturing ] ) ] ;
+    skos:example "A set of parameters used in a company for a specific material"@en .
+
+:PointOnBuildPlatform a owl:Class ;
+    rdfs:label "Point on build platform"@en ;
+    rdfs:comment "Usually dscribed by using x- and y-coordinates in a local coordinate system located on the build platform"@en ;
+    rdfs:subClassOf obo:ZeroDimensionalSpatialRegion ;
+    skos:definition "The spatial region occupied at some time instant by a specified point (i.e. center of gravity) of a printed part on the buildplatform." .
+
+:PrintingTemperatureParameter a owl:Class ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the temperature of the material adding element" ;
+    CommonCoreOntologies:has_token_unit "'comm:Degree Celsius Measurement Unit'" ;
+    rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+    skos:example "An Additive Manufacturing Parameter prescribing the nozzle temperature for Fused Filament Fabrication" .
+
+:SubprocessOfActOfAdditiveManufacturing a owl:Class ;
+    rdfs:label "Subprocess of additive manufacturing"@en ;
+    CommonCoreOntologies:definition "An act of additive manufacturing process which is part of the superior AM-process carrying the characteristics for the manufacturing of one specific part (parameters, geometries etc.)"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass CommonCoreOntologies:Artifact ;
+            owl:onProperty CommonCoreOntologies:has_output ],
+        obo:Process ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :ActOfAdditiveManufacturing [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_part_of_process ;
+                        owl:someValuesFrom :ActOfAdditiveManufacturing ] ) ] ;
+    skos:example "During one AM-Process 8 different parts may be manufactured. Each of this 8 processes is a subprocess using specific geometries and parameters."@en .
+
+:SupportStructure a owl:Class ;
+    rdfs:label "Support Structure"@en ;
+    CommonCoreOntologies:definition_source "VDI 3405" ;
+    rdfs:subClassOf obo:FiatObjectPart ;
+    skos:definition """Auxiliary geometry designed to mechanically sup-
+port overhanging sections of the part""" .
+
+:laid a owl:NamedIndividual,
+        :InclinationRelativeToBuildplatform .
+
+:upright a owl:NamedIndividual,
+        :InclinationRelativeToBuildplatform .
+
+<https://w3id.org/ODE_AM/CEMAO> a owl:Ontology ;
+    dc:creator "Mohamed Kamal, Heiko Beinersdorf"^^xsd:string ;
+    dc:date "2024-01-18T19:06:54"^^xsd:dateTime ;
+    dc:license "CC-BY-4.0" ;
+    dc:title "Composite Extrusion Modeling Ontology"^^xsd:string ;
+    dc:version "version 1.0.0"^^xsd:string ;
+    rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string,
+        "This ontology, designed for use in data management for metal additive manufacturing with focus on Composite Extrusion Modeling (CEM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string .
+
+default1:AIM3D a owl:Class ;
+    CommonCoreOntologies:definition "Model of a composite extrusion modeling machine." ;
+    rdfs:subClassOf default1:CompositeExtrusionModelingMachine .
+
+default1:ActOfCompositeExtrusionModeling a owl:Class ;
+    CommonCoreOntologies:definition "Additive manufacturing process in which combines the maetal injection moulding process (MIM process) with the process technologies from additive manufacturing." ;
+    rdfs:subClassOf :ActOfAdditiveManufacturing .
+
+default1:ActofDebinding a owl:Class ;
+    CommonCoreOntologies:definition "The process of removing the binding agents from a part after the initial print." ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification .
+
+default1:ActofSintering a owl:Class ;
+    CommonCoreOntologies:definition "A heat treatment process that fuses particles together to form a solid part after debinding." ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification .
+
+default1:BrownPartVolume a owl:Class ;
+    CommonCoreOntologies:definition "The volume of the part after debinding but before sintering." ;
+    rdfs:subClassOf mo:Volume .
+
+default1:BrownPartWeight a owl:Class ;
+    CommonCoreOntologies:definition "The weight of the part after debinding." ;
+    rdfs:subClassOf CommonCoreOntologies:Weight ;
+    owl:disjointWith default1:GreenPartWeight .
+
+default1:DebindingTechnology a owl:Class ;
+    CommonCoreOntologies:definition "The specific method or equipment used to remove the binder from a part." ;
+    rdfs:subClassOf default1:DebindingProcessParameter .
+
+default1:DebindingTemperatureProfile a owl:Class ;
+    CommonCoreOntologies:definition "The temperatures and durations applied during the debinding process." ;
+    rdfs:subClassOf default1:DebindingProcessParameter .
+
+default1:ExtruderTypeParameter a owl:Class ;
+    CommonCoreOntologies:definition "Specific used Extruder type and which extruder are used." ;
+    CommonCoreOntologies:definition_source "extruder data" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:GreenPartVolume a owl:Class ;
+    CommonCoreOntologies:definition "The volume of the part immediately after printing." ;
+    rdfs:subClassOf mo:Volume .
+
+default1:SinteredPartVolume a owl:Class ;
+    CommonCoreOntologies:definition "The volume of the part after the sintering process is complete." ;
+    rdfs:subClassOf mo:Volume .
+
+default1:SinteredPartWeight a owl:Class ;
+    CommonCoreOntologies:definition "The weight of the part after debinding." ;
+    rdfs:subClassOf CommonCoreOntologies:Weight .
+
+default1:SinteringTemperatureProfile a owl:Class ;
+    CommonCoreOntologies:definition "The controlled temperatures used to sinter a part over time." ;
+    rdfs:subClassOf default1:SinteringProcessParameter .
+
+<https://w3id.org/ODE_AM/MAO> a owl:Ontology ;
+    dc:creator "Thomas Bjarsch" ;
+    dc:date "15.01.2024" ;
+    dc:license "CC-BY-4.0" ;
+    dc:title "Fraunhofer IGCV Manufacturing Application Ontology" ;
+    rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string,
+        "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string,
+        "This ontology, developed for use at Fraunhofer IGCV, comprises a detailed collection of entities and their associated descriptions, tailored to support a range of projects like ODE_AM and HybridDigital within the manufacturing domain. It includes specific categories such as materials, processes, machinery, and quality standards, all of which are vital for research and development in advanced manufacturing techniques."^^xsd:string ;
+    owl:imports <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/AgentOntology.ttl>,
+        <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/ArtifactOntology.ttl>,
+        <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/EventOntology.ttl>,
+        <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/QualityOntology.ttl>,
+        <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/UnitsOfMeasureOntology.ttl>,
+        "protege-dc.owl" ;
+    owl:versionInfo "1.0.0"^^xsd:string .
+
+mo:AbsorbedFractureEnergy a owl:Class ;
+    rdfs:label "Absorbed Fracture Energy"@en ;
+    CommonCoreOntologies:definition "Bei der Prüfung mit einem Pendelschlagwerk für das Brechen der Probe erforderliche Energie, die bezüglich der Reibung korrigiert ist"@de ;
+    CommonCoreOntologies:definition_source "DIN EN ISO 148-1"@en ;
+    rdfs:comment "Translated from german standard to english"@en ;
+    rdfs:subClassOf mo:Energy ;
+    skos:definition "The energy required to break the specimen in a pendulum impact test, corrected for friction"@en .
+
+mo:ActOfAddition a owl:Class ;
+    rdfs:label "Addition"@en ;
+    rdfs:subClassOf mo:ActOfMathematicalOperation ;
+    skos:definition "Mathematical process where two or more numbers or quantities are combined together to find their sum or total value." ;
+    skos:example "4+5" .
+
+mo:ActOfCharpyImpactTesting a owl:Class ;
+    rdfs:label "Charpy impact testing"@en ;
+    CommonCoreOntologies:alternative_label "Charpy V-notch test" ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Standardized high strain rate test which determines the amount of energy absorbed by a material during fracture. Uses Standard DIN EN ISO 148" .
+
+mo:ActOfConsolidation a owl:Class ;
+    rdfs:label "Consolidation"@de,
+        "Verdichtung"@de ;
+    CommonCoreOntologies:definition "Process that compacts and solidifies a material, often by applying pressure, to decrease porosity and enhance mechanical properties."@de ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactProcessing .
+
+mo:ActOfCuring a owl:Class ;
+    rdfs:label "Aushärtung"@de,
+        "Curing"@en ;
+    CommonCoreOntologies:definition "Process wherein a material undergoes a chemical change to become hard and stable, often achieved through maintaining a specific temperature and humidity level for a set period."@de ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactProcessing .
+
+mo:ActOfDensityMeasuring a owl:Class ;
+    rdfs:label "Density measuring"@en ;
+    CommonCoreOntologies:definition "Quantitative assessment of an object's mass per unit volume, often expressed in terms like kilograms per cubic meter or grams per cubic centimeter"@en ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( CommonCoreOntologies:ActOfMeasuring [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_output ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty CommonCoreOntologies:is_a_measurement_of ;
+                                owl:someValuesFrom CommonCoreOntologies:Density ] ] ) ] .
+
+mo:ActOfDivision a owl:Class ;
+    rdfs:label "Division"@en ;
+    rdfs:subClassOf mo:ActOfMathematicalOperation ;
+    skos:definition "Mathematical process where a number or quantity is separated or distributed into equal parts, determining how many times one number (the divisor) can be subtracted from another number (the dividend) to obtain a quotient or result." .
+
+mo:ActOfFatigueTesting a owl:Class ;
+    rdfs:label "Fatigue Test"@en ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Mechanical testing that involves subjecting a material or component to repeated cyclic loading or stress, typically at varying levels, to evaluate its resistance to fatigue failure and to determine its fatigue life and behavior under real-world operating conditions." .
+
+mo:ActOfForming a owl:Class ;
+    rdfs:label "Verformen"@de,
+        "Forming"@en ;
+    CommonCoreOntologies:definition "Process involving the physical manipulation of an object. With forming, an object is physically deformed to achieve a different size and/or shape."@de ;
+    CommonCoreOntologies:definition_source "https://monroeengineering.com/blog/joining-vs-forming-manufacturing-processes-whats-the-difference/"@de ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification .
+
+mo:ActOfLaserFlashAnalysis a owl:Class ;
+    rdfs:label "Laser flash analysis"@en ;
+    CommonCoreOntologies:acronym "LFA"@en ;
+    CommonCoreOntologies:definition "The laser flash analysis or laser flash method is used to measure thermal diffusivity of a variety of different materials. An energy pulse heats one side of a plane-parallel sample and the resulting time dependent temperature rise on the backside due to the energy input is detected." ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring .
+
+mo:ActOfMilling a owl:Class ;
+    rdfs:label "Milling" ;
+    rdfs:subClassOf mo:ActOfMachining ;
+    skos:definition "Act of machining using rotary cutters to remove material from a workpiece by advancing or feeding in a direction at an angle with the axis of the tool",
+        "https://mime.oregonstate.edu/mill-manufacturing-process" .
+
+mo:ActOfMultiplication a owl:Class ;
+    rdfs:label "Multiplication"@en ;
+    rdfs:subClassOf mo:ActOfMathematicalOperation ;
+    skos:definition "Mathematical operation where two or more numbers or quantities are combined or repeated to find their product, representing the total of multiple equal groups or sets." ;
+    skos:example "3*12" .
+
+mo:ActOfPressing a owl:Class ;
+    rdfs:label "Pressen"@de,
+        "Pressing"@en ;
+    CommonCoreOntologies:definition "Process where pressure is applied to a material to alter its shape, form, or properties, often using a machine press to compress, compact, or shape it."@de ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactProcessing .
+
+mo:ActOfSieving a owl:Class ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactProcessing ;
+    skos:definition "Powder sieving is the process of separating particles of a powdered material into different size fractions by passing the powder through a mesh or sieve, ensuring uniformity and desired particle size distribution." .
+
+mo:ActOfSubtraction a owl:Class ;
+    rdfs:label "Subtraction"@en ;
+    rdfs:subClassOf mo:ActOfMathematicalOperation ;
+    skos:definition "Mathematical operation where one number or quantity is taken away from another to find the difference or result, representing the distance or gap between the two values." ;
+    skos:example "10-4" .
+
+mo:ActOfThermomechanicalAnalysis a owl:Class ;
+    rdfs:label "Thermomechanical Analysis"@en ;
+    CommonCoreOntologies:acronym "TMA"@en ;
+    CommonCoreOntologies:definition "A technique in which a deformation of the sample under non-oscillating stress is monitored against time or temperature while the temperature of the sample, in a specified atmosphere, is programmed. The stress may be compression, tension, flexure or torsion." ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring .
+
+mo:ActOfTurning a owl:Class ;
+    rdfs:label "Turning" ;
+    CommonCoreOntologies:definition_source "https://www.huyett.com/blog/manufacturing-process-turning" ;
+    rdfs:subClassOf mo:ActOfMachining ;
+    skos:definition "Act of machining performed on a lathe in which the workpiece rotates at high speeds while a fixed cutting tool removes material" .
+
+mo:ActOfVibratoryGrinding a owl:Class ;
+    rdfs:label "Vibratory Grinding" ;
+    CommonCoreOntologies:definition "Vibratory grinding is a process of material removal and surface finishing where parts are placed in a vibrating container filled with abrasive media, which smooths and polishes the surfaces through continuous and rapid movements."@en ;
+    rdfs:subClassOf mo:ActOfGrinding .
+
+mo:ActOfVirtualGeometryManipulation a owl:Class ;
+    rdfs:label "Virtual Geometry Manipulation"@en ;
+    rdfs:subClassOf CommonCoreOntologies:IntentionalAct ;
+    skos:example "Scaling an STL-Model, change the shape of an CAD Model" .
+
+mo:Autoclave a owl:Class ;
+    rdfs:label "Autoclave"@en ;
+    CommonCoreOntologies:definition "An autoclave is a machine used to carry out industrial and scientific processes requiring elevated temperature and pressure in relation to ambient pressure and/or temperature." ;
+    CommonCoreOntologies:definition_source "Wikipedia" ;
+    rdfs:subClassOf mo:Machine .
+
+mo:Broken a owl:Class ;
+    rdfs:label "Broken"@en ;
+    rdfs:subClassOf obo:Disposition ;
+    skos:definition "State of being damaged, fractured, or not in proper working condition, typically describing an object, device, or system that is no longer functioning as intended due to physical or functional impairment." .
+
+mo:Column a owl:Class ;
+    rdfs:label "Column"@en ;
+    rdfs:subClassOf CommonCoreOntologies:InformationBearingArtifact ;
+    skos:definition "A column in a database table is a vertical entity that stores a specific attribute of data, all of the same data type, for each record in the table."@en .
+
+mo:CompressiveModulus a owl:Class ;
+    rdfs:label "Compressive Modulus"@en ;
+    CommonCoreOntologies:alternative_label "modulus of elasticity in compression"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "Mechanical property that measures the compressive stiffness of a solid material when the compressive force is applied lengthwise."^^rdfs:Literal ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Young%27s_modulus"^^rdfs:Literal ;
+    CommonCoreOntologies:has_token_unit "MegaPascal"^^rdfs:Literal ;
+    rdfs:subClassOf mo:CompressiveCharacteristic .
+
+mo:CompressiveStrength a owl:Class ;
+    rdfs:label "Compressive Strength"@en ;
+    CommonCoreOntologies:has_token_unit "MPa" ;
+    rdfs:subClassOf mo:CompressiveCharacteristic ;
+    skos:definition "Maximum amount of compressive stress a material can withstand before it fails or experiences permanent deformation, measured in units of force per unit area (e.g., pounds per square inch or megapascals)." .
+
+mo:ConvectionOven a owl:Class ;
+    rdfs:label "Convection Oven"@en ;
+    CommonCoreOntologies:definition "a gas, electric, or microwave oven equipped with a fan that circulates and intensifies the heat" ;
+    CommonCoreOntologies:definition_source "https://www.collinsdictionary.com/dictionary/english/convection-oven" ;
+    rdfs:subClassOf mo:Machine .
+
+mo:CrossSectionalArea a owl:Class ;
+    rdfs:label "Cross Sectional Area"@en ;
+    rdfs:subClassOf obo:Quality ;
+    skos:definition "Area of a two-dimensional shape that is exposed when cutting through an object along a plane." .
+
+mo:Cycles a owl:Class ;
+    rdfs:label "Cycles"@en ;
+    CommonCoreOntologies:definition "The total number of cycles an oszillation has done during a specified amount of time." ;
+    rdfs:subClassOf obo:ProcessProfile .
+
+mo:Directory a owl:Class ;
+    rdfs:label "Directory"@en ;
+    CommonCoreOntologies:alternative_label "Folder"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "Virtual container used for organizing and storing files, allowing users to group related data and navigate the file system in a hierarchical manner."^^rdfs:Literal ;
+    rdfs:subClassOf obo:ImmaterialEntity .
+
+mo:DoubleBeltPress a owl:Class ;
+    rdfs:label "Doppelbandpresse"@de,
+        "Double Belt Press"@en ;
+    CommonCoreOntologies:definition "A double belt press comprises two endless steel belts revolving in opposing directions with mutually facing sides thereof pressed against each other and against material passed therebetween by means of stationary, temperature-controlled press plates." ;
+    CommonCoreOntologies:definition_source "https://overseadia.baidu.com/trade/products/Double-Belt-Press" ;
+    rdfs:subClassOf mo:Press .
+
+mo:ExcelSpreadsheet a owl:Class ;
+    rdfs:label "Excel-Spreadsheet"@en ;
+    CommonCoreOntologies:definition "Digital file or document created using Microsoft Excel software, designed to store, manipulate, and present data in an interactive, tabular format, allowing users to perform calculations, create charts, and organize information."@de ;
+    rdfs:subClassOf CommonCoreOntologies:Spreadsheet ;
+    skos:example "test_file.xlsx"@de .
+
+mo:FiftiethPercentile a owl:Class ;
+    rdfs:label "50th Percentile" ;
+    CommonCoreOntologies:alternative_label "Median"^^rdfs:Literal ;
+    rdfs:subClassOf mo:Percentile ;
+    skos:definition "The 50th percentile is the value below which 50% of the data points in a dataset fall, representing the median."^^rdfs:Literal ;
+    skos:example "In a dataset of exam scores (85, 90, 92, 78, 88, 95, 82), the 50th percentile (median) is 88, separating the data into two equal halves."^^rdfs:Literal .
+
+mo:FlexuralModulus a owl:Class ;
+    rdfs:label "Flexural Modulus"@en ;
+    CommonCoreOntologies:definition "Material Characteristic that is computed as the ratio of stress to strain in flexural deformation, or the tendency for a material to resist bending"^^rdfs:Literal ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Flexural_modulus"^^rdfs:Literal ;
+    rdfs:subClassOf mo:MaterialCharacteristic ;
+    skos:altLabel "BendingModulus" .
+
+mo:FractureSurface a owl:Class ;
+    rdfs:label "Fracture Surface"@en ;
+    CommonCoreOntologies:alternative_label "Bruchfläche"@de ;
+    CommonCoreOntologies:definition "Exposed surface of a material that has undergone mechanical failure, such as cracking or breaking, revealing the internal structure and characteristics of the material as a result of the fracture process."^^rdfs:Literal ;
+    rdfs:subClassOf obo:FiatSurface ;
+    skos:example "The fracture surface of a broken tensile test specimen"^^rdfs:Literal .
+
+mo:FracturedPartOfTestSpecimen a owl:Class ;
+    rdfs:label "Fractured Part Of Test Specimen"@en ;
+    CommonCoreOntologies:definition "Object derived out of an object due to the fracturing of the speimen." ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( obo:Object [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_output_of ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:intersectionOf ( CommonCoreOntologies:ActOfMeasuring [ a owl:Restriction ;
+                                            owl:onProperty CommonCoreOntologies:is_cause_of ;
+                                            owl:someValuesFrom mo:LossOfUnbroken ] ) ] ] ) ] ;
+    skos:example "A half of a fractured tensile test specimen" .
+
+mo:GeneratedID a owl:Class ;
+    rdfs:label "Generated Identifier"@en ;
+    CommonCoreOntologies:alternative_label "Unique Part ID"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "An ID which is unique for a object, clearly identifying it."^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:PartNumber ;
+    skos:example "4124k-24143k-4jk41"^^rdfs:Literal .
+
+mo:GigapascalMeasurementUnit a CommonCoreOntologies:MeasurementUnitOfPressure,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "GPa" .
+
+mo:HallFlowRate a owl:Class ;
+    rdfs:label "Hall Flow Rate"@en ;
+    CommonCoreOntologies:SI_unit_label "s/50g" ;
+    CommonCoreOntologies:definition_source "DIN EN ISO 4490" ;
+    rdfs:subClassOf mo:MaterialCharacteristic ;
+    skos:definition "Gemessen wird die Zeit, die erforderlich ist, damit 50 g eines metallischen Pulvers durch die Ausflussöffnung eines kalibrierten Trichters (Hall Flowmeter) mit genormten Maßen fließen" .
+
+mo:HashValue a owl:Class ;
+    rdfs:label "Hash Value"@en ;
+    CommonCoreOntologies:definition "A numeric or alphanumeric string obtained by applying a hash function to a piece of data"@en ;
+    rdfs:comment "\"there are no two files in the entire universe that have the same hash value\""@en ;
+    rdfs:subClassOf CommonCoreOntologies:CodeIdentifier ;
+    skos:example "3a7bd3e2360a3d29eea436fcfb7c621338b4784dfc684136ac1a4f6d8e7b6ad8"@en .
+
+mo:JoulePerGramPerKelvinMeasurementUnit a owl:NamedIndividual,
+        mo:MeasurementUnitOfSpecificHeatCapactity ;
+    CommonCoreOntologies:SI_unit_symbol "J/(g/K)" .
+
+mo:JoulePerKilogramPerKelvinMeasurementUnit a owl:NamedIndividual,
+        mo:MeasurementUnitOfSpecificHeatCapactity ;
+    CommonCoreOntologies:SI_unit_symbol "J/(kg/K)" .
+
+mo:MassFraction a owl:Class ;
+    rdfs:label "Mass Fraction"@en ;
+    CommonCoreOntologies:has_token_unit "mo:PercentMeasurementUnit" ;
+    rdfs:subClassOf obo:RelationalQuality ;
+    skos:definition "Ratio w_i of the mass m_i of a portion of material to the total mass m_tot of the total portion of material" .
+
+mo:MegapascalMeasurementUnit a CommonCoreOntologies:MeasurementUnitOfPressure,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "MPa" .
+
+mo:MicrometerMeasurementUnit a CommonCoreOntologies:MeasurementUnitOfLength,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "um" .
+
+mo:MillimeterPerSecondMeasurementUnit a CommonCoreOntologies:MeasurementUnitOfSpeed,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "mm/s" .
+
+mo:NETZSCH_DSC_204F1_Phoenix_IGCV a owl:NamedIndividual,
+        mo:NETZSCHDSC204F1Phoenix .
+
+mo:NinetiethPercentile a owl:Class ;
+    rdfs:label "90th Percentile" ;
+    rdfs:subClassOf mo:Percentile ;
+    skos:definition "Represents the value below which 90% of the data points in a dataset fall, indicating that 90% of the values are lower than or equal to this specific value."^^rdfs:Literal ;
+    skos:example "In a dataset of test scores (65, 70, 75, 80, 85, 90, 95, 100, 105, 110), the 90th percentile is 105, indicating that 90% of the scores are below or equal to this value."^^rdfs:Literal .
+
+mo:NormalizedChangeInLength a owl:Class ;
+    rdfs:label "Normalized Change In Length"@en ;
+    rdfs:comment "By default built by dividing the total change of length of a specimen by its original length"@en ;
+    rdfs:subClassOf obo:Quality ;
+    skos:definition "Quality characterizing the change in objects length to its original length." .
+
+mo:PDFFile a owl:Class ;
+    rdfs:label "PDF File"@en ;
+    CommonCoreOntologies:definition "Portable Document, standardized as ISO 32000, is a file developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems." ;
+    rdfs:subClassOf CommonCoreOntologies:InformationBearingArtifact .
+
+mo:PartIDInBuildjob a owl:Class ;
+    rdfs:label "Part ID in Buildjob"^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:PartNumber ;
+    skos:definition "An ID which a part gets in a specific buildjob-file. Two parts printed using the same buildjob-file have the same PartIDInBuildjob"^^rdfs:Literal ;
+    skos:example "42g54-2523-124"^^rdfs:Literal .
+
+mo:PercentMeasurementUnit a CommonCoreOntologies:MeasurementUnit,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "%" .
+
+mo:Porosity a owl:Class ;
+    rdfs:label "Porosity"@en ;
+    CommonCoreOntologies:alternative_label "void fraction" ;
+    CommonCoreOntologies:has_token_unit "mo:PercentMeasurementUnit" ;
+    rdfs:subClassOf mo:MaterialCharacteristic ;
+    skos:definition "Fraction of the volume of voids contained in a portion of material over the total volume of the portion of material" .
+
+mo:PortionOf316LMaterial a owl:Class ;
+    rdfs:label "Steel 316L" ;
+    CommonCoreOntologies:alternative_label 1.4404 ;
+    rdfs:subClassOf mo:PortionOfSteelMaterial ;
+    skos:definition "Portion of a specific metallic alloy of stainless steel that is austenitic and contains nickel and molybdenum, which make it corrosion resistant" .
+
+mo:PortionOfAluminum a owl:Class ;
+    rdfs:label "Aluminum" ;
+    CommonCoreOntologies:acronym "Al" ;
+    CommonCoreOntologies:definition "Lightweight, silvery-white metal with the symbol Al and atomic number 13, known for its high strength-to-weight ratio and widespread use in various industries" ;
+    rdfs:subClassOf mo:PortionOfMetal .
+
+mo:PortionOfCarbonMaterial a owl:Class ;
+    rdfs:label "Carbon"@de ;
+    CommonCoreOntologies:acronym "C"@de ;
+    CommonCoreOntologies:definition "Nonmetallic chemical element with atomic number 6 that readily forms compounds with many other elements and is a constituent of organic compounds in all known living tissues"@de ;
+    CommonCoreOntologies:definition_source "https://www.merriam-webster.com/dictionary/carbon"@de ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial .
+
+mo:PortionOfChromeMaterial a owl:Class ;
+    rdfs:label "Chrome"@en ;
+    CommonCoreOntologies:acronym "Cr" ;
+    CommonCoreOntologies:definition "Hard, lustrous metal with excellent corrosion resistance, commonly used in alloys and surface coatings for industrial and decorative purposes."@de ;
+    rdfs:subClassOf mo:PortionOfMetal .
+
+mo:PortionOfEpoxyResinMaterial a owl:Class ;
+    rdfs:label "Epoxy"@de ;
+    CommonCoreOntologies:acronym "EP" ;
+    rdfs:subClassOf mo:PortionOfThermosetMaterial ;
+    skos:definition "Portion of reactive prepolymers and polymers which contain epoxide groups" .
+
+mo:PortionOfFiber a owl:Class ;
+    rdfs:label "Fibre"@en ;
+    CommonCoreOntologies:definition "One or more filaments in an ordered assemblage." ;
+    CommonCoreOntologies:definition_source "ASTM D3878-20b, Standard Terminology for Composite Materials" ;
+    rdfs:subClassOf CommonCoreOntologies:Artifact .
+
+mo:PortionOfFilament a owl:Class ;
+    rdfs:label "Filament"@en ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial ;
+    skos:definition "Portion of Material with a high length to diameter ratio" ;
+    skos:example "Carbon Filament: An older type of filament used in historical incandescent light bulbs before tungsten became popular."@de,
+        "3D-Printer Filament"@en .
+
+mo:PortionOfIronMaterial a owl:Class ;
+    rdfs:label "Iron"@en ;
+    CommonCoreOntologies:acronym "FE" ;
+    CommonCoreOntologies:definition "Silver-white malleable ductile magnetic heavy metallic element that readily rusts in moist air, occurs in pure form in meteorites and combined in most igneous rocks, is the most abundant element on Earth by mass, and is vital to biological processes" ;
+    CommonCoreOntologies:definition_source "https://www.merriam-webster.com/dictionary/iron" ;
+    rdfs:subClassOf mo:PortionOfMetal .
+
+mo:PortionOfManganeseMaterial a owl:Class ;
+    rdfs:label "Manganese"@en ;
+    CommonCoreOntologies:acronym "Mn" ;
+    rdfs:subClassOf mo:PortionOfMetal ;
+    skos:definition "Portion of material consisting out of chemical element with the symbol Mn and atomic number 25. It is a hard brittle silvery metal, often found in minerals in combination with iron." .
+
+mo:PortionOfMolybdenumMaterial a owl:Class ;
+    rdfs:label "Molybdenum"@en ;
+    CommonCoreOntologies:acronym "Mo" ;
+    rdfs:subClassOf mo:PortionOfMetal ;
+    skos:definition "Portion of material consisting out of chemical element with the symbol Mo and atomic number 42" .
+
+mo:PortionOfNickelMaterial a owl:Class ;
+    rdfs:label "Nickel"@en ;
+    CommonCoreOntologies:acronym "Ni" ;
+    CommonCoreOntologies:definition "Silver-white hard malleable ductile metallic element capable of a high polish and resistant to corrosion that is used chiefly in alloys and as a catalyst" ;
+    CommonCoreOntologies:definition_source "https://www.merriam-webster.com/dictionary/nickel" ;
+    rdfs:subClassOf mo:PortionOfMetal .
+
+mo:PortionOfPolyactideMaterial a owl:Class ;
+    rdfs:label "Polyactide"@en ;
+    CommonCoreOntologies:acronym "PLA" ;
+    rdfs:subClassOf mo:PortionOfThermoplastMaterial ;
+    skos:definition "Portion of thermoplastic polyester with backbone formula (C3H4O2)n or [–C(CH3)HC(=O)O–]n, formally obtained by condensation" .
+
+mo:PortionOfPolycarbonateMaterial a owl:Class ;
+    rdfs:label "Polycarbonate"@en ;
+    CommonCoreOntologies:acronym "PC" ;
+    rdfs:subClassOf mo:PortionOfThermoplastMaterial ;
+    skos:definition "Portion of thermoplastic polymers containing carbonate groups in their chemical structures" .
+
+mo:PortionOfShieldingGas a owl:Class ;
+    rdfs:label "Shielding Gas"@en ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Shielding_gas" ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial ;
+    skos:definition "Portion of inert or semi-inert gases that are commonly used in several welding processes to protect the welding area from oxygon and water vapour" .
+
+mo:PortionOfSiliconMaterial a owl:Class ;
+    rdfs:label "Silicon"@en ;
+    CommonCoreOntologies:acronym "Si" ;
+    CommonCoreOntologies:definition "Tetravalent nonmetallic element with atomic number 14 that occurs combined as the most abundant element next to oxygen in the earth's crust and is used especially in semiconductors, in ferrosilicon for steelmaking, and in other alloys" ;
+    CommonCoreOntologies:definition_source "https://www.merriam-webster.com/dictionary/silicon" ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial .
+
+mo:PowderManufacturer a owl:Class ;
+    rdfs:label "Powder Manufacturer"@en ;
+    rdfs:subClassOf CommonCoreOntologies:CommercialOrganization ;
+    skos:definition "Company or entity that specializes in producing powdered substances through processes such as grinding, milling, or atomization, for use in various industries, applications, and products." ;
+    skos:example "m4p"@en .
+
+mo:RRatio a owl:Class ;
+    rdfs:label "R-Ratio"@en,
+        "Stressratio"@en ;
+    CommonCoreOntologies:alternative_label "RFactor" ;
+    rdfs:subClassOf CommonCoreOntologies:RatioMeasurementInformationContentEntity ;
+    skos:definition "In fatigue analysis, the \"R-ratio\" or \"R-factor\" refers to the ratio of the minimum stress to the maximum stress experienced by a material during a fatigue loading cycle. It is typically denoted as R=stress_min/stress_max." .
+
+mo:RelativeDensity a owl:Class ;
+    rdfs:label "Relative Density"@en ;
+    CommonCoreOntologies:definition "The ratio of the density (mass of a unit volume) of a substance to the density of a given reference material."^^rdfs:Literal ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Relative_density"^^rdfs:Literal ;
+    CommonCoreOntologies:has_token_unit "Percent"^^rdfs:Literal ;
+    rdfs:subClassOf mo:MaterialCharacteristic .
+
+mo:RemainUnbroken a owl:Class ;
+    rdfs:label "Remain unbroken"@en ;
+    rdfs:comment "Bearing the quality of being unbroken and undamaged"@en ;
+    rdfs:subClassOf CommonCoreOntologies:StasisOfDisposition .
+
+mo:SQLDatabase a owl:Class ;
+    rdfs:label "SQL Database"@en ;
+    rdfs:subClassOf CommonCoreOntologies:Database ;
+    skos:definition "An SQL database is a structured collection of data that uses a schema to define and manipulate data using the Structured Query Language (SQL)."@en .
+
+mo:STLFile a owl:Class ;
+    rdfs:label "STL File"@en ;
+    CommonCoreOntologies:definition_source "VDI 3405" ;
+    rdfs:subClassOf CommonCoreOntologies:InformationBearingArtifact ;
+    skos:definition "The STL file format (surface tessellation language, or stereolithography) has established itself as a quasi-industrial standard for transferring data in additive manufacturing processes. It is a system neutral data format for exchanging pure geometric data. The boundary surfaces of volume models are described by triangles (planar facets) and their normal vectors. STL datasets can be stored using either ASCII or binary representations. The binary format is preferable because the volume of data is greatly reduced. The STL data format is not recommended for exchanging data between CAD/CAM systems because the geometry is irreversibly facetted." .
+
+mo:SecondsPerFiftyGrams a CommonCoreOntologies:MeasurementUnitOfMassFlowRate,
+        owl:NamedIndividual ;
+    CommonCoreOntologies:SI_unit_symbol "s/50g" .
+
+mo:SemiFinishedPart a owl:Class ;
+    rdfs:label "Halbzeug"@de,
+        "Semi Finished Part"@en ;
+    CommonCoreOntologies:alternative_label "Workpiece"@en ;
+    CommonCoreOntologies:definition "Raw material or component that is being transformed into a finished product."@en ;
+    CommonCoreOntologies:definition_source "https://berknesscompany.com/glossary/workpiece/"@en ;
+    rdfs:subClassOf CommonCoreOntologies:Artifact .
+
+mo:SpecimenID a owl:Class ;
+    CommonCoreOntologies:alternative_label "Non Unique Specimen ID"^^rdfs:Literal ;
+    rdfs:comment "Typically these are short numbers mounted/written directly onto single parts."@en ;
+    rdfs:subClassOf CommonCoreOntologies:CodeIdentifier ;
+    skos:definition "A specimen ID which is non-unique for a specimen and requires more meta-data to clearly identify a part."^^rdfs:Literal ;
+    skos:example "\"2\" or \"8\""^^rdfs:Literal .
+
+mo:SquareMeterPerSecondMeasurementUnit a owl:NamedIndividual,
+        mo:MeasurementUnitOfThermalDiffusivity ;
+    CommonCoreOntologies:SI_unit_symbol "m^2/s" .
+
+mo:SquareMillimeterPerSecondMeasurementUnit a owl:NamedIndividual,
+        mo:MeasurementUnitOfThermalDiffusivity ;
+    CommonCoreOntologies:SI_unit_symbol "mm^2/s" .
+
+mo:StasisOfTemperature a owl:Class ;
+    rdfs:label "Stasis of temperature"@en ;
+    CommonCoreOntologies:definition "A Stasis of Quality that holds during a Temporal Interval when an object maintains the same Temperature." ;
+    rdfs:comment "the temperature is contant during the regarded time"@en ;
+    rdfs:subClassOf CommonCoreOntologies:StasisOfQuality .
+
+mo:Stress a owl:Class ;
+    rdfs:label "Spannung"@de,
+        "Stress"@en ;
+    CommonCoreOntologies:definition "stress, in physical sciences and engineering, force per unit area within materials that arises from externally applied forces, uneven heating, or permanent deformation and that permits an accurate description and prediction of elastic, plastic, and fluid behaviour. A stress is expressed as a quotient of a force divided by an area." ;
+    CommonCoreOntologies:definition_source "https://www.britannica.com/science/stress-physics" ;
+    rdfs:subClassOf obo:ProcessProfile .
+
+mo:SurfaceArea a owl:Class ;
+    rdfs:label "Surface Area"@en ;
+    CommonCoreOntologies:SI_unit_symbol "'comm:Square Meter Measurement Unit'" ;
+    rdfs:subClassOf obo:Quality ;
+    skos:definition "A quality that measures  the total area that the surface of an object occupies" .
+
+mo:TensileModulus a owl:Class ;
+    rdfs:label "Tensile Modulus"@en ;
+    CommonCoreOntologies:alternative_label "modulus of elasticity in tension"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "mechanical property that measures the tensile or compressive stiffness of a solid material when the force is applied lengthwise"^^rdfs:Literal ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Young%27s_modulus"^^rdfs:Literal ;
+    CommonCoreOntologies:has_token_unit "MegaPascal"^^rdfs:Literal ;
+    rdfs:subClassOf mo:TensileCharacteristic .
+
+mo:TensileStrength a owl:Class ;
+    rdfs:label "Tensile Strength"@en ;
+    CommonCoreOntologies:definition "Maximum stress that a material can withstand while being stretched or pulled before breaking"^^rdfs:Literal ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"^^rdfs:Literal ;
+    CommonCoreOntologies:has_token_unit "MPa" ;
+    rdfs:subClassOf mo:TensileCharacteristic .
+
+mo:TenthPercentile a owl:Class ;
+    rdfs:label "10th Percentile" ;
+    CommonCoreOntologies:definition "Represents the value below which 90% of the data points in a dataset fall, indicating that 10% of the values are lower than or equal to this specific value."^^rdfs:Literal ;
+    rdfs:subClassOf mo:Percentile .
+
+mo:ThermalDiffusivity a owl:Class ;
+    rdfs:label "Thermal Diffusivity"@en ;
+    CommonCoreOntologies:SI_unit_label "m^2/s" ;
+    CommonCoreOntologies:definition "In heat transfer analysis, thermal diffusivity is the thermal conductivity divided by density and specific heat capacity at constant pressure. It measures the rate of transfer of heat of a material from the hot end to the cold end. It has the SI derived unit of m2/s." ;
+    rdfs:subClassOf mo:MaterialCharacteristic .
+
+mo:Unbroken a owl:Class ;
+    rdfs:label "Unbroken"@en ;
+    CommonCoreOntologies:alternative_label "Intact"@en ;
+    rdfs:subClassOf obo:Disposition ;
+    skos:definition "Not been broken or damaged, maintaining its complete or original state without interruption or weakening"@en .
+
+mo:has_indirect_output a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:has_output ;
+    owl:inverseOf mo:is_indirect_output_of .
+
+mo:has_x_coordinate_value a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+mo:has_y_coordinate_value a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+mo:has_z_coordinate_value a owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+mo:primary_sql_key_of a owl:ObjectProperty ;
+    rdfs:subPropertyOf mo:sql_key_of ;
+    owl:inverseOf mo:uses_primary_sql_key .
+
+mo:saved_at a owl:AnnotationProperty .
+
+mo:secondary_sql_key_of a owl:ObjectProperty ;
+    rdfs:subPropertyOf mo:sql_key_of ;
+    owl:inverseOf mo:uses_secondary_sql_key .
+
+mo:url a owl:AnnotationProperty .
+
+<https://w3id.org/ODE_AM/PBFAO> a owl:Ontology ;
+    dc:creator "Thomas Bjarsch" ;
+    dc:date "16.01.2024"^^xsd:string ;
+    dc:license "CC-BY-4.0" ;
+    dc:title "Fraunhofer IGCV Powder Bed Fusion Application Ontology"^^xsd:string ;
+    rdfs:comment "Fraunhofer IGCV AM Application Ontology is used as a direct import."^^xsd:string,
+        "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string,
+        "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string,
+        "This ontology, tailored for the powder bed fusion domain at Fraunhofer IGCV, comprises key classes that encapsulate various parameters integral to this specific additive manufacturing process."^^xsd:string ;
+    owl:imports "AMAO.ttl" ;
+    owl:versionInfo "1.0.0"^^xsd:string .
+
+default2:ContourCorridorParameter a owl:Class ;
+    rdfs:label "Contour Corridor"@en ;
+    CommonCoreOntologies:definition "Contour parameter prescribing the range in x,y-plane, in which the exposed areas underneath and above the current layer are considered, to determine the conture exposure type"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0,07 mm"@en .
+
+default2:EOSM290 a owl:Class ;
+    rdfs:label "EOS M290"@en ;
+    rdfs:comment "https://www.eos.info/en/industrial-3d-printer/metal/eos-m-290?utm_source=google&utm_medium=cpc&utm_campaign=brand_DACH&utm_content=wyn&utm_term=m290%20printer&utm_campaign=%5Bwyn%5D+Brand+%5BDACH%5D+%5BS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=3851378066&hsa_cam=16340963737&hsa_grp=137137441137&hsa_ad=612094563041&hsa_src=g&hsa_tgt=kwd-1643562642707&hsa_kw=m290%20printer&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAzJOtBhALEiwAtwj8tgNBUfQcsWosEG-JT-zOlCNMyhfndTYMy4n0iaotzx-nGXD5bmLW2xoCsUcQAvD_BwE"@en ;
+    rdfs:subClassOf default2:PowderBedFusionLaserBeamMetalMachine ;
+    skos:definition "Specific Machine type of supplier Electro Optical Systems GmbH"@en .
+
+default2:EOS_M290_CartesianCoordinateSystem a CommonCoreOntologies:CartesianCoordinateSystem,
+        owl:NamedIndividual .
+
+default2:EdgeFactorParameter a owl:Class ;
+    rdfs:label "Edge Factor"@en ;
+    CommonCoreOntologies:definition "Edge parameter prescribing the completeness of apex-exposure. The higher this factor, the further the beam will advance into the apex."^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:ExposurePatternDownSkinParameter a owl:Class ;
+    rdfs:label "Exposure Pattern Down Skin"@en ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Categorical"@en ;
+    rdfs:subClassOf default2:ExposurePatternParameter ;
+    skos:example "\"Stripes\""@en .
+
+default2:ExposurePatternInFillParameter a owl:Class ;
+    rdfs:label "Exposure Pattern Infill"@en ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Categorical"@en ;
+    rdfs:subClassOf default2:SkywritingParameter ;
+    skos:example "\"Stripes\""@en .
+
+default2:FlowOptimizationDownSkinParameter a owl:Class ;
+    rdfs:label "Flow optimization down skin"@en ;
+    CommonCoreOntologies:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:FlowOptimizationParameter ;
+    skos:example "true"@en .
+
+default2:FlowOptimizationInFillParameter a owl:Class ;
+    rdfs:label "Flow optimization infill"@en ;
+    CommonCoreOntologies:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:FlowOptimizationParameter ;
+    skos:example "true"@en .
+
+default2:FlowOptimizationUpSkinParameter a owl:Class ;
+    rdfs:label "Flow optimization upskin"@en ;
+    CommonCoreOntologies:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for UpSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:FlowOptimizationParameter ;
+    skos:example "true"@en .
+
+default2:HatchDistanceDownSkinParameter a owl:Class ;
+    rdfs:label "Hatch distance down skin"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:HatchDistanceParameter ;
+    skos:example "true"@en .
+
+default2:HatchDistanceInFillParameter a owl:Class ;
+    rdfs:label "Hatch distance infill"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:HatchDistanceParameter ;
+    skos:example "true"@en .
+
+default2:HatchDistanceUpSkinParameter a owl:Class ;
+    rdfs:label "Hatch distance upskin"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for UpSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:HatchDistanceParameter ;
+    skos:example "true"@en .
+
+default2:HatchOffsetAngleParameter a owl:Class ;
+    rdfs:label "Hatch offset angle"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary" ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "°"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0 °"@en .
+
+default2:HatchOffsetParameter a owl:Class ;
+    rdfs:label "Hatch offset"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "°"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "45 °"@en .
+
+default2:HatchRestrictionAngleParameter a owl:Class ;
+    rdfs:label "Hatch restriction angle"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the angle range in which vector ranges are excluded"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "°"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "10 °"@en .
+
+default2:HatchRotationAngleParameter a owl:Class ;
+    rdfs:label "Hatch rotation angle"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the vector rotation angle in successive layers"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "°"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "10°"@en .
+
+default2:InfillSkippingLayersParameter a owl:Class ;
+    rdfs:label "Infill skipping layers"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the layer number of successive, not exposed infill"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:LaserPowerContourParameter a owl:Class ;
+    rdfs:label "Laser power contour"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing with which vectors are exposed for Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerDownContourParameter a owl:Class ;
+    rdfs:label "Laser power down contour"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing with which vectors are exposed for Down Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerDownSkinParameter a owl:Class ;
+    rdfs:label "Laser power downskin"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing the power with which vectors are exposed for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerEdgeParameter a owl:Class ;
+    rdfs:label "Laser power edge"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing with which vectors are exposed for Edge fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerInFillParameter a owl:Class ;
+    rdfs:label "Laser power infill"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing with which vectors are exposed for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerOnPartContourParameter a owl:Class ;
+    rdfs:label "Laser power on part contour"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing with which vectors are exposed for OnPart Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerParameterParameter a owl:Class ;
+    rdfs:label "Laser power"@en ;
+    CommonCoreOntologies:definition "Energy input parameter prescribing the power with which vectors are exposed"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserPowerUpSkinParameter a owl:Class ;
+    rdfs:label "Laser power upskin"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing the power with which vectors are exposed for UpSKin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "W"@en ;
+    rdfs:subClassOf default2:LaserPowerParameter ;
+    skos:example "300 W"@en .
+
+default2:LaserSpeedContourParameter a owl:Class ;
+    rdfs:label "Laser speed contour"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:LaserSpeedDownContourParameter a owl:Class ;
+    rdfs:label "Laser speed down contour"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Down Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:LaserSpeedDownSkinParameter a owl:Class ;
+    rdfs:label "Laser speed downskin"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:LaserSpeedEdgeParameter a owl:Class ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Edge fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en,
+        "Laser Speed Edge"@en .
+
+default2:LaserSpeedInFillParameter a owl:Class ;
+    rdfs:label "Laser speed infill"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:LaserSpeedOnPartContourParameter a owl:Class ;
+    rdfs:label "Laser speed on part contour"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of On Part Contour fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:LaserSpeedUpSkinParameter a owl:Class ;
+    rdfs:label "Laser speed upskin"@en ;
+    CommonCoreOntologies:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of UpSKin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:LaserSpeedParameter ;
+    skos:example "400 mm/s"@en .
+
+default2:Min.RadiusFactorParameter a owl:Class ;
+    rdfs:label "Minimum radius factor"@en ;
+    CommonCoreOntologies:definition "Edge parameter prescribing the completeness of apex-exosure depending on the ratio of apex outline to beam radius. Alternatively, this can be triggered over the edge factor."^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0"@en .
+
+default2:Min.VectorLengthParameter a owl:Class ;
+    rdfs:label "Minium vector length"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing that if an UpDownSkin vector is smaller than the minimum length, then this UD vector is added to the neighbouring Infill vector"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0,1 mm"@en .
+
+default2:OffsetContourParameter a owl:Class ;
+    rdfs:label "Offset contour"@en ;
+    CommonCoreOntologies:definition "Contour parameter prescribing an offset of the contour relative to the exposure part boundary"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0,1 mm"@en .
+
+default2:OffsetEdgeParameter a owl:Class ;
+    rdfs:label "Offset edge"@en ;
+    CommonCoreOntologies:definition "Edge parameter prescribing the spacial offset from beam path to the contour outline taking into account the current zone"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0,1 mm"@en .
+
+default2:OverlapWithInfillParameter a owl:Class ;
+    rdfs:label "Overlap with infill"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the overlap between the UpDownSkin and infill area in x,y plane"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "0,1 mm"@en .
+
+default2:PatternfeaturesShiftedDownSkinParameter a owl:Class ;
+    rdfs:label "Pattern features shifted down skin"@en ;
+    CommonCoreOntologies:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:PatternfeaturesShiftedParameter ;
+    skos:example "true"@en .
+
+default2:PatternfeaturesShiftedInFillParameter a owl:Class ;
+    rdfs:label "Pattern features shifted infill"@en ;
+    CommonCoreOntologies:definition "Pattern features Shifted parameter prescribing a shift off the exposure pattern width in x,y plane for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:PatternfeaturesShiftedParameter ;
+    skos:example "true"@en .
+
+default2:PatternfeaturesShiftedUpSkinParameter a owl:Class ;
+    rdfs:label "Pattern features shifted upskin"@en ;
+    CommonCoreOntologies:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern width in x,y plane for UpSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:PatternfeaturesShiftedParameter ;
+    skos:example "true"@en .
+
+default2:RecoatingSpeedParameter a owl:Class ;
+    rdfs:label "Recoating speed"@en ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the recoater speed during the recoater step"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "150 mm/s"@en .
+
+default2:RidgeDownSkinParameter a owl:Class ;
+    rdfs:label "Ridge downskin"@en ;
+    CommonCoreOntologies:definition "DownSkin Parameter that moves the downskin reation point, in the through the donwkin thickness defined layer, in the x-y plane"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "3"@en .
+
+default2:RidgeUpSkinParameter a owl:Class ;
+    rdfs:label "Ridge upskin"@en ;
+    CommonCoreOntologies:definition "UpSkin Parameter that moves the downskin reation point, in the through the UpSkin thickness defined layer, in the x-y plane"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "3"@en .
+
+default2:SkywritingDownSkinParameter a owl:Class ;
+    rdfs:label "Skywriting downskin"@en ;
+    CommonCoreOntologies:definition "Skywriting parameter compensating the inertia of the optical system for DownSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:SkywritingParameter ;
+    skos:example "false"@en .
+
+default2:SkywritingInfillParameter a owl:Class ;
+    rdfs:label "Skywriting infill"@en ;
+    CommonCoreOntologies:definition "Skywriting parameter compensating the inertia of the optical system for InFill fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:ExposurePatternUpSkinParameter ;
+    skos:example "false"@en .
+
+default2:SkywritingUpSkinParameter a owl:Class ;
+    rdfs:label "Skywriting upskin"@en ;
+    CommonCoreOntologies:definition "Skywriting parameter compensating the inertia of the optical system for UpSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:SkywritingParameter ;
+    skos:example "true"@en .
+
+default2:ThicknessContourParameter a owl:Class ;
+    rdfs:label "Thickness Contour"@en ;
+    CommonCoreOntologies:definition "Contour parameter prescribing the layer number in z-direction, in which the exposed areas underneath and above the current layer are considered, to determinde the conture exposure type"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:ThicknessDownSkinParameter a owl:Class ;
+    rdfs:label "Thickness downskin"@en ;
+    CommonCoreOntologies:definition "DownSkin Parameter prescribing the layer number in z direction where Downskin is exposed"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:ThicknessUpSkinParameter a owl:Class ;
+    rdfs:label "Thickness upskin"@en ;
+    CommonCoreOntologies:definition "UpSkin Parameter prescribing the layer number in z direction where UpSkin is exposed"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:ThresholdParameter a owl:Class ;
+    rdfs:label "Threshold parameter"@en ;
+    CommonCoreOntologies:definition "Edge parameter prescribing that if the ratio beam-outline to contour-outline extends \"threshold time beamoffset\", edges will be exposed with edgefactor of 1,45"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "2"@en .
+
+default2:is_clearly_identified_by a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_subject_of .
+
+<https://w3id.org/ODE_AM/WAAMAO> a owl:Ontology ;
+    dc:creator "Mohamed Kamal,  Jan Reimann"^^xsd:string ;
+    dc:date "2024-01-18T19:06:54"^^xsd:dateTime,
+        "version 1.0.0"^^xsd:string ;
+    dc:license "CC-BY-4.0" ;
+    dc:title "Wire Arc Additive Manufacturing Application Ontology (WAAMAO)"^^xsd:string ;
+    rdfs:comment "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string,
+        "This ontology, designed for use in data management for metal additive manufacturing with focus on Wire Arc Additive Manufacturing (WAAM). The ontology only included classes in the scope of project ODE_AM. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string .
+
+default3:Kuka_KR60 a owl:Class ;
+    CommonCoreOntologies:definition "Handling system for additive manufacturing usecase in DED-Arc" ;
+    rdfs:subClassOf default3:WireArcAdditveManufacturingMachine .
+
+default3:MechanicalSimulation a owl:Class ;
+    rdfs:subClassOf CommonCoreOntologies:Objective ;
+    owl:disjointWith default3:ThermalSimulation .
+
+default3:PrintingTemperatureParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "The temperature at which the material is deposited during the additive manufacturing process"^^xsd:string .
+
+default3:WireArcAdditiveManufacturing a owl:Class ;
+    rdfs:label "Wire Arc Additive Manufacturing"^^xsd:string ;
+    CommonCoreOntologies:definition "The process category is direct energie deposition, using a GMAW, in a wire feed process / WAAM - Wire-Arc-Additive-Manufacturing"^^xsd:string ;
+    rdfs:subClassOf :ActOfAdditiveManufacturing .
+
+<http://org.semanticweb.owlapi/error#Error1> a owl:Class .
+
+obo:FiatObjectPart a owl:Class .
+
+obo:Process a owl:Class .
+
+obo:ZeroDimensionalSpatialRegion a owl:Class .
+
+CommonCoreOntologies:ActOfManufacturing a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_output ;
+            owl:someValuesFrom CommonCoreOntologies:Artifact ] ;
+    skos:altLabel "Fabrication"@en .
+
+CommonCoreOntologies:CartesianCoordinateSystem a owl:Class .
+
+CommonCoreOntologies:Spreadsheet CommonCoreOntologies:alternative_label "Table"@en .
+
+CommonCoreOntologies:designates a owl:ObjectProperty ;
+    rdfs:subPropertyOf mo:names .
+
+CommonCoreOntologies:is_made_of a owl:ObjectProperty .
+
+CommonCoreOntologies:is_part_of_process a owl:ObjectProperty .
+
+amo:ActOfAdditiveManufacturing a owl:Class .
+
+amo:ActOfAdditiveManufacturingProcessParameter a owl:Class .
+
+:AdditiveManufacturingInstructionFile a owl:Class ;
+    rdfs:label "Additive manufacturing instruction file"@en ;
+    CommonCoreOntologies:alternative_label "buildjob file"@en ;
+    CommonCoreOntologies:definition_source "Expert"@en ;
+    rdfs:comment "The file type and content may vary between different machine types and suppliers"@en ;
+    rdfs:subClassOf CommonCoreOntologies:InformationBearingArtifact ;
+    skos:definition "File containing the instructions for the 3D-Printer for the manufacturing process, typically containing path-plans, geometries and processing parameters."@en .
+
+default1:BrownPartDensity a owl:Class ;
+    CommonCoreOntologies:definition "The density of the part after debinding but before the sintering process." ;
+    rdfs:subClassOf CommonCoreOntologies:Density .
+
+default1:CompositeExtrusionModelingMachine a owl:Class ;
+    CommonCoreOntologies:definition "Specific CEM additive manufacturing machine." ;
+    CommonCoreOntologies:definition_source "machine data" ;
+    rdfs:subClassOf :AdditiveManufacturingMachine .
+
+default1:ExtruderMultiplierParameter a owl:Class ;
+    CommonCoreOntologies:definition "A setting that adjusts the flow rate of the extruder to control the amount of material deposited." ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:ExtruderTemperatureParameter a owl:Class ;
+    CommonCoreOntologies:definition "Temperature of the extruder" ;
+    CommonCoreOntologies:definition_source "printer operater" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:ExtrusionSpeedParameter a owl:Class ;
+    CommonCoreOntologies:definition "The rate at which material is extruded and deposited during the printing process" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:FirstLayerHeightParameter a owl:Class ;
+    CommonCoreOntologies:definition "The specific height of the first layer of the print" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:GreenPartDensity a owl:Class ;
+    CommonCoreOntologies:definition "The density of the part immediately after printing and before any post-processing." ;
+    rdfs:subClassOf CommonCoreOntologies:Density .
+
+default1:GreenPartWeight a owl:Class ;
+    CommonCoreOntologies:definition "The weight of the part after debinding." ;
+    rdfs:subClassOf CommonCoreOntologies:Weight .
+
+default1:ModelOversizeFactorParameter a owl:Class ;
+    CommonCoreOntologies:definition "Oversize factor of the Model to the end product geometrie." ;
+    CommonCoreOntologies:definition_source "printer operater" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:NozzleDiameterParameter a owl:Class ;
+    CommonCoreOntologies:definition "The diameter of the extruder nozzle" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:PrinterBedTemperatureParameter a owl:Class ;
+    CommonCoreOntologies:definition "The temperature of the printing bed" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:PrintingProfileParameter a owl:Class ;
+    CommonCoreOntologies:definition "File with all machine configurations" ;
+    CommonCoreOntologies:definition_source "Fff-file" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:SinteredPartDensity a owl:Class ;
+    CommonCoreOntologies:definition "The density of the final part after the sintering process." ;
+    rdfs:subClassOf CommonCoreOntologies:Density .
+
+default1:SinteringProcessParameter a owl:Class ;
+    CommonCoreOntologies:definition "Settings and conditions that govern the sintering phase." ;
+    rdfs:subClassOf CommonCoreOntologies:PerformanceSpecification .
+
+default1:SlicerSoftware a owl:Class ;
+    CommonCoreOntologies:definition "Name and Version of the used slicer software product." ;
+    CommonCoreOntologies:definition_source "Fff-file; gcode-file" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+default1:ToolPathParameter a owl:Class ;
+    CommonCoreOntologies:definition "Toolpath G-code file with all printer and controling information. G-code (also RS-274) is the most widely used computer numerical control (CNC) programming language." ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/G-code" ;
+    rdfs:subClassOf default1:ActofCompositeExtrusionModelingProcessParameter .
+
+mo:ActOfBendingTesting a owl:Class ;
+    rdfs:label "Bending Testing"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_input ;
+            owl:someValuesFrom mo:BendingTestSpecimen ],
+        CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Act of measuring that provides values for the modulus of elasticity in bending, flexural stress, flexural strain and the flexural stress–strain response of a portion of material" .
+
+mo:ActOfCompressionTesting a owl:Class ;
+    rdfs:label "Compression testing"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_input ;
+            owl:someValuesFrom mo:CompressionTestSpecimen ],
+        CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Act of measuring in which a material experiences opposing forces that push inward upon the specimen from opposite sides or is otherwise compressed, “squashed”, crushed, or flattened" .
+
+mo:ActOfDynamicScanningCalorimetry a owl:Class ;
+    rdfs:label "Dynamic Scanning Calorimetry"@en ;
+    CommonCoreOntologies:acronym "DSC"@en ;
+    CommonCoreOntologies:definition "Differential scanning calorimetry (DSC) is a thermoanalytical technique in which the difference in the amount of heat required to increase the temperature of a sample and reference is measured as a function of temperature. Both the sample and reference are maintained at nearly the same temperature throughout the experiment. Generally, the temperature program for a DSC analysis is designed such that the sample holder temperature increases linearly as a function of time. The reference sample should have a well-defined heat capacity over the range of temperatures to be scanned." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_process_part ;
+            owl:someValuesFrom mo:ActOfSpecificHeatCapacityMeasuring ],
+        [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_process_part ;
+            owl:someValuesFrom mo:ActOfTemperatureMeasuring ],
+        mo:ActOfSpecificHeatCapacityMeasuring .
+
+mo:ActOfGrinding a owl:Class ;
+    rdfs:label "Grinding" ;
+    CommonCoreOntologies:definition_source "https://www.corrosionpedia.com/definition/611/grinding" ;
+    rdfs:subClassOf mo:ActOfMachining ;
+    skos:definition "Act of abrasive machining  that uses a grinding wheel or grinder as the cutting tool to improve surface qualities" .
+
+mo:ActOfTemperatureMeasuring a owl:Class ;
+    rdfs:label "Temperature Measurement"@en ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfMeasuring ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( CommonCoreOntologies:ActOfMeasuring [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_output ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty CommonCoreOntologies:is_a_measurement_of ;
+                                owl:someValuesFrom CommonCoreOntologies:Temperature ] ] ) ] ;
+    skos:definition "The act of measuring temperature involves using specialized instruments or devices to quantify the level of heat or coldness in an object or environment, expressing the result in a numerical value typically using a specific unit of measurement such as degrees Celsius or Fahrenheit." .
+
+mo:ActOfTensileTesting a owl:Class ;
+    rdfs:label "Tensile Testing"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_input ;
+            owl:someValuesFrom mo:TensileTestSpecimen ],
+        CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Act of measuring in domains materials science and engineering test in which a sample is subjected to a controlled tension until failure" .
+
+mo:BendingTestSpecimen a owl:Class ;
+    rdfs:label "Bending Test Specimen"@en ;
+    rdfs:subClassOf mo:TestSpecimen ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( mo:TestSpecimen [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_input_of ;
+                        owl:someValuesFrom mo:ActOfBendingTesting ] ) ] ;
+    skos:definition "Artifact designed to be used in a bending test to determine characteristics about the material it's made of" .
+
+mo:CompressionTestSpecimen a owl:Class ;
+    rdfs:label "Compression Test Specimen"@en ;
+    rdfs:subClassOf mo:TestSpecimen ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( mo:TestSpecimen [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_input_of ;
+                        owl:someValuesFrom mo:ActOfCompressionTesting ] ) ] ;
+    skos:definition "Artifact designed to be used in a compression test to determine characteristics about the material it's made of" .
+
+mo:Energy a owl:Class ;
+    rdfs:label "Energy"@en ;
+    CommonCoreOntologies:definition_source "https://ingeniumcanada.org/scitech/education/tell-me-about/physics-of-energy"^^rdfs:Literal ;
+    CommonCoreOntologies:has_token_unit "J" ;
+    rdfs:subClassOf obo:RealizableEntity ;
+    skos:definition "Ability to do work, which is the ability to exert a force causing displacement of an object"^^rdfs:Literal .
+
+mo:LossOfUnbroken a owl:Class ;
+    rdfs:label "Loss of broken"@en ;
+    CommonCoreOntologies:definition "Loss of an objects quality to be unbroken and not damaged"@en ;
+    rdfs:subClassOf CommonCoreOntologies:LossOfDisposition .
+
+mo:MeasurementInstrument a owl:Class ;
+    rdfs:label "Measurement Instrument"@en ;
+    CommonCoreOntologies:definition "Measuring instruments are devices that are used to determine the value of a physical quantity or characteristic of a specimen or material, such as its length, weight, temperature, pressure, or electrical properties." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:is_input_of ;
+            owl:someValuesFrom CommonCoreOntologies:ActOfMeasuring ],
+        mo:Machine .
+
+mo:MeasurementInstrumentForSpecificHeatCapacity a owl:Class ;
+    rdfs:label "Specific Heat Capacity Measurement Instrument"@en ;
+    CommonCoreOntologies:definition "Instrument that measures the heat flow of a material during temperature changes, providing insights into its phase transitions, thermal properties, and stability." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:is_input_of ;
+            owl:someValuesFrom mo:ActOfDynamicScanningCalorimetry ],
+        mo:MeasurementInstrument .
+
+mo:NETZSCHDSC204F1Phoenix a owl:Class ;
+    rdfs:label "Netzsch DSC 204F1 Phoenix" ;
+    CommonCoreOntologies:definition "Differential scanning calorimeter manufactured by Netzsch, designed to measure heat flow changes in materials during temperature variations, providing valuable insights into their thermal properties and behavior." ;
+    CommonCoreOntologies:definition_source "https://analyzing-testing.netzsch.com/de/produkte-und-loesungen/dynamische-differenzkalorimetrie-dsc-differenz-thermoanalyse-dta/dsc-204-f1-phoenix"@en ;
+    rdfs:subClassOf mo:MeasurementInstrumentForSpecificHeatCapacity .
+
+mo:PortionOfPowder a owl:Class ;
+    rdfs:label "Powder"@en ;
+    CommonCoreOntologies:definition_source "https://www.collinsdictionary.com/de/worterbuch/englisch/powder" ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial ;
+    skos:definition "Portion of Material that consists of many tiny particles of a solid substance" .
+
+mo:PortionOfThermosetMaterial a owl:Class ;
+    rdfs:label "Duromer"@de,
+        "Duroplast"@de,
+        "Thermoset"@en,
+        "Thermosetting Polymer"@en ;
+    CommonCoreOntologies:definition """A class of polymers that, when cured using heat,\r
+chemical, or other means, changes into a substantially\r
+infusible and insoluble material"""@en ;
+    CommonCoreOntologies:definition_source "ASTM D3878-20b, Standard Terminology for Composite Materials"@en ;
+    rdfs:subClassOf mo:PortionOfPolymer ;
+    skos:example "Epoxy"@en .
+
+mo:Press a owl:Class ;
+    rdfs:label "Press"@en ;
+    CommonCoreOntologies:definition "Machine tool that changes the shape of a work-piece by the application of pressure"@en ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Machine_press"@en ;
+    rdfs:subClassOf CommonCoreOntologies:Tool .
+
+mo:SpecificHeatCapacity a owl:Class ;
+    rdfs:label "Specific Heat Capacity"@en ;
+    CommonCoreOntologies:definition "The specific heat capacity is defined as the quantity of heat (J) absorbed per unit mass (kg) of the material when its temperature increases 1 K (or 1 °C), and its units are J/(kg K) or J/(kg °C)." ;
+    CommonCoreOntologies:definition_source "Experiment and Calculation of Reinforced Concrete at Elevated Temperatures, 2011" ;
+    CommonCoreOntologies:has_token_unit "J/(kg K)" ;
+    rdfs:subClassOf mo:MaterialCharacteristic .
+
+mo:Standard a owl:Class ;
+    rdfs:label "Standard"@en ;
+    CommonCoreOntologies:alternative_label "Norm"@de ;
+    CommonCoreOntologies:definition "Information Conent Entity  that provides guidelines, specifications, or procedures to ensure uniformity and consistency in various processes, products, or services within a specific industry or field."^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:DirectiveInformationContentEntity ;
+    skos:example "DIN 50100"^^rdfs:Literal .
+
+mo:TensileTestSpecimen a owl:Class ;
+    rdfs:label "Tensile Test Specimen"@en ;
+    rdfs:subClassOf mo:TestSpecimen ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( mo:TestSpecimen [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_input_of ;
+                        owl:someValuesFrom mo:ActOfTensileTesting ] ) ] ;
+    skos:definition "Artifact designed to be used in a tensile test to determine characteristics about the material it's made of" .
+
+mo:is_indirect_output_of a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_output_of .
+
+mo:named_by a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_subject_of .
+
+mo:names a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_about .
+
+mo:uses_primary_sql_key a owl:ObjectProperty ;
+    rdfs:subPropertyOf mo:uses_sql_key .
+
+mo:uses_secondary_sql_key a owl:ObjectProperty ;
+    rdfs:subPropertyOf mo:uses_sql_key .
+
+default2:ActOfPowderBedFusion a owl:Class ;
+    rdfs:label "Powder Bed Fusion"@en ;
+    CommonCoreOntologies:alternative_label "Selective laser melting"@en ;
+    CommonCoreOntologies:definition "Additive manufacturing process in which thermal energy selectively fuses regions of a powder bed" ;
+    CommonCoreOntologies:definition_source "ISO/ASTM DIS 52900:2018(E)" ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( amo:ActOfAdditiveManufacturing [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_input ;
+                        owl:someValuesFrom mo:PortionOfPowder ] ) ] .
+
+default2:ActOfPowderBedFusionLaserBeamMetal a owl:Class ;
+    rdfs:label "Powder Bed Fusion Laser Beam Metal"@en ;
+    CommonCoreOntologies:definition "ISO/ASTM DIS 52900:2018(E)",
+        "The process category is powder bed fusion , using a laser beam (-LB), in a metallic material (/M)" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass default2:PowderBedFusionLaserBeamMetalMachine ;
+            owl:onProperty CommonCoreOntologies:has_input ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( default2:ActOfPowderBedFusion [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_output ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:intersectionOf ( CommonCoreOntologies:Artifact [ a owl:Restriction ;
+                                            owl:onProperty CommonCoreOntologies:is_made_of ;
+                                            owl:someValuesFrom mo:PortionOfSteelMaterial ] ) ] ] ) ] .
+
+default2:ExposurePatternUpSkinParameter a owl:Class ;
+    rdfs:label "Exposure Pattern Upskin"@en ;
+    CommonCoreOntologies:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for UpSkin fiat object parts"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "categorical"@en ;
+    rdfs:subClassOf default2:ExposurePatternParameter ;
+    skos:example "\"Stripes\""@en .
+
+default2:clearly_identifies a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_about .
+
+default3:ArclengthCorrection a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Adjustments to maintain consistent arc length during welding" .
+
+default3:ContactTubeWorkpiece a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "distance between the contact tube an the workpiece"^^xsd:string .
+
+default3:DynamicCorrection a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Real-time adjustments to welding parameters for process stability" .
+
+default3:EndCurrent a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Current level when the welding arc is terminated" .
+
+default3:EndCurrentTime a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Time duration for applying the end current" .
+
+default3:EnergyInputPerUnitLengthParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Amount of energy applied per unit length of the weld" .
+
+default3:InterLayerTemperatureParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Temperature between deposited layers"^^xsd:string .
+
+default3:ShieldingGasFlowRateParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Rate of shielding gas flow to protect the weld area"^^xsd:string .
+
+default3:ShieldingGasTypeParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Type of shielding gas used in welding"^^xsd:string .
+
+default3:Slope1Parameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Rates of change in welding current"^^xsd:string .
+
+default3:Slope2Parameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Rates of change in welding voltage"^^xsd:string .
+
+default3:StartCurrentTime a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Duration for applying the starting current"^^xsd:string .
+
+default3:StartingCurrent a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Initial current level when the welding arc starts"^^xsd:string .
+
+default3:SubstratePlateTemperatureParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Temperature of the base material"^^xsd:string .
+
+default3:ThermalSimulation a owl:Class ;
+    rdfs:subClassOf CommonCoreOntologies:Objective .
+
+default3:TriggerMode a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Method of initiating the welding process"^^xsd:string .
+
+default3:WeldingBeadHeightParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Height of the individual welding bead"^^xsd:string .
+
+default3:WeldingBeadWidthParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Width of the single welding bead"^^xsd:string .
+
+default3:WeldingCurrentParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Current used during the welding process"^^xsd:string .
+
+default3:WeldingMode a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Type of welding process used"^^xsd:string .
+
+default3:WeldingPowerParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Total power used in the welding process"^^xsd:string .
+
+default3:WeldingSpeedParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Speed of the welding torch movement"^^xsd:string .
+
+default3:WeldingTorchInclinationParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Angle of the welding torch"^^xsd:string .
+
+default3:WeldingVoltageParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Voltage applied during welding"^^xsd:string .
+
+default3:WireArcAdditveManufacturingMachine a owl:Class ;
+    rdfs:subClassOf :AdditiveManufacturingMachine .
+
+default3:WireChemicalComposition_Parameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Composition of the welding wire"^^xsd:string .
+
+default3:WireDiameterParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Diameter of the welding wire"^^xsd:string .
+
+default3:WireFeedRateParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Speed of wire feed into the weld pool"^^xsd:string .
+
+default3:WireStandardizedDesignationParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Standard classification of the welding wire"^^xsd:string .
+
+default3:ZJumpParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Vertical movement between layers in additive manufacturing"^^xsd:string .
+
+default3:overlapParameter a owl:Class ;
+    rdfs:subClassOf default3:ActOfWireArcAdditiveManufacturingProcessParameter ;
+    skos:definition "Extent of overlap between successive weld passes"^^xsd:string .
+
+CommonCoreOntologies:Objective a owl:Class .
+
+CommonCoreOntologies:SpatialOrientation a owl:Class ;
+    CommonCoreOntologies:alternative_label "Angle of orientation" .
+
+CommonCoreOntologies:is_about a owl:ObjectProperty .
+
+CommonCoreOntologies:is_subject_of a owl:ObjectProperty .
+
+CommonCoreOntologies:prescribes a owl:ObjectProperty .
+
+amo:AdditiveManufacturingMachine a owl:Class .
+
+:AdditiveManufacturingMachine a owl:Class ;
+    rdfs:label "Additive manufacturing machine"@en ;
+    CommonCoreOntologies:alternative_label "3D Printer" ;
+    CommonCoreOntologies:definition_source "ISO/ASTM 52900:2015(E)" ;
+    rdfs:subClassOf mo:Machine ;
+    skos:definition "Section of the additive manufacturing system including hardware, machine control software, required set-up software and peripheral accessories necessary to complete a build cycle for poducing parts" .
+
+:InclinationRelativeToBuildplatform a owl:Class ;
+    CommonCoreOntologies:definition "Angle at which a part is oriented with respect to the horizontal plane of the printing surface." ;
+    rdfs:comment "Can be described qualitatitevly (\"Upright\") or in degrees (45 °)" ;
+    rdfs:subClassOf CommonCoreOntologies:SpatialOrientation ;
+    skos:example "45 °",
+        "Upright" .
+
+default1:DebindingProcessParameter a owl:Class ;
+    CommonCoreOntologies:definition "Variables and settings that control the debinding phase of the process." ;
+    rdfs:subClassOf CommonCoreOntologies:PerformanceSpecification .
+
+mo:ActOfSpecificHeatCapacityMeasuring a owl:Class ;
+    CommonCoreOntologies:acronym "Specific Heat Capacity Measurement"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( CommonCoreOntologies:ActOfMeasuring [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_output ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty CommonCoreOntologies:is_a_measurement_of ;
+                                owl:someValuesFrom mo:SpecificHeatCapacity ] ] ) ],
+        CommonCoreOntologies:ActOfMeasuring ;
+    skos:definition "Material charakterization Process in which the difference in the amount of heat required to increase the temperature of a sample and reference is measured as a function of temperature." .
+
+mo:CompressiveCharacteristic a owl:Class ;
+    rdfs:label "Compressive Characteristic"@en ;
+    rdfs:subClassOf mo:MaterialCharacteristic ;
+    skos:definition "Behavior and response of a material or structure under applied compressive forces, determining its ability to resist compression and withstand compressive loads before undergoing deformation or failure." .
+
+mo:MeasurementUnitOfSpecificHeatCapactity a owl:Class ;
+    rdfs:label "Measurement Unit of Specific Heat Capacity"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "A Measurement Unit used in measurements of an object's specific heat capacity"^^rdfs:Literal ;
+    CommonCoreOntologies:example_of_usage "(Joule per Gram) per Kelvin"^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:MeasurementUnit .
+
+mo:MeasurementUnitOfThermalDiffusivity a owl:Class ;
+    rdfs:label "Measurement Unit of thermal diffusivity"^^rdfs:Literal ;
+    CommonCoreOntologies:definition "A Measurement Unit used in measurements of an object's thermal diffusivity,"^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:MeasurementUnit .
+
+mo:PortionOfPolymer a owl:Class ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial .
+
+mo:PortionOfSteelMaterial a owl:Class ;
+    rdfs:subClassOf mo:PortionOfMetal .
+
+mo:PortionOfThermoplastMaterial a owl:Class ;
+    rdfs:label "Thermoplast"@de,
+        "Thermoplast"@en ;
+    CommonCoreOntologies:definition """A plastic that repeatedly can be softened by\r
+heating and hardened by cooling through a temperature\r
+range characteristic of the plastic, and that in the softened\r
+state can be shaped by flow into articles by molding or\r
+extrusion."""@en ;
+    CommonCoreOntologies:definition_source "ASTM D3878-20b, Standard Terminology for Composite Materials"@en ;
+    rdfs:subClassOf mo:PortionOfPolymer .
+
+mo:TensileCharacteristic a owl:Class ;
+    rdfs:label "Tensile Characteristic"@en ;
+    CommonCoreOntologies:definition "Behavior and response of a material or structure under applied tensile forces, determining its ability to resist stretching or elongation and withstand tensile loads before undergoing failure or fracturing." ;
+    rdfs:subClassOf mo:MaterialCharacteristic ;
+    skos:example "Tensile Modulus"@en .
+
+mo:sql_key_of a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:is_used_by ;
+    owl:inverseOf mo:uses_sql_key .
+
+default2:ExposurePatternParameter a owl:Class ;
+    rdfs:label "Exposure Pattern"@en ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors"@en .
+
+default2:PowderBedFusionLaserBeamMetalMachine a owl:Class ;
+    rdfs:label "Powder Bed Fusion laser beam melting machine"@en ;
+    CommonCoreOntologies:alternative_label "PBF-LB/M machine"@en ;
+    CommonCoreOntologies:definition "Machine that uses a high-powered laser to selectively melt and fuse metal powder particles layer by layer to build complex parts and components"@en ;
+    CommonCoreOntologies:definition_source "Expert"@en ;
+    rdfs:subClassOf amo:AdditiveManufacturingMachine ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( amo:AdditiveManufacturingMachine [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:is_input_of ;
+                        owl:someValuesFrom default2:ActOfPowderBedFusionLaserBeamMetal ] ) ] .
+
+default2:art a swrl:Variable .
+
+CommonCoreOntologies:PartNumber a owl:Class .
+
+CommonCoreOntologies:PerformanceSpecification a owl:Class .
+
+CommonCoreOntologies:Weight a owl:Class .
+
+mo:ActOfMachining a owl:Class ;
+    rdfs:label "Machining"@en ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Machining"@en ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfArtifactModification ;
+    skos:definition "Process whereby a desired shape or part is achieved by the controlled removal of material from a larger piece of raw material by cutting" .
+
+mo:Percentile a owl:Class ;
+    CommonCoreOntologies:definition_source "https://en.wikipedia.org/wiki/Percentile"^^rdfs:Literal ;
+    rdfs:subClassOf CommonCoreOntologies:ProbabilityMeasurementInformationContentEntity ;
+    skos:definition "In statistics, a k-th percentile (percentile score or centile) is a score below which a given percentage k of scores in its frequency distribution falls (exclusive definition) or a score at or below which a given percentage falls (inclusive definition)." .
+
+mo:uses_sql_key a owl:ObjectProperty ;
+    rdfs:subPropertyOf CommonCoreOntologies:uses .
+
+default2:FlowOptimizationParameter a owl:Class ;
+    rdfs:label "Flow optimization"@en ;
+    CommonCoreOntologies:definition "PBF-LB/M Parameter prescribing a vector exposure order against the flow direction"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter .
+
+default2:HatchDistanceParameter a owl:Class ;
+    rdfs:label "Hatch distance"@en ;
+    CommonCoreOntologies:definition "Hatch Parameter prescribing the spacing between neighbouring vectors"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter .
+
+default2:PatternfeaturesShiftedParameter a owl:Class ;
+    rdfs:label "Pattern features shifted"@en ;
+    CommonCoreOntologies:definition "PBF-LB/M Parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "No Unit"@en ;
+    rdfs:comment "Boolean"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "true"@en .
+
+default2:SkywritingParameter a owl:Class ;
+    rdfs:label "Skywriting"@en ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:definition "Skywriting parameter compensating the inertia of the optical system"@en .
+
+default2:pn a swrl:Variable .
+
+CommonCoreOntologies:ActOfArtifactModification a owl:Class .
+
+CommonCoreOntologies:Density a owl:Class ;
+    CommonCoreOntologies:has_token_unit "kg/m3"^^rdfs:Literal .
+
+CommonCoreOntologies:InformationBearingArtifact a owl:Class .
+
+mo:ActOfMathematicalOperation a owl:Class ;
+    CommonCoreOntologies:acronym "Mathematical Operation"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:has_input ;
+            owl:someValuesFrom CommonCoreOntologies:InformationContentEntity ],
+        CommonCoreOntologies:IntentionalAct ;
+    skos:definition "Act following a systematic set of steps or rules to transform input data or expressions into meaningful output, facilitating mathematical calculations and problem-solving." .
+
+mo:Machine a owl:Class ;
+    rdfs:label "Machine"@en ;
+    CommonCoreOntologies:definition_source "https://dictionary.cambridge.org/de/worterbuch/englisch/machine"@en ;
+    rdfs:subClassOf CommonCoreOntologies:Artifact ;
+    skos:definition "A piece of equipment with several moving parts that uses power to do a particular type of work" .
+
+mo:Volume a owl:Class ;
+    CommonCoreOntologies:SI_unit_label "V" ;
+    CommonCoreOntologies:definition_source "https://dictionary.cambridge.org/de/worterbuch/englisch/volume" ;
+    CommonCoreOntologies:has_token_unit "'comm:Cubic Meter Measurement Unit'" ;
+    rdfs:subClassOf obo:Quality ;
+    skos:definition "Amount of space that is contained within an object or solid shape" .
+
+CommonCoreOntologies:IntentionalAct a owl:Class .
+
+:ActOfAdditiveManufacturingProcessParameter a owl:Class ;
+    rdfs:label "Additive manufacturing process parameter"@en ;
+    CommonCoreOntologies:definition_source "Expert"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CommonCoreOntologies:prescribes ;
+            owl:someValuesFrom :ActOfAdditiveManufacturing ],
+        CommonCoreOntologies:PerformanceSpecification ;
+    skos:definition "A performance specification prescribing the operational conditions of an entity during an additive manufacturing process" ;
+    skos:example "A performane specification prescribing the build platform temperature in °C" .
+
+CommonCoreOntologies:has_input a owl:ObjectProperty .
+
+CommonCoreOntologies:is_input_of a owl:ObjectProperty .
+
+:ActOfAdditiveManufacturing a owl:Class ;
+    rdfs:label "Additive manufacturing"@en ;
+    CommonCoreOntologies:alternative_label "3D printing"@en ;
+    CommonCoreOntologies:definition "Process of joining materials to make parts from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies" ;
+    CommonCoreOntologies:definition_source "ISO/ASTM DIS 52900:2018(E)" ;
+    rdfs:subClassOf CommonCoreOntologies:ActOfManufacturing .
+
+mo:TestSpecimen a owl:Class ;
+    rdfs:label "Specimen"@en ;
+    CommonCoreOntologies:definition "Representative sample or component used in experimental testing to assess and evaluate the properties, behavior, or performance of materials, products, or systems under specific conditions." ;
+    rdfs:subClassOf CommonCoreOntologies:Artifact .
+
+mo:PortionOfMetal a owl:Class ;
+    rdfs:label "Metal"@en ;
+    CommonCoreOntologies:definition "Opaque, fusible, ductile, and typically lustrous substances that are good conductors of electricity and heat, form cations by loss of electrons, and yield basic oxides and hydroxides"@de ;
+    CommonCoreOntologies:definition_source "https://www.merriam-webster.com/dictionary/metal"@de ;
+    rdfs:subClassOf CommonCoreOntologies:PortionOfMaterial ;
+    skos:example "Iron"@de .
+
+default2:LaserSpeedParameter a owl:Class ;
+    rdfs:label "Laser speed"@en ;
+    CommonCoreOntologies:definition "Energy input parameter prescribing the speed of the laser during vector exposion"^^xsd:string ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    CommonCoreOntologies:has_token_unit "mm/s"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter ;
+    skos:example "400 mm/s"@en .
+
+CommonCoreOntologies:Artifact a owl:Class .
+
+CommonCoreOntologies:has_output a owl:ObjectProperty .
+
+mo:MaterialCharacteristic a owl:Class ;
+    rdfs:label "Material Characteristic"@en ;
+    rdfs:subClassOf obo:Quality ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( obo:Quality [ a owl:Restriction ;
+                        owl:onProperty <http://purl.obolibrary.org/obo/bfo.owl#quality_of> ;
+                        owl:someValuesFrom CommonCoreOntologies:PortionOfMaterial ] ) ] ;
+    skos:definition "Quality that is an intensive property of some material, allowing to compare different materials" .
+
+default2:LaserPowerParameter a owl:Class ;
+    rdfs:label "Laser Power"@en ;
+    CommonCoreOntologies:definition "Laser power parameter prescribing the power with which vectors are exposed"@en ;
+    CommonCoreOntologies:definition_source "EOSPRINT 2"@en ;
+    rdfs:subClassOf default2:ActOfPowderBedFusionProcessParameter .
+
+default1:ActofCompositeExtrusionModelingProcessParameter a owl:Class ;
+    CommonCoreOntologies:definition "parameters for Additive manufacturing process in which combines the metal injection moulding process (MIM process) with the process technologies from additive manufacturing."^^xsd:string ;
+    rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter .
+
+CommonCoreOntologies:ActOfMeasuring rdfs:subClassOf CommonCoreOntologies:IntentionalAct ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( CommonCoreOntologies:IntentionalAct [ a owl:Restriction ;
+                        owl:onProperty CommonCoreOntologies:has_output ;
+                        owl:someValuesFrom [ a owl:Restriction ;
+                                owl:onProperty CommonCoreOntologies:is_a_measurement_of ;
+                                owl:someValuesFrom obo:Quality ] ] ) ] .
+
+default2:ActOfPowderBedFusionProcessParameter a owl:Class ;
+    CommonCoreOntologies:definition "A performance specification prescribing the operational conditions of an entity during an powder bed fusion process"@en,
+        "Expert"@en,
+        "PBF parameter"@en ;
+    rdfs:subClassOf amo:ActOfAdditiveManufacturingProcessParameter .
+
+default3:ActOfWireArcAdditiveManufacturingProcessParameter a owl:Class ;
+    rdfs:label "Act Of Wire Arc Additive Manufacturing Process Parameter" ;
+    rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+    skos:definition "General settings or specific actions in the WAAM process"^^xsd:string .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( default3:ArclengthCorrection default3:ContactTubeWorkpiece default3:DynamicCorrection default3:EndCurrent default3:EndCurrentTime default3:EnergyInputPerUnitLengthParameter default3:InterLayerTemperatureParameter default3:ShieldingGasFlowRateParameter default3:ShieldingGasTypeParameter default3:Slope1Parameter default3:Slope2Parameter default3:StartCurrentTime default3:StartingCurrent default3:SubstratePlateTemperatureParameter default3:TriggerMode default3:WeldingBeadHeightParameter default3:WeldingBeadWidthParameter default3:WeldingCurrentParameter default3:WeldingMode default3:WeldingPowerParameter default3:WeldingSpeedParameter default3:WeldingTorchInclinationParameter default3:WeldingVoltageParameter default3:WireChemicalComposition_Parameter default3:WireDiameterParameter default3:WireFeedRateParameter default3:WireStandardizedDesignationParameter default3:ZJumpParameter default3:overlapParameter ) .
+
+[] a swrl:Imp ;
+    rdfs:label "clearlyidntify"^^xsd:string ;
+    swrla:isRuleEnabled true ;
+    rdfs:comment ""^^xsd:string ;
+    swrl:body [ a swrl:AtomList ;
+            rdf:first [ a swrl:ClassAtom ;
+                    swrl:argument1 default2:pn ;
+                    swrl:classPredicate CommonCoreOntologies:PartNumber ] ;
+            rdf:rest [ a swrl:AtomList ;
+                    rdf:first [ a swrl:IndividualPropertyAtom ;
+                            swrl:argument1 default2:pn ;
+                            swrl:argument2 default2:art ;
+                            swrl:propertyPredicate CommonCoreOntologies:designates ] ;
+                    rdf:rest () ] ] ;
+    swrl:head [ a swrl:AtomList ;
+            rdf:first [ a swrl:IndividualPropertyAtom ;
+                    swrl:argument1 default2:pn ;
+                    swrl:argument2 default2:art ;
+                    swrl:propertyPredicate default2:clearly_identifies ] ;
+            rdf:rest () ] .
+
+[] owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( default1:BrownPartDensity default1:GreenPartDensity default1:SinteredPartDensity ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( default1:ExtruderMultiplierParameter default1:ExtruderTemperatureParameter default1:ExtrusionSpeedParameter default1:FirstLayerHeightParameter default1:ModelOversizeFactorParameter default1:NozzleDiameterParameter default1:PrinterBedTemperatureParameter default1:PrintingProfileParameter default1:SlicerSoftware default1:ToolPathParameter ) .
+

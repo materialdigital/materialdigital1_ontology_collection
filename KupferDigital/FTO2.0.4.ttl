@@ -368,7 +368,7 @@ fto:CycleTime a owl:NamedIndividual,
     ns1:value "CycleTime"^^xsd:string ;
     pmd:unit pmd:PixelUnit .
 
-<https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10%> a owl:NamedIndividual,
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10> a owl:NamedIndividual,
         fto:FatigueLife,
         pmd:Measurement,
         pmd:SecondaryData ;
@@ -1276,7 +1276,7 @@ fto:CalculateFatigueTestUncertainity a owl:NamedIndividual,
 fto:DeterminationOfFatigueLife a owl:NamedIndividual,
         pmd:AnalysingProcess ;
     pmd:nextProcess fto:DeterminationOfModulusOfElasticity ;
-    pmd:output <https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10%>,
+    pmd:output <https://gitlab.com/kupferdigital/process-graphs/lcf-test/CycleToDefiningCriteria10>,
         fto:CycleToFracture .
 
 fto:DeterminationOfFatigueStrengthCoefficient a owl:NamedIndividual,
