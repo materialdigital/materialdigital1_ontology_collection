@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-04T18:05:30.128835",
+  "analysis_date": "2024-03-11T10:42:44.290831",
   "changes": [
     "removed qudt import definitions"
   ],
@@ -77,23 +77,23 @@
   "namespaces": {
     "count": 17,
     "items": [
-      "https://purl.org/bpco/",
-      "https://www.materialdigital.de/project/",
-      "https://purl.org/",
-      "https://purl.org/bpco#",
-      "http://qudt.org/vocab/quantitykind/",
-      "http://qudt.org/schema/qudt/",
-      "https://creativecommons.org/licenses/by-sa/4.0/",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://www.w3.org/2002/07/owl#",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
       "http://purl.org/dc/elements/1.1/",
+      "http://qudt.org/schema/qudt/",
+      "https://purl.org/bpco/",
       "https://w3id.org/pmd/co/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://orcid.org/",
+      "http://qudt.org/vocab/quantitykind/",
       "https://w3id.org/pmd/co/2.0.7/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://purl.org/",
+      "https://creativecommons.org/licenses/by-sa/4.0/",
+      "http://purl.org/dc/terms/",
       "http://qudt.org/vocab/unit/",
-      "https://orcid.org/"
+      "https://www.materialdigital.de/project/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://purl.org/bpco#"
     ]
   },
   "tlos": {

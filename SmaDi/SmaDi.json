@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-04T18:11:03.339900",
+  "analysis_date": "2024-03-11T10:48:43.952075",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -53,13 +53,13 @@
   "namespaces": {
     "count": 7,
     "items": [
+      "https://orcid.org/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://creativecommons.org/licenses/by/4.0/",
       "http://www.w3.org/2002/07/owl#",
       "http://purl.org/dc/terms/",
-      "http://creativecommons.org/licenses/by/4.0/",
-      "http://purl.org/dc/",
-      "https://orcid.org/"
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://purl.org/dc/"
     ]
   },
   "tlos": {

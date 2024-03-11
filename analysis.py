@@ -167,7 +167,7 @@ def get_tlos(g, startswith_filter):
     tlos_list = [
         ('pmdco-2.0.7', 'https://w3id.org/pmd/co/'),
         ('pmdco-v0.1-beta', 'https://material-digital.de/'),
-        ('emmo', 'http://www.w3.org/2002/07/emmo'),
+        ('emmo', 'http://emmo.info/emmo'),
         ('cco', 'http://www.ontologyrepository.com/CommonCoreOntologies/'),
         ('bfo', 'http://purl.obolibrary.org/obo/BFO_'),
         ('ro', 'http://purl.obolibrary.org/obo/RO_'),

@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-04T18:07:51.538868",
+  "analysis_date": "2024-03-11T10:45:31.968682",
   "changes": [
     "removed individuals"
   ],
@@ -140,33 +140,33 @@
   "namespaces": {
     "count": 20,
     "items": [
-      "http://www.w3.org/ns/prov#",
       "http://qudt.org/schema/qudt/",
-      "http://emmo.info/emmo/top/annotations#",
-      "http://www.w3.org/2004/02/skos/core#",
-      "http://purl.org/dc/elements/1.1/",
-      "http://emmo.info/emmo/middle/math#",
-      "http://emmo.info/emmo/middle/models#",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/ns/oa#",
-      "https://orcid.org/",
-      "https://w3id.org/pmd/",
-      "http://www.semanticweb.org/ontologies/",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
       "http://emmo.info/emmo/middle/metrology#",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.semanticweb.org/ontologies/KnowNow#",
+      "http://www.w3.org/ns/oa#",
       "http://qudt.org/schema/",
-      "http://www.semanticweb.org/ontologies/KnowNow#"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://purl.org/dc/terms/",
+      "http://emmo.info/emmo/top/annotations#",
+      "http://emmo.info/emmo/middle/models#",
+      "http://emmo.info/emmo/middle/math#",
+      "https://w3id.org/pmd/co/",
+      "https://orcid.org/",
+      "http://www.w3.org/ns/prov#",
+      "http://purl.org/dc/elements/1.1/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://www.semanticweb.org/ontologies/",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/2000/01/rdf-schema#"
     ]
   },
   "tlos": {
     "original": {
       "pmdco-2.0.7": 121,
       "pmdco-v0.1-beta": 0,
-      "emmo": 0,
+      "emmo": 34,
       "cco": 0,
       "bfo": 0,
       "ro": 0,
@@ -178,7 +178,7 @@
     "reasoned": {
       "pmdco-2.0.7": 121,
       "pmdco-v0.1-beta": 0,
-      "emmo": 0,
+      "emmo": 34,
       "cco": 0,
       "bfo": 0,
       "ro": 0,

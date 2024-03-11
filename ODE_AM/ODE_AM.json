@@ -1,6 +1,8 @@
 {
-  "analysis_date": "2024-03-04T18:09:12.347012",
-  "changes": null,
+  "analysis_date": "2024-03-11T10:46:42.967943",
+  "changes": [
+    "combined modular files into one"
+  ],
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -65,25 +67,25 @@
     "count": 20,
     "items": [
       "https://w3id.org/ODE_AM/AMAO/",
-      "http://purl.org/dc/elements/1.1/",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://w3id.org/ODE_AM/",
-      "http://org.semanticweb.owlapi/error#",
-      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/",
-      "https://w3id.org/ODE_AM/PBFAO/",
-      "https://w3id.org/ODE_AM/MAO/",
-      "https://w3id.org/ODE_AM/AMAO#",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://purl.obolibrary.org/obo/bfo.owl#",
-      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
-      "https://w3id.org/ODE_AM/WAAMAO/",
-      "https://w3id.org/ODE_AM/CEMAO/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
       "http://purl.obolibrary.org/obo/",
       "http://www.w3.org/2003/11/swrl#",
-      "http://www.ontologyrepository.com/CommonCoreOntologies/"
+      "https://w3id.org/ODE_AM/PBFAO/",
+      "https://w3id.org/ODE_AM/",
+      "https://w3id.org/ODE_AM/MAO/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://w3id.org/ODE_AM/CEMAO/",
+      "https://w3id.org/ODE_AM/AMAO#",
+      "http://www.ontologyrepository.com/CommonCoreOntologies/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+      "http://org.semanticweb.owlapi/error#",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://w3id.org/ODE_AM/WAAMAO/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://purl.obolibrary.org/obo/bfo.owl#",
+      "http://www.w3.org/2000/01/rdf-schema#"
     ]
   },
   "tlos": {

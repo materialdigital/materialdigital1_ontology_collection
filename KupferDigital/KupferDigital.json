@@ -1,6 +1,9 @@
 {
-  "analysis_date": "2024-03-04T18:08:18.773002",
-  "changes": null,
+  "analysis_date": "2024-03-11T10:45:52.541041",
+  "changes": [
+    "combined modular files into one",
+    "removed invalid symbols from two individuals uris"
+  ],
   "reasoner": {
     "reasoner": "pellet",
     "version": "2.2.0"
@@ -343,21 +346,21 @@
   "namespaces": {
     "count": 15,
     "items": [
-      "http://www.w3.org/ns/prov#",
-      "https://w3.org/ns/prov#",
+      "https://gitlab.com/kupferdigital/process-graphs/tensile-test/",
       "http://qudt.org/schema/qudt/",
-      "https://qudt.org/2.1/schema/qudt/",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/",
+      "http://www.w3.org/2004/02/skos/core#",
       "https://w3.org/ns/csvw#",
       "https://gitlab.com/kupferdigital/process-graphs/lcf-test/",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://w3id.org/pmd/co/",
-      "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/",
-      "https://gitlab.com/kupferdigital/process-graphs/tensile-test/",
-      "http://www.w3.org/2001/XMLSchema#",
-      "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/"
+      "http://www.w3.org/ns/prov#",
+      "http://www.w3.org/2002/07/owl#",
+      "https://qudt.org/2.1/schema/qudt/",
+      "http://purl.org/dc/terms/",
+      "https://w3.org/ns/prov#",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/"
     ]
   },
   "tlos": {

@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-04T18:09:58.741485",
+  "analysis_date": "2024-03-11T10:47:34.820232",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -200,26 +200,26 @@
   "namespaces": {
     "count": 20,
     "items": [
-      "https://en.wikipedia.org/wiki/",
-      "https://doi.org/10.1017/",
-      "http://purl.org/dc/elements/1.1/",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://www.globalsino.com/EM/",
-      "https://www.jeol.co.jp/en/words/emterms/",
-      "https://w3id.org/pmd/co/",
-      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
-      "http://creativecommons.org/licenses/by/",
-      "https://orcid.org/",
-      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
-      "https://w3id.org/pmd/",
-      "https://cmrf.research.uiowa.edu/",
-      "https://w3id.org/pmd/mo/",
-      "https://doi.org/10.1007/",
       "http://www.w3.org/2002/07/owl#",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://creativecommons.org/licenses/by/",
+      "https://en.wikipedia.org/wiki/",
+      "https://www.globalsino.com/EM/",
       "https://doi.org/10.1016/",
-      "https://www.iso.org/obp/ui/"
+      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "http://purl.org/dc/terms/",
+      "https://w3id.org/pmd/co/",
+      "https://orcid.org/",
+      "https://cmrf.research.uiowa.edu/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://doi.org/10.1007/",
+      "https://www.iso.org/obp/ui/",
+      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
+      "https://www.jeol.co.jp/en/words/emterms/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://w3id.org/pmd/mo/",
+      "https://w3id.org/pmd/",
+      "https://doi.org/10.1017/",
+      "http://www.w3.org/2000/01/rdf-schema#"
     ]
   },
   "tlos": {

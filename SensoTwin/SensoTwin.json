@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-04T18:10:32.567300",
+  "analysis_date": "2024-03-11T10:48:11.160921",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -346,22 +346,22 @@
   "namespaces": {
     "count": 16,
     "items": [
-      "http://www.w3.org/ns/prov#",
-      "http://w3id.org/sensotwin/applicationontology#",
       "http://w3id.org/sensotwin/applicationontology/",
-      "https://material-digital.de/pmdco/",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://w3id.org/sensotwin/",
       "http://purl.org/dc/elements/1.1/",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://creativecommons.org/licenses/by/4.0/",
       "http://material-digital.de/pmdco/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://www.w3.org/2001/XMLSchema#",
       "https://orcid.org/",
-      "https://w3id.org/pmd/"
+      "http://w3id.org/sensotwin/applicationontology#",
+      "http://w3id.org/sensotwin/",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/ns/prov#",
+      "https://w3id.org/pmd/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://material-digital.de/pmdco/"
     ]
   },
   "tlos": {
