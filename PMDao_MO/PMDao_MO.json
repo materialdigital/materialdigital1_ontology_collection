@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-11T10:47:34.820232",
+  "analysis_date": "2024-03-11T15:50:42.143002",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -200,52 +200,192 @@
   "namespaces": {
     "count": 20,
     "items": [
-      "http://www.w3.org/2002/07/owl#",
-      "http://creativecommons.org/licenses/by/",
-      "https://en.wikipedia.org/wiki/",
-      "https://www.globalsino.com/EM/",
-      "https://doi.org/10.1016/",
-      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
-      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2000/01/rdf-schema#",
       "https://w3id.org/pmd/co/",
-      "https://orcid.org/",
-      "https://cmrf.research.uiowa.edu/",
-      "http://purl.org/dc/elements/1.1/",
+      "http://www.w3.org/2002/07/owl#",
       "https://doi.org/10.1007/",
-      "https://www.iso.org/obp/ui/",
+      "http://purl.org/dc/terms/",
+      "https://doi.org/10.1016/",
       "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
-      "https://www.jeol.co.jp/en/words/emterms/",
+      "http://creativecommons.org/licenses/by/",
+      "https://orcid.org/",
+      "http://purl.org/dc/elements/1.1/",
       "http://www.w3.org/2004/02/skos/core#",
-      "https://w3id.org/pmd/mo/",
-      "https://w3id.org/pmd/",
+      "https://en.wikipedia.org/wiki/",
+      "https://cmrf.research.uiowa.edu/",
       "https://doi.org/10.1017/",
-      "http://www.w3.org/2000/01/rdf-schema#"
+      "https://w3id.org/pmd/mo/",
+      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "https://www.jeol.co.jp/en/words/emterms/",
+      "https://w3id.org/pmd/",
+      "https://www.iso.org/obp/ui/",
+      "https://www.globalsino.com/EM/"
     ]
   },
   "tlos": {
     "original": {
-      "pmdco-2.0.7": 145,
-      "pmdco-v0.1-beta": 0,
-      "emmo": 0,
-      "cco": 0,
-      "bfo": 0,
-      "ro": 0,
-      "iao": 0,
-      "prov-o": 0,
-      "qudt": 0,
-      "chebi": 0
+      "pmdco-2.0.7": {
+        "predicates": 162,
+        "objects": 54,
+        "subclasses": 145,
+        "subproperties": 0,
+        "subclassesproperties": 145,
+        "total": 361
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
     },
     "reasoned": {
-      "pmdco-2.0.7": 337,
-      "pmdco-v0.1-beta": 0,
-      "emmo": 0,
-      "cco": 0,
-      "bfo": 0,
-      "ro": 0,
-      "iao": 0,
-      "prov-o": 145,
-      "qudt": 0,
-      "chebi": 0
+      "pmdco-2.0.7": {
+        "predicates": 162,
+        "objects": 54,
+        "subclasses": 337,
+        "subproperties": 0,
+        "subclassesproperties": 337,
+        "total": 553
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 145,
+        "subproperties": 0,
+        "subclassesproperties": 145,
+        "total": 145
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
     }
   },
   "license": {

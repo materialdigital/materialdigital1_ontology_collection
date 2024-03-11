@@ -176,14 +176,58 @@ def get_tlos(g, startswith_filter):
         ('qudt', 'http://qudt.org/'),
         ('chebi', 'http://purl.obolibrary.org/obo/CHEBI_')
     ]
-    return {
-        tlo: sum(int(row.c) for row in g.query(f"""
-                            SELECT (COUNT(*) as ?c) WHERE {{
-                                ?a rdfs:subClassOf+|rdfs:subPropertyOf+ ?b .
-                                FILTER( STRSTARTS( STR(?b), "{tlo_namespace}" ) ) .
-                                FILTER( STRSTARTS( STR(?a), "{startswith_filter}" ) ) .
-                            }}
-                        """)) for tlo, tlo_namespace in tlos_list }
+    retd = {}
+
+    for tlo, tlo_namespace in tlos_list:
+        npred = int(g.query(
+            f"""
+            SELECT (COUNT(*) as ?c) WHERE {{
+                ?s ?p ?o .
+                FILTER( STRSTARTS( STR(?p), "{tlo_namespace}" ) ) .
+                FILTER( STRSTARTS( STR(?s), "{startswith_filter}" ) ) .
+            }}
+            """
+        ).bindings[0]['c'])
+        nobj = int(g.query(
+            f"""
+            SELECT (COUNT(*) as ?c) WHERE {{
+                ?s ?p ?o .
+                FILTER( STRSTARTS( STR(?o), "{tlo_namespace}" ) ) .
+                FILTER( STRSTARTS( STR(?s), "{startswith_filter}" ) ) .
+            }}
+            """
+        ).bindings[0]['c'])
+        nsubc = int(g.query(
+            f"""
+            SELECT (COUNT(*) as ?c) WHERE {{
+                ?s rdfs:subClassOf+ ?o .
+                FILTER( STRSTARTS( STR(?o), "{tlo_namespace}" ) ) .
+                FILTER( STRSTARTS( STR(?s), "{startswith_filter}" ) ) .
+            }}
+            """
+        ).bindings[0]['c'])
+        nsubp = int(g.query(
+            f"""
+            SELECT (COUNT(*) as ?c) WHERE {{
+                ?s rdfs:subPropertyOf+ ?o .
+                FILTER( STRSTARTS( STR(?o), "{tlo_namespace}" ) ) .
+                FILTER( STRSTARTS( STR(?s), "{startswith_filter}" ) ) .
+            }}
+            """
+        ).bindings[0]['c'])
+        retd.update({
+            tlo: {
+                'predicates': npred,
+                'objects': nobj,
+                'subclasses': nsubc,
+                'subproperties': nsubp,
+                'subclassesproperties': nsubc + nsubp,
+                'total': npred + nobj + nsubc + nsubp
+            }
+        }
+        )
+
+    return retd
 
 def get_license(g):
     qres = g.query(

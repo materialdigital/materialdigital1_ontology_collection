@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-11T10:48:11.160921",
+  "analysis_date": "2024-03-11T15:58:19.208471",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -346,48 +346,188 @@
   "namespaces": {
     "count": 16,
     "items": [
+      "http://purl.org/dc/terms/",
+      "http://w3id.org/sensotwin/",
       "http://w3id.org/sensotwin/applicationontology/",
-      "http://purl.org/dc/elements/1.1/",
-      "http://material-digital.de/pmdco/",
-      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/2000/01/rdf-schema#",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://w3id.org/pmd/co/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://w3id.org/pmd/",
+      "https://material-digital.de/pmdco/",
       "http://www.w3.org/2001/XMLSchema#",
       "https://orcid.org/",
-      "http://w3id.org/sensotwin/applicationontology#",
-      "http://w3id.org/sensotwin/",
+      "http://material-digital.de/pmdco/",
       "http://creativecommons.org/licenses/by/4.0/",
-      "http://www.w3.org/2002/07/owl#",
       "http://www.w3.org/ns/prov#",
-      "https://w3id.org/pmd/",
-      "http://purl.org/dc/terms/",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "https://material-digital.de/pmdco/"
+      "http://www.w3.org/2002/07/owl#",
+      "http://w3id.org/sensotwin/applicationontology#"
     ]
   },
   "tlos": {
     "original": {
-      "pmdco-2.0.7": 242,
-      "pmdco-v0.1-beta": 0,
-      "emmo": 0,
-      "cco": 0,
-      "bfo": 0,
-      "ro": 0,
-      "iao": 0,
-      "prov-o": 181,
-      "qudt": 0,
-      "chebi": 0
+      "pmdco-2.0.7": {
+        "predicates": 59,
+        "objects": 57,
+        "subclasses": 242,
+        "subproperties": 0,
+        "subclassesproperties": 242,
+        "total": 358
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 1,
+        "objects": 35,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 36
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 6,
+        "subclasses": 181,
+        "subproperties": 0,
+        "subclassesproperties": 181,
+        "total": 187
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
     },
     "reasoned": {
-      "pmdco-2.0.7": 499,
-      "pmdco-v0.1-beta": 0,
-      "emmo": 0,
-      "cco": 0,
-      "bfo": 0,
-      "ro": 0,
-      "iao": 0,
-      "prov-o": 332,
-      "qudt": 0,
-      "chebi": 0
+      "pmdco-2.0.7": {
+        "predicates": 0,
+        "objects": 12268,
+        "subclasses": 499,
+        "subproperties": 0,
+        "subclassesproperties": 499,
+        "total": 12767
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 1,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 1
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 1282,
+        "subclasses": 332,
+        "subproperties": 0,
+        "subclassesproperties": 332,
+        "total": 1614
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
     }
   },
   "license": {
