@@ -300,6 +300,8 @@ def analyze_graph(
 
 if __name__ == '__main__':
     for project, kwargs in conf['projects'].items():
+        if not project == 'StahlDigital':
+            continue
         start = datetime.now()
         with open(f'{project}/{project}.json', 'w', encoding='utf-8') as fp:
             json.dump(

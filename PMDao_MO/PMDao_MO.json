@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-03-11T15:50:42.143002",
+  "analysis_date": "2024-04-15T15:15:54.768813",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -200,26 +200,26 @@
   "namespaces": {
     "count": 20,
     "items": [
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "https://w3id.org/pmd/co/",
-      "http://www.w3.org/2002/07/owl#",
-      "https://doi.org/10.1007/",
-      "http://purl.org/dc/terms/",
-      "https://doi.org/10.1016/",
-      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
-      "http://creativecommons.org/licenses/by/",
-      "https://orcid.org/",
-      "http://purl.org/dc/elements/1.1/",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://en.wikipedia.org/wiki/",
       "https://cmrf.research.uiowa.edu/",
-      "https://doi.org/10.1017/",
-      "https://w3id.org/pmd/mo/",
-      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "http://www.w3.org/2002/07/owl#",
       "https://www.jeol.co.jp/en/words/emterms/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
+      "https://w3id.org/pmd/co/",
+      "https://doi.org/10.1017/",
+      "https://www.globalsino.com/EM/",
+      "http://creativecommons.org/licenses/by/",
+      "https://doi.org/10.1016/",
       "https://w3id.org/pmd/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2000/01/rdf-schema#",
       "https://www.iso.org/obp/ui/",
-      "https://www.globalsino.com/EM/"
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://orcid.org/",
+      "https://w3id.org/pmd/mo/",
+      "https://en.wikipedia.org/wiki/",
+      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "https://doi.org/10.1007/"
     ]
   },
   "tlos": {

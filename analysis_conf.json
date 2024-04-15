@@ -64,6 +64,11 @@
             "graph_file": "SmaDi/smadi_ont.ttl",
             "reasoned_graph_file": "SmaDi/smadi_ont.pellet-2.2.0.ttl",
             "startswith_filter": "urn:absolute/smadiont"
+        },
+        "StahlDigital": {
+            "graph_file": "StahlDigital/steel_ProcessOntology.ttl",
+            "reasoned_graph_file": "StahlDigital/steel_ProcessOntology.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/steel/ProcessOntology/"
         }
     },
     "skip_namespaces": [],
