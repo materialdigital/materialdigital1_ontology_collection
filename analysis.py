@@ -300,7 +300,7 @@ def analyze_graph(
 
 if __name__ == '__main__':
     for project, kwargs in conf['projects'].items():
-        if not project == 'StahlDigital':
+        if not project == 'PMDao_PGO':
             continue
         start = datetime.now()
         with open(f'{project}/{project}.json', 'w', encoding='utf-8') as fp:

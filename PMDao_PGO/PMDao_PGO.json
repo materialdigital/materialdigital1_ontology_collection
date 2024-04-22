@@ -1,0 +1,242 @@
+{
+  "analysis_date": "2024-04-22T13:36:13.494131",
+  "changes": null,
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co/2.0.5"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 0,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 2,
+    "items": [
+      "https://orcid.org/0000-0002-3717-7104",
+      "https://orcid.org/0000-0002-7094-5371"
+    ]
+  },
+  "namespaces": {
+    "count": 11,
+    "items": [
+      "https://en.wikipedia.org/wiki/",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://purl.org/dc/elements/1.1/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://w3id.org/pmd/co/",
+      "https://w3id.org/pmd/pgo/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://creativecommons.org/licenses/by/",
+      "https://orcid.org/"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0"
+    ]
+  }
+}

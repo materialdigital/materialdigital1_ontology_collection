@@ -50,6 +50,11 @@
             "reasoned_graph_file": "PMDao_MO/pmd_mo.pellet-2.2.0.ttl",
             "startswith_filter": "https://w3id.org/pmd/mo/"
         },
+        "PMDao_PGO": {
+            "graph_file": "PMDao_PGO/pmd_pgo.ttl",
+            "reasoned_graph_file": "PMDao_PGO/pmd_pgo.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/pmd/pgo/"
+        },
         "PMDao_TTO": {
             "graph_file": "PMDao_TTO/pmd_tto.ttl",
             "reasoned_graph_file": "PMDao_TTO/pmd_tto.pellet-2.2.0.ttl",
