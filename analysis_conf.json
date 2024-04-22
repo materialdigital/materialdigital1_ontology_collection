@@ -1,0 +1,117 @@
+{
+    "projects": {
+        "DigiBatMat":{
+            "graph_file": "DigiBatMat/BPCOv1.0.1-noqudt.ttl",
+            "reasoned_graph_file": "DigiBatMat/BPCOv1.0.1-noqudt.pellet-2.2.0.ttl",
+            "startswith_filter": "https://purl.org/bpco",
+            "changes": ["removed qudt import definitions"]
+        },
+        "DIGITRUBBER": {
+            "graph_file": "DIGITRUBBER/digitrubber-full.owl",
+            "reasoned_graph_file": "DIGITRUBBER/digitrubber-full.elk-0.5.0.ttl",
+            "startswith_filter": "https://www.tib.eu/digitrubber"
+        },
+        "DiProMag": {
+            "graph_file": "DiProMag/dipromag_onto_01.ttl",
+            "reasoned_graph_file": "DiProMag/dipromag_onto_01.elk-0.5.0.ttl",
+            "startswith_filter": "https://www.dipromag.de/dipromag_onto/0.1/"
+        },
+        "GlasDigital": {
+            "graph_file": "GlasDigital/pmd_go.ttl",
+            "reasoned_graph_file": "GlasDigital/pmd_go.pellet-2.2.0.ttl",
+            "startswith_filter": "https://glasdigi.cms.uni-jena.de/glass/",
+            "additional_parse": ["https://raw.githubusercontent.com/materialdigital/core-ontology/v0.1-beta/pmdco_core.ttl"]
+        },
+        "KNOW-NOW": {
+            "graph_file": "KNOW-NOW/KnowNow_Ontology-noindividuals.ttl",
+            "reasoned_graph_file": "KNOW-NOW/KnowNow_Ontology-noindividuals.pellet-2.2.0.ttl",
+            "startswith_filter": "http://www.semanticweb.org/ontologies/KnowNow",
+            "changes": ["removed individuals"]
+        },
+        "KupferDigital": {
+            "graph_file": "KupferDigital/KupferDigital_rdflib/KupferDigital.ttl",
+            "reasoned_graph_file": "KupferDigital/KupferDigital_rdflib/KupferDigital.pellet-2.2.0.ttl",
+            "startswith_filter": "https://gitlab.com/kupferdigital/",
+            "changes": ["combined modular files into one", "removed invalid symbols from two individuals uris"]
+        },
+        "LeBeDigital": {
+            "graph_file": "LeBeDigital/CPTO.ttl",
+            "reasoned_graph_file": "LeBeDigital/CPTO.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/cpto/"
+        },
+        "ODE_AM": {
+            "graph_file": "ODE_AM/ODE_AM_rdflib/ODE_AM.ttl",
+            "reasoned_graph_file": "ODE_AM/ODE_AM_rdflib/ODE_AM.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/ODE_AM/",
+            "changes": ["combined modular files into one"]
+        },
+        "PMDao_MO": {
+            "graph_file": "PMDao_MO/pmd_mo.ttl",
+            "reasoned_graph_file": "PMDao_MO/pmd_mo.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/pmd/mo/"
+        },
+        "PMDao_TTO": {
+            "graph_file": "PMDao_TTO/pmd_tto.ttl",
+            "reasoned_graph_file": "PMDao_TTO/pmd_tto.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/pmd/tto/"
+        },
+        "SensoTwin": {
+            "graph_file": "SensoTwin/PMDCollectionSensoTwin.ttl",
+            "reasoned_graph_file": "SensoTwin/PMDCollectionSensoTwin-noindividuals.pellet-2.2.0.ttl",
+            "startswith_filter": "http://w3id.org/sensotwin/"
+        },
+        "SmaDi": {
+            "graph_file": "SmaDi/smadi_ont.ttl",
+            "reasoned_graph_file": "SmaDi/smadi_ont.pellet-2.2.0.ttl",
+            "startswith_filter": "urn:absolute/smadiont"
+        },
+        "StahlDigital": {
+            "graph_file": "StahlDigital/steel_ProcessOntology.ttl",
+            "reasoned_graph_file": "StahlDigital/steel_ProcessOntology.pellet-2.2.0.ttl",
+            "startswith_filter": "https://w3id.org/steel/ProcessOntology/"
+        }
+    },
+    "skip_namespaces": [],
+    "skip_namespaces_old": [
+        "http://purl.org/dc/terms/",
+        "http://www.w3.org/XML/1998/namespace",
+        "http://www.w3.org/2001/XMLSchema#",
+        "http://www.w3.org/2000/01/rdf-schema#",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "http://www.w3.org/2002/07/owl#",
+        "http://www.w3.org/2004/02/skos/core#",
+        "http://www.w3.org/ns/shacl#",
+        "https://schema.org/",
+        "http://www.w3.org/ns/prov#",
+        "http://www.w3.org/ns/csvw#",
+        "https://brickschema.org/schema/Brick#",
+        "http://purl.org/dc/elements/1.1/",
+        "http://purl.org/dc/dcmitype/",
+        "http://purl.org/dc/dcam/",
+        "http://usefulinc.com/ns/doap#",
+        "http://www.w3.org/ns/org#",
+        "http://purl.org/linked-data/cube#",
+        "http://www.w3.org/ns/sosa/",
+        "http://www.w3.org/ns/ssn/",
+        "http://www.w3.org/2006/time#",
+        "http://purl.org/vocab/vann/",
+        "http://rdfs.org/ns/void#",
+        "http://purl.org/dc/terms/",
+        "http://www.w3.org/2003/11/swrl#",
+        "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+        "http://www.opengis.net/ont/geosparql#",
+        "http://www.w3.org/ns/odrl/2/",
+        "http://www.w3.org/ns/dx/prof/",
+        "https://www.w3.org/2003/01/geo/wgs84_pos#"
+    ],
+    "additional_bindings": [
+        {
+            "prefix": "pmd",
+            "uri": "https://w3id.org/pmd/co/"
+        },
+        {
+            "prefix": "pmdbeta",
+            "uri": "https://material-digital.de/pmdco/"
+        }
+    ]
+}

@@ -1,0 +1,354 @@
+{
+  "analysis_date": "2024-04-15T14:53:01.022210",
+  "changes": null,
+  "reasoner": {
+    "reasoner": "elk",
+    "version": "0.5.0"
+  },
+  "imports": {
+    "count": 0,
+    "items": []
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 21,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/EDX",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELS",
+        "https://www.dipromag.de/dipromag_onto/0.1/MPMS",
+        "https://www.dipromag.de/dipromag_onto/0.1/MPMS3",
+        "https://www.dipromag.de/dipromag_onto/0.1/VSM",
+        "https://www.dipromag.de/dipromag_onto/0.1/XPS",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRD",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRF",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRR",
+        "https://www.dipromag.de/dipromag_onto/0.1/BallMillingJar",
+        "https://www.dipromag.de/dipromag_onto/0.1/DC",
+        "https://www.dipromag.de/dipromag_onto/0.1/Holder",
+        "https://www.dipromag.de/dipromag_onto/0.1/Brass",
+        "https://www.dipromag.de/dipromag_onto/0.1/PressuteCell",
+        "https://www.dipromag.de/dipromag_onto/0.1/PressureCell_CuBe10",
+        "https://www.dipromag.de/dipromag_onto/0.1/PressureCell_CuBe8",
+        "https://www.dipromag.de/dipromag_onto/0.1/PressureCell_NiCrAl",
+        "https://www.dipromag.de/dipromag_onto/0.1/Pyrex",
+        "https://www.dipromag.de/dipromag_onto/0.1/Quarts",
+        "https://www.dipromag.de/dipromag_onto/0.1/Straw",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleContainer"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 55,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/ArPlus_sputter",
+        "https://www.dipromag.de/dipromag_onto/0.1/ChamberAtmosphere",
+        "https://www.dipromag.de/dipromag_onto/0.1/ChamberMaterial",
+        "https://www.dipromag.de/dipromag_onto/0.1/ChemicalCompositionMean",
+        "https://www.dipromag.de/dipromag_onto/0.1/ChemicalCompositionStd",
+        "https://www.dipromag.de/dipromag_onto/0.1/RadiationSource",
+        "https://www.dipromag.de/dipromag_onto/0.1/Al_K_alpha",
+        "https://www.dipromag.de/dipromag_onto/0.1/SubstrateRoughness",
+        "https://www.dipromag.de/dipromag_onto/0.1/AbsolutePeakIntensity",
+        "https://www.dipromag.de/dipromag_onto/0.1/B_step_isoT",
+        "https://www.dipromag.de/dipromag_onto/0.1/DepositionRate",
+        "https://www.dipromag.de/dipromag_onto/0.1/Dispersion",
+        "https://www.dipromag.de/dipromag_onto/0.1/EntranceAperture",
+        "https://www.dipromag.de/dipromag_onto/0.1/EstimatedBaseLineShift",
+        "https://www.dipromag.de/dipromag_onto/0.1/ExpectedDepositionRate",
+        "https://www.dipromag.de/dipromag_onto/0.1/FieldCycleNumber",
+        "https://www.dipromag.de/dipromag_onto/0.1/GasFlow",
+        "https://www.dipromag.de/dipromag_onto/0.1/HeatCapacityData",
+        "https://www.dipromag.de/dipromag_onto/0.1/HeatCyclesNumber",
+        "https://www.dipromag.de/dipromag_onto/0.1/IntensityRelativeToSubSpectrum",
+        "https://www.dipromag.de/dipromag_onto/0.1/LatentHeat",
+        "https://www.dipromag.de/dipromag_onto/0.1/LatentHeatCooling",
+        "https://www.dipromag.de/dipromag_onto/0.1/LatentHeatHeating",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticMomentComponent",
+        "https://www.dipromag.de/dipromag_onto/0.1/Logitudinal",
+        "https://www.dipromag.de/dipromag_onto/0.1/Transverse",
+        "https://www.dipromag.de/dipromag_onto/0.1/Mode",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELSMode",
+        "https://www.dipromag.de/dipromag_onto/0.1/Scanning",
+        "https://www.dipromag.de/dipromag_onto/0.1/XPSMode",
+        "https://www.dipromag.de/dipromag_onto/0.1/Orientation",
+        "https://www.dipromag.de/dipromag_onto/0.1/Parallel",
+        "https://www.dipromag.de/dipromag_onto/0.1/LongDirectionParallel",
+        "https://www.dipromag.de/dipromag_onto/0.1/Perpendicular",
+        "https://www.dipromag.de/dipromag_onto/0.1/Peak",
+        "https://www.dipromag.de/dipromag_onto/0.1/PeakBindingEnergy",
+        "https://www.dipromag.de/dipromag_onto/0.1/PeakPosition",
+        "https://www.dipromag.de/dipromag_onto/0.1/Peak_fwhm",
+        "https://www.dipromag.de/dipromag_onto/0.1/PhaseNumber",
+        "https://www.dipromag.de/dipromag_onto/0.1/Pressure",
+        "https://www.dipromag.de/dipromag_onto/0.1/Purity",
+        "https://www.dipromag.de/dipromag_onto/0.1/Range",
+        "https://www.dipromag.de/dipromag_onto/0.1/B_range",
+        "https://www.dipromag.de/dipromag_onto/0.1/T_range_isoB",
+        "https://www.dipromag.de/dipromag_onto/0.1/RelativeContributionToSubspectrum",
+        "https://www.dipromag.de/dipromag_onto/0.1/Roughness",
+        "https://www.dipromag.de/dipromag_onto/0.1/ScanRate",
+        "https://www.dipromag.de/dipromag_onto/0.1/AngleScanRate",
+        "https://www.dipromag.de/dipromag_onto/0.1/ScanningType",
+        "https://www.dipromag.de/dipromag_onto/0.1/SlitInserted",
+        "https://www.dipromag.de/dipromag_onto/0.1/SymmetrySpaceGroup",
+        "https://www.dipromag.de/dipromag_onto/0.1/T_step_isoB",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRRMapping",
+        "https://www.dipromag.de/dipromag_onto/0.1/d_T",
+        "https://www.dipromag.de/dipromag_onto/0.1/d_T_divby_dt_isoB"
+      ]
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 15,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/DSCMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EDXMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EDXPointMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELSEnergyLossMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/EELSMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcessIsofield",
+        "https://www.dipromag.de/dipromag_onto/0.1/MagneticPropertiesMeasuringProcessIsothermal",
+        "https://www.dipromag.de/dipromag_onto/0.1/XPSMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRDMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRFMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/XRRMeasuringProcess",
+        "https://www.dipromag.de/dipromag_onto/0.1/HomogeneityMechanism",
+        "https://www.dipromag.de/dipromag_onto/0.1/CompositionModification",
+        "https://www.dipromag.de/dipromag_onto/0.1/Goal"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 4,
+      "items": [
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleBulkCompound",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilm",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilmLayer",
+        "https://www.dipromag.de/dipromag_onto/0.1/SampleThinFilmSubstrateLayer"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 217,
+    "owl:ObjectProperty": 3,
+    "owl:DatatypeProperty": 2
+  },
+  "creators_contributors": {
+    "count": 18,
+    "items": [
+      "Moritz Blum",
+      "Basil Ell",
+      "Andreas H\u00fctten",
+      "G\u00fcnter Reiss",
+      "Philipp Cimiano",
+      "Luana Caron",
+      "Tapas Samanta",
+      "Inga Ennen",
+      "Basil Ell",
+      "Moritz Blum",
+      "Christian Schr\u00f6der",
+      "Sonja Sch\u00f6ning",
+      "Simon Bekemeier",
+      "Lennart Schwan",
+      "Michael Feige",
+      "Martin Wortmann",
+      "Thomas Hilbig",
+      "Alisa Chirkova"
+    ]
+  },
+  "namespaces": {
+    "count": 10,
+    "items": [
+      "http://www.w3.org/ns/dcat#",
+      "https://w3id.org/pmd/co/",
+      "https://www.dipromag.de/dipromag_onto/0.1/",
+      "https://www.dipromag.de/ottr-templates/",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://qudt.org/vocab/",
+      "http://www.w3.org/2000/01/rdf-schema#"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 183,
+        "objects": 108,
+        "subclasses": 115,
+        "subproperties": 8,
+        "subclassesproperties": 123,
+        "total": 414
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 81,
+        "subclasses": 83,
+        "subproperties": 0,
+        "subclassesproperties": 83,
+        "total": 164
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 183,
+        "objects": 149,
+        "subclasses": 164,
+        "subproperties": 0,
+        "subclassesproperties": 164,
+        "total": 496
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 17,
+        "subclasses": 96,
+        "subproperties": 0,
+        "subclassesproperties": 96,
+        "total": 113
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 82,
+        "subclasses": 83,
+        "subproperties": 0,
+        "subclassesproperties": 83,
+        "total": 165
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "https://creativecommons.org/licenses/by/4.0/legalcode"
+    ]
+  }
+}

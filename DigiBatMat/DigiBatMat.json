@@ -1,0 +1,271 @@
+{
+  "analysis_date": "2024-04-15T14:38:50.354605",
+  "changes": [
+    "removed qudt import definitions"
+  ],
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co/2.0.7/"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 4,
+      "items": [
+        "https://purl.org/bpco#AnodeProductionProcess",
+        "https://purl.org/bpco#CathodeProductionProcess",
+        "https://purl.org/bpco#CellProductionProcess",
+        "https://purl.org/bpco#ElectrodeProductionProcess"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 10,
+    "owl:ObjectProperty": 3,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 18,
+    "items": [
+      "https://orcid.org/0000-0002-5918-6407",
+      "https://orcid.org/0009-0009-2713-802X",
+      "Tobias K\u00e4fer",
+      "Amir Haghipour",
+      "Andriy Taranovskyy",
+      "Arno Kwade",
+      "Dirk Werth",
+      "Jonas Oehm",
+      "Klaus Dr\u00f6der",
+      "Laura Gottschalk",
+      "Lisa Beran",
+      "Milena Perovic",
+      "Philip G\u00fcmbel",
+      "Tobias Kraus",
+      "Veit K\u00f6niger",
+      "Volker Knoblauch",
+      "Volker Presser",
+      "Yunjie Li"
+    ]
+  },
+  "namespaces": {
+    "count": 17,
+    "items": [
+      "https://purl.org/bpco#",
+      "https://orcid.org/",
+      "http://qudt.org/vocab/unit/",
+      "https://purl.org/",
+      "https://w3id.org/pmd/co/",
+      "https://www.materialdigital.de/project/",
+      "http://qudt.org/schema/qudt/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "https://purl.org/bpco/",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "https://creativecommons.org/licenses/by-sa/4.0/",
+      "http://qudt.org/vocab/quantitykind/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://w3id.org/pmd/co/2.0.7/",
+      "http://purl.org/dc/elements/1.1/"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 135,
+        "objects": 86,
+        "subclasses": 4,
+        "subproperties": 0,
+        "subclassesproperties": 4,
+        "total": 225
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 77,
+        "objects": 448,
+        "subclasses": 1,
+        "subproperties": 0,
+        "subclassesproperties": 1,
+        "total": 526
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 334,
+        "objects": 754,
+        "subclasses": 8,
+        "subproperties": 0,
+        "subclassesproperties": 8,
+        "total": 1096
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 396,
+        "objects": 83,
+        "subclasses": 4,
+        "subproperties": 0,
+        "subclassesproperties": 4,
+        "total": 483
+      },
+      "qudt": {
+        "predicates": 77,
+        "objects": 458,
+        "subclasses": 1,
+        "subproperties": 0,
+        "subclassesproperties": 1,
+        "total": 536
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "https://creativecommons.org/licenses/by-sa/4.0/"
+    ]
+  }
+}

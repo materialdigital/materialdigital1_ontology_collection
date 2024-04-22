@@ -1,0 +1,361 @@
+{
+  "analysis_date": "2024-04-15T15:08:01.569229",
+  "changes": null,
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 9,
+      "items": [
+        "https://w3id.org/cpto/CastingDevice",
+        "https://w3id.org/cpto/ConcreteMixer",
+        "https://w3id.org/cpto/NonAgitatingEquipment",
+        "https://w3id.org/cpto/TruckMixer",
+        "https://w3id.org/cpto/Batch",
+        "https://w3id.org/cpto/Delivery",
+        "https://w3id.org/cpto/Calorimeter",
+        "https://w3id.org/cpto/Extensometer",
+        "https://w3id.org/cpto/CompressiveTestingMachine"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 42,
+      "items": [
+        "https://w3id.org/cpto/ConcreteCompressiveStrength",
+        "https://w3id.org/cpto/CharacteristicStrength",
+        "https://w3id.org/cpto/CompressiveStregthClass",
+        "https://w3id.org/cpto/CompressiveStrengthCube",
+        "https://w3id.org/cpto/CompressiveStrengthCylinder",
+        "https://w3id.org/cpto/Heat",
+        "https://w3id.org/cpto/HeatFlow",
+        "https://w3id.org/cpto/HeatOfHydration",
+        "https://w3id.org/cpto/MaterialComposition",
+        "https://w3id.org/cpto/Content",
+        "https://w3id.org/cpto/EntrainedAir",
+        "https://w3id.org/cpto/EntrappedAir",
+        "https://w3id.org/cpto/EquivalentWaterCementRatio",
+        "https://w3id.org/cpto/QuantityInMix",
+        "https://w3id.org/cpto/WaterCementRatio",
+        "https://w3id.org/cpto/SpecificGravity",
+        "https://w3id.org/cpto/Volume",
+        "https://w3id.org/cpto/Site",
+        "https://w3id.org/cpto/Consistency",
+        "https://w3id.org/cpto/ConsistencyClass",
+        "https://w3id.org/cpto/DegreeOfCompactability",
+        "https://w3id.org/cpto/DegreeOfCompactabilityClass",
+        "https://w3id.org/cpto/ExposureClass",
+        "https://w3id.org/cpto/FlowClass",
+        "https://w3id.org/cpto/FlowSpread",
+        "https://w3id.org/cpto/PassingAbility",
+        "https://w3id.org/cpto/SegregationResistance",
+        "https://w3id.org/cpto/SlumpClass",
+        "https://w3id.org/cpto/SlumpFlow",
+        "https://w3id.org/cpto/StressRate",
+        "https://w3id.org/cpto/VebeClass",
+        "https://w3id.org/cpto/kValueAccountingForFlyAsh",
+        "https://w3id.org/cpto/kValueAccountingForSilicaFume",
+        "https://w3id.org/cpto/kValueAccountingForTypeIIAdditons",
+        "https://w3id.org/cpto/kValueAccountingForFlyAsh+SilicaFume",
+        "https://w3id.org/cpto/AggregateSize",
+        "https://w3id.org/cpto/FinesInConcrete",
+        "https://w3id.org/cpto/RelativeDensity",
+        "https://w3id.org/cpto/ViscosityOfConcrete",
+        "https://w3id.org/cpto/DINStandard",
+        "https://w3id.org/cpto/ENStandard",
+        "https://w3id.org/cpto/SpecimenAge"
+      ]
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 13,
+      "items": [
+        "https://w3id.org/cpto/MeasuringNode",
+        "https://w3id.org/cpto/ConfirmityTest",
+        "https://w3id.org/cpto/DestructiveTesting",
+        "https://w3id.org/cpto/DeterminationOfCompressiveStrength",
+        "https://w3id.org/cpto/DeterminationOfHeatOfHydration",
+        "https://w3id.org/cpto/DeterminationOfSecantModulusOfElasticity",
+        "https://w3id.org/cpto/EvaluationOfConfirmity",
+        "https://w3id.org/cpto/FlowTableTest",
+        "https://w3id.org/cpto/IdentityTest",
+        "https://w3id.org/cpto/InitialTest",
+        "https://w3id.org/cpto/MeasurementInstrumentPreparation",
+        "https://w3id.org/cpto/NonDestructiveTesting",
+        "https://w3id.org/cpto/Verification"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 47,
+      "items": [
+        "https://w3id.org/cpto/CompositeMaterial",
+        "https://w3id.org/cpto/Concrete",
+        "https://w3id.org/cpto/DesignedConcrete",
+        "https://w3id.org/cpto/FreshConcrete",
+        "https://w3id.org/cpto/HardenedConcrete",
+        "https://w3id.org/cpto/HeavyWeightConcrete",
+        "https://w3id.org/cpto/InSituConcrete",
+        "https://w3id.org/cpto/LightweightConcrete",
+        "https://w3id.org/cpto/NormalWeightConcrete",
+        "https://w3id.org/cpto/PrescribedConcrete",
+        "https://w3id.org/cpto/ReadyMixedConcrete",
+        "https://w3id.org/cpto/SelfcompactingConcrete",
+        "https://w3id.org/cpto/SiteMixedConcrete",
+        "https://w3id.org/cpto/StandardizedPrescribedConcrete",
+        "https://w3id.org/cpto/Mortar",
+        "https://w3id.org/cpto/PrecastElement",
+        "https://w3id.org/cpto/Additives",
+        "https://w3id.org/cpto/Addition",
+        "https://w3id.org/cpto/TypeIAddition",
+        "https://w3id.org/cpto/TypeIIAdition",
+        "https://w3id.org/cpto/Admixture",
+        "https://w3id.org/cpto/Aggregate",
+        "https://w3id.org/cpto/AllInAggregate",
+        "https://w3id.org/cpto/HeavyWeightAggregate",
+        "https://w3id.org/cpto/LightWeightAggregate",
+        "https://w3id.org/cpto/NormalWeightAggregate",
+        "https://w3id.org/cpto/ReclaimedCrushedAggregate",
+        "https://w3id.org/cpto/ReclaimedWashedAggregate",
+        "https://w3id.org/cpto/RecycledAggregate",
+        "https://w3id.org/cpto/Fibres",
+        "https://w3id.org/cpto/PolymerFibres",
+        "https://w3id.org/cpto/SteelFibres",
+        "https://w3id.org/cpto/InorganicMaterial",
+        "https://w3id.org/cpto/Air",
+        "https://w3id.org/cpto/BlastFurnaceSlag",
+        "https://w3id.org/cpto/GGBS/GGBFS",
+        "https://w3id.org/cpto/Cement",
+        "https://w3id.org/cpto/SlagCement",
+        "https://w3id.org/cpto/FlyAsh",
+        "https://w3id.org/cpto/LimestonePowder",
+        "https://w3id.org/cpto/Pigments",
+        "https://w3id.org/cpto/QuartzFlour",
+        "https://w3id.org/cpto/SilicaFume",
+        "https://w3id.org/cpto/Water",
+        "https://w3id.org/cpto/MetallicMaterial",
+        "https://w3id.org/cpto/NonMetalicMaterial",
+        "https://w3id.org/cpto/OrganicMaterial"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 114,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 6,
+    "items": [
+      "Mattheo Kr\u00fcger, Melissa Telong Donfack, Aida Zoriyatkha, Birgit Meng, Stephan Pirskawetz",
+      "https://orcid.org/0009-0003-7121-0283",
+      "https://orcid.org/0009-0006-4524-9143",
+      "https://orcid.org/0009-0004-9700-2439",
+      "https://orcid.org/0000-0003-2445-6734",
+      "https://orcid.org/0000-0003-0626-5002"
+    ]
+  },
+  "namespaces": {
+    "count": 11,
+    "items": [
+      "https://orcid.org/",
+      "https://w3id.org/pmd/co/",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "https://w3id.org/cpto/",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/ns/prov#",
+      "https://w3id.org/",
+      "https://w3id.org/cpto/GGBS/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2000/01/rdf-schema#"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 214,
+        "objects": 53,
+        "subclasses": 112,
+        "subproperties": 0,
+        "subclassesproperties": 112,
+        "total": 379
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 215,
+        "objects": 2,
+        "subclasses": 2,
+        "subproperties": 0,
+        "subclassesproperties": 2,
+        "total": 219
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 214,
+        "objects": 4657,
+        "subclasses": 268,
+        "subproperties": 0,
+        "subclassesproperties": 268,
+        "total": 5139
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 215,
+        "objects": 221,
+        "subclasses": 115,
+        "subproperties": 0,
+        "subclassesproperties": 115,
+        "total": 551
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ]
+  }
+}

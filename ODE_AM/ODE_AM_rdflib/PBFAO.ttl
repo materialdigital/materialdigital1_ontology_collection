@@ -1,0 +1,841 @@
+@prefix : <https://w3id.org/ODE_AM/PBFAO/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mo: <https://w3id.org/ODE_AM/MAO/> .
+@prefix amo: <https://w3id.org/ODE_AM/AMAO#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Comm: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <https://w3id.org/ODE_AM/PBFAO> .
+
+<https://w3id.org/ODE_AM/PBFAO> rdf:type owl:Ontology ;
+                                 owl:imports "AMAO.ttl" ;
+                                 dc:creator "Thomas Bjarsch" ;
+                                 dc:date "16.01.2024"^^xsd:string ;
+                                 dc:license "CC-BY-4.0" ;
+                                 dc:title "Fraunhofer IGCV Powder Bed Fusion Application Ontology"^^xsd:string ;
+                                 rdfs:comment "Fraunhofer IGCV AM Application Ontology is used as a direct import."^^xsd:string ,
+                                              "It uses Basic Formal Ontology as Top- and Common Core Ontologies as Mid-Level-Ontologies."^^xsd:string ,
+                                              "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements."^^xsd:string ,
+                                              "This ontology, tailored for the powder bed fusion domain at Fraunhofer IGCV, comprises key classes that encapsulate various parameters integral to this specific additive manufacturing process."^^xsd:string ;
+                                 owl:versionInfo "1.0.0"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/alternative_label
+Comm:alternative_label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition
+Comm:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition_source
+Comm:definition_source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_token_unit
+Comm:has_token_unit rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+core:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+core:example rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/designates
+Comm:designates rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_input
+Comm:has_input rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_output
+Comm:has_output rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_about
+Comm:is_about rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_input_of
+Comm:is_input_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of
+Comm:is_made_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of
+Comm:is_subject_of rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/clearly_identifies
+:clearly_identifies rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf Comm:is_about .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/is_clearly_identified_by
+:is_clearly_identified_by rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf Comm:is_subject_of .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Artifact
+Comm:Artifact rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CartesianCoordinateSystem
+Comm:CartesianCoordinateSystem rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PartNumber
+Comm:PartNumber rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#ActOfAdditiveManufacturing
+amo:ActOfAdditiveManufacturing rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#ActOfAdditiveManufacturingProcessParameter
+amo:ActOfAdditiveManufacturingProcessParameter rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO#AdditiveManufacturingMachine
+amo:AdditiveManufacturingMachine rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/MAO/PortionOfPowder
+mo:PortionOfPowder rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/MAO/PortionOfSteelMaterial
+mo:PortionOfSteelMaterial rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusion
+:ActOfPowderBedFusion rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( amo:ActOfAdditiveManufacturing
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty Comm:has_input ;
+                                                                   owl:someValuesFrom mo:PortionOfPowder
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      Comm:alternative_label "Selective laser melting"@en ;
+                      Comm:definition "Additive manufacturing process in which thermal energy selectively fuses regions of a powder bed" ;
+                      Comm:definition_source "ISO/ASTM DIS 52900:2018(E)" ;
+                      rdfs:label "Powder Bed Fusion"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusionLaserBeamMetal
+:ActOfPowderBedFusionLaserBeamMetal rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( :ActOfPowderBedFusion
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty Comm:has_output ;
+                                                                                 owl:someValuesFrom [ owl:intersectionOf ( Comm:Artifact
+                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                             owl:onProperty Comm:is_made_of ;
+                                                                                                                             owl:someValuesFrom mo:PortionOfSteelMaterial
+                                                                                                                           ]
+                                                                                                                         ) ;
+                                                                                                      rdf:type owl:Class
+                                                                                                    ]
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                      owl:onProperty Comm:has_input ;
+                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass :PowderBedFusionLaserBeamMetalMachine
+                                                    ] ;
+                                    Comm:definition "ISO/ASTM DIS 52900:2018(E)" ,
+                                                    "The process category is powder bed fusion , using a laser beam (-LB), in a metallic material (/M)" ;
+                                    rdfs:label "Powder Bed Fusion Laser Beam Metal"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ActOfPowderBedFusionProcessParameter
+:ActOfPowderBedFusionProcessParameter rdf:type owl:Class ;
+                                      rdfs:subClassOf amo:ActOfAdditiveManufacturingProcessParameter ;
+                                      Comm:definition "A performance specification prescribing the operational conditions of an entity during an powder bed fusion process"@en ,
+                                                      "Expert"@en ,
+                                                      "PBF parameter"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ContourCorridorParameter
+:ContourCorridorParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                          Comm:definition "Contour parameter prescribing the range in x,y-plane, in which the exposed areas underneath and above the current layer are considered, to determine the conture exposure type"^^xsd:string ;
+                          Comm:definition_source "EOSPRINT 2"@en ;
+                          Comm:has_token_unit "mm"@en ;
+                          rdfs:label "Contour Corridor"@en ;
+                          core:example "0,07 mm"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/EOSM290
+:EOSM290 rdf:type owl:Class ;
+         rdfs:subClassOf :PowderBedFusionLaserBeamMetalMachine ;
+         rdfs:comment "https://www.eos.info/en/industrial-3d-printer/metal/eos-m-290?utm_source=google&utm_medium=cpc&utm_campaign=brand_DACH&utm_content=wyn&utm_term=m290%20printer&utm_campaign=%5Bwyn%5D+Brand+%5BDACH%5D+%5BS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=3851378066&hsa_cam=16340963737&hsa_grp=137137441137&hsa_ad=612094563041&hsa_src=g&hsa_tgt=kwd-1643562642707&hsa_kw=m290%20printer&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiAzJOtBhALEiwAtwj8tgNBUfQcsWosEG-JT-zOlCNMyhfndTYMy4n0iaotzx-nGXD5bmLW2xoCsUcQAvD_BwE"@en ;
+         rdfs:label "EOS M290"@en ;
+         core:definition "Specific Machine type of supplier Electro Optical Systems GmbH"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/EdgeFactorParameter
+:EdgeFactorParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                     Comm:definition "Edge parameter prescribing the completeness of apex-exposure. The higher this factor, the further the beam will advance into the apex."^^xsd:string ;
+                     Comm:definition_source "EOSPRINT 2"@en ;
+                     Comm:has_token_unit "No Unit"@en ;
+                     rdfs:label "Edge Factor"@en ;
+                     core:example "2"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternDownSkinParameter
+:ExposurePatternDownSkinParameter rdf:type owl:Class ;
+                                  rdfs:subClassOf :ExposurePatternParameter ;
+                                  Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for DownSkin fiat object parts"^^xsd:string ;
+                                  Comm:definition_source "EOSPRINT 2"@en ;
+                                  rdfs:comment "Categorical"@en ;
+                                  rdfs:label "Exposure Pattern Down Skin"@en ;
+                                  core:example "\"Stripes\""@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternInFillParameter
+:ExposurePatternInFillParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :SkywritingParameter ;
+                                Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for InFill fiat object parts"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                rdfs:comment "Categorical"@en ;
+                                rdfs:label "Exposure Pattern Infill"@en ;
+                                core:example "\"Stripes\""@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternParameter
+:ExposurePatternParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                          Comm:definition_source "EOSPRINT 2"@en ;
+                          rdfs:label "Exposure Pattern"@en ;
+                          core:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ExposurePatternUpSkinParameter
+:ExposurePatternUpSkinParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :ExposurePatternParameter ;
+                                Comm:definition "Additive Manufacturing Process Parameter prescribing the direction and arrangement of exposure vectors for UpSkin fiat object parts"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                rdfs:comment "categorical"@en ;
+                                rdfs:label "Exposure Pattern Upskin"@en ;
+                                core:example "\"Stripes\""@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationDownSkinParameter
+:FlowOptimizationDownSkinParameter rdf:type owl:Class ;
+                                   rdfs:subClassOf :FlowOptimizationParameter ;
+                                   Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for DownSkin fiat object parts"^^xsd:string ;
+                                   Comm:definition_source "EOSPRINT 2"@en ;
+                                   rdfs:comment "Boolean"@en ;
+                                   rdfs:label "Flow optimization down skin"@en ;
+                                   core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationInFillParameter
+:FlowOptimizationInFillParameter rdf:type owl:Class ;
+                                 rdfs:subClassOf :FlowOptimizationParameter ;
+                                 Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for InFill fiat object parts"^^xsd:string ;
+                                 Comm:definition_source "EOSPRINT 2"@en ;
+                                 rdfs:comment "Boolean"@en ;
+                                 rdfs:label "Flow optimization infill"@en ;
+                                 core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationParameter
+:FlowOptimizationParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                           Comm:definition "PBF-LB/M Parameter prescribing a vector exposure order against the flow direction"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           rdfs:comment "Boolean"@en ;
+                           rdfs:label "Flow optimization"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/FlowOptimizationUpSkinParameter
+:FlowOptimizationUpSkinParameter rdf:type owl:Class ;
+                                 rdfs:subClassOf :FlowOptimizationParameter ;
+                                 Comm:definition "Flow Optimization parameter prescribing a vector exposure order against the flow direction for UpSkin fiat object parts"^^xsd:string ;
+                                 Comm:definition_source "EOSPRINT 2"@en ;
+                                 rdfs:comment "Boolean"@en ;
+                                 rdfs:label "Flow optimization upskin"@en ;
+                                 core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceDownSkinParameter
+:HatchDistanceDownSkinParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :HatchDistanceParameter ;
+                                Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for DownSkin fiat object parts"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                rdfs:comment "Boolean"@en ;
+                                rdfs:label "Hatch distance down skin"@en ;
+                                core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceInFillParameter
+:HatchDistanceInFillParameter rdf:type owl:Class ;
+                              rdfs:subClassOf :HatchDistanceParameter ;
+                              Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for InFill fiat object parts"^^xsd:string ;
+                              Comm:definition_source "EOSPRINT 2"@en ;
+                              rdfs:comment "Boolean"@en ;
+                              rdfs:label "Hatch distance infill"@en ;
+                              core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceParameter
+:HatchDistanceParameter rdf:type owl:Class ;
+                        rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                        Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors"^^xsd:string ;
+                        Comm:definition_source "EOSPRINT 2"@en ;
+                        rdfs:label "Hatch distance"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchDistanceUpSkinParameter
+:HatchDistanceUpSkinParameter rdf:type owl:Class ;
+                              rdfs:subClassOf :HatchDistanceParameter ;
+                              Comm:definition "Hatch Parameter prescribing the spacing between neighbouring vectors for UpSkin fiat object parts"^^xsd:string ;
+                              Comm:definition_source "EOSPRINT 2"@en ;
+                              rdfs:comment "Boolean"@en ;
+                              rdfs:label "Hatch distance upskin"@en ;
+                              core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchOffsetAngleParameter
+:HatchOffsetAngleParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                           Comm:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary" ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "°"@en ;
+                           rdfs:label "Hatch offset angle"@en ;
+                           core:example "0 °"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchOffsetParameter
+:HatchOffsetParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                      Comm:definition "Hatch Parameter prescribing the offset of the hatch relative to the exposere part boundary"^^xsd:string ;
+                      Comm:definition_source "EOSPRINT 2"@en ;
+                      Comm:has_token_unit "°"@en ;
+                      rdfs:label "Hatch offset"@en ;
+                      core:example "45 °"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchRestrictionAngleParameter
+:HatchRestrictionAngleParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                                Comm:definition "Hatch Parameter prescribing the angle range in which vector ranges are excluded"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                Comm:has_token_unit "°"@en ;
+                                rdfs:label "Hatch restriction angle"@en ;
+                                core:example "10 °"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/HatchRotationAngleParameter
+:HatchRotationAngleParameter rdf:type owl:Class ;
+                             rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                             Comm:definition "Hatch Parameter prescribing the vector rotation angle in successive layers"^^xsd:string ;
+                             Comm:definition_source "EOSPRINT 2"@en ;
+                             Comm:has_token_unit "°"@en ;
+                             rdfs:label "Hatch rotation angle"@en ;
+                             core:example "10°"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/InfillSkippingLayersParameter
+:InfillSkippingLayersParameter rdf:type owl:Class ;
+                               rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                               Comm:definition "Hatch Parameter prescribing the layer number of successive, not exposed infill"^^xsd:string ;
+                               Comm:definition_source "EOSPRINT 2"@en ;
+                               Comm:has_token_unit "No Unit"@en ;
+                               rdfs:label "Infill skipping layers"@en ;
+                               core:example "2"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerContourParameter
+:LaserPowerContourParameter rdf:type owl:Class ;
+                            rdfs:subClassOf :LaserPowerParameter ;
+                            Comm:definition "Laser power parameter prescribing with which vectors are exposed for Contour fiat object parts"^^xsd:string ;
+                            Comm:definition_source "EOSPRINT 2"@en ;
+                            Comm:has_token_unit "W"@en ;
+                            rdfs:label "Laser power contour"@en ;
+                            core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerDownContourParameter
+:LaserPowerDownContourParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :LaserPowerParameter ;
+                                Comm:definition "Laser power parameter prescribing with which vectors are exposed for Down Contour fiat object parts"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                Comm:has_token_unit "W"@en ;
+                                rdfs:label "Laser power down contour"@en ;
+                                core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerDownSkinParameter
+:LaserPowerDownSkinParameter rdf:type owl:Class ;
+                             rdfs:subClassOf :LaserPowerParameter ;
+                             Comm:definition "Laser power parameter prescribing the power with which vectors are exposed for DownSkin fiat object parts"^^xsd:string ;
+                             Comm:definition_source "EOSPRINT 2"@en ;
+                             Comm:has_token_unit "W"@en ;
+                             rdfs:label "Laser power downskin"@en ;
+                             core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerEdgeParameter
+:LaserPowerEdgeParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :LaserPowerParameter ;
+                         Comm:definition "Laser power parameter prescribing with which vectors are exposed for Edge fiat object parts"^^xsd:string ;
+                         Comm:definition_source "EOSPRINT 2"@en ;
+                         Comm:has_token_unit "W"@en ;
+                         rdfs:label "Laser power edge"@en ;
+                         core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerInFillParameter
+:LaserPowerInFillParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :LaserPowerParameter ;
+                           Comm:definition "Laser power parameter prescribing with which vectors are exposed for InFill fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "W"@en ;
+                           rdfs:label "Laser power infill"@en ;
+                           core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerOnPartContourParameter
+:LaserPowerOnPartContourParameter rdf:type owl:Class ;
+                                  rdfs:subClassOf :LaserPowerParameter ;
+                                  Comm:definition "Laser power parameter prescribing with which vectors are exposed for OnPart Contour fiat object parts"^^xsd:string ;
+                                  Comm:definition_source "EOSPRINT 2"@en ;
+                                  Comm:has_token_unit "W"@en ;
+                                  rdfs:label "Laser power on part contour"@en ;
+                                  core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerParameter
+:LaserPowerParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                     Comm:definition "Laser power parameter prescribing the power with which vectors are exposed"@en ;
+                     Comm:definition_source "EOSPRINT 2"@en ;
+                     rdfs:label "Laser Power"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerParameterParameter
+:LaserPowerParameterParameter rdf:type owl:Class ;
+                              rdfs:subClassOf :LaserPowerParameter ;
+                              Comm:definition "Energy input parameter prescribing the power with which vectors are exposed"^^xsd:string ;
+                              Comm:definition_source "EOSPRINT 2"@en ;
+                              Comm:has_token_unit "W"@en ;
+                              rdfs:label "Laser power"@en ;
+                              core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserPowerUpSkinParameter
+:LaserPowerUpSkinParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :LaserPowerParameter ;
+                           Comm:definition "Laser power parameter prescribing the power with which vectors are exposed for UpSKin fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "W"@en ;
+                           rdfs:label "Laser power upskin"@en ;
+                           core:example "300 W"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedContourParameter
+:LaserSpeedContourParameter rdf:type owl:Class ;
+                            rdfs:subClassOf :LaserSpeedParameter ;
+                            Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Contour fiat object parts"^^xsd:string ;
+                            Comm:definition_source "EOSPRINT 2"@en ;
+                            Comm:has_token_unit "mm/s"@en ;
+                            rdfs:label "Laser speed contour"@en ;
+                            core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedDownContourParameter
+:LaserSpeedDownContourParameter rdf:type owl:Class ;
+                                rdfs:subClassOf :LaserSpeedParameter ;
+                                Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Down Contour fiat object parts"^^xsd:string ;
+                                Comm:definition_source "EOSPRINT 2"@en ;
+                                Comm:has_token_unit "mm/s"@en ;
+                                rdfs:label "Laser speed down contour"@en ;
+                                core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedDownSkinParameter
+:LaserSpeedDownSkinParameter rdf:type owl:Class ;
+                             rdfs:subClassOf :LaserSpeedParameter ;
+                             Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of DownSkin fiat object parts"^^xsd:string ;
+                             Comm:definition_source "EOSPRINT 2"@en ;
+                             Comm:has_token_unit "mm/s"@en ;
+                             rdfs:label "Laser speed downskin"@en ;
+                             core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedEdgeParameter
+:LaserSpeedEdgeParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :LaserSpeedParameter ;
+                         Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of Edge fiat object parts"^^xsd:string ;
+                         Comm:definition_source "EOSPRINT 2"@en ;
+                         Comm:has_token_unit "mm/s"@en ;
+                         core:example "400 mm/s"@en ,
+                                      "Laser Speed Edge"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedInFillParameter
+:LaserSpeedInFillParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :LaserSpeedParameter ;
+                           Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of InFill fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "mm/s"@en ;
+                           rdfs:label "Laser speed infill"@en ;
+                           core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedOnPartContourParameter
+:LaserSpeedOnPartContourParameter rdf:type owl:Class ;
+                                  rdfs:subClassOf :LaserSpeedParameter ;
+                                  Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of On Part Contour fiat object parts"^^xsd:string ;
+                                  Comm:has_token_unit "mm/s"@en ;
+                                  rdfs:label "Laser speed on part contour"@en ;
+                                  core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedParameter
+:LaserSpeedParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                     Comm:definition "Energy input parameter prescribing the speed of the laser during vector exposion"^^xsd:string ;
+                     Comm:definition_source "EOSPRINT 2"@en ;
+                     Comm:has_token_unit "mm/s"@en ;
+                     rdfs:label "Laser speed"@en ;
+                     core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/LaserSpeedUpSkinParameter
+:LaserSpeedUpSkinParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :LaserSpeedParameter ;
+                           Comm:definition "Laser Speed Parameter prescribing the speed of the laser during vector exposition of UpSKin fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "mm/s"@en ;
+                           rdfs:label "Laser speed upskin"@en ;
+                           core:example "400 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/Min.RadiusFactorParameter
+:Min.RadiusFactorParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                           Comm:definition "Edge parameter prescribing the completeness of apex-exosure depending on the ratio of apex outline to beam radius. Alternatively, this can be triggered over the edge factor."^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "No unit"@en ;
+                           rdfs:label "Minimum radius factor"@en ;
+                           core:example "0"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/Min.VectorLengthParameter
+:Min.VectorLengthParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                           Comm:definition "Hatch Parameter prescribing that if an UpDownSkin vector is smaller than the minimum length, then this UD vector is added to the neighbouring Infill vector"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "mm"@en ;
+                           rdfs:label "Minium vector length"@en ;
+                           core:example "0,1 mm"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/OffsetContourParameter
+:OffsetContourParameter rdf:type owl:Class ;
+                        rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                        Comm:definition "Contour parameter prescribing an offset of the contour relative to the exposure part boundary"^^xsd:string ;
+                        Comm:definition_source "EOSPRINT 2"@en ;
+                        Comm:has_token_unit "mm"@en ;
+                        rdfs:label "Offset contour"@en ;
+                        core:example "0,1 mm"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/OffsetEdgeParameter
+:OffsetEdgeParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                     Comm:definition "Edge parameter prescribing the spacial offset from beam path to the contour outline taking into account the current zone"^^xsd:string ;
+                     Comm:definition_source "EOSPRINT 2"@en ;
+                     Comm:has_token_unit "mm"@en ;
+                     rdfs:label "Offset edge"@en ;
+                     core:example "0,1 mm"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/OverlapWithInfillParameter
+:OverlapWithInfillParameter rdf:type owl:Class ;
+                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                            Comm:definition "Hatch Parameter prescribing the overlap between the UpDownSkin and infill area in x,y plane"^^xsd:string ;
+                            Comm:definition_source "EOSPRINT 2"@en ;
+                            Comm:has_token_unit "mm"@en ;
+                            rdfs:label "Overlap with infill"@en ;
+                            core:example "0,1 mm"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedDownSkinParameter
+:PatternfeaturesShiftedDownSkinParameter rdf:type owl:Class ;
+                                         rdfs:subClassOf :PatternfeaturesShiftedParameter ;
+                                         Comm:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane for DownSkin fiat object parts"^^xsd:string ;
+                                         Comm:definition_source "EOSPRINT 2"@en ;
+                                         Comm:has_token_unit "No Unit"@en ;
+                                         rdfs:comment "Boolean"@en ;
+                                         rdfs:label "Pattern features shifted down skin"@en ;
+                                         core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedInFillParameter
+:PatternfeaturesShiftedInFillParameter rdf:type owl:Class ;
+                                       rdfs:subClassOf :PatternfeaturesShiftedParameter ;
+                                       Comm:definition "Pattern features Shifted parameter prescribing a shift off the exposure pattern width in x,y plane for InFill fiat object parts"^^xsd:string ;
+                                       Comm:definition_source "EOSPRINT 2"@en ;
+                                       Comm:has_token_unit "No Unit"@en ;
+                                       rdfs:comment "Boolean"@en ;
+                                       rdfs:label "Pattern features shifted infill"@en ;
+                                       core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedParameter
+:PatternfeaturesShiftedParameter rdf:type owl:Class ;
+                                 rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                                 Comm:definition "PBF-LB/M Parameter prescribing a shift of the exposure pattern in successive layer by half the exposure pattern width in x,y plane"^^xsd:string ;
+                                 Comm:definition_source "EOSPRINT 2"@en ;
+                                 Comm:has_token_unit "No Unit"@en ;
+                                 rdfs:comment "Boolean"@en ;
+                                 rdfs:label "Pattern features shifted"@en ;
+                                 core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/PatternfeaturesShiftedUpSkinParameter
+:PatternfeaturesShiftedUpSkinParameter rdf:type owl:Class ;
+                                       rdfs:subClassOf :PatternfeaturesShiftedParameter ;
+                                       Comm:definition "Pattern features Shifted parameter prescribing a shift of the exposure pattern width in x,y plane for UpSkin fiat object parts"^^xsd:string ;
+                                       Comm:definition_source "EOSPRINT 2"@en ;
+                                       Comm:has_token_unit "No Unit"@en ;
+                                       rdfs:comment "Boolean"@en ;
+                                       rdfs:label "Pattern features shifted upskin"@en ;
+                                       core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/PowderBedFusionLaserBeamMetalMachine
+:PowderBedFusionLaserBeamMetalMachine rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( amo:AdditiveManufacturingMachine
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty Comm:is_input_of ;
+                                                                                   owl:someValuesFrom :ActOfPowderBedFusionLaserBeamMetal
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf amo:AdditiveManufacturingMachine ;
+                                      Comm:alternative_label "PBF-LB/M machine"@en ;
+                                      Comm:definition "Machine that uses a high-powered laser to selectively melt and fuse metal powder particles layer by layer to build complex parts and components"@en ;
+                                      Comm:definition_source "Expert"@en ;
+                                      rdfs:label "Powder Bed Fusion laser beam melting machine"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/RecoatingSpeedParameter
+:RecoatingSpeedParameter rdf:type owl:Class ;
+                         rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                         Comm:definition "Additive Manufacturing Process Parameter prescribing the recoater speed during the recoater step"^^xsd:string ;
+                         Comm:definition_source "EOSPRINT 2"@en ;
+                         Comm:has_token_unit "mm/s"@en ;
+                         rdfs:label "Recoating speed"@en ;
+                         core:example "150 mm/s"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/RidgeDownSkinParameter
+:RidgeDownSkinParameter rdf:type owl:Class ;
+                        rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                        Comm:definition "DownSkin Parameter that moves the downskin reation point, in the through the donwkin thickness defined layer, in the x-y plane"^^xsd:string ;
+                        Comm:definition_source "EOSPRINT 2"@en ;
+                        Comm:has_token_unit "No Unit"@en ;
+                        rdfs:label "Ridge downskin"@en ;
+                        core:example "3"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/RidgeUpSkinParameter
+:RidgeUpSkinParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                      Comm:definition "UpSkin Parameter that moves the downskin reation point, in the through the UpSkin thickness defined layer, in the x-y plane"^^xsd:string ;
+                      Comm:definition_source "EOSPRINT 2"@en ;
+                      Comm:has_token_unit "No Unit"@en ;
+                      rdfs:label "Ridge upskin"@en ;
+                      core:example "3"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingDownSkinParameter
+:SkywritingDownSkinParameter rdf:type owl:Class ;
+                             rdfs:subClassOf :SkywritingParameter ;
+                             Comm:definition "Skywriting parameter compensating the inertia of the optical system for DownSkin fiat object parts"^^xsd:string ;
+                             Comm:definition_source "EOSPRINT 2"@en ;
+                             Comm:has_token_unit "No unit"@en ;
+                             rdfs:comment "Boolean"@en ;
+                             rdfs:label "Skywriting downskin"@en ;
+                             core:example "false"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingInfillParameter
+:SkywritingInfillParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ExposurePatternUpSkinParameter ;
+                           Comm:definition "Skywriting parameter compensating the inertia of the optical system for InFill fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "No unit"@en ;
+                           rdfs:comment "Boolean"@en ;
+                           rdfs:label "Skywriting infill"@en ;
+                           core:example "false"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingParameter
+:SkywritingParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                     Comm:definition_source "EOSPRINT 2"@en ;
+                     rdfs:label "Skywriting"@en ;
+                     core:definition "Skywriting parameter compensating the inertia of the optical system"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/SkywritingUpSkinParameter
+:SkywritingUpSkinParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :SkywritingParameter ;
+                           Comm:definition "Skywriting parameter compensating the inertia of the optical system for UpSkin fiat object parts"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "No unit"@en ;
+                           rdfs:comment "Boolean"@en ;
+                           rdfs:label "Skywriting upskin"@en ;
+                           core:example "true"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessContourParameter
+:ThicknessContourParameter rdf:type owl:Class ;
+                           rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                           Comm:definition "Contour parameter prescribing the layer number in z-direction, in which the exposed areas underneath and above the current layer are considered, to determinde the conture exposure type"^^xsd:string ;
+                           Comm:definition_source "EOSPRINT 2"@en ;
+                           Comm:has_token_unit "No unit"@en ;
+                           rdfs:label "Thickness Contour"@en ;
+                           core:example "2"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessDownSkinParameter
+:ThicknessDownSkinParameter rdf:type owl:Class ;
+                            rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                            Comm:definition "DownSkin Parameter prescribing the layer number in z direction where Downskin is exposed"^^xsd:string ;
+                            Comm:definition_source "EOSPRINT 2"@en ;
+                            Comm:has_token_unit "No unit"@en ;
+                            rdfs:label "Thickness downskin"@en ;
+                            core:example "2"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ThicknessUpSkinParameter
+:ThicknessUpSkinParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                          Comm:definition "UpSkin Parameter prescribing the layer number in z direction where UpSkin is exposed"^^xsd:string ;
+                          Comm:definition_source "EOSPRINT 2"@en ;
+                          Comm:has_token_unit "No unit"@en ;
+                          rdfs:label "Thickness upskin"@en ;
+                          core:example "2"@en .
+
+
+###  https://w3id.org/ODE_AM/PBFAO/ThresholdParameter
+:ThresholdParameter rdf:type owl:Class ;
+                    rdfs:subClassOf :ActOfPowderBedFusionProcessParameter ;
+                    Comm:definition "Edge parameter prescribing that if the ratio beam-outline to contour-outline extends \"threshold time beamoffset\", edges will be exposed with edgefactor of 1,45"^^xsd:string ;
+                    Comm:definition_source "EOSPRINT 2"@en ;
+                    Comm:has_token_unit "No Unit"@en ;
+                    rdfs:label "Threshold parameter"@en ;
+                    core:example "2"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ODE_AM/PBFAO/EOS_M290_CartesianCoordinateSystem
+:EOS_M290_CartesianCoordinateSystem rdf:type owl:NamedIndividual ,
+                                             Comm:CartesianCoordinateSystem .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+Comm:SpatialOrientation Comm:alternative_label "Angle of orientation" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:pn rdf:type swrl:Variable .
+
+:art rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "clearlyidntify"^^xsd:string ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate Comm:PartNumber ;
+                           swrl:argument1 :pn
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate Comm:designates ;
+                                      swrl:argument1 :pn ;
+                                      swrl:argument2 :art
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :clearly_identifies ;
+                           swrl:argument1 :pn ;
+                           swrl:argument2 :art
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

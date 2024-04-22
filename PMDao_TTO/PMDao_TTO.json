@@ -1,0 +1,297 @@
+{
+  "analysis_date": "2024-04-15T15:21:37.109784",
+  "changes": null,
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 2,
+      "items": [
+        "https://w3id.org/pmd/tto/TensileTestingMachine",
+        "https://w3id.org/pmd/tto/TensileTestNode"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 44,
+      "items": [
+        "https://w3id.org/pmd/tto/MinimumCrossSectionalAreaAfterFracture",
+        "https://w3id.org/pmd/tto/OriginalCrossSectionalArea",
+        "https://w3id.org/pmd/tto/DiameterAfterFracture",
+        "https://w3id.org/pmd/tto/OriginalDiameter",
+        "https://w3id.org/pmd/tto/PercentagePlasticExtensionAtMaximumForce",
+        "https://w3id.org/pmd/tto/PercentageTotalExtensionAtMaximumForce",
+        "https://w3id.org/pmd/tto/PercentagePermanentExtension",
+        "https://w3id.org/pmd/tto/PercentageTotalExtensionAtFracture",
+        "https://w3id.org/pmd/tto/PercentageYieldPointExtension",
+        "https://w3id.org/pmd/tto/ProofStrengthTotalExtension",
+        "https://w3id.org/pmd/tto/MaximumForce",
+        "https://w3id.org/pmd/tto/ChangeOfTransverseDimension",
+        "https://w3id.org/pmd/tto/GaugeLength",
+        "https://w3id.org/pmd/tto/ExtensometerGaugeLength",
+        "https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture",
+        "https://w3id.org/pmd/tto/OriginalGaugeLength",
+        "https://w3id.org/pmd/tto/ParallelLength",
+        "https://w3id.org/pmd/tto/GeometryShape",
+        "https://w3id.org/pmd/tto/TypeGaugeLengthMarks",
+        "https://w3id.org/pmd/tto/CrossheadSeparationRate",
+        "https://w3id.org/pmd/tto/EstimatedStrainRateOverTheParallelLength",
+        "https://w3id.org/pmd/tto/StrainRate",
+        "https://w3id.org/pmd/tto/StressRate",
+        "https://w3id.org/pmd/tto/OriginalThickness",
+        "https://w3id.org/pmd/tto/ThicknessAfterFracture",
+        "https://w3id.org/pmd/tto/OriginalWidth",
+        "https://w3id.org/pmd/tto/WidthAfterFracture",
+        "https://w3id.org/pmd/tto/CrossheadSeparation",
+        "https://w3id.org/pmd/tto/Elongation",
+        "https://w3id.org/pmd/tto/PercentageElongation",
+        "https://w3id.org/pmd/tto/PercentageElongationAfterFracture",
+        "https://w3id.org/pmd/tto/PercentagePermanentElongation",
+        "https://w3id.org/pmd/tto/LowerYieldStrength",
+        "https://w3id.org/pmd/tto/TensileStrength",
+        "https://w3id.org/pmd/tto/PercentageReductionOfArea",
+        "https://w3id.org/pmd/tto/ProofStrength",
+        "https://w3id.org/pmd/tto/ProofStrengthPlasticExtension",
+        "https://w3id.org/pmd/tto/Rp01",
+        "https://w3id.org/pmd/tto/Rp02",
+        "https://w3id.org/pmd/tto/SlopeOfTheElasticPart",
+        "https://w3id.org/pmd/tto/TransitionPoint",
+        "https://w3id.org/pmd/tto/TransitionPointTestingRate",
+        "https://w3id.org/pmd/tto/UpperYieldStrength",
+        "https://w3id.org/pmd/tto/YieldStrength"
+      ]
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 1,
+      "items": [
+        "https://w3id.org/pmd/tto/TensileTest"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 47,
+    "owl:ObjectProperty": 1,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 5,
+    "items": [
+      "https://orcid.org/0000-0001-7192-7143",
+      "https://orcid.org/0000-0002-3717-7104",
+      "https://orcid.org/0000-0002-7094-5371",
+      "https://orcid.org/0000-0002-9014-2920",
+      "https://orcid.org/0000-0003-4971-3645"
+    ]
+  },
+  "namespaces": {
+    "count": 13,
+    "items": [
+      "https://w3id.org/pmd/tto/",
+      "https://orcid.org/",
+      "https://w3id.org/pmd/co/",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://w3id.org/pmd/",
+      "http://www.w3.org/ns/prov#",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2002/07/owl#",
+      "http://purl.org/dc/elements/1.1/"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 38,
+        "objects": 36,
+        "subclasses": 48,
+        "subproperties": 1,
+        "subclassesproperties": 49,
+        "total": 123
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 38,
+        "objects": 44,
+        "subclasses": 125,
+        "subproperties": 1,
+        "subclassesproperties": 126,
+        "total": 208
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 47,
+        "subproperties": 0,
+        "subclassesproperties": 47,
+        "total": 47
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ]
+  }
+}

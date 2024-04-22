@@ -1,0 +1,332 @@
+@prefix : <https://w3id.org/ODE_AM/AMAO/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Comm: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ManufacturingOntology: <https://w3id.org/ODE_AM/MAO/> .
+@base <https://w3id.org/ODE_AM/AMAO/> .
+
+<https://w3id.org/ODE_AM/AMAO> rdf:type owl:Ontology ;
+                                owl:imports "MAO.ttl" ;
+                                dc:creator "Thomas Bjarsch" ;
+                                dc:date "16.01.2024" ;
+                                dc:license "CC-BY-4.0" ;
+                                dc:title "Fraunhofer ICGV AM Application Ontology" ;
+                                rdfs:comment "It uses Basic Formal Ontology as a Top- and Common Core Ontologies as Mid-Level-Ontologies. Fraunhofer IGCV Manufacturing Application Ontology is used as direct import." ,
+                                             "This ontology, created for use at Fraunhofer IGCV, includes essential classes specifically relevant to Project ODE_AM within the domain of Additive Manufacturing. It is designed with the capability for successive expansions to accommodate future developments and additional requirements in this field." ,
+                                             "This ontology, designed for use in data management within the Fraunhofer IGCV's project-specific web-app, includes only those classes that are directly relevant to the project's needs. It primarily integrates existing classes from the Basic Formal Ontology (BFO) and the Common Core Ontologies (CCO), selectively chosen to fit the considered use cases in our project. This focused approach ensures efficient and relevant data categorization and retrieval tailored to our specific project requirements." ;
+                                owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/alternative_label
+Comm:alternative_label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition
+Comm:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/definition_source
+Comm:definition_source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_token_unit
+Comm:has_token_unit rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+core:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+core:example rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_output
+Comm:has_output rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_part_of_process
+Comm:is_part_of_process rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/prescribes
+Comm:prescribes rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/ODE_AM/MAO/has_x_coordinate_value
+ManufacturingOntology:has_x_coordinate_value rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty .
+
+
+###  https://w3id.org/ODE_AM/MAO/has_y_coordinate_value
+ManufacturingOntology:has_y_coordinate_value rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/FiatObjectPart
+obo:FiatObjectPart rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/Process
+obo:Process rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/ZeroDimensionalSpatialRegion
+obo:ZeroDimensionalSpatialRegion rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfManufacturing
+Comm:ActOfManufacturing rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Artifact
+Comm:Artifact rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact
+Comm:InformationBearingArtifact rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
+Comm:IntentionalAct rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PerformanceSpecification
+Comm:PerformanceSpecification rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SpatialOrientation
+Comm:SpatialOrientation rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturing
+:ActOfAdditiveManufacturing rdf:type owl:Class ;
+                            rdfs:subClassOf Comm:ActOfManufacturing ;
+                            Comm:alternative_label "3D printing"@en ;
+                            Comm:definition "Process of joining materials to make parts from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies" ;
+                            Comm:definition_source "ISO/ASTM DIS 52900:2018(E)" ;
+                            rdfs:label "Additive manufacturing"@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ActOfAdditiveManufacturingProcessParameter
+:ActOfAdditiveManufacturingProcessParameter rdf:type owl:Class ;
+                                            rdfs:subClassOf Comm:PerformanceSpecification ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty Comm:prescribes ;
+                                                              owl:someValuesFrom :ActOfAdditiveManufacturing
+                                                            ] ;
+                                            Comm:definition_source "Expert"@en ;
+                                            rdfs:label "Additive manufacturing process parameter"@en ;
+                                            core:definition "A performance specification prescribing the operational conditions of an entity during an additive manufacturing process" ;
+                                            core:example "A performane specification prescribing the build platform temperature in °C" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ActOfSlicing
+:ActOfSlicing rdf:type owl:Class ;
+              rdfs:subClassOf Comm:IntentionalAct ;
+              Comm:definition_source "VDI 3405" ;
+              rdfs:label "Slicing"@en ;
+              core:definition "Slicing is an essential prefabrication stage for all additive manufacturing processes. It involves slicing the facet (volume) model into several successive layers and recording the information contained within each layer, i.e. identifying the parameters required to generate the individual contour lines within each layer. Since the sliced contour data are no longer connected to one another in the z-axis, subsequent scaling is no longer possible. With some technologies, this process is automatically performed by the software once the necessary parameters (e.g. layer thickness) have been set. Some fabrication systems require separate software specified by the manufacturer to prepare and store this layer data." .
+
+
+###  https://w3id.org/ODE_AM/AMAO/AdditiveManufacturedPart
+:AdditiveManufacturedPart rdf:type owl:Class ;
+                          rdfs:subClassOf Comm:Artifact ;
+                          Comm:definition_source "ISO/ASTM 529000:2015(E)" ;
+                          rdfs:label "Additive Manufactured Part"@en ;
+                          core:definition "Joined material forming a functional element that could constitute all or a section of an intended product" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingInstructionFile
+:AdditiveManufacturingInstructionFile rdf:type owl:Class ;
+                                      rdfs:subClassOf Comm:InformationBearingArtifact ;
+                                      Comm:alternative_label "buildjob file"@en ;
+                                      Comm:definition_source "Expert"@en ;
+                                      rdfs:comment "The file type and content may vary between different machine types and suppliers"@en ;
+                                      rdfs:label "Additive manufacturing instruction file"@en ;
+                                      core:definition "File containing the instructions for the 3D-Printer for the manufacturing process, typically containing path-plans, geometries and processing parameters."@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/AdditiveManufacturingMachine
+:AdditiveManufacturingMachine rdf:type owl:Class ;
+                              rdfs:subClassOf ManufacturingOntology:Machine ;
+                              Comm:alternative_label "3D Printer" ;
+                              Comm:definition_source "ISO/ASTM 52900:2015(E)" ;
+                              rdfs:label "Additive manufacturing machine"@en ;
+                              core:definition "Section of the additive manufacturing system including hardware, machine control software, required set-up software and peripheral accessories necessary to complete a build cycle for poducing parts" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/BuildPlatformTemperatureParameter
+:BuildPlatformTemperatureParameter rdf:type owl:Class ;
+                                   rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+                                   Comm:definition "Additive Manufacturing Process Parameter prescribing the temperature of the buildplatform during an additive manufacturing process." ;
+                                   Comm:has_token_unit "'comm:Degree Celsius Measurement Unit'" ;
+                                   core:example "An Additive Manufacturing Process Parameter prescribing a build platform temperature of 70 °C" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/InclinationRelativeToBuildDirection
+:InclinationRelativeToBuildDirection rdf:type owl:Class ;
+                                     rdfs:subClassOf Comm:SpatialOrientation ;
+                                     rdfs:label "Inclination relative to build direction"@en ;
+                                     core:definition "Angle between the axis of a subject and the build direction (perpendicular to buidlplatofrm surface)."@en ;
+                                     core:example "25°"@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/InclinationRelativeToBuildplatform
+:InclinationRelativeToBuildplatform rdf:type owl:Class ;
+                                    rdfs:subClassOf Comm:SpatialOrientation ;
+                                    Comm:definition "Angle at which a part is oriented with respect to the horizontal plane of the printing surface." ;
+                                    rdfs:comment "Can be described qualitatitevly (\"Upright\") or in degrees (45 °)" ;
+                                    core:example "45 °" ,
+                                                 "Upright" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/LayerHeightParameter
+:LayerHeightParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+                      Comm:definition "Additive Manufacturing Process Parameter prescribing the height of single joined layers during an additive manufacturing process" ;
+                      Comm:has_token_unit "'comm:Millimeter Measurement Unit'" ;
+                      core:example "An Additive Manufacturing Process Parameter prescribing a layer height of 0.2 mm" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/OpenJobFile
+:OpenJobFile rdf:type owl:Class ;
+             rdfs:subClassOf :AdditiveManufacturingInstructionFile ;
+             Comm:definition "Additive manufacturing instruction file with ending .openjob"@en ;
+             rdfs:label "Openjob file"@en ;
+             core:example "i.e. used for machine EOS M290"@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/ParametersetInAdditiveManufacturing
+:ParametersetInAdditiveManufacturing rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( <http://org.semanticweb.owlapi/error#Error1>
+                                                                                ManufacturingOntology:Standard
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty Comm:prescribes ;
+                                                                                  owl:someValuesFrom :ActOfAdditiveManufacturing
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     Comm:definition "Collection of process parameters and their specific values that are used to configure or define the behavior of an additive manufacturing process." ;
+                                     rdfs:label "Parameterset in additive manufacturing"@en ;
+                                     core:example "A set of parameters used in a company for a specific material"@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/PointOnBuildPlatform
+:PointOnBuildPlatform rdf:type owl:Class ;
+                      rdfs:subClassOf obo:ZeroDimensionalSpatialRegion ;
+                      rdfs:comment "Usually dscribed by using x- and y-coordinates in a local coordinate system located on the build platform"@en ;
+                      rdfs:label "Point on build platform"@en ;
+                      core:definition "The spatial region occupied at some time instant by a specified point (i.e. center of gravity) of a printed part on the buildplatform." .
+
+
+###  https://w3id.org/ODE_AM/AMAO/PrintingTemperatureParameter
+:PrintingTemperatureParameter rdf:type owl:Class ;
+                              rdfs:subClassOf :ActOfAdditiveManufacturingProcessParameter ;
+                              Comm:definition "Additive Manufacturing Process Parameter prescribing the temperature of the material adding element" ;
+                              Comm:has_token_unit "'comm:Degree Celsius Measurement Unit'" ;
+                              core:example "An Additive Manufacturing Parameter prescribing the nozzle temperature for Fused Filament Fabrication" .
+
+
+###  https://w3id.org/ODE_AM/AMAO/SubprocessOfActOfAdditiveManufacturing
+:SubprocessOfActOfAdditiveManufacturing rdf:type owl:Class ;
+                                        owl:equivalentClass [ owl:intersectionOf ( :ActOfAdditiveManufacturing
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty Comm:is_part_of_process ;
+                                                                                     owl:someValuesFrom :ActOfAdditiveManufacturing
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
+                                        rdfs:subClassOf obo:Process ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty Comm:has_output ;
+                                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass Comm:Artifact
+                                                        ] ;
+                                        Comm:definition "An act of additive manufacturing process which is part of the superior AM-process carrying the characteristics for the manufacturing of one specific part (parameters, geometries etc.)"@en ;
+                                        rdfs:label "Subprocess of additive manufacturing"@en ;
+                                        core:example "During one AM-Process 8 different parts may be manufactured. Each of this 8 processes is a subprocess using specific geometries and parameters."@en .
+
+
+###  https://w3id.org/ODE_AM/AMAO/SupportStructure
+:SupportStructure rdf:type owl:Class ;
+                  rdfs:subClassOf obo:FiatObjectPart ;
+                  Comm:definition_source "VDI 3405" ;
+                  rdfs:label "Support Structure"@en ;
+                  core:definition """Auxiliary geometry designed to mechanically sup-
+port overhanging sections of the part""" .
+
+
+###  https://w3id.org/ODE_AM/MAO/Machine
+ManufacturingOntology:Machine rdf:type owl:Class .
+
+
+###  https://w3id.org/ODE_AM/MAO/Standard
+ManufacturingOntology:Standard rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ODE_AM/AMAO/laid
+:laid rdf:type owl:NamedIndividual ,
+               :InclinationRelativeToBuildplatform .
+
+
+###  https://w3id.org/ODE_AM/AMAO/upright
+:upright rdf:type owl:NamedIndividual ,
+                  :InclinationRelativeToBuildplatform .
+
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

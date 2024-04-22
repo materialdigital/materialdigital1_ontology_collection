@@ -14,10 +14,10 @@ HAP 4 is preparing an overview of all ontologies created in the partner projects
 | [GlasDigital](GlasDigital/) | https://w3id.org/pmd/glass-ontology/ | https://github.com/materialdigital/glasdigital-ontology |
 | [iBain](iBain/) | | |
 | [LeBeDigital](LeBeDigital/) | https://w3id.org/cpto | https://github.com/BAMresearch/LebeDigital/tree/main/lebedigital/ConcreteOntology |
-| [DIGITRUBBER](DIGITRUBBER/) | | |
-| [StahlDigital](StahlDigital/) | | |
-| [KupferDigital](KupferDigital/) | | |
-| [DigiBatMat](DigiBatMat/) | | |
+| [DIGITRUBBER](DIGITRUBBER/) | https://www.tib.eu/digitrubber# | https://github.com/TIBHannover/DIGIT-RUBBER |
+| [StahlDigital](StahlDigital/) | https://w3id.org/steel/ProcessOntology/ | https://github.com/materialdigital/stahldigital-ontology-public |
+| [KupferDigital](KupferDigital/) | https://gitlab.com/kupferdigital/ | https://gitlab.com/kupferdigital/ |
+| [DigiBatMat](DigiBatMat/) | not public | not public |
 
 ## Technical requirements for ontologies
 These requirements as well as the [Additional requirements for publishing ontologies](README.md#additional-requirements-for-publishing-ontologies) below are identical to the information in the spreadsheet, that was attached to the email about the umbrella paper.

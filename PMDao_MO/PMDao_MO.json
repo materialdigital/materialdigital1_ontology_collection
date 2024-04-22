@@ -1,0 +1,397 @@
+{
+  "analysis_date": "2024-04-15T15:15:54.768813",
+  "changes": null,
+  "reasoner": {
+    "reasoner": "pellet",
+    "version": "2.2.0"
+  },
+  "imports": {
+    "count": 1,
+    "items": [
+      "https://w3id.org/pmd/co/2.0.7"
+    ]
+  },
+  "processingnodes": {
+    "pmdco-2.0.7": {
+      "count": 37,
+      "items": [
+        "https://w3id.org/pmd/mo/ElectronMicroprobe",
+        "https://w3id.org/pmd/mo/ElectronProbeMicroAnalyzer",
+        "https://w3id.org/pmd/mo/ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/ScanningProbeMicroscope",
+        "https://w3id.org/pmd/mo/ScanningTunnelingMicroscope",
+        "https://w3id.org/pmd/mo/TransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/CryoTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/ElectronTomograph",
+        "https://w3id.org/pmd/mo/EnergyFilteredTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/HighResolutionTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/HighAngleAnnularDarkFieldScanningTransmissionElectronMicroscope",
+        "https://w3id.org/pmd/mo/TransmissionElectronAberrationCorrectedMicroscope",
+        "https://w3id.org/pmd/mo/IonMicroscope",
+        "https://w3id.org/pmd/mo/FieldIonMicroscope",
+        "https://w3id.org/pmd/mo/FocusedIonBeam-ScanningElectronMicroscope",
+        "https://w3id.org/pmd/mo/HeliumIonMicroscope",
+        "https://w3id.org/pmd/mo/OpticalMicroscope",
+        "https://w3id.org/pmd/mo/LightMicroscope",
+        "https://w3id.org/pmd/mo/PolarizedLightMicroscope",
+        "https://w3id.org/pmd/mo/CondensorLense",
+        "https://w3id.org/pmd/mo/Electrode",
+        "https://w3id.org/pmd/mo/Anode",
+        "https://w3id.org/pmd/mo/Cathode",
+        "https://w3id.org/pmd/mo/Gun",
+        "https://w3id.org/pmd/mo/FieldEmissionGun",
+        "https://w3id.org/pmd/mo/ImageFilter",
+        "https://w3id.org/pmd/mo/GatanImageFilter",
+        "https://w3id.org/pmd/mo/Monochromator",
+        "https://w3id.org/pmd/mo/PolePiece",
+        "https://w3id.org/pmd/mo/Scintillator",
+        "https://w3id.org/pmd/mo/SiliconDriftDetector",
+        "https://w3id.org/pmd/mo/Source",
+        "https://w3id.org/pmd/mo/Spectrometer",
+        "https://w3id.org/pmd/mo/SoftXRayEmissionSpectrometer"
+      ]
+    },
+    "pmdco-v0.1-beta": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "valueobjects": {
+    "pmdco-2.0.7": {
+      "count": 38,
+      "items": [
+        "https://w3id.org/pmd/mo/DiskOfLeastConfusion",
+        "https://w3id.org/pmd/mo/FocalPlane",
+        "https://w3id.org/pmd/mo/WorkingDistance",
+        "https://w3id.org/pmd/mo/CameraLength",
+        "https://w3id.org/pmd/mo/FocalLength",
+        "https://w3id.org/pmd/mo/DwellTime",
+        "https://w3id.org/pmd/mo/FlybackTime",
+        "https://w3id.org/pmd/mo/FrameFlybackTime",
+        "https://w3id.org/pmd/mo/FrameTime",
+        "https://w3id.org/pmd/mo/WaitTime",
+        "https://w3id.org/pmd/mo/Aberration",
+        "https://w3id.org/pmd/mo/ChromaticAberration",
+        "https://w3id.org/pmd/mo/SphericalAberration",
+        "https://w3id.org/pmd/mo/Angle",
+        "https://w3id.org/pmd/mo/ConvergenceAngle",
+        "https://w3id.org/pmd/mo/Current",
+        "https://w3id.org/pmd/mo/BeamCurrent",
+        "https://w3id.org/pmd/mo/EmissionCurrent",
+        "https://w3id.org/pmd/mo/FilamentCurrent",
+        "https://w3id.org/pmd/mo/ProbeCurrent",
+        "https://w3id.org/pmd/mo/Efficiency",
+        "https://w3id.org/pmd/mo/CollectionEfficiency",
+        "https://w3id.org/pmd/mo/DetectorQuantumEfficiency",
+        "https://w3id.org/pmd/mo/Energy",
+        "https://w3id.org/pmd/mo/BeamEnergy",
+        "https://w3id.org/pmd/mo/EnergyLoss",
+        "https://w3id.org/pmd/mo/Magnification",
+        "https://w3id.org/pmd/mo/PixelSize",
+        "https://w3id.org/pmd/mo/ProbeSize",
+        "https://w3id.org/pmd/mo/Resolution",
+        "https://w3id.org/pmd/mo/AtomicResolution",
+        "https://w3id.org/pmd/mo/EnergyResolution",
+        "https://w3id.org/pmd/mo/SpatialResolution",
+        "https://w3id.org/pmd/mo/Voltage",
+        "https://w3id.org/pmd/mo/AccelerationVoltage",
+        "https://w3id.org/pmd/mo/ExtractionVoltage",
+        "https://w3id.org/pmd/mo/Volume",
+        "https://w3id.org/pmd/mo/InteractionVolume"
+      ]
+    }
+  },
+  "processes": {
+    "pmdco-2.0.7": {
+      "count": 56,
+      "items": [
+        "https://w3id.org/pmd/mo/ScanningElectronMicroscopy",
+        "https://w3id.org/pmd/mo/AtmosphericScanningElectronMicroscopy",
+        "https://w3id.org/pmd/mo/ElectronChannelingContrastImaging",
+        "https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscopy",
+        "https://w3id.org/pmd/mo/FieldEmissionScanningElectronMicroscopy",
+        "https://w3id.org/pmd/mo/OrientationImagingMicroscopy",
+        "https://w3id.org/pmd/mo/ScanningProbeMicroscopy",
+        "https://w3id.org/pmd/mo/ScanningTunnelingMicroscopy",
+        "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/BrightFieldTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/DynamicTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/ElectronTomography",
+        "https://w3id.org/pmd/mo/CryoElectronTomography",
+        "https://w3id.org/pmd/mo/EnvironmentalTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/HighResolutionTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/AnnularBrightFieldScanningTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/AnnularDarkFieldScanningTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy-ElectronEnergyLossSpectroscopy",
+        "https://w3id.org/pmd/mo/4D-ScanningTransmissionElectronMicroscopy",
+        "https://w3id.org/pmd/mo/LightMicroscopy",
+        "https://w3id.org/pmd/mo/ConfocalLaserScanningMicroscopy",
+        "https://w3id.org/pmd/mo/FluorescenceMicroscopy",
+        "https://w3id.org/pmd/mo/PolarizedLightMicroscopy",
+        "https://w3id.org/pmd/mo/IonMicroscopy",
+        "https://w3id.org/pmd/mo/FieldIonMicroscopy",
+        "https://w3id.org/pmd/mo/FocusedIonBeamScanningElectronMicroscopy",
+        "https://w3id.org/pmd/mo/HeliumIonMicroscopy",
+        "https://w3id.org/pmd/mo/DynamicFocusCorrection",
+        "https://w3id.org/pmd/mo/DynamicRefocusing",
+        "https://w3id.org/pmd/mo/Reconstruction",
+        "https://w3id.org/pmd/mo/TomographicReconstruction",
+        "https://w3id.org/pmd/mo/3DReconstruction",
+        "https://w3id.org/pmd/mo/Spectroscopy",
+        "https://w3id.org/pmd/mo/AugerElectronSpectroscopy",
+        "https://w3id.org/pmd/mo/ElectronEnergyLossSpectroscopy",
+        "https://w3id.org/pmd/mo/FourierTransformInfraredSpectroscopy",
+        "https://w3id.org/pmd/mo/SecondaryIonMassSpectrometry",
+        "https://w3id.org/pmd/mo/TimeOfFlightSecondaryIonMassSpectrometry",
+        "https://w3id.org/pmd/mo/XRayAbsorptionNearEdgeSpectroscopy",
+        "https://w3id.org/pmd/mo/TiltCorrection",
+        "https://w3id.org/pmd/mo/XRayAnalysis",
+        "https://w3id.org/pmd/mo/XRayMapping",
+        "https://w3id.org/pmd/mo/XRayAbsorptionSpectroscopy",
+        "https://w3id.org/pmd/mo/XRayFluorescence",
+        "https://w3id.org/pmd/mo/XRayPhotoelectronSpectroscopy",
+        "https://w3id.org/pmd/mo/XRayMicroanalysis",
+        "https://w3id.org/pmd/mo/EnergyDispersiveXRaySpectroscopy",
+        "https://w3id.org/pmd/mo/MechanicalPolishing",
+        "https://w3id.org/pmd/mo/PhysicalProcess",
+        "https://w3id.org/pmd/mo/Diffraction",
+        "https://w3id.org/pmd/mo/ElectronDiffraction",
+        "https://w3id.org/pmd/mo/ElectronBackscatterDiffraction",
+        "https://w3id.org/pmd/mo/SelectedAreaElectronDiffraction",
+        "https://w3id.org/pmd/mo/XRayDiffraction",
+        "https://w3id.org/pmd/mo/InelasticScattering"
+      ]
+    }
+  },
+  "objects": {
+    "pmdco-2.0.7": {
+      "count": 11,
+      "items": [
+        "https://w3id.org/pmd/mo/Beam",
+        "https://w3id.org/pmd/mo/CoherentBeam",
+        "https://w3id.org/pmd/mo/ElectronBeam",
+        "https://w3id.org/pmd/mo/ElectronProbe",
+        "https://w3id.org/pmd/mo/FocusedBeam",
+        "https://w3id.org/pmd/mo/IncidentBeam",
+        "https://w3id.org/pmd/mo/IonBeam",
+        "https://w3id.org/pmd/mo/MonochromaticBeam",
+        "https://w3id.org/pmd/mo/PrimaryBeam",
+        "https://w3id.org/pmd/mo/BeamPath",
+        "https://w3id.org/pmd/mo/SurfaceStructure"
+      ]
+    }
+  },
+  "definitioncounts": {
+    "owl:Class": 145,
+    "owl:ObjectProperty": 0,
+    "owl:DatatypeProperty": 0
+  },
+  "creators_contributors": {
+    "count": 2,
+    "items": [
+      "https://orcid.org/0000-0002-3717-7104",
+      "https://orcid.org/0000-0002-7094-5371"
+    ]
+  },
+  "namespaces": {
+    "count": 20,
+    "items": [
+      "https://cmrf.research.uiowa.edu/",
+      "http://www.w3.org/2002/07/owl#",
+      "https://www.jeol.co.jp/en/words/emterms/",
+      "http://purl.org/dc/elements/1.1/",
+      "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/",
+      "https://w3id.org/pmd/co/",
+      "https://doi.org/10.1017/",
+      "https://www.globalsino.com/EM/",
+      "http://creativecommons.org/licenses/by/",
+      "https://doi.org/10.1016/",
+      "https://w3id.org/pmd/",
+      "http://purl.org/dc/terms/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://www.iso.org/obp/ui/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "https://orcid.org/",
+      "https://w3id.org/pmd/mo/",
+      "https://en.wikipedia.org/wiki/",
+      "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#",
+      "https://doi.org/10.1007/"
+    ]
+  },
+  "tlos": {
+    "original": {
+      "pmdco-2.0.7": {
+        "predicates": 162,
+        "objects": 54,
+        "subclasses": 145,
+        "subproperties": 0,
+        "subclassesproperties": 145,
+        "total": 361
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    },
+    "reasoned": {
+      "pmdco-2.0.7": {
+        "predicates": 162,
+        "objects": 54,
+        "subclasses": 337,
+        "subproperties": 0,
+        "subclassesproperties": 337,
+        "total": 553
+      },
+      "pmdco-v0.1-beta": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "emmo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "cco": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "bfo": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "ro": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "iao": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "prov-o": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 145,
+        "subproperties": 0,
+        "subclassesproperties": 145,
+        "total": 145
+      },
+      "qudt": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      },
+      "chebi": {
+        "predicates": 0,
+        "objects": 0,
+        "subclasses": 0,
+        "subproperties": 0,
+        "subclassesproperties": 0,
+        "total": 0
+      }
+    }
+  },
+  "license": {
+    "count": 1,
+    "items": [
+      "http://creativecommons.org/licenses/by/4.0"
+    ]
+  }
+}
