@@ -1,0 +1,3677 @@
+@prefix : <http://w3id.org/sensotwin/applicationontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wao: <http://www.w3.org/ns/oa#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix stao: <http://w3id.org/sensotwin/applicationontology> .
+@base <http://w3id.org/sensotwin/applicationontology> .
+
+<http://w3id.org/sensotwin/applicationontology> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <http://w3id.org/sensotwin/applicationontology/1.0.1.> ;
+                                                 owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                                                 <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0009-0004-1208-3971> ;
+                                                 <http://purl.org/dc/terms/created> "19.01.2024"@en ;
+                                                 <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                                 <http://purl.org/dc/terms/title> "SensoTwin Application Ontology"@en ;
+                                                 rdfs:comment """Diese Ontologie beschreibt Faserverbundwerkstoffe entsprechend den Anforderungen im Projekt SensoTwin, sie ist weiterhin in Entwicklung.
+
+Sie kümmert sich um: 
+verwendete Materialien
+Produktionsprozesse 
+Prüfverfahren, Parameter und Ergebnisse
+Simulation
+und Bauteilgeometrie
+
+Enthaltene Instanzen dienen als Proof of Concept bzw. als beispielhafte Anwendungen."""@de ,
+                                                              """This ontology describes fibre composites according to the needs in the project SensoTwin, still under development.
+
+It takes care of: 
+used materials
+production processes 
+testing processes, parameters and results
+simulation
+and componentgeometry
+
+Included instances serve as proof of concept or as exemplary applications."""@en ,
+                                                              """Usage of Ontologies:
+PMDCO
+PMDSI (old)
+qudt
+Prov
+IAO"""@en ;
+                                                 owl:versionInfo "1.0.1."@de .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#quantityAmount
+:quantityAmount rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/co/P7825
+<https://w3id.org/pmd/co/P7825> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/sensotwin/applicationontology#hasCharacteristic
+:hasCharacteristic rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:range :Resource ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+                   rdfs:label "has characteristic"@en ,
+                              "hat die Eigenschaft"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasFibreLength
+:hasFibreLength rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdf:type owl:FunctionalProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasFinalProcess
+:hasFinalProcess rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isFinalProcessOf .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasHeaderField
+:hasHeaderField rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :DataResource ;
+                rdfs:range :HeaderField ;
+                rdfs:comment "Bieten Namen und/oder eine Beschreibung für jede Überschrift einer Datenressource"@de ,
+                             "Provides a name or description for each header field in a data resource" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasInfluenceOn
+:hasInfluenceOn rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isInfluencedBy .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasInitialProcess
+:hasInitialProcess rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :isInitialProcessOf .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdf:type owl:TransitiveProperty ;
+          rdfs:label "has Input"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasNext
+:hasNext rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :hasPrevious ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( <https://w3id.org/pmd/co/Process>
+                                     <https://w3id.org/pmd/co/ProcessingNode>
+                                   )
+                     ] ;
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( <https://w3id.org/pmd/co/Process>
+                                    <https://w3id.org/pmd/co/ProcessingNode>
+                                  )
+                    ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:label "hasOutput"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasPrevious
+:hasPrevious rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasProperty
+:hasProperty rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:label "hasProperty"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasUnit
+:hasUnit rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasVacuumLossPerMinute
+:hasVacuumLossPerMinute rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasVacuumPump
+:hasVacuumPump rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isFinalProcessOf
+:isFinalProcessOf rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isInfluencedBy
+:isInfluencedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isInitialProcessOf
+:isInitialProcessOf rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isManufacturerOf
+:isManufacturerOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#usesVacuumPumpMode
+:usesVacuumPumpMode rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/pmd/co/composedOf
+<https://w3id.org/pmd/co/composedOf> rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf <https://w3id.org/pmd/co/composes> .
+
+
+###  https://w3id.org/pmd/co/composes
+<https://w3id.org/pmd/co/composes> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/executedBy
+<https://w3id.org/pmd/co/executedBy> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     owl:inverseOf <https://w3id.org/pmd/co/executes> ;
+                                     rdfs:label "executedBy"@en .
+
+
+###  https://w3id.org/pmd/co/executes
+<https://w3id.org/pmd/co/executes> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://w3id.org/sensotwin/applicationontology#HasOffsetSprueAndCast
+:HasOffsetSprueAndCast rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#OWLDataProperty_88d26209_4637_4071_bca7_394878794b43
+:OWLDataProperty_88d26209_4637_4071_bca7_394878794b43 rdf:type owl:DatatypeProperty ;
+                                                      rdfs:label "__RemoveTearOffFoil"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasDataResourceCharacteristic
+:hasDataResourceCharacteristic rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasDataResourceSerialization
+:hasDataResourceSerialization rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :hasDataResourceCharacteristic ;
+                              rdfs:domain :DataResource ;
+                              rdfs:range [ rdf:type rdfs:Datatype ;
+                                           owl:oneOf [ rdf:type rdf:List ;
+                                                       rdf:first "CBOR" ;
+                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                  rdf:first "JSON" ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first "XML" ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first "YAML" ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                                ]
+                                                     ]
+                                         ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasFibreLengthEndlessFibre
+:hasFibreLengthEndlessFibre rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasFibreLengthLongFibre
+:hasFibreLengthLongFibre rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasFibreLengthShortFibre
+:hasFibreLengthShortFibre rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasLayeringDirection
+:hasLayeringDirection rdf:type owl:DatatypeProperty ;
+                      rdfs:range [ rdf:type rdfs:Datatype ;
+                                   owl:oneOf [ rdf:type rdf:List ;
+                                               rdf:first "0°" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "45°" ;
+                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                     rdf:first "90°" ;
+                                                                     rdf:rest rdf:nil
+                                                                   ]
+                                                        ]
+                                             ]
+                                 ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasNumberOfRepeats
+:hasNumberOfRepeats rdf:type owl:DatatypeProperty .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasResourceLocation
+:hasResourceLocation rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasDataResourceCharacteristic ;
+                     rdfs:domain :DataResource ;
+                     rdfs:range xsd:anyURI .
+
+
+###  http://w3id.org/sensotwin/applicationontology#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+          rdfs:label "has value"@en ,
+                     "hat Wert"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isFinalProcessOrNode
+:isFinalProcessOrNode rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#isInitialProcessOrNode
+:isInitialProcessOrNode rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#vacuumPumpConnectedTo
+:vacuumPumpConnectedTo rdf:type owl:DatatypeProperty ;
+                       rdfs:range [ rdf:type rdfs:Datatype ;
+                                    owl:oneOf [ rdf:type rdf:List ;
+                                                rdf:first "Cast" ;
+                                                rdf:rest [ rdf:type rdf:List ;
+                                                           rdf:first "Sprue" ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                  ] .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/sensotwin/applicationontology#A_sigma_ult
+:A_sigma_ult rdf:type owl:Class ;
+             rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ApplyingReleaseAgent
+:ApplyingReleaseAgent rdf:type owl:Class ;
+                      rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#AssemblingProcess
+:AssemblingProcess rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/pmd/co/AssemblingProcess> ,
+                                   <https://w3id.org/pmd/co/ManufacturingProcess> ;
+                   owl:disjointWith :LeakageTestProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#AuxiliaryMaterials
+:AuxiliaryMaterials rdf:type owl:Class ;
+                    rdfs:subClassOf :Material ,
+                                    :MesoScale ;
+                    rdfs:label "Auxiliary Material"@en ,
+                               "Hilfsmaterial"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#B_sigma_ult
+:B_sigma_ult rdf:type owl:Class ;
+             rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Binder
+:Binder rdf:type owl:Class ;
+        rdfs:subClassOf :AuxiliaryMaterials ;
+        rdfs:label "Binder"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Carbon
+:Carbon rdf:type owl:Class ;
+        rdfs:subClassOf :FibreMaterial ;
+        owl:disjointWith :Glass .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CheckVacuumLoss
+:CheckVacuumLoss rdf:type owl:Class ;
+                 rdfs:subClassOf :LeakageTestProcess ;
+                 owl:disjointWith :RunVacuumPump .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Cleanser
+:Cleanser rdf:type owl:Class ;
+          rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CleansingGlassPlate
+:CleansingGlassPlate rdf:type owl:Class ;
+                     rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CuringProcess
+:CuringProcess rdf:type owl:Class ;
+               rdfs:subClassOf :PrepareSpecimenProcess ,
+                               <https://w3id.org/pmd/co/HeatTreatmentProcess> ,
+                               <https://w3id.org/pmd/co/ManufacturingProcess> ;
+               rdfs:label "Curing Process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CuringWithConstantTemperature
+:CuringWithConstantTemperature rdf:type owl:Class ;
+                               rdfs:subClassOf :CuringProcess ;
+                               rdfs:label "Curingprocess with constant Temperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CuringWithDecreasingTemperature
+:CuringWithDecreasingTemperature rdf:type owl:Class ;
+                                 rdfs:subClassOf :CuringProcess ;
+                                 rdfs:label "Curingprocess with decreasing Temperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CuringWithIncreasingTemperature
+:CuringWithIncreasingTemperature rdf:type owl:Class ;
+                                 rdfs:subClassOf :CuringProcess ;
+                                 rdfs:label "Curingprocess with increasing temperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutFibre
+:CutFibre rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/LengthChangingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutGersterband
+:CutGersterband rdf:type owl:Class ;
+                rdfs:subClassOf :AssemblingProcess ,
+                                <https://w3id.org/pmd/co/LengthChangingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutPeelPly
+:CutPeelPly rdf:type owl:Class ;
+            rdfs:subClassOf :AssemblingProcess ,
+                            <https://w3id.org/pmd/co/LengthChangingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutResinDistributionMedia
+:CutResinDistributionMedia rdf:type owl:Class ;
+                           rdfs:subClassOf :AssemblingProcess ,
+                                           <https://w3id.org/pmd/co/LengthChangingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutSpecimen
+:CutSpecimen rdf:type owl:Class ;
+             rdfs:subClassOf :PrepareSpecimenProcess ,
+                             <https://w3id.org/pmd/co/LengthChangingProcess> ;
+             rdfs:label "Cutting specimen process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CutVacuumFilm
+:CutVacuumFilm rdf:type owl:Class ;
+               rdfs:subClassOf :AssemblingProcess ,
+                               <https://w3id.org/pmd/co/LengthChangingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#CyclicTensileTest
+:CyclicTensileTest rdf:type owl:Class ;
+                   rdfs:subClassOf :TensileTest ;
+                   rdfs:comment "A Cyclic Tensile Test is a dynamic testing method where a material / specimen is subjected to repeated tensile loading and unloading cycles. This test assesses the material's fatigue resistance, endurance limit, and behavior under cyclic stresses."@en ,
+                                "Ein zyklischer Zugversuch ist ein dynamisches Prüfverfahren, bei dem ein Material / eine Probe wiederholten Zugbe- und -entlastungszyklen ausgesetzt wird. Mit dieser Prüfung werden die Ermüdungsfestigkeit, die Dauerhaftigkeit und das Verhalten des Materials unter zyklischen Belastungen bewertet."@de ;
+                   rdfs:label "Cylic Tensile Test"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DataResource
+:DataResource rdf:type owl:Class ;
+              rdfs:subClassOf :Resource ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasHeaderField ;
+                                owl:someValuesFrom :HeaderField
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasResourceLocation ;
+                                owl:someValuesFrom xsd:anyURI
+                              ] ;
+              rdfs:comment "A data resource is a file, in which i.e. parameters and measurements are stored"@en ,
+                           "Eine Datenressource ist eine Datei, in der z.B. Parameter und Messwerte gespeichert sind"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DegaseMatrix
+:DegaseMatrix rdf:type owl:Class ;
+              rdfs:subClassOf :DegasingProcess ;
+              owl:disjointWith :MixMatrix .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DegasingNode
+:DegasingNode rdf:type owl:Class ;
+              rdfs:subClassOf :PlateProductionProcessNode ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasNext ;
+                                owl:someValuesFrom :InfiltrationNode
+                              ] ;
+              rdfs:label "Degasing Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DegasingProcess
+:DegasingProcess rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/pmd/co/ManufacturingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DemoldingNode
+:DemoldingNode rdf:type owl:Class ;
+               rdfs:subClassOf :PlateProductionProcessNode ;
+               rdfs:label "Demolding Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DemoldingProcess
+:DemoldingProcess rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/pmd/co/DemountingProcess> ,
+                                  <https://w3id.org/pmd/co/ManufacturingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DifferentialScanningCalorimeter
+:DifferentialScanningCalorimeter rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+                                 rdfs:comment "Das dynamische Differenzkalorimeter ist eine Prüfmaschine zur Durchführung von dynamischer differenzkalorimetrie. Es wird thermoanalytisch der Wärmefluss an Phasenübergängen als Funktion der Temperatur gemessen."@de ,
+                                              "The differential scanning calorimeter is a testing machine for carrying out differential scanning calorimetry. The heat flow at phase transitions is measured thermoanalytically as a function of temperature."@en ;
+                                 rdfs:label "DSC"@en ,
+                                            "Differential Scanning Calorimetry"@en ,
+                                            "Dynamisches Differenzkalorimeter"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Dilatometer
+:Dilatometer rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+             rdfs:comment "A dilatometer is a testing machine for measuring the expansion of a sample."@en ,
+                          "Ein Dilatometer ist eine Prüfmaschine zur Messung der Ausdehnung einer Probe."@de ;
+             rdfs:label "Dilatometer"@de ,
+                        "dilatometer"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Dimensions
+:Dimensions rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DrawVacuum
+:DrawVacuum rdf:type owl:Class ;
+            rdfs:subClassOf :Modes ;
+            rdfs:comment "In diesem Modus saugt die Vakuumpumpe ein Vakuum an, in der Regel kontrolliert, bis ein bestimmter Druck erreicht ist."@de ,
+                         "In this mode, the vacuum pump draws a vacuum, usually controlled and until a specific pressure is reached."@en ;
+            rdfs:label "Modus Vakuum ziehen"@de ,
+                       "mode draw vacuum"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#DynamicMechanicalAnalysis
+:DynamicMechanicalAnalysis rdf:type owl:Class ;
+                           rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+                           rdfs:comment "Die DMA ist eine Prüfmaschine zur Durchführung einer dynamisch mechanischen Analyse, bei der der Prüfkörper einer periodisch wechselnden Beanspruchung ausgesetzt wird."@de ,
+                                        "The DMA is a testing machine for carrying out a dynamic mechanical analysis in which the test specimen is subjected to a periodically changing load."@en ;
+                           rdfs:label "DMA"@de ,
+                                      "Dynamic Mechanic Analysis"@en ,
+                                      "Dynamisch-mechanische Analyse"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#EndTemperature
+:EndTemperature rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#EndlessFibre
+:EndlessFibre rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasFibreLength ;
+                                                    owl:someValuesFrom :EndlessFibre
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasFibreLengthEndlessFibre ;
+                                                    owl:hasValue "true"^^xsd:boolean
+                                                  ]
+                                                )
+                                  ] ;
+              rdfs:subClassOf :FibreLength .
+
+
+###  http://w3id.org/sensotwin/applicationontology#EndlessFibreReinforcedMaterial
+:EndlessFibreReinforcedMaterial rdf:type owl:Class ;
+                                rdfs:subClassOf :VirtualStructuralMaterialTest .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ExactPressure
+:ExactPressure rdf:type owl:Class ;
+               rdfs:subClassOf :Pressure .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ExactTemperature
+:ExactTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
+                  rdfs:label "ExactTemperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FVC
+:FVC rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial ;
+     rdfs:comment "some float in range [0,1]"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FibreComposite
+:FibreComposite rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                                      owl:someValuesFrom :FibreMaterial
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                                      owl:someValuesFrom :Matrix
+                                    ] ;
+                rdfs:subClassOf [ owl:intersectionOf ( :Material
+                                                       :MesoScale
+                                                       <https://w3id.org/pmd/co/EngineeredMaterial>
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FibreLength
+:FibreLength rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :LongFibre
+                                                 :ShortFibre
+                                               )
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasFibreLengthLongFibre ;
+                                   owl:someValuesFrom xsd:boolean
+                                 ] ;
+             rdfs:subClassOf :RawMaterial ;
+             owl:disjointWith :MatrixMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FibreMaterial
+:FibreMaterial rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:unionOf ( :Carbon
+                                                   :Glass
+                                                 )
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasFibreLength ;
+                                     owl:someValuesFrom :FibreLength
+                                   ] ;
+               rdfs:subClassOf :RawMaterial ;
+               owl:disjointWith :MatrixMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FinalProcess
+:FinalProcess rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/Process>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasNext ;
+                                                           owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                           owl:onClass <https://w3id.org/pmd/co/Process>
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf <https://w3id.org/pmd/co/Process> ;
+              rdfs:label "Finaler Prozess"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FixateGluePlateTool
+:FixateGluePlateTool rdf:type owl:Class ;
+                     rdfs:subClassOf :PrepareSpecimenProcess ;
+                     rdfs:label "Fixating glueplatetool process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#FixateVacuumFilm
+:FixateVacuumFilm rdf:type owl:Class ;
+                  rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Flashtape
+:Flashtape rdf:type owl:Class ;
+           rdfs:subClassOf :AuxiliaryMaterials ;
+           rdfs:label "Flashtape"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GasBallast
+:GasBallast rdf:type owl:Class ;
+            rdfs:subClassOf :Modes ;
+            rdfs:comment "Gas ballast is a mode to prevent condensation inside the pumpt. Small amounts of gas are mixed by, to to dilute vapor."@en ,
+                         "Gasballast ist eine Methode, um die Kondensation im Inneren der Pumpe zu verhindern. Kleine Mengen von Gas werden beigemischt, um den Dampf zu verdünnen."@de ;
+            rdfs:label "Modus Gas Ballast"@de ,
+                       "mode gas ballast"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GersterBand
+:GersterBand rdf:type owl:Class ;
+             rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Glass
+:Glass rdf:type owl:Class ;
+       rdfs:subClassOf :FibreMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Glue
+:Glue rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasCharacteristic ;
+                                                   owl:someValuesFrom :GlueRatio
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                                                   owl:someValuesFrom :Binder
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                                                   owl:someValuesFrom :GlueHardener
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf [ owl:intersectionOf ( :AuxiliaryMaterials
+                                             :MixedMaterial
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                            owl:unionOf ( :Binder
+                                                          :GlueHardener
+                                                        )
+                                          ]
+                      ] ;
+      rdfs:label "Glue"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GlueFlashtape
+:GlueFlashtape rdf:type owl:Class ;
+               rdfs:subClassOf :PrepareSpecimenProcess ;
+               rdfs:label "Glueing flashtape process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GlueGluePlateOnPlate
+:GlueGluePlateOnPlate rdf:type owl:Class ;
+                      rdfs:subClassOf :PrepareSpecimenProcess ;
+                      rdfs:label "Glueing glueplate on plate process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GlueHardener
+:GlueHardener rdf:type owl:Class ;
+              rdfs:subClassOf :AuxiliaryMaterials ;
+              rdfs:label "GlueHardener"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GluePlate
+:GluePlate rdf:type owl:Class ;
+           rdfs:subClassOf :AuxiliaryMaterials ;
+           rdfs:label "GluePlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GlueRatio
+:GlueRatio rdf:type owl:Class ;
+           rdfs:subClassOf :Ratio ;
+           rdfs:label "GlueRatio"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#GlueTackyTape
+:GlueTackyTape rdf:type owl:Class ;
+               rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#HardenerToResinRatio
+:HardenerToResinRatio rdf:type owl:Class ;
+                      rdfs:subClassOf :Ratio .
+
+
+###  http://w3id.org/sensotwin/applicationontology#HeaderField
+:HeaderField rdf:type owl:Class ;
+             rdfs:subClassOf prov:Entity ;
+             rdfs:comment """A class bundling the semantics for a specific column in a Data Resource. 
+Provides column number, pointer to attached unit and a human readable description."""@en ,
+                          """Eine Klasse, die die Semantik für eine bestimmte Spalte in einer Datenressource bündelt. 
+Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und eine menschenlesbare Beschreibung."""@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Hight
+:Hight rdf:type owl:Class ;
+       rdfs:subClassOf :Dimensions .
+
+
+###  http://w3id.org/sensotwin/applicationontology#HomogenisedStressStrainResponse
+:HomogenisedStressStrainResponse rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Human
+:Human rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+       rdfs:label "Mensch"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#IncreasePressure
+:IncreasePressure rdf:type owl:Class ;
+                  rdfs:subClassOf :InfiltrationProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#InfiltrationNode
+:InfiltrationNode rdf:type owl:Class ;
+                  rdfs:subClassOf :PlateProductionProcessNode ;
+                  rdfs:label "Infiltration Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#InfiltrationProcess
+:InfiltrationProcess rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/pmd/co/ManufacturingProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#InitialProcess
+:InitialProcess rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasPrevious ;
+                                      owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                      owl:onClass <https://w3id.org/pmd/co/Process>
+                                    ] ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/Process> ;
+                rdfs:label "Initialer Prozess"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LayerFibre
+:LayerFibre rdf:type owl:Class ;
+            rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LayerPeelPly
+:LayerPeelPly rdf:type owl:Class ;
+              rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LayerResinDistributionMedia
+:LayerResinDistributionMedia rdf:type owl:Class ;
+                             rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LeakageTestNode
+:LeakageTestNode rdf:type owl:Class ;
+                 rdfs:subClassOf :PlateProductionProcessNode ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasNext ;
+                                   owl:someValuesFrom :DegasingNode
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasVacuumPump ;
+                                   owl:someValuesFrom :VacuumPump
+                                 ] ;
+                 rdfs:label "Leakage Test Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LeakageTestProcess
+:LeakageTestProcess rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/pmd/co/ManufacturingProcess> ,
+                                    <https://w3id.org/pmd/co/NonTransformativeAnalysisProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Length
+:Length rdf:type owl:Class ;
+        rdfs:subClassOf :Dimensions .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LongFibre
+:LongFibre rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasFibreLength ;
+                                                 owl:someValuesFrom :LongFibre
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasFibreLengthLongFibre ;
+                                                 owl:hasValue "true"^^xsd:boolean
+                                               ]
+                                             )
+                               ] ;
+           rdfs:subClassOf :FibreLength ;
+           owl:disjointWith :ShortFibre .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MPC_1
+:MPC_1 rdf:type owl:Class ;
+       rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MPC_2
+:MPC_2 rdf:type owl:Class ;
+       rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MPC_3
+:MPC_3 rdf:type owl:Class ;
+       rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MachineSetting
+:MachineSetting rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                rdfs:label "MachineSetting"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MacroScale
+:MacroScale rdf:type owl:Class ;
+            rdfs:subClassOf :ScaleClassification .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MannerOfBreak
+:MannerOfBreak rdf:type owl:Class ;
+               rdfs:subClassOf :OutputTensileTest .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf prov:Entity ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCharacteristic ;
+                            owl:someValuesFrom <https://w3id.org/pmd/co/Manufacturer>
+                          ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MaterialDataMicroscaleSimulation
+:MaterialDataMicroscaleSimulation rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/pmd/co/SimulationProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Matrix
+:Matrix rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                              owl:someValuesFrom :MatrixHardener
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                              owl:someValuesFrom :Resin
+                            ] ;
+        rdfs:subClassOf :MixedMaterial ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                              owl:unionOf ( :MatrixHardener
+                                                            :Resin
+                                                          )
+                                            ]
+                        ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MatrixHardener
+:MatrixHardener rdf:type owl:Class ;
+                rdfs:subClassOf :MatrixMaterial ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasCharacteristic ;
+                                  owl:someValuesFrom <https://w3id.org/pmd/co/Manufacturer>
+                                ] ;
+                owl:disjointWith :Resin .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MatrixMaterial
+:MatrixMaterial rdf:type owl:Class ;
+                rdfs:subClassOf :RawMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MaximalPressure
+:MaximalPressure rdf:type owl:Class ;
+                 rdfs:subClassOf :Pressure .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MaximalTemperature
+:MaximalTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
+                    rdfs:label "MaximalTemperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MesoScale
+:MesoScale rdf:type owl:Class ;
+           rdfs:subClassOf :ScaleClassification .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MicroScale
+:MicroScale rdf:type owl:Class ;
+            rdfs:subClassOf :ScaleClassification .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MinimalPressure
+:MinimalPressure rdf:type owl:Class ;
+                 rdfs:subClassOf :Pressure .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MinimalTemperature
+:MinimalTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
+                    rdfs:label "MinimalTemperature"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MixGlue
+:MixGlue rdf:type owl:Class ;
+         rdfs:subClassOf :PrepareSpecimenProcess ;
+         rdfs:label "Mixing glue process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MixMatrix
+:MixMatrix rdf:type owl:Class ;
+           rdfs:subClassOf :DegasingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#MixedMaterial
+:MixedMaterial rdf:type owl:Class ;
+               rdfs:subClassOf :Material ,
+                               :MesoScale ,
+                               <https://w3id.org/pmd/co/EngineeredMaterial> ;
+               rdfs:label "mixed material"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Modes
+:Modes rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:unionOf ( :DrawVacuum
+                                           :GasBallast
+                                           :ReduceVacuum
+                                         )
+                           ] ;
+       rdfs:subClassOf :VacuumPump ;
+       rdfs:comment "Die Betriebsarten einer Vakuumpumpe beziehen sich auf die verschiedenen Betriebsmethoden oder Stufen, mit denen sie ein Vakuum erzeugen kann."@de ,
+                    "Modes of a Vacuum Pump refer to the different operational methods or stages it can use to achieve vacuum."@en ;
+       rdfs:label "Modus Vakuum Pumpe"@de ,
+                  "Vacuum Pump Mode"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Norn
+:Norn rdf:type owl:Class ;
+      rdfs:subClassOf prov:Entity .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Number
+:Number rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#OutputTensileTest
+:OutputTensileTest rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PBC_algorithm
+:PBC_algorithm rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial ;
+               rdfs:comment "possible values: \"PBLCC\" or \"EasyPBC\""@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PTFEHose
+:PTFEHose rdf:type owl:Class ;
+          rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PeelPly
+:PeelPly rdf:type owl:Class ;
+         rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PlacePTFEHose
+:PlacePTFEHose rdf:type owl:Class ;
+               rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PlacePlate
+:PlacePlate rdf:type owl:Class ;
+            rdfs:subClassOf :PrepareSpecimenProcess ;
+            rdfs:label "Placing Plate Process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PlaceSpacer
+:PlaceSpacer rdf:type owl:Class ;
+             rdfs:subClassOf :PrepareSpecimenProcess ;
+             rdfs:label "Placing spacer process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PlateProductionProcessNode
+:PlateProductionProcessNode rdf:type owl:Class ;
+                            rdfs:subClassOf :Human ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasFinalProcess ;
+                                              owl:someValuesFrom <https://w3id.org/pmd/co/Process>
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasInitialProcess ;
+                                              owl:someValuesFrom <https://w3id.org/pmd/co/Process>
+                                            ] ;
+                            rdfs:label "Plate Production Processing Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PrepareGluePlate
+:PrepareGluePlate rdf:type owl:Class ;
+                  rdfs:subClassOf :PrepareSpecimenProcess ;
+                  rdfs:label "Preparing glue plate process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PreparePTFEHose
+:PreparePTFEHose rdf:type owl:Class ;
+                 rdfs:subClassOf :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PrepareSpecimenProcess
+:PrepareSpecimenProcess rdf:type owl:Class ;
+                        rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
+                        rdfs:label "Preparing specimen process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Pressure
+:Pressure rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#PressureDifference
+:PressureDifference rdf:type owl:Class ;
+                    rdfs:subClassOf :Pressure .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ProductionMachine
+:ProductionMachine rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+                   rdfs:label "Production Machine"@en ,
+                              "Produktionsmaschine"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ProfileForm
+:ProfileForm rdf:type owl:Class ;
+             rdfs:subClassOf prov:Entity ;
+             rdfs:label "Profilform"@de ,
+                        "profile form"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Ratio
+:Ratio rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#RawMaterial
+:RawMaterial rdf:type owl:Class ;
+             rdfs:subClassOf :Material ,
+                             :MicroScale ,
+                             <https://w3id.org/pmd/co/BaseMaterial> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ReduceVacuum
+:ReduceVacuum rdf:type owl:Class ;
+              rdfs:subClassOf :Modes ;
+              rdfs:comment "Im Modus Vakuum reduzieren wird, üblicherweise kontrolliert und bis zu einem spezifischen Druck, der Druck erhöht. (Das Vakuum verringert)"@de ,
+                           "In Reduce vacuum mode, the pressure is increased, usually in a controlled manner and up to a specific pressure. (The vacuum is reduced)"@en ;
+              rdfs:label "Modus Vakuum reduzieren"@de ,
+                         "Reduce vacuum mode"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ReleaseAgent
+:ReleaseAgent rdf:type owl:Class ;
+              rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Resin
+:Resin rdf:type owl:Class ;
+       rdfs:subClassOf :MatrixMaterial ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCharacteristic ;
+                         owl:someValuesFrom <https://w3id.org/pmd/co/Manufacturer>
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ResinDistributionMedia
+:ResinDistributionMedia rdf:type owl:Class ;
+                        rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Resource
+:Resource rdf:type owl:Class ;
+          rdfs:subClassOf prov:Entity ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasResourceLocation ;
+                            owl:someValuesFrom xsd:anyURI
+                          ] ;
+          rdfs:label "Resource"@en ,
+                     "Ressource"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Rheometer
+:Rheometer rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+           rdfs:comment "A rheometer is a testing machine to measure the rheological prperties of a material with shear stress application"@en ,
+                        "Ein Rheometer ist eine Prüfmaschine zur Messung der rheologischen Eigenschaften eines Materials anhand Anwendung von Scherkräften."@de ;
+           rdfs:label "Rheometer"@de ,
+                      "rheometer"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#RunVacuumPump
+:RunVacuumPump rdf:type owl:Class ;
+               rdfs:subClassOf :InfiltrationProcess ,
+                               :LeakageTestProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Sand
+:Sand rdf:type owl:Class ;
+      rdfs:subClassOf :PrepareSpecimenProcess ;
+      rdfs:label "Sanding process"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Sandpaper
+:Sandpaper rdf:type owl:Class ;
+           rdfs:subClassOf :AuxiliaryMaterials ;
+           rdfs:label "Sandpaper"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ScaleClassification
+:ScaleClassification rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( :MacroScale
+                                                         :MesoScale
+                                                         :MicroScale
+                                                       )
+                                         ] ;
+                     rdfs:subClassOf prov:Entity ;
+                     rdfs:comment "Class used for the classification of effects, parameters, properties etc. in scaling levels"@en ,
+                                  "Klasse zur Einordnung von Effekten, Parametern, Eigenschaften etc. in Skalierungsebenen"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ShortFibre
+:ShortFibre rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasFibreLength ;
+                                                  owl:someValuesFrom :ShortFibre
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasFibreLengthShortFibre ;
+                                                  owl:hasValue "true"^^xsd:boolean
+                                                ]
+                                              )
+                                ] ;
+            rdfs:subClassOf :FibreLength .
+
+
+###  http://w3id.org/sensotwin/applicationontology#SimulationParameter
+:SimulationParameter rdf:type owl:Class ;
+                     rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#SpecimenPreparingNode
+:SpecimenPreparingNode rdf:type owl:Class ;
+                       rdfs:subClassOf :Human ;
+                       rdfs:label "Specimen Preparing Node"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#StartTemperature
+:StartTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#StaticTensileTest
+:StaticTensileTest rdf:type owl:Class ;
+                   rdfs:subClassOf :TensileTest ;
+                   rdfs:comment "A Static Tensile Test is a type of tensile test where a constant rate of extension or load is applied to a material specimen until failure. It is designed to measure the material's response to a slowly applied uniaxial tensile force."@en ,
+                                "Ein statischer Zugversuch ist eine Art von Zugversuch, bei dem eine konstante Dehnungsrate oder Last auf eine Materialprobe bis zum Versagen ausgeübt wird. Er dient dazu, die Reaktion des Materials auf eine langsam aufgebrachte einachsige Zugkraft zu messen."@de ;
+                   rdfs:label "Static Tensile Test"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step1
+:Step1 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :FVC
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :dist_edges
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :dist_fibre
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :dist_fibre_max
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :max_attempts
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :max_iter
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :mu_fibre
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :n_fibre
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :plotRVE
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :scaling
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :sigma_fibre
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step2
+:Step2 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :cubic
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :interfacesize
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :meshsizefrac
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :nopopup
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :refmeshsizefrac
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step3
+:Step3 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :A_sigma_ult
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :mu_E
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :sigma_E
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step4
+:Step4 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :B_sigma_ult
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e11
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e12
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e13
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e21
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e22
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e23
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e31
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e32
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :constrain_e33
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e11
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e12
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e13
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e21
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e22
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e23
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e31
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e32
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :e33
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :fix_origin
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :mode
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step5
+:Step5 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :MPC_1
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :MPC_2
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :MPC_3
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step6
+:Step6 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :run_simulation
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Step7
+:Step7 rdf:type owl:Class ;
+       rdfs:subClassOf :VirtualStructuralMaterialTestProcess ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :evaluation_mode
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasInput ;
+                         owl:someValuesFrom :run_evaluation
+                       ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Strain
+:Strain rdf:type owl:Class ;
+        rdfs:subClassOf :HomogenisedStressStrainResponse .
+
+
+###  http://w3id.org/sensotwin/applicationontology#StrainAtUTS
+:StrainAtUTS rdf:type owl:Class ;
+             rdfs:subClassOf :OutputTensileTest .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Strength
+:Strength rdf:type owl:Class ;
+          rdfs:subClassOf :HomogenisedStressStrainResponse ;
+          rdfs:label "Strength"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Stress
+:Stress rdf:type owl:Class ;
+        rdfs:subClassOf :HomogenisedStressStrainResponse .
+
+
+###  http://w3id.org/sensotwin/applicationontology#TackyTape
+:TackyTape rdf:type owl:Class ;
+           rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#TechnicalDataSheet
+:TechnicalDataSheet rdf:type owl:Class ;
+                    rdfs:subClassOf :Resource ;
+                    rdfs:label "TechnicalDataSheet"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#TemperatureDifference
+:TemperatureDifference rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#TensileTest
+:TensileTest rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/MechanicalTestingProcess> ;
+             rdfs:comment "A Tensile Test is a mechanical testing process that evaluates the tensile strength of a material. It involves applying a uniaxial force to a test specimen to measure its ability to withstand tension. This test determines material properties such as ultimate tensile strength, yield strength, elongation, and Young's modulus."@en ;
+             rdfs:label "Tensile Test"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Testklasse
+:Testklasse rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
+                                  owl:someValuesFrom :Binder
+                                ] .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Ult.TensileStrength
+:Ult.TensileStrength rdf:type owl:Class ;
+                     rdfs:subClassOf :OutputTensileTest .
+
+
+###  http://w3id.org/sensotwin/applicationontology#UniversalTestingMachine
+:UniversalTestingMachine rdf:type owl:Class ;
+                         rdfs:subClassOf <https://w3id.org/pmd/co/TestingMachine> ;
+                         rdfs:comment "Eine Universalprüfmaschine ist eine Testmaschine zur Zug- und Druckprüfung von Materialien."@de ,
+                                      "Eine Universalprüfmaschine ist eine Testmaschine zur Zug- und Druckprüfung von Materialien."@en ;
+                         rdfs:label "Universalprüfmaschine"@de ,
+                                    "universal testing machine"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#VacuumFilm
+:VacuumFilm rdf:type owl:Class ;
+            rdfs:subClassOf :AuxiliaryMaterials .
+
+
+###  http://w3id.org/sensotwin/applicationontology#VacuumMachineMode
+:VacuumMachineMode rdf:type owl:Class ;
+                   rdfs:subClassOf :MachineSetting .
+
+
+###  http://w3id.org/sensotwin/applicationontology#VacuumPump
+:VacuumPump rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+            owl:disjointWith <https://w3id.org/pmd/co/Furnace> ;
+            rdfs:comment "A Vacuum Pump is a machine that removes gas molecules from a sealed volume to leave behind a partial vacuum."@en ,
+                         "Eine Vakuumpumpe ist eine Maschine, die Gasmoleküle aus einem versiegelten Volumen entfernt und ein Teilvakuum hinterlässt."@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#VirtualStructuralMaterialTest
+:VirtualStructuralMaterialTest rdf:type owl:Class ;
+                               rdfs:subClassOf :SimulationParameter .
+
+
+###  http://w3id.org/sensotwin/applicationontology#VirtualStructuralMaterialTestProcess
+:VirtualStructuralMaterialTestProcess rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/SimulationProcess> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#WaitingTime
+:WaitingTime rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Width
+:Width rdf:type owl:Class ;
+       rdfs:subClassOf :Dimensions .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e11
+:constrain_e11 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e12
+:constrain_e12 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e13
+:constrain_e13 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e21
+:constrain_e21 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e22
+:constrain_e22 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e23
+:constrain_e23 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e31
+:constrain_e31 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e32
+:constrain_e32 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#constrain_e33
+:constrain_e33 rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#cubic
+:cubic rdf:type owl:Class ;
+       rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#dist_edges
+:dist_edges rdf:type owl:Class ;
+            rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#dist_fibre
+:dist_fibre rdf:type owl:Class ;
+            rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#dist_fibre_max
+:dist_fibre_max rdf:type owl:Class ;
+                rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e11
+:e11 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e12
+:e12 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e13
+:e13 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e21
+:e21 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e22
+:e22 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e23
+:e23 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e31
+:e31 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e32
+:e32 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#e33
+:e33 rdf:type owl:Class ;
+     rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#evaluation_mode
+:evaluation_mode rdf:type owl:Class ;
+                 rdfs:subClassOf :EndlessFibreReinforcedMaterial ;
+                 rdfs:comment """possible modes: {\"11\";\"12\";\"13\";\"22\";\"23\";\"33\"}
+should be the same as \"mode\" in step 4"""@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#fix_origin
+:fix_origin rdf:type owl:Class ;
+            rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#interfacesize
+:interfacesize rdf:type owl:Class ;
+               rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#max_attempts
+:max_attempts rdf:type owl:Class ;
+              rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#max_iter
+:max_iter rdf:type owl:Class ;
+          rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#meshsizefrac
+:meshsizefrac rdf:type owl:Class ;
+              rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#mode
+:mode rdf:type owl:Class ;
+      rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#mu_E
+:mu_E rdf:type owl:Class ;
+      rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#mu_fibre
+:mu_fibre rdf:type owl:Class ;
+          rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#n_fibre
+:n_fibre rdf:type owl:Class ;
+         rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#nopopup
+:nopopup rdf:type owl:Class ;
+         rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#plotRVE
+:plotRVE rdf:type owl:Class ;
+         rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#refmeshsizefrac
+:refmeshsizefrac rdf:type owl:Class ;
+                 rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#run_evaluation
+:run_evaluation rdf:type owl:Class ;
+                rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#run_simulation
+:run_simulation rdf:type owl:Class ;
+                rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#scaling
+:scaling rdf:type owl:Class ;
+         rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#sigma_E
+:sigma_E rdf:type owl:Class ;
+         rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#sigma_fibre
+:sigma_fibre rdf:type owl:Class ;
+             rdfs:subClassOf :EndlessFibreReinforcedMaterial .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Poisson'sRatio
+<http://w3id.org/sensotwin/applicationontology#Poisson'sRatio> rdf:type owl:Class ;
+                                                               rdfs:subClassOf :OutputTensileTest .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Young'sModulus
+<http://w3id.org/sensotwin/applicationontology#Young'sModulus> rdf:type owl:Class ;
+                                                               rdfs:subClassOf :OutputTensileTest .
+
+
+###  http://www.w3.org/ns/prov#Activity
+prov:Activity rdf:type owl:Class ;
+              rdfs:label "Activity"@en ,
+                         "Aktivität"@de .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."@en ,
+                        "Ein Agent ist etwas, das in irgendeiner Form für eine stattfindende Aktivität, für die Existenz einer Einheit oder für die Aktivität eines anderen Agenten verantwortlich ist."@de ;
+           rdfs:label "Agent"@de ,
+                      "Agent"@en .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class ;
+            rdfs:label "Entity"@en ,
+                       "Entität"@de .
+
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf prov:Agent ;
+                  rdfs:comment "An organization is a social or legal institution such as a company, society, etc."@en ,
+                               "Eine Organisation ist eine soziale oder rechtliche Institution wie ein Unternehmen, ein Verein usw."@de .
+
+
+###  http://www.w3.org/ns/prov#Person
+prov:Person rdf:type owl:Class ;
+            rdfs:subClassOf prov:Agent .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+prov:SoftwareAgent rdf:type owl:Class ;
+                   rdfs:subClassOf prov:Agent .
+
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+<https://w3id.org/pmd/co/AnalysingProcess> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/pmd/co/Process> .
+
+
+###  https://w3id.org/pmd/co/AssemblingProcess
+<https://w3id.org/pmd/co/AssemblingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/BaseMaterial
+<https://w3id.org/pmd/co/BaseMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Component
+<https://w3id.org/pmd/co/Component> rdfs:subClassOf :MacroScale .
+
+
+###  https://w3id.org/pmd/co/DemountingProcess
+<https://w3id.org/pmd/co/DemountingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Duration
+<https://w3id.org/pmd/co/Duration> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  https://w3id.org/pmd/co/EndTime
+<https://w3id.org/pmd/co/EndTime> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+<https://w3id.org/pmd/co/EngineeredMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Furnace
+<https://w3id.org/pmd/co/Furnace> rdf:type owl:Class ;
+                                  rdfs:subClassOf :ProductionMachine .
+
+
+###  https://w3id.org/pmd/co/HeatTreatmentProcess
+<https://w3id.org/pmd/co/HeatTreatmentProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Initiator
+<https://w3id.org/pmd/co/Initiator> rdf:type owl:Class ;
+                                    rdfs:subClassOf prov:Person ;
+                                    owl:disjointWith <https://w3id.org/pmd/co/Operator> .
+
+
+###  https://w3id.org/pmd/co/Laboratory
+<https://w3id.org/pmd/co/Laboratory> rdf:type owl:Class ;
+                                     rdfs:subClassOf prov:Organization ;
+                                     owl:disjointWith <https://w3id.org/pmd/co/Manufacturer> .
+
+
+###  https://w3id.org/pmd/co/LengthChangingProcess
+<https://w3id.org/pmd/co/LengthChangingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Manufacturer
+<https://w3id.org/pmd/co/Manufacturer> rdf:type owl:Class ;
+                                       rdfs:subClassOf prov:Organization .
+
+
+###  https://w3id.org/pmd/co/ManufacturingProcess
+<https://w3id.org/pmd/co/ManufacturingProcess> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/pmd/co/Process> .
+
+
+###  https://w3id.org/pmd/co/MechanicalTestingProcess
+<https://w3id.org/pmd/co/MechanicalTestingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/NonTransformativeAnalysisProcess
+<https://w3id.org/pmd/co/NonTransformativeAnalysisProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Object
+<https://w3id.org/pmd/co/Object> rdf:type owl:Class ;
+                                 rdfs:subClassOf prov:Entity ;
+                                 rdfs:label "Object"@en ,
+                                            "Objekt"@de .
+
+
+###  https://w3id.org/pmd/co/Operator
+<https://w3id.org/pmd/co/Operator> rdf:type owl:Class ;
+                                   rdfs:subClassOf prov:Person .
+
+
+###  https://w3id.org/pmd/co/PMDSiUnit
+<https://w3id.org/pmd/co/PMDSiUnit> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Process
+<https://w3id.org/pmd/co/Process> rdf:type owl:Class ;
+                                  rdfs:subClassOf prov:Activity ;
+                                  owl:disjointWith <https://w3id.org/pmd/co/ProcessingNode> .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+<https://w3id.org/pmd/co/ProcessingNode> rdf:type owl:Class ;
+                                         rdfs:subClassOf prov:Entity ;
+                                         rdfs:label "Process Node"@en ,
+                                                    "Prozessknoten"@de .
+
+
+###  https://w3id.org/pmd/co/SimulationNode
+<https://w3id.org/pmd/co/SimulationNode> rdf:type owl:Class ;
+                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasFinalProcess ;
+                                                           owl:someValuesFrom :VirtualStructuralMaterialTestProcess
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasInitialProcess ;
+                                                           owl:someValuesFrom :VirtualStructuralMaterialTestProcess
+                                                         ] .
+
+
+###  https://w3id.org/pmd/co/SimulationProcess
+<https://w3id.org/pmd/co/SimulationProcess> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/pmd/co/Process> .
+
+
+###  https://w3id.org/pmd/co/StartTime
+<https://w3id.org/pmd/co/StartTime> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  https://w3id.org/pmd/co/Temperature
+<https://w3id.org/pmd/co/Temperature> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  https://w3id.org/pmd/co/TestingMachine
+<https://w3id.org/pmd/co/TestingMachine> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Time
+<https://w3id.org/pmd/co/Time> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+<https://w3id.org/pmd/co/ValueObject> rdf:type owl:Class ;
+                                      rdfs:subClassOf prov:Entity ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasUnit ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMDSiUnit>
+                                                      ] ;
+                                      rdfs:label "Value Object"@en ,
+                                                 "Wertobjekt"@de .
+
+
+###  https://w3id.org/pmd/co/Weight
+<https://w3id.org/pmd/co/Weight> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/sensotwin/applicationontology#ASTM_D_3039
+:ASTM_D_3039 rdf:type owl:NamedIndividual ,
+                      :Norn ;
+             rdfs:comment "Norm Composite Quasistatischer Zugversuch"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ASTM_D_638_GeometryType1
+:ASTM_D_638_GeometryType1 rdf:type owl:NamedIndividual ,
+                                   :Norn .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ASTM_D_695
+:ASTM_D_695 rdf:type owl:NamedIndividual ,
+                     :Norn .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ASTM_D_7078
+:ASTM_D_7078 rdf:type owl:NamedIndividual ,
+                      :Norn .
+
+
+###  http://w3id.org/sensotwin/applicationontology#LongFibre
+:LongFibre rdf:type owl:NamedIndividual ,
+                    :Carbon ,
+                    :LongFibre ;
+           :hasFibreLength :LongFibre ;
+           :hasFibreLengthLongFibre "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ModeDrawVacuum
+:ModeDrawVacuum rdf:type owl:NamedIndividual ,
+                         :VacuumMachineMode .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ModeGasBallast
+:ModeGasBallast rdf:type owl:NamedIndividual ,
+                         :VacuumMachineMode .
+
+
+###  http://w3id.org/sensotwin/applicationontology#ModeReduceVacuum
+:ModeReduceVacuum rdf:type owl:NamedIndividual ,
+                           :VacuumMachineMode .
+
+
+###  http://w3id.org/sensotwin/applicationontology#NREL5MW15p
+:NREL5MW15p rdf:type owl:NamedIndividual ,
+                     :ProfileForm ;
+            rdfs:label "Profilform NREL 5MW 15p" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Q3495543
+:Q3495543 rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/pmd/co/PMDSiUnit> ;
+          owl:sameAs :millibar .
+
+
+###  http://w3id.org/sensotwin/applicationontology#UniversalPrüfmaschineInspektTable100kN
+:UniversalPrüfmaschineInspektTable100kN rdf:type owl:NamedIndividual ,
+                                                 :UniversalTestingMachine ;
+                                        <https://w3id.org/pmd/co/executes> :__TT_AK_V2_90_2 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#Windradflügel
+:Windradflügel rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/pmd/co/Component> ;
+               :hasCharacteristic :NREL5MW15p .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__AK_V2_90_2
+:__AK_V2_90_2 rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/pmd/co/Component> ;
+              :hasCharacteristic :ASTM_D_3039 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__AK_V2_90_2Probe
+:__AK_V2_90_2Probe rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/pmd/co/Component> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__A_sigma_ult
+:__A_sigma_ult rdf:type owl:NamedIndividual ,
+                        :A_sigma_ult ;
+               :hasValue "2000.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__ApplyingReleaseAgent
+:__ApplyingReleaseAgent rdf:type owl:NamedIndividual ,
+                                 :ApplyingReleaseAgent ;
+                        :hasCharacteristic :__WaitingTime ;
+                        :hasInput :__Aufbau1 ,
+                                  :__Frekote_770_NC ;
+                        :hasNext :__CutFibre ;
+                        :hasOutput :__Aufbau1 ;
+                        :hasNumberOfRepeats 4 ;
+                        rdfs:label "__ApplyingReleaseAgent"@de ,
+                                   "__ApplyingReleaseAgent"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__AssemblingProcess
+:__AssemblingProcess rdf:type owl:NamedIndividual ,
+                              :AssemblingProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Aufbau1
+:__Aufbau1 rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/pmd/co/Component> ;
+           rdfs:label "__Aufbau1"@de ,
+                      "__Aufbau1"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__B_sigma_ult
+:__B_sigma_ult rdf:type owl:NamedIndividual ,
+                        :B_sigma_ult ;
+               :hasValue "6.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CheckForVacuumLoss
+:__CheckForVacuumLoss rdf:type owl:NamedIndividual ,
+                               :CheckVacuumLoss ;
+                      :hasNext :__MixMatrix ;
+                      :hasVacuumLossPerMinute :__VacuumLoss .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Cleanser
+:__Cleanser rdf:type owl:NamedIndividual ,
+                     :Cleanser .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CleansingGlassPlate
+:__CleansingGlassPlate rdf:type owl:NamedIndividual ,
+                                :CleansingGlassPlate ;
+                       :hasInput :__Cleanser ;
+                       :hasNext :__ApplyingReleaseAgent ;
+                       :hasOutput :__Aufbau1 ;
+                       rdfs:label "__CleansingGlassPlate"@de ,
+                                  "__CleansingGlassPlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CoarseSandpaper
+:__CoarseSandpaper rdf:type owl:NamedIndividual ,
+                            :Sandpaper ;
+                   rdfs:label "__CoarseSandpaper"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Component
+:__Component rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Cured_Thermal_Stability_of_Frekote_770-NC
+:__Cured_Thermal_Stability_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
+                                                      :MaximalTemperature ;
+                                             :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                                             :quantityAmount 400 ;
+                                             rdfs:label "Cured Maximal Thermal Stability of Frekote 770-NC"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Curing35-70
+:__Curing35-70 rdf:type owl:NamedIndividual ,
+                        :CuringWithIncreasingTemperature ;
+               :hasCharacteristic :__TemperatureIncreaseDiff ,
+                                  :__TemperatureIncreaseTime ;
+               :hasNext <http://w3id.org/sensotwin/applicationontology#__Curing70°> ;
+               <https://w3id.org/pmd/co/executedBy> :__exampleoven .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CuringTemperatureOfSpecimen
+:__CuringTemperatureOfSpecimen rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/pmd/co/Temperature> ;
+                               :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                               :hasValue "70"^^xsd:int ;
+                               rdfs:label "__CuringTemperatureOfSpecimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CutFibre
+:__CutFibre rdf:type owl:NamedIndividual ,
+                     :CutFibre ;
+            :hasCharacteristic :__LengthOfLongFibre ,
+                               :__WidthOfLongFibre ;
+            :hasInput :LongFibre ,
+                      :__Aufbau1 ;
+            :hasNext :__LayerFibre ;
+            :hasOutput :__Aufbau1 ;
+            rdfs:label "__CutFibre"@de ,
+                       "__CutFibre"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CutPeelPly
+:__CutPeelPly rdf:type owl:NamedIndividual ,
+                       :CutPeelPly ;
+              :hasCharacteristic :__LengthOfPeelPly ,
+                                 :__WidthOfPeelPly ;
+              :hasInput :__Aufbau1 ,
+                        :__PeelPly ;
+              :hasNext :__LayerPeelPly ;
+              :hasOutput :__Aufbau1 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CutResinDistributionMedia
+:__CutResinDistributionMedia rdf:type owl:NamedIndividual ,
+                                      :CutResinDistributionMedia ;
+                             :hasCharacteristic :__LengthResinDistributionMedia ,
+                                                :__WidthResinDistributionMedia ;
+                             :hasInput :__Aufbau1 ,
+                                       :__ResinDistributionMedia ;
+                             :hasNext :__LayerResinDistributionMedia ;
+                             :hasOutput :__Aufbau1 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CutSpecimen
+:__CutSpecimen rdf:type owl:NamedIndividual ,
+                        :CutSpecimen ;
+               :hasCharacteristic :__WidthOfSpecimen ;
+               :hasInput :__SpecimenAufbau ;
+               :hasOutput :__Specimen ;
+               <https://w3id.org/pmd/co/executedBy> :__DiamondSaw ;
+               :isFinalProcessOrNode "true"^^xsd:boolean ;
+               rdfs:label "__CutSpecimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__CutVacuumFilm
+:__CutVacuumFilm rdf:type owl:NamedIndividual ,
+                          :CutVacuumFilm ;
+                 :hasCharacteristic :__LengthVacuumFoil ,
+                                    :__WidthVacuumFoil ;
+                 :hasInput :__Aufbau1 ,
+                           :__VacuumFilm ;
+                 :hasNext :__FixateVacuumFilm ;
+                 :hasOutput :__Aufbau1 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DegaseMatrix
+:__DegaseMatrix rdf:type owl:NamedIndividual ,
+                         :DegaseMatrix ;
+                :hasCharacteristic :__DegaseMatrixDuration ;
+                :hasInput :__Matrix ;
+                :hasNext :__DrawVacuumCast ;
+                :hasOutput :__Matrix ;
+                :usesVacuumPumpMode :ModeDrawVacuum ;
+                <https://w3id.org/pmd/co/executedBy> :__VacuumPump ;
+                :isFinalProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DegaseMatrixDuration
+:__DegaseMatrixDuration rdf:type owl:NamedIndividual ,
+                                 <https://w3id.org/pmd/co/Duration> ;
+                        :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                        :hasValue 2100 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DegasingNode
+:__DegasingNode rdf:type owl:NamedIndividual ,
+                         :DegasingNode ;
+                :hasFinalProcess :__DegaseMatrix ;
+                :hasInitialProcess :__MixMatrix ;
+                :hasNext :__InfiltrationNode ;
+                <https://w3id.org/pmd/co/executes> :__DegaseMatrix ,
+                                                   :__MixMatrix .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DemoldingAK
+:__DemoldingAK rdf:type owl:NamedIndividual ,
+                        :DemoldingProcess ;
+               :hasOutput :__AK_V2_90_2 ;
+               <https://w3id.org/pmd/co/executedBy> :__examplehuman .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DemoldingNode
+:__DemoldingNode rdf:type owl:NamedIndividual ,
+                          :DemoldingNode ;
+                 :hasInput :__Aufbau1 ;
+                 :hasOutput :__Component ;
+                 <https://w3id.org/pmd/co/executes> :__DemoldingProcess ;
+                 :isFinalProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DemoldingProcess
+:__DemoldingProcess rdf:type owl:NamedIndividual ,
+                             :DemoldingProcess ;
+                    :hasNext :__PrepareGluePlate ;
+                    <https://w3id.org/pmd/co/executedBy> :__examplehuman .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DiamondSaw
+:__DiamondSaw rdf:type owl:NamedIndividual ,
+                       <https://w3id.org/pmd/co/ProcessingNode> ;
+              rdfs:label "__DiamondSaw"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DrawVacuum
+:__DrawVacuum rdf:type owl:NamedIndividual ,
+                       :RunVacuumPump ;
+              :hasCharacteristic :__PressureAfterDrawingVacuum ;
+              :hasNext :__CheckForVacuumLoss ;
+              :usesVacuumPumpMode :ModeDrawVacuum .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DrawVacuumCast
+:__DrawVacuumCast rdf:type owl:NamedIndividual ,
+                           :RunVacuumPump ;
+                  :hasCharacteristic :__Duration ,
+                                     :__PressureAfterDrawingVacuum ;
+                  :hasInput :__Aufbau1 ,
+                            :__Matrix ;
+                  :hasNext :__DrawVacuumSprue ;
+                  :hasOutput :__Aufbau1 ;
+                  :usesVacuumPumpMode :ModeDrawVacuum .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DrawVacuumSprue
+:__DrawVacuumSprue rdf:type owl:NamedIndividual ,
+                            :RunVacuumPump ;
+                   :hasCharacteristic :__Duration ,
+                                      :__PressureAfterDrawingVacuum ;
+                   :hasInput :__Aufbau1 ;
+                   :hasNext :__IncreasePressure ;
+                   :usesVacuumPumpMode :ModeDrawVacuum .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Duration
+:__Duration rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/pmd/co/Duration> ;
+            :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+            :hasValue 1200 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DurationHardenSpecimen
+:__DurationHardenSpecimen rdf:type owl:NamedIndividual ,
+                                   <https://w3id.org/pmd/co/Duration> ;
+                          :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                          :hasValue "7200"^^xsd:int ;
+                          rdfs:label "__DurationHardenSpecimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DurationersterTeilvomZyklus
+:__DurationersterTeilvomZyklus rdf:type owl:NamedIndividual ,
+                                        <https://w3id.org/pmd/co/Duration> ;
+                               :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                               :hasValue 10800 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__DurationletzterTeilVomZyklus
+:__DurationletzterTeilVomZyklus rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/pmd/co/Duration> ;
+                                :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                                :hasValue 25200 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__EndTermperature
+:__EndTermperature rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/pmd/co/Temperature> ;
+                   :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                   :hasValue 70 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__FVC
+:__FVC rdf:type owl:NamedIndividual ,
+                :FVC ;
+       :hasValue "0.5"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__FibreComposite
+:__FibreComposite rdf:type owl:NamedIndividual ;
+                  <https://w3id.org/pmd/co/composedOf> :__Matrix ,
+                                                       :__ShortFibre .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Final_Curing_Time_of_Frekote_770-NC
+:__Final_Curing_Time_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/pmd/co/Duration> ;
+                                       :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                                       :quantityAmount 600 ;
+                                       rdfs:label "Final Curing Time of Frekote 770-NC"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__FixateGluePlateTool
+:__FixateGluePlateTool rdf:type owl:NamedIndividual ,
+                                :FixateGluePlateTool ;
+                       :hasInput :__SpecimenAufbau ;
+                       :hasNext <http://w3id.org/sensotwin/applicationontology#__Curing70°> ;
+                       :hasOutput :__SpecimenAufbau ;
+                       <https://w3id.org/pmd/co/executedBy> :__GluePlateTool ;
+                       rdfs:label "__FixateGluePlateTool"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__FixateVacuumFilm
+:__FixateVacuumFilm rdf:type owl:NamedIndividual ,
+                             :FixateVacuumFilm ;
+                    :hasInput :__Aufbau1 ;
+                    :hasNext :__RunGasBallast ;
+                    :hasOutput :__Aufbau1 ;
+                    <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+                    :isFinalProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Flashtape
+:__Flashtape rdf:type owl:NamedIndividual ,
+                      :Flashtape ;
+             rdfs:label "__Flashtape"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Frekote_770_NC
+:__Frekote_770_NC rdf:type owl:NamedIndividual ,
+                           :ReleaseAgent ;
+                  :hasCharacteristic :__Cured_Thermal_Stability_of_Frekote_770-NC ,
+                                     :__Final_Curing_Time_of_Frekote_770-NC ,
+                                     :__Loctite ,
+                                     :__Maximal_Application_Temperature_of_Frekote_770-NC ,
+                                     :__Minimal_Application_Temperature_of_Frekote_770-NC ,
+                                     :__Technichal_Data_Sheet:_Frekote_770_NC ;
+                  rdfs:label "Frekote 770 NC"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GasBallastDuration
+:__GasBallastDuration rdf:type owl:NamedIndividual ,
+                               <https://w3id.org/pmd/co/Duration> ;
+                      :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                      :quantityAmount 600 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Gersterband
+:__Gersterband rdf:type owl:NamedIndividual ,
+                        :GersterBand .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GlueFlashtape
+:__GlueFlashtape rdf:type owl:NamedIndividual ,
+                          :GlueFlashtape ;
+                 :hasInput :__Component ,
+                           :__Flashtape ;
+                 :hasNext :__PlacePlate ;
+                 :hasOutput :__PreparedComponent ;
+                 <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+                 rdfs:label "__GlueFlashtape"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GlueGluePlateOnSpecimen
+:__GlueGluePlateOnSpecimen rdf:type owl:NamedIndividual ,
+                                    :GlueGluePlateOnPlate ;
+                           :hasInput :__GluePlate ,
+                                     :__SpecimenAufbau ,
+                                     :__UHUEndfestPlus300 ;
+                           :hasNext :__PlaceSpacer ;
+                           :hasOutput :__SpecimenAufbau ;
+                           <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+                           rdfs:label "__GlueGluePlateOnSpecimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GluePlate
+:__GluePlate rdf:type owl:NamedIndividual ,
+                      :GluePlate ;
+             :hasLayeringDirection "45°" ;
+             rdfs:label "__GluePlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GluePlateTool
+:__GluePlateTool rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/pmd/co/ProcessingNode> ;
+                 rdfs:label "__GluePlateTool"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__GlueTackyTape
+:__GlueTackyTape rdf:type owl:NamedIndividual ,
+                          :GlueTackyTape ;
+                 :hasInput :__Aufbau1 ,
+                           :__TackyTape ;
+                 :hasNext :__PlacePTFEHose ;
+                 :hasOutput :__Aufbau1 ;
+                 <https://w3id.org/pmd/co/executedBy> :__examplehuman .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Hardener
+:__Hardener rdf:type owl:NamedIndividual ,
+                     :MatrixHardener ;
+            :hasCharacteristic :__WeightHardener .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Human
+:__Human rdf:type owl:NamedIndividual ,
+                  :Human ;
+         :hasFinalProcess :__FixateVacuumFilm ;
+         :hasInitialProcess :__CleansingGlassPlate ;
+         :hasInput :__Cleanser ;
+         :hasNext :__VacuumPump ;
+         <https://w3id.org/pmd/co/executes> :__ApplyingReleaseAgent ,
+                                            :__CleansingGlassPlate ,
+                                            :__CutFibre ,
+                                            :__CutPeelPly ,
+                                            :__CutResinDistributionMedia ,
+                                            :__CutVacuumFilm ,
+                                            :__FixateVacuumFilm ,
+                                            :__GlueTackyTape ,
+                                            :__LayerFibre ,
+                                            :__LayerPeelPly ,
+                                            :__PlacePTFEHose ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "true"^^xsd:boolean ;
+         rdfs:label "__AssemblyNode"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__IncreasePressure
+:__IncreasePressure rdf:type owl:NamedIndividual ,
+                             :IncreasePressure ;
+                    :hasCharacteristic :__PressureAfterIncrease ;
+                    :hasNext <http://w3id.org/sensotwin/applicationontology#__Curing35°> ;
+                    <https://w3id.org/pmd/co/executedBy> :__VacuumPump ;
+                    :isFinalProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__InfiltrationNode
+:__InfiltrationNode rdf:type owl:NamedIndividual ,
+                             :InfiltrationNode ;
+                    :hasFinalProcess :__IncreasePressure ;
+                    :hasInitialProcess :__DrawVacuumCast ;
+                    :hasNext :__Oven ;
+                    <https://w3id.org/pmd/co/executes> :__DrawVacuumCast ,
+                                                       :__DrawVacuumSprue ,
+                                                       :__IncreasePressure .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LayerFibre
+:__LayerFibre rdf:type owl:NamedIndividual ,
+                       :LayerFibre ;
+              :hasCharacteristic :__NumberOfLayers ;
+              :hasInput :__Aufbau1 ;
+              :hasNext :__CutPeelPly ;
+              :hasOutput :__Aufbau1 ;
+              <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+              :hasLayeringDirection "90°" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LayerPeelPly
+:__LayerPeelPly rdf:type owl:NamedIndividual ,
+                         :LayerPeelPly ;
+                :hasInput :__Aufbau1 ;
+                :hasNext :__CutResinDistributionMedia ;
+                :hasOutput :__Aufbau1 ;
+                :hasPrevious :__CutPeelPly ;
+                <https://w3id.org/pmd/co/executedBy> :__examplehuman .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LayerResinDistributionMedia
+:__LayerResinDistributionMedia rdf:type owl:NamedIndividual ,
+                                        :LayerResinDistributionMedia ;
+                               :hasInput :__Aufbau1 ;
+                               :hasNext :__GlueTackyTape ;
+                               :hasOutput :__Aufbau1 ;
+                               <https://w3id.org/pmd/co/executedBy> :__examplehuman .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LengthOfLongFibre
+:__LengthOfLongFibre rdf:type owl:NamedIndividual ,
+                              :Length ;
+                     :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                     :quantityAmount 25 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LengthOfPeelPly
+:__LengthOfPeelPly rdf:type owl:NamedIndividual ,
+                            :Length ;
+                   :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                   :quantityAmount 30 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LengthResinDistributionMedia
+:__LengthResinDistributionMedia rdf:type owl:NamedIndividual ,
+                                         :Length ;
+                                :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                                :quantityAmount 20 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__LengthVacuumFoil
+:__LengthVacuumFoil rdf:type owl:NamedIndividual ,
+                             :Length ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                    :quantityAmount 35 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Loctite
+:__Loctite rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/pmd/co/Manufacturer> ;
+           rdfs:label "Loctite"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MPC_1
+:__MPC_1 rdf:type owl:NamedIndividual ,
+                  :MPC_1 ;
+         :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MPC_2
+:__MPC_2 rdf:type owl:NamedIndividual ,
+                  :MPC_2 ;
+         :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MPC_3
+:__MPC_3 rdf:type owl:NamedIndividual ,
+                  :MPC_3 ;
+         :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MannerOfBreakAK_V2_90_2
+:__MannerOfBreakAK_V2_90_2 rdf:type owl:NamedIndividual ,
+                                    :MannerOfBreak ;
+                           :hasValue "centerish, closer to tab" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Manufacturer
+:__Manufacturer rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/pmd/co/Manufacturer> ;
+                :isManufacturerOf :__Hardener ,
+                                  :__Resin .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Matrix
+:__Matrix rdf:type owl:NamedIndividual ;
+          :hasCharacteristic <http://w3id.org/sensotwin/applicationontology#__1:10Ratio> ;
+          <https://w3id.org/pmd/co/composedOf> :__Hardener ,
+                                               :__Resin .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MatrixtRatio
+:__MatrixtRatio rdf:type owl:NamedIndividual ,
+                         :HardenerToResinRatio ;
+                :hasUnit <https://w3id.org/pmd/co/Q199> ;
+                :hasValue "0,3" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Maximal_Application_Temperature_of_Frekote_770-NC
+:__Maximal_Application_Temperature_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
+                                                              :MaximalTemperature ;
+                                                     :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                                                     :quantityAmount 60 ;
+                                                     rdfs:label "Maximal Application Temperature of Frekote 770-NC"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Minimal_Application_Temperature_of_Frekote_770-NC
+:__Minimal_Application_Temperature_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
+                                                              :MinimalTemperature ;
+                                                     :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                                                     :quantityAmount 15 ;
+                                                     rdfs:label "__Minimal Application Temperature of Frekote 770-NC"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MixGlueUHU
+:__MixGlueUHU rdf:type owl:NamedIndividual ,
+                       :MixGlue ;
+              :hasCharacteristic :__UHUPlusEndfest300Ratio ;
+              :hasInput :__UHUPlusEndfest300Binder ;
+              :hasNext :__GlueGluePlateOnSpecimen ;
+              :hasOutput :__UHUEndfestPlus300 ,
+                         :__UHUPlusEndfest300Hardener ;
+              <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+              rdfs:label "__MixGlueUHU"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__MixMatrix
+:__MixMatrix rdf:type owl:NamedIndividual ,
+                      :MixMatrix ;
+             :hasCharacteristic :__MatrixtRatio ;
+             :hasInput :__Hardener ,
+                       :__Resin ;
+             :hasNext :__DegaseMatrix ;
+             :hasOutput :__Matrix .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__NumberOfLayers
+:__NumberOfLayers rdf:type owl:NamedIndividual ,
+                           :Number ;
+                  :hasUnit <https://w3id.org/pmd/co/Q199> ;
+                  :quantityAmount 2 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Oven
+:__Oven rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/pmd/co/Furnace> ;
+        :hasFinalProcess <http://w3id.org/sensotwin/applicationontology#__Curing70°> ;
+        :hasInitialProcess <http://w3id.org/sensotwin/applicationontology#__Curing35°> ;
+        :hasInput :__Aufbau1 ;
+        :hasNext :__DemoldingNode ;
+        :hasOutput :__Aufbau1 ;
+        <https://w3id.org/pmd/co/executes> :__Curing35-70 ,
+                                           <http://w3id.org/sensotwin/applicationontology#__Curing35°> ,
+                                           <http://w3id.org/sensotwin/applicationontology#__Curing70°> ;
+        rdfs:label "Ofen"@de ,
+                   "Oven"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PBC_algorithm
+:__PBC_algorithm rdf:type owl:NamedIndividual ,
+                          :PBC_algorithm ;
+                 :hasValue "PBLCC" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PTFEHose
+:__PTFEHose rdf:type owl:NamedIndividual ,
+                     :PTFEHose ;
+            :hasCharacteristic :__Manufacturer .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PeelPly
+:__PeelPly rdf:type owl:NamedIndividual ,
+                    :PeelPly ;
+           :hasCharacteristic :__Manufacturer .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PlacePTFEHose
+:__PlacePTFEHose rdf:type owl:NamedIndividual ,
+                          :PlacePTFEHose ;
+                 :hasInput :__Aufbau1 ,
+                           :__Gersterband ;
+                 :hasNext :__CutVacuumFilm ;
+                 :hasOutput :__Aufbau1 ;
+                 :HasOffsetSprueAndCast "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PlacePlate
+:__PlacePlate rdf:type owl:NamedIndividual ,
+                       :PlacePlate ;
+              :hasInput :__PreparedComponent ;
+              :hasNext :__MixGlueUHU ;
+              :hasOutput :__SpecimenAufbau ;
+              <https://w3id.org/pmd/co/executedBy> :__GluePlateTool ;
+              rdfs:label "__PlacePlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PlaceSpacer
+:__PlaceSpacer rdf:type owl:NamedIndividual ,
+                        :PlaceSpacer ;
+               :hasInput :__Spacer ,
+                         :__SpecimenAufbau ;
+               :hasNext :__FixateGluePlateTool ;
+               :hasOutput :__SpecimenAufbau ;
+               <https://w3id.org/pmd/co/executedBy> :__examplehuman ;
+               rdfs:label "__PlaceSpacer"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PoissonOfAK_V2_90_2
+:__PoissonOfAK_V2_90_2 rdf:type owl:NamedIndividual ,
+                                <http://w3id.org/sensotwin/applicationontology#Poisson'sRatio> ;
+                       :hasUnit :megapascal ;
+                       :hasValue 0.13 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PrepareGluePlate
+:__PrepareGluePlate rdf:type owl:NamedIndividual ,
+                             :PrepareGluePlate ;
+                    :hasCharacteristic :__WidthOfGluePlate ;
+                    :hasNext :__Sand ;
+                    <https://w3id.org/pmd/co/executedBy> :__Schlagschere ;
+                    :OWLDataProperty_88d26209_4637_4071_bca7_394878794b43 "true"^^xsd:boolean ;
+                    rdfs:label "__PrepareGluePlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PreparedComponent
+:__PreparedComponent rdf:type owl:NamedIndividual ;
+                     rdfs:label "__PreparedComponent"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PressureAfterDrawingVacuum
+:__PressureAfterDrawingVacuum rdf:type owl:NamedIndividual ,
+                                       :ExactPressure ;
+                              :hasUnit :millibar ;
+                              :hasValue 2 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__PressureAfterIncrease
+:__PressureAfterIncrease rdf:type owl:NamedIndividual ,
+                                  :ExactPressure ;
+                         :hasUnit :millibar ;
+                         :hasValue 400 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__ProductionProcess
+:__ProductionProcess rdf:type owl:NamedIndividual ,
+                              :PlateProductionProcessNode ;
+                     :hasInitialProcess :__CleansingGlassPlate .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Resin
+:__Resin rdf:type owl:NamedIndividual ,
+                  :Resin ;
+         :hasCharacteristic :__WeightOfResin .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__ResinDistributionMedia
+:__ResinDistributionMedia rdf:type owl:NamedIndividual ,
+                                   :ResinDistributionMedia ;
+                          :hasCharacteristic :__Manufacturer .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__RunGasBallast
+:__RunGasBallast rdf:type owl:NamedIndividual ,
+                          :RunVacuumPump ;
+                 :hasCharacteristic :ModeGasBallast ;
+                 :hasInput :__Aufbau1 ;
+                 :hasNext :__DrawVacuum ;
+                 :hasOutput :__Aufbau1 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Sand
+:__Sand rdf:type owl:NamedIndividual ,
+                 :Sand ;
+        :hasNext :__GlueFlashtape ;
+        <https://w3id.org/pmd/co/executedBy> :__CoarseSandpaper ;
+        rdfs:label "__Sand"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Schlagschere
+:__Schlagschere rdf:type owl:NamedIndividual ,
+                         <https://w3id.org/pmd/co/ProcessingNode> ;
+                rdfs:label "__Schlagschere"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__ShortFibre
+:__ShortFibre rdf:type owl:NamedIndividual ,
+                       :ShortFibre ;
+              :hasFibreLength :__ShortFibre ;
+              :hasFibreLengthLongFibre "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__SimulationErgebnis
+:__SimulationErgebnis rdf:type owl:NamedIndividual ,
+                               :Strength ;
+                      :hasUnit <https://w3id.org/pmd/co/Q21062777> ;
+                      :hasValue "496.67825"^^xsd:float ;
+                      rdfs:label "__SimulationErgebnis"@de .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__SimulationOfEndlessFibreReinforcedMaterial
+:__SimulationOfEndlessFibreReinforcedMaterial rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/pmd/co/SimulationNode> ;
+                                              :hasFinalProcess :__Step7 ;
+                                              :hasInitialProcess :__Step1 ;
+                                              :hasInput :__Component ;
+                                              :hasOutput :__SimulationErgebnis ;
+                                              <https://w3id.org/pmd/co/executes> :__Step1 ,
+                                                                                 :__Step2 ,
+                                                                                 :__Step3 ,
+                                                                                 :__Step4 ,
+                                                                                 :__Step5 ,
+                                                                                 :__Step6 ,
+                                                                                 :__Step7 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Spacer
+:__Spacer rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/pmd/co/ProcessingNode> ;
+          rdfs:label "__Spacer"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Specimen
+:__Specimen rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/pmd/co/Component> ;
+            :hasCharacteristic :__LengthOfLongFibre ,
+                               :__WidthOfSpecimen ;
+            rdfs:label "__Specimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__SpecimenAufbau
+:__SpecimenAufbau rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/pmd/co/Component> ;
+                  rdfs:label "__SpecimenAufbau"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__SpecimenPreparationNode
+:__SpecimenPreparationNode rdf:type owl:NamedIndividual ,
+                                    :SpecimenPreparingNode ;
+                           :hasFinalProcess :__CutSpecimen ;
+                           :hasInitialProcess :__PrepareGluePlate ;
+                           rdfs:label "_SpecimenPreparationNode"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__StartTemperature
+:__StartTemperature rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/pmd/co/Temperature> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q25267> ;
+                    :hasValue 35 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step1
+:__Step1 rdf:type owl:NamedIndividual ,
+                  :Step1 ;
+         :hasInput :__FVC ,
+                   :__dist_edges ,
+                   :__dist_fibre ,
+                   :__dist_fibre_max ,
+                   :__max_attempts ,
+                   :__max_iter ,
+                   :__mu_fibre ,
+                   :__n_fibre ,
+                   :__plotRVE ,
+                   :__scaling ,
+                   :__sigma_fibre ;
+         :hasNext :__Step2 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step2
+:__Step2 rdf:type owl:NamedIndividual ,
+                  :Step2 ;
+         :hasInput :__cubic ,
+                   :__interfacesize ,
+                   :__meshsizefrac ,
+                   :__nopopup ,
+                   :__refmeshsizefrac ;
+         :hasNext :__Step3 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step3
+:__Step3 rdf:type owl:NamedIndividual ,
+                  :Step3 ;
+         :hasInput :__A_sigma_ult ,
+                   :__mu_E ,
+                   :__sigma_E ;
+         :hasNext :__Step4 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step4
+:__Step4 rdf:type owl:NamedIndividual ,
+                  :Step4 ;
+         :hasInput :__PBC_algorithm ,
+                   :__constrain_e11 ,
+                   :__constrain_e12 ,
+                   :__constrain_e13 ,
+                   :__constrain_e21 ,
+                   :__constrain_e22 ,
+                   :__constrain_e23 ,
+                   :__constrain_e31 ,
+                   :__constrain_e32 ,
+                   :__constrain_e33 ,
+                   :__e11 ,
+                   :__e12 ,
+                   :__e13 ,
+                   :__e21 ,
+                   :__e22 ,
+                   :__e23 ,
+                   :__e31 ,
+                   :__e32 ,
+                   :__e33 ,
+                   :__fix_origin ,
+                   :__mode ;
+         :hasNext :__Step5 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step5
+:__Step5 rdf:type owl:NamedIndividual ,
+                  :Step5 ;
+         :hasInput :__MPC_1 ,
+                   :__MPC_2 ,
+                   :__MPC_3 ;
+         :hasNext :__Step6 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step6
+:__Step6 rdf:type owl:NamedIndividual ,
+                  :Step6 ;
+         :hasInput :__run_simulation ;
+         :hasNext :__Step7 ;
+         :isFinalProcessOrNode "false"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Step7
+:__Step7 rdf:type owl:NamedIndividual ,
+                  :Step7 ;
+         :hasInput :__evaluation_mode ,
+                   :__run_evaluation ;
+         :isFinalProcessOrNode "true"^^xsd:boolean ;
+         :isInitialProcessOrNode "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__StrainAK_V2_90_2
+:__StrainAK_V2_90_2 rdf:type owl:NamedIndividual ,
+                             :StrainAtUTS ;
+                    :hasUnit <https://w3id.org/pmd/co/Q199> ;
+                    :hasValue 0.30 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__TT_AK_V2_90_2
+:__TT_AK_V2_90_2 rdf:type owl:NamedIndividual ,
+                          :StaticTensileTest ;
+                 :hasInput :__AK_V2_90_2Probe ;
+                 :hasOutput :__MannerOfBreakAK_V2_90_2 ,
+                            :__PoissonOfAK_V2_90_2 ,
+                            :__StrainAK_V2_90_2 ,
+                            :__TensileStrengthAK_V2_90_2 ,
+                            :__YoungAK_V2_90_2 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__TackyTape
+:__TackyTape rdf:type owl:NamedIndividual ,
+                      :TackyTape ;
+             :hasCharacteristic :__Manufacturer .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__TemperatureIncreaseDiff
+:__TemperatureIncreaseDiff rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/pmd/co/Temperature> ;
+                           :hasUnit <https://w3id.org/pmd/co/Q69362731> ;
+                           :hasValue 35 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__TemperatureIncreaseTime
+:__TemperatureIncreaseTime rdf:type owl:NamedIndividual ,
+                                    <https://w3id.org/pmd/co/Duration> ;
+                           :hasUnit <https://w3id.org/pmd/co/Q11574> ;
+                           :hasValue 3600 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__TensileStrengthAK_V2_90_2
+:__TensileStrengthAK_V2_90_2 rdf:type owl:NamedIndividual ,
+                                      :Ult.TensileStrength ;
+                             :hasUnit :megapascal ;
+                             :hasValue 38 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__UHUEndfestPlus300
+:__UHUEndfestPlus300 rdf:type owl:NamedIndividual ;
+                     :hasCharacteristic :__UHUPlusEndfest300Ratio ;
+                     <https://w3id.org/pmd/co/composedOf> :__UHUPlusEndfest300Binder ,
+                                                          :__UHUPlusEndfest300Hardener ;
+                     rdfs:label "__UHUEndfestPlus300"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__UHUPlusEndfest300Binder
+:__UHUPlusEndfest300Binder rdf:type owl:NamedIndividual ,
+                                    :Binder ;
+                           rdfs:label "__UHUPlusEndfest300Binder"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__UHUPlusEndfest300Hardener
+:__UHUPlusEndfest300Hardener rdf:type owl:NamedIndividual ,
+                                      :GlueHardener ;
+                             rdfs:label "__UHUPlusEndfest300Hardener"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__UHUPlusEndfest300Ratio
+:__UHUPlusEndfest300Ratio rdf:type owl:NamedIndividual ,
+                                   :GlueRatio ;
+                          :hasValue "1:1 Binder:Hardener Ratio" ;
+                          rdfs:label "__UHUPlusEndfest300Ratio"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__VacuumFilm
+:__VacuumFilm rdf:type owl:NamedIndividual ,
+                       :VacuumFilm .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__VacuumLoss
+:__VacuumLoss rdf:type owl:NamedIndividual ,
+                       :PressureDifference ;
+              :hasUnit :millibar ;
+              :hasValue 5 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__VacuumPump
+:__VacuumPump rdf:type owl:NamedIndividual ,
+                       :LeakageTestNode ,
+                       :VacuumPump ;
+              :hasFinalProcess :__CheckForVacuumLoss ;
+              :hasInitialProcess :__RunGasBallast ;
+              :hasInput :__Aufbau1 ;
+              :hasNext :__DegasingNode ;
+              :hasOutput :__Aufbau1 ;
+              :hasVacuumPump :__VacuumPump ;
+              <https://w3id.org/pmd/co/executes> :__CheckForVacuumLoss ,
+                                                 :__DrawVacuum ,
+                                                 :__RunGasBallast .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__VorbereitungAK_V2_90_2Probe
+:__VorbereitungAK_V2_90_2Probe rdf:type owl:NamedIndividual ,
+                                        :PrepareSpecimenProcess .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WaitingTime
+:__WaitingTime rdf:type owl:NamedIndividual ,
+                        :WaitingTime .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WeightHardener
+:__WeightHardener rdf:type owl:NamedIndividual ,
+                           <https://w3id.org/pmd/co/Weight> ;
+                  :hasUnit <https://w3id.org/pmd/co/Q41803> ;
+                  :hasValue 120 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WeightOfResin
+:__WeightOfResin rdf:type owl:NamedIndividual ,
+                          <https://w3id.org/pmd/co/Weight> ;
+                 :hasUnit <https://w3id.org/pmd/co/Q41803> ;
+                 :hasValue 400 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthOfGluePlate
+:__WidthOfGluePlate rdf:type owl:NamedIndividual ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174789> ;
+                    :hasValue "55"^^xsd:int ;
+                    rdfs:label "__WidthOfGluePlate"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthOfLongFibre
+:__WidthOfLongFibre rdf:type owl:NamedIndividual ,
+                             :Width ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                    :quantityAmount 25 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthOfPeelPly
+:__WidthOfPeelPly rdf:type owl:NamedIndividual ,
+                           :Width ;
+                  :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                  :quantityAmount 30 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthOfSpecimen
+:__WidthOfSpecimen rdf:type owl:NamedIndividual ,
+                            :Width ;
+                   rdfs:label "__WidthOfSpecimen"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthResinDistributionMedia
+:__WidthResinDistributionMedia rdf:type owl:NamedIndividual ,
+                                        :Width ;
+                               :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                               :quantityAmount 20 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__WidthVacuumFoil
+:__WidthVacuumFoil rdf:type owl:NamedIndividual ,
+                            :Width ;
+                   :hasUnit <https://w3id.org/pmd/co/Q174728> ;
+                   :quantityAmount 35 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__YoungAK_V2_90_2
+:__YoungAK_V2_90_2 rdf:type owl:NamedIndividual ,
+                            <http://w3id.org/sensotwin/applicationontology#Young'sModulus> ;
+                   :hasUnit :megapascal ;
+                   :hasValue 13221 .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e11
+:__constrain_e11 rdf:type owl:NamedIndividual ,
+                          :constrain_e11 ;
+                 :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e12
+:__constrain_e12 rdf:type owl:NamedIndividual ,
+                          :constrain_e12 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e13
+:__constrain_e13 rdf:type owl:NamedIndividual ,
+                          :constrain_e13 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e21
+:__constrain_e21 rdf:type owl:NamedIndividual ,
+                          :constrain_e21 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e22
+:__constrain_e22 rdf:type owl:NamedIndividual ,
+                          :constrain_e22 ;
+                 :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e23
+:__constrain_e23 rdf:type owl:NamedIndividual ,
+                          :constrain_e23 ;
+                 :hasValue "1" ,
+                           "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e31
+:__constrain_e31 rdf:type owl:NamedIndividual ,
+                          :constrain_e31 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e32
+:__constrain_e32 rdf:type owl:NamedIndividual ,
+                          :constrain_e32 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__constrain_e33
+:__constrain_e33 rdf:type owl:NamedIndividual ,
+                          :constrain_e33 ;
+                 :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__cubic
+:__cubic rdf:type owl:NamedIndividual ,
+                  :cubic ;
+         :hasValue "1" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__dist_edges
+:__dist_edges rdf:type owl:NamedIndividual ,
+                       :dist_edges ;
+              :hasValue "0.002"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__dist_fibre
+:__dist_fibre rdf:type owl:NamedIndividual ,
+                       :dist_fibre ;
+              :hasInput :__AK_V2_90_2Probe ;
+              :hasValue "0.001"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__dist_fibre_max
+:__dist_fibre_max rdf:type owl:NamedIndividual ,
+                           :dist_fibre_max ;
+                  :hasValue "0.002"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e11
+:__e11 rdf:type owl:NamedIndividual ,
+                :e11 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e12
+:__e12 rdf:type owl:NamedIndividual ,
+                :e12 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e13
+:__e13 rdf:type owl:NamedIndividual ,
+                :e13 ;
+       :hasValue "0.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e21
+:__e21 rdf:type owl:NamedIndividual ,
+                :e21 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e22
+:__e22 rdf:type owl:NamedIndividual ,
+                :e22 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e23
+:__e23 rdf:type owl:NamedIndividual ,
+                :e23 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e31
+:__e31 rdf:type owl:NamedIndividual ,
+                :e31 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e32
+:__e32 rdf:type owl:NamedIndividual ,
+                :e32 ;
+       :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__e33
+:__e33 rdf:type owl:NamedIndividual ,
+                :e33 ;
+       :hasValue "0.025"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__evaluation_mode
+:__evaluation_mode rdf:type owl:NamedIndividual ,
+                            :evaluation_mode ;
+                   :hasValue "33.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__examplehuman
+:__examplehuman rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__exampleoven
+:__exampleoven rdf:type owl:NamedIndividual ,
+                        <https://w3id.org/pmd/co/Furnace> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__fix_origin
+:__fix_origin rdf:type owl:NamedIndividual ,
+                       :fix_origin ;
+              :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__interfacesize
+:__interfacesize rdf:type owl:NamedIndividual ,
+                          :interfacesize ;
+                 :hasValue "1.0E-4"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__max_attempts
+:__max_attempts rdf:type owl:NamedIndividual ,
+                         :max_attempts ;
+                :hasValue "50"^^xsd:int .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__max_iter
+:__max_iter rdf:type owl:NamedIndividual ,
+                     :max_iter ;
+            :hasValue "3000"^^xsd:int .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__meshsizefrac
+:__meshsizefrac rdf:type owl:NamedIndividual ,
+                         :meshsizefrac ;
+                :hasValue "20.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__mode
+:__mode rdf:type owl:NamedIndividual ,
+                 :mode ;
+        :hasValue "33.0"^^xsd:float ;
+        rdfs:comment """possible modes {\"11\";\"12\";\"13\";\"22\";\"23\";\"33\"}
+should be the same as evaluation mode in step 7"""@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__mu_E
+:__mu_E rdf:type owl:NamedIndividual ,
+                 :mu_E ;
+        :hasValue "70000.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__mu_fibre
+:__mu_fibre rdf:type owl:NamedIndividual ,
+                     :mu_fibre ;
+            :hasValue "0.016"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__n_fibre
+:__n_fibre rdf:type owl:NamedIndividual ,
+                    :n_fibre ;
+           :hasValue "10"^^xsd:int .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__nopopup
+:__nopopup rdf:type owl:NamedIndividual ,
+                    :nopopup ;
+           :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__plotRVE
+:__plotRVE rdf:type owl:NamedIndividual ,
+                    :plotRVE ;
+           :hasValue "false"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__refmeshsizefrac
+:__refmeshsizefrac rdf:type owl:NamedIndividual ,
+                            :refmeshsizefrac ;
+                   :hasValue "20.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__run_evaluation
+:__run_evaluation rdf:type owl:NamedIndividual ,
+                           :run_evaluation ;
+                  :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__run_simulation
+:__run_simulation rdf:type owl:NamedIndividual ,
+                           :run_simulation ;
+                  :hasValue "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__scaling
+:__scaling rdf:type owl:NamedIndividual ,
+                    :scaling ;
+           :hasValue "1.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__sigma_E
+:__sigma_E rdf:type owl:NamedIndividual ,
+                    :sigma_E ;
+           :hasValue "800.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__sigma_fibre
+:__sigma_fibre rdf:type owl:NamedIndividual ,
+                        :sigma_fibre ;
+               :hasValue "0.0"^^xsd:float .
+
+
+###  http://w3id.org/sensotwin/applicationontology#megapascal
+:megapascal rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/pmd/co/PMDSiUnit> ;
+            owl:sameAs <https://w3id.org/pmd/co/Q21062777> .
+
+
+###  http://w3id.org/sensotwin/applicationontology#millibar
+:millibar rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/pmd/co/PMDSiUnit> ;
+          rdfs:label "millibar" ,
+                     "millibar"@de ;
+          <https://w3id.org/pmd/co/P7825> "mbar" .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__1:10Ratio
+<http://w3id.org/sensotwin/applicationontology#__1:10Ratio> rdf:type owl:NamedIndividual ,
+                                                                     :HardenerToResinRatio ;
+                                                            :hasUnit <https://w3id.org/pmd/co/Q199> ;
+                                                            :quantityAmount "1:10" ;
+                                                            rdfs:comment "This is an exampleratio: 1 part Hardener to 10 parts Resin"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Curing35°
+<http://w3id.org/sensotwin/applicationontology#__Curing35°> rdf:type owl:NamedIndividual ,
+                                                                     :CuringWithConstantTemperature ;
+                                                            :hasCharacteristic :__DurationersterTeilvomZyklus ,
+                                                                               :__StartTemperature ;
+                                                            :hasNext :__Curing35-70 ;
+                                                            <https://w3id.org/pmd/co/executedBy> :__exampleoven .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Curing70°
+<http://w3id.org/sensotwin/applicationontology#__Curing70°> rdf:type owl:NamedIndividual ,
+                                                                     :CuringWithConstantTemperature ;
+                                                            :hasCharacteristic :__DurationletzterTeilVomZyklus ,
+                                                                               :__EndTermperature ;
+                                                            :hasNext :__DemoldingProcess ;
+                                                            <https://w3id.org/pmd/co/executedBy> :__exampleoven ;
+                                                            :isFinalProcessOrNode "true"^^xsd:boolean .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Curing70°2h
+<http://w3id.org/sensotwin/applicationontology#__Curing70°2h> rdf:type owl:NamedIndividual ,
+                                                                       :CuringWithConstantTemperature ;
+                                                              :hasCharacteristic :__CuringTemperatureOfSpecimen ,
+                                                                                 :__DurationHardenSpecimen ;
+                                                              :hasInput :__SpecimenAufbau ;
+                                                              :hasNext :__CutSpecimen ;
+                                                              :hasOutput :__SpecimenAufbau ;
+                                                              <https://w3id.org/pmd/co/executedBy> :__exampleoven ;
+                                                              rdfs:label "__Curing70°2h"@en .
+
+
+###  http://w3id.org/sensotwin/applicationontology#__Technichal_Data_Sheet:_Frekote_770_NC
+:__Technichal_Data_Sheet:_Frekote_770_NC rdf:type owl:NamedIndividual ,
+                                                  :TechnicalDataSheet ;
+                                         :hasResourceLocation "https://syncandshare.lrz.de/download/MlZvRnNjWjhGNmFORnNQUTg1OTdX/08_Ontologies/01_Inputs_Ontology/DataSheets/td_de_1loc0770.pdf?inline"^^xsd:anyURI ;
+                                         rdfs:label "Technichal Data Sheet: Frekote 770 NC"@en .
+
+
+###  https://w3id.org/pmd/co/Q11574
+<https://w3id.org/pmd/co/Q11574> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q174728
+<https://w3id.org/pmd/co/Q174728> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q174789
+<https://w3id.org/pmd/co/Q174789> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q199
+<https://w3id.org/pmd/co/Q199> rdf:type owl:NamedIndividual ;
+                               :hasUnit <https://w3id.org/pmd/co/Q199> .
+
+
+###  https://w3id.org/pmd/co/Q21062777
+<https://w3id.org/pmd/co/Q21062777> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q25267
+<https://w3id.org/pmd/co/Q25267> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q41803
+<https://w3id.org/pmd/co/Q41803> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/pmd/co/Q69362731
+<https://w3id.org/pmd/co/Q69362731> rdf:type owl:NamedIndividual .
+
+
+[ :hasNumberOfRepeats "4"^^xsd:int
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:LongFibre rdfs:label "LongFibre "@en .
+
+<https://orcid.org/0009-0004-1208-3971> rdfs:label "Ursula Pähler" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :A_sigma_ult
+                :B_sigma_ult
+                :FVC
+                :MPC_1
+                :MPC_2
+                :MPC_3
+                :PBC_algorithm
+                :constrain_e11
+                :constrain_e12
+                :constrain_e13
+                :constrain_e21
+                :constrain_e22
+                :constrain_e23
+                :constrain_e31
+                :constrain_e32
+                :constrain_e33
+                :cubic
+                :dist_edges
+                :dist_fibre
+                :dist_fibre_max
+                :e11
+                :e12
+                :e13
+                :e21
+                :e22
+                :e23
+                :e31
+                :e32
+                :e33
+                :evaluation_mode
+                :fix_origin
+                :interfacesize
+                :max_attempts
+                :max_iter
+                :meshsizefrac
+                :mode
+                :mu_E
+                :mu_fibre
+                :n_fibre
+                :nopopup
+                :plotRVE
+                :refmeshsizefrac
+                :run_evaluation
+                :run_simulation
+                :scaling
+                :sigma_E
+                :sigma_fibre
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ApplyingReleaseAgent
+                :CleansingGlassPlate
+                :CutFibre
+                :CutGersterband
+                :CutPeelPly
+                :CutResinDistributionMedia
+                :CutVacuumFilm
+                :FixateVacuumFilm
+                :GlueTackyTape
+                :LayerFibre
+                :LayerPeelPly
+                :LayerResinDistributionMedia
+                :PlacePTFEHose
+                :PreparePTFEHose
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cleanser
+                :PTFEHose
+                :PeelPly
+                :ReleaseAgent
+                :ResinDistributionMedia
+                :TackyTape
+                :VacuumFilm
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CuringWithConstantTemperature
+                :CuringWithDecreasingTemperature
+                :CuringWithIncreasingTemperature
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DifferentialScanningCalorimeter
+                :Dilatometer
+                :DynamicMechanicalAnalysis
+                :Rheometer
+                :UniversalTestingMachine
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DrawVacuum
+                :GasBallast
+                :ReduceVacuum
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EndTemperature
+                :StartTemperature
+                :TemperatureDifference
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :MacroScale
+                :MesoScale
+                :MicroScale
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :MannerOfBreak
+                :StrainAtUTS
+                :Ult.TensileStrength
+                <http://w3id.org/sensotwin/applicationontology#Poisson'sRatio>
+                <http://w3id.org/sensotwin/applicationontology#Young'sModulus>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pressure
+                :Ratio
+                <https://w3id.org/pmd/co/Temperature>
+                <https://w3id.org/pmd/co/Time>
+                <https://w3id.org/pmd/co/Weight>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Step1
+                :Step2
+                :Step3
+                :Step4
+                :Step5
+                :Step6
+                :Step7
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :WaitingTime
+                <https://w3id.org/pmd/co/Duration>
+                <https://w3id.org/pmd/co/EndTime>
+                <https://w3id.org/pmd/co/StartTime>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( prov:Organization
+                prov:Person
+                prov:SoftwareAgent
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
