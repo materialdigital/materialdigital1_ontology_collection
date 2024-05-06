@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-04-15T15:25:03.695424",
+  "analysis_date": "2024-05-06T09:58:23.178257",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -13,7 +13,7 @@
   },
   "processingnodes": {
     "pmdco-2.0.7": {
-      "count": 140,
+      "count": 141,
       "items": [
         "http://w3id.org/sensotwin/applicationontology#DataResource",
         "http://w3id.org/sensotwin/applicationontology#TechnicalDataSheet",
@@ -41,6 +41,7 @@
         "http://w3id.org/sensotwin/applicationontology#Sandpaper",
         "http://w3id.org/sensotwin/applicationontology#TackyTape",
         "http://w3id.org/sensotwin/applicationontology#VacuumFilm",
+        "http://w3id.org/sensotwin/applicationontology#FibreComposite",
         "http://w3id.org/sensotwin/applicationontology#MixedMaterial",
         "http://w3id.org/sensotwin/applicationontology#Matrix",
         "http://w3id.org/sensotwin/applicationontology#RawMaterial",
@@ -67,13 +68,6 @@
         "http://w3id.org/sensotwin/applicationontology#DrawVacuum",
         "http://w3id.org/sensotwin/applicationontology#GasBallast",
         "http://w3id.org/sensotwin/applicationontology#ReduceVacuum",
-        "http://w3id.org/sensotwin/applicationontology#EndTemperature",
-        "http://w3id.org/sensotwin/applicationontology#ExactTemperature",
-        "http://w3id.org/sensotwin/applicationontology#MaximalTemperature",
-        "http://w3id.org/sensotwin/applicationontology#MinimalTemperature",
-        "http://w3id.org/sensotwin/applicationontology#StartTemperature",
-        "http://w3id.org/sensotwin/applicationontology#TemperatureDifference",
-        "http://w3id.org/sensotwin/applicationontology#WaitingTime",
         "http://w3id.org/sensotwin/applicationontology#Dimensions",
         "http://w3id.org/sensotwin/applicationontology#Hight",
         "http://w3id.org/sensotwin/applicationontology#Length",
@@ -149,6 +143,13 @@
         "http://w3id.org/sensotwin/applicationontology#scaling",
         "http://w3id.org/sensotwin/applicationontology#sigma_E",
         "http://w3id.org/sensotwin/applicationontology#sigma_fibre",
+        "http://w3id.org/sensotwin/applicationontology#EndTemperature",
+        "http://w3id.org/sensotwin/applicationontology#ExactTemperature",
+        "http://w3id.org/sensotwin/applicationontology#MaximalTemperature",
+        "http://w3id.org/sensotwin/applicationontology#MinimalTemperature",
+        "http://w3id.org/sensotwin/applicationontology#StartTemperature",
+        "http://w3id.org/sensotwin/applicationontology#TemperatureDifference",
+        "http://w3id.org/sensotwin/applicationontology#WaitingTime",
         "http://w3id.org/sensotwin/applicationontology#Testklasse",
         "http://w3id.org/sensotwin/applicationontology#DifferentialScanningCalorimeter",
         "http://w3id.org/sensotwin/applicationontology#Dilatometer",
@@ -166,13 +167,6 @@
     "pmdco-2.0.7": {
       "count": 82,
       "items": [
-        "http://w3id.org/sensotwin/applicationontology#EndTemperature",
-        "http://w3id.org/sensotwin/applicationontology#ExactTemperature",
-        "http://w3id.org/sensotwin/applicationontology#MaximalTemperature",
-        "http://w3id.org/sensotwin/applicationontology#MinimalTemperature",
-        "http://w3id.org/sensotwin/applicationontology#StartTemperature",
-        "http://w3id.org/sensotwin/applicationontology#TemperatureDifference",
-        "http://w3id.org/sensotwin/applicationontology#WaitingTime",
         "http://w3id.org/sensotwin/applicationontology#Dimensions",
         "http://w3id.org/sensotwin/applicationontology#Hight",
         "http://w3id.org/sensotwin/applicationontology#Length",
@@ -247,7 +241,14 @@
         "http://w3id.org/sensotwin/applicationontology#run_simulation",
         "http://w3id.org/sensotwin/applicationontology#scaling",
         "http://w3id.org/sensotwin/applicationontology#sigma_E",
-        "http://w3id.org/sensotwin/applicationontology#sigma_fibre"
+        "http://w3id.org/sensotwin/applicationontology#sigma_fibre",
+        "http://w3id.org/sensotwin/applicationontology#EndTemperature",
+        "http://w3id.org/sensotwin/applicationontology#ExactTemperature",
+        "http://w3id.org/sensotwin/applicationontology#MaximalTemperature",
+        "http://w3id.org/sensotwin/applicationontology#MinimalTemperature",
+        "http://w3id.org/sensotwin/applicationontology#StartTemperature",
+        "http://w3id.org/sensotwin/applicationontology#TemperatureDifference",
+        "http://w3id.org/sensotwin/applicationontology#WaitingTime"
       ]
     }
   },
@@ -312,10 +313,11 @@
   },
   "objects": {
     "pmdco-2.0.7": {
-      "count": 15,
+      "count": 16,
       "items": [
         "http://w3id.org/sensotwin/applicationontology#Testklasse",
         "http://w3id.org/sensotwin/applicationontology#Glue",
+        "http://w3id.org/sensotwin/applicationontology#FibreComposite",
         "http://w3id.org/sensotwin/applicationontology#MixedMaterial",
         "http://w3id.org/sensotwin/applicationontology#Matrix",
         "http://w3id.org/sensotwin/applicationontology#RawMaterial",
@@ -334,53 +336,51 @@
   },
   "definitioncounts": {
     "owl:Class": 193,
-    "owl:ObjectProperty": 18,
-    "owl:DatatypeProperty": 12
+    "owl:ObjectProperty": 19,
+    "owl:DatatypeProperty": 14
   },
   "creators_contributors": {
     "count": 1,
     "items": [
-      "<https://orcid.org/0009-0004-1208-3971>"
+      "https://orcid.org/0009-0004-1208-3971"
     ]
   },
   "namespaces": {
-    "count": 16,
+    "count": 14,
     "items": [
-      "https://orcid.org/",
-      "http://material-digital.de/pmdco/",
-      "https://w3id.org/pmd/co/",
-      "http://creativecommons.org/licenses/by/4.0/",
       "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://w3id.org/sensotwin/",
-      "https://w3id.org/pmd/",
-      "http://www.w3.org/ns/prov#",
-      "https://material-digital.de/pmdco/",
+      "https://w3id.org/pmd/co/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "http://purl.org/dc/terms/",
-      "http://www.w3.org/2002/07/owl#",
+      "http://w3id.org/sensotwin/",
       "http://w3id.org/sensotwin/applicationontology/",
+      "https://w3id.org/pmd/",
+      "http://w3id.org/sensotwin/applicationontology#",
+      "https://orcid.org/",
       "http://purl.org/dc/elements/1.1/",
-      "http://w3id.org/sensotwin/applicationontology#"
+      "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://creativecommons.org/licenses/by/4.0/",
+      "http://www.w3.org/ns/prov#"
     ]
   },
   "tlos": {
     "original": {
       "pmdco-2.0.7": {
-        "predicates": 59,
-        "objects": 57,
-        "subclasses": 242,
+        "predicates": 60,
+        "objects": 113,
+        "subclasses": 249,
         "subproperties": 0,
-        "subclassesproperties": 242,
-        "total": 358
+        "subclassesproperties": 249,
+        "total": 422
       },
       "pmdco-v0.1-beta": {
-        "predicates": 1,
-        "objects": 35,
+        "predicates": 0,
+        "objects": 0,
         "subclasses": 0,
         "subproperties": 0,
         "subclassesproperties": 0,
-        "total": 36
+        "total": 0
       },
       "emmo": {
         "predicates": 0,
@@ -449,20 +449,20 @@
     },
     "reasoned": {
       "pmdco-2.0.7": {
-        "predicates": 0,
-        "objects": 12268,
-        "subclasses": 499,
+        "predicates": 119,
+        "objects": 12818,
+        "subclasses": 509,
         "subproperties": 0,
-        "subclassesproperties": 499,
-        "total": 12767
+        "subclassesproperties": 509,
+        "total": 13446
       },
       "pmdco-v0.1-beta": {
         "predicates": 0,
-        "objects": 1,
+        "objects": 0,
         "subclasses": 0,
         "subproperties": 0,
         "subclassesproperties": 0,
-        "total": 1
+        "total": 0
       },
       "emmo": {
         "predicates": 0,
@@ -505,12 +505,12 @@
         "total": 0
       },
       "prov-o": {
-        "predicates": 0,
-        "objects": 1282,
-        "subclasses": 332,
+        "predicates": 212,
+        "objects": 1588,
+        "subclasses": 334,
         "subproperties": 0,
-        "subclassesproperties": 332,
-        "total": 1614
+        "subclassesproperties": 334,
+        "total": 2134
       },
       "qudt": {
         "predicates": 0,
@@ -533,7 +533,7 @@
   "license": {
     "count": 1,
     "items": [
-      "<http://creativecommons.org/licenses/by/4.0/>"
+      "http://creativecommons.org/licenses/by/4.0/"
     ]
   }
 }
