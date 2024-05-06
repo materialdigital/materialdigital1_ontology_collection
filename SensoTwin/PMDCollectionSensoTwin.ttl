@@ -10,11 +10,11 @@
 @base <http://w3id.org/sensotwin/applicationontology> .
 
 <http://w3id.org/sensotwin/applicationontology> rdf:type owl:Ontology ;
-                                                 owl:versionIRI <http://w3id.org/sensotwin/applicationontology/1.1.0> ;
+                                                 owl:versionIRI <http://w3id.org/sensotwin/applicationontology/1.0.1.> ;
                                                  owl:imports <https://w3id.org/pmd/co/2.0.7> ;
-                                                 <http://purl.org/dc/elements/1.1/creator> "<https://orcid.org/0009-0004-1208-3971>"@en ;
+                                                 <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0009-0004-1208-3971> ;
                                                  <http://purl.org/dc/terms/created> "19.01.2024"@en ;
-                                                 <http://purl.org/dc/terms/license> "<http://creativecommons.org/licenses/by/4.0/>"@en ;
+                                                 <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                                                  <http://purl.org/dc/terms/title> "SensoTwin Application Ontology"@en ;
                                                  rdfs:comment """Diese Ontologie beschreibt Faserverbundwerkstoffe entsprechend den Anforderungen im Projekt SensoTwin, sie ist weiterhin in Entwicklung.
 
@@ -42,7 +42,7 @@ PMDSI (old)
 qudt
 Prov
 IAO"""@en ;
-                                                 owl:versionInfo "1.0.0."@de .
+                                                 owl:versionInfo "1.0.1."@de .
 
 #################################################################
 #    Annotation properties
@@ -68,8 +68,8 @@ IAO"""@en ;
 :quantityAmount rdf:type owl:AnnotationProperty .
 
 
-###  https://material-digital.de/pmdco/P7825
-<https://material-digital.de/pmdco/P7825> rdf:type owl:AnnotationProperty .
+###  https://w3id.org/pmd/co/P7825
+<https://w3id.org/pmd/co/P7825> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -192,13 +192,11 @@ IAO"""@en ;
 
 ###  https://w3id.org/pmd/co/composedOf
 <https://w3id.org/pmd/co/composedOf> rdf:type owl:ObjectProperty ;
-                                     owl:inverseOf <https://w3id.org/pmd/co/composes> ;
-                                     rdf:type owl:TransitiveProperty .
+                                     owl:inverseOf <https://w3id.org/pmd/co/composes> .
 
 
 ###  https://w3id.org/pmd/co/composes
-<https://w3id.org/pmd/co/composes> rdf:type owl:ObjectProperty ,
-                                            owl:TransitiveProperty .
+<https://w3id.org/pmd/co/composes> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/pmd/co/executedBy
@@ -328,36 +326,6 @@ IAO"""@en ;
 #################################################################
 #    Classes
 #################################################################
-
-###  http://material-digital.de/pmdco/Duration
-<http://material-digital.de/pmdco/Duration> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://material-digital.de/pmdco/Time> .
-
-
-###  http://material-digital.de/pmdco/EndTime
-<http://material-digital.de/pmdco/EndTime> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://material-digital.de/pmdco/Time> .
-
-
-###  http://material-digital.de/pmdco/StartTime
-<http://material-digital.de/pmdco/StartTime> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://material-digital.de/pmdco/Time> .
-
-
-###  http://material-digital.de/pmdco/Temperature
-<http://material-digital.de/pmdco/Temperature> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
-
-
-###  http://material-digital.de/pmdco/Time
-<http://material-digital.de/pmdco/Time> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
-
-
-###  http://material-digital.de/pmdco/Weight
-<http://material-digital.de/pmdco/Weight> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
-
 
 ###  http://w3id.org/sensotwin/applicationontology#A_sigma_ult
 :A_sigma_ult rdf:type owl:Class ;
@@ -580,7 +548,7 @@ IAO"""@en ;
 
 ###  http://w3id.org/sensotwin/applicationontology#EndTemperature
 :EndTemperature rdf:type owl:Class ;
-                rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> .
+                rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#EndlessFibre
@@ -611,7 +579,7 @@ IAO"""@en ;
 
 ###  http://w3id.org/sensotwin/applicationontology#ExactTemperature
 :ExactTemperature rdf:type owl:Class ;
-                  rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> ;
+                  rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
                   rdfs:label "ExactTemperature"@en .
 
 
@@ -636,14 +604,6 @@ IAO"""@en ;
                                                        <https://w3id.org/pmd/co/EngineeredMaterial>
                                                      ) ;
                                   rdf:type owl:Class
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <https://w3id.org/pmd/co/composedOf> ;
-                                  owl:allValuesFrom [ rdf:type owl:Class ;
-                                                      owl:unionOf ( :FibreMaterial
-                                                                    :MatrixMaterial
-                                                                  )
-                                                    ]
                                 ] .
 
 
@@ -998,7 +958,7 @@ Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und e
 
 ###  http://w3id.org/sensotwin/applicationontology#MaximalTemperature
 :MaximalTemperature rdf:type owl:Class ;
-                    rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> ;
+                    rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
                     rdfs:label "MaximalTemperature"@en .
 
 
@@ -1019,7 +979,7 @@ Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und e
 
 ###  http://w3id.org/sensotwin/applicationontology#MinimalTemperature
 :MinimalTemperature rdf:type owl:Class ;
-                    rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> ;
+                    rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> ;
                     rdfs:label "MinimalTemperature"@en .
 
 
@@ -1280,7 +1240,7 @@ Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und e
 
 ###  http://w3id.org/sensotwin/applicationontology#StartTemperature
 :StartTemperature rdf:type owl:Class ;
-                  rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> .
+                  rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#StaticTensileTest
@@ -1544,7 +1504,7 @@ Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und e
 
 ###  http://w3id.org/sensotwin/applicationontology#TemperatureDifference
 :TemperatureDifference rdf:type owl:Class ;
-                       rdfs:subClassOf <http://material-digital.de/pmdco/Temperature> .
+                       rdfs:subClassOf <https://w3id.org/pmd/co/Temperature> .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#TensileTest
@@ -1606,7 +1566,7 @@ Sie enthält die Spaltennummer, eine Verknüpfung zur zugehörigen Einheit und e
 
 ###  http://w3id.org/sensotwin/applicationontology#WaitingTime
 :WaitingTime rdf:type owl:Class ;
-             rdfs:subClassOf <http://material-digital.de/pmdco/Time> .
+             rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#Width
@@ -1863,10 +1823,6 @@ prov:SoftwareAgent rdf:type owl:Class ;
                    rdfs:subClassOf prov:Agent .
 
 
-###  https://material-digital.de/pmdco/PMDSiUnit
-<https://material-digital.de/pmdco/PMDSiUnit> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/AnalysingProcess
 <https://w3id.org/pmd/co/AnalysingProcess> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/pmd/co/Process> .
@@ -1886,6 +1842,16 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/DemountingProcess
 <https://w3id.org/pmd/co/DemountingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Duration
+<https://w3id.org/pmd/co/Duration> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  https://w3id.org/pmd/co/EndTime
+<https://w3id.org/pmd/co/EndTime> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
 
 
 ###  https://w3id.org/pmd/co/EngineeredMaterial
@@ -1947,6 +1913,10 @@ prov:SoftwareAgent rdf:type owl:Class ;
                                    rdfs:subClassOf prov:Person .
 
 
+###  https://w3id.org/pmd/co/PMDSiUnit
+<https://w3id.org/pmd/co/PMDSiUnit> rdf:type owl:Class .
+
+
 ###  https://w3id.org/pmd/co/Process
 <https://w3id.org/pmd/co/Process> rdf:type owl:Class ;
                                   rdfs:subClassOf prov:Activity ;
@@ -1977,8 +1947,23 @@ prov:SoftwareAgent rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/pmd/co/Process> .
 
 
+###  https://w3id.org/pmd/co/StartTime
+<https://w3id.org/pmd/co/StartTime> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/pmd/co/Time> .
+
+
+###  https://w3id.org/pmd/co/Temperature
+<https://w3id.org/pmd/co/Temperature> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
+
+
 ###  https://w3id.org/pmd/co/TestingMachine
 <https://w3id.org/pmd/co/TestingMachine> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Time
+<https://w3id.org/pmd/co/Time> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
 
 
 ###  https://w3id.org/pmd/co/ValueObject
@@ -1986,10 +1971,15 @@ prov:SoftwareAgent rdf:type owl:Class ;
                                       rdfs:subClassOf prov:Entity ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasUnit ;
-                                                        owl:someValuesFrom <https://material-digital.de/pmdco/PMDSiUnit>
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMDSiUnit>
                                                       ] ;
                                       rdfs:label "Value Object"@en ,
                                                  "Wertobjekt"@de .
+
+
+###  https://w3id.org/pmd/co/Weight
+<https://w3id.org/pmd/co/Weight> rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> .
 
 
 #################################################################
@@ -2048,7 +2038,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#Q3495543
 :Q3495543 rdf:type owl:NamedIndividual ,
-                   <https://material-digital.de/pmdco/PMDSiUnit> ;
+                   <https://w3id.org/pmd/co/PMDSiUnit> ;
           owl:sameAs :millibar .
 
 
@@ -2147,7 +2137,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__Cured_Thermal_Stability_of_Frekote_770-NC
 :__Cured_Thermal_Stability_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
                                                       :MaximalTemperature ;
-                                             :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                                             :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                                              :quantityAmount 400 ;
                                              rdfs:label "Cured Maximal Thermal Stability of Frekote 770-NC"@en .
 
@@ -2163,8 +2153,8 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__CuringTemperatureOfSpecimen
 :__CuringTemperatureOfSpecimen rdf:type owl:NamedIndividual ,
-                                        <http://material-digital.de/pmdco/Temperature> ;
-                               :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                                        <https://w3id.org/pmd/co/Temperature> ;
+                               :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                                :hasValue "70"^^xsd:int ;
                                rdfs:label "__CuringTemperatureOfSpecimen"@en .
 
@@ -2240,8 +2230,8 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__DegaseMatrixDuration
 :__DegaseMatrixDuration rdf:type owl:NamedIndividual ,
-                                 <http://material-digital.de/pmdco/Duration> ;
-                        :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                 <https://w3id.org/pmd/co/Duration> ;
+                        :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                         :hasValue 2100 .
 
 
@@ -2316,37 +2306,37 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__Duration
 :__Duration rdf:type owl:NamedIndividual ,
-                     <http://material-digital.de/pmdco/Duration> ;
-            :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                     <https://w3id.org/pmd/co/Duration> ;
+            :hasUnit <https://w3id.org/pmd/co/Q11574> ;
             :hasValue 1200 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__DurationHardenSpecimen
 :__DurationHardenSpecimen rdf:type owl:NamedIndividual ,
-                                   <http://material-digital.de/pmdco/Duration> ;
-                          :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                   <https://w3id.org/pmd/co/Duration> ;
+                          :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                           :hasValue "7200"^^xsd:int ;
                           rdfs:label "__DurationHardenSpecimen"@en .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__DurationersterTeilvomZyklus
 :__DurationersterTeilvomZyklus rdf:type owl:NamedIndividual ,
-                                        <http://material-digital.de/pmdco/Duration> ;
-                               :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                        <https://w3id.org/pmd/co/Duration> ;
+                               :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                                :hasValue 10800 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__DurationletzterTeilVomZyklus
 :__DurationletzterTeilVomZyklus rdf:type owl:NamedIndividual ,
-                                         <http://material-digital.de/pmdco/Duration> ;
-                                :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                         <https://w3id.org/pmd/co/Duration> ;
+                                :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                                 :hasValue 25200 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__EndTermperature
 :__EndTermperature rdf:type owl:NamedIndividual ,
-                            <http://material-digital.de/pmdco/Temperature> ;
-                   :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                            <https://w3id.org/pmd/co/Temperature> ;
+                   :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                    :hasValue 70 .
 
 
@@ -2364,8 +2354,8 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__Final_Curing_Time_of_Frekote_770-NC
 :__Final_Curing_Time_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
-                                                <http://material-digital.de/pmdco/Duration> ;
-                                       :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                                <https://w3id.org/pmd/co/Duration> ;
+                                       :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                                        :quantityAmount 600 ;
                                        rdfs:label "Final Curing Time of Frekote 770-NC"@en .
 
@@ -2410,8 +2400,8 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__GasBallastDuration
 :__GasBallastDuration rdf:type owl:NamedIndividual ,
-                               <http://material-digital.de/pmdco/Duration> ;
-                      :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                               <https://w3id.org/pmd/co/Duration> ;
+                      :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                       :quantityAmount 600 .
 
 
@@ -2548,28 +2538,28 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__LengthOfLongFibre
 :__LengthOfLongFibre rdf:type owl:NamedIndividual ,
                               :Length ;
-                     :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                     :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                      :quantityAmount 25 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__LengthOfPeelPly
 :__LengthOfPeelPly rdf:type owl:NamedIndividual ,
                             :Length ;
-                   :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                   :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                    :quantityAmount 30 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__LengthResinDistributionMedia
 :__LengthResinDistributionMedia rdf:type owl:NamedIndividual ,
                                          :Length ;
-                                :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                                :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                                 :quantityAmount 20 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__LengthVacuumFoil
 :__LengthVacuumFoil rdf:type owl:NamedIndividual ,
                              :Length ;
-                    :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                     :quantityAmount 35 .
 
 
@@ -2620,14 +2610,14 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__MatrixtRatio
 :__MatrixtRatio rdf:type owl:NamedIndividual ,
                          :HardenerToResinRatio ;
-                :hasUnit <https://material-digital.de/pmdco/Q199> ;
+                :hasUnit <https://w3id.org/pmd/co/Q199> ;
                 :hasValue "0,3" .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__Maximal_Application_Temperature_of_Frekote_770-NC
 :__Maximal_Application_Temperature_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
                                                               :MaximalTemperature ;
-                                                     :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                                                     :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                                                      :quantityAmount 60 ;
                                                      rdfs:label "Maximal Application Temperature of Frekote 770-NC"@en .
 
@@ -2635,7 +2625,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__Minimal_Application_Temperature_of_Frekote_770-NC
 :__Minimal_Application_Temperature_of_Frekote_770-NC rdf:type owl:NamedIndividual ,
                                                               :MinimalTemperature ;
-                                                     :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                                                     :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                                                      :quantityAmount 15 ;
                                                      rdfs:label "__Minimal Application Temperature of Frekote 770-NC"@en .
 
@@ -2665,7 +2655,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__NumberOfLayers
 :__NumberOfLayers rdf:type owl:NamedIndividual ,
                            :Number ;
-                  :hasUnit <https://material-digital.de/pmdco/Q199> ;
+                  :hasUnit <https://w3id.org/pmd/co/Q199> ;
                   :quantityAmount 2 .
 
 
@@ -2820,7 +2810,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__SimulationErgebnis
 :__SimulationErgebnis rdf:type owl:NamedIndividual ,
                                :Strength ;
-                      :hasUnit <https://material-digital.de/pmdco/Q21062777> ;
+                      :hasUnit <https://w3id.org/pmd/co/Q21062777> ;
                       :hasValue "496.67825"^^xsd:float ;
                       rdfs:label "__SimulationErgebnis"@de .
 
@@ -2871,8 +2861,8 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__StartTemperature
 :__StartTemperature rdf:type owl:NamedIndividual ,
-                             <http://material-digital.de/pmdco/Temperature> ;
-                    :hasUnit <https://material-digital.de/pmdco/Q25267> ;
+                             <https://w3id.org/pmd/co/Temperature> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q25267> ;
                     :hasValue 35 .
 
 
@@ -2980,7 +2970,7 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__StrainAK_V2_90_2
 :__StrainAK_V2_90_2 rdf:type owl:NamedIndividual ,
                              :StrainAtUTS ;
-                    :hasUnit <https://material-digital.de/pmdco/Q199> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q199> ;
                     :hasValue 0.30 .
 
 
@@ -3003,15 +2993,15 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__TemperatureIncreaseDiff
 :__TemperatureIncreaseDiff rdf:type owl:NamedIndividual ,
-                                    <http://material-digital.de/pmdco/Temperature> ;
-                           :hasUnit <https://material-digital.de/pmdco/Q69362731> ;
+                                    <https://w3id.org/pmd/co/Temperature> ;
+                           :hasUnit <https://w3id.org/pmd/co/Q69362731> ;
                            :hasValue 35 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__TemperatureIncreaseTime
 :__TemperatureIncreaseTime rdf:type owl:NamedIndividual ,
-                                    <http://material-digital.de/pmdco/Duration> ;
-                           :hasUnit <https://material-digital.de/pmdco/Q11574> ;
+                                    <https://w3id.org/pmd/co/Duration> ;
+                           :hasUnit <https://w3id.org/pmd/co/Q11574> ;
                            :hasValue 3600 .
 
 
@@ -3088,21 +3078,21 @@ prov:SoftwareAgent rdf:type owl:Class ;
 
 ###  http://w3id.org/sensotwin/applicationontology#__WeightHardener
 :__WeightHardener rdf:type owl:NamedIndividual ,
-                           <http://material-digital.de/pmdco/Weight> ;
-                  :hasUnit <https://material-digital.de/pmdco/Q41803> ;
+                           <https://w3id.org/pmd/co/Weight> ;
+                  :hasUnit <https://w3id.org/pmd/co/Q41803> ;
                   :hasValue 120 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__WeightOfResin
 :__WeightOfResin rdf:type owl:NamedIndividual ,
-                          <http://material-digital.de/pmdco/Weight> ;
-                 :hasUnit <https://material-digital.de/pmdco/Q41803> ;
+                          <https://w3id.org/pmd/co/Weight> ;
+                 :hasUnit <https://w3id.org/pmd/co/Q41803> ;
                  :hasValue 400 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__WidthOfGluePlate
 :__WidthOfGluePlate rdf:type owl:NamedIndividual ;
-                    :hasUnit <https://material-digital.de/pmdco/Q174789> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174789> ;
                     :hasValue "55"^^xsd:int ;
                     rdfs:label "__WidthOfGluePlate"@en .
 
@@ -3110,14 +3100,14 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__WidthOfLongFibre
 :__WidthOfLongFibre rdf:type owl:NamedIndividual ,
                              :Width ;
-                    :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                    :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                     :quantityAmount 25 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__WidthOfPeelPly
 :__WidthOfPeelPly rdf:type owl:NamedIndividual ,
                            :Width ;
-                  :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                  :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                   :quantityAmount 30 .
 
 
@@ -3130,14 +3120,14 @@ prov:SoftwareAgent rdf:type owl:Class ;
 ###  http://w3id.org/sensotwin/applicationontology#__WidthResinDistributionMedia
 :__WidthResinDistributionMedia rdf:type owl:NamedIndividual ,
                                         :Width ;
-                               :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                               :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                                :quantityAmount 20 .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__WidthVacuumFoil
 :__WidthVacuumFoil rdf:type owl:NamedIndividual ,
                             :Width ;
-                   :hasUnit <https://material-digital.de/pmdco/Q174728> ;
+                   :hasUnit <https://w3id.org/pmd/co/Q174728> ;
                    :quantityAmount 35 .
 
 
@@ -3403,22 +3393,22 @@ should be the same as evaluation mode in step 7"""@en .
 
 ###  http://w3id.org/sensotwin/applicationontology#megapascal
 :megapascal rdf:type owl:NamedIndividual ,
-                     <https://material-digital.de/pmdco/PMDSiUnit> ;
-            owl:sameAs <https://material-digital.de/pmdco/Q21062777> .
+                     <https://w3id.org/pmd/co/PMDSiUnit> ;
+            owl:sameAs <https://w3id.org/pmd/co/Q21062777> .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#millibar
 :millibar rdf:type owl:NamedIndividual ,
-                   <https://material-digital.de/pmdco/PMDSiUnit> ;
+                   <https://w3id.org/pmd/co/PMDSiUnit> ;
           rdfs:label "millibar" ,
                      "millibar"@de ;
-          <https://material-digital.de/pmdco/P7825> "mbar" .
+          <https://w3id.org/pmd/co/P7825> "mbar" .
 
 
 ###  http://w3id.org/sensotwin/applicationontology#__1:10Ratio
 <http://w3id.org/sensotwin/applicationontology#__1:10Ratio> rdf:type owl:NamedIndividual ,
                                                                      :HardenerToResinRatio ;
-                                                            :hasUnit <https://material-digital.de/pmdco/Q199> ;
+                                                            :hasUnit <https://w3id.org/pmd/co/Q199> ;
                                                             :quantityAmount "1:10" ;
                                                             rdfs:comment "This is an exampleratio: 1 part Hardener to 10 parts Resin"@en .
 
@@ -3461,37 +3451,37 @@ should be the same as evaluation mode in step 7"""@en .
                                          rdfs:label "Technichal Data Sheet: Frekote 770 NC"@en .
 
 
-###  https://material-digital.de/pmdco/Q11574
-<https://material-digital.de/pmdco/Q11574> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q11574
+<https://w3id.org/pmd/co/Q11574> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q174728
-<https://material-digital.de/pmdco/Q174728> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q174728
+<https://w3id.org/pmd/co/Q174728> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q174789
-<https://material-digital.de/pmdco/Q174789> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q174789
+<https://w3id.org/pmd/co/Q174789> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q199
-<https://material-digital.de/pmdco/Q199> rdf:type owl:NamedIndividual ;
-                                         :hasUnit <https://material-digital.de/pmdco/Q199> .
+###  https://w3id.org/pmd/co/Q199
+<https://w3id.org/pmd/co/Q199> rdf:type owl:NamedIndividual ;
+                               :hasUnit <https://w3id.org/pmd/co/Q199> .
 
 
-###  https://material-digital.de/pmdco/Q21062777
-<https://material-digital.de/pmdco/Q21062777> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q21062777
+<https://w3id.org/pmd/co/Q21062777> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q25267
-<https://material-digital.de/pmdco/Q25267> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q25267
+<https://w3id.org/pmd/co/Q25267> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q41803
-<https://material-digital.de/pmdco/Q41803> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q41803
+<https://w3id.org/pmd/co/Q41803> rdf:type owl:NamedIndividual .
 
 
-###  https://material-digital.de/pmdco/Q69362731
-<https://material-digital.de/pmdco/Q69362731> rdf:type owl:NamedIndividual .
+###  https://w3id.org/pmd/co/Q69362731
+<https://w3id.org/pmd/co/Q69362731> rdf:type owl:NamedIndividual .
 
 
 [ :hasNumberOfRepeats "4"^^xsd:int
@@ -3503,29 +3493,12 @@ should be the same as evaluation mode in step 7"""@en .
 
 :LongFibre rdfs:label "LongFibre "@en .
 
+<https://orcid.org/0009-0004-1208-3971> rdfs:label "Ursula Pähler" .
+
 
 #################################################################
 #    General axioms
 #################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://material-digital.de/pmdco/Duration>
-                <http://material-digital.de/pmdco/EndTime>
-                <http://material-digital.de/pmdco/StartTime>
-                :WaitingTime
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://material-digital.de/pmdco/Temperature>
-                <http://material-digital.de/pmdco/Time>
-                <http://material-digital.de/pmdco/Weight>
-                :Pressure
-                :Ratio
-              )
-] .
-
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :A_sigma_ult
@@ -3663,6 +3636,16 @@ should be the same as evaluation mode in step 7"""@en .
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pressure
+                :Ratio
+                <https://w3id.org/pmd/co/Temperature>
+                <https://w3id.org/pmd/co/Time>
+                <https://w3id.org/pmd/co/Weight>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Step1
                 :Step2
                 :Step3
@@ -3670,6 +3653,15 @@ should be the same as evaluation mode in step 7"""@en .
                 :Step5
                 :Step6
                 :Step7
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :WaitingTime
+                <https://w3id.org/pmd/co/Duration>
+                <https://w3id.org/pmd/co/EndTime>
+                <https://w3id.org/pmd/co/StartTime>
               )
 ] .
 
