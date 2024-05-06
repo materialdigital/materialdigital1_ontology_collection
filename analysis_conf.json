@@ -57,7 +57,7 @@
         },
         "SensoTwin": {
             "graph_file": "SensoTwin/PMDCollectionSensoTwin.ttl",
-            "reasoned_graph_file": "SensoTwin/PMDCollectionSensoTwin-noindividuals.pellet-2.2.0.ttl",
+            "reasoned_graph_file": "SensoTwin/PMDCollectionSensoTwin.pellet-2.2.0.ttl",
             "startswith_filter": "http://w3id.org/sensotwin/"
         },
         "SmaDi": {
