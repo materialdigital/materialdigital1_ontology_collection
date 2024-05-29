@@ -1,6 +1,9 @@
 # materialdigital1_ontology_collection
 HAP 4 is preparing an overview of all ontologies created in the partner projects of MaterialDigitals first funding period. All partner projects should have received an email in which they are asked for their contribution. The purpose of this repo is to collect these contributions.
 
+## Visualization of T-Box evaluation results
+The provided T-Boxes were evaluated using [tbox_analysis.py](tbox_analysis.py) (locally, as this takes around 45 minutes). For each T-Box a json file describing the relevant content was generated (see e.g. [ODE_AM/ODE_AM.json](ODE_AM/ODE_AM.json)). The results of the evaluation are summarized in FIXME.
+
 ## List of ontologies
 | Project Name | Namespace | Reference to own public resource |
 | ------------ | --------- | -------------------------------- |

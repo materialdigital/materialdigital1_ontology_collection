@@ -1,0 +1,33 @@
+name: 'Generate tbox analysis visualization'
+on:
+  push:
+    branches:
+      - main
+      - separate_abox_tbox
+
+jobs:
+  run_ipynb:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: run jupyter notebook
+      run: |
+           pip install notebook rdflib pandas ipython ipywidgets
+           jupyter execute tbox_analysis_vis.ipynb
+           jupyter nbconvert --to html tbox_analysis_vis.ipynb
+           mkdir public
+           cp tbox_analysis_vis.ipynb public/tbox_analysis_vis.ipynb
+           mv tbox_analysis_vis.html public/tbox_analysis_vis.html
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v3
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Archive current state of ipynb
+        uses: actions/upload-artifact@v4
+        with:
+          name: tbox_analysis_vis
+          path: public/*

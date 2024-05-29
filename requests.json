@@ -1,0 +1,752 @@
+{
+    "http://creativecommons.org/licenses/by/4.0/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://creativecommons.org/licenses/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://edamontology.org/": {
+        "status_code": 200,
+        "content_type": "application/rdf+xml; charset=utf-8",
+        "countas_tlo": "edamontology",
+        "countas_ao": null
+    },
+    "https://en.wikipedia.org/wiki/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://github.com/oborel/obo-relations/issues/": {
+        "status_code": 406,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://github.com/obi-ontology/obi/issues/": {
+        "status_code": 406,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://gitlab.com/kupferdigital/process-graphs/lcf-test/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "KupferDigital"
+    },
+    "https://gitlab.com/kupferdigital/process-graphs/tensile-test/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "KupferDigital"
+    },
+    "https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "KupferDigital"
+    },
+    "https://gitlab.com/kupferdigital/process-graphs/relaxation-test/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "KupferDigital"
+    },
+    "https://glasdigi.cms.uni-jena.de/": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": "GlasDigital"
+    },
+    "https://glasdigi.cms.uni-jena.de/glass/": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": "GlasDigital"
+    },
+    "http://iirds.tekom.de/iirds#": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "tekom_iirds",
+        "countas_ao": null
+    },
+    "https://material-digital.de/pmdco/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "pmdco01",
+        "countas_ao": null
+    },
+    "http://material-digital.de/pmdco/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "pmdco01",
+        "countas_ao": null
+    },
+    "http://nmrML.org/nmrCV#": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "nmrCV",
+        "countas_ao": null
+    },
+    "https://ontobee.org/ontology/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://ontologydesignpatterns.org/wiki/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://orcid.org/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://org.semanticweb.owlapi/error#": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://protege.stanford.edu/plugins/owl/protege#": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://purl.allotrope.org/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": "allotrope",
+        "countas_ao": null
+    },
+    "http://purl.allotrope.org/ontologies/": {
+        "status_code": 504,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": "allotrope",
+        "countas_ao": null
+    },
+    "http://purl.dataone.org/odo/": {
+        "status_code": 400,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "dataone",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/bfo.owl#": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "bfo",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/bfo/axiom/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "bfo",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/ro/docs/direct-and-indirect-relations/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/digitrubber/releases/2023-06-01/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "DIGITRUBBER"
+    },
+    "http://purl.obolibrary.org/obo/ro/docs/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/ro.owl#": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/ro/docs/reflexivity/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/digitrubber/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "DIGITRUBBER"
+    },
+    "http://purl.obolibrary.org/obo/chebi#": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "chebi",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/ro/subsets#": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "ro",
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://purl.obolibrary.org/obo/chebi/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=UTF-8",
+        "countas_tlo": "chebi",
+        "countas_ao": null
+    },
+    "http://purl.org/dc/elements/1.1/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "dcelements",
+        "countas_ao": null
+    },
+    "http://purl.org/pav/": {
+        "status_code": 200,
+        "content_type": "application/rdf+xml",
+        "countas_tlo": "pav",
+        "countas_ao": null
+    },
+    "http://purl.org/dc/terms/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "dcterms",
+        "countas_ao": null
+    },
+    "http://purl.org/dc/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://qudt.org/schema/qudt/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "https://qudt.org/2.1/schema/qudt/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "http://qudt.org/vocab/": {
+        "status_code": 403,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/": {
+        "status_code": 400,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "cco",
+        "countas_ao": null
+    },
+    "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#": {
+        "status_code": 200,
+        "content_type": "application/rdf+xml",
+        "countas_tlo": "swrl",
+        "countas_ao": null
+    },
+    "https://w3.org/ns/prov#": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "prov",
+        "countas_ao": null
+    },
+    "https://w3.org/ns/csvw#": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "csvw",
+        "countas_ao": null
+    },
+    "https://w3id.org/pmd/glass-ontology/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "GlasDigital"
+    },
+    "https://w3id.org/cpto/GGBS/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "LeBeDigital"
+    },
+    "https://w3id.org/pmd/co/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": "pmdco20",
+        "countas_ao": null
+    },
+    "https://w3id.org/cpto/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "LeBeDigital"
+    },
+    "http://w3id.org/sensotwin/applicationontology#": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "SensoTwin"
+    },
+    "https://w3id.org/ODE_AM/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "https://w3id.org/ODE_AM/AMAO#": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "https://w3id.org/ODE_AM/AMAO/": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "https://w3id.org/ODE_AM/CEMAO/": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "https://w3id.org/pmd/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://w3id.org/ODE_AM/MAO/": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "http://w3id.org/sensotwin/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "SensoTwin"
+    },
+    "https://w3id.org/okn/o/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=UTF-8",
+        "countas_tlo": "okn",
+        "countas_ao": null
+    },
+    "http://w3id.org/nfdi4ing/metadata4ing#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "nfdi4ing",
+        "countas_ao": null
+    },
+    "https://w3id.org/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://w3id.org/ODE_AM/PBFAO/": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "http://w3id.org/sensotwin/applicationontology/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": null,
+        "countas_ao": "SensoTwin"
+    },
+    "https://w3id.org/ODE_AM/WAAMAO/": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "ODE_AM"
+    },
+    "http://wiki.geneontology.org/index.php/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": "geneontology",
+        "countas_ao": null
+    },
+    "http://wikiba.se/ontology/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": "wikibase",
+        "countas_ao": null
+    },
+    "http://wikiba.se/ontology#": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": "wikibase",
+        "countas_ao": null
+    },
+    "http://www.aidimme.es/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": "aidimme",
+        "countas_ao": null
+    },
+    "https://www.dipromag.de/dipromag_onto/0.1/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": "DiProMag"
+    },
+    "https://www.dipromag.de/ottr-templates/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": null,
+        "countas_ao": "DiProMag"
+    },
+    "http://www.ebi.ac.uk/efo/": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": "efo",
+        "countas_ao": null
+    },
+    "http://www.geneontology.org/formats/oboInOwl#": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "geneontology",
+        "countas_ao": null
+    },
+    "https://www.materials.fraunhofer.de/ontologies/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://www.ncbi.nlm.nih.gov/pubmed/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://www.ontology-of-units-of-measure.org/resource/om-2/": {
+        "status_code": 500,
+        "content_type": "text/turtle;charset=UTF-8",
+        "countas_tlo": "ontology-of-units-of-measure",
+        "countas_ao": null
+    },
+    "http://www.ontology-of-units-of-measure.org/resource/": {
+        "status_code": 404,
+        "content_type": "text/html;charset=utf-8",
+        "countas_tlo": "ontology-of-units-of-measure",
+        "countas_ao": null
+    },
+    "http://www.ontologyrepository.com/CommonCoreOntologies/": {
+        "status_code": 404,
+        "content_type": "application/json; charset=UTF-8",
+        "countas_tlo": "cco",
+        "countas_ao": null
+    },
+    "http://www.opengis.net/ont/geosparql#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "geosparql",
+        "countas_ao": null
+    },
+    "http://www.referent-tracking.com/_RTU/papers/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://www.tib.eu/digitrubber#": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "DIGITRUBBER"
+    },
+    "http://www.w3.org/ns/shacl#": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "shacl",
+        "countas_ao": null
+    },
+    "http://www.w3.org/ns/prov#": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "proc",
+        "countas_ao": null
+    },
+    "http://www.w3.org/ns/sosa/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "sosa",
+        "countas_ao": null
+    },
+    "http://www.w3.org/ns/ssn/systems/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "ssn",
+        "countas_ao": null
+    },
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "rdf",
+        "countas_ao": null
+    },
+    "http://www.w3.org/ns/dcat#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "dcat",
+        "countas_ao": null
+    },
+    "http://www.w3.org/2002/07/owl#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "owl",
+        "countas_ao": null
+    },
+    "http://www.w3.org/2000/01/rdf-schema#": {
+        "status_code": 200,
+        "content_type": "text/turtle; charset=utf-8",
+        "countas_tlo": "rdfs",
+        "countas_ao": null
+    },
+    "http://www.w3.org/2004/02/skos/core#": {
+        "status_code": 200,
+        "content_type": "application/rdf+xml; qs=0.9",
+        "countas_tlo": "skos",
+        "countas_ao": null
+    },
+    "http://www.w3.org/2003/11/swrl#": {
+        "status_code": 406,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": "swrl",
+        "countas_ao": null
+    },
+    "http://www.w3.org/2001/XMLSchema#": {
+        "status_code": 200,
+        "content_type": "application/xml",
+        "countas_tlo": "xml",
+        "countas_ao": null
+    },
+    "http://xmlns.com/foaf/0.1/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": "foaf",
+        "countas_ao": null
+    },
+    "https://w3id.org/pmd/tto/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": "PMDao_TTO",
+        "countas_ao": "PMDao_TTO"
+    },
+    "http://www.w3.org/ns/oa#": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "oa",
+        "countas_ao": null
+    },
+    "https://w3id.org/pmd/mo/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": "PMDao_MO",
+        "countas_ao": "PMDao_MO"
+    },
+    "http://emmo.info/emmo/top/annotations#": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "emmo",
+        "countas_ao": null
+    },
+    "https://doi.org/10.1016/": {
+        "status_code": 404,
+        "content_type": "text/html;charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://emmo.info/emmo/middle/math#": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "emmo",
+        "countas_ao": null
+    },
+    "http://emmo.info/emmo/middle/models#": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "emmo",
+        "countas_ao": null
+    },
+    "https://www.sciencedirect.com/topics/chemistry/electron-diffraction#": {
+        "status_code": 403,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://creativecommons.org/licenses/by/": {
+        "status_code": 403,
+        "content_type": "text/html; charset=iso-8859-1",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://www.jeol.co.jp/en/words/emterms/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "countas_tlo": "emterms",
+        "countas_ao": null
+    },
+    "https://doi.org/10.1007/": {
+        "status_code": 404,
+        "content_type": "text/turtle;charset=UTF-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://www.globalsino.com/EM/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://qudt.org/schema/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=ISO-8859-1",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "http://emmo.info/emmo/middle/metrology#": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "emmo",
+        "countas_ao": null
+    },
+    "https://cmrf.research.uiowa.edu/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://doi.org/10.1017/": {
+        "status_code": 404,
+        "content_type": "text/html;charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://www.iso.org/obp/ui/": {
+        "status_code": 200,
+        "content_type": "text/html;charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": "emglossary",
+        "countas_ao": null
+    },
+    "http://www.semanticweb.org/ontologies/KnowNow#": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": "KNOW-NOW"
+    },
+    "http://www.semanticweb.org/ontologies/": {
+        "status_code": null,
+        "content_type": null,
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "http://qudt.org/vocab/quantitykind/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "https://w3id.org/pmd/co/2.0.7/": {
+        "status_code": 200,
+        "content_type": "application/ld+json",
+        "countas_tlo": "pmdco20",
+        "countas_ao": null
+    },
+    "http://qudt.org/vocab/unit/": {
+        "status_code": 200,
+        "content_type": "text/turtle",
+        "countas_tlo": "qudt",
+        "countas_ao": null
+    },
+    "https://creativecommons.org/licenses/by-sa/4.0/": {
+        "status_code": 200,
+        "content_type": "text/html",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://purl.org/bpco/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "DigiBatMat"
+    },
+    "https://www.materialdigital.de/project/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://purl.org/": {
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": null
+    },
+    "https://purl.org/bpco#": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "DigiBatMat"
+    },
+    "http://emmo.info/emmo#": {
+        "status_code": 200,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": "emmo",
+        "countas_ao": null
+    },
+    "https://w3id.org/steel/": {
+        "status_code": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "StahlDigital"
+    },
+    "https://w3id.org/steel/ProcessOntology/": {
+        "status_code": 200,
+        "content_type": "application/json; charset=utf-8",
+        "countas_tlo": null,
+        "countas_ao": "StahlDigital"
+    }
+}
