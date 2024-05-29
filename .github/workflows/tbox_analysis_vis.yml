@@ -13,6 +13,7 @@ jobs:
     - name: run jupyter notebook
       run: |
            pip install notebook rdflib pandas ipython ipywidgets
+           jupyter kernelspec list
            jupyter execute tbox_analysis_vis.ipynb
            jupyter nbconvert --to html tbox_analysis_vis.ipynb
            mkdir public
