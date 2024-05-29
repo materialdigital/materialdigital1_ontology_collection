@@ -13,11 +13,11 @@ jobs:
     - name: run jupyter notebook
       run: |
            pip install notebook rdflib pandas ipython ipywidgets papermill
-           jupyter kernelspec list
            papermill --kernel python3 tbox_analysis_vis.ipynb tbox_analysis_vis_out.ipynb
            jupyter nbconvert --to html tbox_analysis_vis_out.ipynb
            mkdir public
            cp tbox_analysis_vis_out.ipynb public/tbox_analysis_vis.ipynb
+           cp tbox_analysis_vis_out.html public/index.html
            mv tbox_analysis_vis_out.html public/tbox_analysis_vis.html
     - name: Deploy to GitHub Pages
       if: success()
