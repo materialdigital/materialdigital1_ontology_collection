@@ -9,7 +9,7 @@ jobs:
   run_ipynb:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: run jupyter notebook
       run: |
            pip install notebook rdflib pandas ipython ipywidgets
