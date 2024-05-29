@@ -27,7 +27,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Archive current state of ipynb
-        uses: actions/upload-artifact@v4
-        with:
-          name: tbox_analysis_vis
-          path: public/*
+      uses: actions/upload-artifact@v4
+      with:
+        name: tbox_analysis_vis
+        path: public/*
