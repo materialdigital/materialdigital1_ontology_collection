@@ -12,13 +12,13 @@ jobs:
     - uses: actions/checkout@v4
     - name: run jupyter notebook
       run: |
-           pip install notebook rdflib pandas ipython ipywidgets
+           pip install notebook rdflib pandas ipython ipywidgets papermill
            jupyter kernelspec list
-           jupyter execute tbox_analysis_vis.ipynb
-           jupyter nbconvert --to html tbox_analysis_vis.ipynb
+           papermill --kernel python3 tbox_analysis_vis.ipynb tbox_analysis_vis_out.ipynb
+           jupyter nbconvert --to html tbox_analysis_vis_out.ipynb
            mkdir public
-           cp tbox_analysis_vis.ipynb public/tbox_analysis_vis.ipynb
-           mv tbox_analysis_vis.html public/tbox_analysis_vis.html
+           cp tbox_analysis_vis_out.ipynb public/tbox_analysis_vis.ipynb
+           mv tbox_analysis_vis_out.html public/tbox_analysis_vis.html
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v3
