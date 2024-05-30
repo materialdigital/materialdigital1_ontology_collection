@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-04-15T15:41:14.967834",
+  "analysis_date": "2024-05-29T11:24:24.124813",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -51,18 +51,18 @@
   "namespaces": {
     "count": 12,
     "items": [
-      "http://www.w3.org/2004/02/skos/core#",
-      "http://qudt.org/vocab/unit/",
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "http://purl.org/dc/terms/",
       "http://www.w3.org/2002/07/owl#",
       "https://material-digital.de/pmdco/",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "http://www.w3.org/2000/01/rdf-schema#",
       "http://emmo.info/emmo#",
-      "http://purl.org/dc/elements/1.1/",
+      "http://qudt.org/vocab/unit/",
+      "http://www.w3.org/2004/02/skos/core#",
       "http://www.w3.org/2001/XMLSchema#",
+      "https://w3id.org/steel/ProcessOntology/",
       "https://w3id.org/steel/",
-      "http://purl.org/dc/terms/",
-      "https://w3id.org/steel/ProcessOntology/"
+      "http://purl.org/dc/elements/1.1/"
     ]
   },
   "tlos": {

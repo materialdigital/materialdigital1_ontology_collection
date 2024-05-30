@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-04-15T14:55:13.684671",
+  "analysis_date": "2024-05-29T10:55:22.737250",
   "changes": null,
   "reasoner": {
     "reasoner": "pellet",
@@ -56,19 +56,19 @@
   "namespaces": {
     "count": 13,
     "items": [
-      "http://purl.obolibrary.org/obo/",
-      "http://wikiba.se/ontology/",
-      "https://glasdigi.cms.uni-jena.de/",
       "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.w3.org/2001/XMLSchema#",
-      "http://www.w3.org/2004/02/skos/core#",
-      "https://w3id.org/pmd/glass-ontology/",
+      "https://glasdigi.cms.uni-jena.de/glass/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "https://material-digital.de/pmdco/",
-      "http://wikiba.se/ontology#",
       "http://purl.org/dc/terms/",
+      "https://glasdigi.cms.uni-jena.de/",
       "http://www.w3.org/2002/07/owl#",
-      "https://glasdigi.cms.uni-jena.de/glass/"
+      "https://material-digital.de/pmdco/",
+      "http://purl.obolibrary.org/obo/",
+      "http://www.w3.org/2004/02/skos/core#",
+      "http://www.w3.org/2001/XMLSchema#",
+      "http://wikiba.se/ontology#",
+      "http://wikiba.se/ontology/",
+      "https://w3id.org/pmd/glass-ontology/"
     ]
   },
   "tlos": {

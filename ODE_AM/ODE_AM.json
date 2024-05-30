@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-04-15T15:12:20.417267",
+  "analysis_date": "2024-05-29T11:08:18.238063",
   "changes": [
     "combined modular files into one"
   ],
@@ -66,26 +66,26 @@
   "namespaces": {
     "count": 20,
     "items": [
+      "http://www.w3.org/2000/01/rdf-schema#",
+      "https://w3id.org/ODE_AM/AMAO#",
+      "http://www.w3.org/2004/02/skos/core#",
       "http://www.w3.org/2003/11/swrl#",
-      "https://w3id.org/ODE_AM/PBFAO/",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/",
+      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
+      "http://www.w3.org/2002/07/owl#",
+      "https://w3id.org/ODE_AM/AMAO/",
+      "https://w3id.org/ODE_AM/",
       "http://org.semanticweb.owlapi/error#",
       "https://w3id.org/ODE_AM/WAAMAO/",
-      "http://www.w3.org/2002/07/owl#",
-      "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#",
-      "http://purl.org/dc/elements/1.1/",
+      "http://www.ontologyrepository.com/CommonCoreOntologies/",
       "http://purl.obolibrary.org/obo/",
       "http://www.w3.org/2001/XMLSchema#",
-      "http://purl.obolibrary.org/obo/bfo.owl#",
-      "http://www.w3.org/2000/01/rdf-schema#",
-      "http://www.ontologyrepository.com/CommonCoreOntologies/",
-      "https://w3id.org/ODE_AM/AMAO/",
-      "https://w3id.org/ODE_AM/MAO/",
-      "http://www.w3.org/2004/02/skos/core#",
       "https://w3id.org/ODE_AM/CEMAO/",
-      "https://w3id.org/ODE_AM/AMAO#",
-      "https://w3id.org/ODE_AM/"
+      "https://w3id.org/ODE_AM/MAO/",
+      "https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/v2021-03-01/",
+      "https://w3id.org/ODE_AM/PBFAO/",
+      "http://purl.obolibrary.org/obo/bfo.owl#",
+      "http://purl.org/dc/elements/1.1/"
     ]
   },
   "tlos": {

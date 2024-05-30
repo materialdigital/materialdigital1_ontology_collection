@@ -1,2 +1,2 @@
 catalog-v*.xml
-DigiBatMat/*.ttl
+DigiBatMat/**/*.ttl

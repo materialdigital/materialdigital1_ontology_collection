@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2024-04-15T14:53:01.022210",
+  "analysis_date": "2024-05-29T10:53:42.979009",
   "changes": null,
   "reasoner": {
     "reasoner": "elk",
@@ -167,16 +167,16 @@
   "namespaces": {
     "count": 10,
     "items": [
-      "http://www.w3.org/ns/dcat#",
-      "https://w3id.org/pmd/co/",
-      "https://www.dipromag.de/dipromag_onto/0.1/",
-      "https://www.dipromag.de/ottr-templates/",
-      "http://www.w3.org/2001/XMLSchema#",
+      "http://www.w3.org/2000/01/rdf-schema#",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "http://purl.org/dc/terms/",
       "http://www.w3.org/2002/07/owl#",
+      "http://www.w3.org/ns/dcat#",
+      "https://www.dipromag.de/ottr-templates/",
+      "https://w3id.org/pmd/co/",
+      "http://www.w3.org/2001/XMLSchema#",
       "http://qudt.org/vocab/",
-      "http://www.w3.org/2000/01/rdf-schema#"
+      "https://www.dipromag.de/dipromag_onto/0.1/"
     ]
   },
   "tlos": {

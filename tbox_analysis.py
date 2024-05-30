@@ -5,7 +5,7 @@ import json
 import rdflib
 #import requests
 
-with open('analysis_conf.json', 'r', encoding='utf-8') as f:
+with open('tbox_analysis_conf.json', 'r', encoding='utf-8') as f:
     conf = json.load(f)
     ADDITIONAL_BINDINGS = [(binding['prefix'], rdflib.Namespace(binding['uri'])) for binding in conf['additional_bindings']]
     ADDITIONAL_BINDINGS = []
@@ -300,8 +300,6 @@ def analyze_graph(
 
 if __name__ == '__main__':
     for project, kwargs in conf['projects'].items():
-        if not project == 'SensoTwin':
-            continue
         start = datetime.now()
         with open(f'{project}/{project}.json', 'w', encoding='utf-8') as fp:
             json.dump(
