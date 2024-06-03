@@ -1,0 +1,1350 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qudt: <http://qudt.org/vocab/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dpm: <https://www.dipromag.de/dipromag_onto/0.1/> .
+
+dpm:Co2CrAl
+    a pmd:ChemicalComposition ;
+    pmd:composedOf [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.5"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Co
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.25"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Cr
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.25"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Al
+    ] .
+
+dpm:CompositionModificationTS20230606a
+    a dpm:CompositionModification ;
+    rdfs:comment "" ;
+    pmd:input dpm:MnNiGe ;
+    pmd:output <https://www.dipromag.de/dipromag_onto/0.1/MnNi0.6Co0.4Ge0.97Al0.03> ;
+    dpm:inserted [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "13.33"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Co
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "1.00"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Al
+    ] ;
+    dpm:substituted [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "20.00"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ni
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "32.33"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ge
+    ] .
+
+dpm:CompositionModificationTS20230606b
+    a dpm:CompositionModification ;
+    rdfs:comment "" ;
+    pmd:input dpm:MnNiGe ;
+    pmd:output <https://www.dipromag.de/dipromag_onto/0.1/MnNi0.8Co0.2Ge0.97Al0.03> ;
+    dpm:inserted [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "1.00"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Al
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "6.67"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Co
+    ] ;
+    dpm:substituted [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "26.67"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ni
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Metadata ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "32.33"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ge
+    ] .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+    a pmd:EDXMeasuringProcess ;
+    pmd:characteristic [
+        a pmd:SetPoint, dpm:CountingRate ;
+        pmd:unit qudt:HZ ;
+        pmd:value "2270"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:AccelerationVoltage ;
+        pmd:unit qudt:V ;
+        pmd:value "2000"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:FieldOfView ;
+        pmd:unit qudt:M2 ;
+        pmd:value "5E-9"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:ProbeCurrent ;
+        pmd:unit qudt:A ;
+        pmd:value "2E-9"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:MeasurementTime ;
+        pmd:unit qudt:SEC ;
+        pmd:value "100"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:SpotDiameter ;
+        pmd:unit qudt:M ;
+        pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    pmd:executedBy [
+        a dpm:EDX
+    ] ;
+    pmd:input [
+        a pmd:Specimen ;
+        pmd:composedOf dpm:ThinFilmSampleMW20221125a_annealed
+    ] ;
+    pmd:subordinateProcess [
+        a pmd:EDXPointMeasuringProcess ;
+        pmd:characteristic [
+            a pmd:Measurement ;
+            pmd:composedOf [
+                a dpm:Element ;
+                pmd:characteristic [
+                    a pmd:ChemicalCompositionStd, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "0.398"^^<http://www.w3.org/2001/XMLSchema#float>
+                ], [
+                    a pmd:ChemicalCompositionMean, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "49.319"^^<http://www.w3.org/2001/XMLSchema#float>
+                ] ;
+                pmd:relatesToElement dpm:Co
+            ], [
+                a dpm:Element ;
+                pmd:characteristic [
+                    a pmd:ChemicalCompositionStd, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "0.385"^^<http://www.w3.org/2001/XMLSchema#float>
+                ], [
+                    a pmd:ChemicalCompositionMean, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "24.173"^^<http://www.w3.org/2001/XMLSchema#float>
+                ] ;
+                pmd:relatesToElement dpm:Cr
+            ], [
+                a dpm:Element ;
+                pmd:characteristic [
+                    a pmd:ChemicalCompositionStd, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "0.415"^^<http://www.w3.org/2001/XMLSchema#float>
+                ], [
+                    a pmd:ChemicalCompositionMean, pmd:Measurement ;
+                    pmd:unit dpm:at_percent ;
+                    pmd:value "26.508"^^<http://www.w3.org/2001/XMLSchema#float>
+                ] ;
+                pmd:relatesToElement dpm:Al
+            ]
+        ] ;
+        dpm:characteristic [
+            pmd:value false
+        ], [
+            pmd:value ""
+        ]
+    ] .
+
+dpm:GoalsAndAmbitionsTS20230606a
+    a dpm:Goal ;
+    dpm:hasApplicableMethods dpm:CompositionModificationTS20230606a ;
+    dpm:hasApplicableMethodsDescription "Elemental substitution" ;
+    dpm:hasGoalDescripton "first-order magnetic transition near room-temperature" ;
+    dpm:hasIntentionDescription "enlarge change of magnetization when encountering small temperature change -> large magnetocaloric effect -> transfer more thermal energy from heating to cooling -> cooling application like refrigerator" ;
+    dpm:hasReasonDescription "A small amount of Al substitution for Ge can lower the structural transition, resulting in a coupled first-order magnetostructural transition has been realized in MnNi1-xCoxGe0.97Al0.03", "from the substitution of Co for Ni you can expect higher magnetization" ;
+    dpm:hasResults <https://www.dipromag.de/dipromag_onto/0.1/MnNi0.6Co0.4Ge0.97Al0.03>, <https://www.dipromag.de/dipromag_onto/0.1/MnNi0.8Co0.2Ge0.97Al0.03> ;
+    dpm:referenceForComparisonDescription "Dan’kov S Y, Tishin A M, Pecharsky V K and Gschneidner K A 1998 Magnetic phase transitions and the magnetothermal properties of gadolinium Phys. Rev. B 57 3478 https://doi.org/10.1103/PhysRevB.57.3478" ;
+    dpm:referenceToPriorExperimentsDescription "Nizioł S, Bombik A, Bażela W, Szytuła A and Fruchart D 1982 Magnetic phase diagram of CoxNi1-xMnGe Solid State Commun. 42 79 https://doi.org/10.1016/0038-1098(82)90356-8", "Tapas Samanta, Igor Dubenko, Abdiel Quetz, Samuel Temple, Shane Stadler, Naushad Ali; Magnetostructural phase transitions and magnetocaloric effects in MnNiGe1−xAlx. Appl. Phys. Lett. 2012; 100 052404. https://doi.org/10.1063/1.3681798" .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-a-AM-a-a-a
+    a dpm:MagneticPropertiesMeasuringProcessIsofield ;
+    pmd:output [
+        pmd:characteristic [
+            a pmd:Measurement, dpm:T_c_cooling ;
+            pmd:unit qudt:K ;
+            pmd:value ("285.7"^^<http://www.w3.org/2001/XMLSchema#float>
+                "286.7"^^<http://www.w3.org/2001/XMLSchema#float>
+                "288.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "290.3"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_T_hyst ;
+            pmd:unit qudt:K ;
+            pmd:value ("4.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "4.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "4.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "3.6"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a qudt:MagneticField, pmd:SetPoint ;
+            pmd:unit qudt:T ;
+            pmd:value ("0.2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:T_c_heating ;
+            pmd:unit qudt:K ;
+            pmd:value ("290"^^<http://www.w3.org/2001/XMLSchema#float>
+                "291"^^<http://www.w3.org/2001/XMLSchema#float>
+                "293"^^<http://www.w3.org/2001/XMLSchema#float>
+                "293.9"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ] .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a
+    a dpm:MagneticPropertiesMeasuringProcessIsofield ;
+    pmd:output [
+        pmd:characteristic [
+            a pmd:Measurement, dpm:T_c_cooling ;
+            pmd:unit qudt:K ;
+            pmd:value ("247.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "248.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "249.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "151.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_T_hyst ;
+            pmd:unit qudt:K ;
+            pmd:value ("3.9"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2.9"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2.9"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2.9"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a qudt:MagneticField, pmd:SetPoint ;
+            pmd:unit qudt:T ;
+            pmd:value ("0.2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:T_c_heating ;
+            pmd:unit qudt:K ;
+            pmd:value ("251.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "251.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "252.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "254.4"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], [
+        pmd:characteristic [
+            a pmd:Measurement, dpm:T_c_cooling ;
+            pmd:unit qudt:K ;
+            pmd:value ("247.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "247.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "248.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "249.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:SetPoint, dpm:d_B ;
+            pmd:unit qudt:T ;
+            pmd:value ("1"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_S_cooling ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("2.99"^^<http://www.w3.org/2001/XMLSchema#float>
+                "6.49"^^<http://www.w3.org/2001/XMLSchema#float>
+                "16.11"^^<http://www.w3.org/2001/XMLSchema#float>
+                "21.78"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_S_heating ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("3.24"^^<http://www.w3.org/2001/XMLSchema#float>
+                "6.72"^^<http://www.w3.org/2001/XMLSchema#float>
+                "16.39"^^<http://www.w3.org/2001/XMLSchema#float>
+                "22.42"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:reversible_delta ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("2.85"^^<http://www.w3.org/2001/XMLSchema#float>
+                "6.07"^^<http://www.w3.org/2001/XMLSchema#float>
+                "14.89"^^<http://www.w3.org/2001/XMLSchema#float>
+                "20.27"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:T_c_heating ;
+            pmd:unit qudt:K ;
+            pmd:value ("251.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "251.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "251.5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "251.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:delta_S_data
+        ] ;
+        pmd:resource [
+            a dcat:Dataset, pmd:Dataset ;
+            dcat:distribution [
+                a dcat:Distribution ;
+                dcat:downloadUrl ""
+            ]
+        ]
+    ] .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+    a pmd:MagneticPropertiesMeasuringProcess ;
+    pmd:characteristic [
+        a qudt:Force, pmd:SetPoint ;
+        pmd:unit qudt:N ;
+        pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    pmd:executedBy [
+        a dpm:MPMS
+    ] ;
+    pmd:input [
+        a pmd:Specimen ;
+        pmd:characteristic [
+            a qudt:Mass, pmd:Measurement ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.0000069"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:composedOf dpm:BulkSampleTS2022-11-03-a-AM-a ;
+        dpm:characteristic [
+            pmd:value false
+        ]
+    ] ;
+    dpm:characteristic [
+        pmd:value ""
+    ] .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a-a
+    pmd:output [
+        pmd:characteristic [
+            a pmd:Measurement, dpm:T_c_cooling ;
+            pmd:unit qudt:K ;
+            pmd:value ("285.4"^^<http://www.w3.org/2001/XMLSchema#float>
+                "286.4"^^<http://www.w3.org/2001/XMLSchema#float>
+                "287.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "288.3"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:SetPoint, dpm:d_B ;
+            pmd:unit qudt:T ;
+            pmd:value ("1"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "5"^^<http://www.w3.org/2001/XMLSchema#float>
+                "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_S_cooling ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("0.53"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2.36"^^<http://www.w3.org/2001/XMLSchema#float>
+                "16.39"^^<http://www.w3.org/2001/XMLSchema#float>
+                "25.35"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:d_S_heating ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("0.67"^^<http://www.w3.org/2001/XMLSchema#float>
+                "2.83"^^<http://www.w3.org/2001/XMLSchema#float>
+                "19.05"^^<http://www.w3.org/2001/XMLSchema#float>
+                "29.35"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:reversible_delta ;
+            pmd:unit qudt:J_divby_kgK ;
+            pmd:value ("0.42"^^<http://www.w3.org/2001/XMLSchema#float>
+                "1.80"^^<http://www.w3.org/2001/XMLSchema#float>
+                "12.58"^^<http://www.w3.org/2001/XMLSchema#float>
+                "20.78"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:T_c_heating ;
+            pmd:unit qudt:K ;
+            pmd:value ("290.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "290.3"^^<http://www.w3.org/2001/XMLSchema#float>
+                "291.2"^^<http://www.w3.org/2001/XMLSchema#float>
+                "292.2"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ], [
+            a pmd:Measurement, dpm:delta_S_data
+        ] ;
+        pmd:resource [
+            a dcat:Dataset, pmd:Dataset ;
+            dcat:distribution [
+                a dcat:Distribution ;
+                dcat:downloadUrl ""
+            ]
+        ]
+    ] .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+    a pmd:MagneticPropertiesMeasuringProcess ;
+    pmd:characteristic [
+        a qudt:Force, pmd:SetPoint ;
+        pmd:unit qudt:N ;
+        pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    pmd:executedBy [
+        a dpm:MPMS
+    ] ;
+    pmd:input [
+        a pmd:Specimen ;
+        pmd:characteristic [
+            a qudt:Mass, pmd:Measurement ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.00000857"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:composedOf dpm:BulkSampleTS2022-11-03-b-AM-a ;
+        dpm:characteristic [
+            pmd:value false
+        ]
+    ] ;
+    dpm:characteristic [
+        pmd:value ""
+    ] .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03a-AM-a-a
+    pmd:subordinateProcess dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-a-AM-a-a-a .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03a-AM-a-b
+    pmd:subordinateProcess dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a .
+
+<https://www.dipromag.de/dipromag_onto/0.1/MnNi0.6Co0.4Ge0.97Al0.03>
+    a pmd:ChemicalComposition ;
+    pmd:composedOf [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "12"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Mn
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.6"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ni
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.4"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Co
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.97"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ge
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.03"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Al
+    ] .
+
+<https://www.dipromag.de/dipromag_onto/0.1/MnNi0.8Co0.2Ge0.97Al0.03>
+    a pmd:ChemicalComposition ;
+    pmd:composedOf [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Mn
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.8"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ni
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.2"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Co
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.97"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Ge
+    ], [
+        a dpm:Element ;
+        pmd:characteristic [
+            a pmd:ChemicalComposition, pmd:Measurement ;
+            pmd:unit dpm:at_percent ;
+            pmd:value "0.03"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:relatesToElement dpm:Al
+    ] .
+
+dpm:SputterParameters_Co2CrAl_a
+    a dpm:Sputtering ;
+    pmd:characteristic [
+        pmd:characteristic [
+            a pmd:SetPoint, dpm:SourceTiltAngle ;
+            pmd:unit qudt:DEG ;
+            pmd:value "31.1 "^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a qudt:Power, pmd:SetPoint ;
+            pmd:unit qudt:W ;
+            pmd:value "66"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:DistanceSourceToSample ;
+            pmd:unit qudt:M ;
+            pmd:value "0.253"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:input dpm:SputterSourceCo_a
+    ], [
+        a pmd:SetPoint, dpm:ExpectedDepositionRate ;
+        pmd:unit dpm:ANGSTROM_divby_SEC ;
+        pmd:value "0.47"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:ProcessPressure ;
+        pmd:unit qudt:PA ;
+        pmd:value "2E-3 "^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:DepositionTime ;
+        pmd:unit qudt:SEC ;
+        pmd:value "1274"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:SubstrateTemperature ;
+        pmd:unit qudt:K ;
+        pmd:value "600.0"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:BasePressure ;
+        pmd:unit qudt:PA ;
+        pmd:value "8E-10"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:InitialPreSputterTime ;
+        pmd:unit qudt:SEC ;
+        pmd:value "30"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    pmd:input [
+        pmd:characteristic [
+            a pmd:SetPoint, dpm:Atmosphere ;
+            dpm:relatesToComposition dpm:Ar
+        ]
+    ] ;
+    dpm:characteristic [
+        pmd:value true
+    ] .
+
+dpm:SputterSourceAl_a
+    a dpm:SputterSource ;
+    pmd:characteristic [
+        a qudt:Diameter, pmd:SetPoint ;
+        pmd:unit qudt:M ;
+        pmd:value "0.0508"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Purity ;
+        pmd:unit qudt:PERCENT ;
+        pmd:value "0.999"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    dpm:intendedCompound dpm:Al .
+
+dpm:SputterSourceCo_a
+    a dpm:SputterSource ;
+    pmd:characteristic [
+        a qudt:Diameter, pmd:SetPoint ;
+        pmd:unit qudt:M ;
+        pmd:value "0.0508"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Purity ;
+        pmd:unit qudt:PERCENT ;
+        pmd:value "0.999"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    dpm:intendedCompound dpm:Co .
+
+dpm:SputterSourceCr_a
+    a dpm:SputterSource ;
+    pmd:characteristic [
+        a qudt:Diameter, pmd:SetPoint ;
+        pmd:unit qudt:M ;
+        pmd:value "0.0508"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Purity ;
+        pmd:unit qudt:PERCENT ;
+        pmd:value "0.999"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    dpm:intendedCompound dpm:Cr .
+
+dpm:SynthesisArcMeltBulk-BulkSampleTS2022-11-03-a-a
+    pmd:input [
+        pmd:characteristic [
+            a pmd:SetPoint, dpm:Atmosphere ;
+            dpm:relatesToComposition dpm:Ar
+        ]
+    ], [
+        pmd:characteristic [
+            a qudt:SampleMass, pmd:SetPoint ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.003"^^<http://www.w3.org/2001/XMLSchema#float>
+        ]
+    ], [
+        dpm:characteristic [
+            pmd:value "Cu"
+        ]
+    ], _:b47 .
+
+dpm:SynthesisArcMeltBulk-BulkSampleTS2022-11-03-a-b
+    pmd:input [
+        pmd:characteristic [
+            a pmd:SetPoint, dpm:Atmosphere ;
+            dpm:relatesToComposition dpm:Ar
+        ]
+    ], [
+        pmd:characteristic [
+            a qudt:SampleMass, pmd:SetPoint ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.003"^^<http://www.w3.org/2001/XMLSchema#float>
+        ]
+    ], [
+        dpm:characteristic [
+            pmd:value "Cu"
+        ]
+    ], _:b63 .
+
+<https://www.dipromag.de/dipromag_onto/0.1/TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a>
+    a dpm:AnnealingTreatmentProcess, dpm:TreatmentProcess ;
+    pmd:characteristic [
+        pmd:characteristic [
+            a qudt:RampEnd, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("200"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], [
+        pmd:characteristic [
+            a qudt:RampStart, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("100"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], _:b78, _:b79, [
+        a qudt:Pressure, pmd:SetPoint ;
+        pmd:unit qudt:PA ;
+        pmd:value "20000"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Atmosphere ;
+        dpm:relatesToComposition dpm:Ar
+    ] ;
+    pmd:input dpm:BulkSampleTS2022-11-03-a ;
+    pmd:output dpm:BulkSampleTS2022-11-03-a-AM-a ;
+    dpm:characteristic [
+        pmd:value true
+    ] .
+
+<https://www.dipromag.de/dipromag_onto/0.1/TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-a>
+    a dpm:TreatmentProcess ;
+    pmd:input dpm:BulkSampleTS2022-11-03-b ;
+    pmd:output dpm:BulkSampleTS2022-11-03-b-AM-a .
+
+<https://www.dipromag.de/dipromag_onto/0.1/TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b>
+    a dpm:AnnealingTreatmentProcess ;
+    pmd:characteristic [
+        pmd:characteristic [
+            a qudt:RampEnd, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("200"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], [
+        pmd:characteristic [
+            a qudt:RampStart, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("100"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], _:b199, _:b200, [
+        a qudt:Pressure, pmd:SetPoint ;
+        pmd:unit qudt:PA ;
+        pmd:value "20000"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Atmosphere ;
+        dpm:relatesToComposition dpm:Ar
+    ] ;
+    dpm:characteristic [
+        pmd:value true
+    ] .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+    a dpm:AnnealingTreatmentProcess, dpm:TreatmentProcess ;
+    pmd:characteristic [
+        pmd:characteristic [
+            a qudt:RampEnd, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("400"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], [
+        pmd:characteristic [
+            a qudt:RampStart, pmd:SetPoint ;
+            pmd:unit qudt:K ;
+            pmd:value ("0.6666"^^<http://www.w3.org/2001/XMLSchema#float>
+            )
+        ]
+    ], _:b379, _:b380, [
+        a qudt:Pressure, pmd:SetPoint ;
+        pmd:unit qudt:PA ;
+        pmd:value "100"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:Atmosphere ;
+        dpm:relatesToComposition dpm:Ar
+    ] ;
+    pmd:input dpm:ThinFilmSampleMW20221125a ;
+    pmd:output dpm:ThinFilmSampleMW20221125a_annealed ;
+    dpm:characteristic [
+        pmd:value false
+    ] .
+
+dpm:XRRThinFilmSampleMW20221125a_anneal
+    a dpm:XRRMeasuringProcess ;
+    pmd:executedBy [
+        a dpm:XRR ;
+        pmd:characteristic [
+            a pmd:SetPoint, dpm:InitialXRAYDetectorCountRate ;
+            pmd:unit qudt:CPS ;
+            pmd:value "7500"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:AngleScanRate ;
+            pmd:unit dpm:DEG_divby_SEC ;
+            pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a qudt:Wavelength, pmd:SetPoint ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "1.540562"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a qudt:Length, pmd:SetPoint ;
+            pmd:unit qudt:M ;
+            pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:StepAngle ;
+            pmd:unit qudt:DEG ;
+            pmd:value "0.01"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:EndAngle ;
+            pmd:unit qudt:DEG ;
+            pmd:value "2"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:StartAngle ;
+            pmd:unit qudt:DEG ;
+            pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:SubstrateRoughness ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.3131"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a qudt:BeamWidth, pmd:SetPoint ;
+            pmd:unit qudt:M ;
+            pmd:value "0.0575E-3"^^<http://www.w3.org/2001/XMLSchema#float>
+        ]
+    ] ;
+    pmd:input [
+        a pmd:Specimen ;
+        pmd:composedOf dpm:ThinFilmSampleMW20221125a_annealed
+    ] ;
+    pmd:output [
+        a dpm:XRRMapping ;
+        pmd:characteristic [
+            a qudt:Density, pmd:SetPoint ;
+            pmd:unit dpm:KiloGM-PER-M3 ;
+            pmd:value "7860.57938"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, dpm:SubstrateRoughness ;
+            pmd:unit qudt:M ;
+            pmd:value "56.4E-10"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:SetPoint, pmd:Thickness ;
+            pmd:unit qudt:M ;
+            pmd:value "59.3E-9"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        pmd:characteristicOf dpm:ThinFilmLayerCo2CrAl60nm
+    ] .
+
+dpm:at_percent
+    a qudt:MassFraction .
+
+[]
+    dpm:characteristic [
+        pmd:value dpm:Quartz
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:SampleMassOut, pmd:SetPoint ;
+        pmd:unit qudt:KiloGM ;
+        pmd:value "0.00216181"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:MaxTemperature, pmd:SetPoint ;
+        pmd:unit qudt:K ;
+        pmd:value "1173"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:SampleMassOut, pmd:SetPoint ;
+        pmd:unit qudt:KiloGM ;
+        pmd:value "0.00216060"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    dpm:characteristic [
+        pmd:value ""
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:Duration, pmd:SetPoint ;
+        pmd:unit qudt:SEC ;
+        pmd:value ("5"^^<http://www.w3.org/2001/XMLSchema#float>
+        )
+    ] .
+
+[]
+    pmd:characteristic [
+        a pmd:SetPoint, dpm:Range, dpm:T_range_isoB ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "340"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "260"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:T_step_isoB ;
+        pmd:unit qudt:K ;
+        pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "5.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "2"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.2"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "1.9"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.01"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.01"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:d_T_divby_dt_isoB ;
+        pmd:unit dpm:K_divby_SEC ;
+        pmd:value ("2"^^<http://www.w3.org/2001/XMLSchema#float>
+        )
+    ] .
+
+[]
+    a pmd:XRDMeasuringProcess ;
+    pmd:characteristic [
+        a pmd:Measurement, dpm:StartAngle ;
+        pmd:unit qudt:DEG ;
+        pmd:value "20"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:Measurement, dpm:ScanRate ;
+        pmd:unit dpm:DEG_divby_SEC ;
+        pmd:value "0.5"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:Measurement, dpm:StepAngle ;
+        pmd:unit qudt:DEG ;
+        pmd:value "0.05"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:Wavelength, pmd:Measurement ;
+        pmd:unit qudt:ANGSTROM ;
+        pmd:value "1.5406"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:Measurement, dpm:EndAngle ;
+        pmd:unit qudt:DEG ;
+        pmd:value "70"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    pmd:executedBy [
+        a dpm:XRD
+    ] ;
+    pmd:input [
+        a pmd:Specimen ;
+        pmd:composedOf dpm:BulkSampleTS2022-11-03-a-AM-a
+    ] ;
+    pmd:output [
+        pmd:characteristic [
+            a pmd:Measurement, dpm:CellAngleAlpha ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleAlpha ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleAlpha ;
+            pmd:unit qudt:DEG ;
+            pmd:value "120"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleBeta ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleBeta ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleBeta ;
+            pmd:unit qudt:DEG ;
+            pmd:value "120"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleGamma ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleGamma ;
+            pmd:unit qudt:DEG ;
+            pmd:value "90"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellAngleGamma ;
+            pmd:unit qudt:DEG ;
+            pmd:value "120"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellVolume ;
+            pmd:unit qudt:M3 ;
+            pmd:value "78.4376"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:Temperature ;
+            pmd:unit qudt:K ;
+            pmd:value "300"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthA ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthA ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthA ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "5.37937"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthB ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthB ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthB ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "5.37937"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthC ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthC ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "4.08801"^^<http://www.w3.org/2001/XMLSchema#float>
+        ], [
+            a pmd:Measurement, dpm:CellLengthC ;
+            pmd:unit qudt:ANGSTROM ;
+            pmd:value "5.37937"^^<http://www.w3.org/2001/XMLSchema#float>
+        ] ;
+        dpm:characteristic [
+            pmd:value "P63/mmc"
+        ]
+    ] .
+
+[]
+    pmd:characteristic [
+        a pmd:SetPoint, dpm:Range, dpm:Temperature ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:Temperature ;
+                pmd:unit qudt:K ;
+                pmd:value "300"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:Temperature ;
+                pmd:unit qudt:K ;
+                pmd:value "300"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:Temperature ;
+                pmd:unit qudt:K ;
+                pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:Pressure, pmd:SetPoint ;
+        pmd:unit qudt:PA ;
+        pmd:value "20000"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:Current, pmd:SetPoint ;
+        pmd:unit qudt:A ;
+        pmd:value "50"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:Repetition, pmd:SetPoint ;
+        pmd:unit qudt:A ;
+        pmd:value "3"^^<http://www.w3.org/2001/XMLSchema#int>
+    ] ;
+    pmd:output [
+        pmd:characteristic [
+            a qudt:SampleMass, pmd:SetPoint ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.002998"^^<http://www.w3.org/2001/XMLSchema#float>
+        ]
+    ], _:b48, _:b49, _:b50 .
+
+[]
+    pmd:characteristic [
+        a qudt:Duration, pmd:SetPoint ;
+        pmd:unit qudt:SEC ;
+        pmd:value ("10800"^^<http://www.w3.org/2001/XMLSchema#float>
+        )
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:Pressure, pmd:SetPoint ;
+        pmd:unit qudt:PA ;
+        pmd:value "20000"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:Current, pmd:SetPoint ;
+        pmd:unit qudt:A ;
+        pmd:value "50"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:Repetition, pmd:SetPoint ;
+        pmd:unit qudt:A ;
+        pmd:value "3"^^<http://www.w3.org/2001/XMLSchema#int>
+    ] ;
+    pmd:output [
+        pmd:characteristic [
+            a qudt:SampleMass, pmd:SetPoint ;
+            pmd:unit qudt:KiloGM ;
+            pmd:value "0.0029781"^^<http://www.w3.org/2001/XMLSchema#float>
+        ]
+    ], _:b64, _:b65, _:b66 .
+
+[]
+    dpm:characteristic [
+        pmd:value dpm:Quartz
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:SampleMassOut, pmd:SetPoint ;
+        pmd:unit qudt:KiloGM ;
+        pmd:value "0.00216181"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:MaxTemperature, pmd:SetPoint ;
+        pmd:unit qudt:K ;
+        pmd:value "1173"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a qudt:SampleMassOut, pmd:SetPoint ;
+        pmd:unit qudt:KiloGM ;
+        pmd:value "0.00216060"^^<http://www.w3.org/2001/XMLSchema#float>
+    ] ;
+    dpm:characteristic [
+        pmd:value ""
+    ] .
+
+[]
+    pmd:characteristic [
+        a qudt:Duration, pmd:SetPoint ;
+        pmd:unit qudt:SEC ;
+        pmd:value ("5"^^<http://www.w3.org/2001/XMLSchema#float>
+        )
+    ] .
+
+[]
+    pmd:characteristic [
+        a pmd:SetPoint, dpm:T_step_isoB ;
+        pmd:unit qudt:K ;
+        pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "5.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "7"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "2"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "5"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.2"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "1.9"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:B_range, dpm:Range ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.01"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0.01"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:B_range ;
+                pmd:unit qudt:T ;
+                pmd:value "0"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ], [
+        a pmd:SetPoint, dpm:d_T_divby_dt_isoB ;
+        pmd:unit dpm:K_divby_SEC ;
+        pmd:value ("2"^^<http://www.w3.org/2001/XMLSchema#float>
+        )
+    ], [
+        a pmd:SetPoint, dpm:Range, dpm:T_range_isoB ;
+        dpm:range_end [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "280"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_start [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "220"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ] ;
+        dpm:range_step [
+            pmd:characteristic [
+                a pmd:SetPoint, dpm:T_range_isoB ;
+                pmd:unit qudt:K ;
+                pmd:value "1"^^<http://www.w3.org/2001/XMLSchema#float>
+            ]
+        ]
+    ] .
+
