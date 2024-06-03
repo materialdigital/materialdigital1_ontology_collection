@@ -1,0 +1,3442 @@
+@prefix qudt: <http://qudt.org/vocab/> .
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix o-docttr: <http://tpl.ottr.xyz/p/docttr/0.1/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix o-owl-ma: <http://tpl.ottr.xyz/owl/macro/0.1/> .
+@prefix dcterms: <http://dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov-o#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix dpm: <https://www.dipromag.de/dipromag_onto/0.1/> .
+@prefix o-rdf: <http://tpl.ottr.xyz/rdf/0.1/> .
+@prefix emmo: <http://www.w3.org/2002/07/emmo> .
+@prefix sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix interval: <http://reference.data.gov.uk/def/intervals/> .
+@prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+
+dpm:referenceToPriorExperimentsDescription
+        rdfs:label  "reference to Prior Experiments Description" .
+
+dpm:Goal  rdfs:subClassOf  pmd:Process .
+
+dpm:referenceForComparison
+        rdfs:label  "reference for Comparison" .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        rdf:type  dpm:Goal ;
+        dpm:hasApplicableMethodsDescription  "Elemental substitution" .
+
+dpm:hasResults  rdfs:subPropertyOf  pmd:output .
+
+dpm:hasIntentionDescription
+        rdfs:label  "has Intention Description" .
+
+dpm:hasApplicableMethods
+        rdfs:label  "has Applicable Methods" .
+
+dpm:referenceToPriorExperiments
+        rdfs:subPropertyOf  pmd:input ;
+        rdfs:label          "reference to Prior Experiments" .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        dpm:hasIntentionDescription  "enlarge change of magnetization when encountering small temperature change -> large magnetocaloric effect -> transfer more thermal energy from heating to cooling -> cooling application like refrigerator" .
+
+dpm:hasReasonDescription
+        rdfs:subPropertyOf  rdfs:comment .
+
+dpm:referenceForComparisonDescription
+        rdfs:label  "reference for Comparison Description" .
+
+dpm:hasGoalDescripton
+        rdfs:subPropertyOf  rdfs:comment .
+
+dpm:hasResults  rdfs:label  "has Results" .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        dpm:hasResults  dpm:MnNi0.6Co0.4Ge0.97Al0.03 ;
+        dpm:hasResults  dpm:MnNi0.8Co0.2Ge0.97Al0.03 .
+
+dpm:referenceToPriorExperimentsDescription
+        rdfs:subPropertyOf  rdfs:comment .
+
+dpm:hasApplicableMethodsDescription
+        rdfs:subPropertyOf  rdfs:comment .
+
+dpm:referenceForComparisonDescription
+        rdfs:subPropertyOf  dpm:hasReferenceToPriorExperimentsDescription .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        dpm:hasGoalDescripton     "first-order magnetic transition near room-temperature" ;
+        dpm:hasApplicableMethods  dpm:CompositionModificationTS20230606a ;
+        dpm:hasReasonDescription  "from the substitution of Co for Ni you can expect higher magnetization" ;
+        dpm:hasReasonDescription  "A small amount of Al substitution for Ge can lower the structural transition, resulting in a coupled first-order magnetostructural transition has been realized in MnNi1-xCoxGe0.97Al0.03" .
+
+dpm:Goal  rdfs:label  "Goal" .
+
+dpm:hasApplicableMethods
+        rdfs:subPropertyOf  pmd:input .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        dpm:referenceToPriorExperimentsDescription  "Nizioł S, Bombik A, Bażela W, Szytuła A and Fruchart D 1982 Magnetic phase diagram of CoxNi1-xMnGe Solid State Commun. 42 79 https://doi.org/10.1016/0038-1098(82)90356-8" ;
+        dpm:referenceToPriorExperimentsDescription  "Tapas Samanta, Igor Dubenko, Abdiel Quetz, Samuel Temple, Shane Stadler, Naushad Ali; Magnetostructural phase transitions and magnetocaloric effects in MnNiGe1−xAlx. Appl. Phys. Lett. 2012; 100 052404. https://doi.org/10.1063/1.3681798" .
+
+dpm:referenceForComparison
+        rdfs:subPropertyOf  dpm:input .
+
+dpm:hasReasonDescription
+        rdfs:label  "has Reason Description" .
+
+dpm:GoalsAndAmbitionsTS20230606a
+        dpm:referenceForComparisonDescription  "Dan’kov S Y, Tishin A M, Pecharsky V K and Gschneidner K A 1998 Magnetic phase transitions and the magnetothermal properties of gadolinium Phys. Rev. B 57 3478 https://doi.org/10.1103/PhysRevB.57.3478" .
+
+dpm:hasIntentionDescription
+        rdfs:subPropertyOf  rdfs:comment .
+
+dpm:hasApplicableMethodsDescription
+        rdfs:label  "has Applicable Methods Description" .
+
+dpm:hasGoalDescripton
+        rdfs:label  "has Goal Descripton" .
+
+dpm:CompositionModification
+        rdfs:label  "Composition Modification Process" .
+
+dpm:compositionModification
+        rdfs:label  "composition Modification" .
+
+dpm:substituted  rdfs:label  "substituted" .
+
+dpm:inserted  rdfs:subPropertyOf  dpm:compositionModification .
+
+dpm:substituted  rdfs:subPropertyOf  dpm:compositionModification .
+
+dpm:CompositionModificationTS20230606a
+        rdf:type  dpm:CompositionModification .
+
+_:b0    pmd:relatesToElement  dpm:Co .
+
+dpm:CompositionModificationTS20230606a
+        dpm:inserted  _:b0 .
+
+_:b0    rdf:type  dpm:Element .
+
+_:b1    pmd:value  "13.33"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b0    pmd:characteristic  _:b1 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+_:b2    pmd:relatesToElement  dpm:Al .
+
+dpm:CompositionModificationTS20230606a
+        dpm:inserted  _:b2 .
+
+_:b2    rdf:type  dpm:Element .
+
+_:b3    pmd:value  "1.00"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b2    pmd:characteristic  _:b3 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+dpm:CompositionModificationTS20230606a
+        pmd:input  dpm:MnNiGe .
+
+dpm:CompositionModification
+        rdfs:subClassOf  pmd:Process .
+
+_:b4    pmd:relatesToElement  dpm:Ni .
+
+dpm:CompositionModificationTS20230606a
+        dpm:substituted  _:b4 .
+
+_:b4    rdf:type  dpm:Element .
+
+_:b5    pmd:value  "20.00"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b4    pmd:characteristic  _:b5 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+_:b6    pmd:relatesToElement  dpm:Ge .
+
+dpm:CompositionModificationTS20230606a
+        dpm:substituted  _:b6 .
+
+_:b6    rdf:type  dpm:Element .
+
+_:b7    pmd:value  "32.33"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b6    pmd:characteristic  _:b7 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+dpm:inserted  rdfs:label  "inserted" .
+
+dpm:CompositionModificationTS20230606a
+        pmd:output    dpm:MnNi0.6Co0.4Ge0.97Al0.03 ;
+        rdfs:comment  "" .
+
+dpm:compositionModification
+        rdfs:subPropertyOf  pmd:characteristic .
+
+dpm:CompositionModification
+        rdfs:label  "Composition Modification Process" .
+
+dpm:compositionModification
+        rdfs:label  "composition Modification" .
+
+dpm:substituted  rdfs:label  "substituted" .
+
+dpm:inserted  rdfs:subPropertyOf  dpm:compositionModification .
+
+dpm:substituted  rdfs:subPropertyOf  dpm:compositionModification .
+
+dpm:CompositionModificationTS20230606b
+        rdf:type  dpm:CompositionModification .
+
+_:b8    pmd:relatesToElement  dpm:Co .
+
+dpm:CompositionModificationTS20230606b
+        dpm:inserted  _:b8 .
+
+_:b8    rdf:type  dpm:Element .
+
+_:b9    pmd:value  "6.67"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b8    pmd:characteristic  _:b9 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+_:b10   pmd:relatesToElement  dpm:Al .
+
+dpm:CompositionModificationTS20230606b
+        dpm:inserted  _:b10 .
+
+_:b10   rdf:type  dpm:Element .
+
+_:b11   pmd:value  "1.00"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b10   pmd:characteristic  _:b11 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+dpm:CompositionModificationTS20230606b
+        pmd:input  dpm:MnNiGe .
+
+dpm:CompositionModification
+        rdfs:subClassOf  pmd:Process .
+
+_:b12   pmd:relatesToElement  dpm:Ni .
+
+dpm:CompositionModificationTS20230606b
+        dpm:substituted  _:b12 .
+
+_:b12   rdf:type  dpm:Element .
+
+_:b13   pmd:value  "26.67"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b12   pmd:characteristic  _:b13 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+_:b14   pmd:relatesToElement  dpm:Ge .
+
+dpm:CompositionModificationTS20230606b
+        dpm:substituted  _:b14 .
+
+_:b14   rdf:type  dpm:Element .
+
+_:b15   pmd:value  "32.33"^^xsd:float ;
+        rdf:type   pmd:Metadata ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b14   pmd:characteristic  _:b15 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ATPercent  rdfs:subClassOf  qudt:MassFraction .
+
+dpm:inserted  rdfs:label  "inserted" .
+
+dpm:CompositionModificationTS20230606b
+        pmd:output    dpm:MnNi0.8Co0.2Ge0.97Al0.03 ;
+        rdfs:comment  "" .
+
+dpm:compositionModification
+        rdfs:subPropertyOf  pmd:characteristic .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        rdf:type  pmd:ChemicalComposition .
+
+_:b16   pmd:value  "12"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b17   pmd:characteristic  _:b16 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b17   pmd:relatesToElement  dpm:Mn ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        pmd:composedOf  _:b17 .
+
+_:b18   pmd:value  "0.6"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b19   pmd:characteristic  _:b18 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b19   pmd:relatesToElement  dpm:Ni ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        pmd:composedOf  _:b19 .
+
+_:b20   pmd:value  "0.4"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b21   pmd:characteristic  _:b20 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b21   pmd:relatesToElement  dpm:Co ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        pmd:composedOf  _:b21 .
+
+_:b22   pmd:value  "0.97"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b23   pmd:characteristic  _:b22 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b23   pmd:relatesToElement  dpm:Ge ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        pmd:composedOf  _:b23 .
+
+_:b24   pmd:value  "0.03"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b25   pmd:characteristic  _:b24 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b25   pmd:relatesToElement  dpm:Al ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.6Co0.4Ge0.97Al0.03
+        pmd:composedOf  _:b25 .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        rdf:type  pmd:ChemicalComposition .
+
+_:b26   pmd:value  "1"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b27   pmd:characteristic  _:b26 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b27   pmd:relatesToElement  dpm:Mn ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        pmd:composedOf  _:b27 .
+
+_:b28   pmd:value  "0.8"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b29   pmd:characteristic  _:b28 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b29   pmd:relatesToElement  dpm:Ni ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        pmd:composedOf  _:b29 .
+
+_:b30   pmd:value  "0.2"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b31   pmd:characteristic  _:b30 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b31   pmd:relatesToElement  dpm:Co ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        pmd:composedOf  _:b31 .
+
+_:b32   pmd:value  "0.97"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b33   pmd:characteristic  _:b32 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b33   pmd:relatesToElement  dpm:Ge ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        pmd:composedOf  _:b33 .
+
+_:b34   pmd:value  "0.03"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b35   pmd:characteristic  _:b34 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b35   pmd:relatesToElement  dpm:Al ;
+        rdf:type              dpm:Element .
+
+dpm:MnNi0.8Co0.2Ge0.97Al0.03
+        pmd:composedOf  _:b35 .
+
+_:b36   pmd:value  "20000"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Pressure ;
+        pmd:unit   qudt:PA .
+
+_:b37   pmd:characteristic  _:b36 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+_:b38   pmd:value  "0.002998"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b39   pmd:characteristic  _:b38 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+_:b40   pmd:value  "50"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Current ;
+        pmd:unit   qudt:A .
+
+_:b37   pmd:characteristic  _:b40 .
+
+qudt:A  rdfs:subClassOf  qudt:Unit .
+
+_:b41   rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+_:b42   pmd:characteristic  _:b41 .
+
+_:b41   dpm:relatesToComposition  dpm:Ar .
+
+_:b43   pmd:value  "0.003"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b44   pmd:characteristic  _:b43 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:ArcMelt  rdfs:label  "Arc Melt" .
+
+_:b45   pmd:value  "Cu" .
+
+_:b46   dpm:characteristic  _:b45 .
+
+dpm:ArcMelt  rdfs:subClassOf  dpm:Melt .
+
+dpm:SynthesisArcMeltBulk-BulkSampleTS2022-11-03-a-a
+        pmd:input  _:b44 ;
+        pmd:input  _:b42 ;
+        pmd:input  _:b46 ;
+        pmd:input  _:b47 .
+
+_:b37   pmd:output  _:b39 ;
+        pmd:output  _:b48 ;
+        pmd:output  _:b49 ;
+        pmd:output  _:b50 .
+
+_:b51   pmd:value  "3"^^xsd:int ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Repetition ;
+        pmd:unit   qudt:A .
+
+_:b37   pmd:characteristic  _:b51 .
+
+qudt:A  rdfs:subClassOf  qudt:Unit .
+
+_:b52   pmd:value  "20000"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Pressure ;
+        pmd:unit   qudt:PA .
+
+_:b53   pmd:characteristic  _:b52 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+_:b54   pmd:value  "0.0029781"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b55   pmd:characteristic  _:b54 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+_:b56   pmd:value  "50"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Current ;
+        pmd:unit   qudt:A .
+
+_:b53   pmd:characteristic  _:b56 .
+
+qudt:A  rdfs:subClassOf  qudt:Unit .
+
+_:b57   rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+_:b58   pmd:characteristic  _:b57 .
+
+_:b57   dpm:relatesToComposition  dpm:Ar .
+
+_:b59   pmd:value  "0.003"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b60   pmd:characteristic  _:b59 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:ArcMelt  rdfs:label  "Arc Melt" .
+
+_:b61   pmd:value  "Cu" .
+
+_:b62   dpm:characteristic  _:b61 .
+
+dpm:ArcMelt  rdfs:subClassOf  dpm:Melt .
+
+dpm:SynthesisArcMeltBulk-BulkSampleTS2022-11-03-a-b
+        pmd:input  _:b60 ;
+        pmd:input  _:b58 ;
+        pmd:input  _:b62 ;
+        pmd:input  _:b63 .
+
+_:b53   pmd:output  _:b55 ;
+        pmd:output  _:b64 ;
+        pmd:output  _:b65 ;
+        pmd:output  _:b66 .
+
+_:b67   pmd:value  "3"^^xsd:int ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Repetition ;
+        pmd:unit   qudt:A .
+
+_:b53   pmd:characteristic  _:b67 .
+
+qudt:A  rdfs:subClassOf  qudt:Unit .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        rdf:type    dpm:TreatmentProcess ;
+        pmd:output  dpm:BulkSampleTS2022-11-03-a-AM-a .
+
+dpm:TreatmentProcess  rdfs:subClassOf  pmd:ManufactureProcess .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        pmd:input  dpm:BulkSampleTS2022-11-03-a .
+
+dpm:MaxTemperature  rdfs:label  "Max Temperature" .
+
+dpm:SampleMassOut  rdfs:label  "Sample Mass Out" .
+
+dpm:MaxTemperature  rdfs:subClassOf  qudt:Temperature .
+
+_:b68   pmd:value  dpm:Quartz .
+
+_:b69   dpm:characteristic  _:b68 .
+
+_:b70   pmd:value  "" .
+
+_:b71   dpm:characteristic  _:b70 .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        rdf:type  dpm:AnnealingTreatmentProcess .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:label  "Annealing Treatment Process" .
+
+_:b72   pmd:value  _:b73 .
+
+_:b73   rdf:rest   rdf:nil ;
+        rdf:first  "200"^^xsd:float .
+
+_:b72   rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampEnd ;
+        pmd:unit  qudt:K .
+
+_:b74   pmd:characteristic  _:b72 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b75   pmd:value  _:b76 .
+
+_:b76   rdf:rest   rdf:nil ;
+        rdf:first  "100"^^xsd:float .
+
+_:b75   rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampStart ;
+        pmd:unit  qudt:K .
+
+_:b77   pmd:characteristic  _:b75 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        pmd:characteristic  _:b78 ;
+        pmd:characteristic  _:b79 ;
+        pmd:characteristic  _:b77 ;
+        pmd:characteristic  _:b74 .
+
+_:b80   pmd:value  _:b81 .
+
+_:b81   rdf:rest   rdf:nil ;
+        rdf:first  "5"^^xsd:float .
+
+_:b80   rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:Duration ;
+        pmd:unit  qudt:SEC .
+
+_:b82   pmd:characteristic  _:b80 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:subClassOf  pmd:TreatmentProcess .
+
+_:b83   pmd:value  true .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        dpm:characteristic  _:b83 .
+
+_:b84   pmd:value  "20000"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Pressure ;
+        pmd:unit   qudt:PA .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        pmd:characteristic  _:b84 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+_:b85   rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+dpm:TreatmentAnnealBulksample-MnNi0.6Co0.4Ge0.97Al0.03-1173-a
+        pmd:characteristic  _:b85 .
+
+_:b85   dpm:relatesToComposition  dpm:Ar .
+
+dpm:SampleMassOut  rdfs:subClassOf  qudt:SampleMass .
+
+dpm:SampleMassIn  rdfs:subClassOf  qudt:SampleMass .
+
+_:b86   pmd:value  "0.00216181"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMassOut ;
+        pmd:unit   qudt:KiloGM .
+
+_:b71   pmd:characteristic  _:b86 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:SampleMassIn  rdfs:label  "Sample Mass In" .
+
+_:b87   pmd:value  "1173"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:MaxTemperature ;
+        pmd:unit   qudt:K .
+
+_:b71   pmd:characteristic  _:b87 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b88   pmd:value  "0.00216060"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMassOut ;
+        pmd:unit   qudt:KiloGM .
+
+_:b71   pmd:characteristic  _:b88 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:Powder  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:Slab  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:PressureCell_CuBe10
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:Piece  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:comment  "Neasuring Process to measure the magnetic properties of a material sample." .
+
+dpm:piece  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:PressureCell_CuBe8
+        rdfs:label  "PressureCell CuBe8" .
+
+dpm:Holder  rdfs:comment  "Holder that holds a sample in place during measurement or synthesis." .
+
+dpm:Pyrex  rdfs:subClassOf  dpm:Holder .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+dpm:Holder  rdfs:label  "Holder" .
+
+dpm:PressureCell_CuBe10
+        rdfs:label  "PressureCell CuBe10" .
+
+dpm:Holder  rdfs:subClassOf  pmd:ProcessingNode .
+
+dpm:MPMS  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:PressureCell_NiCrAl
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:label  "Magnetic Properties Measuring Process" .
+
+dpm:Perpendicular  rdfs:label  "Perpendicular" .
+
+dpm:Disc  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:Meedle  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:FieldCycleNumber  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Straw  rdfs:label  "Straw" .
+
+dpm:MPMS3  rdfs:subClassOf  dpm:MPMS .
+
+dpm:Slab  rdfs:label  "Slab" .
+
+dpm:Quarts  rdfs:label  "Quarts" .
+
+dpm:MPMS3  rdfs:label  "MPMS3" .
+
+dpm:Piece  rdfs:label  "Piece" .
+
+_:b89   rdf:type  dpm:MPMS .
+
+dpm:Brass  rdfs:subClassOf  dpm:Holder .
+
+dpm:MagneticMomentComponent
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Transverse  rdfs:subClassOf  dpm:MagneticMomentComponent .
+
+_:b90   pmd:value  false .
+
+_:b91   dpm:characteristic  _:b90 .
+
+dpm:Parallel  rdfs:subClassOf  dpm:Orientation .
+
+dpm:Logitudinal  rdfs:label  "Logitudinal Magnetic Moment Component" .
+
+dpm:Transverse  rdfs:label  "Transverse Magnetic Moment Component" .
+
+_:b92   pmd:value  "" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+        dpm:characteristic  _:b92 .
+
+dpm:Orientation  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Pyrex  rdfs:label  "Pyrex" .
+
+_:b91   pmd:composedOf  dpm:BulkSampleTS2022-11-03-a-AM-a .
+
+dpm:MagneticMomentComponent
+        rdfs:label  "Magnetic Moment Component" .
+
+dpm:PressureCell_NiCrAl
+        rdfs:label  "PressureCell NiCrAl" .
+
+dpm:PressureCell_CuBe8
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:MagneticMomentComponent
+        rdfs:comment  "Direction of a magnetic field." .
+
+_:b93   pmd:value  "0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Force ;
+        pmd:unit   qudt:N .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+        pmd:characteristic  _:b93 .
+
+qudt:N  rdfs:subClassOf  qudt:Unit .
+
+dpm:Quarts  rdfs:subClassOf  dpm:Holder .
+
+dpm:Logitudinal  rdfs:subClassOf  dpm:MagneticMomentComponent .
+
+dpm:Meedle  rdfs:label  "Meedle" .
+
+dpm:Powder  rdfs:label  "Powder" .
+
+dpm:Orientation  rdfs:comment  "Orientation of an object." .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+        pmd:input  _:b91 .
+
+_:b94   pmd:value  "0.0000069"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   qudt:Mass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b91   pmd:characteristic  _:b94 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:MaterialShape  rdfs:comment  "Physical shape of a material sample, e.g. piece or powder." .
+
+dpm:LongDirectionParallel
+        rdfs:subClassOf  dpm:Parallel .
+
+dpm:VSM  rdfs:label  "VSM" .
+
+dpm:Perpendicular  rdfs:subClassOf  dpm:Orientation .
+
+dpm:Straw  rdfs:subClassOf  dpm:Holder .
+
+dpm:MPMS  rdfs:subClassOf  pmd:MeasuringDevice ;
+        rdfs:label       "MPMS" .
+
+dpm:MaterialShape  rdfs:label  "Material Shape" .
+
+dpm:VSM  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:Orientation  rdfs:label  "Orientation" .
+
+dpm:PressuteCell  rdfs:subClassOf  dpm:Holder .
+
+dpm:Parallel  rdfs:label  "Parallel" .
+
+dpm:Disc  rdfs:label  "Disc" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+        rdf:type  pmd:MagneticPropertiesMeasuringProcess .
+
+_:b91   rdf:type  pmd:Specimen .
+
+dpm:Brass  rdfs:label  "Brass" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a
+        pmd:executedBy  _:b89 .
+
+dpm:FieldCycleNumber  rdfs:label  "Field Cycle Number" .
+
+dpm:straw  rdfs:subClassOf  dpm:Holder .
+
+dpm:LongDirectionParallel
+        rdfs:label  "LongDirectionParallel" .
+
+dpm:PressuteCell  rdfs:label  "PressuteCell" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03a-AM-a-a
+        pmd:subordinateProcess  dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-a-AM-a-a-a .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-a-AM-a-a-a
+        rdf:type  dpm:MagneticPropertiesMeasuringProcessIsofield .
+
+dpm:K_divby_SEC  rdfs:label  "K divby SEC" .
+
+_:b95   rdf:type         dpm:T_range_isoB ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b96 ;
+        dpm:range_end    _:b97 ;
+        dpm:range_step   _:b98 ;
+        rdf:type         dpm:Range .
+
+_:b99   pmd:characteristic  _:b95 .
+
+_:b100  pmd:value  "220"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b96   pmd:characteristic  _:b100 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b101  pmd:value  "280"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b97   pmd:characteristic  _:b101 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b102  pmd:value  "1"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b98   pmd:characteristic  _:b102 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_divby_dt_isoB
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_range_isoB  rdfs:label  "T_range isoB" .
+
+_:b103  pmd:value  "1"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:T_step_isoB ;
+        pmd:unit   qudt:K .
+
+_:b99   pmd:characteristic  _:b103 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b104  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b105 ;
+        dpm:range_end    _:b106 ;
+        dpm:range_step   _:b107 ;
+        rdf:type         dpm:Range .
+
+_:b99   pmd:characteristic  _:b104 .
+
+_:b108  pmd:value  "7"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b105  pmd:characteristic  _:b108 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b109  pmd:value  "5.5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b106  pmd:characteristic  _:b109 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b110  pmd:value  "0.5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b107  pmd:characteristic  _:b110 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b111  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b112 ;
+        dpm:range_end    _:b113 ;
+        dpm:range_step   _:b114 ;
+        rdf:type         dpm:Range .
+
+_:b99   pmd:characteristic  _:b111 .
+
+_:b115  pmd:value  "5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b112  pmd:characteristic  _:b115 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b116  pmd:value  "2"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b113  pmd:characteristic  _:b116 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b117  pmd:value  "0.2"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b114  pmd:characteristic  _:b117 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b118  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b119 ;
+        dpm:range_end    _:b120 ;
+        dpm:range_step   _:b121 ;
+        rdf:type         dpm:Range .
+
+_:b99   pmd:characteristic  _:b118 .
+
+_:b122  pmd:value  "1.9"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b119  pmd:characteristic  _:b122 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b123  pmd:value  "0.1"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b120  pmd:characteristic  _:b123 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b124  pmd:value  "0.1"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b121  pmd:characteristic  _:b124 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b125  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b126 ;
+        dpm:range_end    _:b127 ;
+        dpm:range_step   _:b128 ;
+        rdf:type         dpm:Range .
+
+_:b99   pmd:characteristic  _:b125 .
+
+_:b129  pmd:value  "0.01"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b126  pmd:characteristic  _:b129 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b130  pmd:value  "0.01"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b127  pmd:characteristic  _:b130 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b131  pmd:value  "0"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b128  pmd:characteristic  _:b131 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_divby_dt_isoB
+        rdfs:label  "dT/dt isoB" .
+
+dpm:T_step_isoB  rdfs:label  "T_step isoB" .
+
+dpm:T_range_isoB  rdfs:subClassOf  dpm:Range .
+
+dpm:MagneticPropertiesMeasuringProcessIsofield
+        rdfs:label  "Magnetic PropertiesMeasuring Process Isofield" .
+
+dpm:B_range  rdfs:subClassOf  dpm:Range .
+
+dpm:T_step_isoB  rdfs:subClassOf  pmd:ValueObject .
+
+_:b132  pmd:value  _:b133 .
+
+_:b133  rdf:rest   rdf:nil ;
+        rdf:first  "2"^^xsd:float .
+
+_:b132  rdf:type  pmd:SetPoint ;
+        rdf:type  dpm:d_T_divby_dt_isoB ;
+        pmd:unit  dpm:K_divby_SEC .
+
+_:b99   pmd:characteristic  _:b132 .
+
+dpm:K_divby_SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:B_range  rdfs:label  "B range" .
+
+dpm:MagneticPropertiesMeasuringProcessIsofield
+        rdfs:subClassOf  dpm:MagneticPropertiesMeasuringProcess .
+
+_:b134  pmd:value  _:b135 .
+
+_:b136  rdf:rest   _:b137 ;
+        rdf:first  "286.7"^^xsd:float .
+
+_:b138  rdf:rest   rdf:nil ;
+        rdf:first  "290.3"^^xsd:float .
+
+_:b135  rdf:rest   _:b136 ;
+        rdf:first  "285.7"^^xsd:float .
+
+_:b137  rdf:rest   _:b138 ;
+        rdf:first  "288.5"^^xsd:float .
+
+_:b134  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_cooling ;
+        pmd:unit  qudt:K .
+
+_:b139  pmd:characteristic  _:b134 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_hyst  rdfs:label  "dT_hyst" .
+
+dpm:T_c_heating  rdfs:label  "T_c heating" .
+
+dpm:T_c_cooling  rdfs:label  "T_c cooling" .
+
+_:b140  pmd:value  _:b141 .
+
+_:b142  rdf:rest   rdf:nil ;
+        rdf:first  "3.6"^^xsd:float .
+
+_:b143  rdf:rest   _:b142 ;
+        rdf:first  "4.5"^^xsd:float .
+
+_:b144  rdf:rest   _:b143 ;
+        rdf:first  "4.3"^^xsd:float .
+
+_:b141  rdf:rest   _:b144 ;
+        rdf:first  "4.3"^^xsd:float .
+
+_:b140  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_T_hyst ;
+        pmd:unit  qudt:K .
+
+_:b139  pmd:characteristic  _:b140 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_hyst  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_c_cooling  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-a-AM-a-a-a
+        pmd:output  _:b139 .
+
+_:b145  pmd:value  _:b146 .
+
+_:b147  rdf:rest   _:b148 ;
+        rdf:first  "5"^^xsd:float .
+
+_:b148  rdf:rest   rdf:nil ;
+        rdf:first  "7"^^xsd:float .
+
+_:b146  rdf:rest   _:b149 ;
+        rdf:first  "0.2"^^xsd:float .
+
+_:b149  rdf:rest   _:b147 ;
+        rdf:first  "2"^^xsd:float .
+
+_:b145  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:MagneticField ;
+        pmd:unit  qudt:T .
+
+_:b139  pmd:characteristic  _:b145 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:T_c_heating  rdfs:subClassOf  pmd:ValueObject .
+
+_:b150  pmd:value  _:b151 .
+
+_:b152  rdf:rest   _:b153 ;
+        rdf:first  "293"^^xsd:float .
+
+_:b153  rdf:rest   rdf:nil ;
+        rdf:first  "293.9"^^xsd:float .
+
+_:b151  rdf:rest   _:b154 ;
+        rdf:first  "290"^^xsd:float .
+
+_:b154  rdf:rest   _:b152 ;
+        rdf:first  "291"^^xsd:float .
+
+_:b150  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_heating ;
+        pmd:unit  qudt:K .
+
+_:b139  pmd:characteristic  _:b150 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_B  rdfs:label  "dB" .
+
+dpm:T_c_heating  rdfs:label  "T_c heating" .
+
+_:b155  pmd:value  _:b156 .
+
+_:b157  rdf:rest   rdf:nil ;
+        rdf:first  "288.3"^^xsd:float .
+
+_:b156  rdf:rest   _:b158 ;
+        rdf:first  "285.4"^^xsd:float .
+
+_:b158  rdf:rest   _:b159 ;
+        rdf:first  "286.4"^^xsd:float .
+
+_:b159  rdf:rest   _:b157 ;
+        rdf:first  "287.3"^^xsd:float .
+
+_:b155  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_cooling ;
+        pmd:unit  qudt:K .
+
+_:b160  pmd:characteristic  _:b155 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:reversible_delta  rdfs:label  "reversible delta" .
+
+dpm:delta_S_data  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:d_S_cooling  rdfs:label  "d_S cooling" ;
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_c_cooling  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:reversible_delta  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-a-AM-a-a-a
+        pmd:output  _:b160 .
+
+dpm:T_c_heating  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:d_S_heating  rdfs:subClassOf  pmd:ValueObject .
+
+_:b161  pmd:value  _:b162 .
+
+_:b163  rdf:rest   _:b164 ;
+        rdf:first  "2"^^xsd:float .
+
+_:b162  rdf:rest   _:b163 ;
+        rdf:first  "1"^^xsd:float .
+
+_:b165  rdf:rest   rdf:nil ;
+        rdf:first  "7"^^xsd:float .
+
+_:b164  rdf:rest   _:b165 ;
+        rdf:first  "5"^^xsd:float .
+
+_:b161  rdf:type  pmd:SetPoint ;
+        rdf:type  dpm:d_B ;
+        pmd:unit  qudt:T .
+
+_:b160  pmd:characteristic  _:b161 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:delta_S_data  rdfs:label  "delta_S data" .
+
+dpm:d_S_heating  rdfs:label  "d_S heating" .
+
+_:b166  pmd:value  _:b167 .
+
+_:b167  rdf:rest   _:b168 ;
+        rdf:first  "0.53"^^xsd:float .
+
+_:b169  rdf:rest   rdf:nil ;
+        rdf:first  "25.35"^^xsd:float .
+
+_:b170  rdf:rest   _:b169 ;
+        rdf:first  "16.39"^^xsd:float .
+
+_:b168  rdf:rest   _:b170 ;
+        rdf:first  "2.36"^^xsd:float .
+
+_:b166  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_S_cooling ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b160  pmd:characteristic  _:b166 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+dpm:T_c_cooling  rdfs:label  "T_c cooling" .
+
+_:b171  pmd:value  _:b172 .
+
+_:b173  rdf:rest   rdf:nil ;
+        rdf:first  "29.35"^^xsd:float .
+
+_:b172  rdf:rest   _:b174 ;
+        rdf:first  "0.67"^^xsd:float .
+
+_:b175  rdf:rest   _:b173 ;
+        rdf:first  "19.05"^^xsd:float .
+
+_:b174  rdf:rest   _:b175 ;
+        rdf:first  "2.83"^^xsd:float .
+
+_:b171  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_S_heating ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b160  pmd:characteristic  _:b171 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+_:b176  pmd:value  _:b177 .
+
+_:b177  rdf:rest   _:b178 ;
+        rdf:first  "0.42"^^xsd:float .
+
+_:b178  rdf:rest   _:b179 ;
+        rdf:first  "1.80"^^xsd:float .
+
+_:b179  rdf:rest   _:b180 ;
+        rdf:first  "12.58"^^xsd:float .
+
+_:b180  rdf:rest   rdf:nil ;
+        rdf:first  "20.78"^^xsd:float .
+
+_:b176  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:reversible_delta ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b160  pmd:characteristic  _:b176 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+_:b181  pmd:value  _:b182 .
+
+_:b182  rdf:rest   _:b183 ;
+        rdf:first  "290.3"^^xsd:float .
+
+_:b183  rdf:rest   _:b184 ;
+        rdf:first  "290.3"^^xsd:float .
+
+_:b184  rdf:rest   _:b185 ;
+        rdf:first  "291.2"^^xsd:float .
+
+_:b185  rdf:rest   rdf:nil ;
+        rdf:first  "292.2"^^xsd:float .
+
+_:b181  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_heating ;
+        pmd:unit  qudt:K .
+
+_:b160  pmd:characteristic  _:b181 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b186  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:delta_S_data .
+
+_:b187  dcat:distribution  _:b188 .
+
+_:b160  pmd:characteristic  _:b186 .
+
+_:b187  rdf:type  pmd:Dataset ;
+        rdf:type  dcat:Dataset .
+
+_:b188  dcat:downloadUrl  "" .
+
+_:b160  pmd:resource  _:b187 .
+
+_:b188  rdf:type  dcat:Distribution .
+
+dpm:d_B  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-a
+        rdf:type    dpm:TreatmentProcess ;
+        pmd:output  dpm:BulkSampleTS2022-11-03-b-AM-a .
+
+dpm:TreatmentProcess  rdfs:subClassOf  pmd:ManufactureProcess .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-a
+        pmd:input  dpm:BulkSampleTS2022-11-03-b .
+
+dpm:MaxTemperature  rdfs:label  "Max Temperature" .
+
+dpm:SampleMassOut  rdfs:label  "Sample Mass Out" .
+
+dpm:MaxTemperature  rdfs:subClassOf  qudt:Temperature .
+
+_:b189  pmd:value  dpm:Quartz .
+
+_:b190  dpm:characteristic  _:b189 .
+
+_:b191  pmd:value  "" .
+
+_:b192  dpm:characteristic  _:b191 .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b
+        rdf:type  dpm:AnnealingTreatmentProcess .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:label  "Annealing Treatment Process" .
+
+_:b193  pmd:value  _:b194 .
+
+_:b194  rdf:rest   rdf:nil ;
+        rdf:first  "200"^^xsd:float .
+
+_:b193  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampEnd ;
+        pmd:unit  qudt:K .
+
+_:b195  pmd:characteristic  _:b193 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b196  pmd:value  _:b197 .
+
+_:b197  rdf:rest   rdf:nil ;
+        rdf:first  "100"^^xsd:float .
+
+_:b196  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampStart ;
+        pmd:unit  qudt:K .
+
+_:b198  pmd:characteristic  _:b196 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b
+        pmd:characteristic  _:b199 ;
+        pmd:characteristic  _:b200 ;
+        pmd:characteristic  _:b198 ;
+        pmd:characteristic  _:b195 .
+
+_:b201  pmd:value  _:b202 .
+
+_:b202  rdf:rest   rdf:nil ;
+        rdf:first  "5"^^xsd:float .
+
+_:b201  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:Duration ;
+        pmd:unit  qudt:SEC .
+
+_:b203  pmd:characteristic  _:b201 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:subClassOf  pmd:TreatmentProcess .
+
+_:b204  pmd:value  true .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b
+        dpm:characteristic  _:b204 .
+
+_:b205  pmd:value  "20000"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Pressure ;
+        pmd:unit   qudt:PA .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b
+        pmd:characteristic  _:b205 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+_:b206  rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+dpm:TreatmentAnnealBulksample-MnNi0.8Co0.2Ge0.97Al0.03-1173-b
+        pmd:characteristic  _:b206 .
+
+_:b206  dpm:relatesToComposition  dpm:Ar .
+
+dpm:SampleMassOut  rdfs:subClassOf  qudt:SampleMass .
+
+dpm:SampleMassIn  rdfs:subClassOf  qudt:SampleMass .
+
+_:b207  pmd:value  "0.00216181"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMassOut ;
+        pmd:unit   qudt:KiloGM .
+
+_:b192  pmd:characteristic  _:b207 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:SampleMassIn  rdfs:label  "Sample Mass In" .
+
+_:b208  pmd:value  "1173"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:MaxTemperature ;
+        pmd:unit   qudt:K .
+
+_:b192  pmd:characteristic  _:b208 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b209  pmd:value  "0.00216060"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:SampleMassOut ;
+        pmd:unit   qudt:KiloGM .
+
+_:b192  pmd:characteristic  _:b209 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:Powder  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:Slab  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:PressureCell_CuBe10
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:Piece  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:comment  "Neasuring Process to measure the magnetic properties of a material sample." .
+
+dpm:Piece  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:PressureCell_CuBe8
+        rdfs:label  "PressureCell CuBe8" .
+
+dpm:Holder  rdfs:comment  "Holder that holds a sample in place during measurement or synthesis." .
+
+dpm:Pyrex  rdfs:subClassOf  dpm:Holder .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+dpm:Holder  rdfs:label  "Holder" .
+
+dpm:PressureCell_CuBe10
+        rdfs:label  "PressureCell CuBe10" .
+
+dpm:Holder  rdfs:subClassOf  pmd:ProcessingNode .
+
+dpm:MPMS  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:PressureCell_NiCrAl
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:MagneticPropertiesMeasuringProcess
+        rdfs:label  "Magnetic Properties Measuring Process" .
+
+dpm:Perpendicular  rdfs:label  "Perpendicular" .
+
+dpm:Disc  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:Meedle  rdfs:subClassOf  dpm:MaterialShape .
+
+dpm:FieldCycleNumber  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Straw  rdfs:label  "Straw" .
+
+dpm:MPMS3  rdfs:subClassOf  dpm:MPMS .
+
+dpm:Slab  rdfs:label  "Slab" .
+
+dpm:Quarts  rdfs:label  "Quarts" .
+
+dpm:MPMS3  rdfs:label  "MPMS3" .
+
+dpm:Piece  rdfs:label  "Piece" .
+
+_:b210  rdf:type  dpm:MPMS .
+
+dpm:Brass  rdfs:subClassOf  dpm:Holder .
+
+dpm:MagneticMomentComponent
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Transverse  rdfs:subClassOf  dpm:MagneticMomentComponent .
+
+_:b211  pmd:value  false .
+
+_:b212  dpm:characteristic  _:b211 .
+
+dpm:Parallel  rdfs:subClassOf  dpm:Orientation .
+
+dpm:Logitudinal  rdfs:label  "Logitudinal Magnetic Moment Component" .
+
+dpm:Transverse  rdfs:label  "Transverse Magnetic Moment Component" .
+
+_:b213  pmd:value  "" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+        dpm:characteristic  _:b213 .
+
+dpm:Orientation  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:Pyrex  rdfs:label  "Pyrex" .
+
+_:b212  pmd:composedOf  dpm:BulkSampleTS2022-11-03-b-AM-a .
+
+dpm:MagneticMomentComponent
+        rdfs:label  "Magnetic Moment Component" .
+
+dpm:PressureCell_NiCrAl
+        rdfs:label  "PressureCell NiCrAl" .
+
+dpm:PressureCell_CuBe8
+        rdfs:subClassOf  dpm:PressuteCell .
+
+dpm:MagneticMomentComponent
+        rdfs:comment  "Direction of a magnetic field." .
+
+_:b214  pmd:value  "0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Force ;
+        pmd:unit   qudt:N .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+        pmd:characteristic  _:b214 .
+
+qudt:N  rdfs:subClassOf  qudt:Unit .
+
+dpm:Quarts  rdfs:subClassOf  dpm:Holder .
+
+dpm:Logitudinal  rdfs:subClassOf  dpm:MagneticMomentComponent .
+
+dpm:Meedle  rdfs:label  "Meedle" .
+
+dpm:Powder  rdfs:label  "Powder" .
+
+dpm:Orientation  rdfs:comment  "Orientation of an object." .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+        pmd:input  _:b212 .
+
+_:b215  pmd:value  "0.00000857"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   qudt:Mass ;
+        pmd:unit   qudt:KiloGM .
+
+_:b212  pmd:characteristic  _:b215 .
+
+qudt:KiloGM  rdfs:subClassOf  qudt:Unit .
+
+dpm:MaterialShape  rdfs:comment  "Physical shape of a material sample, e.g. piece or powder." .
+
+dpm:LongDirectionParallel
+        rdfs:subClassOf  dpm:Parallel .
+
+dpm:VSM  rdfs:label  "VSM" .
+
+dpm:Perpendicular  rdfs:subClassOf  dpm:Orientation .
+
+dpm:Straw  rdfs:subClassOf  dpm:Holder .
+
+dpm:MPMS  rdfs:subClassOf  pmd:MeasuringDevice ;
+        rdfs:label       "MPMS" .
+
+dpm:MaterialShape  rdfs:label  "Material Shape" .
+
+dpm:VSM  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:Orientation  rdfs:label  "Orientation" .
+
+dpm:PressuteCell  rdfs:subClassOf  dpm:Holder .
+
+dpm:Parallel  rdfs:label  "Parallel" .
+
+dpm:Disc  rdfs:label  "Disc" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+        rdf:type  pmd:MagneticPropertiesMeasuringProcess .
+
+_:b212  rdf:type  pmd:Specimen .
+
+dpm:Brass  rdfs:label  "Brass" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03-b-AM-a-a
+        pmd:executedBy  _:b210 .
+
+dpm:FieldCycleNumber  rdfs:label  "Field Cycle Number" .
+
+dpm:Straw  rdfs:subClassOf  dpm:Holder .
+
+dpm:LongDirectionParallel
+        rdfs:label  "LongDirectionParallel" .
+
+dpm:PressuteCell  rdfs:label  "PressuteCell" .
+
+dpm:MeasurementMagneticProperties-BulkSampleTS2022-11-03a-AM-a-b
+        pmd:subordinateProcess  dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a
+        rdf:type  dpm:MagneticPropertiesMeasuringProcessIsofield .
+
+dpm:K_divby_SEC  rdfs:label  "K divby SEC" .
+
+_:b216  rdf:type         dpm:T_range_isoB ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b217 ;
+        dpm:range_end    _:b218 ;
+        dpm:range_step   _:b219 ;
+        rdf:type         dpm:Range .
+
+_:b220  pmd:characteristic  _:b216 .
+
+_:b221  pmd:value  "260"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b217  pmd:characteristic  _:b221 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b222  pmd:value  "340"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b218  pmd:characteristic  _:b222 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b223  pmd:value  "1"^^xsd:float ;
+        rdf:type   dpm:T_range_isoB ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b219  pmd:characteristic  _:b223 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_divby_dt_isoB
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_range_isoB  rdfs:label  "T_range isoB" .
+
+_:b224  pmd:value  "1"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:T_step_isoB ;
+        pmd:unit   qudt:K .
+
+_:b220  pmd:characteristic  _:b224 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b225  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b226 ;
+        dpm:range_end    _:b227 ;
+        dpm:range_step   _:b228 ;
+        rdf:type         dpm:Range .
+
+_:b220  pmd:characteristic  _:b225 .
+
+_:b229  pmd:value  "7"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b226  pmd:characteristic  _:b229 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b230  pmd:value  "5.5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b227  pmd:characteristic  _:b230 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b231  pmd:value  "0.5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b228  pmd:characteristic  _:b231 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b232  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b233 ;
+        dpm:range_end    _:b234 ;
+        dpm:range_step   _:b235 ;
+        rdf:type         dpm:Range .
+
+_:b220  pmd:characteristic  _:b232 .
+
+_:b236  pmd:value  "5"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b233  pmd:characteristic  _:b236 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b237  pmd:value  "2"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b234  pmd:characteristic  _:b237 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b238  pmd:value  "0.2"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b235  pmd:characteristic  _:b238 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b239  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b240 ;
+        dpm:range_end    _:b241 ;
+        dpm:range_step   _:b242 ;
+        rdf:type         dpm:Range .
+
+_:b220  pmd:characteristic  _:b239 .
+
+_:b243  pmd:value  "1.9"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b240  pmd:characteristic  _:b243 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b244  pmd:value  "0.1"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b241  pmd:characteristic  _:b244 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b245  pmd:value  "0.1"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b242  pmd:characteristic  _:b245 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b246  rdf:type         dpm:B_range ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b247 ;
+        dpm:range_end    _:b248 ;
+        dpm:range_step   _:b249 ;
+        rdf:type         dpm:Range .
+
+_:b220  pmd:characteristic  _:b246 .
+
+_:b250  pmd:value  "0.01"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b247  pmd:characteristic  _:b250 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b251  pmd:value  "0.01"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b248  pmd:characteristic  _:b251 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+_:b252  pmd:value  "0"^^xsd:float ;
+        rdf:type   dpm:B_range ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:T .
+
+_:b249  pmd:characteristic  _:b252 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_divby_dt_isoB
+        rdfs:label  "dT/dt isoB" .
+
+dpm:T_step_isoB  rdfs:label  "T_step isoB" .
+
+dpm:T_range_isoB  rdfs:subClassOf  dpm:Range .
+
+dpm:MagneticPropertiesMeasuringProcessIsofield
+        rdfs:label  "Magnetic PropertiesMeasuring Process Isofield" .
+
+dpm:B_range  rdfs:subClassOf  dpm:Range .
+
+dpm:T_step_isoB  rdfs:subClassOf  pmd:ValueObject .
+
+_:b253  pmd:value  _:b254 .
+
+_:b254  rdf:rest   rdf:nil ;
+        rdf:first  "2"^^xsd:float .
+
+_:b253  rdf:type  pmd:SetPoint ;
+        rdf:type  dpm:d_T_divby_dt_isoB ;
+        pmd:unit  dpm:K_divby_SEC .
+
+_:b220  pmd:characteristic  _:b253 .
+
+dpm:K_divby_SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:B_range  rdfs:label  "B range" .
+
+dpm:MagneticPropertiesMeasuringProcessIsofield
+        rdfs:subClassOf  dpm:MagneticPropertiesMeasuringProcess .
+
+_:b255  pmd:value  _:b256 .
+
+_:b257  rdf:rest   _:b258 ;
+        rdf:first  "248.5"^^xsd:float .
+
+_:b259  rdf:rest   rdf:nil ;
+        rdf:first  "151.5"^^xsd:float .
+
+_:b256  rdf:rest   _:b257 ;
+        rdf:first  "247.5"^^xsd:float .
+
+_:b258  rdf:rest   _:b259 ;
+        rdf:first  "249.5"^^xsd:float .
+
+_:b255  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_cooling ;
+        pmd:unit  qudt:K .
+
+_:b260  pmd:characteristic  _:b255 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_hyst  rdfs:label  "dT_hyst" .
+
+dpm:T_c_heating  rdfs:label  "T_c heating" .
+
+dpm:T_c_cooling  rdfs:label  "T_c cooling" .
+
+_:b261  pmd:value  _:b262 .
+
+_:b262  rdf:rest   _:b263 ;
+        rdf:first  "3.9"^^xsd:float .
+
+_:b264  rdf:rest   _:b265 ;
+        rdf:first  "2.9"^^xsd:float .
+
+_:b263  rdf:rest   _:b264 ;
+        rdf:first  "2.9"^^xsd:float .
+
+_:b265  rdf:rest   rdf:nil ;
+        rdf:first  "2.9"^^xsd:float .
+
+_:b261  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_T_hyst ;
+        pmd:unit  qudt:K .
+
+_:b260  pmd:characteristic  _:b261 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_T_hyst  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_c_cooling  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a
+        pmd:output  _:b260 .
+
+_:b266  pmd:value  _:b267 .
+
+_:b268  rdf:rest   rdf:nil ;
+        rdf:first  "7"^^xsd:float .
+
+_:b267  rdf:rest   _:b269 ;
+        rdf:first  "0.2"^^xsd:float .
+
+_:b269  rdf:rest   _:b270 ;
+        rdf:first  "2"^^xsd:float .
+
+_:b270  rdf:rest   _:b268 ;
+        rdf:first  "5"^^xsd:float .
+
+_:b266  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:MagneticField ;
+        pmd:unit  qudt:T .
+
+_:b260  pmd:characteristic  _:b266 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:T_c_heating  rdfs:subClassOf  pmd:ValueObject .
+
+_:b271  pmd:value  _:b272 .
+
+_:b272  rdf:rest   _:b273 ;
+        rdf:first  "251.5"^^xsd:float .
+
+_:b274  rdf:rest   _:b275 ;
+        rdf:first  "252.5"^^xsd:float .
+
+_:b275  rdf:rest   rdf:nil ;
+        rdf:first  "254.4"^^xsd:float .
+
+_:b273  rdf:rest   _:b274 ;
+        rdf:first  "251.5"^^xsd:float .
+
+_:b271  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_heating ;
+        pmd:unit  qudt:K .
+
+_:b260  pmd:characteristic  _:b271 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:d_B  rdfs:label  "dB" .
+
+dpm:T_c_heating  rdfs:label  "T_c heating" .
+
+_:b276  pmd:value  _:b277 .
+
+_:b278  rdf:rest   rdf:nil ;
+        rdf:first  "249.5"^^xsd:float .
+
+_:b277  rdf:rest   _:b279 ;
+        rdf:first  "247.5"^^xsd:float .
+
+_:b280  rdf:rest   _:b278 ;
+        rdf:first  "248.5"^^xsd:float .
+
+_:b279  rdf:rest   _:b280 ;
+        rdf:first  "247.5"^^xsd:float .
+
+_:b276  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_cooling ;
+        pmd:unit  qudt:K .
+
+_:b281  pmd:characteristic  _:b276 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:reversible_delta  rdfs:label  "reversible delta" .
+
+dpm:delta_S_data  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:d_S_cooling  rdfs:label  "d_S cooling" ;
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:T_c_cooling  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:reversible_delta  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:MeasurementIsofieldMagneticPropertiesMeasurement-BulkSampleTS2022-11-03-b-AM-a-a-a
+        pmd:output  _:b281 .
+
+dpm:T_c_heating  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:d_S_heating  rdfs:subClassOf  pmd:ValueObject .
+
+_:b282  pmd:value  _:b283 .
+
+_:b284  rdf:rest   rdf:nil ;
+        rdf:first  "7"^^xsd:float .
+
+_:b285  rdf:rest   _:b284 ;
+        rdf:first  "5"^^xsd:float .
+
+_:b286  rdf:rest   _:b285 ;
+        rdf:first  "2"^^xsd:float .
+
+_:b283  rdf:rest   _:b286 ;
+        rdf:first  "1"^^xsd:float .
+
+_:b282  rdf:type  pmd:SetPoint ;
+        rdf:type  dpm:d_B ;
+        pmd:unit  qudt:T .
+
+_:b281  pmd:characteristic  _:b282 .
+
+qudt:T  rdfs:subClassOf  qudt:Unit .
+
+dpm:delta_S_data  rdfs:label  "delta_S data" .
+
+dpm:d_S_heating  rdfs:label  "d_S heating" .
+
+_:b287  pmd:value  _:b288 .
+
+_:b289  rdf:rest   _:b290 ;
+        rdf:first  "6.49"^^xsd:float .
+
+_:b288  rdf:rest   _:b289 ;
+        rdf:first  "2.99"^^xsd:float .
+
+_:b290  rdf:rest   _:b291 ;
+        rdf:first  "16.11"^^xsd:float .
+
+_:b291  rdf:rest   rdf:nil ;
+        rdf:first  "21.78"^^xsd:float .
+
+_:b287  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_S_cooling ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b281  pmd:characteristic  _:b287 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+dpm:T_c_cooling  rdfs:label  "T_c cooling" .
+
+_:b292  pmd:value  _:b293 .
+
+_:b293  rdf:rest   _:b294 ;
+        rdf:first  "3.24"^^xsd:float .
+
+_:b294  rdf:rest   _:b295 ;
+        rdf:first  "6.72"^^xsd:float .
+
+_:b296  rdf:rest   rdf:nil ;
+        rdf:first  "22.42"^^xsd:float .
+
+_:b295  rdf:rest   _:b296 ;
+        rdf:first  "16.39"^^xsd:float .
+
+_:b292  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:d_S_heating ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b281  pmd:characteristic  _:b292 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+_:b297  pmd:value  _:b298 .
+
+_:b298  rdf:rest   _:b299 ;
+        rdf:first  "2.85"^^xsd:float .
+
+_:b300  rdf:rest   rdf:nil ;
+        rdf:first  "20.27"^^xsd:float .
+
+_:b299  rdf:rest   _:b301 ;
+        rdf:first  "6.07"^^xsd:float .
+
+_:b301  rdf:rest   _:b300 ;
+        rdf:first  "14.89"^^xsd:float .
+
+_:b297  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:reversible_delta ;
+        pmd:unit  qudt:J_divby_kgK .
+
+_:b281  pmd:characteristic  _:b297 .
+
+qudt:J_divby_kgK  rdfs:subClassOf  qudt:Unit .
+
+_:b302  pmd:value  _:b303 .
+
+_:b304  rdf:rest   rdf:nil ;
+        rdf:first  "251.5"^^xsd:float .
+
+_:b305  rdf:rest   _:b304 ;
+        rdf:first  "251.5"^^xsd:float .
+
+_:b306  rdf:rest   _:b305 ;
+        rdf:first  "251.5"^^xsd:float .
+
+_:b303  rdf:rest   _:b306 ;
+        rdf:first  "251.3"^^xsd:float .
+
+_:b302  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:T_c_heating ;
+        pmd:unit  qudt:K .
+
+_:b281  pmd:characteristic  _:b302 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b307  rdf:type  pmd:Measurement ;
+        rdf:type  dpm:delta_S_data .
+
+_:b308  dcat:distribution  _:b309 .
+
+_:b281  pmd:characteristic  _:b307 .
+
+_:b308  rdf:type  pmd:Dataset ;
+        rdf:type  dcat:Dataset .
+
+_:b309  dcat:downloadUrl  "" .
+
+_:b281  pmd:resource  _:b308 .
+
+_:b309  rdf:type  dcat:Distribution .
+
+dpm:d_B  rdfs:subClassOf  pmd:ValueObject .
+
+_:b310  rdf:type  pmd:Specimen .
+
+_:b311  rdf:type  dpm:XRD .
+
+_:b312  pmd:executedBy  _:b311 .
+
+dpm:StepAngle  rdfs:subClassOf  qudt:Angle .
+
+_:b313  pmd:value  "20"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:StartAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b312  pmd:characteristic  _:b313 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:StepAngle  rdfs:label  "Step Angle" .
+
+dpm:XRD  rdfs:label  "XRD" .
+
+_:b314  pmd:value  "0.5"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:ScanRate ;
+        pmd:unit   dpm:DEG_divby_SEC .
+
+_:b312  pmd:characteristic  _:b314 .
+
+dpm:DEG_divby_SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:EndAngle  rdfs:label  "End Angle" .
+
+dpm:DEG_divby_SEC  rdfs:label  "DEG divby SEC" .
+
+_:b312  pmd:input  _:b310 .
+
+_:b310  pmd:composedOf  dpm:BulkSampleTS2022-11-03-a-AM-a .
+
+_:b315  rdf:type         dpm:Temperature ;
+        rdf:type         pmd:SetPoint ;
+        dpm:range_start  _:b316 ;
+        dpm:range_end    _:b317 ;
+        dpm:range_step   _:b318 ;
+        rdf:type         dpm:Range .
+
+_:b319  pmd:characteristic  _:b315 .
+
+_:b320  pmd:value  "300"^^xsd:float ;
+        rdf:type   dpm:Temperature ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b316  pmd:characteristic  _:b320 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b321  pmd:value  "300"^^xsd:float ;
+        rdf:type   dpm:Temperature ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b317  pmd:characteristic  _:b321 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b322  pmd:value  "0"^^xsd:float ;
+        rdf:type   dpm:Temperature ;
+        rdf:type   pmd:SetPoint ;
+        pmd:unit   qudt:K .
+
+_:b318  pmd:characteristic  _:b322 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b312  rdf:type  pmd:XRDMeasuringProcess .
+
+_:b323  pmd:value  "0.05"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:StepAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b312  pmd:characteristic  _:b323 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:ScanningType  rdfs:label  "Scanning Type" .
+
+dpm:XRDMeasuringProcess
+        rdfs:label  "XRD Measuring Process" .
+
+dpm:Continuous  rdfs:subClassOf  pmd:ScanningType .
+
+dpm:EndAngle  rdfs:subClassOf  qudt:Angle .
+
+dpm:XRDMeasuringProcess
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+_:b324  pmd:value  "1.5406"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   qudt:Wavelength ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b312  pmd:characteristic  _:b324 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+dpm:ScanRate  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:ScanningType  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:ScanRate  rdfs:label  "Scan Rate" .
+
+dpm:StartAngle  rdfs:subClassOf  qudt:Angle .
+
+_:b325  pmd:value  "70"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:EndAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b312  pmd:characteristic  _:b325 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:StartAngle  rdfs:label  "Start Angle" .
+
+dpm:XRD  rdfs:subClassOf  pmd:MeasuringDevice .
+
+_:b312  pmd:output  _:b326 .
+
+dpm:CellAngleAlpha  rdfs:subClassOf  dpm:CellAngle .
+
+dpm:CellAngleGamma  rdfs:subClassOf  dpm:CellAngle .
+
+dpm:CellLengthA  rdfs:label  "Cell LengthA" .
+
+dpm:CellVolume  rdfs:subClassOf  qudt:Volume .
+
+dpm:CellAngleGamma  rdfs:label  "Cell Angle Gamma" .
+
+dpm:CellAngleBeta  rdfs:label  "Cell Angle Beta" .
+
+_:b327  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleAlpha ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b327 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b328  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleAlpha ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b328 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b329  pmd:value  "120"^^xsd:float ;
+        rdf:type   dpm:CellAngleAlpha ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b329 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b330  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleBeta ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b330 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b331  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleBeta ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b331 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b332  pmd:value  "120"^^xsd:float ;
+        rdf:type   dpm:CellAngleBeta ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b332 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b333  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleGamma ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b333 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b334  pmd:value  "90"^^xsd:float ;
+        rdf:type   dpm:CellAngleGamma ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b334 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b335  pmd:value  "120"^^xsd:float ;
+        rdf:type   dpm:CellAngleGamma ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:DEG .
+
+_:b326  pmd:characteristic  _:b335 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b336  pmd:value  "78.4376"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:CellVolume ;
+        pmd:unit   qudt:M3 .
+
+_:b326  pmd:characteristic  _:b336 .
+
+qudt:M3  rdfs:subClassOf  qudt:Unit .
+
+dpm:CellLength  rdfs:label  "Cell Length" .
+
+dpm:CellLengthC  rdfs:subClassOf  qudt:CellLength .
+
+dpm:CellVolume  rdfs:label  "Cell Volume" .
+
+_:b337  pmd:value  "P63/mmc" .
+
+_:b326  dpm:characteristic  _:b337 .
+
+dpm:SymmetrySpaceGroup
+        rdfs:subClassOf  pmd:ValueObject .
+
+_:b338  pmd:value  "300"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   dpm:Temperature ;
+        pmd:unit   qudt:K .
+
+_:b326  pmd:characteristic  _:b338 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:PhaseNumber  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:CellAngleBeta  rdfs:subClassOf  dpm:CellAngle .
+
+dpm:PhaseNumber  rdfs:label  "Phase Number" .
+
+dpm:CellAngle  rdfs:label  "Cell Angle" .
+
+dpm:SymmetrySpaceGroup
+        rdfs:label  "Symmetry Space Group" .
+
+dpm:CellLengthB  rdfs:subClassOf  qudt:CellLength .
+
+dpm:CellLengthC  rdfs:label  "Cell LengthC" .
+
+dpm:CellLengthA  rdfs:subClassOf  qudt:CellLength .
+
+dpm:CellLengthB  rdfs:label  "Cell LengthB" .
+
+_:b339  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthA ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b339 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b340  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthA ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b340 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b341  pmd:value  "5.37937"^^xsd:float ;
+        rdf:type   dpm:CellLengthA ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b341 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b342  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthB ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b342 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b343  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthB ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b343 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b344  pmd:value  "5.37937"^^xsd:float ;
+        rdf:type   dpm:CellLengthB ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b344 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b345  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthC ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b345 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b346  pmd:value  "4.08801"^^xsd:float ;
+        rdf:type   dpm:CellLengthC ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b346 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+_:b347  pmd:value  "5.37937"^^xsd:float ;
+        rdf:type   dpm:CellLengthC ;
+        rdf:type   pmd:Measurement ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b326  pmd:characteristic  _:b347 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+dpm:CellAngle  rdfs:subClassOf  qudt:Agnle .
+
+dpm:CellAngleAlpha  rdfs:label  "Cell Angle Alpha" .
+
+dpm:CellLength  rdfs:subClassOf  qudt:Length .
+
+dpm:Co2CrAl  rdf:type  pmd:ChemicalComposition .
+
+_:b348  pmd:value  "0.5"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b349  pmd:characteristic  _:b348 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b349  pmd:relatesToElement  dpm:Co ;
+        rdf:type              dpm:Element .
+
+dpm:Co2CrAl  pmd:composedOf  _:b349 .
+
+_:b350  pmd:value  "0.25"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b351  pmd:characteristic  _:b350 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b351  pmd:relatesToElement  dpm:Cr ;
+        rdf:type              dpm:Element .
+
+dpm:Co2CrAl  pmd:composedOf  _:b351 .
+
+_:b352  pmd:value  "0.25"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalComposition ;
+        pmd:unit   dpm:at_percent .
+
+_:b353  pmd:characteristic  _:b352 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdf:type         qudt:MassFraction .
+
+_:b353  pmd:relatesToElement  dpm:Al ;
+        rdf:type              dpm:Element .
+
+dpm:Co2CrAl  pmd:composedOf  _:b353 .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b354 .
+
+_:b355  rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+_:b356  pmd:characteristic  _:b355 .
+
+_:b355  dpm:relatesToComposition  dpm:Ar .
+
+dpm:BasePressure  rdfs:label  "Base Pressure" .
+
+dpm:ProcessPressure  rdfs:subClassOf  qudt:Pressure .
+
+_:b357  pmd:value  "0.47"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:ExpectedDepositionRate ;
+        pmd:unit   dpm:ANGSTROM_divby_SEC .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b357 .
+
+dpm:ANGSTROM_divby_SEC
+        rdfs:subClassOf  qudt:Unit .
+
+dpm:InitialPreSputterTime
+        rdfs:label  "Initial Pre-Sputter Time" .
+
+_:b358  pmd:value  "31.1 "^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:SourceTiltAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b354  pmd:characteristic  _:b358 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:DistanceSourceToSample
+        rdfs:label       "Distance Source to Sample" ;
+        rdfs:subClassOf  qudt:Distance .
+
+qudt:MagneticFieldAboveTarget
+        rdfs:subClassOf  qudt:MagneticField .
+
+dpm:SourceTiltAngle  rdfs:label  "Source Tilt Angle" .
+
+qudt:MagneticFieldAboveTarget
+        rdfs:label  "Magnetic Field Above Target" .
+
+_:b359  pmd:value  "66"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Power ;
+        pmd:unit   qudt:W .
+
+_:b354  pmd:characteristic  _:b359 .
+
+qudt:W  rdfs:subClassOf  qudt:Unit .
+
+dpm:DC  rdfs:subClassOf  pmd:ProcessingNode .
+
+_:b354  pmd:input  dpm:SputterSourceCo_a .
+
+dpm:SourceTiltAngle  rdfs:subClassOf  qudt:Angle .
+
+_:b360  pmd:value  "0.253"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:DistanceSourceToSample ;
+        pmd:unit   qudt:M .
+
+_:b354  pmd:characteristic  _:b360 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:HomogeneityMechanism
+        rdfs:label  "Homogeneity Mechanism" .
+
+_:b361  pmd:value  "2E-3 "^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:ProcessPressure ;
+        pmd:unit   qudt:PA .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b361 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+dpm:SubstrateTemperature
+        rdfs:label  "Substrate Temperature" .
+
+dpm:BasePressure  rdfs:subClassOf  qudt:Pressure .
+
+_:b362  pmd:value  "1274"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:DepositionTime ;
+        pmd:unit   qudt:SEC .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b362 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+_:b363  pmd:value  "600.0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:SubstrateTemperature ;
+        pmd:unit   qudt:K .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b363 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:ANGSTROM_divby_SEC
+        rdfs:subClassOf  qudt:Unit .
+
+dpm:Sputtering  rdfs:label  "Sputtering" .
+
+dpm:HomogeneityMechanism
+        rdfs:subClassOf  pmd:ManufacturingProcess .
+
+dpm:InitialPreSputterTime
+        rdfs:subClassOf  qudt:Time .
+
+dpm:ExpectedDepositionRate
+        rdfs:label  "Expected Deposition Rate" .
+
+dpm:SubstrateTemperature
+        rdfs:subClassOf  qudt:Temperature .
+
+_:b364  pmd:value  "8E-10"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:BasePressure ;
+        pmd:unit   qudt:PA .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b364 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+dpm:ExpectedDepositionRate
+        rdfs:subClassOf  pmd:ValueObject .
+
+dpm:DepositionTime  rdfs:subClassOf  qudt:Time .
+
+dpm:SputterParameters_Co2CrAl_a
+        rdf:type  dpm:Sputtering .
+
+dpm:ProcessPressure  rdfs:label  "Process Pressure" .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:input  _:b356 .
+
+_:b365  pmd:value  "30"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:InitialPreSputterTime ;
+        pmd:unit   qudt:SEC .
+
+dpm:SputterParameters_Co2CrAl_a
+        pmd:characteristic  _:b365 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:Sputtering  rdfs:subClassOf  pmd:ManufactureProcess .
+
+_:b366  pmd:value  true .
+
+dpm:SputterParameters_Co2CrAl_a
+        dpm:characteristic  _:b366 .
+
+dpm:DepositionTime  rdfs:label  "Deposition Time" .
+
+dpm:ANGSTROM_divby_SEC
+        rdfs:label  "ANGSTROM divby SEC" .
+
+dpm:SputterSourceCo_a
+        dpm:intendedCompound  dpm:Co .
+
+dpm:SputterSource  rdfs:subClassOf  pmd:ManufactureProcess .
+
+_:b367  pmd:value  "0.0508"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Diameter ;
+        pmd:unit   qudt:M .
+
+dpm:SputterSourceCo_a
+        pmd:characteristic  _:b367 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:SputterSourceCo_a
+        rdf:type  dpm:SputterSource .
+
+dpm:SputterSource  rdfs:label  "Sputter Source" .
+
+_:b368  pmd:value  "0.999"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:Purity ;
+        pmd:unit   qudt:PERCENT .
+
+dpm:SputterSourceCo_a
+        pmd:characteristic  _:b368 .
+
+qudt:PERCENT  rdfs:subClassOf  qudt:Unit .
+
+dpm:SputterSourceCr_a
+        dpm:intendedCompound  dpm:Cr .
+
+dpm:SputterSource  rdfs:subClassOf  pmd:ManufactureProcess .
+
+_:b369  pmd:value  "0.0508"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Diameter ;
+        pmd:unit   qudt:M .
+
+dpm:SputterSourceCr_a
+        pmd:characteristic  _:b369 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:SputterSourceCr_a
+        rdf:type  dpm:SputterSource .
+
+dpm:SputterSource  rdfs:label  "Sputter Source" .
+
+_:b370  pmd:value  "0.999"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:Purity ;
+        pmd:unit   qudt:PERCENT .
+
+dpm:SputterSourceCr_a
+        pmd:characteristic  _:b370 .
+
+qudt:PERCENT  rdfs:subClassOf  qudt:Unit .
+
+dpm:SputterSourceAl_a
+        dpm:intendedCompound  dpm:Al .
+
+dpm:SputterSource  rdfs:subClassOf  pmd:ManufactureProcess .
+
+_:b371  pmd:value  "0.0508"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Diameter ;
+        pmd:unit   qudt:M .
+
+dpm:SputterSourceAl_a
+        pmd:characteristic  _:b371 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:SputterSourceAl_a
+        rdf:type  dpm:SputterSource .
+
+dpm:SputterSource  rdfs:label  "Sputter Source" .
+
+_:b372  pmd:value  "0.999"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:Purity ;
+        pmd:unit   qudt:PERCENT .
+
+dpm:SputterSourceAl_a
+        pmd:characteristic  _:b372 .
+
+qudt:PERCENT  rdfs:subClassOf  qudt:Unit .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        rdf:type  dpm:AnnealingTreatmentProcess .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:label  "Annealing Treatment Process" .
+
+_:b373  pmd:value  _:b374 .
+
+_:b374  rdf:rest   rdf:nil ;
+        rdf:first  "400"^^xsd:float .
+
+_:b373  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampEnd ;
+        pmd:unit  qudt:K .
+
+_:b375  pmd:characteristic  _:b373 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+_:b376  pmd:value  _:b377 .
+
+_:b377  rdf:rest   rdf:nil ;
+        rdf:first  "0.6666"^^xsd:float .
+
+_:b376  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:RampStart ;
+        pmd:unit  qudt:K .
+
+_:b378  pmd:characteristic  _:b376 .
+
+qudt:K  rdfs:subClassOf  qudt:Unit .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        pmd:characteristic  _:b379 ;
+        pmd:characteristic  _:b380 ;
+        pmd:characteristic  _:b378 ;
+        pmd:characteristic  _:b375 .
+
+_:b381  pmd:value  _:b382 .
+
+_:b382  rdf:rest   rdf:nil ;
+        rdf:first  "10800"^^xsd:float .
+
+_:b381  rdf:type  pmd:SetPoint ;
+        rdf:type  qudt:Duration ;
+        pmd:unit  qudt:SEC .
+
+_:b383  pmd:characteristic  _:b381 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:AnnealingTreatmentProcess
+        rdfs:subClassOf  pmd:TreatmentProcess .
+
+_:b384  pmd:value  false .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        dpm:characteristic  _:b384 .
+
+_:b385  pmd:value  "100"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Pressure ;
+        pmd:unit   qudt:PA .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        pmd:characteristic  _:b385 .
+
+qudt:PA  rdfs:subClassOf  qudt:Unit .
+
+_:b386  rdf:type  dpm:Atmosphere ;
+        rdf:type  pmd:SetPoint .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        pmd:characteristic  _:b386 .
+
+_:b386  dpm:relatesToComposition  dpm:Ar .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        rdf:type    dpm:TreatmentProcess ;
+        pmd:output  dpm:ThinFilmSampleMW20221125a_annealed .
+
+dpm:TreatmentProcess  rdfs:subClassOf  pmd:ManufactureProcess .
+
+dpm:TreatmentAnnealThinFilmSampleMW20221125a4001
+        pmd:input  dpm:ThinFilmSampleMW20221125a .
+
+dpm:MeasurementTime  rdfs:subClassOf  qudt:Time .
+
+dpm:ProbeCurrent  rdfs:subClassOf  qudt:ElectricCurrent .
+
+dpm:SpotDiameter  rdfs:subClassOf  qudt:Diameter .
+
+_:b387  pmd:composedOf  dpm:ThinFilmSampleMW20221125a_annealed .
+
+_:b388  rdf:type  dpm:EDX .
+
+_:b389  pmd:value  "2270"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:CountingRate ;
+        pmd:unit   qudt:HZ .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b389 .
+
+qudt:HZ  rdfs:subClassOf  qudt:Unit .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:input  _:b387 .
+
+_:b390  pmd:value  "2000"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:AccelerationVoltage ;
+        pmd:unit   qudt:V .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b390 .
+
+qudt:V  rdfs:subClassOf  qudt:Unit .
+
+dpm:EDXMeasuringProcess
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+_:b391  pmd:value  "5E-9"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:FieldOfView ;
+        pmd:unit   qudt:M2 .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b391 .
+
+qudt:M2  rdfs:subClassOf  qudt:Unit .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        rdf:type  pmd:EDXMeasuringProcess .
+
+_:b392  pmd:value  "2E-9"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:ProbeCurrent ;
+        pmd:unit   qudt:A .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b392 .
+
+qudt:A  rdfs:subClassOf  qudt:Unit .
+
+dpm:AccelerationVoltage
+        rdfs:subClassOf  qudt:Voltage .
+
+_:b393  pmd:value  "100"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:MeasurementTime ;
+        pmd:unit   qudt:SEC .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b393 .
+
+qudt:SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:AccelerationVoltage
+        rdfs:label  "Acceleration Voltage" .
+
+_:b394  pmd:value  "0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:SpotDiameter ;
+        pmd:unit   qudt:M .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:characteristic  _:b394 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:CountingRate  rdfs:subClassOf  qudt:Frequency ;
+        rdfs:label       "Counting Rate" .
+
+dpm:MeasurementTime  rdfs:label  "Measurement Time" .
+
+dpm:SpotDiameter  rdfs:label  "Spot Diameter" .
+
+dpm:ProbeCurrent  rdfs:label  "Probe Current" .
+
+dpm:EDX  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:EDXMeasuringProcess
+        rdfs:label  "EDX Measuring Process" .
+
+dpm:FieldOfView  rdfs:subClassOf  qudt:Area .
+
+_:b387  rdf:type  pmd:Specimen .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:executedBy  _:b388 .
+
+dpm:FieldOfView  rdfs:label  "Field of View" .
+
+dpm:EDX  rdfs:label  "EDX" .
+
+_:b395  pmd:value  false .
+
+_:b396  dpm:characteristic  _:b395 .
+
+_:b397  rdf:type  pmd:Measurement .
+
+_:b396  pmd:characteristic  _:b397 ;
+        rdf:type            pmd:EDXPointMeasuringProcess .
+
+_:b398  pmd:value  "" .
+
+_:b396  dpm:characteristic  _:b398 .
+
+dpm:EDXThinFilmSampleMW20221125a_annealed
+        pmd:subordinateProcess  _:b396 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:MassFraction .
+
+dpm:ChemicalCompositionStd
+        rdfs:label  "ChemicalComposition Std" .
+
+dpm:ChemicalCompositionMean
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+_:b399  pmd:relatesToElement  dpm:Co ;
+        rdf:type              dpm:Element .
+
+dpm:ChemicalCompositionStd
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+dpm:at_percent  rdfs:label  "Atomic Percent" .
+
+_:b400  pmd:value  "0.398"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionStd ;
+        pmd:unit   dpm:at_percent .
+
+_:b399  pmd:characteristic  _:b400 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ChemicalCompositionMean
+        rdfs:label  "ChemicalComposition Mean" .
+
+_:b397  pmd:composedOf  _:b399 .
+
+_:b401  pmd:value  "49.319"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionMean ;
+        pmd:unit   dpm:at_percent .
+
+_:b399  pmd:characteristic  _:b401 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdfs:subClassOf  qudt:MassFraction .
+
+dpm:ChemicalCompositionStd
+        rdfs:label  "ChemicalComposition Std" .
+
+dpm:ChemicalCompositionMean
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+_:b402  pmd:relatesToElement  dpm:Cr ;
+        rdf:type              dpm:Element .
+
+dpm:ChemicalCompositionStd
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+dpm:at_percent  rdfs:label  "Atomic Percent" .
+
+_:b403  pmd:value  "0.385"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionStd ;
+        pmd:unit   dpm:at_percent .
+
+_:b402  pmd:characteristic  _:b403 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ChemicalCompositionMean
+        rdfs:label  "ChemicalComposition Mean" .
+
+_:b397  pmd:composedOf  _:b402 .
+
+_:b404  pmd:value  "24.173"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionMean ;
+        pmd:unit   dpm:at_percent .
+
+_:b402  pmd:characteristic  _:b404 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit ;
+        rdfs:subClassOf  qudt:MassFraction .
+
+dpm:ChemicalCompositionStd
+        rdfs:label  "ChemicalComposition Std" .
+
+dpm:ChemicalCompositionMean
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+_:b405  pmd:relatesToElement  dpm:Al ;
+        rdf:type              dpm:Element .
+
+dpm:ChemicalCompositionStd
+        rdfs:subClassOf  pmd:ChemicalComposition .
+
+dpm:at_percent  rdfs:label  "Atomic Percent" .
+
+_:b406  pmd:value  "0.415"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionStd ;
+        pmd:unit   dpm:at_percent .
+
+_:b405  pmd:characteristic  _:b406 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:ChemicalCompositionMean
+        rdfs:label  "ChemicalComposition Mean" .
+
+_:b397  pmd:composedOf  _:b405 .
+
+_:b407  pmd:value  "26.508"^^xsd:float ;
+        rdf:type   pmd:Measurement ;
+        rdf:type   pmd:ChemicalCompositionMean ;
+        pmd:unit   dpm:at_percent .
+
+_:b405  pmd:characteristic  _:b407 .
+
+dpm:at_percent  rdfs:subClassOf  qudt:Unit .
+
+dpm:EDXPointMeasuringProcess
+        rdfs:label       "EDX Point Measuring Process" ;
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+_:b408  pmd:value  "7500"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:InitialXRAYDetectorCountRate ;
+        pmd:unit   qudt:CPS .
+
+_:b409  pmd:characteristic  _:b408 .
+
+qudt:CPS  rdfs:subClassOf  qudt:Unit .
+
+_:b410  pmd:value  "1"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:AngleScanRate ;
+        pmd:unit   dpm:DEG_divby_SEC .
+
+_:b409  pmd:characteristic  _:b410 .
+
+dpm:DEG_divby_SEC  rdfs:subClassOf  qudt:Unit .
+
+dpm:BeamWidth  rdfs:label  "Beam Width" .
+
+dpm:XRRThinFilmSampleMW20221125a_anneal
+        rdf:type  dpm:XRRMeasuringProcess .
+
+dpm:XRR  rdfs:subClassOf  pmd:MeasuringDevice .
+
+dpm:XRRThinFilmSampleMW20221125a_anneal
+        pmd:input  _:b411 .
+
+dpm:Roughness  rdfs:label  "Roughness" .
+
+dpm:SubstrateRoughness
+        rdfs:label  "Substrate Roughness" .
+
+dpm:InitialXRAYDetectorCountRate
+        rdfs:label  "Initial XRAY Detector Count Rate" .
+
+_:b409  rdf:type  dpm:XRR .
+
+dpm:XRRMeasuringProcess
+        rdfs:subClassOf  pmd:MeasuringProcess .
+
+_:b412  pmd:value  "1.540562"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Wavelength ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b409  pmd:characteristic  _:b412 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+dpm:AngleScanRate  rdfs:label  "Angle Scan Rate" .
+
+_:b413  pmd:value  "0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Length ;
+        pmd:unit   qudt:M .
+
+_:b409  pmd:characteristic  _:b413 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+_:b414  pmd:value  "0.01"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:StepAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b409  pmd:characteristic  _:b414 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+_:b411  pmd:composedOf  dpm:ThinFilmSampleMW20221125a_annealed .
+
+dpm:XRR  rdfs:label  "XRR" .
+
+dpm:AngleScanRate  rdfs:subClassOf  dpm:ScanRate .
+
+dpm:XRRMeasuringProcess
+        rdfs:label  "XRR MeasuringProcess" .
+
+_:b415  pmd:value  "2"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:EndAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b409  pmd:characteristic  _:b415 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:BeamWidth  rdfs:subClassOf  qudt:Diameter .
+
+_:b411  rdf:type  pmd:Specimen .
+
+_:b416  pmd:value  "0"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:StartAngle ;
+        pmd:unit   qudt:DEG .
+
+_:b409  pmd:characteristic  _:b416 .
+
+qudt:DEG  rdfs:subClassOf  qudt:Unit .
+
+dpm:XRRThinFilmSampleMW20221125a_anneal
+        pmd:executedBy  _:b409 .
+
+dpm:SubstrateRoughness
+        rdfs:subClassOf  pmd:Roughness .
+
+_:b417  pmd:value  "4.3131"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:SubstrateRoughness ;
+        pmd:unit   qudt:ANGSTROM .
+
+_:b409  pmd:characteristic  _:b417 .
+
+qudt:ANGSTROM  rdfs:subClassOf  qudt:Unit .
+
+dpm:Roughness  rdfs:subClassOf  pmd:ValueObject .
+
+dpm:InitialXRAYDetectorCountRate
+        rdfs:subClassOf  qudt:CountingUnit .
+
+_:b418  pmd:value  "0.0575E-3"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:BeamWidth ;
+        pmd:unit   qudt:M .
+
+_:b409  pmd:characteristic  _:b418 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:XRRMapping  rdfs:label  "XRR Mapping" .
+
+_:b419  rdf:type  dpm:XRRMapping .
+
+_:b420  pmd:value  "7860.57938"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   qudt:Density ;
+        pmd:unit   dpm:KiloGM-PER-M3 .
+
+_:b419  pmd:characteristic  _:b420 .
+
+dpm:KiloGM-PER-M3  rdfs:subClassOf  qudt:Unit .
+
+_:b421  pmd:value  "56.4E-10"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   dpm:SubstrateRoughness ;
+        pmd:unit   qudt:M .
+
+_:b419  pmd:characteristic  _:b421 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+_:b422  pmd:value  "59.3E-9"^^xsd:float ;
+        rdf:type   pmd:SetPoint ;
+        rdf:type   pmd:Thickness ;
+        pmd:unit   qudt:M .
+
+_:b419  pmd:characteristic  _:b422 .
+
+qudt:M  rdfs:subClassOf  qudt:Unit .
+
+dpm:KiloGM-PER-M3  rdfs:label  "KiloGM PER M3" .
+
+dpm:XRRMapping  rdfs:subClassOf  pmd:ValueObject .
+
+_:b419  pmd:characteristicOf  dpm:ThinFilmLayerCo2CrAl60nm .
+
+dpm:XRRThinFilmSampleMW20221125a_anneal
+        pmd:output  _:b419 .
