@@ -1,0 +1,856 @@
+@prefix csvw: <https://w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix prov: <https://w3.org/ns/prov#> .
+@prefix qudt: <https://qudt.org/2.1/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tsrto: <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+xsd:string a rdfs:Datatype .
+
+ns2:actedOnBehalfOf a owl:ObjectProperty .
+
+ns2:value a owl:DatatypeProperty .
+
+tsrto: a owl:Ontology ;
+    dcterms:biblographicCitation "Hossein Beygi Nasrabadi, (2024.01.29) Tensile Stress Relaxation Test Ontology (TSRTO). Version 3.0.0, www.gitlab.com/kupferdigital/process-graphs/relaxation-test" ;
+    dcterms:created "2024.01.29" ;
+    dcterms:creator "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+    dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+    dcterms:title "Tensile Stress Relaxation Test Ontology (TSRTO)" ;
+    rdfs:comment "KuferDigital project (www.materialdigital.de/project/1)",
+        "Tensile Stress Relaxation Test Ontology (TSRTO) has developed for representing the tensile stress relaxation testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 10319-1 standard." ;
+    owl:imports "https://raw.githubusercontent.com/materialdigital/core-ontology/main/pmd_core.ttl" ;
+    owl:versionInfo "3.0.0 (BPROV, PMDco)" .
+
+tsrto:StressRelaxationTestExperiment4 a owl:NamedIndividual,
+        tsrto:TensileStressRelaxationTest ;
+    prov:atLocation tsrto:TestingLaboratory ;
+    pmd:characteristic tsrto:TestingDate,
+        tsrto:TestingOperator,
+        tsrto:TestingStandard ;
+    pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+    pmd:input tsrto:StressRelaxationTestPiece ;
+    pmd:output tsrto:FracturedTestPiece,
+        tsrto:TestDataFile ;
+    pmd:process tsrto:StressRelaxationMeasuringprocess .
+
+tsrto:TensileStrength a owl:Class ;
+    rdfs:subClassOf tsrto:MechanicalStrength .
+
+tsrto:UniaxialTensionCompressionMachine a owl:Class ;
+    rdfs:subClassOf pmd:TestingMachine .
+
+prov:atLocation a owl:ObjectProperty .
+
+prov:hasAssociatedWith a owl:ObjectProperty .
+
+prov:influenced a owl:ObjectProperty .
+
+prov:wasDrivedFrom a owl:ObjectProperty .
+
+pmd:TemperatureChangingProcess a owl:Class ;
+    rdfs:subClassOf pmd:ConditioningProcess .
+
+pmd:TestPieceInfo a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:characteristic a owl:ObjectProperty .
+
+pmd:component a owl:ObjectProperty .
+
+pmd:composedOf a owl:ObjectProperty .
+
+pmd:executedBy a owl:ObjectProperty .
+
+pmd:hasFunction a owl:ObjectProperty .
+
+pmd:hasIdentifier a owl:ObjectProperty .
+
+pmd:input a owl:ObjectProperty .
+
+pmd:nextProcess a owl:ObjectProperty .
+
+pmd:output a owl:ObjectProperty .
+
+pmd:participant a owl:ObjectProperty .
+
+pmd:process a owl:ObjectProperty .
+
+pmd:resource a owl:ObjectProperty .
+
+pmd:subordinateProcess a owl:ObjectProperty .
+
+pmd:unit a owl:ObjectProperty .
+
+ns2:Activity a owl:Class .
+
+ns2:Person a owl:Class ;
+    rdfs:subClassOf ns2:Agent .
+
+ns2:SoftwareAgent a owl:Class ;
+    rdfs:subClassOf ns2:Agent .
+
+tsrto:CoefficientOfProportionality a owl:NamedIndividual,
+        tsrto:ProportionalityCoefficient,
+        pmd:Metadata ;
+    ns2:value "CoefficientOfProportionality"^^xsd:string ;
+    prov:influenced tsrto:DeterminationOfOriginalCrossSectionArea .
+
+tsrto:Displacement a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+tsrto:ExtensometerCalibration a owl:NamedIndividual,
+        tsrto:CollibrationProcess ;
+    ns2:value "ExtensometerCollibrationData"^^xsd:string .
+
+tsrto:ExtensometerGaugeLength a owl:NamedIndividual,
+        tsrto:GaugeLength,
+        pmd:PrimaryData,
+        pmd:SetPoint ;
+    ns2:value "25"^^xsd:string ;
+    pmd:unit qudt:MiliM .
+
+tsrto:ExtensometerID a owl:NamedIndividual,
+        pmd:Identifier,
+        pmd:Metadata ;
+    ns2:value "ExtensometerName&Manufactore&ID"^^xsd:string .
+
+tsrto:ExtensometerResolution a owl:NamedIndividual,
+        tsrto:Resolution,
+        pmd:Metadata ;
+    ns2:value "ExtensometerResolutionValue"^^xsd:string .
+
+tsrto:ExtensometerUncertainty a owl:NamedIndividual,
+        tsrto:UncertaintyOfMeasurement,
+        pmd:Metadata ;
+    ns2:value "ExtensometerUncertainityValue"^^xsd:string .
+
+tsrto:GaugeLength a owl:Class ;
+    rdfs:subClassOf pmd:Length .
+
+tsrto:HeatingDeviceID a owl:NamedIndividual,
+        pmd:Identifier,
+        pmd:Metadata ;
+    ns2:value "HeatingDeviceID"^^xsd:string .
+
+tsrto:InitialStrain a owl:NamedIndividual,
+        tsrto:Strain,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    ns2:value "1"^^xsd:string ;
+    pmd:unit qudt:PERCENT .
+
+tsrto:InitialStress a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:SecondaryData,
+        pmd:Stress ;
+    ns2:value "475"^^xsd:string ;
+    pmd:input tsrto:DeterminationOfResidualStress ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:MegaPa .
+
+tsrto:MaterialProvider a owl:NamedIndividual,
+        ns2:Organization,
+        pmd:Metadata ;
+    ns2:value "DKI"^^xsd:string .
+
+tsrto:ModuludOfElasticityFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+tsrto:ModulusOfElasticity a owl:NamedIndividual,
+        pmd:ModulusOfElasticity ;
+    ns2:value "ModulusOfElasticity"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:GigaPa .
+
+tsrto:Number a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+tsrto:NumberOfThermocouples a owl:NamedIndividual,
+        tsrto:Number ;
+    ns2:value "NumberOfThermocouplesValue"^^xsd:string .
+
+tsrto:OriginalCrossSectionArea a owl:NamedIndividual,
+        pmd:CrossSectionArea,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    ns2:value "19.677"^^xsd:string ;
+    pmd:input tsrto:StressCalculation ;
+    pmd:unit qudt:MiliM2 .
+
+tsrto:OriginalGaugeLength a owl:NamedIndividual,
+        tsrto:ParallelLength,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    ns2:value "25"^^xsd:string ;
+    pmd:input tsrto:StrainCalculation ;
+    pmd:unit qudt:MiliM .
+
+tsrto:PercentageRelaxedStress a owl:NamedIndividual,
+        tsrto:RelaxedStress,
+        tsrto:ResidualStress,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "10.73684210526316"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:PERCENT .
+
+tsrto:PermissibleTemperatureDeviation a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Temperature ;
+    ns2:value "PermissibleTemperatureDeviation"^^xsd:string ;
+    pmd:unit qudt:DEG_C .
+
+tsrto:ProportionalityCoefficient a owl:Class ;
+    rdfs:subClassOf pmd:Index .
+
+tsrto:RelaxedStress a owl:Class ;
+    rdfs:subClassOf pmd:Stress .
+
+tsrto:ResidualElasticStrain a owl:NamedIndividual,
+        tsrto:ResidualStrain,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "ResidualElasticStrain"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:PERCENT .
+
+tsrto:ResidualPlasticStrain a owl:NamedIndividual,
+        tsrto:ResidualStrain,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "ResidualPlasticStrain"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:PERCENT .
+
+tsrto:Resolution a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+tsrto:SlopOfElasticPartOfTheStressStreainCurve a owl:NamedIndividual,
+        tsrto:SlopeOfTheElasticPart,
+        pmd:SecondaryData ;
+    ns2:value "86.1"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:GigaPa .
+
+tsrto:SlopeOfTheElasticPart a owl:Class ;
+    rdfs:subClassOf pmd:ModulusOfElasticity .
+
+tsrto:SoakingTimeAtTestTemperature a owl:NamedIndividual,
+        tsrto:ExperimentTime,
+        pmd:Metadata ;
+    ns2:value "SoakingTimeAtTestTemperatureValue"^^xsd:string ;
+    pmd:unit qudt:SEC .
+
+tsrto:SoftwareID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:TestPieceName ;
+    ns2:value "SoftwareName&Manufactore&ID"^^xsd:string .
+
+tsrto:SpecimenPreparationProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+tsrto:StressRelaxationMeasuringprocess a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    ns2:actedOnBehalfOf tsrto:TestingOperator ;
+    pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+    pmd:nextProcess tsrto:StressRelaxationMeasurementAnalysis ;
+    pmd:participant tsrto:StressRelaxationTestPiece ;
+    pmd:subordinateProcess tsrto:DeterminationOfOriginalCrossSectionArea,
+        tsrto:ExtensionApplication,
+        tsrto:HeatingTheSample,
+        tsrto:MarkingTheOriginalGaugeLength,
+        tsrto:StressRelaxationMeasuring .
+
+tsrto:StressRelaxationTestMachineID a owl:NamedIndividual,
+        pmd:Identifier,
+        pmd:Metadata ;
+    ns2:value "M33"^^xsd:string .
+
+tsrto:StressRelaxationTestResidualStress a owl:NamedIndividual,
+        tsrto:ResidualStress,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "424"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:MegaPa .
+
+tsrto:StressRelaxationTime a owl:NamedIndividual,
+        tsrto:TestForceDuration,
+        pmd:Dataset,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:TemperatureMeasuringDeviceID a owl:NamedIndividual,
+        pmd:Identifier,
+        pmd:Metadata ;
+    ns2:value "ThermocoupID"^^xsd:string .
+
+tsrto:TensileStressRelaxationTest a owl:Class ;
+    rdfs:subClassOf pmd:MechanicalTestingProcess .
+
+tsrto:TensileTestingMachine a owl:Class ;
+    rdfs:subClassOf pmd:TestingMachine .
+
+tsrto:TestDisplacement a owl:NamedIndividual,
+        tsrto:Displacement,
+        pmd:Dataset,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    pmd:input tsrto:PlottingTestCurve,
+        tsrto:StrainCalculation ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:TestForce a owl:NamedIndividual,
+        pmd:Dataset,
+        pmd:Force,
+        pmd:Measurement,
+        pmd:PrimaryData ;
+    pmd:input tsrto:PlottingTestCurve,
+        tsrto:StressCalculation ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:TestForceApplicationTime a owl:Class ;
+    rdfs:subClassOf tsrto:ExperimentTime .
+
+tsrto:TestForceDuration a owl:Class ;
+    rdfs:subClassOf tsrto:ExperimentTime .
+
+tsrto:TestPieceCrossSectionShape a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Shape ;
+    ns2:value "ZUG 005.004"^^xsd:string ;
+    prov:influenced tsrto:DeterminationOfOriginalCrossSectionArea .
+
+tsrto:TestPieceID a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:TestPieceName ;
+    ns2:value "B_04"^^xsd:string .
+
+tsrto:TestPieceMaterialComposition a owl:NamedIndividual,
+        pmd:ChemicalComposition,
+        pmd:Metadata ;
+    ns2:value "CuZn21Si3P"^^xsd:string .
+
+tsrto:TestPieceParallelLength a owl:NamedIndividual,
+        tsrto:ParallelLength,
+        pmd:Metadata ;
+    ns2:value "30"^^xsd:string ;
+    prov:influenced tsrto:MarkingTheOriginalGaugeLength ;
+    pmd:unit qudt:MiliM .
+
+tsrto:TestPiecePreparation a owl:NamedIndividual,
+        tsrto:SpecimenPreparationProcess,
+        pmd:Metadata ;
+    ns2:value "according to the standard"^^xsd:string .
+
+tsrto:TestPieceTotalLength a owl:NamedIndividual,
+        pmd:Length,
+        pmd:Metadata ;
+    ns2:value "54"^^xsd:string ;
+    prov:influenced tsrto:MarkingTheOriginalGaugeLength ;
+    pmd:unit qudt:MiliM .
+
+tsrto:TestStrain a owl:NamedIndividual,
+        tsrto:Strain,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "TestStrain"^^xsd:string ;
+    pmd:input tsrto:DeterminationOfModulusOfElasticity,
+        tsrto:DeterminationOfResidualStrain,
+        tsrto:PlottingTestCurve ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:PERCENT .
+
+tsrto:TestStress a owl:NamedIndividual,
+        pmd:SecondaryData,
+        pmd:Stress ;
+    ns2:value "TestStress"^^xsd:string ;
+    pmd:input tsrto:DeterminationOfInitialStress,
+        tsrto:DeterminationOfModulusOfElasticity,
+        tsrto:DeterminationOfResidualStress,
+        tsrto:DeterminationOfYieldStrength,
+        tsrto:PlottingTestCurve ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:MegaPa .
+
+tsrto:TestTemperature a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:Metadata,
+        pmd:Temperature ;
+    ns2:value "100"^^xsd:string ;
+    pmd:unit qudt:DEG_C .
+
+tsrto:TestingDate a owl:NamedIndividual,
+        pmd:Date,
+        pmd:Metadata ;
+    ns2:value "20.10.2022"^^xsd:string .
+
+tsrto:TestingStandard a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Norm ;
+    ns2:value "DIN EN 10319-1:2003"^^xsd:string ;
+    prov:wasDrivedFrom tsrto:ResidualStrainFunction,
+        tsrto:ResidualStressFunction,
+        tsrto:StrainFunction,
+        tsrto:StressFunction ;
+    pmd:resource tsrto:StressRelaxationMeasurementAnalysis .
+
+tsrto:ThermocoupleCalibration a owl:NamedIndividual,
+        tsrto:CollibrationProcess ;
+    ns2:value "ThermocoupleCalibrationData"^^xsd:string .
+
+tsrto:ThermocouplesAccuracy a owl:NamedIndividual,
+        tsrto:UncertaintyOfMeasurement ;
+    ns2:value "ThermocoupleAccuracyValue"^^xsd:string .
+
+tsrto:TimeToApplyInitialStrain a owl:NamedIndividual,
+        tsrto:TestForceApplicationTime,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    ns2:value "TimeToApplyingInitialStrain"^^xsd:string ;
+    pmd:unit qudt:SEC .
+
+tsrto:YieldStrenght a owl:Class ;
+    rdfs:subClassOf tsrto:MechanicalStrength .
+
+tsrto:YieldStrength_Rp0.2 a owl:NamedIndividual,
+        tsrto:YieldStrenght,
+        pmd:Measurement,
+        pmd:SecondaryData ;
+    ns2:value "377"^^xsd:string ;
+    pmd:resource tsrto:RowDataTable_ ;
+    pmd:unit qudt:MegaPa .
+
+qudt:MiliM2 a ns1:Unit,
+        owl:NamedIndividual .
+
+qudt:PER-SEC a ns1:Unit,
+        owl:NamedIndividual .
+
+csvw:Table a owl:Class .
+
+pmd:Area a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ChemicalComposition a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:CrossSectionArea a owl:Class ;
+    rdfs:subClassOf pmd:Area .
+
+pmd:Date a owl:Class ;
+    rdfs:subClassOf pmd:Time .
+
+pmd:Duration a owl:Class ;
+    rdfs:subClassOf pmd:Time .
+
+pmd:EngineeredMaterial a owl:Class ;
+    rdfs:subClassOf pmd:Object .
+
+pmd:Extensometer a owl:Class ;
+    rdfs:subClassOf pmd:MeasuringDevice .
+
+pmd:Force a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:GeometryChangingProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:Index a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Laboratory a owl:Class ;
+    rdfs:subClassOf ns2:Organization .
+
+pmd:MaterialProperty a owl:Class ;
+    rdfs:subClassOf pmd:MaterialRelated .
+
+pmd:MaterialRelated a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Mechanical a owl:Class ;
+    rdfs:subClassOf pmd:MaterialProperty .
+
+pmd:MechanicalTestingProcess a owl:Class ;
+    rdfs:subClassOf pmd:AnalysingProcess .
+
+pmd:Norm a owl:Class ;
+    rdfs:subClassOf pmd:Method .
+
+pmd:Object a owl:Class ;
+    rdfs:subClassOf ns2:Entity .
+
+pmd:Operator a owl:Class ;
+    rdfs:subClassOf ns2:Person .
+
+pmd:Sample a owl:Class ;
+    rdfs:subClassOf pmd:EngineeredMaterial .
+
+pmd:Shape a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:TestingRate a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Thermocouple a owl:Class ;
+    rdfs:subClassOf pmd:MeasuringDevice .
+
+ns2:Organization a owl:Class ;
+    rdfs:subClassOf ns2:Agent .
+
+tsrto:CollibrationProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+tsrto:ExtensionApplication a owl:NamedIndividual,
+        pmd:ConditioningProcess ;
+    pmd:characteristic tsrto:InitialStrain,
+        tsrto:StrainRate,
+        tsrto:TimeToApplyInitialStrain ;
+    pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+    pmd:nextProcess tsrto:StressRelaxationMeasuring .
+
+tsrto:Extensometer_ a owl:NamedIndividual,
+        pmd:Extensometer ;
+    pmd:characteristic tsrto:ExtensometerResolution,
+        tsrto:ExtensometerUncertainty ;
+    pmd:hasIdentifier tsrto:ExtensometerID ;
+    pmd:process tsrto:ExtensometerCalibration .
+
+tsrto:FracturedTestPiece a owl:NamedIndividual,
+        pmd:TestPiece .
+
+tsrto:HeatingTheSample a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic tsrto:SoakingTimeAtTestTemperature,
+        tsrto:TestTemperature ;
+    pmd:executedBy tsrto:HeatingDevice,
+        tsrto:TemperatureMeasuringDevice ;
+    pmd:nextProcess tsrto:ExtensionApplication .
+
+tsrto:LoadDisplacementCurve a owl:Class,
+        owl:NamedIndividual,
+        tsrto:LoadDisplacementCurve,
+        pmd:Measurement ;
+    rdfs:subClassOf pmd:Image ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:MachineSoftware_ a owl:NamedIndividual,
+        ns2:SoftwareAgent ;
+    pmd:hasIdentifier tsrto:SoftwareID .
+
+tsrto:MechanicalStrength a owl:Class ;
+    rdfs:subClassOf pmd:Mechanical .
+
+tsrto:ParallelLength a owl:Class ;
+    rdfs:subClassOf pmd:Length .
+
+tsrto:ResidualStrain a owl:Class ;
+    rdfs:subClassOf tsrto:Strain .
+
+tsrto:ResidualStrainFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+tsrto:ResidualStress a owl:Class ;
+    rdfs:subClassOf pmd:Stress .
+
+tsrto:ResidualStressFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+tsrto:StrainFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+tsrto:StrainRate a owl:Class,
+        owl:NamedIndividual,
+        tsrto:StrainRate,
+        pmd:Metadata,
+        pmd:SetPoint ;
+    rdfs:subClassOf pmd:TestingRate ;
+    ns2:value "0.025"^^xsd:string ;
+    pmd:unit qudt:PER-SEC .
+
+tsrto:StressFunction a owl:NamedIndividual,
+        pmd:Algorithm,
+        pmd:Metadata .
+
+tsrto:StressRelaxationCurve a owl:Class,
+        owl:NamedIndividual,
+        tsrto:StressRelaxationCurve ;
+    rdfs:subClassOf pmd:Image ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:StressRelaxationMeasurementAnalysis a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    prov:hasAssociatedWith tsrto:MachineSoftware_ ;
+    pmd:subordinateProcess tsrto:DeterminationOfInitialStress,
+        tsrto:DeterminationOfModulusOfElasticity,
+        tsrto:DeterminationOfResidualStrain,
+        tsrto:DeterminationOfResidualStress,
+        tsrto:DeterminationOfYieldStrength,
+        tsrto:PlottingTestCurve,
+        tsrto:StrainCalculation,
+        tsrto:StressCalculation .
+
+tsrto:StressRelaxationMeasuring a owl:NamedIndividual,
+        pmd:GeometryChangingProcess ;
+    pmd:characteristic tsrto:StressRelaxationTime,
+        tsrto:TestDisplacement,
+        tsrto:TestForce ;
+    pmd:executedBy tsrto:StressRelaxationTestingMachine ;
+    pmd:nextProcess tsrto:StressCalculation ;
+    pmd:output tsrto:TestDataFile .
+
+tsrto:StressRelaxationTestPiece a owl:NamedIndividual,
+        pmd:TestPiece ;
+    pmd:characteristic tsrto:CoefficientOfProportionality,
+        tsrto:MaterialProvider,
+        tsrto:TestPieceCrossSectionShape,
+        tsrto:TestPieceParallelLength,
+        tsrto:TestPiecePreparation,
+        tsrto:TestPieceTotalLength ;
+    pmd:composedOf tsrto:TestPieceMaterialComposition ;
+    pmd:hasIdentifier tsrto:TestPieceID ;
+    pmd:output tsrto:FracturedTestPiece .
+
+tsrto:StressStrainCurve a owl:Class,
+        owl:NamedIndividual,
+        tsrto:StressStrainCurve ;
+    rdfs:subClassOf pmd:Image ;
+    pmd:input tsrto:DeterminationOfModulusOfElasticity,
+        tsrto:DeterminationOfResidualStrain,
+        tsrto:DeterminationOfYieldStrength ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:TemperatureMeasuringDevice a owl:NamedIndividual,
+        pmd:Thermocouple ;
+    pmd:characteristic tsrto:NumberOfThermocouples,
+        tsrto:ThermocouplesAccuracy ;
+    pmd:hasIdentifier tsrto:TemperatureMeasuringDeviceID ;
+    pmd:process tsrto:ThermocoupleCalibration .
+
+tsrto:TestDataFile a owl:NamedIndividual,
+        pmd:Measurement,
+        pmd:PrimaryData,
+        pmd:ValueObject ;
+    pmd:resource tsrto:RowDataTable_ .
+
+tsrto:TestingLaboratory a owl:NamedIndividual,
+        pmd:Laboratory,
+        pmd:Metadata ;
+    ns2:value "LaboratoryNameAndLocation"^^xsd:string .
+
+tsrto:UncertaintyOfMeasurement a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+qudt:DEG_C a ns1:Unit,
+        owl:NamedIndividual .
+
+qudt:GigaPa a ns1:Unit,
+        owl:NamedIndividual .
+
+qudt:SEC a ns1:Unit,
+        owl:NamedIndividual .
+
+pmd:ConditioningProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:DigitalEntity a owl:Class ;
+    rdfs:subClassOf ns2:Entity .
+
+pmd:MeasuringDevice a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:Method a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ModulusOfElasticity a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Temperature a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:TestPiece a owl:Class ;
+    rdfs:subClassOf pmd:Sample .
+
+pmd:TestPieceName a owl:Class ;
+    rdfs:subClassOf pmd:Identifier .
+
+pmd:TestingMachine a owl:Class ;
+    rdfs:subClassOf pmd:ProcessingNode .
+
+pmd:Time a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ValueScope a owl:Class ;
+    rdfs:subClassOf ns2:Entity .
+
+tsrto:DeterminationOfInitialStress a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess tsrto:DeterminationOfResidualStress ;
+    pmd:output tsrto:InitialStress .
+
+tsrto:DeterminationOfOriginalCrossSectionArea a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic tsrto:OriginalCrossSectionArea ;
+    pmd:nextProcess tsrto:MarkingTheOriginalGaugeLength .
+
+tsrto:ExperimentTime a owl:Class ;
+    rdfs:subClassOf pmd:Duration .
+
+tsrto:HeatingDevice a owl:Class,
+        owl:NamedIndividual,
+        tsrto:HeatingDevice ;
+    rdfs:subClassOf pmd:ProcessingNode ;
+    pmd:characteristic tsrto:PermissibleTemperatureDeviation ;
+    pmd:hasIdentifier tsrto:HeatingDeviceID .
+
+tsrto:Strain a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+tsrto:TestingOperator a owl:NamedIndividual,
+        pmd:Metadata,
+        pmd:Operator ;
+    ns2:actedOnBehalfOf tsrto:TestingLaboratory ;
+    ns2:value "TestOperator"^^xsd:string .
+
+pmd:DataScope a owl:Class ;
+    rdfs:subClassOf ns2:Entity .
+
+pmd:Image a owl:Class ;
+    rdfs:subClassOf pmd:DigitalEntity .
+
+pmd:Length a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:ProcessingNode a owl:Class ;
+    rdfs:subClassOf ns2:Agent .
+
+ns2:Agent a owl:Class .
+
+tsrto:DeterminationOfResidualStrain a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction tsrto:ResidualStrainFunction ;
+    pmd:output tsrto:ResidualElasticStrain,
+        tsrto:ResidualPlasticStrain .
+
+tsrto:DeterminationOfResidualStress a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction tsrto:ResidualStressFunction ;
+    pmd:nextProcess tsrto:DeterminationOfResidualStrain ;
+    pmd:output tsrto:PercentageRelaxedStress,
+        tsrto:StressRelaxationTestResidualStress .
+
+tsrto:DeterminationOfYieldStrength a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess tsrto:DeterminationOfModulusOfElasticity ;
+    pmd:output tsrto:YieldStrength_Rp0.2 .
+
+tsrto:MarkingTheOriginalGaugeLength a owl:NamedIndividual,
+        pmd:MeasuringProcess ;
+    pmd:characteristic tsrto:ExtensometerGaugeLength,
+        tsrto:OriginalGaugeLength ;
+    pmd:executedBy tsrto:Extensometer_ ;
+    pmd:nextProcess tsrto:HeatingTheSample .
+
+tsrto:StrainCalculation a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction tsrto:StrainFunction ;
+    pmd:nextProcess tsrto:PlottingTestCurve ;
+    pmd:output tsrto:TestStrain .
+
+tsrto:StressCalculation a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction tsrto:StressFunction ;
+    pmd:nextProcess tsrto:StrainCalculation ;
+    pmd:output tsrto:TestStress .
+
+tsrto:StressRelaxationTestingMachine a owl:NamedIndividual,
+        tsrto:TensileTestingMachine ;
+    ns2:actedOnBehalfOf tsrto:TestingOperator ;
+    pmd:component tsrto:Extensometer_,
+        tsrto:HeatingDevice,
+        tsrto:MachineSoftware_,
+        tsrto:TemperatureMeasuringDevice ;
+    pmd:hasIdentifier tsrto:StressRelaxationTestMachineID .
+
+qudt:MegaPa a ns1:Unit,
+        owl:NamedIndividual .
+
+qudt:MiliM a ns1:Unit,
+        owl:NamedIndividual .
+
+pmd:Dataset a owl:Class ;
+    rdfs:subClassOf pmd:DigitalEntity .
+
+pmd:MeasuringProcess a owl:Class ;
+    rdfs:subClassOf pmd:AnalysingProcess .
+
+pmd:SetPoint a owl:Class ;
+    rdfs:subClassOf pmd:ValueScope .
+
+pmd:Stress a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+ns2:Entity a owl:Class .
+
+tsrto:DeterminationOfModulusOfElasticity a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:hasFunction tsrto:ModuludOfElasticityFunction ;
+    pmd:nextProcess tsrto:DeterminationOfInitialStress ;
+    pmd:output tsrto:ModulusOfElasticity,
+        tsrto:SlopOfElasticPartOfTheStressStreainCurve .
+
+qudt:PERCENT a ns1:Unit,
+        owl:NamedIndividual .
+
+pmd:Algorithm a owl:Class ;
+    rdfs:subClassOf pmd:Method .
+
+pmd:Identifier a owl:Class ;
+    rdfs:subClassOf pmd:ValueObject .
+
+pmd:Process a owl:Class ;
+    rdfs:subClassOf ns2:Activity .
+
+tsrto:PlottingTestCurve a owl:NamedIndividual,
+        pmd:AnalysingProcess ;
+    pmd:nextProcess tsrto:DeterminationOfYieldStrength ;
+    pmd:output tsrto:LoadDisplacementCurve,
+        tsrto:StressRelaxationCurve,
+        tsrto:StressStrainCurve .
+
+ns1:Unit a owl:Class .
+
+pmd:PrimaryData a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+
+pmd:SecondaryData a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+
+pmd:AnalysingProcess a owl:Class ;
+    rdfs:subClassOf pmd:Process .
+
+pmd:Measurement a owl:Class ;
+    rdfs:subClassOf pmd:ValueScope .
+
+tsrto:RowDataTable_ a owl:NamedIndividual,
+        csvw:Table,
+        pmd:Dataset,
+        pmd:PrimaryData .
+
+pmd:ValueObject a owl:Class ;
+    rdfs:subClassOf ns2:Entity .
+
+pmd:Metadata a owl:Class ;
+    rdfs:subClassOf pmd:DataScope .
+

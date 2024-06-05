@@ -1,0 +1,1651 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iof: <https://github.com/iofoundry/Core/> .
+@prefix kd: <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/Mechanical_Testing_Ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <https://qudt.org/2.1/schema/qudt/> .
+
+bfo:contains a owl:ObjectProperty .
+
+bfo:derives_into a owl:ObjectProperty .
+
+bfo:has_function a owl:ObjectProperty .
+
+bfo:has_part a owl:ObjectProperty .
+
+bfo:has_quality a owl:ObjectProperty .
+
+cco:designated_by a owl:ObjectProperty .
+
+cco:has_accessory a owl:ObjectProperty .
+
+cco:has_agent a owl:ObjectProperty .
+
+cco:has_input a owl:ObjectProperty .
+
+cco:has_output a owl:ObjectProperty .
+
+cco:has_process_part a owl:ObjectProperty .
+
+cco:is_cause_of a owl:ObjectProperty .
+
+cco:is_input_of a owl:ObjectProperty .
+
+cco:is_made_of a owl:ObjectProperty .
+
+cco:is_measured_by a owl:ObjectProperty .
+
+cco:occurs_on a owl:ObjectProperty .
+
+cco:process_precedes a owl:ObjectProperty .
+
+cco:process_started_by a owl:ObjectProperty .
+
+cco:uses a owl:ObjectProperty .
+
+cco:uses_measurement_unit a owl:ObjectProperty .
+
+kd: a owl:Ontology ;
+    dc:creator "Birgit Skrotzki",
+        "Hossein Beygi Nasrabadi" ;
+    dc:title "Vickers Hardness Test Process Graph" ;
+    owl:versionInfo "2.2.0" .
+
+kd:VickersTestExperiment a owl:NamedIndividual,
+        mto:VickersHardnessTest ;
+    cco:has_accessory kd:VickersTestEquipment ;
+    cco:has_input kd:VickersTestPiece ;
+    cco:has_output kd:TestDataFile ;
+    cco:occurs_on kd:TestDate ;
+    cco:process_started_by kd:VickersHardnessMeasurement ;
+    mseo:in_accordance_with kd:TestStandard .
+
+mseo:in_accordance_with a owl:ObjectProperty .
+
+cco:ActOfArtifactProcessing a owl:Class .
+
+cco:ActOfPositionChange a owl:Class .
+
+cco:CalendarDateIdentifier a owl:Class .
+
+cco:Day a owl:Class .
+
+cco:DirectiveInformationContentEntity a owl:Class .
+
+cco:Force a owl:Class .
+
+cco:SpatialOrientation a owl:Class .
+
+cco:Temperature a owl:Class .
+
+cco:ThreeDimensionalExtent a owl:Class .
+
+cco:ThreeDimensionalShape a owl:Class .
+
+iof:ManufacturingProcess a owl:Class .
+
+iof:MaterialResource a owl:Class .
+
+iof:TransportProcess a owl:Class .
+
+mto:DistanceBetweenIndentationAndEdge a owl:Class .
+
+mto:DistanceBetweenIndentations a owl:Class .
+
+mto:HardnessTestMachine a owl:Class .
+
+mto:Indenter a owl:Class .
+
+mto:OpticalMeasuringSystem a owl:Class .
+
+mto:ReferenceBlock a owl:Class .
+
+mto:Resolution a owl:Class .
+
+mto:TestForceDuration a owl:Class .
+
+mto:VickersHardnessTest a owl:Class .
+
+mto:VickersHardnessTestEquipment a owl:Class .
+
+kd:AppliedLoadingTime14 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:AppliedTestForce49.03 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:AverageDiagonalOfIndentationOnCRM a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateUncertainityOfBias ;
+    cco:is_measured_by kd:MeasurementOfAverageDiagonalOfIndentationOnCRM207.45 .
+
+kd:AverageFunctionDiagonal a cco:Algorithm,
+        owl:NamedIndividual .
+
+kd:AverageFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual .
+
+kd:AverageFunctionTotalDiagonal a cco:Algorithm,
+        owl:NamedIndividual .
+
+kd:CRMCertifiedVickersHardnessUncertainity a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateUncertainityOfBias ;
+    cco:is_measured_by kd:ReferenceCRMVickersHardnessUncertainity2.4 .
+
+kd:CRMCertifiedVickerslHardness a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateVickersHardnessBias ;
+    cco:is_measured_by kd:ReferenceCRMCertifiedVickersHardness213.3 .
+
+kd:CRMConstant-t a cco:Amount,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:CalculateUncertainityOfBias,
+        kd:CalculateUncertainityOfTestingMachine ;
+    cco:is_measured_by kd:ReferenceCRMConstant-t1.84 .
+
+kd:CRMIdentifier8890101.062 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:CRMMeasuredVickersHardnessAverage a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateUncertainityOfBias,
+        kd:CalculateUncertainityOfTestingMachine,
+        kd:CalculateVickersHardnessBias ;
+    cco:is_measured_by kd:MeasurementOfCRMVickersHardnessAverage215.5 .
+
+kd:CRMMeasuredVickersHardnessStandardDeviation a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateUncertainityOfBias,
+        kd:CalculateUncertainityOfTestingMachine ;
+    cco:is_measured_by kd:MeasurementOfCRMVickersHardnessStandardDeviation0.141421356237301 .
+
+kd:CertifiedReferenceMaterialArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:ControlTemperature a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output kd:TestTemperature ;
+    cco:process_precedes kd:ChooseTestForce .
+
+kd:CopperAlloy a cco:PortionOfMaterial,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestPieceCompositionIdentifierCuNi12Al3,
+        kd:TestPieceCompositionIdentifierCuNiSi,
+        kd:TestPieceCompositionIdentifierCuSn12,
+        kd:TestPieceCompositionIdentifierCuSn6,
+        kd:TestPieceCompositionIdentifierCuZn21Si3P,
+        kd:TestPieceCompositionIdentifierCuZn38As .
+
+kd:Diamond a cco:PortionOfMaterial,
+        owl:NamedIndividual ;
+    cco:designated_by kd:IndenterMaterialCompositionIdentifierDiamond .
+
+kd:DiamondIndenterShape a cco:ThreeDimensionalShape,
+        owl:NamedIndividual ;
+    bfo:has_quality kd:IndenterAngel .
+
+kd:FinalVickersHardnessAndUncertainity a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_measured_by <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty100.3±5.9>,
+        <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty124.3±5.9>,
+        <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty159.7±5.9>,
+        <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty221.5±5.9>,
+        <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty273.6±5.9>,
+        <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty72.7±5.9> ;
+    cco:uses_measurement_unit kd:HV .
+
+kd:HV a owl:NamedIndividual,
+        qudt:DerivedUnit .
+
+kd:Indentation1 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal1,
+        kd:IndentationDiagonalVertical1 ;
+    cco:designated_by kd:IndentationID1A1,
+        kd:IndentationID1B1,
+        kd:IndentationID1C1,
+        kd:IndentationID1D1,
+        kd:IndentationID1E1,
+        kd:IndentationID1F1 .
+
+kd:Indentation2 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal2,
+        kd:IndentationDiagonalVertical2 ;
+    cco:designated_by kd:IndentationID2A2,
+        kd:IndentationID2B2,
+        kd:IndentationID2C2,
+        kd:IndentationID2D2,
+        kd:IndentationID2E2,
+        kd:IndentationID2F2 .
+
+kd:Indentation3 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal3,
+        kd:IndentationDiagonalVertical3 ;
+    cco:designated_by kd:IndentationID3A3,
+        kd:IndentationID3B3,
+        kd:IndentationID3C3,
+        kd:IndentationID3D3,
+        kd:IndentationID3E3,
+        kd:IndentationID3F3 .
+
+kd:Indentation4 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal4,
+        kd:IndentationDiagonalVertical4 ;
+    cco:designated_by kd:IndentationID4A4,
+        kd:IndentationID4B4,
+        kd:IndentationID4C4,
+        kd:IndentationID4D4,
+        kd:IndentationID4E4,
+        kd:IndentationID4F4 .
+
+kd:Indentation5 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal5,
+        kd:IndentationDiagonalVertical5 ;
+    cco:designated_by kd:IndentationID5A5,
+        kd:IndentationID5B5,
+        kd:IndentationID5C5,
+        kd:IndentationID5D5,
+        kd:IndentationID5E5,
+        kd:IndentationID5F5 .
+
+kd:Indentation6 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality kd:IndentationDiagonalHorizontal6,
+        kd:IndentationDiagonalVertical6 ;
+    cco:designated_by kd:IndentationID6A6,
+        kd:IndentationID6B6,
+        kd:IndentationID6C6,
+        kd:IndentationID6D6,
+        kd:IndentationID6E6,
+        kd:IndentationID6F6 .
+
+kd:IndentationDiagonalMean1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean1180.875,
+        kd:MeasurementOfIndentationDiagonalMean1202.985,
+        kd:MeasurementOfIndentationDiagonalMean1239.70499999999998,
+        kd:MeasurementOfIndentationDiagonalMean1274.995,
+        kd:MeasurementOfIndentationDiagonalMean1297.755,
+        kd:MeasurementOfIndentationDiagonalMean1347.53 .
+
+kd:IndentationDiagonalMean2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean2183.33499999999998,
+        kd:MeasurementOfIndentationDiagonalMean2205.055,
+        kd:MeasurementOfIndentationDiagonalMean2244.49,
+        kd:MeasurementOfIndentationDiagonalMean2274.485,
+        kd:MeasurementOfIndentationDiagonalMean2303.96000000000004,
+        kd:MeasurementOfIndentationDiagonalMean2363.04499999999996 .
+
+kd:IndentationDiagonalMean3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean3186.435,
+        kd:MeasurementOfIndentationDiagonalMean3204.79500000000002,
+        kd:MeasurementOfIndentationDiagonalMean3243.97,
+        kd:MeasurementOfIndentationDiagonalMean3273.19,
+        kd:MeasurementOfIndentationDiagonalMean3326.845,
+        kd:MeasurementOfIndentationDiagonalMean3358.135 .
+
+kd:IndentationDiagonalMean4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean4189.535,
+        kd:MeasurementOfIndentationDiagonalMean4205.05,
+        kd:MeasurementOfIndentationDiagonalMean4240.735,
+        kd:MeasurementOfIndentationDiagonalMean4270.605,
+        kd:MeasurementOfIndentationDiagonalMean4295.3,
+        kd:MeasurementOfIndentationDiagonalMean4356.195 .
+
+kd:IndentationDiagonalMean5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean5180.745,
+        kd:MeasurementOfIndentationDiagonalMean5205.31,
+        kd:MeasurementOfIndentationDiagonalMean5236.08499999999998,
+        kd:MeasurementOfIndentationDiagonalMean5272.285546875,
+        kd:MeasurementOfIndentationDiagonalMean5299.18,
+        kd:MeasurementOfIndentationDiagonalMean5361.625 .
+
+kd:IndentationDiagonalMean6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageTotalDiagonal,
+        kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalMean6 .
+
+kd:IndentationEdgeDistanceDatain_standard_range a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:IndentationEdgeDistanceID a owl:NamedIndividual,
+        mto:DistanceBetweenIndentationAndEdge ;
+    cco:is_measured_by kd:IndentationEdgeDistanceDatain_standard_range .
+
+kd:IndentationID1A1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID1B1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID1C1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID1D1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID1E1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID1F1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2A2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2B2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2C2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2D2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2E2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID2F2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3A3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3B3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3C3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3D3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3E3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID3F3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4A4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4B4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4C4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4D4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4E4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID4F4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5A5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5B5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5C5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5D5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5E5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID5F5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6A6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6B6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6C6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6D6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6E6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationID6F6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:IndentationsDistanceDatain_standard_range a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:IndentationsDistanceID a owl:NamedIndividual,
+        mto:DistanceBetweenIndentations ;
+    cco:is_measured_by kd:IndentationsDistanceDatain_standard_range .
+
+kd:IndenterAngel a cco:SpatialOrientation,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfIndenterAngel136 .
+
+kd:IndenterMaterialCompositionIdentifierDiamond a owl:NamedIndividual .
+
+kd:LoadingTime a owl:NamedIndividual,
+        mto:TestForceDuration ;
+    cco:is_measured_by kd:AppliedLoadingTime14 .
+
+kd:MaterialProvider a owl:NamedIndividual,
+        iof:MaterialResource ;
+    cco:designated_by kd:MaterialProviderNameDKI,
+        kd:MaterialProviderNamefem .
+
+kd:MaterialProviderNameDKI a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MaterialProviderNamefem a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfAverageDiagonalOfIndentationOnCRM207.45 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfCRMVickersHardnessAverage215.5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfCRMVickersHardnessStandardDeviation0.141421356237301 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty100.3±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty124.3±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty159.7±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty221.5±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty273.6±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+<https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#MeasurementOfFinalvickersHardnessAndUncertainty72.7±5.9> a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1181.78 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1204.28 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1238.93 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1270.47 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1295.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal1348.31 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2185.66 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2205.83 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2241 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2271.77 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2304.35 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal2358.65 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3189.54 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3206.86 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3239.7 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3269.96 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3325.55 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal3351.41 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4190.57 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4208.93 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4239.7 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4267.89 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4293.49 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal4348.31 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5177.64 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5209.45 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5234.79 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5267.37109375 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5297.37 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal5359.17 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalHorizontal6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1180.875 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1202.985 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1239.70499999999998 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1274.995 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1297.755 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean1347.53 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2183.33499999999998 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2205.055 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2244.49 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2274.485 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2303.96000000000004 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean2363.04499999999996 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3186.435 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3204.79500000000002 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3243.97 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3273.19 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3326.845 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean3358.135 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4189.535 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4205.05 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4240.735 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4270.605 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4295.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean4356.195 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5180.745 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5205.31 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5236.08499999999998 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5272.285546875 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5299.18 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean5361.625 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalMean6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1179.97 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1201.69 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1240.48 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1279.52 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1300.21 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical1346.75 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2181.01 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2204.28 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2247.98 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2277.2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2303.57 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical2367.44 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3183.33 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3202.73 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3248.24 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3276.42 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3328.14 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical3364.86 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4188.5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4201.17 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4241.77 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4273.32 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4297.11 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical4364.08 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5183.85 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5201.17 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5237.38 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5277.2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5300.99 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical5364.08 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndentationDiagonalVertical6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfIndenterAngel136 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfNumberOfIndentationOnCRM2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestPieceDimensionaccording_to_standard a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestTemperature21 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean184.185 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean204.63899999999998 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean240.99699999999999 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean273.112109375 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean304.60800000000006 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTotalIndentationDiagonalMean357.306 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.862948001893578 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.8641917093602265 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.866021434318795 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.870318203611506 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.883842785779135 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityMethod14.902927006648821 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfBias2.417123933401698 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.030542657521066836 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.04944763355764337 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.06834120422262913 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.0994980946654573 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.16244996095480813 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfIndentationResolution-0.22301703825975397 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUncertainityOfTestingMachine0.26021529547663386 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness1104.6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness1122.6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness1161.4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness1225.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness1283.5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness176.8 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness2100.4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness2123.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness2155.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness2220.5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness2275.9 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness270.4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness3124.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness3155.8 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness3221.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness3266.8 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness372.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness386.8 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness4106.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness4126.6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness4160 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness4220.6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness4258.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness473.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness5103.6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness5125.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness5166.4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness5220 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness5283.9 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness570.9 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardness6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage100.34 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage124.34 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage159.73999999999998 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage221.46000000000004 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage273.64000000000004 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessAverage72.7 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessBias1.031411157993431 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation1.6009372255026115 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation11.13409179053234 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation2.0719555979798394 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation2.532785028382784 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation4.588899650242966 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessStandardDeviation7.868163699364674 a owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.894359159887009 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.895602867353658 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.897432592312226 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.901729361604937 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.915253943772566 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfVickersHardnessUncertainty5.934338164642252 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurinentOfOpticalMeasuringSystemResolutionin_standard_range a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:NumberOfIndentationOnCRM a owl:NamedIndividual,
+        mseo:Number ;
+    cco:is_input_of kd:CalculateUncertainityOfBias ;
+    cco:is_measured_by kd:MeasurementOfNumberOfIndentationOnCRM2 .
+
+kd:ReferenceCRMCertifiedVickersHardness213.3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:ReferenceCRMConstant-SigmaMS a cco:Amount,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:CalculateUncertainityOfBias,
+        kd:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by kd:ReferenceCRMConstant-SigmaMS0.00026 .
+
+kd:ReferenceCRMConstant-SigmaMS0.00026 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:ReferenceCRMConstant-t1.84 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:ReferenceCRMVickersHardnessUncertainity2.4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:StandardDeviationFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual .
+
+kd:SummationFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:TestDataFile a owl:NamedIndividual,
+        mseo:File ;
+    cco:designated_by kd:TestDateFileLocation .
+
+kd:TestDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestDateIdentifier27.04.2022 .
+
+kd:TestDateFileLocation a cco:DirectiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:TestDateIdentifier27.04.2022 a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+kd:TestForce a cco:Force,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:CalculateVickersHardness ;
+    cco:is_measured_by kd:AppliedTestForce49.03 .
+
+kd:TestPieceCompositionIdentifierCuNi12Al3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifierCuNiSi a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifierCuSn12 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifierCuSn6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifierCuZn21Si3P a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifierCuZn38As a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceDimension a cco:ThreeDimensionalExtent,
+        owl:NamedIndividual ;
+    cco:designated_by kd:MeasurementOfTestPieceDimensionaccording_to_standard .
+
+kd:TestPieceIndenterA a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenterB a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenterC a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenterD a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenterE a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenterF a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceManufacturing a owl:NamedIndividual,
+        iof:ManufacturingProcess ;
+    bfo:has_part kd:TransportFromProducer .
+
+kd:TestPiecePreparation a cco:ActOfArtifactProcessing,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestPiecePreparationMethodaccording_to_standard .
+
+kd:TestPiecePreparationMethodaccording_to_standard a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:TestStandardIdentifierDIN_EN_ISO_6507-1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestTemperature a cco:Temperature,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfTestTemperature21 .
+
+kd:TotalIndentationDiagonalMean a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by kd:MeasurementOfTotalIndentationDiagonalMean184.185,
+        kd:MeasurementOfTotalIndentationDiagonalMean204.63899999999998,
+        kd:MeasurementOfTotalIndentationDiagonalMean240.99699999999999,
+        kd:MeasurementOfTotalIndentationDiagonalMean273.112109375,
+        kd:MeasurementOfTotalIndentationDiagonalMean304.60800000000006,
+        kd:MeasurementOfTotalIndentationDiagonalMean357.306 .
+
+kd:TransportFromProducer a owl:NamedIndividual,
+        iof:TransportProcess ;
+    cco:has_agent kd:MaterialProvider .
+
+kd:UncertainityMethod1 a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateVickersHardnessUncertainity ;
+    cco:is_measured_by kd:MeasurementOfUncertainityMethod14.862948001893578,
+        kd:MeasurementOfUncertainityMethod14.8641917093602265,
+        kd:MeasurementOfUncertainityMethod14.866021434318795,
+        kd:MeasurementOfUncertainityMethod14.870318203611506,
+        kd:MeasurementOfUncertainityMethod14.883842785779135,
+        kd:MeasurementOfUncertainityMethod14.902927006648821 .
+
+kd:UncertainityMethod1Function a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:UncertainityOfBias a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateUncertainityMethod1 ;
+    cco:is_measured_by kd:MeasurementOfUncertainityOfBias2.417123933401698 .
+
+kd:UncertainityOfBiasFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:UncertainityOfIndentationResulution a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateUncertainityMethod1 ;
+    cco:is_measured_by kd:MeasurementOfUncertainityOfIndentationResolution-0.030542657521066836,
+        kd:MeasurementOfUncertainityOfIndentationResolution-0.04944763355764337,
+        kd:MeasurementOfUncertainityOfIndentationResolution-0.06834120422262913,
+        kd:MeasurementOfUncertainityOfIndentationResolution-0.0994980946654573,
+        kd:MeasurementOfUncertainityOfIndentationResolution-0.16244996095480813,
+        kd:MeasurementOfUncertainityOfIndentationResolution-0.22301703825975397 .
+
+kd:UncertainityOfTestingMachine a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateUncertainityMethod1 ;
+    cco:is_measured_by kd:MeasurementOfUncertainityOfTestingMachine0.26021529547663386 .
+
+kd:UncertainityOfTestingMachineFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:UncertainityOfindentationResolutionFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:VickersHardness1 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness1104.6,
+        kd:MeasurementOfVickersHardness1122.6,
+        kd:MeasurementOfVickersHardness1161.4,
+        kd:MeasurementOfVickersHardness1225.1,
+        kd:MeasurementOfVickersHardness1283.5,
+        kd:MeasurementOfVickersHardness176.8 .
+
+kd:VickersHardness2 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness2100.4,
+        kd:MeasurementOfVickersHardness2123.1,
+        kd:MeasurementOfVickersHardness2155.1,
+        kd:MeasurementOfVickersHardness2220.5,
+        kd:MeasurementOfVickersHardness2275.9,
+        kd:MeasurementOfVickersHardness270.4 .
+
+kd:VickersHardness3 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness3124.3,
+        kd:MeasurementOfVickersHardness3155.8,
+        kd:MeasurementOfVickersHardness3221.1,
+        kd:MeasurementOfVickersHardness3266.8,
+        kd:MeasurementOfVickersHardness372.3,
+        kd:MeasurementOfVickersHardness386.8 .
+
+kd:VickersHardness4 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness4106.3,
+        kd:MeasurementOfVickersHardness4126.6,
+        kd:MeasurementOfVickersHardness4160,
+        kd:MeasurementOfVickersHardness4220.6,
+        kd:MeasurementOfVickersHardness4258.1,
+        kd:MeasurementOfVickersHardness473.1 .
+
+kd:VickersHardness5 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness5103.6,
+        kd:MeasurementOfVickersHardness5125.1,
+        kd:MeasurementOfVickersHardness5166.4,
+        kd:MeasurementOfVickersHardness5220,
+        kd:MeasurementOfVickersHardness5283.9,
+        kd:MeasurementOfVickersHardness570.9 .
+
+kd:VickersHardness6 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateAverageVickersHardness,
+        kd:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardness6 .
+
+kd:VickersHardnessAverage a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateFinalVickersHardnessAndUncertainity,
+        kd:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessAverage100.34,
+        kd:MeasurementOfVickersHardnessAverage124.34,
+        kd:MeasurementOfVickersHardnessAverage159.73999999999998,
+        kd:MeasurementOfVickersHardnessAverage221.46000000000004,
+        kd:MeasurementOfVickersHardnessAverage273.64000000000004,
+        kd:MeasurementOfVickersHardnessAverage72.7 .
+
+kd:VickersHardnessBias a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateVickersHardnessUncertainity ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessBias1.031411157993431 .
+
+kd:VickersHardnessBiasFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:VickersHardnessFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:VickersHardnessMeasurement a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    bfo:has_part kd:VickersTestPiece ;
+    cco:has_process_part kd:ApplyTestForce,
+        kd:ChooseTestForce,
+        kd:ControlTemperature,
+        kd:MeasuringIndentationDiagonal,
+        kd:PositioningTestPiece ;
+    cco:is_measured_by kd:VickersTestEquipment ;
+    cco:process_precedes kd:VickersHardnessMeasurementAnalysis .
+
+kd:VickersHardnessMeasurementAnalysis a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    cco:has_process_part kd:CalculateAverageDiagonal,
+        kd:CalculateAverageTotalDiagonal,
+        kd:CalculateAverageVickersHardness,
+        kd:CalculateFinalVickersHardnessAndUncertainity,
+        kd:CalculateStandardDeviationVickersHardness,
+        kd:CalculateUncertainityMethod1,
+        kd:CalculateUncertainityOfBias,
+        kd:CalculateUncertainityOfIndentationResolution,
+        kd:CalculateUncertainityOfTestingMachine,
+        kd:CalculateVickersHardness,
+        kd:CalculateVickersHardnessBias,
+        kd:CalculateVickersHardnessUncertainity .
+
+kd:VickersHardnessStandardDeviation a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessStandardDeviation1.6009372255026115,
+        kd:MeasurementOfVickersHardnessStandardDeviation11.13409179053234,
+        kd:MeasurementOfVickersHardnessStandardDeviation2.0719555979798394,
+        kd:MeasurementOfVickersHardnessStandardDeviation2.532785028382784,
+        kd:MeasurementOfVickersHardnessStandardDeviation4.588899650242966,
+        kd:MeasurementOfVickersHardnessStandardDeviation7.868163699364674 .
+
+kd:VickersHardnessUncertainity a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateFinalVickersHardnessAndUncertainity ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessUncertainty5.894359159887009,
+        kd:MeasurementOfVickersHardnessUncertainty5.895602867353658,
+        kd:MeasurementOfVickersHardnessUncertainty5.897432592312226,
+        kd:MeasurementOfVickersHardnessUncertainty5.901729361604937,
+        kd:MeasurementOfVickersHardnessUncertainty5.915253943772566,
+        kd:MeasurementOfVickersHardnessUncertainty5.934338164642252 .
+
+kd:VickersHardnessUncertainityFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:VickersIndenterArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:VickersIndenterIdentifier1346 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:VickersOpticalMeasuringSystemArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:VickersOpticalMeasuringSystemIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:VickersOpticalMeasuringSystemResolution a owl:NamedIndividual,
+        mto:Resolution ;
+    cco:is_measured_by kd:MeasurinentOfOpticalMeasuringSystemResolutionin_standard_range .
+
+kd:VickersTestPieceFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:VickersTestingMachineArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:VickersTestingMachineIdentifierKB_30_SR_FA_Basic a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+mseo:File a owl:Class .
+
+mseo:Number a owl:Class .
+
+mseo:Regulation a owl:Class .
+
+mseo:Specimen a owl:Class .
+
+qudt:DerivedUnit a owl:Class .
+
+cco:Amount a owl:Class .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class .
+
+cco:PortionOfMaterial a owl:Class .
+
+kd:ApplyTestForce a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:VickersIndenter,
+        kd:VickersOpticalMeasuringSystem,
+        kd:VickersTestingMachine ;
+    cco:is_cause_of kd:Indentation1,
+        kd:Indentation2,
+        kd:Indentation3,
+        kd:Indentation4,
+        kd:Indentation5,
+        kd:Indentation6 ;
+    cco:occurs_on kd:LoadingTime ;
+    cco:process_precedes kd:MeasuringIndentationDiagonal .
+
+kd:ChooseTestForce a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:VickersTestingMachine ;
+    cco:has_output kd:TestForce ;
+    cco:process_precedes kd:PositioningTestPiece .
+
+kd:IndentationDiagonalHorizontal1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal1181.78,
+        kd:MeasurementOfIndentationDiagonalHorizontal1204.28,
+        kd:MeasurementOfIndentationDiagonalHorizontal1238.93,
+        kd:MeasurementOfIndentationDiagonalHorizontal1270.47,
+        kd:MeasurementOfIndentationDiagonalHorizontal1295.3,
+        kd:MeasurementOfIndentationDiagonalHorizontal1348.31 .
+
+kd:IndentationDiagonalHorizontal2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal2185.66,
+        kd:MeasurementOfIndentationDiagonalHorizontal2205.83,
+        kd:MeasurementOfIndentationDiagonalHorizontal2241,
+        kd:MeasurementOfIndentationDiagonalHorizontal2271.77,
+        kd:MeasurementOfIndentationDiagonalHorizontal2304.35,
+        kd:MeasurementOfIndentationDiagonalHorizontal2358.65 .
+
+kd:IndentationDiagonalHorizontal3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal3189.54,
+        kd:MeasurementOfIndentationDiagonalHorizontal3206.86,
+        kd:MeasurementOfIndentationDiagonalHorizontal3239.7,
+        kd:MeasurementOfIndentationDiagonalHorizontal3269.96,
+        kd:MeasurementOfIndentationDiagonalHorizontal3325.55,
+        kd:MeasurementOfIndentationDiagonalHorizontal3351.41 .
+
+kd:IndentationDiagonalHorizontal4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal4190.57,
+        kd:MeasurementOfIndentationDiagonalHorizontal4208.93,
+        kd:MeasurementOfIndentationDiagonalHorizontal4239.7,
+        kd:MeasurementOfIndentationDiagonalHorizontal4267.89,
+        kd:MeasurementOfIndentationDiagonalHorizontal4293.49,
+        kd:MeasurementOfIndentationDiagonalHorizontal4348.31 .
+
+kd:IndentationDiagonalHorizontal5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal5177.64,
+        kd:MeasurementOfIndentationDiagonalHorizontal5209.45,
+        kd:MeasurementOfIndentationDiagonalHorizontal5234.79,
+        kd:MeasurementOfIndentationDiagonalHorizontal5267.37109375,
+        kd:MeasurementOfIndentationDiagonalHorizontal5297.37,
+        kd:MeasurementOfIndentationDiagonalHorizontal5359.17 .
+
+kd:IndentationDiagonalHorizontal6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalHorizontal6 .
+
+kd:IndentationDiagonalVertical1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical1179.97,
+        kd:MeasurementOfIndentationDiagonalVertical1201.69,
+        kd:MeasurementOfIndentationDiagonalVertical1240.48,
+        kd:MeasurementOfIndentationDiagonalVertical1279.52,
+        kd:MeasurementOfIndentationDiagonalVertical1300.21,
+        kd:MeasurementOfIndentationDiagonalVertical1346.75 .
+
+kd:IndentationDiagonalVertical2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical2181.01,
+        kd:MeasurementOfIndentationDiagonalVertical2204.28,
+        kd:MeasurementOfIndentationDiagonalVertical2247.98,
+        kd:MeasurementOfIndentationDiagonalVertical2277.2,
+        kd:MeasurementOfIndentationDiagonalVertical2303.57,
+        kd:MeasurementOfIndentationDiagonalVertical2367.44 .
+
+kd:IndentationDiagonalVertical3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical3183.33,
+        kd:MeasurementOfIndentationDiagonalVertical3202.73,
+        kd:MeasurementOfIndentationDiagonalVertical3248.24,
+        kd:MeasurementOfIndentationDiagonalVertical3276.42,
+        kd:MeasurementOfIndentationDiagonalVertical3328.14,
+        kd:MeasurementOfIndentationDiagonalVertical3364.86 .
+
+kd:IndentationDiagonalVertical4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical4188.5,
+        kd:MeasurementOfIndentationDiagonalVertical4201.17,
+        kd:MeasurementOfIndentationDiagonalVertical4241.77,
+        kd:MeasurementOfIndentationDiagonalVertical4273.32,
+        kd:MeasurementOfIndentationDiagonalVertical4297.11,
+        kd:MeasurementOfIndentationDiagonalVertical4364.08 .
+
+kd:IndentationDiagonalVertical5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical5183.85,
+        kd:MeasurementOfIndentationDiagonalVertical5201.17,
+        kd:MeasurementOfIndentationDiagonalVertical5237.38,
+        kd:MeasurementOfIndentationDiagonalVertical5277.2,
+        kd:MeasurementOfIndentationDiagonalVertical5300.99,
+        kd:MeasurementOfIndentationDiagonalVertical5364.08 .
+
+kd:IndentationDiagonalVertical6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of kd:CalculateAverageDiagonal ;
+    cco:is_measured_by kd:MeasurementOfIndentationDiagonalVertical6 .
+
+kd:MeasuringIndentationDiagonal a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:VickersOpticalMeasuringSystem ;
+    cco:has_output kd:IndentationDiagonalHorizontal1,
+        kd:IndentationDiagonalHorizontal2,
+        kd:IndentationDiagonalHorizontal3,
+        kd:IndentationDiagonalHorizontal4,
+        kd:IndentationDiagonalHorizontal5,
+        kd:IndentationDiagonalHorizontal6,
+        kd:IndentationDiagonalVertical1,
+        kd:IndentationDiagonalVertical2,
+        kd:IndentationDiagonalVertical3,
+        kd:IndentationDiagonalVertical4,
+        kd:IndentationDiagonalVertical5,
+        kd:IndentationDiagonalVertical6 ;
+    cco:process_precedes kd:CalculateAverageDiagonal .
+
+kd:PositioningTestPiece a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:has_output kd:IndentationEdgeDistanceID,
+        kd:IndentationsDistanceID ;
+    cco:process_precedes kd:ApplyTestForce .
+
+kd:VickersIndenter a owl:NamedIndividual,
+        mto:Indenter ;
+    bfo:has_function kd:VickersIndenterArtifactFunction ;
+    bfo:has_quality kd:DiamondIndenterShape ;
+    cco:designated_by kd:VickersIndenterIdentifier1346 ;
+    cco:is_made_of kd:Diamond .
+
+kd:VickersTestEquipment a owl:NamedIndividual,
+        mto:VickersHardnessTestEquipment ;
+    bfo:contains kd:CertifiedReferenceMaterialCRM ;
+    bfo:has_part kd:VickersIndenter,
+        kd:VickersOpticalMeasuringSystem,
+        kd:VickersTestingMachine .
+
+kd:VickersTestPiece a owl:NamedIndividual,
+        mseo:Specimen ;
+    bfo:has_function kd:VickersTestPieceFunction ;
+    cco:designated_by kd:TestPieceIndenterA,
+        kd:TestPieceIndenterB,
+        kd:TestPieceIndenterC,
+        kd:TestPieceIndenterD,
+        kd:TestPieceIndenterE,
+        kd:TestPieceIndenterF ;
+    cco:has_output kd:TestPieceDimension ;
+    cco:has_process_part kd:TestPieceManufacturing,
+        kd:TestPiecePreparation ;
+    cco:is_made_of kd:CopperAlloy .
+
+cco:DescriptiveInformationContentEntity a owl:Class .
+
+kd:VickersOpticalMeasuringSystem a owl:NamedIndividual,
+        mto:OpticalMeasuringSystem ;
+    bfo:has_function kd:VickersOpticalMeasuringSystemArtifactFunction ;
+    bfo:has_quality kd:VickersOpticalMeasuringSystemResolution ;
+    cco:designated_by kd:VickersOpticalMeasuringSystemIdentifier .
+
+kd:VickersTestingMachine a owl:NamedIndividual,
+        mto:HardnessTestMachine ;
+    bfo:has_function kd:VickersTestingMachineArtifactFunction ;
+    cco:designated_by kd:VickersTestingMachineIdentifierKB_30_SR_FA_Basic .
+
+kd:CalculateFinalVickersHardnessAndUncertainity a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:FinalVickersHardnessAndUncertainity ;
+    cco:uses kd:SummationFunctionHardness .
+
+kd:CalculateVickersHardnessBias a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:VickersHardnessBias ;
+    cco:process_precedes kd:CalculateVickersHardnessUncertainity ;
+    cco:uses kd:VickersHardnessBiasFunction .
+
+kd:CalculateVickersHardnessUncertainity a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:VickersHardnessUncertainity ;
+    cco:process_precedes kd:CalculateFinalVickersHardnessAndUncertainity ;
+    cco:uses kd:VickersHardnessUncertainityFunction .
+
+kd:CertifiedReferenceMaterialCRM a owl:NamedIndividual,
+        mto:ReferenceBlock ;
+    bfo:has_function kd:CertifiedReferenceMaterialArtifactFunction ;
+    bfo:has_quality kd:AverageDiagonalOfIndentationOnCRM,
+        kd:CRMCertifiedVickersHardnessUncertainity,
+        kd:CRMCertifiedVickerslHardness,
+        kd:CRMConstant-t,
+        kd:NumberOfIndentationOnCRM,
+        kd:ReferenceCRMConstant-SigmaMS ;
+    cco:designated_by kd:CRMIdentifier8890101.062 ;
+    cco:has_output kd:CRMMeasuredVickersHardnessAverage,
+        kd:CRMMeasuredVickersHardnessStandardDeviation .
+
+cco:ActOfMeasuring a owl:Class .
+
+cco:ArtifactFunction a owl:Class .
+
+kd:CalculateUncertainityMethod1 a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:UncertainityMethod1 ;
+    cco:is_measured_by kd:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes kd:CalculateVickersHardnessBias ;
+    cco:uses kd:UncertainityMethod1Function .
+
+kd:CalculateUncertainityOfIndentationResolution a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:UncertainityOfIndentationResulution ;
+    cco:process_precedes kd:CalculateUncertainityOfBias ;
+    cco:uses kd:UncertainityOfindentationResolutionFunction .
+
+kd:CalculateUncertainityOfTestingMachine a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:UncertainityOfTestingMachine ;
+    cco:is_measured_by kd:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes kd:CalculateUncertainityOfIndentationResolution ;
+    cco:uses kd:UncertainityOfTestingMachineFunction .
+
+mto:DirectVerification a owl:Class .
+
+mto:Indentation a owl:Class .
+
+mseo:ActOfAnalysing a owl:Class .
+
+mto:UncertaintyOfMeasurement a owl:Class .
+
+kd:CalculateAverageTotalDiagonal a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:TotalIndentationDiagonalMean ;
+    cco:process_precedes kd:CalculateVickersHardness ;
+    cco:uses kd:AverageFunctionTotalDiagonal .
+
+kd:CalculateAverageVickersHardness a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:VickersHardnessAverage ;
+    cco:process_precedes kd:CalculateStandardDeviationVickersHardness ;
+    cco:uses kd:AverageFunctionHardness .
+
+kd:CalculateStandardDeviationVickersHardness a owl:NamedIndividual ;
+    bfo:derives_into kd:VickersHardnessStandardDeviation ;
+    cco:process_precedes kd:CalculateUncertainityOfTestingMachine ;
+    cco:uses kd:StandardDeviationFunctionHardness .
+
+kd:CalculateUncertainityOfBias a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:UncertainityOfBias ;
+    cco:is_measured_by kd:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes kd:CalculateUncertainityMethod1 ;
+    cco:uses kd:UncertainityOfBiasFunction .
+
+kd:TestStandard a owl:NamedIndividual,
+        mseo:Regulation ;
+    cco:designated_by kd:TestStandardIdentifierDIN_EN_ISO_6507-1 .
+
+kd:CalculateVickersHardness a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:VickersHardness1,
+        kd:VickersHardness2,
+        kd:VickersHardness3,
+        kd:VickersHardness4,
+        kd:VickersHardness5,
+        kd:VickersHardness6 ;
+    cco:process_precedes kd:CalculateAverageVickersHardness ;
+    cco:uses kd:VickersHardnessFunction .
+
+cco:Algorithm a owl:Class .
+
+mto:VickersHardness a owl:Class .
+
+kd:CalculateAverageDiagonal a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:IndentationDiagonalMean1,
+        kd:IndentationDiagonalMean2,
+        kd:IndentationDiagonalMean3,
+        kd:IndentationDiagonalMean4,
+        kd:IndentationDiagonalMean5,
+        kd:IndentationDiagonalMean6 ;
+    cco:process_precedes kd:CalculateAverageTotalDiagonal ;
+    cco:uses kd:AverageFunctionDiagonal .
+
+mto:Diagonal a owl:Class .
+
+cco:NonNameIdentifier a owl:Class .
+
+cco:MeasurementInformationContentEntity a owl:Class .
+

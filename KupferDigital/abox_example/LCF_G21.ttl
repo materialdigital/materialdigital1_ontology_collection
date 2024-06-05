@@ -1,0 +1,1696 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fto: <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FTO3.0.2.ttl/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix mseo: <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/util/readable_bfo_iris.ttl/> .
+@prefix ns1: <https://w3id.org/pmd/co/> .
+@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qunit: <http://qudt.org/vocab/unit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bfo:BFO_0000006 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000141 .
+
+bfo:BFO_0000066 a owl:ObjectProperty .
+
+bfo:environs a owl:ObjectProperty .
+
+bfo:has_continuant_part_at_some_time a owl:ObjectProperty .
+
+bfo:has_occurrent_part a owl:ObjectProperty .
+
+bfo:has_participant_at_some_time a owl:ObjectProperty .
+
+bfo:occupies_temporal_region a owl:ObjectProperty .
+
+bfo:precedes a owl:ObjectProperty .
+
+dcterms:biblographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:licence a owl:AnnotationProperty .
+
+rdfs:label a owl:AnnotationProperty .
+
+owl:imports a owl:AnnotationProperty .
+
+ns2:definition a owl:AnnotationProperty .
+
+mseo:FatigueStrength a owl:Class ;
+    rdfs:subClassOf mseo:Strength .
+
+mseo:MatterObject a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000030 .
+
+mseo:in_accordance_with a owl:ObjectProperty .
+
+fto: a owl:Ontology ;
+    dcterms:biblographicCitation "Hossein Beygi Nasrabadi. (2024.02.08) Fatigue Test Ontology (FTO). Version 3.0.2, www.gitlab.com/kupferdigital/process-graphs/lcf-test" ;
+    dcterms:created "2024.02.08" ;
+    dcterms:creator "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+    dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+    dcterms:title "Fatigue Test Ontology (FTO)" ;
+    rdfs:comment "Fatigue Test Ontology (FTO) has developed for representing the Fatigue testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 12106 standard.",
+        "KuferDigital project (www.materialdigital.de/project/1)" ;
+    owl:imports <https://spec.industrialontologies.org/ontology/202301/core/Core/>,
+        "owl:imports: https://raw.githubusercontent.com/iofoundry/ontology/master/core/Core.rdf" ;
+    owl:versionInfo "3.0.2 (BFO, IOF, MSEO)" .
+
+fto:AnalysedDataSet a owl:Class ;
+    rdfs:label "Analysed data set" ;
+    rdfs:subClassOf fto:ProcessDataSet ;
+    ns2:definition "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00138" .
+
+fto:Area a owl:Class ;
+    rdfs:label "Area" ;
+    rdfs:subClassOf fto:TwoDimensionalExtent ;
+    ns2:definition "A measure of the space enclosed within a plane." ;
+    ns1:definitionSource "http://ontology.dumontierlab.com/Area" .
+
+fto:Cycle a owl:Class ;
+    rdfs:label "Cycle" ;
+    rdfs:subClassOf iof:ProcessCharacteristic ;
+    ns2:definition "smallest segment of the strain-time function that is repeated periodically" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:ElectroMechanicalActuator a owl:Class ;
+    rdfs:label "Electro-Mechanical Actuator" ;
+    rdfs:subClassOf fto:Actuator ;
+    ns2:definition "devices that convert electric energy into mechanical force in such a way as to execute work, mostly moving an object or a device" .
+
+fto:Energy a owl:Class ;
+    rdfs:label "Energy" ;
+    rdfs:subClassOf iof:ProcessCharacteristic ;
+    ns2:definition "the strength and vitality required for sustained physical or mental activity." ;
+    ns1:definitionSource "Oxford Languages" .
+
+fto:Force a owl:Class ;
+    rdfs:label "Force" ;
+    rdfs:subClassOf iof:ProcessCharacteristic ;
+    ns2:definition "strength or energy as an attribute of physical action or movement." ;
+    ns1:definitionSource "Oxford Languages" .
+
+fto:ForceControlledFatigueTest a owl:Class ;
+    rdfs:label "Force-Controlled Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns2:definition "conducting axial, constant-amplitude, force-controlled, cyclic fatigue tests on specimens of a metal for the sake of generating fatigue-life data (i.e. stress vs. cycles to failure) for material characterization." ;
+    ns1:definitionSource "ISO 1099:2017" .
+
+fto:Frequency a owl:Class ;
+    rdfs:label "Frequency" ;
+    rdfs:subClassOf iof:ProcessCharacteristic ;
+    ns2:definition "number of force or strain cycles per unit time applied to the test piece during fatigue testing" ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:Furnace a owl:Class ;
+    rdfs:label "Furnace" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "Any kind of furnace to heat materials (testing, heat treatment...)" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/domain#BWMD_00406" .
+
+fto:GrippingDevice a owl:Class ;
+    rdfs:label "Gripping Device" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "device to hold a test specimen and to transfer a uniaxial tensile force to a test specimen during the test" ;
+    ns1:definitionSource "ISO 22215:2006" .
+
+fto:HighCycleFatigueTest a owl:Class ;
+    rdfs:label "High-Cycle Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns2:definition "fatigue test carried out in the region where the stress behaviour is dominant and fatigue life is relatively longer" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:Humidity a owl:Class ;
+    rdfs:label "Humidity" ;
+    rdfs:subClassOf bfo:BFO_0000017 ;
+    ns2:definition "general term for the amount of water vapour in the air" ;
+    ns1:definitionSource "ISO/TR 18931:2001" .
+
+fto:HydraulicActuator a owl:Class ;
+    rdfs:label "Hydraulic Actuator" ;
+    rdfs:subClassOf fto:Actuator ;
+    ns2:definition "cylindrical tube and piston assemblies that utilize hydraulic power to generate linear, rotary, or oscillatory motion" .
+
+fto:LowCycleFatigueTest a owl:Class ;
+    rdfs:label "Low-Cycle Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns2:definition "fatigue test carried out in the region where the cyclic plastic strain behaviour is dominant and fatigue life is relatively shorter" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:StainAmplitude a owl:Class ;
+    rdfs:label "Strain Amplitude" ;
+    rdfs:subClassOf fto:Amplitude ;
+    ns2:definition "one-half of the algebraic difference between the maximum strain and the minimum strain in the strain cycle" ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:StrainRange a owl:Class ;
+    rdfs:label "Strain Range" ;
+    rdfs:subClassOf fto:Range ;
+    ns2:definition "algebraic difference between the maximum and minimum values of strain" ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:StressAmplitude a owl:Class ;
+    rdfs:label "Stress Amplitude" ;
+    rdfs:subClassOf fto:Amplitude ;
+    ns2:definition "one-half of the algebraic difference between the maximum stress and the minimum stress in the stress cycle" ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:ThermoMechanicalFatigueTest a owl:Class ;
+    rdfs:label "Thermo Mechanical Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns2:definition "fatigue test under the conditions where cyclic, theoretically uniform temperatures within the test section and strain fields are externally imposed, simultaneously varied and controlled" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:Thermocouple a owl:Class ;
+    rdfs:label "Thermocouple" ;
+    rdfs:subClassOf mseo:MeasurementDevice ;
+    ns2:definition "temperature sensor consisting of two dissimilar metals forming an electrical junction" ;
+    ns1:definitionSource "ISO 5714:2023(en)" .
+
+fto:use a owl:ObjectProperty .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis> a csvw:TableGroup ;
+    csvw:note <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Anisotropie8>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Bearbeiter11>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Belastungsgeschwindigkeit16>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/BelastungsverhaeltnisR21>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/HaltezeitImMaximum19>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/HaltezeitImMinimum20>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/LageAnrissBruch26>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/MaxBelastung17>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/MinBelastung18>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ProbeGebrochen25>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Probenbezeichnung6>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Probenerwaermung14>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ProbenquerschnittBeiRt13>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Projekt5>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/PrueftemperaturPt15>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Umgebungsmedium12>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/VersuchNach4>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/VersuchsDatum10>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Versuchsbezeichnung3>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Waermebehandlung9>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Werkstoff7>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ZyklenBeiVersuchsende24>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ZyklusNf23>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Zykluszeit22> ;
+    csvw:table <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1>,
+        <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2> ;
+    prov:generatedAtTime "2024-03-11T12:09:24.504680"^^xsd:dateTime ;
+    prov:wasGeneratedBy <http://ckan_csvtocsvw:5001/api/annotate?return_type=json-ld> .
+
+iof:MeasurementInformationContentEntity a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+iof:Organization a owl:Class ;
+    rdfs:subClassOf iof:OrganizedGroupOfAgents .
+
+iof:actsOnBehalfOfAtSomeTime a owl:ObjectProperty .
+
+iof:designatedBy a owl:ObjectProperty .
+
+iof:hasFunction a owl:ObjectProperty .
+
+iof:hasInput a owl:ObjectProperty .
+
+iof:hasOutput a owl:ObjectProperty .
+
+iof:hasQuality a owl:ObjectProperty .
+
+iof:hasSimpleExpressionValue a owl:DatatypeProperty .
+
+iof:isAchievedByAtSomeTime a owl:ObjectProperty .
+
+iof:isAchivedByAtSomeTime a owl:ObjectProperty .
+
+iof:isInputOf a owl:ObjectProperty .
+
+iof:located_in_at_some_time a owl:ObjectProperty .
+
+iof:measuredByAtSomeTime a owl:ObjectProperty .
+
+iof:prescribedBy a owl:ObjectProperty .
+
+iof:requirementSatisfiedBy a owl:ObjectProperty .
+
+ns1:definitionSource a owl:AnnotationProperty .
+
+<http://ckan_csvtocsvw:5001/api/annotate?return_type=json-ld> a prov:Activity ;
+    prov:wasAssociatedWith <https://github.com/Mat-O-Lab/CSVToCSVW/releases/tag/v1.3.0> .
+
+bfo:BFO_0000008 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000003 .
+
+bfo:BFO_0000015 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000003 .
+
+bfo:BFO_0000027 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000040 .
+
+bfo:BFO_0000031 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000002 .
+
+bfo:BFO_0000202 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000038 .
+
+qunit:DEG_C a qudt:DerivedUnit .
+
+qunit:MilliM2 a qudt:Unit .
+
+<https://github.com/Mat-O-Lab/CSVToCSVW/releases/tag/v1.3.0> a prov:SoftwareAgent ;
+    rdfs:label "CSVtoCSVWv1.3.0" ;
+    prov:hadPrimarySource "https://github.com/Mat-O-Lab/CSVToCSVW" .
+
+mseo:Elasticity a owl:Class ;
+    rdfs:subClassOf mseo:Strength .
+
+mseo:Experiment a owl:Class ;
+    rdfs:subClassOf iof:MeasurementProcess .
+
+mseo:MaterialComposition a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000019 .
+
+mseo:Plasticity a owl:Class ;
+    rdfs:subClassOf mseo:Strength .
+
+mseo:Regulation a owl:Class ;
+    rdfs:subClassOf iof:PlanSpecification .
+
+mseo:Software a owl:Class ;
+    rdfs:subClassOf iof:MaterialArtifact .
+
+mseo:Stiffness a owl:Class ;
+    rdfs:subClassOf mseo:Elasticity .
+
+mseo:Stress a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000019 .
+
+mseo:YieldStrenght a owl:Class ;
+    rdfs:subClassOf mseo:Plasticity .
+
+fto:Atmosphere a owl:Class ;
+    rdfs:label "Atmosphere" ;
+    rdfs:subClassOf bfo:BFO_0000017 ;
+    ns2:definition "ambient conditions defined by the parameters of temperature and relative humidity" ;
+    ns1:definitionSource "ISO 18454:2018" .
+
+fto:CrossSectionArea a owl:Class ;
+    rdfs:label "Cross section area" ;
+    rdfs:subClassOf fto:TwoDimensionalExtent ;
+    ns2:definition "the area of a two-dimensional shape that is obtained when a three-dimensional object - such as a cylinder - is sliced perpendicular to some specified axis at a point" .
+
+fto:CycleNumber a owl:Class ;
+    rdfs:label "Cycle Number" ;
+    rdfs:subClassOf fto:Number ;
+    ns2:definition "number of cycles of stress in fatigue test" ;
+    ns1:definitionSource "ISO 22214:2006" .
+
+fto:CycleTime a owl:NamedIndividual,
+        fto:SignalPeriod ;
+    iof:designatedBy fto:MeasurementOfCycleTime .
+
+fto:CycleToDefiningCriteria a owl:NamedIndividual,
+        fto:FatigueLife ;
+    iof:designatedBy fto:CycleToDefiningCriteriaValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:CalculateFatigueTestUncertainity,
+        fto:DeterminationOfFatigueStrengthCoefficient .
+
+fto:CycleToFracture a owl:NamedIndividual,
+        fto:FatigueLife ;
+    iof:designatedBy fto:CycleToFractureValue ;
+    iof:hasOutput fto:FatigueTestExperiment ;
+    iof:hasQuality fto:FatigueTestPiece ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:CalculateFatigueTestUncertainity .
+
+fto:CyclicStrainHardeningExponentValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:CyclicStrengthCoefficientValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:CyclicYieldStrength a owl:Class ;
+    rdfs:label "Cyclic Yield Strength" ;
+    rdfs:subClassOf mseo:YieldStrenght ;
+    ns2:definition "0,2 % offset is typically used" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:CyclicYieldStrengthValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:DataAcquisitionDevice a owl:Class ;
+    rdfs:label "Data Acquisition Device" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "system for storing and/or providing permanent copies of test information" ;
+    ns1:definitionSource "ISO 13533:2001" .
+
+fto:DataAcquisitorIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:DataAcquisitor_ a owl:NamedIndividual,
+        fto:DataAcquisitionDevice ;
+    iof:designatedBy fto:DataAcquisitorIdentifier .
+
+fto:Displacement a owl:Class ;
+    rdfs:label "Displacement" ;
+    rdfs:subClassOf mseo:Deformation ;
+    ns2:definition "axial movement of the pile head measured during testing" ;
+    ns1:definitionSource "ISO 22477-4:2018" .
+
+fto:Extensometer a owl:Class ;
+    rdfs:label "Extensometer" ;
+    rdfs:subClassOf mseo:MeasurementDevice ;
+    ns2:definition "Any kind of extensometer, that is used for measuring or controlling displacements" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/domain#BWMD_00719" .
+
+fto:ExtensometerGaugeLength a owl:NamedIndividual,
+        fto:GaugeLength ;
+    iof:designatedBy fto:ExtensometerGaugeLengthValue .
+
+fto:ExtensometerGaugeLengthValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:ExtensometerIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:FatigueDuctilityCoefficientValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:FatigueDuctilityExponentValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:FatigueMachineSoftwareNameAndVersion a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:FatigueMeasurementDevice a owl:Class ;
+    rdfs:label "Fatige Test Machine" ;
+    rdfs:subClassOf mseo:MeasurementDevice ;
+    ns2:definition "machine for performing the fatigue test" .
+
+fto:FatigueStrengthCoefficientValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:FatigueStrengthExponentValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:FatigueTestControllingMode a owl:NamedIndividual,
+        fto:StrainControlledFatigueTest ;
+    iof:hasSimpleExpressionValue "StrainControlledFatigueTest"^^xsd:string .
+
+fto:FatigueTestExperiment a owl:NamedIndividual,
+        fto:FatigueTest ;
+    bfo:BFO_0000066 fto:Laboratory_ ;
+    bfo:has_occurrent_part fto:FatigueTestMeasurment ;
+    bfo:has_participant_at_some_time fto:FatigueTestingMachine ;
+    bfo:occupies_temporal_region fto:TestDate ;
+    mseo:in_accordance_with fto:TestStandard ;
+    iof:actsOnBehalfOfAtSomeTime fto:TestOperator_ ;
+    iof:hasInput fto:FatigueTestPiece ;
+    iof:hasOutput fto:FracturedTestPiece,
+        fto:TestDataFile .
+
+fto:FatigueTestMeasurementAnalysis a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:has_occurrent_part fto:CalculateFatigueTestUncertainity,
+        fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfCyclicYieldStrength,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStrainFatigueLifeCurve,
+        fto:PlottingStressStrainHystersisLoopCurve,
+        fto:StrainCalculation,
+        fto:StressCalculation ;
+    bfo:has_participant_at_some_time fto:MachineSoftware_ ;
+    iof:actsOnBehalfOfAtSomeTime fto:TestOperator_ .
+
+fto:FatigueTestMeasurment a owl:NamedIndividual,
+        iof:MeasurementProcess ;
+    bfo:has_continuant_part_at_some_time fto:FatigueTestPiece ;
+    bfo:has_occurrent_part fto:AccuracyOfTestingApparatus,
+        fto:ChoiceOfTheMethodAndRate,
+        fto:DeterminationOfOriginalCrossSectionArea,
+        fto:Gripping,
+        fto:Loading,
+        fto:MarkingTheOriginalGaugeLength,
+        fto:MeasuringFracturedTestPiece,
+        fto:RecordingEnvironmentConditions,
+        fto:SettingTheForceZeroPoint ;
+    bfo:precedes fto:FatigueTestMeasurementAnalysis ;
+    iof:actsOnBehalfOfAtSomeTime fto:TestOperator_ ;
+    iof:measuredByAtSomeTime fto:FatigueTestingMachine .
+
+fto:FatigueTestPieceFunction a bfo:BFO_0000034,
+        owl:NamedIndividual .
+
+fto:FatigueTestUncertainityValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:FatigueTestingMachineIdentifier a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity,
+        iof:Identifier .
+
+fto:ForceTransducer a owl:Class ;
+    rdfs:label "Force Transducer" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "device used to determine mass by measuring the force applied either by tension or pressure" ;
+    ns1:definitionSource "ISO 6016:2008" .
+
+fto:ForceTransducerIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:ForceTransducer_ a owl:NamedIndividual,
+        fto:ForceTransducer ;
+    iof:designatedBy fto:ForceTransducerIdentifier .
+
+fto:Fracture a owl:Class ;
+    rdfs:label "Fracture" ;
+    rdfs:subClassOf bfo:BFO_0000016 ;
+    ns2:definition "natural fractures in a formation resulting from external stress, usually being associated with a displacement" ;
+    ns1:definitionSource "ISO 18875:2015" .
+
+fto:FractureFunction a bfo:BFO_0000034,
+        owl:NamedIndividual .
+
+fto:FractureLocation a bfo:BFO_0000029,
+        owl:NamedIndividual ;
+    iof:designatedBy fto:FractureLocationDescription .
+
+fto:FractureMode a owl:NamedIndividual,
+        fto:Fracture ;
+    iof:designatedBy fto:FractureModeIdentifier .
+
+fto:FractureModeIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:HeatTreatmentProcess a owl:Class ;
+    rdfs:label "Heat treatment process" ;
+    rdfs:subClassOf iof:ManufacturingProcess ;
+    ns2:definition "alternate steps of controlled heating and cooling of materials for the purpose of changing physical or mechanical properties" ;
+    ns1:definitionSource "ISO 13533:2001(en)" .
+
+fto:LaboratoryNameAndLocation a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+fto:MaterialProvider a owl:NamedIndividual,
+        iof:Agent ;
+    iof:designatedBy fto:TestPieceProvider .
+
+fto:MaximumStrain a owl:NamedIndividual,
+        mseo:Strain ;
+    iof:designatedBy fto:MeasurementOfMaximumStrain ;
+    iof:isInputOf fto:CalculateFatigueTestUncertainity .
+
+fto:MechanicalTesting a owl:Class ;
+    rdfs:label "Mechanical testing" ;
+    rdfs:subClassOf mseo:Experiment ;
+    ns2:definition "any tests for the determination of mechanical properties" ;
+    ns1:definitionSource "ISO 23718:2007(en)" .
+
+fto:MinimumStrain a owl:NamedIndividual,
+        mseo:Strain ;
+    iof:designatedBy fto:MeasurementOfMinimumStrain ;
+    iof:isInputOf fto:CalculateFatigueTestUncertainity .
+
+fto:ModulusOfElasticityValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:OneDimensionalExtent a owl:Class ;
+    rdfs:label "One dimensional extent" ;
+    rdfs:subClassOf fto:SizeQuality ;
+    ns2:definition "A Size Quality that inheres in a bearer in virtue of the bearer's extension in one dimension." ;
+    ns1:definitionSource "http://purl.obolibrary.org/obo/PATO_0001708" .
+
+fto:OriginalCrossSectionArea a owl:NamedIndividual,
+        fto:CrossSectionArea ;
+    iof:designatedBy fto:OriginalCrossSectionAreaValue ;
+    iof:isInputOf fto:StressCalculation .
+
+fto:OriginalGaugeLength a owl:NamedIndividual,
+        fto:GaugeLength ;
+    iof:designatedBy fto:OriginalGaugelengthValue ;
+    iof:isInputOf fto:StrainCalculation .
+
+fto:OriginalGaugelengthValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:ParallelLength a owl:Class ;
+    rdfs:label "Parallel length" ;
+    rdfs:subClassOf fto:Length ;
+    ns2:definition "length of the parallel reduced section of the test piece" ;
+    ns1:definitionSource "ISO/TR 25679:2005, 0000_148" .
+
+fto:Range a owl:Class ;
+    rdfs:label "Range" ;
+    rdfs:subClassOf bfo:BFO_0000145 ;
+    ns2:definition "algebraic difference between the maximum and minimum values of a variable" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:Ratio a owl:Class ;
+    rdfs:label "Ratio" ;
+    rdfs:subClassOf bfo:BFO_0000145 ;
+    ns2:definition "the quantitative relation between two amounts showing the number of times one value contains or is contained within the other." ;
+    ns1:definitionSource "Oxford Languages" .
+
+fto:RecordingEnvironmentConditions a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:DeterminationOfOriginalCrossSectionArea ;
+    iof:hasOutput fto:TestEnvironment ;
+    iof:hasQuality fto:TestTemperature .
+
+fto:ShapeQuality a owl:Class ;
+    rdfs:label "Shape quality" ;
+    rdfs:subClassOf bfo:BFO_0000019 ;
+    ns2:definition "A Quality that inheres in a bearer in virtue of the ratios between dimensions of external features of that bearer." ;
+    ns1:definitionSource "http://www.ontologyrepository.com/CommonCoreOntologies/ShapeQuality" .
+
+fto:SignalPeriod a owl:Class ;
+    rdfs:label "Signal Period" ;
+    rdfs:subClassOf fto:ExperimentTime ;
+    ns2:definition "duration of the wavelength" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:SlopOfElasticPartOfTheStressStreainCurve a owl:NamedIndividual,
+        mseo:ElasticModulus ;
+    iof:designatedBy fto:SlopOfElasticPartValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ .
+
+fto:SlopOfElasticPartValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:StrainControlledFatigueTest a owl:Class ;
+    rdfs:label "Axial-Strain-Controlled Fatigue Test" ;
+    rdfs:subClassOf fto:FatigueTest ;
+    ns2:definition "method|of testing uniaxially deformed specimens under strain control at constant|amplitude" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:Temperature a owl:Class ;
+    rdfs:label "Temperature" ;
+    rdfs:subClassOf bfo:BFO_0000019 ;
+    ns2:definition "A Quality that inheres in a bearer in virtue of its thermal energy." ;
+    ns1:definitionSource "http://www.ontologyrepository.com/CommonCoreOntologies/Temperature" .
+
+fto:TestCycleNumber a owl:NamedIndividual,
+        fto:CycleNumber ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient,
+        fto:PlottingStrainFatigueLifeCurve .
+
+fto:TestDate a bfo:BFO_0000202,
+        owl:NamedIndividual ;
+    iof:designatedBy fto:TestDateIdentifier .
+
+fto:TestDisplacement a owl:NamedIndividual,
+        fto:Displacement ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:StrainCalculation .
+
+fto:TestEnvironment a owl:NamedIndividual,
+        fto:Atmosphere ;
+    iof:designatedBy fto:TestEnvironmentIdentifier .
+
+fto:TestForceApplicationTime a owl:Class ;
+    rdfs:label "Test force application time" ;
+    rdfs:subClassOf fto:ExperimentTime ;
+    ns2:definition "The time that load is applied" .
+
+fto:TestPieceCrossSectionShape a owl:NamedIndividual,
+        fto:ShapeQuality ;
+    bfo:environs fto:DeterminationOfOriginalCrossSectionArea ;
+    iof:designatedBy fto:TestPieceCrossSectionShapeIdentifier .
+
+fto:TestPieceCrossSectionShapeIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestPieceHeatTreatment a owl:NamedIndividual,
+        fto:HeatTreatmentProcess ;
+    iof:designatedBy fto:TestPieceHeatTreatmentMethod .
+
+fto:TestPieceHeatTreatmentMethod a owl:NamedIndividual,
+        iof:DescriptiveInformationContentEntity .
+
+fto:TestPieceMaterialComposition a owl:NamedIndividual,
+        mseo:MaterialComposition ;
+    iof:designatedBy fto:TestPieceComposition .
+
+fto:TestPieceParallelLength a owl:NamedIndividual,
+        fto:ParallelLength ;
+    bfo:environs fto:MarkingTheOriginalGaugeLength ;
+    iof:designatedBy fto:TestPieceparallelLengthValue .
+
+fto:TestPiecePreparation a owl:NamedIndividual,
+        iof:PlannedProcess ;
+    iof:designatedBy fto:TestPiecePreparationMethod .
+
+fto:TestPiecePreparationMethod a owl:NamedIndividual,
+        iof:DescriptiveInformationContentEntity .
+
+fto:TestPieceProvider a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestPieceTotalLength a owl:NamedIndividual,
+        fto:Length ;
+    bfo:environs fto:MarkingTheOriginalGaugeLength ;
+    iof:designatedBy fto:TestPieceTotalLengthValue .
+
+fto:TestPieceTotalLengthValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:TestPieceparallelLengthValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:TestStandard a owl:NamedIndividual,
+        mseo:Regulation ;
+    iof:hasSimpleExpressionValue "DIN EN ISO 12106:2017"^^xsd:string ;
+    iof:prescribedBy fto:CyclicStrainHardeningExponentFunction,
+        fto:CyclicStrengthCoefficientFunction,
+        fto:CyclicYieldStrengthFunction,
+        fto:FatigueDuctilityCoefficientFunction,
+        fto:FatigueDuctilityExponentFunction,
+        fto:FatigueStrengthCoefficientFunction,
+        fto:FatigueStrengthExponentFunction,
+        fto:FatigueTestUncertainityFunction,
+        fto:ModuludOfElasticityFunction,
+        fto:StrainFunction,
+        fto:StressFunction ;
+    iof:requirementSatisfiedBy fto:AccuracyOfTestingApparatus,
+        fto:ChoiceOfTheMethodAndRate,
+        fto:Gripping,
+        fto:SettingTheForceZeroPoint .
+
+fto:TestTemperature a owl:NamedIndividual,
+        fto:Temperature ;
+    iof:designatedBy fto:TestTemperatureValue .
+
+fto:TestTime a owl:NamedIndividual,
+        fto:TestForceApplicationTime ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ .
+
+fto:UncertaintyOfMeasurement a owl:Class ;
+    rdfs:label "Uncertainty" ;
+    rdfs:subClassOf fto:Amount ;
+    ns2:definition "non-negative parameter characterizing the dispersion of the quantity values being attributed to a measurand, based on the information used" ;
+    ns1:definitionSource "ISO 29473:2010" .
+
+fto:WaveformDevice a owl:Class ;
+    rdfs:label "Waveform" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "shape of the wave when seen on an oscilloscope or digitized display" ;
+    ns1:definitionSource "ISO 26824:2022" .
+
+fto:WaveformIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Anisotropie8> a oa:Annotation ;
+    rdfs:label "Anisotropie                        " ;
+    csvw:rownum 8 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "-" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Bearbeiter11> a oa:Annotation ;
+    rdfs:label "Bearbeiter                         " ;
+    bfo:RO_0010002 fto:TestOperatorIdentifier ;
+    csvw:rownum 11 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "NN" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Belastungsgeschwindigkeit16> a oa:Annotation ;
+    rdfs:label "Belastungsgeschwindigkeit          " ;
+    bfo:RO_0010002 fto:MeasurementOfStrainRate ;
+    csvw:rownum 16 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value 1e-01 ],
+        [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "%/s" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/BelastungsverhaeltnisR21> a oa:Annotation ;
+    rdfs:label "Belastungsverhältnis R             " ;
+    bfo:RO_0010002 fto:MeasurementOfStrainRatio ;
+    csvw:rownum 21 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value -1 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/HaltezeitImMaximum19> a oa:Annotation ;
+    rdfs:label "Haltezeit im Maximum               " ;
+    csvw:rownum 19 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "-" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/HaltezeitImMinimum20> a oa:Annotation ;
+    rdfs:label "Haltezeit im Minimum               " ;
+    csvw:rownum 20 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "-" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/LageAnrissBruch26> a oa:Annotation ;
+    rdfs:label "Lage Anriss/Bruch                  " ;
+    bfo:RO_0010002 fto:FractureLocationDescription ;
+    csvw:rownum 26 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "innerhalb Messlänge" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/MaxBelastung17> a oa:Annotation ;
+    rdfs:label "max Belastung                      " ;
+    bfo:RO_0010002 fto:MeasurementOfMaximumStrain ;
+    csvw:rownum 17 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:PERCENT ;
+            qudt:value 3e-01 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/MinBelastung18> a oa:Annotation ;
+    rdfs:label "min Belastung                      " ;
+    bfo:RO_0010002 fto:MeasurementOfMinimumStrain ;
+    csvw:rownum 18 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:PERCENT ;
+            qudt:value -3e-01 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ProbeGebrochen25> a oa:Annotation ;
+    rdfs:label "Probe gebrochen                    " ;
+    csvw:rownum 25 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "ja" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Probenbezeichnung6> a oa:Annotation ;
+    rdfs:label "Probenbezeichnung                  " ;
+    bfo:RO_0010002 fto:TestPieceIndentifier ;
+    csvw:rownum 6 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "G_21" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Probenerwaermung14> a oa:Annotation ;
+    rdfs:label "Probenerwärmung                    " ;
+    csvw:rownum 14 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "-" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ProbenquerschnittBeiRt13> a oa:Annotation ;
+    rdfs:label "Probenquerschnitt bei RT           " ;
+    bfo:RO_0010002 fto:OriginalCrossSectionAreaValue ;
+    csvw:rownum 13 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MilliM2 ;
+            qudt:value 1.9353e+01 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Projekt5> a oa:Annotation ;
+    rdfs:label "Projekt                            " ;
+    csvw:rownum 5 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "Vh 5204" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/PrueftemperaturPt15> a oa:Annotation ;
+    rdfs:label "Prüftemperatur PT                  " ;
+    bfo:RO_0010002 fto:TestTemperatureValue ;
+    csvw:rownum 15 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:DEG_C ;
+            qudt:value 21 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Umgebungsmedium12> a oa:Annotation ;
+    rdfs:label "Umgebungsmedium                    " ;
+    bfo:RO_0010002 fto:TestEnvironmentIdentifier ;
+    csvw:rownum 12 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "Luft" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/VersuchNach4> a oa:Annotation ;
+    rdfs:label "Versuch nach                       " ;
+    csvw:rownum 4 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "ISO 12106" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/VersuchsDatum10> a oa:Annotation ;
+    rdfs:label "Versuchs-Datum                     " ;
+    bfo:RO_0010002 fto:TestDateIdentifier ;
+    csvw:rownum 10 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value "2024-01-23T00:00:00"^^xsd:dateTime ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Versuchsbezeichnung3> a oa:Annotation ;
+    rdfs:label "Versuchsbezeichnung                " ;
+    csvw:rownum 3 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "LCF-Versuch" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Waermebehandlung9> a oa:Annotation ;
+    rdfs:label "Wärmebehandlung                    " ;
+    csvw:rownum 9 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "-" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Werkstoff7> a oa:Annotation ;
+    rdfs:label "Werkstoff                          " ;
+    bfo:RO_0010002 fto:TestPieceComposition ;
+    csvw:rownum 7 ;
+    oa:hasBody [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "CuNi6Sn4" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ZyklenBeiVersuchsende24> a oa:Annotation ;
+    rdfs:label "Zyklen bei Versuchsende            " ;
+    bfo:RO_0010002 fto:CycleToFractureValue ;
+    csvw:rownum 24 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value 30000 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/ZyklusNf23> a oa:Annotation ;
+    rdfs:label "Zyklus Nf                          " ;
+    bfo:RO_0010002 fto:CycleToDefiningCriteriaValue ;
+    csvw:rownum 23 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value 27813 ],
+        [ a oa:TextualBody ;
+            oa:format "text/plain" ;
+            oa:purpose "oa:tagging" ;
+            oa:value "10%" ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/Zykluszeit22> a oa:Annotation ;
+    rdfs:label "Zykluszeit                         " ;
+    bfo:RO_0010002 fto:MeasurementOfCycleTime ;
+    csvw:rownum 22 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:SEC ;
+            qudt:value 12 ] .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1> csvw:dialect [ csvw:delimiter "\\t" ;
+            csvw:encoding "latin-1" ;
+            csvw:headerRowCount "2"^^xsd:nonNegativeInteger ;
+            csvw:skipRows "31"^^xsd:nonNegativeInteger ] ;
+    csvw:tableSchema [ csvw:aboutUrl "https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-gid-{GID}"^^csvw:uriTemplate ;
+            csvw:column ( <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-GID> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-Zyklus> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-SpannungMax> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-SpannungMin> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-DehnungMax> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-DehnungMin> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-WegMax> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-WegMin> ) ;
+            csvw:primaryKey "GID" ] ;
+    csvw:url "https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis"^^xsd:anyURI .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-DehnungMax> a csvw:Column ;
+    qudt:unit qunit:PERCENT ;
+    csvw:format xsd:double ;
+    csvw:name "DehnungMax" ;
+    csvw:title "%",
+        "Dehnung-Max",
+        "DehnungMax" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-DehnungMin> a csvw:Column ;
+    qudt:unit qunit:PERCENT ;
+    csvw:format xsd:double ;
+    csvw:name "DehnungMin" ;
+    csvw:title "%",
+        "Dehnung-Min",
+        "DehnungMin" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-GID> a csvw:Column ;
+    csvw:datatype xsd:string ;
+    csvw:name "GID" ;
+    csvw:required true ;
+    csvw:suppressOutput true ;
+    csvw:title "GID",
+        "Generic Identifier" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-SpannungMax> a csvw:Column ;
+    qudt:unit qunit:MegaPA ;
+    csvw:format xsd:double ;
+    csvw:name "SpannungMax" ;
+    csvw:title "MPa",
+        "Spannung-Max",
+        "SpannungMax" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-SpannungMin> a csvw:Column ;
+    qudt:unit qunit:MegaPA ;
+    csvw:format xsd:double ;
+    csvw:name "SpannungMin" ;
+    csvw:title "MPa",
+        "Spannung-Min",
+        "SpannungMin" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-WegMax> a csvw:Column ;
+    qudt:unit qunit:MilliM ;
+    csvw:format xsd:double ;
+    csvw:name "WegMax" ;
+    csvw:title "Weg-Max",
+        "WegMax",
+        "mm" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-WegMin> a csvw:Column ;
+    qudt:unit qunit:MilliM ;
+    csvw:format xsd:double ;
+    csvw:name "WegMin" ;
+    csvw:title "Weg-Min",
+        "WegMin",
+        "mm" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-1-Zyklus> a csvw:Column ;
+    csvw:format xsd:integer ;
+    csvw:name "Zyklus" ;
+    csvw:title "Nr",
+        "Zyklus" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2> csvw:dialect [ csvw:delimiter "\\t" ;
+            csvw:encoding "latin-1" ;
+            csvw:headerRowCount "2"^^xsd:nonNegativeInteger ;
+            csvw:skipRows "145"^^xsd:nonNegativeInteger ] ;
+    csvw:tableSchema [ csvw:aboutUrl "https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-gid-{GID}"^^csvw:uriTemplate ;
+            csvw:column ( <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-GID> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Zeit> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Zyklus> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Spannung> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Dehnung> <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Weg> ) ;
+            csvw:primaryKey "GID" ] ;
+    csvw:url "https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis"^^xsd:anyURI .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Dehnung> a csvw:Column ;
+    qudt:unit qunit:PERCENT ;
+    csvw:format xsd:double ;
+    csvw:name "Dehnung" ;
+    csvw:title "%",
+        "Dehnung" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-GID> a csvw:Column ;
+    csvw:datatype xsd:string ;
+    csvw:name "GID" ;
+    csvw:required true ;
+    csvw:suppressOutput true ;
+    csvw:title "GID",
+        "Generic Identifier" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Spannung> a csvw:Column ;
+    qudt:unit qunit:MegaPA ;
+    csvw:format xsd:double ;
+    csvw:name "Spannung" ;
+    csvw:title "MPa",
+        "Spannung" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Weg> a csvw:Column ;
+    qudt:unit qunit:MilliM ;
+    csvw:format xsd:double ;
+    csvw:name "Weg" ;
+    csvw:title "Weg",
+        "mm" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Zeit> a csvw:Column ;
+    qudt:unit qunit:SEC ;
+    csvw:format xsd:double ;
+    csvw:name "Zeit" ;
+    csvw:title "Zeit",
+        "s" .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/ex5/LCF_G_21.lis/table-2-Zyklus> a csvw:Column ;
+    csvw:format xsd:integer ;
+    csvw:name "Zyklus" ;
+    csvw:title "Nr",
+        "Zyklus" .
+
+iof:Agent a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000040 .
+
+iof:Capability a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000016 .
+
+iof:DeformationSpeed a owl:Class ;
+    rdfs:subClassOf iof:ProcessCharacteristic .
+
+iof:GroupOfAgents a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000027 .
+
+iof:ManufacturingProcess a owl:Class ;
+    rdfs:subClassOf iof:PlannedProcess .
+
+iof:OrganizedGroupOfAgents a owl:Class ;
+    rdfs:subClassOf iof:GroupOfAgents .
+
+iof:Person a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000030 .
+
+iof:PlanSpecification a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+bfo:BFO_0000001 a owl:Class .
+
+bfo:BFO_0000004 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000002 .
+
+bfo:BFO_0000020 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000002 .
+
+bfo:BFO_0000029 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000141 .
+
+bfo:BFO_0000034 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000016 .
+
+bfo:BFO_0000038 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000008 .
+
+bfo:BFO_0000141 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000004 .
+
+bfo:BFO_0000145 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000019 .
+
+qunit:SEC a qudt:Unit .
+
+xsd:string a rdfs:Datatype .
+
+mseo:Deformation a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000016 .
+
+mseo:ElasticModulus a owl:Class ;
+    rdfs:subClassOf mseo:Stiffness .
+
+mseo:Specimen a owl:Class ;
+    rdfs:subClassOf iof:MaterialArtifact .
+
+fto:ActOfArtifactVerification a owl:Class ;
+    rdfs:label "Act Of Artifact Verification" ;
+    rdfs:subClassOf iof:PlannedProcess ;
+    ns2:definition "set of operations that establish, under specified conditions, the relationship between values indicated by a measuring instrument or measuring system, or values represented by a material measure, and the corresponding known values of a reference standard" ;
+    ns1:definitionSource "ISO 22716:2007" .
+
+fto:Actuator a owl:Class ;
+    rdfs:label "Actuator" ;
+    rdfs:subClassOf iof:PieceOfEquipment ;
+    ns2:definition "device that provides a physical output in response to a input signal in a predetermined way" ;
+    ns1:definitionSource "ISO/IEC 29182‑2" .
+
+fto:Amount a owl:Class ;
+    rdfs:label "Amount" ;
+    rdfs:subClassOf bfo:BFO_0000019 ;
+    ns2:definition "A quantity which specifies the amount of entities" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00143" .
+
+fto:Amplitude a owl:Class ;
+    rdfs:label "Amplitude" ;
+    rdfs:subClassOf iof:ProcessCharacteristic ;
+    ns2:definition "half the range of a variable" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:CycleToDefiningCriteriaValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:CycleToFractureValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:CyclicStrainHardeningExponentFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:CyclicStrainHardeningExponent .
+
+fto:CyclicStrengthCoefficientFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:CyclicStrengthCoefficient .
+
+fto:CyclicYieldStrengthFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:CyclicYieldStrength_ .
+
+fto:CyclicYieldStrength_ a owl:NamedIndividual,
+        fto:CyclicYieldStrength ;
+    iof:designatedBy fto:CyclicYieldStrengthValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ .
+
+fto:ExperimentTime a owl:Class ;
+    rdfs:label "Experiment time" ;
+    rdfs:subClassOf bfo:BFO_0000038 ;
+    ns2:definition "A quantity for expressing the duration of an expriment" .
+
+fto:Extensometer_ a owl:NamedIndividual,
+        fto:Extensometer ;
+    iof:designatedBy fto:ExtensometerIdentifier .
+
+fto:FatigueDuctilityCoefficientFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:FatigueDuctilityCoefficient .
+
+fto:FatigueDuctilityExponentFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:FatigueDuctilityExponent .
+
+fto:FatigueLife a owl:Class ;
+    rdfs:label "Fatigue Life" ;
+    rdfs:subClassOf fto:Number ;
+    ns2:definition "number of cycles that have to be applied to achieve a failure" ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:FatigueStrengthCoefficientFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:FatigueStrengthCoefficient .
+
+fto:FatigueStrengthExponentFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:FatigueStrengthExponent .
+
+fto:FatigueTestUncertainity a owl:NamedIndividual,
+        fto:UncertaintyOfMeasurement ;
+    iof:designatedBy fto:FatigueTestUncertainityValue .
+
+fto:FatigueTestUncertainityFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:FatigueTestUncertainity .
+
+fto:FractureLocationDescription a owl:NamedIndividual,
+        iof:DescriptiveInformationContentEntity .
+
+fto:GaugeLength a owl:Class ;
+    rdfs:label "Gauge length" ;
+    rdfs:subClassOf fto:Length ;
+    ns2:definition "length of the parallel portion of the test piece on which elongation is measured at any moment during the test" ;
+    ns1:definitionSource "ISO/TR 25679:2005, 0000_136" .
+
+fto:ImageMetadataSet a owl:Class ;
+    rdfs:label "Image metadata set" ;
+    rdfs:subClassOf fto:DataSet ;
+    ns2:definition "Metadata set included in images. E.g. microscopes write the process specific metadata into the image file." ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00137" .
+
+fto:Laboratory_ a bfo:BFO_0000029,
+        owl:NamedIndividual ;
+    iof:designatedBy fto:LaboratoryNameAndLocation .
+
+fto:Loading a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:MeasuringFracturedTestPiece ;
+    iof:hasOutput fto:TestCycleNumber,
+        fto:TestDataFile,
+        fto:TestDisplacement ;
+    iof:hasQuality fto:TestTime ;
+    iof:measuredByAtSomeTime fto:Waveform_ .
+
+fto:MachineSoftware_ a owl:NamedIndividual,
+        mseo:Software ;
+    iof:designatedBy fto:FatigueMachineSoftwareNameAndVersion .
+
+fto:MeasurementOfCycleTime a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:MeasurementOfMaximumStrain a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:MeasurementOfMinimumStrain a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:MeasurementOfStrainRate a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:MeasurementOfStrainRatio a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:MeasuringFracturedTestPiece a owl:NamedIndividual,
+        iof:MeasurementProcess ;
+    bfo:has_continuant_part_at_some_time fto:FracturedTestPiece ;
+    iof:hasFunction fto:FractureFunction ;
+    iof:hasOutput fto:FractureLocation,
+        fto:FractureMode .
+
+fto:ModuludOfElasticityFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:ModulusOfElasticity .
+
+fto:ModulusOfElasticity a owl:NamedIndividual,
+        mseo:ElasticModulus ;
+    iof:designatedBy fto:ModulusOfElasticityValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfCyclicYieldStrength .
+
+fto:Number a owl:Class ;
+    rdfs:label "Number" ;
+    rdfs:subClassOf fto:Amount ;
+    ns2:definition "A number of some kind, which specifies the number of entities" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00142" .
+
+fto:OriginalCrossSectionAreaValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:ProcessDataSet a owl:Class ;
+    rdfs:label "Process data set" ;
+    rdfs:subClassOf fto:DataSet ;
+    ns2:definition "Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00068" .
+
+fto:RawDataSet a owl:Class ;
+    rdfs:label "Raw data set" ;
+    rdfs:subClassOf fto:DataSet,
+        fto:ProcessDataSet ;
+    ns2:definition "Any kind of raw data set. Raw data refers to the original data set." ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00067" .
+
+fto:SizeQuality a owl:Class ;
+    rdfs:label "Size quality" ;
+    rdfs:subClassOf bfo:BFO_0000019 ;
+    ns2:definition "A Quality that inheres in a bearer in virtue of the bearer's extension in one or more dimensions." ;
+    ns1:definitionSource "https://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology" .
+
+fto:StrainFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:TestStrain .
+
+fto:StrainRate a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainRate ;
+    rdfs:label "Strain rate" ;
+    rdfs:subClassOf iof:DeformationSpeed ;
+    ns2:definition "initial rate of increase in gauge length of an initially plain tensile specimen" ;
+    iof:designatedBy fto:MeasurementOfStrainRate ;
+    ns1:definitionSource "ISO 7539-7:2005(en)" .
+
+fto:StrainRatio a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainRatio ;
+    rdfs:label "Strain Ratio" ;
+    rdfs:subClassOf fto:Ratio ;
+    ns2:definition "ratio of minimum to maximum strain during any single cycle of fatigue operation" ;
+    iof:designatedBy fto:MeasurementOfStrainRatio ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:StressCalculation a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:StrainCalculation ;
+    fto:use fto:StressFunction ;
+    iof:hasQuality fto:TestStress .
+
+fto:StressFunction a owl:NamedIndividual,
+        iof:Algorithm ;
+    iof:isAchivedByAtSomeTime fto:TestStress .
+
+fto:StressStrainHystersisLoopCurve a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainFatigueLifeCurve,
+        fto:StressStrainHystersisLoopCurve ;
+    rdfs:label "Stress-Strain Hysteresis Loop Curve" ;
+    rdfs:subClassOf fto:ImageMetadataSet ;
+    ns2:definition "closed curve of the stress-strain response during one complete cycle" ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfCyclicYieldStrength,
+        fto:DeterminationOfModulusOfElasticity ;
+    ns1:definitionSource "ISO 12106:2017" .
+
+fto:TestDataFile a owl:NamedIndividual,
+        fto:RawDataSet ;
+    iof:designatedBy fto:RowDataTable_ .
+
+fto:TestDateIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestEnvironmentIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestOperatorIdentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestPieceComposition a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestPieceIndentifier a owl:NamedIndividual,
+        iof:Identifier .
+
+fto:TestStrain a owl:NamedIndividual,
+        mseo:Strain ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueDuctilityExponent,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStrainFatigueLifeCurve,
+        fto:PlottingStressStrainHystersisLoopCurve .
+
+fto:TestStress a owl:NamedIndividual,
+        mseo:Stress ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfCyclicStrainHardeningExponent,
+        fto:DeterminationOfCyclicStrengthCoefficient,
+        fto:DeterminationOfFatigueDuctilityCoefficient,
+        fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthExponent,
+        fto:DeterminationOfModulusOfElasticity,
+        fto:PlottingStressStrainHystersisLoopCurve .
+
+fto:TestTemperatureValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+fto:TwoDimensionalExtent a owl:Class ;
+    rdfs:label "Two dimensional extent" ;
+    rdfs:subClassOf fto:SizeQuality ;
+    ns2:definition "A Size Quality that inheres in a bearer in virtue of the bearer's extension in two dimensions." ;
+    ns1:definitionSource "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology" .
+
+fto:Waveform_ a owl:NamedIndividual,
+        fto:WaveformDevice ;
+    iof:designatedBy fto:WaveformIdentifier .
+
+iof:DesignativeInformationContentEntity a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+bfo:BFO_0000002 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000001 .
+
+bfo:BFO_0000003 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000001 .
+
+bfo:BFO_0000017 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000020 .
+
+bfo:BFO_0000030 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000040 .
+
+bfo:BFO_0000040 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000004 .
+
+qunit:MegaPA a qudt:Unit .
+
+qunit:MilliM a qudt:DerivedUnit .
+
+mseo:MeasurementDevice a owl:Class ;
+    rdfs:subClassOf iof:PieceOfEquipment .
+
+mseo:Strain a owl:Class ;
+    rdfs:subClassOf mseo:Deformation .
+
+mseo:Strength a owl:Class ;
+    rdfs:subClassOf iof:Capability .
+
+fto:AccuracyOfTestingApparatus a owl:NamedIndividual,
+        fto:ActOfArtifactVerification,
+        iof:MeasurementProcess ;
+    bfo:precedes fto:SettingTheForceZeroPoint .
+
+fto:ChoiceOfTheMethodAndRate a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:Loading ;
+    iof:hasOutput fto:FatigueTestControllingMode ;
+    iof:hasQuality fto:CycleTime,
+        fto:MaximumStrain,
+        fto:MinimumStrain,
+        fto:StrainRate,
+        fto:StrainRatio .
+
+fto:CyclicStrainHardeningExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:CyclicStrainHardeningExponent ;
+    rdfs:label "Cyclic Strain Hardening Exponent" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "slope of cyclic curve log(σ a) as a function of log(σpa)" ;
+    iof:designatedBy fto:CyclicStrainHardeningExponentValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:CyclicStrengthCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:CyclicStrengthCoefficient ;
+    rdfs:label "Cyclic Strength Coefficient" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "value of stress that intercepts at εpa = 1 on a cyclic graph log(σa) as a function of log(εpa)" ;
+    iof:designatedBy fto:CyclicStrengthCoefficientValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:DeterminationOfOriginalCrossSectionArea a owl:NamedIndividual,
+        iof:MeasurementProcess ;
+    bfo:precedes fto:MarkingTheOriginalGaugeLength ;
+    iof:hasQuality fto:OriginalCrossSectionArea .
+
+fto:FatigueDuctilityCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueDuctilityCoefficient ;
+    rdfs:label "Fatigue Ductility Coefficient" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "Plastic-strain intercept at 2Nf = 1 on lg (Δεp/2) − lg 2Nf plot" ;
+    iof:designatedBy fto:FatigueDuctilityCoefficientValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:FatigueDuctilityExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueDuctilityExponent ;
+    rdfs:label "Fatigue Ductility Exponent" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "Slope of lg (Δεp/2) − lg 2Nf plot (Specify 2Nf range)" ;
+    iof:designatedBy fto:FatigueDuctilityExponentValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:FatigueStrengthCoefficient a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueStrengthCoefficient ;
+    rdfs:label "Fatigue Strength Coefficient" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "Stress intercept at 2Nf = 1 on lg σa − lg 2Nf plot" ;
+    iof:designatedBy fto:FatigueStrengthCoefficientValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:FatigueStrengthExponent a owl:Class,
+        owl:NamedIndividual,
+        fto:FatigueStrengthExponent ;
+    rdfs:label "Fatigue Strength Exponent" ;
+    rdfs:subClassOf mseo:MaterialFatigue ;
+    ns2:definition "value of slope of curve log(εe) as a function of log(2Nf)" ;
+    iof:designatedBy fto:FatigueStrengthExponentValue ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    ns1:definitionSource "ISO 23718:2007" .
+
+fto:FatigueTestPiece a owl:NamedIndividual,
+        mseo:Specimen ;
+    iof:actsOnBehalfOfAtSomeTime fto:MaterialProvider ;
+    iof:designatedBy fto:TestPieceIndentifier ;
+    iof:hasFunction fto:FatigueTestPieceFunction ;
+    iof:hasOutput fto:FracturedTestPiece ;
+    iof:hasQuality fto:TestPieceCrossSectionShape,
+        fto:TestPieceMaterialComposition,
+        fto:TestPieceParallelLength,
+        fto:TestPieceTotalLength ;
+    iof:isAchievedByAtSomeTime fto:TestPieceHeatTreatment,
+        fto:TestPiecePreparation .
+
+fto:FracturedTestPiece a owl:NamedIndividual,
+        mseo:Specimen .
+
+fto:Gripping a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:ChoiceOfTheMethodAndRate ;
+    iof:measuredByAtSomeTime fto:FatigueTestingMachine .
+
+fto:Length a owl:Class ;
+    rdfs:label "Length" ;
+    rdfs:subClassOf fto:OneDimensionalExtent ;
+    ns2:definition "Length is a non-negative additive quantity attributed to a one-dimensional object in space." ;
+    ns1:definitionSource "http://dbpedia.org/page/Length" .
+
+fto:SettingTheForceZeroPoint a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:Gripping ;
+    iof:measuredByAtSomeTime fto:FatigueTestingMachine .
+
+fto:StrainFatigueLifeCurve a owl:Class,
+        owl:NamedIndividual,
+        fto:StrainFatigueLifeCurve ;
+    rdfs:label "Strain-Fatigue Life Curve" ;
+    rdfs:subClassOf fto:ImageMetadataSet ;
+    ns2:definition "plastic deformation that may occur during fatigue loading" ;
+    iof:isAchievedByAtSomeTime fto:RowDataTable_ ;
+    iof:isInputOf fto:DeterminationOfFatigueLife,
+        fto:DeterminationOfFatigueStrengthCoefficient .
+
+fto:TestOperator_ a owl:NamedIndividual,
+        iof:Person ;
+    iof:designatedBy fto:TestOperatorIdentifier .
+
+iof:DescriptiveInformationContentEntity a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+iof:MaterialArtifact a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000030 .
+
+fto:DataSet a owl:Class ;
+    rdfs:label "Data set" ;
+    rdfs:subClassOf iof:InformationContentEntity ;
+    ns2:definition "Any kind of data set" ;
+    ns1:definitionSource "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00024" .
+
+fto:DeterminationOfCyclicStrainHardeningExponent a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfCyclicStrengthCoefficient ;
+    fto:use fto:CyclicStrainHardeningExponentFunction ;
+    iof:hasQuality fto:CyclicStrainHardeningExponent .
+
+fto:DeterminationOfCyclicStrengthCoefficient a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:CalculateFatigueTestUncertainity ;
+    fto:use fto:CyclicStrengthCoefficientFunction ;
+    iof:hasQuality fto:CyclicStrengthCoefficient .
+
+fto:DeterminationOfCyclicYieldStrength a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfFatigueStrengthCoefficient ;
+    fto:use fto:CyclicYieldStrengthFunction ;
+    iof:hasQuality fto:CyclicYieldStrength_ .
+
+fto:DeterminationOfFatigueDuctilityCoefficient a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfFatigueStrengthExponent ;
+    fto:use fto:FatigueDuctilityCoefficientFunction ;
+    iof:hasQuality fto:FatigueDuctilityCoefficient .
+
+fto:DeterminationOfFatigueDuctilityExponent a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfCyclicStrainHardeningExponent ;
+    fto:use fto:FatigueDuctilityExponentFunction ;
+    iof:hasQuality fto:FatigueDuctilityExponent .
+
+fto:DeterminationOfFatigueStrengthExponent a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfFatigueDuctilityExponent ;
+    fto:use fto:FatigueStrengthExponentFunction ;
+    iof:hasQuality fto:FatigueStrengthExponent .
+
+fto:FatigueTestingMachine a owl:NamedIndividual,
+        fto:FatigueMeasurementDevice ;
+    bfo:has_participant_at_some_time fto:DataAcquisitor_,
+        fto:Extensometer_,
+        fto:ForceTransducer_,
+        fto:MachineSoftware_,
+        fto:Waveform_ ;
+    iof:designatedBy fto:FatigueTestingMachineIdentifier ;
+    iof:located_in_at_some_time fto:Laboratory_ .
+
+fto:MarkingTheOriginalGaugeLength a owl:NamedIndividual,
+        iof:MeasurementProcess,
+        iof:PlannedProcess ;
+    bfo:precedes fto:AccuracyOfTestingApparatus ;
+    iof:hasQuality fto:ExtensometerGaugeLength,
+        fto:OriginalGaugeLength ;
+    iof:measuredByAtSomeTime fto:Extensometer_ .
+
+fto:PlottingStrainFatigueLifeCurve a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfFatigueLife ;
+    iof:hasOutput fto:StrainFatigueLifeCurve .
+
+fto:PlottingStressStrainHystersisLoopCurve a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:PlottingStrainFatigueLifeCurve ;
+    iof:hasOutput fto:StressStrainHystersisLoopCurve .
+
+fto:StrainCalculation a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:PlottingStressStrainHystersisLoopCurve ;
+    fto:use fto:StrainFunction ;
+    iof:hasQuality fto:TestStrain .
+
+bfo:BFO_0000016 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000017 .
+
+qunit:PERCENT a qudt:Unit .
+
+fto:DeterminationOfFatigueStrengthCoefficient a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfFatigueDuctilityCoefficient ;
+    fto:use fto:FatigueStrengthCoefficientFunction ;
+    iof:hasQuality fto:FatigueStrengthCoefficient .
+
+fto:DeterminationOfModulusOfElasticity a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfCyclicYieldStrength ;
+    fto:use fto:ModuludOfElasticityFunction ;
+    iof:hasQuality fto:ModulusOfElasticity,
+        fto:SlopOfElasticPartOfTheStressStreainCurve .
+
+mseo:MaterialFatigue a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000016 .
+
+fto:CalculateFatigueTestUncertainity a owl:NamedIndividual,
+        mseo:ActOfAnalysing,
+        fto:ActOfArtifactVerification ;
+    fto:use fto:FatigueTestUncertainityFunction ;
+    iof:hasQuality fto:FatigueTestUncertainity .
+
+fto:DeterminationOfFatigueLife a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:precedes fto:DeterminationOfModulusOfElasticity ;
+    iof:hasOutput fto:CycleToDefiningCriteria,
+        fto:CycleToFracture .
+
+fto:FatigueTest a owl:Class ;
+    rdfs:label "Fatigue Test" ;
+    rdfs:subClassOf fto:MechanicalTesting ;
+    ns2:definition "test where repeated stress is applied to a test specimen, and the number of cycles to fracture is measured" ;
+    ns1:definitionSource "ISO 22214:2006" .
+
+iof:ProcessCharacteristic a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000003 .
+
+bfo:BFO_0000019 a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000020 .
+
+iof:PieceOfEquipment a owl:Class ;
+    rdfs:subClassOf iof:MaterialArtifact .
+
+iof:InformationContentEntity a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000031 .
+
+iof:Algorithm a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+iof:MeasurementProcess a owl:Class ;
+    rdfs:subClassOf iof:PlannedProcess .
+
+iof:PlannedProcess a owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000015 .
+
+iof:Identifier a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
+mseo:ActOfAnalysing a owl:Class ;
+    rdfs:subClassOf iof:PlannedProcess .
+
+fto:RowDataTable_ a owl:NamedIndividual,
+        fto:DataSet,
+        fto:RawDataSet .
+
+iof:ValueExpression a owl:Class ;
+    rdfs:subClassOf iof:InformationContentEntity .
+
