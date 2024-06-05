@@ -1,0 +1,1119 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix data: <https://gitlab.com/kupferdigital/process-graphs/tensile-test/-/raw/main/mapping/example%20D1/Tensile_D_01-metadata.json/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iof: <https://github.com/iofoundry/Core/> .
+@prefix kd: <https://gitlab.com/kupferdigital/process-graphs/tensile-test#> .
+@prefix mseo1: <https://purl.matolab.org/mseo/mid/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/Mechanical_Testing_Ontology/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qunit: <http://qudt.org/vocab/unit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bfo:derives_into a owl:ObjectProperty .
+
+bfo:has_function a owl:ObjectProperty .
+
+bfo:has_part a owl:ObjectProperty .
+
+bfo:has_quality a owl:ObjectProperty .
+
+cco:affects a owl:ObjectProperty .
+
+cco:designated_by a owl:ObjectProperty .
+
+cco:has_accessory a owl:ObjectProperty .
+
+cco:has_agent a owl:ObjectProperty .
+
+cco:has_input a owl:ObjectProperty .
+
+cco:has_output a owl:ObjectProperty .
+
+cco:has_process_part a owl:ObjectProperty .
+
+cco:is_input_of a owl:ObjectProperty .
+
+cco:is_made_of a owl:ObjectProperty .
+
+cco:is_measured_by a owl:ObjectProperty .
+
+cco:occurs_on a owl:ObjectProperty .
+
+cco:process_precedes a owl:ObjectProperty .
+
+cco:process_started_by a owl:ObjectProperty .
+
+cco:uses a owl:ObjectProperty .
+
+kd: a owl:Ontology ;
+    dc:creator "Birgit Skrotzki",
+        "Hossein Beygi Nasrabadi",
+        "Thomas Hanke" ;
+    dc:title "Tensile Test Process Graph" ;
+    owl:versionInfo "2.0.6" .
+
+kd:TensileTestExperiment a owl:NamedIndividual,
+        mto:TensileTest ;
+    cco:has_accessory kd:TensileTestingMachine ;
+    cco:has_input kd:TensileTestPiece ;
+    cco:has_output kd:TestDataFile ;
+    cco:occurs_on kd:TestDate ;
+    cco:process_started_by kd:TensileTestMeasurement ;
+    mseo1:in_accordance_with kd:TestStandard .
+
+data: csvw:dialect [ csvw:delimiter "	" ;
+            csvw:encoding "ISO-8859-1" ;
+            csvw:headerRowCount "2"^^xsd:nonNegativeInteger ;
+            csvw:skipRows "39"^^xsd:nonNegativeInteger ] ;
+    csvw:note data:Anfangsmesslaenge16,
+        data:Bearbeiter7,
+        data:Bruchdehnung31,
+        data:Brucheinschnuerung32,
+        data:DehngrenzeRp00118,
+        data:DehngrenzeRp00219,
+        data:DehngrenzeRp00520,
+        data:DehngrenzeRp0121,
+        data:DehngrenzeRp0222,
+        data:DehngrenzeRp0523,
+        data:DehngrenzeRp124,
+        data:DehngrenzeRp225,
+        data:DehngrenzeRp526,
+        data:Gleichmassdehnung30,
+        data:ObereStreckgrenze27,
+        data:Probenbezeichnung9,
+        data:Probenform10,
+        data:Probenquerschnitt11,
+        data:Projekt5,
+        data:Pruefgeschwindigkeit113,
+        data:Pruefgeschwindigkeit215,
+        data:Pruefmaschine8,
+        data:Prueftemperatur12,
+        data:SteigungDesElastischenTeilsMeGpa17,
+        data:Umschaltpunkt14,
+        data:UntereStreckgrenze28,
+        data:VersuchsDatum4,
+        data:Versuchsbezeichnung3,
+        data:Werkstoff6,
+        data:Zugfestigkeit29 ;
+    csvw:tableSchema [ csvw:column ( data:Zeit data:Weg data:Kraft data:Dehnung data:Spannung ) ] ;
+    csvw:url "Tensile_D_01.lis"^^xsd:anyURI .
+
+mseo1:in_accordance_with a owl:ObjectProperty .
+
+qunit:DEG_C a qudt:DerivedUnit .
+
+qunit:KiloN a qudt:Unit .
+
+qunit:MilliM-PER-MIN a qudt:Unit .
+
+qunit:MilliM2 a qudt:Unit .
+
+qunit:SEC a qudt:Unit .
+
+cco:ActOfArtifactProcessing a owl:Class .
+
+cco:ActOfPositionChange a owl:Class .
+
+cco:CalendarDateIdentifier a owl:Class .
+
+cco:Day a owl:Class .
+
+cco:DirectiveInformationContentEntity a owl:Class .
+
+cco:Length a owl:Class .
+
+cco:MultiSecondTemporalInterval a owl:Class .
+
+cco:PortionOfMaterial a owl:Class .
+
+cco:ProportionalRatioMeasurementInformationContentEntity a owl:Class .
+
+cco:ShapeQuality a owl:Class .
+
+cco:SizeQuality a owl:Class .
+
+cco:Temperature a owl:Class .
+
+iof:ManufacturingProcess a owl:Class .
+
+iof:MaterialResource a owl:Class .
+
+iof:TransportProcess a owl:Class .
+
+mto:ParallelLength a owl:Class .
+
+mto:PercentageElongation a owl:Class .
+
+mto:ReductionOfArea a owl:Class .
+
+mto:StressStrainCurve a owl:Class .
+
+mto:TensileTest a owl:Class .
+
+mto:UncertaintyOfMeasurement a owl:Class .
+
+kd:CoefficientOfProportionality a cco:SizeQuality,
+        owl:NamedIndividual ;
+    cco:affects kd:DeterminationOfOriginalCrossSectionArea ;
+    cco:is_measured_by kd:TestPieceCoefficientOfProportionality .
+
+kd:ControlTemperature a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output kd:TestTemperature ;
+    cco:process_precedes kd:DeterminationOfOriginalCrossSectionArea .
+
+kd:CopperAlloy a cco:PortionOfMaterial,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestPieceCompositionIdentifier .
+
+kd:CrossheadSeparationRate a cco:Speed,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfCrossheadSeparationRate .
+
+kd:EstimatedStrainRateOverTheParallelLength a cco:Speed,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfEstimatedStrainRateOverTheParallelLength .
+
+kd:ExtensionAtMaximumForceFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:ExtensometerGaugeLength a owl:NamedIndividual,
+        mto:GaugeLength ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfExtensionAtMaximumForce,
+        kd:DeterminationOfPercentageTotalExtensionAtFracture,
+        kd:DeterminationOfThePercentageYieldPointExtension ;
+    cco:is_measured_by kd:MeasurementOfExtensometerGaugeLength .
+
+kd:FinalGaugeLengthAfterFracture a owl:NamedIndividual,
+        mto:GaugeLength ;
+    cco:is_input_of kd:DeterminationOfPercentageElongationAfterFracture,
+        kd:DeterminationOfPercentageTotalExtensionAtFracture ;
+    cco:is_measured_by kd:MeasurementOfFinalGaugeLengthAfterFracture .
+
+kd:FractureStrength a owl:NamedIndividual,
+        mseo1:BreakingStrength ;
+    cco:is_measured_by kd:MeasurementOfFractureStrength .
+
+kd:LowerYieldStrength_ a owl:NamedIndividual,
+        mseo1:LowerYieldStrenght ;
+    cco:is_measured_by kd:MeasurementOfLowerYieldStrength .
+
+kd:MaterialProvider a owl:NamedIndividual,
+        iof:MaterialResource ;
+    cco:designated_by kd:MaterialProviderName .
+
+kd:MaterialProviderName a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MaximumCrossSectionAreaAfterFracture a owl:NamedIndividual,
+        mseo1:CrossSection ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfPercentageReductionOfArea ;
+    cco:is_measured_by kd:MeasurementOfMaximumCrossSectionAreaAfterFracture .
+
+kd:MaximumForce a cco:Force,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:DeterminationOfTensileStrength ;
+    cco:is_measured_by kd:MeasurementOfMaximumForce .
+
+kd:MeasurementOfAppliedLoadingForceDataSet a owl:NamedIndividual,
+        mseo1:RawDataSet .
+
+kd:MeasurementOfAppliedLoadingTimeDataSet a owl:NamedIndividual,
+        mseo1:RawDataSet .
+
+kd:MeasurementOfCrossheadSeparationRate a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfDisplacementDataSet a owl:NamedIndividual,
+        mseo1:RawDataSet .
+
+kd:MeasurementOfEstimatedStrainRateOverTheParallelLength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfExtensometerGaugeLength a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfFinalGaugeLengthAfterFracture a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfFractureStrength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfLowerYieldStrength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfMaximumCrossSectionAreaAfterFracture a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfMaximumForce a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfModulusOfElasticity a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfOriginalCrossSectionArea a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfOriginalGaugeLength a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPercentageElongationAfterFracture a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPercentagePlasticExtensionAtMaximumForce a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPercentageReductionOfArea a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPercentageTotalExtensionAtFracture a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPercentageTotalExtensionAtMaximumForce a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfPermanentSetStrength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfProofStrength_PlasticExtension a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfProofStrength_TotalExtension a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfSeparationPoint a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfStrainRate a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTensileTestUncertainity a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestPieceTotalLength a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestPieceparallelLength a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestSpeed a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfTestStrainDataSet a owl:NamedIndividual,
+        mseo1:AnalysedDataSet .
+
+kd:MeasurementOfTestStressDataSet a owl:NamedIndividual,
+        mseo1:AnalysedDataSet .
+
+kd:MeasurementOfTestTemperature a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfThePercentageYieldPointExtension a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUltimateTensileStrength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementOfUpperYieldStrength a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasurementofSlopOfElasticPartOfTheStressStreainCurve a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:MeasutrementOfStressRate a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:ModuludOfElasticityFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:ModulusOfElasticity a owl:NamedIndividual,
+        mseo1:ElasticModulus ;
+    cco:is_measured_by kd:MeasurementOfModulusOfElasticity .
+
+kd:OriginalCrossSectionArea a owl:NamedIndividual,
+        mseo1:CrossSection ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfPercentageReductionOfArea,
+        kd:DeterminationOfTensileStrength,
+        kd:StressCalculation ;
+    cco:is_measured_by kd:MeasurementOfOriginalCrossSectionArea .
+
+kd:OriginalGaugeLength a owl:NamedIndividual,
+        mto:GaugeLength ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfPercentageElongationAfterFracture,
+        kd:StrainCalculation ;
+    cco:is_measured_by kd:MeasurementOfOriginalGaugeLength .
+
+kd:PercentageElongationAfterFracture a owl:NamedIndividual,
+        mto:PercentageElongation ;
+    cco:is_measured_by kd:MeasurementOfPercentageElongationAfterFracture .
+
+kd:PercentageElongationAfterFractureFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:PercentagePlasticExtensionAtMaximumForce a owl:NamedIndividual,
+        mseo1:PlasticStrain ;
+    cco:is_measured_by kd:MeasurementOfPercentagePlasticExtensionAtMaximumForce .
+
+kd:PercentageReductionOfArea a owl:NamedIndividual,
+        mto:ReductionOfArea ;
+    cco:is_measured_by kd:MeasurementOfPercentageReductionOfArea .
+
+kd:PercentageReductionOfAreaFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:PercentageTotalExtensionAtFracture a owl:NamedIndividual,
+        mseo1:EngineeringStrain ;
+    cco:is_measured_by kd:MeasurementOfPercentageTotalExtensionAtFracture .
+
+kd:PercentageTotalExtensionAtFractureFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:PercentageTotalExtensionAtMaximumForce a owl:NamedIndividual,
+        mseo1:EngineeringStrain ;
+    cco:is_measured_by kd:MeasurementOfPercentageTotalExtensionAtMaximumForce .
+
+kd:PercentageYieldPointExtension a owl:NamedIndividual,
+        mseo1:EngineeringStrain ;
+    cco:is_measured_by kd:MeasurementOfThePercentageYieldPointExtension .
+
+kd:PermanentSetStrength a owl:NamedIndividual,
+        mseo1:MechanicalStrength ;
+    cco:is_measured_by kd:MeasurementOfPermanentSetStrength .
+
+kd:PlottedStressStrainCurve a owl:NamedIndividual,
+        mto:StressStrainCurve ;
+    cco:is_input_of kd:DeterminationOfFractureStrength,
+        kd:DeterminationOfLowerYieldStrength,
+        kd:DeterminationOfModulusOfElasticity,
+        kd:DeterminationOfProofStrength,
+        kd:DeterminationOfThePercentageYieldPointExtension,
+        kd:DeterminationOfUpperYieldStrength,
+        kd:VarificationOfPermanentSetStrength .
+
+kd:ProofStrength_PlasticExtension a owl:NamedIndividual,
+        mseo1:PlasticStrain ;
+    cco:is_measured_by kd:MeasurementOfProofStrength_PlasticExtension .
+
+kd:ProofStrength_TotalExtension a owl:NamedIndividual,
+        mseo1:EngineeringStrain ;
+    cco:is_measured_by kd:MeasurementOfProofStrength_TotalExtension .
+
+kd:SeparationPoint a owl:NamedIndividual,
+        mseo1:Strain ;
+    cco:is_measured_by kd:MeasurementOfSeparationPoint .
+
+kd:SlopOfElasticPartOfTheStressStreainCurve a owl:NamedIndividual,
+        mseo1:Stiffness ;
+    cco:is_input_of kd:DeterminationOfExtensionAtMaximumForce ;
+    cco:is_measured_by kd:MeasurementofSlopOfElasticPartOfTheStressStreainCurve .
+
+kd:StrainFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:StrainRate a cco:Speed,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfStrainRate .
+
+kd:StressFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:StressRate a cco:Speed,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasutrementOfStressRate .
+
+kd:TensileStrengthFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:TensileTestMeasurement a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    bfo:has_part kd:TensileTestPiece ;
+    cco:has_process_part kd:AccuracyOfTestingApparatus,
+        kd:ChoiceOfTheMethodAndRate,
+        kd:ControlTemperature,
+        kd:DeterminationOfOriginalCrossSectionArea,
+        kd:Gripping,
+        kd:Loading,
+        kd:MarkingTheOriginalGaugeLength,
+        kd:SettingTheForceZeroPoint ;
+    cco:is_measured_by kd:TensileTestingMachine ;
+    cco:process_precedes kd:TensileTestMeasurementAnalysis .
+
+kd:TensileTestMeasurementAnalysis a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    cco:has_process_part kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfExtensionAtMaximumForce,
+        kd:DeterminationOfFinalGaugeLengthAfterFracture,
+        kd:DeterminationOfFractureStrength,
+        kd:DeterminationOfLowerYieldStrength,
+        kd:DeterminationOfMaximumCrossSectionAreaAfterFracture,
+        kd:DeterminationOfMaximumForce,
+        kd:DeterminationOfModulusOfElasticity,
+        kd:DeterminationOfPercentageElongationAfterFracture,
+        kd:DeterminationOfPercentageReductionOfArea,
+        kd:DeterminationOfPercentageTotalExtensionAtFracture,
+        kd:DeterminationOfProofStrength,
+        kd:DeterminationOfTensileStrength,
+        kd:DeterminationOfThePercentageYieldPointExtension,
+        kd:DeterminationOfUpperYieldStrength,
+        kd:PlottingStressStrainCurve,
+        kd:StrainCalculation,
+        kd:StressCalculation,
+        kd:VarificationOfPermanentSetStrength .
+
+kd:TensileTestPieceFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:TensileTestUncertainity a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_measured_by kd:MeasurementOfTensileTestUncertainity .
+
+kd:TensileTestUncertainityFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestStandard .
+
+kd:TensileTestingMachineArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+kd:TensileTestingMachineIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestDataFile a owl:NamedIndividual,
+        mseo1:File ;
+    cco:designated_by kd:TestDateFileLocation .
+
+kd:TestDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestDateIdentifier .
+
+kd:TestDateFileLocation a cco:DirectiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:TestDateIdentifier a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+kd:TestDisplacement a owl:NamedIndividual,
+        mseo1:Deformation ;
+    cco:is_input_of kd:DeterminationOfExtensionAtMaximumForce,
+        kd:DeterminationOfFinalGaugeLengthAfterFracture,
+        kd:StrainCalculation ;
+    cco:is_measured_by kd:MeasurementOfDisplacementDataSet .
+
+kd:TestForce a cco:Force,
+        owl:NamedIndividual ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfMaximumForce,
+        kd:StressCalculation ;
+    cco:is_measured_by kd:MeasurementOfAppliedLoadingForceDataSet .
+
+kd:TestPieceCoefficientOfProportionality a cco:ProportionalRatioMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:TestPieceCompositionIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceCrossSectionShape a cco:ShapeQuality,
+        owl:NamedIndividual ;
+    cco:affects kd:DeterminationOfOriginalCrossSectionArea ;
+    cco:designated_by kd:TestPieceCrossSectionShapeIdentifier .
+
+kd:TestPieceCrossSectionShapeIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceIndenter a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestPieceManufacturing a owl:NamedIndividual,
+        iof:ManufacturingProcess ;
+    bfo:has_part kd:TransportFromProducer .
+
+kd:TestPiecePreparation a cco:ActOfArtifactProcessing,
+        owl:NamedIndividual ;
+    cco:designated_by kd:TestPiecePreparationMethod .
+
+kd:TestPiecePreparationMethod a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:TestPieceTotalLength a cco:Length,
+        owl:NamedIndividual ;
+    cco:affects kd:MarkingTheOriginalGaugeLength ;
+    cco:is_measured_by kd:MeasurementOfTestPieceTotalLength .
+
+kd:TestPieceparallelLength a owl:NamedIndividual,
+        mto:ParallelLength ;
+    cco:affects kd:MarkingTheOriginalGaugeLength ;
+    cco:is_measured_by kd:MeasurementOfTestPieceparallelLength .
+
+kd:TestSpeed a cco:Speed,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfTestSpeed .
+
+kd:TestStandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:TestStrain a owl:NamedIndividual,
+        mseo1:Strain ;
+    cco:is_input_of kd:CalculateTensileTestUncertainity,
+        kd:DeterminationOfModulusOfElasticity,
+        kd:PlottingStressStrainCurve ;
+    cco:is_measured_by kd:MeasurementOfTestStrainDataSet .
+
+kd:TestStress a owl:NamedIndividual,
+        mseo1:Stress ;
+    cco:is_input_of kd:DeterminationOfFractureStrength,
+        kd:DeterminationOfLowerYieldStrength,
+        kd:DeterminationOfModulusOfElasticity,
+        kd:DeterminationOfProofStrength,
+        kd:DeterminationOfTensileStrength,
+        kd:DeterminationOfUpperYieldStrength,
+        kd:PlottingStressStrainCurve,
+        kd:VarificationOfPermanentSetStrength ;
+    cco:is_measured_by kd:MeasurementOfTestStressDataSet .
+
+kd:TestTemperature a cco:Temperature,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfTestTemperature .
+
+kd:TestTime a cco:MultiSecondTemporalInterval,
+        owl:NamedIndividual ;
+    cco:is_measured_by kd:MeasurementOfAppliedLoadingTimeDataSet .
+
+kd:TransportFromProducer a owl:NamedIndividual,
+        iof:TransportProcess ;
+    cco:has_agent kd:MaterialProvider .
+
+kd:UltimateTensileStrength_ a owl:NamedIndividual,
+        mseo1:UltimateTensileStrength ;
+    cco:is_input_of kd:DeterminationOfExtensionAtMaximumForce ;
+    cco:is_measured_by kd:MeasurementOfUltimateTensileStrength .
+
+kd:UpperYieldStrength_ a owl:NamedIndividual,
+        mseo1:UpperYieldStrength ;
+    cco:is_measured_by kd:MeasurementOfUpperYieldStrength .
+
+data:Anfangsmesslaenge16 a oa:Annotation ;
+    rdfs:label "Anfangsmesslänge" ;
+    csvw:rownum 16 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MilliM ;
+            qudt:value 25 ] .
+
+data:Bearbeiter7 a oa:Annotation ;
+    rdfs:label "Bearbeiter" ;
+    csvw:rownum 7 ;
+    oa:hasBody "NN"^^oa:TextualBody .
+
+data:Bruchdehnung31 a oa:Annotation ;
+    rdfs:label "Bruchdehnung" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfPercentageElongationAfterFracture> ;
+    csvw:rownum 31 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:PERCENT ;
+            qudt:value 33.5 ] .
+
+data:Brucheinschnuerung32 a oa:Annotation ;
+    rdfs:label "Brucheinschnürung" ;
+    csvw:rownum 32 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:PERCENT ;
+            qudt:value 77 ] .
+
+data:DehngrenzeRp00118 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,01)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.01> ;
+    csvw:rownum 18 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp00219 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,02)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.02> ;
+    csvw:rownum 19 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp00520 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,05)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.05> ;
+    csvw:rownum 20 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp0121 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,1)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.1> ;
+    csvw:rownum 21 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp0222 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,2)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.2> ;
+    csvw:rownum 22 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MegaPA ;
+            qudt:value 119 ] .
+
+data:DehngrenzeRp0523 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp0,5)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp0.5> ;
+    csvw:rownum 23 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp124 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp1)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp1> ;
+    csvw:rownum 24 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp225 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp2)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp2> ;
+    csvw:rownum 25 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:DehngrenzeRp526 a oa:Annotation ;
+    rdfs:label "Dehngrenze (Rp5)" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#YieldStrength_Rp5> ;
+    csvw:rownum 26 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:Dehnung a csvw:Column ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfTestStrainDataSet> ;
+    qudt:unit qunit:PERCENT ;
+    csvw:title "Dehnung" .
+
+data:Gleichmassdehnung30 a oa:Annotation ;
+    rdfs:label "Gleichmaßdehnung" ;
+    csvw:rownum 30 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:Kraft a csvw:Column ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfAppliedLoadingForceDataSet> ;
+    qudt:unit qunit:KiloN ;
+    csvw:title "Kraft" .
+
+data:ObereStreckgrenze27 a oa:Annotation ;
+    rdfs:label "Obere Streckgrenze" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfUpperYieldStrength> ;
+    csvw:rownum 27 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:Probenbezeichnung9 a oa:Annotation ;
+    rdfs:label "Probenbezeichnung" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#TestPieceIndenter> ;
+    csvw:rownum 9 ;
+    oa:hasBody "D_01"^^oa:TextualBody .
+
+data:Probenform10 a oa:Annotation ;
+    rdfs:label "Probenform" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#TestPieceCrossSectionShapeIdentifier> ;
+    csvw:rownum 10 ;
+    oa:hasBody "ZUG 005.004"^^oa:TextualBody .
+
+data:Probenquerschnitt11 a oa:Annotation ;
+    rdfs:label "Probenquerschnitt" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfOriginalCrossSectionArea> ;
+    csvw:rownum 11 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MilliM2 ;
+            qudt:value 19.64 ] .
+
+data:Projekt5 a oa:Annotation ;
+    rdfs:label "Projekt" ;
+    csvw:rownum 5 ;
+    oa:hasBody "VH5204"^^oa:TextualBody .
+
+data:Pruefgeschwindigkeit113 a oa:Annotation ;
+    rdfs:label "Prüfgeschwindigkeit 1" ;
+    csvw:rownum 13 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value 0.025 ],
+        "%/s"^^oa:TextualBody .
+
+data:Pruefgeschwindigkeit215 a oa:Annotation ;
+    rdfs:label "Prüfgeschwindigkeit 2" ;
+    csvw:rownum 15 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MilliM-PER-MIN ;
+            qudt:value 12 ] .
+
+data:Pruefmaschine8 a oa:Annotation ;
+    rdfs:label "Prüfmaschine" ;
+    csvw:rownum 8 ;
+    oa:hasBody "M33"^^oa:TextualBody .
+
+data:Prueftemperatur12 a oa:Annotation ;
+    rdfs:label "Prüftemperatur" ;
+    csvw:rownum 12 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:DEG_C ;
+            qudt:value 26 ] .
+
+data:Spannung a csvw:Column ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfTestStressDataSet> ;
+    qudt:unit qunit:MegaPA ;
+    csvw:title "Spannung" .
+
+data:SteigungDesElastischenTeilsMeGpa17 a oa:Annotation ;
+    rdfs:label "Steigung des elastischen Teils (mE)                     GPa" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementofSlopOfElasticPartOfTheStressStreainCurve> ;
+    csvw:rownum 17 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value 58.8 ] .
+
+data:Umschaltpunkt14 a oa:Annotation ;
+    rdfs:label "Umschaltpunkt" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfSeparationPoint> ;
+    csvw:rownum 14 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:PERCENT ;
+            qudt:value 1 ] .
+
+data:UntereStreckgrenze28 a oa:Annotation ;
+    rdfs:label "Untere Streckgrenze" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfLowerYieldStrength> ;
+    csvw:rownum 28 ;
+    oa:hasBody "-"^^oa:TextualBody .
+
+data:VersuchsDatum4 a oa:Annotation ;
+    rdfs:label "Versuchs-Datum" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#TestDate> ;
+    csvw:rownum 4 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:value "2022-10-08T00:00:00"^^xsd:dateTime ] .
+
+data:Versuchsbezeichnung3 a oa:Annotation ;
+    rdfs:label "Versuchsbezeichnung" ;
+    csvw:rownum 3 ;
+    oa:hasBody "ZUG-Versuch"^^oa:TextualBody .
+
+data:Weg a csvw:Column ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfDisplacementDataSet> ;
+    qudt:unit qunit:MilliM ;
+    csvw:title "Weg" .
+
+data:Werkstoff6 a oa:Annotation ;
+    rdfs:label "Werkstoff" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#TestPieceCompositionIdentifier> ;
+    csvw:rownum 6 ;
+    oa:hasBody "CuSn6"^^oa:TextualBody .
+
+data:Zeit a csvw:Column ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfAppliedLoadingTimeDataSet> ;
+    qudt:unit qunit:SEC ;
+    csvw:title "Zeit" .
+
+data:Zugfestigkeit29 a oa:Annotation ;
+    rdfs:label "Zugfestigkeit" ;
+    bfo:RO_0010002 <https://your_filestorage_location/example.rdf#tensile-test#MeasurementOfUltimateTensileStrength> ;
+    csvw:rownum 29 ;
+    oa:hasBody [ a qudt:QuantityValue ;
+            qudt:unit qunit:MegaPA ;
+            qudt:value 314 ] .
+
+mseo1:BreakingStrength a owl:Class .
+
+mseo1:Deformation a owl:Class .
+
+mseo1:ElasticModulus a owl:Class .
+
+mseo1:File a owl:Class .
+
+mseo1:LowerYieldStrenght a owl:Class .
+
+mseo1:MechanicalStrength a owl:Class .
+
+mseo1:Regulation a owl:Class .
+
+mseo1:Specimen a owl:Class .
+
+mseo1:Stiffness a owl:Class .
+
+mseo1:Stress a owl:Class .
+
+mseo1:UltimateTensileStrength a owl:Class .
+
+mseo1:UniversalTestingMachine a owl:Class .
+
+mseo1:UpperYieldStrength a owl:Class .
+
+qunit:MilliM a qudt:DerivedUnit .
+
+cco:ArtifactFunction a owl:Class .
+
+cco:DescriptiveInformationContentEntity a owl:Class .
+
+cco:Force a owl:Class .
+
+kd:AccuracyOfTestingApparatus a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:process_precedes kd:SettingTheForceZeroPoint .
+
+kd:ChoiceOfTheMethodAndRate a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:TensileTestingMachine ;
+    cco:has_output kd:CrossheadSeparationRate,
+        kd:EstimatedStrainRateOverTheParallelLength,
+        kd:SeparationPoint,
+        kd:StrainRate,
+        kd:StressRate,
+        kd:TestSpeed ;
+    cco:process_precedes kd:Loading .
+
+kd:DeterminationOfMaximumCrossSectionAreaAfterFracture a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output kd:MaximumCrossSectionAreaAfterFracture ;
+    cco:process_precedes kd:DeterminationOfPercentageReductionOfArea .
+
+kd:Gripping a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:TensileTestingMachine ;
+    cco:process_precedes kd:ChoiceOfTheMethodAndRate .
+
+kd:Loading a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:TensileTestingMachine ;
+    cco:has_output kd:TestDisplacement,
+        kd:TestForce ;
+    cco:occurs_on kd:TestTime ;
+    cco:process_precedes kd:StressCalculation .
+
+kd:SettingTheForceZeroPoint a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory kd:TensileTestingMachine ;
+    cco:process_precedes kd:Gripping .
+
+kd:TensileTestPiece a owl:NamedIndividual,
+        mseo1:Specimen ;
+    bfo:has_function kd:TensileTestPieceFunction ;
+    bfo:has_quality kd:CoefficientOfProportionality,
+        kd:TestPieceCrossSectionShape ;
+    cco:designated_by kd:TestPieceIndenter ;
+    cco:has_output kd:TestPieceTotalLength,
+        kd:TestPieceparallelLength ;
+    cco:has_process_part kd:TestPieceManufacturing,
+        kd:TestPiecePreparation ;
+    cco:is_made_of kd:CopperAlloy .
+
+kd:YieldStrength_Rp0.01 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.01 .
+
+kd:YieldStrength_Rp0.02 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.02 .
+
+kd:YieldStrength_Rp0.05 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.05 .
+
+kd:YieldStrength_Rp0.1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.1 .
+
+kd:YieldStrength_Rp0.2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.2 .
+
+kd:YieldStrength_Rp0.5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp0.5 .
+
+kd:YieldStrength_Rp1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp1 .
+
+kd:YieldStrength_Rp2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp2 .
+
+kd:YieldStrength_Rp5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual,
+        mseo1:YieldStrenght ;
+    cco:is_measured_by kd:YieldStrength_Rp5 .
+
+mseo1:AnalysedDataSet a owl:Class .
+
+mseo1:CrossSection a owl:Class .
+
+mseo1:PlasticStrain a owl:Class .
+
+mseo1:Strain a owl:Class .
+
+qunit:MegaPA a qudt:Unit .
+
+mto:GaugeLength a owl:Class .
+
+kd:DeterminationOfFinalGaugeLengthAfterFracture a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output kd:FinalGaugeLengthAfterFracture ;
+    cco:process_precedes kd:DeterminationOfPercentageElongationAfterFracture .
+
+kd:DeterminationOfMaximumForce a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:MaximumForce ;
+    cco:process_precedes kd:DeterminationOfTensileStrength .
+
+mseo1:RawDataSet a owl:Class .
+
+qunit:PERCENT a qudt:Unit .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class .
+
+kd:DeterminationOfFractureStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:FractureStrength ;
+    cco:process_precedes kd:DeterminationOfFinalGaugeLengthAfterFracture .
+
+kd:DeterminationOfLowerYieldStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:LowerYieldStrength_ ;
+    cco:process_precedes kd:DeterminationOfProofStrength .
+
+kd:DeterminationOfOriginalCrossSectionArea a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output kd:OriginalCrossSectionArea ;
+    cco:process_precedes kd:MarkingTheOriginalGaugeLength .
+
+kd:DeterminationOfPercentageElongationAfterFracture a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PercentageElongationAfterFracture ;
+    cco:process_precedes kd:DeterminationOfPercentageTotalExtensionAtFracture ;
+    cco:uses kd:PercentageElongationAfterFractureFunction .
+
+kd:DeterminationOfPercentageReductionOfArea a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PercentageReductionOfArea ;
+    cco:process_precedes kd:CalculateTensileTestUncertainity ;
+    cco:uses kd:PercentageReductionOfAreaFunction .
+
+kd:DeterminationOfPercentageTotalExtensionAtFracture a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PercentageTotalExtensionAtFracture ;
+    cco:process_precedes kd:DeterminationOfMaximumCrossSectionAreaAfterFracture ;
+    cco:uses kd:PercentageTotalExtensionAtFractureFunction .
+
+kd:DeterminationOfProofStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:ProofStrength_PlasticExtension,
+        kd:ProofStrength_TotalExtension,
+        kd:YieldStrength_Rp0.01,
+        kd:YieldStrength_Rp0.02,
+        kd:YieldStrength_Rp0.05,
+        kd:YieldStrength_Rp0.1,
+        kd:YieldStrength_Rp0.2,
+        kd:YieldStrength_Rp0.5,
+        kd:YieldStrength_Rp1,
+        kd:YieldStrength_Rp2,
+        kd:YieldStrength_Rp5 ;
+    cco:process_precedes kd:VarificationOfPermanentSetStrength .
+
+kd:DeterminationOfThePercentageYieldPointExtension a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PercentageYieldPointExtension ;
+    cco:process_precedes kd:DeterminationOfModulusOfElasticity .
+
+kd:DeterminationOfUpperYieldStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:UpperYieldStrength_ ;
+    cco:process_precedes kd:DeterminationOfLowerYieldStrength .
+
+kd:MarkingTheOriginalGaugeLength a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:has_output kd:ExtensometerGaugeLength,
+        kd:OriginalGaugeLength ;
+    cco:process_precedes kd:AccuracyOfTestingApparatus .
+
+kd:PlottingStressStrainCurve a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    cco:has_output kd:PlottedStressStrainCurve ;
+    cco:process_precedes kd:DeterminationOfUpperYieldStrength .
+
+kd:StrainCalculation a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:TestStrain ;
+    cco:process_precedes kd:PlottingStressStrainCurve ;
+    cco:uses kd:StrainFunction .
+
+kd:StressCalculation a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:TestStress ;
+    cco:process_precedes kd:StrainCalculation ;
+    cco:uses kd:StressFunction .
+
+kd:VarificationOfPermanentSetStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PermanentSetStrength ;
+    cco:process_precedes kd:DeterminationOfThePercentageYieldPointExtension .
+
+mseo1:EngineeringStrain a owl:Class .
+
+cco:NonNameIdentifier a owl:Class .
+
+cco:Speed a owl:Class .
+
+kd:DeterminationOfModulusOfElasticity a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:ModulusOfElasticity,
+        kd:SlopOfElasticPartOfTheStressStreainCurve ;
+    cco:process_precedes kd:DeterminationOfMaximumForce ;
+    cco:uses kd:ModuludOfElasticityFunction .
+
+kd:DeterminationOfTensileStrength a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:UltimateTensileStrength_ ;
+    cco:process_precedes kd:DeterminationOfExtensionAtMaximumForce ;
+    cco:uses kd:TensileStrengthFunction .
+
+kd:DeterminationOfExtensionAtMaximumForce a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:PercentagePlasticExtensionAtMaximumForce,
+        kd:PercentageTotalExtensionAtMaximumForce ;
+    cco:process_precedes kd:DeterminationOfFractureStrength ;
+    cco:uses kd:ExtensionAtMaximumForceFunction .
+
+kd:TensileTestingMachine a owl:NamedIndividual,
+        mseo1:UniversalTestingMachine ;
+    bfo:has_function kd:TensileTestingMachineArtifactFunction ;
+    cco:designated_by kd:TensileTestingMachineIdentifier .
+
+kd:CalculateTensileTestUncertainity a owl:NamedIndividual,
+        mseo1:ActOfAnalysing ;
+    bfo:derives_into kd:TensileTestUncertainity ;
+    cco:uses kd:TensileTestUncertainityFunction .
+
+cco:Algorithm a owl:Class .
+
+mseo1:YieldStrenght a owl:Class .
+
+cco:ActOfMeasuring a owl:Class .
+
+kd:TestStandard a owl:NamedIndividual,
+        mseo1:Regulation ;
+    cco:designated_by kd:TestStandardIdentifier .
+
+mseo1:ActOfAnalysing a owl:Class .
+
+cco:MeasurementInformationContentEntity a owl:Class .
