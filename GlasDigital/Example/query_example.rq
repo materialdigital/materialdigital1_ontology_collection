@@ -1,0 +1,51 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX glass: <https://glasdigi.cms.uni-jena.de/glass/>
+PREFIX pmdco: <https://material-digital.de/pmdco/> # pmdco-v0.1-beta
+PREFIX graph: <https://glasdigi.cms.uni-jena.de/glass/graph/>
+PREFIX wb: <http://wikiba.se/ontology#>
+
+SELECT ?ID ?Date ?SiO2 ?B2O3 ?Na2O ?TargetTotalWeight ?TotalWeight (COALESCE(?DensityAt20C_null, "null") AS ?DensityAt20C) WHERE {
+  
+GRAPH graph:GlasDigital {
+  
+?process rdf:type glass:GlassManufacturingProcess;
+glass:hasSuppliedObjectIdentifier ?ID;
+glass:hasDataResourceDatetime ?Date;
+glass:hasGlassComponent ?c;
+glass:hasNumberOfComponent ?n.
+FILTER(?n = '3')
+FILTER (REGEX(?c, 'SiO2')&&REGEX(?c, 'B2O3')&&REGEX(?c, 'Na2O'))
+
+# Selected oxides to query (Mole Percent)
+?process glass:hasProcessParameter ?r0.
+?r0 rdf:type glass:SiO2.
+?r0 glass:hasValue ?rv0.
+?rv0 wb:quantityAmount ?SiO2.
+    
+?process glass:hasProcessParameter ?r1.
+?r1 rdf:type glass:B2O3.
+?r1 glass:hasValue ?rv1.
+?rv1 wb:quantityAmount ?B2O3.
+    
+?process glass:hasProcessParameter ?r2.
+?r2 rdf:type glass:Na2O.
+?r2 glass:hasValue ?rv2.
+?rv2 wb:quantityAmount ?Na2O.
+                          
+?process glass:hasProcessParameter ?p0.
+?p0 rdf:type glass:TargetTotalWeight.
+?p0 glass:hasValue ?pv0.
+?pv0 wb:quantityAmount ?TargetTotalWeight.
+    
+?process glass:hasProcessParameter ?p1.
+?p1 rdf:type glass:TotalWeight.
+?p1 glass:hasValue ?pv1.
+?pv1 wb:quantityAmount ?TotalWeight.
+
+OPTIONAL {
+  ?process pmdco:hasOutputObject/glass:hasMaterialProperty
+        [a glass:DensityAt20C; glass:hasMaterialPropertyValue/wb:quantityAmount ?DensityAt20C_null].
+}
+
+}
+}
