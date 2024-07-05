@@ -1,0 +1,3266 @@
+@prefix hto: <https://w3id.org/pmd/hto/> .
+@prefix ipsen: <https://w3id.org/pmd/hto/ipsen/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix pmdco: <https://w3id.org/pmd/co/> .
+@prefix pmde: <https://w3id.org/pmd/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pmde:f233018faa5f4a4dba6eafe438ee89cc a pmdco:HeatTreatmentProcess ;
+    rdfs:label "f23301 Heat Treatment Process" ;
+    pmdco:characteristic pmde:46bb91450d8f40a6a1dd5d2ec14cfbe6,
+        pmde:4ee9553694104252b3de3a7242128611,
+        pmde:572463ae4590441c82579136552a44b2,
+        pmde:8f10c69afef44adcbcc1404720887f99,
+        pmde:94ca07307c6b47f2b41fd1c8a29c344d ;
+    pmdco:input pmde:21dc63938d8849baa37f75872ac83e08 ;
+    pmdco:output pmde:21dc63938d8849baa37f75872ac83e08 ;
+    pmdco:subordinateProcess pmde:0481982b8da143b5b02b58102a015980,
+        pmde:12579dbf1a204c80ae5df72097ed16b6,
+        pmde:16eef7bc0ac3472e8d14269e781ec2af,
+        pmde:187c51cf49904b2292425f7f265e7aa2,
+        pmde:299c646cc24e448dadd1cb33f4cc111e,
+        pmde:2a98b71f3ed74fc78eed6f683a004c01,
+        pmde:33683187f96349a0a1d66d6adb4d7397,
+        pmde:385fb061faf741cab77cfc9d10674719,
+        pmde:3e540e52b49d40dfa093da3d85c593f8,
+        pmde:46f0598430914b4fb268b204edf39f6b,
+        pmde:4cfbf6facbe34f5d94bbed89a25c76c4,
+        pmde:5d6b5e4ceb4d45d98cc6bc138d9465ad,
+        pmde:5eba1c7a61ce442d9e21e547a2b70f1a,
+        pmde:6f328782613d4dc19e5cb833cc5778da,
+        pmde:70893855d1e24e7e8937a87707d93e30,
+        pmde:858b87019d7c42a48153bbe2991ef9c0,
+        pmde:97c2c720158e467389f148e9c20067cf,
+        pmde:a67539af8c7748d79932887db7cce6b3,
+        pmde:c9bc95da8e884c2ebe953ea5536f1b63,
+        pmde:da76c3c694da4e108549c5604d50b788,
+        pmde:e07de73a63d849618a8b53c3122526b8,
+        pmde:edd74d3d9ca64a6eb7bc79a822caad80,
+        pmde:f210a8f701ad4a1a9e2bb4b4c5fe7b82 .
+
+pmde:00653c4c2939411799d1033b706ebcbc a ipsen:VacuumCooling ;
+    rdfs:label "00653c Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:00b54f76dd5744d6bb2a5cf4576b8e4c a ipsen:VacuumCooling ;
+    rdfs:label "00b54f Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:00c8db7c344b401dbe3b19d0117496b0 a ipsen:GasIngressFront ;
+    rdfs:label "00c8db Gas Ingress Front" ;
+    pmdco:value true .
+
+pmde:01a2feac878d45aab05845f46660fbda a ipsen:GasIngressBack ;
+    rdfs:label "01a2fe Gas Ingress Back" ;
+    pmdco:value true .
+
+pmde:024e5d5120704f99897f68f4a1df1531 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "024e5d Overheat" ;
+    pmdco:value 1200 .
+
+pmde:02751823b3b04ee792cf80c6e2798094 a ipsen:OilFlowFast ;
+    rdfs:label "027518 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:0359484cd65d4a4a87dd81c32e85e6da a ipsen:OilFlowFast ;
+    rdfs:label "035948 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:03f4fb3fd475406da2f6298d02e6f184 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "03f4fb Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:0432d477d6c54d1bb2469f49d57d00d8 a hto:SequenceNumber ;
+    rdfs:label "0432d4 Sequence Number" ;
+    pmdco:value 1 .
+
+pmde:04437518e7f2456baea884596be89e52 a pmdco:ProvidedIdentifier ;
+    rdfs:label "044375 Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:044b6c9367ea452282dbbd77a5034287 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "044b6c Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:0481982b8da143b5b02b58102a015980 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "048198 Heat Treatment Process" ;
+    pmdco:characteristic pmde:23eca5b111d544cab17e7b947a265cf3,
+        pmde:2c98d8c1972a4a9fba057e20d94c6cd3,
+        pmde:34562ffac6b947f2a089d26f666864d4,
+        pmde:516d3c4e63034f24914757cdda27ece8,
+        pmde:656bfbdabdd64e1aa9a4ca52f7188e38,
+        pmde:68fb20405666480b86a980aeff358ffa,
+        pmde:708b72a0c3ee4ebea6198d4e4692b8a6,
+        pmde:719477dfde20475ab2ea26082dc645c9,
+        pmde:78b8ee31dd1c4f1aa7424d27618473c6,
+        pmde:7c2e06f0058a4a2da177f164f4e22c28,
+        pmde:800cc673e78b4c7684fb6afbe1ab20be,
+        pmde:83ae6d0a26d3417982e1812acf25bcf2,
+        pmde:867d78e45c9544afa0112deb2a20aef7,
+        pmde:9abc8ada02cf4b5eb76c71f3431eb280,
+        pmde:9dbaa056fff54ab7baf3dc3461f5a169,
+        pmde:a7fd16a048564a8199044c34633f661e,
+        pmde:a918bfacba2c4ac88aba7fda85f0107c,
+        pmde:b7f271d40ed4495c8c4248a6f3b2f725,
+        pmde:c0045cf7c3a248aeb9145ac3b153183f,
+        pmde:cd4f0bb87d8648a0b1b3a4b71283f290,
+        pmde:d7dbcb70a142496eacd59e72b9327481,
+        pmde:d85804b4128e4621bad0a16c54a65b98,
+        pmde:e99b847a41f349289a4b9cacaef4be4f,
+        pmde:edada77e7961411292c925205ddfc6ec .
+
+pmde:048b9e8964d040008b831eae1903195a a pmdco:NodeName ;
+    rdfs:label "048b9e Node Name" ;
+    pmdco:value "HK" .
+
+pmde:04ac07b7d8ef4d039b638ae28065658b a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "04ac07 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:04f1c08955ce4fa5a053b7eb5da03da4 a ipsen:GasIngressBack ;
+    rdfs:label "04f1c0 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:050fdd92221c42b48a3fd1eee9976f86 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "050fdd Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:05811131a8f04aea9bafcc0b73830877 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "058111 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:05cab4958f7f4760a1d60b7598f7f7e1 a ipsen:VacuumCooling ;
+    rdfs:label "05cab4 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:05e1bf05588d417a8df11fe0e353fd09 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "05e1bf Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:05f062a61e964630b8ae22dc440119ca a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "05f062 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:066f9b99141948c4a98c5d5c4a21fe84 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "066f9b Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:06ad520a665244a59ae3a45dc868cc74 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "06ad52 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+02 .
+
+pmde:070b3b32875840d5a3b8f407fc80bfe6 a pmdco:ProvidedIdentifier ;
+    rdfs:label "070b3b Provided Identifier" ;
+    pmdco:value "Absenken auf 840°C/3" .
+
+pmde:0730c29a4c7f4290832d186631fe17b9 a ipsen:GasIngressBack ;
+    rdfs:label "0730c2 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:076c0279323f414aa4ffe09023174614 a ipsen:OilFlow ;
+    rdfs:label "076c02 Oil Flow" ;
+    pmdco:value false .
+
+pmde:079642d6df06468c89a4135b52a320f8 a ipsen:OilFlowFast ;
+    rdfs:label "079642 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:084c00df0b1841b7900e06d4f10d6134 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "084c00 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:08a3a766032a4828a56d9df3a6e79363 a ipsen:OilFlow ;
+    rdfs:label "08a3a7 Oil Flow" ;
+    pmdco:value false .
+
+pmde:0907d5e2b2774bc8a71e30119aae22e0 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "0907d5 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:09a4d48f135c48fd8a0f9db1c1b49c3c a ipsen:GasIngressBack ;
+    rdfs:label "09a4d4 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:09c7e55478424b0c9ba9d0935cb47e7a a ipsen:GasCooling ;
+    rdfs:label "09c7e5 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:0acd3e463441490d90a94d779f5871e7 a ipsen:GasIngressFront ;
+    rdfs:label "0acd3e Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:0b38670d275447eeae3288ac9e2fa6e0 a pmdco:NodeName ;
+    rdfs:label "0b3867 Node Name" ;
+    pmdco:value "QK" .
+
+pmde:0c383af6327d42debc41b1ac385fa682 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "0c383a Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:0cb0272d522247619a65b040388650fb a pmdco:SetPoint,
+        hto:OilQuenchingDuration ;
+    rdfs:label "0cb027 Oil Quenching Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:0cee82d6a0fb42a982a63cb962da1042 a ipsen:GasIngressFront ;
+    rdfs:label "0cee82 Gas Ingress Front" ;
+    pmdco:value true .
+
+pmde:0d863e25624d4471b91cb46b93d677d6 a hto:SequenceNumber ;
+    rdfs:label "0d863e Sequence Number" ;
+    pmdco:value 12 .
+
+pmde:0e558a2423ec495d917b696e55866137 a pmdco:StartTime ;
+    rdfs:label "0e558a Start Time" ;
+    pmdco:value 1.610991e+09 .
+
+pmde:0ee7f6ffc61e4e16a5004256a7f44e11 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "0ee7f6 Oil Temperature" ;
+    pmdco:value 60 .
+
+pmde:1084cdeb8f1746f18cb6c9f9997fba89 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "1084cd Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:10a0a4211ee0431b82d06111807a6b9d a ipsen:OilFlow ;
+    rdfs:label "10a0a4 Oil Flow" ;
+    pmdco:value true .
+
+pmde:11c0a363d5134ac792194461b2a3b4dc a ipsen:OilFlow ;
+    rdfs:label "11c0a3 Oil Flow" ;
+    pmdco:value true .
+
+pmde:12579dbf1a204c80ae5df72097ed16b6 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "12579d Heat Treatment Process" ;
+    pmdco:characteristic pmde:08a3a766032a4828a56d9df3a6e79363,
+        pmde:0b38670d275447eeae3288ac9e2fa6e0,
+        pmde:0cb0272d522247619a65b040388650fb,
+        pmde:1a759f566fe346e48e7165c51199914c,
+        pmde:1e6b55ac6a4f425bbc9fc5efb45451c1,
+        pmde:1ece78e1613f460e867333b34891cdfb,
+        pmde:31310d74dcf94e5aa01bca3cf7791d8d,
+        pmde:46a1f9c39d154d36bbb2c17f6723553b,
+        pmde:4786c0f635714fdcaf47a7bf364e21df,
+        pmde:6f0ec49cff7b41e9afd8c3db0afce26e,
+        pmde:73e1a7fb14044551aa56ff4ad4ed7405,
+        pmde:777f660fdfbc433487f8da0e86cebb9b,
+        pmde:9400da0f143d48fb8e1ce9ead9861938,
+        pmde:b63979947f974081b25b05bda15ff607,
+        pmde:bf9f1b1d022f4026b9d278afa7718b09,
+        pmde:ce403932559c4ae29cdfc448b1734acc,
+        pmde:d1938d0cf4e74e009bb94687a71c57c0 .
+
+pmde:12b60734def94c368c0b7e08580d31df a ipsen:GasIngressBack ;
+    rdfs:label "12b607 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:1381284abbaa4dbeb05abfa9c0d4b025 a pmdco:StartTime ;
+    rdfs:label "138128 Start Time" ;
+    pmdco:value 1.610993e+09 .
+
+pmde:1405c4d356af44e39b3c0f4a91e3048f a pmdco:EndTime ;
+    rdfs:label "1405c4 End Time" ;
+    pmdco:value 1.610948e+09 .
+
+pmde:142f1ddc981c4dafbceffb6819336647 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "142f1d Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:159cbba26a3a40b1b45c2b1a4dc3182d a pmdco:ProvidedIdentifier ;
+    rdfs:label "159cbb Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:15cc96f1258e469f8d4b6517304f85b5 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "15cc96 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:163c7d3745b1438e93d9008742627646 a ipsen:VacuumCooling ;
+    rdfs:label "163c7d Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:166e7aa7df0e465ea306d58105c47883 a pmdco:NodeName ;
+    rdfs:label "166e7a Node Name" ;
+    pmdco:value "HK" .
+
+pmde:1672c72f637d40a4a0dabd5823826ba6 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "1672c7 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:16a9330b91bb441f820904ee3124c76d a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "16a933 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:16b39fd6adec496bb612e468b06df05c a ipsen:GasIngressBack ;
+    rdfs:label "16b39f Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:16eef7bc0ac3472e8d14269e781ec2af a pmdco:HeatTreatmentProcess ;
+    rdfs:label "16eef7 Heat Treatment Process" ;
+    pmdco:characteristic pmde:05811131a8f04aea9bafcc0b73830877,
+        pmde:0907d5e2b2774bc8a71e30119aae22e0,
+        pmde:16b39fd6adec496bb612e468b06df05c,
+        pmde:1c50ca23b5a644189416481a27ae90af,
+        pmde:28188685bcc74fac998543d2e1a41975,
+        pmde:282840905bf54feb8244104e217f3442,
+        pmde:2883a9516db84d29b4335a311e8cea43,
+        pmde:4177d58d3a1f4da0b361fd1e65404ec2,
+        pmde:4a980325049e466c80dd29261c157919,
+        pmde:4c296459ac3542a6b8ef9be1aaa22558,
+        pmde:60e04e0b7a364a9eb33c4b9e50e2b2e3,
+        pmde:662d36a85ee84fdea6a512d6a96b1e08,
+        pmde:70a7a5cb0ba2462fa2d7f80273f3a57c,
+        pmde:71b234bdf00047958402d63a33d32812,
+        pmde:757cc6e7b1274157a85e9c3f63d8e947,
+        pmde:785301ce9b3846dca887386e91a22db9,
+        pmde:9ddef6c5c2c44645925d19252677c377,
+        pmde:b0b8432aa48f43859fe52de10102292f,
+        pmde:bd195d0ff3574c9d92aaef1a852db22e,
+        pmde:c5640aec3f1f422dbc68a975c8924b4c,
+        pmde:c9ed86fb9f6f4038a2a2cf8aef106262,
+        pmde:dabb10fcba704ff3b5b3da048d557121,
+        pmde:e3b202831f354f3d82224caa2c016d72 .
+
+pmde:1718168d825741949d569da0b6f4e752 a pmdco:SetPoint,
+        hto:TemperatureDifference ;
+    rdfs:label "171816 Temperature Difference" ;
+    pmdco:unit unit:DEG_C-PER-MIN ;
+    pmdco:value 3.3e+00 .
+
+pmde:1790a9b02a31439880bf2e81d104fc15 a ipsen:OilFlow ;
+    rdfs:label "1790a9 Oil Flow" ;
+    pmdco:value true .
+
+pmde:1816effc22a44cac958ac51c72195419 a pmdco:ProvidedIdentifier ;
+    rdfs:label "1816ef Provided Identifier" ;
+    pmdco:value "Heizen auf 900°C mit" .
+
+pmde:18586dbcc6954695b3b177736f772308 a ipsen:GasCooling ;
+    rdfs:label "18586d Gas Cooling" ;
+    pmdco:value false .
+
+pmde:187c51cf49904b2292425f7f265e7aa2 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "187c51 Heat Treatment Process" ;
+    pmdco:characteristic pmde:0c383af6327d42debc41b1ac385fa682,
+        pmde:1816effc22a44cac958ac51c72195419,
+        pmde:24077c98350e40e5bbdba2f63f51b082,
+        pmde:33cb0398d6564272991b3239f83ea5ac,
+        pmde:551683fa55e244aaa5111e6381bcc33d,
+        pmde:5a9586b1994045b5add143d8a30ff95c,
+        pmde:692cb6afb1b6487aa56a5acccb9774fc,
+        pmde:6d580f25e3c74d5f815f7e29ccd57309,
+        pmde:71648649668b43af897ebdde35dbbd78,
+        pmde:87d04b0c573042748f530f2b1993f5dd,
+        pmde:90ad61687ea646279eb70011c01f8c63,
+        pmde:9aba67fbef05409aacd0a91325e43cae,
+        pmde:a24636c25daf46fbad5ff8b40006e6dc,
+        pmde:a632730e68b94da6b98050f168c27061,
+        pmde:d32568674356466dbe63f58beac1fd31,
+        pmde:d3910dc9668b4d3fab532d554df164b0,
+        pmde:d8f94a7b81314f2cba8ba61a65b128a2,
+        pmde:daff641c37974a24b168e753090d53d6,
+        pmde:de9a18ede5f84db79e517f6917baaf16,
+        pmde:e181cd53348044b8aa33f6997efa9d66,
+        pmde:ea29a9c2f1044b9489bfcb349721a14d,
+        pmde:ed02dcc127574c609935a5bc5adf5364,
+        pmde:f20720377348439b8cbe1ac6404b6300 .
+
+pmde:189cf26f5b824f5ca8ba568ece176a4e a ipsen:OilFlowUp ;
+    rdfs:label "189cf2 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:18a31c7b0f9046d39b83dfa79e233205 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "18a31c Temperature" ;
+    pmdco:value 940 .
+
+pmde:19aba500ef664e6ba27cd9811f755feb a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "19aba5 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:19c8ff73f2e14beeab23aa2de67032d1 a ipsen:GasIngressFront ;
+    rdfs:label "19c8ff Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:1a759f566fe346e48e7165c51199914c a ipsen:FanFast ;
+    rdfs:label "1a759f Fan Fast" ;
+    pmdco:value false .
+
+pmde:1ab44c992ffa4b92868fc28ddb08a5a4 a pmdco:NodeName ;
+    rdfs:label "1ab44c Node Name" ;
+    pmdco:value "HK" .
+
+pmde:1ae20bd57e5546e0a838f6c03fc83bcc a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "1ae20b Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.8e+03 .
+
+pmde:1c50ca23b5a644189416481a27ae90af a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "1c50ca Overheat" ;
+    pmdco:value 1200 .
+
+pmde:1d108ff26c76431f93025c6ed43e4d77 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "1d108f Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 500 .
+
+pmde:1d5364441a8d48b4bd3826ad8e6cab1e a ipsen:GasCooling ;
+    rdfs:label "1d5364 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:1e6b55ac6a4f425bbc9fc5efb45451c1 a ipsen:QuenchingUpDown ;
+    rdfs:label "1e6b55 Quenching Up Down" ;
+    pmdco:value false .
+
+pmde:1ece78e1613f460e867333b34891cdfb a ipsen:VacuumCooling ;
+    rdfs:label "1ece78 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:1f18e50fc9b14aa1b7ded54a23955820 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "1f18e5 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.8e+03 .
+
+pmde:2002347dc18b48758449c63577ae3f78 a pmdco:NodeName ;
+    rdfs:label "200234 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:2069d3dc1b5e4d9da761c8034e026ad2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "2069d3 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2193d1b91ebf4351a4e3f92bb2524680 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "2193d1 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:21ab6143205a4cc8ad061b4cadca0261 a pmdco:ProvidedIdentifier ;
+    rdfs:label "21ab61 Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:21daebebebb341f08d12f7f01ed93f8c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "21daeb Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2215026a18d74282b110a068c7794d9e a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "221502 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:2251a52ffbab41eba70e73f3f9e1379d a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "2251a5 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:22c5d9cc1f06413cb653ecfe55188057 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "22c5d9 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:23ae555482b14ab88f3875284941ab20 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "23ae55 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:23d59c86444344e7ab280804469de10a a pmdco:StartTime ;
+    rdfs:label "23d59c Start Time" ;
+    pmdco:value 1.610951e+09 .
+
+pmde:23eca5b111d544cab17e7b947a265cf3 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "23eca5 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:24077c98350e40e5bbdba2f63f51b082 a ipsen:OilFlowUp ;
+    rdfs:label "24077c Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:25237be5ac074ca7bc40611175cdac7e a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "25237b Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:258e9b26c42a42098bca490408ed2d84 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "258e9b Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:26133aeb5c414228b4aa0357c8ba8e2c a ipsen:VacuumCooling ;
+    rdfs:label "26133a Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:265a28360fc7490eb28a917651b640bb a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "265a28 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 4e+02 .
+
+pmde:279d40dd14b849aba54e2c313866347b a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "279d40 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:27ef82463f014bec996af5b81ee5813d a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "27ef82 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:28188685bcc74fac998543d2e1a41975 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "281886 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:282840905bf54feb8244104e217f3442 a pmdco:NodeName ;
+    rdfs:label "282840 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:2883a9516db84d29b4335a311e8cea43 a ipsen:VacuumCooling ;
+    rdfs:label "2883a9 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:290dfe67bf9246588732d270483c6086 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "290dfe Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2933c2e492324d85b8ebf2a53d4f3802 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "2933c2 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+02 .
+
+pmde:299b270d58914ae98c024357966151cb a ipsen:GasCooling ;
+    rdfs:label "299b27 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:299c646cc24e448dadd1cb33f4cc111e a pmdco:HeatTreatmentProcess ;
+    rdfs:label "299c64 Heat Treatment Process" ;
+    pmdco:characteristic pmde:00653c4c2939411799d1033b706ebcbc,
+        pmde:09a4d48f135c48fd8a0f9db1c1b49c3c,
+        pmde:159cbba26a3a40b1b45c2b1a4dc3182d,
+        pmde:2f5d125cde864ec6959aa59d9b2a1188,
+        pmde:30ee9bf6f6e349479767eb69ed036465,
+        pmde:3e3b862e484b4f8faae83be3d3c3e6f5,
+        pmde:3fde97329c2949b695f9d24d9cb2e04a,
+        pmde:4437cde4f0994ba28c4d1ac8835bfd4b,
+        pmde:6540f1c48e8b4cf4bf4b657048a40381,
+        pmde:6a8318b1d393400784c266466adb0fe2,
+        pmde:6ea0df0fd34e4e1f8fecde0b3008a037,
+        pmde:73f9cb38f0f840b2bf25a878cd828ebe,
+        pmde:741cf5fb6bdb4e5789741cca55a7a5dc,
+        pmde:78199a3a8aa240cb9d656d5ff568931c,
+        pmde:8200d5ba7cea4872becc5b29bddd49b8,
+        pmde:8a03dbfa3df54dafb4388832858a650c,
+        pmde:9587f130efd342e1b4a0dff6cba8600c,
+        pmde:9875ca8536c7413e9c8f202e81d34346,
+        pmde:a4cf39d8f3a04c7eb5992c3091850c9e,
+        pmde:be6e00a2048b41258a81d0c1f5f4a3ff,
+        pmde:d1827a108f264bf293877c3ca17a6564,
+        pmde:e894fe4f15574c8581032b23de514c28,
+        pmde:ffc411a0157243bb80f1e3342f912c3a .
+
+pmde:2a98b71f3ed74fc78eed6f683a004c01 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "2a98b7 Heat Treatment Process" ;
+    pmdco:characteristic pmde:024e5d5120704f99897f68f4a1df1531,
+        pmde:0432d477d6c54d1bb2469f49d57d00d8,
+        pmde:079642d6df06468c89a4135b52a320f8,
+        pmde:0ee7f6ffc61e4e16a5004256a7f44e11,
+        pmde:1405c4d356af44e39b3c0f4a91e3048f,
+        pmde:15cc96f1258e469f8d4b6517304f85b5,
+        pmde:2ab0fd196b1d455682b62fd5e2f0dcf9,
+        pmde:3e34849a37b54e3e97a2685c39eaeef8,
+        pmde:447be224fb424278b8a7ce6a7651e7b7,
+        pmde:5ceb59ed94ab4978bc57c76b297021ad,
+        pmde:6361e6aae71f46bd928de2419bc7d9b0,
+        pmde:6e2f2a101e874dea85d7a4688ab39d3c,
+        pmde:80d4a7308f9d4f069aa4ea32b152a00f,
+        pmde:8c16f704f883497fa0b70654430d2929,
+        pmde:8dfb02c79a1c4a33a77708375066ba5b,
+        pmde:9f3610fe1765478597dc8b2a45480652,
+        pmde:a1420d8888114e82af63bca87a95c87b,
+        pmde:b49b8314442247b8b4ff7ca9509cb8c8,
+        pmde:ba98121118a94c3f812bf135496b9277,
+        pmde:d4c39b682c99499fa418c4a4b6a90a2f,
+        pmde:d78bab0d49f84463b84416791101488f,
+        pmde:e174747fcfcf4ba783eff6a128a24af8,
+        pmde:e8d3bd478d484161a76f75c3ccd12bb6 .
+
+pmde:2ab0fd196b1d455682b62fd5e2f0dcf9 a ipsen:OilFlowUp ;
+    rdfs:label "2ab0fd Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:2b5e514ca3ea4095873a649fe98c57b9 a hto:SequenceNumber ;
+    rdfs:label "2b5e51 Sequence Number" ;
+    pmdco:value 7 .
+
+pmde:2b811b7b39404e28b4f010f60bc6aa55 a pmdco:EndTime ;
+    rdfs:label "2b811b End Time" ;
+    pmdco:value 1.610991e+09 .
+
+pmde:2bb71a82efca4c41a191d50609727b5d a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "2bb71a Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2bebe91758fb440f83af62ec8135bf0e a pmdco:NodeName ;
+    rdfs:label "2bebe9 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:2bf0e92ae1c84177b3ee38708f6b9b56 a ipsen:OilFlow ;
+    rdfs:label "2bf0e9 Oil Flow" ;
+    pmdco:value false .
+
+pmde:2c7e3c760aab4425b6dc215b55b7a439 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "2c7e3c Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2c98d8c1972a4a9fba057e20d94c6cd3 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "2c98d8 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:2dade93758774fcbbe52fafe1d80b15b a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "2dade9 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 1e+03 .
+
+pmde:2e478776c2a04331ae859011d9c7c679 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "2e4787 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:2eb1a3c683624e168597454fd67b4422 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "2eb1a3 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:2f5d125cde864ec6959aa59d9b2a1188 a ipsen:OilFlowUp ;
+    rdfs:label "2f5d12 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:2fad4b3e501544438134f70650ca8cfb a pmdco:StartTime ;
+    rdfs:label "2fad4b Start Time" ;
+    pmdco:value 1.610948e+09 .
+
+pmde:3048df6534354f0cad148e9f260e9f2a a ipsen:OilFlow ;
+    rdfs:label "3048df Oil Flow" ;
+    pmdco:value false .
+
+pmde:30ee9bf6f6e349479767eb69ed036465 a ipsen:OilFlowFast ;
+    rdfs:label "30ee9b Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:30ef7d449c2b4671877aebf3b9384b28 a ipsen:QuenchingUpDown ;
+    rdfs:label "30ef7d Quenching Up Down" ;
+    pmdco:value false .
+
+pmde:31310d74dcf94e5aa01bca3cf7791d8d a pmdco:SetPoint,
+        hto:QuenchingLeadtime ;
+    rdfs:label "31310d Quenching Leadtime" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:3252501f03ce4875b1f46667f73e3068 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "325250 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:325d7b8ab65844cc9e0c019f03ee7de1 a ipsen:OilFlowUp ;
+    rdfs:label "325d7b Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:33683187f96349a0a1d66d6adb4d7397 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "336831 Heat Treatment Process" ;
+    pmdco:characteristic pmde:00b54f76dd5744d6bb2a5cf4576b8e4c,
+        pmde:11c0a363d5134ac792194461b2a3b4dc,
+        pmde:1f18e50fc9b14aa1b7ded54a23955820,
+        pmde:25237be5ac074ca7bc40611175cdac7e,
+        pmde:79bbb302e2ee4c2cbbebde147bea5ef1,
+        pmde:7b387a6f8d38483db76af02f2c29fd42,
+        pmde:7c6131a878ae4babad09989fc955bcd2,
+        pmde:7e70532c4b984e7fab618946d0467483,
+        pmde:8453f94711a24724926c727d95fa385d,
+        pmde:8c71a550a6e64445b56cffa9930135c2,
+        pmde:8cb88615461742f2b77705be25b17a64,
+        pmde:8eb114fa964a43fc9da81a9bfd10e78b,
+        pmde:93b7e3c285284700b2bcb0b5c99cbab7,
+        pmde:9501fcda72f6471e96e1a91a204a51e1,
+        pmde:96a272d1c2b34492849abfb7e8c1c3f5,
+        pmde:97e1628ccd88424f84958bd413a6bd05,
+        pmde:aeab682939b54dc085f831754ca31bb1,
+        pmde:b49d71cd32934c62bca1e7cc762d582b,
+        pmde:c184140e3e404c97b7c13701055a8805,
+        pmde:ca773f3f631341838f785be5f49c1803,
+        pmde:e3d98a371b004185b4fea0b4e513287c,
+        pmde:ee5d8e2864f54b2896e7309dedf0cd7e,
+        pmde:fd4eff579e4c44fcb3e2cda3150bdb43 .
+
+pmde:33cb0398d6564272991b3239f83ea5ac a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "33cb03 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:340f57d55e4a4771ab5b3eea1665de90 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "340f57 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:34562ffac6b947f2a089d26f666864d4 a ipsen:GasCooling ;
+    rdfs:label "34562f Gas Cooling" ;
+    pmdco:value false .
+
+pmde:367d0eadf33547f483af5ba0a59d5909 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "367d0e Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:367d6d6435264603ad3fe2d88cdc54ee a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "367d6d Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:36ed7632038d4d6196ab6956f09a06ee a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "36ed76 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 500 .
+
+pmde:385fb061faf741cab77cfc9d10674719 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "385fb0 Heat Treatment Process" ;
+    pmdco:characteristic pmde:03f4fb3fd475406da2f6298d02e6f184,
+        pmde:0d863e25624d4471b91cb46b93d677d6,
+        pmde:3048df6534354f0cad148e9f260e9f2a,
+        pmde:43acf4757d25453f83604900702ff497,
+        pmde:504b745e2c014f438bae5beec9a8c284,
+        pmde:5f75bac090f74947bcbbbb9f4e5529da,
+        pmde:5ff39f09bb284cd0b9412416ae4adc14,
+        pmde:69da0865f2734421bb8e9b7122d73f7a,
+        pmde:6aef4ef6a3c24f4c93a35cd39c946caa,
+        pmde:7b284d03de984c62b43cc501420ceef0,
+        pmde:853589b8f1674ebc9aefa13cdef8c5db,
+        pmde:8863d5e6a6034d19a15b29c8b68d1d7c,
+        pmde:8fdabbe4ea67486bb5c3b5dbd1e4e3bd,
+        pmde:a269c718cf6d45cba64029976962d30c,
+        pmde:c98b2c38d7a84edf84e9aadc8f0325da,
+        pmde:dbaf69166adb4d7cbdbfd59d54239b9e,
+        pmde:e8caea80a34542cea43ebbbb7c9c344a,
+        pmde:eb177f5af431413aa4ae57b2bc6b478b,
+        pmde:ed48c7405fd84431843a4196999110f9,
+        pmde:ee2ace738b3d4375aa64cbdf2eb5d638,
+        pmde:efa94f7381cd453596d2504d6db8f444,
+        pmde:f2ee2790090f4063b203fded5f13fcad,
+        pmde:f4bd26d8d4de488c8fc8923d062f088d,
+        pmde:fe24b11cc0924ba59d74ec6dbc71a602 .
+
+pmde:3b258b7c27704dfba5a162ac619c457c a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "3b258b Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+02 .
+
+pmde:3b3b4893b015427b817438170dd628a7 a pmdco:ProvidedIdentifier ;
+    rdfs:label "3b3b48 Provided Identifier" ;
+    pmdco:value "Durchwärmen bei 680°" .
+
+pmde:3b4d31690a1b4fc49151380421f4a40a a ipsen:GasCooling ;
+    rdfs:label "3b4d31 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:3bc9e26a6f6249ab84cb43863ec16a68 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "3bc9e2 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:3c0a9b1af3674fe8b95f9869105e2bf8 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "3c0a9b Overheat" ;
+    pmdco:value 1200 .
+
+pmde:3e34849a37b54e3e97a2685c39eaeef8 a ipsen:VacuumCooling ;
+    rdfs:label "3e3484 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:3e3b862e484b4f8faae83be3d3c3e6f5 a ipsen:GasIngressFront ;
+    rdfs:label "3e3b86 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:3e540e52b49d40dfa093da3d85c593f8 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "3e540e Heat Treatment Process" ;
+    pmdco:characteristic pmde:05e1bf05588d417a8df11fe0e353fd09,
+        pmde:05f062a61e964630b8ae22dc440119ca,
+        pmde:06ad520a665244a59ae3a45dc868cc74,
+        pmde:076c0279323f414aa4ffe09023174614,
+        pmde:340f57d55e4a4771ab5b3eea1665de90,
+        pmde:36ed7632038d4d6196ab6956f09a06ee,
+        pmde:3e7df5da91024478a2521cda6b753ce4,
+        pmde:4478a066c6624c5aacb86a7487247466,
+        pmde:4b61a260da3a4a138bafd0fe3032280e,
+        pmde:58cde479038d43c9b7a6f7490fc97ae3,
+        pmde:64f681060d6a431ca38e2b3be1e5196f,
+        pmde:7b2ccaff72b94f1ab8fb52845da8947f,
+        pmde:89c03ce2802e47fab4274e6df28eda64,
+        pmde:8c5adc5179fb4036a53331ad5e4f9749,
+        pmde:924942c3529e4d2498fb0614e1712c55,
+        pmde:93bf2c8509af48b78a332589de8d3163,
+        pmde:967a18e665f84b93afa520a35beea54a,
+        pmde:9d0ac0494859421c9aef3c8c7fc33c93,
+        pmde:b15375bf0d26436397d9b85af9a3f044,
+        pmde:b69ce1a05f4e463c8262a42006d52fea,
+        pmde:c411f8cad57c489c8bad58fe074cd97c,
+        pmde:d08e99d603d74d89a60dad0b34627186,
+        pmde:d7527538fba1457f8c944fa2379bbc11,
+        pmde:f713b3a3940f4193bb54ac97a813fe84 .
+
+pmde:3e7df5da91024478a2521cda6b753ce4 a ipsen:GasCooling ;
+    rdfs:label "3e7df5 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:3fde97329c2949b695f9d24d9cb2e04a a pmdco:StartTime ;
+    rdfs:label "3fde97 Start Time" ;
+    pmdco:value 1.610985e+09 .
+
+pmde:403465d6d69743d7ac3542deda4f3e1f a hto:SequenceNumber ;
+    rdfs:label "403465 Sequence Number" ;
+    pmdco:value 5 .
+
+pmde:40e9976a6d23487891430eb2a6facc85 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "40e997 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 9e+02 .
+
+pmde:4121356302cc4d538b50a73cd470a11c a hto:SequenceNumber ;
+    rdfs:label "412135 Sequence Number" ;
+    pmdco:value 21 .
+
+pmde:4177d58d3a1f4da0b361fd1e65404ec2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "4177d5 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:41952fc0bd5945b2af7d14ddd4bb7ad0 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "41952f Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:41978f75b2a84d5f8a3748adce21cec2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "41978f Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:41a6480023e249f4948b68c3bb434e5c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "41a648 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:41ace90d21894f1599e4d0a5eb968ba9 a pmdco:NodeName ;
+    rdfs:label "41ace9 Node Name" ;
+    pmdco:value "QK" .
+
+pmde:43acf4757d25453f83604900702ff497 a ipsen:VacuumCooling ;
+    rdfs:label "43acf4 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:4437cde4f0994ba28c4d1ac8835bfd4b a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "4437cd Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:4478a066c6624c5aacb86a7487247466 a pmdco:ProcessDuration,
+        pmdco:SetPoint ;
+    rdfs:label "4478a0 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:447be224fb424278b8a7ce6a7651e7b7 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "447be2 Temperature" ;
+    pmdco:value 20 .
+
+pmde:451d1d9829c7453c843624215e0a7e5d a pmdco:StartTime ;
+    rdfs:label "451d1d Start Time" ;
+    pmdco:value 1.610988e+09 .
+
+pmde:46a1f9c39d154d36bbb2c17f6723553b a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "46a1f9 Oil Temperature" ;
+    pmdco:value 60 .
+
+pmde:46bb91450d8f40a6a1dd5d2ec14cfbe6 a pmdco:ProcessDescription ;
+    rdfs:label "46bb91 Process Description" ;
+    pmdco:value "UA1100/940°C5AS / ÖL" .
+
+pmde:46f0598430914b4fb268b204edf39f6b a pmdco:HeatTreatmentProcess ;
+    rdfs:label "46f059 Heat Treatment Process" ;
+    pmdco:characteristic pmde:050fdd92221c42b48a3fd1eee9976f86,
+        pmde:22c5d9cc1f06413cb653ecfe55188057,
+        pmde:279d40dd14b849aba54e2c313866347b,
+        pmde:2b5e514ca3ea4095873a649fe98c57b9,
+        pmde:6b19a82b8b0d4ca591a93bbf9b139c22,
+        pmde:725036e41b214db587c011bb0d3d1398,
+        pmde:77d96dfa82744c73b9f994a2c7827b6a,
+        pmde:7df695c002be45b7a558f1b67350b873,
+        pmde:89edcc6ec33d4a21a278580a9e01e5ad,
+        pmde:8fe90328e3944e6eb09220f50c076dff,
+        pmde:9a38cb2180934c1c9e14e98a74ef5b7b,
+        pmde:9b94400090604b488464dde98f96047e,
+        pmde:a4a97e9b54984d9ea837674fda41b083,
+        pmde:a72f7c815a4d47a987b866af167ca219,
+        pmde:abc442cae46f48d1b7ab1ff2a0fe00f1,
+        pmde:b5b6d939df69441b838ada5e63678e36,
+        pmde:baccbe4255e24b6ea864e8a2f5c8d0d6,
+        pmde:bbe6feb32a4a49eea3efcfe99bf226e8,
+        pmde:d11d585bcc4a43d8b3a7b2870227d6e1,
+        pmde:e40c43f9cd524b7f9739fb8a9163da38,
+        pmde:eb1575f4990f45af917fc3e4266aae9c,
+        pmde:ec3abe8b44384bdea98993435e63a099,
+        pmde:fc048f960783419c9e1f264c8818de03 .
+
+pmde:47508eebc934452f836c29786cf8f291 a pmdco:StartTime ;
+    rdfs:label "47508e Start Time" ;
+    pmdco:value 1.610969e+09 .
+
+pmde:4786c0f635714fdcaf47a7bf364e21df a ipsen:OilFlowUp ;
+    rdfs:label "4786c0 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:47b4d70940614d169bffbdf5c3a8da6c a ipsen:GasIngressBack ;
+    rdfs:label "47b4d7 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:4a476476eeb449ba80c67654bfd75b2a a ipsen:OilFlow ;
+    rdfs:label "4a4764 Oil Flow" ;
+    pmdco:value false .
+
+pmde:4a980325049e466c80dd29261c157919 a ipsen:OilFlowUp ;
+    rdfs:label "4a9803 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:4b61a260da3a4a138bafd0fe3032280e a hto:SequenceNumber ;
+    rdfs:label "4b61a2 Sequence Number" ;
+    pmdco:value 14 .
+
+pmde:4c296459ac3542a6b8ef9be1aaa22558 a ipsen:OilFlowFast ;
+    rdfs:label "4c2964 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:4cde5bbc75784951aa6c4b670005eb89 a pmdco:SetPoint,
+        hto:TargetTemperature ;
+    rdfs:label "4cde5b Target Temperature" ;
+    pmdco:value 675 .
+
+pmde:4cfbf6facbe34f5d94bbed89a25c76c4 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "4cfbf6 Heat Treatment Process" ;
+    pmdco:characteristic pmde:044b6c9367ea452282dbbd77a5034287,
+        pmde:163c7d3745b1438e93d9008742627646,
+        pmde:1672c72f637d40a4a0dabd5823826ba6,
+        pmde:2002347dc18b48758449c63577ae3f78,
+        pmde:23d59c86444344e7ab280804469de10a,
+        pmde:2eb1a3c683624e168597454fd67b4422,
+        pmde:367d0eadf33547f483af5ba0a59d5909,
+        pmde:3b3b4893b015427b817438170dd628a7,
+        pmde:58e8aad8389141278f44fac2181105d1,
+        pmde:6006f3d5e11245d3aa25ee1971f501f0,
+        pmde:7f6ae1f6e60a4cd4abe362541f2fdc8e,
+        pmde:a8cc25b6f2c843c39d46e63f2304d184,
+        pmde:b415621ac6294d62827bb17fc30247c1,
+        pmde:b5e47a5c13e247fdb055c5da544064dc,
+        pmde:b97c54ec98dc4626b6c5e9eede45c4dd,
+        pmde:c7980503a8ce4688a3d6e312d8357e5d,
+        pmde:d07a3e2aa5ed4ec685101b19d3bdff71,
+        pmde:d146e575952544c19bd40ea6905572e3,
+        pmde:d363833c1c934dc49bc23a86ee18dbc1,
+        pmde:da20ba45a24d4578a3c4a8bebff48bda,
+        pmde:dcea2bc0408d41768376131d0d4fad50,
+        pmde:e244daf802a948ab9c9c4b75948fa8f8,
+        pmde:e7e224b1d3de4c3ebbff200bdbdf14a6 .
+
+pmde:4db3455e1e8d4fc88d7e618eee439883 a pmdco:ProvidedIdentifier ;
+    rdfs:label "4db345 Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:4e295494439d4eb683bf2f128e60e15f a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "4e2954 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:4e2cdb253296467492cd9681e9722195 a pmdco:StartTime ;
+    rdfs:label "4e2cdb Start Time" ;
+    pmdco:value 1.61098e+09 .
+
+pmde:4ee9553694104252b3de3a7242128611 a pmdco:SetPoint,
+        pmdco:StartTime ;
+    rdfs:label "4ee955 Start Time" ;
+    pmdco:value 1.610947e+09 .
+
+pmde:504b745e2c014f438bae5beec9a8c284 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "504b74 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:516d3c4e63034f24914757cdda27ece8 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "516d3c Temperature" ;
+    pmdco:value 940 .
+
+pmde:519629e7761a45d38045b74020460731 a pmdco:StartTime ;
+    rdfs:label "519629 Start Time" ;
+    pmdco:value 1.610983e+09 .
+
+pmde:51a2f91024db495b9806da10e990450f a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "51a2f9 Temperature" ;
+    pmdco:value 940 .
+
+pmde:51cba3bd0cf8407bb829e7c59ec327ca a pmdco:EndTime ;
+    rdfs:label "51cba3 End Time" ;
+    pmdco:value 1.610995e+09 .
+
+pmde:520d9c27515a46b6b8ddcbde7883477c a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "520d9c Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:5253d2e1149e4a459dd8925707e1cd77 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "5253d2 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:551683fa55e244aaa5111e6381bcc33d a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "551683 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:57190cfde1364bad9d5d125160d97379 a ipsen:OilFlow ;
+    rdfs:label "57190c Oil Flow" ;
+    pmdco:value true .
+
+pmde:572463ae4590441c82579136552a44b2 a pmdco:EndTime,
+        pmdco:SetPoint ;
+    rdfs:label "572463 End Time" ;
+    pmdco:value 1.610995e+09 .
+
+pmde:58cde479038d43c9b7a6f7490fc97ae3 a ipsen:GasIngressFront ;
+    rdfs:label "58cde4 Gas Ingress Front" ;
+    pmdco:value true .
+
+pmde:58e8aad8389141278f44fac2181105d1 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "58e8aa Temperature" ;
+    pmdco:value 680 .
+
+pmde:592cd7d02f814409a711bfbcf92764aa a pmdco:EndTime ;
+    rdfs:label "592cd7 End Time" ;
+    pmdco:value 1.610993e+09 .
+
+pmde:5a9586b1994045b5add143d8a30ff95c a hto:SequenceNumber ;
+    rdfs:label "5a9586 Sequence Number" ;
+    pmdco:value 4 .
+
+pmde:5ab2bea279584a23ac0c030e6e3f6af2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "5ab2be Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:5b846faa6e264757961f9c0add36e858 a pmdco:StartTime ;
+    rdfs:label "5b846f Start Time" ;
+    pmdco:value 1.610988e+09 .
+
+pmde:5ceb59ed94ab4978bc57c76b297021ad a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "5ceb59 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+03 .
+
+pmde:5d6b5e4ceb4d45d98cc6bc138d9465ad a pmdco:HeatTreatmentProcess ;
+    rdfs:label "5d6b5e Heat Treatment Process" ;
+    pmdco:characteristic pmde:1ab44c992ffa4b92868fc28ddb08a5a4,
+        pmde:23ae555482b14ab88f3875284941ab20,
+        pmde:2b811b7b39404e28b4f010f60bc6aa55,
+        pmde:47b4d70940614d169bffbdf5c3a8da6c,
+        pmde:5b846faa6e264757961f9c0add36e858,
+        pmde:6a3f550d9e2a405ca9c2be84b3690f79,
+        pmde:6d6c4e1c5a7b4b1ca7f5de94f6b4bfa5,
+        pmde:6f01e61f03094ccd943d3e7f799efc4a,
+        pmde:792d06454a634af9a5e7dfa24c93fabb,
+        pmde:79440a68597049e7a0b3711b501a2ce2,
+        pmde:79c432aa3a4f49c5a4bc4bd3921be7b8,
+        pmde:7ebdd9806ba444d0a08b7e265e9b98b5,
+        pmde:824073547139497ab5a0aa8d53eafc8c,
+        pmde:83500caf06de444aacc92b6a764c16f4,
+        pmde:84dd02b5948040578bafe78d7c756027,
+        pmde:91b0d321e2634761bf36bf2f4431f68e,
+        pmde:929f9f79cba942739953227285ef40b1,
+        pmde:ad2cb654996d4c97bdc5a3b670b3025d,
+        pmde:ae30307a70124e429d163f8f037e2caa,
+        pmde:c0fbb8cfbcf647a8a3589b7972c856b8,
+        pmde:c72d624a37d74bad8e9ce2b7d9b28a0c,
+        pmde:d05cdc6bac6843e0ba74046cb77f1605,
+        pmde:e466b359f511423297560e1d88c943c5 .
+
+pmde:5eba1c7a61ce442d9e21e547a2b70f1a a pmdco:HeatTreatmentProcess ;
+    rdfs:label "5eba1c Heat Treatment Process" ;
+    pmdco:characteristic pmde:0359484cd65d4a4a87dd81c32e85e6da,
+        pmde:04437518e7f2456baea884596be89e52,
+        pmde:066f9b99141948c4a98c5d5c4a21fe84,
+        pmde:18a31c7b0f9046d39b83dfa79e233205,
+        pmde:258e9b26c42a42098bca490408ed2d84,
+        pmde:4e2cdb253296467492cd9681e9722195,
+        pmde:57190cfde1364bad9d5d125160d97379,
+        pmde:5ab2bea279584a23ac0c030e6e3f6af2,
+        pmde:6aad9e8c821745a8b4a3ac778320727d,
+        pmde:6b56fc7b175b4c2594121ee7c24539c1,
+        pmde:7ea838c0b7f34a27ad4a1ea0e80d4259,
+        pmde:9a6076dc432e4e5dba2e141c6c02b7fc,
+        pmde:b766b524e6f04b689b72a93e89e2b54a,
+        pmde:c003b3a03b144d329886c8d919d7ad15,
+        pmde:c1867cfc63a44176bfc3ece4cea9bf77,
+        pmde:d0170855d36e4c76912db6b698ae2db3,
+        pmde:d6157c72621d47a882c0cdb12bb51dba,
+        pmde:e0b4b0762f2e46db87fe9fda947655b0,
+        pmde:eb5fcbf7e0dd4acc90540be85ed689f4,
+        pmde:edd136414d934509ac22a6e7045adb9a,
+        pmde:f05969c0d1244e53a79c002550ff2337,
+        pmde:f9a3f708cb75437e9e7f3f293de5007d,
+        pmde:fd803a6855214555ba1f3ad47e59c130 .
+
+pmde:5f1c11ae96bd4557800ce4923197770c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "5f1c11 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:5f4c3ecade0a4ede9437f894babe575f a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "5f4c3e Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:5f75bac090f74947bcbbbb9f4e5529da a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "5f75ba Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 4e+02 .
+
+pmde:5ff39f09bb284cd0b9412416ae4adc14 a ipsen:GasCooling ;
+    rdfs:label "5ff39f Gas Cooling" ;
+    pmdco:value false .
+
+pmde:6006f3d5e11245d3aa25ee1971f501f0 a ipsen:OilFlowUp ;
+    rdfs:label "6006f3 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:60e04e0b7a364a9eb33c4b9e50e2b2e3 a pmdco:EndTime ;
+    rdfs:label "60e04e End Time" ;
+    pmdco:value 1.610978e+09 .
+
+pmde:61c90db9ec464f8695a2f4a6c1b18c54 a pmdco:StartTime ;
+    rdfs:label "61c90d Start Time" ;
+    pmdco:value 1.610981e+09 .
+
+pmde:6361e6aae71f46bd928de2419bc7d9b0 a pmdco:StartTime ;
+    rdfs:label "6361e6 Start Time" ;
+    pmdco:value 1.610947e+09 .
+
+pmde:636987594dee42d18f86e7f14b95e4b8 a hto:SequenceNumber ;
+    rdfs:label "636987 Sequence Number" ;
+    pmdco:value 2 .
+
+pmde:641d019a5a5b45faa4fd4f8fd735dc51 a ipsen:GasIngressBack ;
+    rdfs:label "641d01 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:64c99dc02ac64d649f856763703d3e22 a ipsen:OilFlow ;
+    rdfs:label "64c99d Oil Flow" ;
+    pmdco:value true .
+
+pmde:64f681060d6a431ca38e2b3be1e5196f a ipsen:VacuumCooling ;
+    rdfs:label "64f681 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:6508c5bf9bf243b79738f3fedbf261d0 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "6508c5 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:6540f1c48e8b4cf4bf4b657048a40381 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "6540f1 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:656bfbdabdd64e1aa9a4ca52f7188e38 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "656bfb Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+02 .
+
+pmde:662d36a85ee84fdea6a512d6a96b1e08 a ipsen:GasCooling ;
+    rdfs:label "662d36 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:663b0e9925c44ae482a4ddfd354d3035 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "663b0e Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:6671e2e148424854bd1dba079bd1b641 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "6671e2 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:66b8b9c546fc46db88eead32111b8825 a ipsen:OilFlowUp ;
+    rdfs:label "66b8b9 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:671ab742cc4e49cd94fefd68cf83618c a ipsen:VacuumCooling ;
+    rdfs:label "671ab7 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:67e143b65aed465e95c7c458c04f57b3 a pmdco:SetPoint,
+        hto:TargetTemperature ;
+    rdfs:label "67e143 Target Temperature" ;
+    pmdco:value 845 .
+
+pmde:68fb20405666480b86a980aeff358ffa a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "68fb20 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:6915b729e9a04abba1ac73e526548491 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "6915b7 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:692cb6afb1b6487aa56a5acccb9774fc a pmdco:StartTime ;
+    rdfs:label "692cb6 Start Time" ;
+    pmdco:value 1.610953e+09 .
+
+pmde:695e6608f08445f7ad37fc89866823a8 a ipsen:GasIngressBack ;
+    rdfs:label "695e66 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:69da0865f2734421bb8e9b7122d73f7a a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "69da08 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:6a3f550d9e2a405ca9c2be84b3690f79 a ipsen:GasIngressFront ;
+    rdfs:label "6a3f55 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:6a8318b1d393400784c266466adb0fe2 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "6a8318 Temperature" ;
+    pmdco:value 940 .
+
+pmde:6aad9e8c821745a8b4a3ac778320727d a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "6aad9e Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:6aca1cd6961e495cb928d7bff5e96a5e a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "6aca1c Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:6aef4ef6a3c24f4c93a35cd39c946caa a pmdco:EndTime ;
+    rdfs:label "6aef4e End Time" ;
+    pmdco:value 1.610981e+09 .
+
+pmde:6b19a82b8b0d4ca591a93bbf9b139c22 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "6b19a8 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:6b56fc7b175b4c2594121ee7c24539c1 a ipsen:VacuumCooling ;
+    rdfs:label "6b56fc Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:6ba428974fa04a719a02ea2e52309c17 a ipsen:OilFlow ;
+    rdfs:label "6ba428 Oil Flow" ;
+    pmdco:value true .
+
+pmde:6be58a76e3404c81a749e322674b052d a ipsen:VacuumCooling ;
+    rdfs:label "6be58a Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:6d0879fb7cf049d1aef524cdeebd6f7e a pmdco:ProvidedIdentifier ;
+    rdfs:label "6d0879 Provided Identifier" ;
+    pmdco:value "Heizen auf 680°C mit" .
+
+pmde:6d580f25e3c74d5f815f7e29ccd57309 a ipsen:OilFlow ;
+    rdfs:label "6d580f Oil Flow" ;
+    pmdco:value true .
+
+pmde:6d6c4e1c5a7b4b1ca7f5de94f6b4bfa5 a ipsen:VacuumCooling ;
+    rdfs:label "6d6c4e Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:6e2f2a101e874dea85d7a4688ab39d3c a pmdco:NodeName ;
+    rdfs:label "6e2f2a Node Name" ;
+    pmdco:value "HK" .
+
+pmde:6ea0df0fd34e4e1f8fecde0b3008a037 a pmdco:NodeName ;
+    rdfs:label "6ea0df Node Name" ;
+    pmdco:value "HK" .
+
+pmde:6f01e61f03094ccd943d3e7f799efc4a a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "6f01e6 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:6f0ec49cff7b41e9afd8c3db0afce26e a hto:SequenceNumber ;
+    rdfs:label "6f0ec4 Sequence Number" ;
+    pmdco:value 23 .
+
+pmde:6f328782613d4dc19e5cb833cc5778da a pmdco:HeatTreatmentProcess ;
+    rdfs:label "6f3287 Heat Treatment Process" ;
+    pmdco:characteristic pmde:12b60734def94c368c0b7e08580d31df,
+        pmde:1381284abbaa4dbeb05abfa9c0d4b025,
+        pmde:1ae20bd57e5546e0a838f6c03fc83bcc,
+        pmde:4121356302cc4d538b50a73cd470a11c,
+        pmde:4db3455e1e8d4fc88d7e618eee439883,
+        pmde:4e295494439d4eb683bf2f128e60e15f,
+        pmde:5f1c11ae96bd4557800ce4923197770c,
+        pmde:671ab742cc4e49cd94fefd68cf83618c,
+        pmde:7a308bd243014ed4a30424aac79dd37b,
+        pmde:7ace60b86ceb4760aad521032659c4db,
+        pmde:af56d5603b3a46b5ae3b77f7a3150dc5,
+        pmde:b1427d503ef74607b58fda431f82ab0e,
+        pmde:c17b978c82694313a3775ac4746abf66,
+        pmde:c69c81eb49c64b6782fb93399bb5a08e,
+        pmde:cea831cc64db454881c1736df98c07fb,
+        pmde:d89efb29c9f24a72972febff4a3635a3,
+        pmde:e0908f6eae604d6ca3232dd60ec3a8f8,
+        pmde:e84d1c8063a745d8bbf6abb64c1ff8c3,
+        pmde:ecbec379e80f4453bcae8e4dfbb30cb3,
+        pmde:f28e84acddec4c2ab01f56bda9d765d3,
+        pmde:f8a95282b9794c83a2a5bc8e00efa495,
+        pmde:f925cb3666cf4d7dabc5bede700a2e83,
+        pmde:ff321bc1284e4007be4baade0226fd9c .
+
+pmde:70893855d1e24e7e8937a87707d93e30 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "708938 Heat Treatment Process" ;
+    pmdco:characteristic pmde:00c8db7c344b401dbe3b19d0117496b0,
+        pmde:02751823b3b04ee792cf80c6e2798094,
+        pmde:1d108ff26c76431f93025c6ed43e4d77,
+        pmde:265a28360fc7490eb28a917651b640bb,
+        pmde:2933c2e492324d85b8ebf2a53d4f3802,
+        pmde:3b4d31690a1b4fc49151380421f4a40a,
+        pmde:41978f75b2a84d5f8a3748adce21cec2,
+        pmde:4a476476eeb449ba80c67654bfd75b2a,
+        pmde:66b8b9c546fc46db88eead32111b8825,
+        pmde:75a615954fcc4275a7d0082dcd32f7cc,
+        pmde:763f45ddc7cf4b55acf5ba993d1859d1,
+        pmde:7707463361ea48ea8c35cb5c0f1bf7a5,
+        pmde:7a4fc178b3f743309549534df4e90572,
+        pmde:7d26ba4dea9e47ecbf89949039f51c49,
+        pmde:9cf39e9ff6e1483ea15653c469d3ffe1,
+        pmde:abd62b2ed22246b7aac94ad17e8205d2,
+        pmde:ad48ce2dba3841c7a528f68b0a484e37,
+        pmde:b7d9f73c6fa94f629152230e691229d6,
+        pmde:c523a49f2f9e43e4a2ae652f6574c111,
+        pmde:c702dad1941e4f88949374af1a8099b8,
+        pmde:d8b305c1c56b40a991146eb06e070d28,
+        pmde:e20ca33acf5c4d02a90841d7644f91be,
+        pmde:e226a443fd3c47a5b02acdc7cb684e08,
+        pmde:e399d951c5cb4134979df9f2b99188d1 .
+
+pmde:708b72a0c3ee4ebea6198d4e4692b8a6 a ipsen:OilFlowUp ;
+    rdfs:label "708b72 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:70a7a5cb0ba2462fa2d7f80273f3a57c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "70a7a5 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:70ea83bc8e684cce9cbc4b3b364dcb0d a ipsen:FanFast ;
+    rdfs:label "70ea83 Fan Fast" ;
+    pmdco:value false .
+
+pmde:71648649668b43af897ebdde35dbbd78 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "716486 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:719477dfde20475ab2ea26082dc645c9 a ipsen:VacuumCooling ;
+    rdfs:label "719477 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:719b65683758467194710a8ef478e1f4 a ipsen:OilFlowUp ;
+    rdfs:label "719b65 Oil Flow Up" ;
+    pmdco:value true .
+
+pmde:71b234bdf00047958402d63a33d32812 a pmdco:StartTime ;
+    rdfs:label "71b234 Start Time" ;
+    pmdco:value 1.610975e+09 .
+
+pmde:71ba53b0453a47688965abc7349f135f a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "71ba53 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:725036e41b214db587c011bb0d3d1398 a ipsen:OilFlowUp ;
+    rdfs:label "725036 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:73973cd21a6e43ed92c6d5d5fa50fc33 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "73973c Overheat" ;
+    pmdco:value 1200 .
+
+pmde:73e1a7fb14044551aa56ff4ad4ed7405 a ipsen:OilFlowFast ;
+    rdfs:label "73e1a7 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:73f9cb38f0f840b2bf25a878cd828ebe a ipsen:GasCooling ;
+    rdfs:label "73f9cb Gas Cooling" ;
+    pmdco:value false .
+
+pmde:741cf5fb6bdb4e5789741cca55a7a5dc a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "741cf5 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:757cc6e7b1274157a85e9c3f63d8e947 a pmdco:SetPoint,
+        hto:TemperatureDifference ;
+    rdfs:label "757cc6 Temperature Difference" ;
+    pmdco:unit unit:DEG_C-PER-MIN ;
+    pmdco:value 3 .
+
+pmde:75a615954fcc4275a7d0082dcd32f7cc a ipsen:VacuumCooling ;
+    rdfs:label "75a615 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:763f45ddc7cf4b55acf5ba993d1859d1 a pmdco:StartTime ;
+    rdfs:label "763f45 Start Time" ;
+    pmdco:value 1.610985e+09 .
+
+pmde:7707463361ea48ea8c35cb5c0f1bf7a5 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "770746 Temperature" ;
+    pmdco:value 940 .
+
+pmde:777f660fdfbc433487f8da0e86cebb9b a ipsen:GasCooling ;
+    rdfs:label "777f66 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:77d96dfa82744c73b9f994a2c7827b6a a pmdco:StartTime ;
+    rdfs:label "77d96d Start Time" ;
+    pmdco:value 1.610972e+09 .
+
+pmde:77f74812e547480f9fc0676683e53eee a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "77f748 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:78199a3a8aa240cb9d656d5ff568931c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "78199a Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:784d1ff7993947a49f1f328c70f62171 a hto:SequenceNumber ;
+    rdfs:label "784d1f Sequence Number" ;
+    pmdco:value 15 .
+
+pmde:785301ce9b3846dca887386e91a22db9 a pmdco:SetPoint,
+        hto:TargetTemperature ;
+    rdfs:label "785301 Target Temperature" ;
+    pmdco:value 945 .
+
+pmde:78b8ee31dd1c4f1aa7424d27618473c6 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "78b8ee Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 500 .
+
+pmde:792d06454a634af9a5e7dfa24c93fabb a ipsen:GasCooling ;
+    rdfs:label "792d06 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:79440a68597049e7a0b3711b501a2ce2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "79440a Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:79bbb302e2ee4c2cbbebde147bea5ef1 a hto:SequenceNumber ;
+    rdfs:label "79bbb3 Sequence Number" ;
+    pmdco:value 9 .
+
+pmde:79c432aa3a4f49c5a4bc4bd3921be7b8 a pmdco:ProvidedIdentifier ;
+    rdfs:label "79c432 Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:7a29248cd33f49b28fb8183974a635c2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "7a2924 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:7a308bd243014ed4a30424aac79dd37b a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "7a308b Temperature" ;
+    pmdco:value 840 .
+
+pmde:7a4fc178b3f743309549534df4e90572 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "7a4fc1 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:7ab539001edc4396b20dd3550133deb7 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "7ab539 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:7ace60b86ceb4760aad521032659c4db a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "7ace60 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:7ae2f6cf6f9d4702ac441c6914001cd0 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "7ae2f6 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 4e+02 .
+
+pmde:7af2b4b21c664977b5e4c99ccd41619b a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "7af2b4 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 2.1e+03 .
+
+pmde:7b284d03de984c62b43cc501420ceef0 a pmdco:StartTime ;
+    rdfs:label "7b284d Start Time" ;
+    pmdco:value 1.610981e+09 .
+
+pmde:7b2ccaff72b94f1ab8fb52845da8947f a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "7b2cca Overheat" ;
+    pmdco:value 1200 .
+
+pmde:7b387a6f8d38483db76af02f2c29fd42 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "7b387a Overheat" ;
+    pmdco:value 1200 .
+
+pmde:7c2e06f0058a4a2da177f164f4e22c28 a ipsen:OilFlowFast ;
+    rdfs:label "7c2e06 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:7c6131a878ae4babad09989fc955bcd2 a pmdco:ProvidedIdentifier ;
+    rdfs:label "7c6131 Provided Identifier" ;
+    pmdco:value "Durchwärmen bei 940°" .
+
+pmde:7d26ba4dea9e47ecbf89949039f51c49 a hto:SequenceNumber ;
+    rdfs:label "7d26ba Sequence Number" ;
+    pmdco:value 16 .
+
+pmde:7d72a107966d46e2a1269dcde5747ae2 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "7d72a1 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:7d7f4486e1664ac99d5d5f0de0cf51ae a ipsen:OilFlowFast ;
+    rdfs:label "7d7f44 Oil Flow Fast" ;
+    pmdco:value true .
+
+pmde:7df695c002be45b7a558f1b67350b873 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "7df695 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:7e390f2e3aba4253815d386a83830bc5 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "7e390f Oil Temperature" ;
+    pmdco:value 60 .
+
+pmde:7e70532c4b984e7fab618946d0467483 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "7e7053 Temperature" ;
+    pmdco:value 940 .
+
+pmde:7ea838c0b7f34a27ad4a1ea0e80d4259 a ipsen:GasIngressFront ;
+    rdfs:label "7ea838 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:7ebdd9806ba444d0a08b7e265e9b98b5 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "7ebdd9 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:7f4fa3e1c615497caf7ca1c51e99ac79 a pmdco:SetPoint,
+        hto:TemperatureDifference ;
+    rdfs:label "7f4fa3 Temperature Difference" ;
+    pmdco:unit unit:DEG_C-PER-MIN ;
+    pmdco:value 10 .
+
+pmde:7f6ae1f6e60a4cd4abe362541f2fdc8e a ipsen:OilFlowFast ;
+    rdfs:label "7f6ae1 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:800cc673e78b4c7684fb6afbe1ab20be a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "800cc6 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:80d4a7308f9d4f069aa4ea32b152a00f a ipsen:GasIngressBack ;
+    rdfs:label "80d4a7 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:812dc25a153049cd8a6c7b9f3c91a1e3 a ipsen:OilFlowFast ;
+    rdfs:label "812dc2 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:81d49ca53d1c4635a26cc5329ba635fe a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "81d49c Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:8200d5ba7cea4872becc5b29bddd49b8 a hto:SequenceNumber ;
+    rdfs:label "8200d5 Sequence Number" ;
+    pmdco:value 17 .
+
+pmde:82218c7ae75d4d9ebd8457b763e34972 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "82218c Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:824073547139497ab5a0aa8d53eafc8c a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "824073 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 3e+03 .
+
+pmde:824715cf8e7640a69c713b949fdf13bd a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "824715 Temperature" ;
+    pmdco:value 940 .
+
+pmde:826e833eea0d4408a2d524dc228ea09b a hto:SequenceNumber ;
+    rdfs:label "826e83 Sequence Number" ;
+    pmdco:value 20 .
+
+pmde:830777797040483ba0823fd5f90a1488 a ipsen:GasCooling ;
+    rdfs:label "830777 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:83500caf06de444aacc92b6a764c16f4 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "83500c Overheat" ;
+    pmdco:value 1200 .
+
+pmde:835eaf5831d04880b314e8e640b4ed64 a pmdco:SetPoint,
+        hto:QuenchingLeadtime ;
+    rdfs:label "835eaf Quenching Leadtime" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:83ae6d0a26d3417982e1812acf25bcf2 a pmdco:StartTime ;
+    rdfs:label "83ae6d Start Time" ;
+    pmdco:value 1.61098e+09 .
+
+pmde:83b4c6c12662460e8a5ed2768349e8bd a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "83b4c6 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:8453f94711a24724926c727d95fa385d a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "8453f9 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:84dd02b5948040578bafe78d7c756027 a ipsen:OilFlowFast ;
+    rdfs:label "84dd02 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:853589b8f1674ebc9aefa13cdef8c5db a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "853589 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:858b87019d7c42a48153bbe2991ef9c0 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "858b87 Heat Treatment Process" ;
+    pmdco:characteristic pmde:05cab4958f7f4760a1d60b7598f7f7e1,
+        pmde:0730c29a4c7f4290832d186631fe17b9,
+        pmde:2069d3dc1b5e4d9da761c8034e026ad2,
+        pmde:2251a52ffbab41eba70e73f3f9e1379d,
+        pmde:299b270d58914ae98c024357966151cb,
+        pmde:6508c5bf9bf243b79738f3fedbf261d0,
+        pmde:6915b729e9a04abba1ac73e526548491,
+        pmde:81d49ca53d1c4635a26cc5329ba635fe,
+        pmde:8b21c05ffbd940f785fb71140ce3daf8,
+        pmde:90dd53b216f04c328b7db163237c8dcf,
+        pmde:969318c78651412281bd8abe8346a670,
+        pmde:9f9ccb883a23414eb136b5926954f636,
+        pmde:a048cbb7886a4076986fd97d37a0356d,
+        pmde:a80e521336a349d88d5d13799cc7fc38,
+        pmde:aa8af231d3954089be580d2e2e661171,
+        pmde:c2c34ab7fbd749d7a895905419c284d6,
+        pmde:c51d0fb8cb7a4a089aa7a82618df6421,
+        pmde:c62d53ba7dfc4abeaf1fc67d1f430398,
+        pmde:c684cd39892946d28945b0343f6f3c6e,
+        pmde:c7e24aae2a0b418eaa198854f76610d3,
+        pmde:d2bea561e7334574858deb011bf2172e,
+        pmde:d61f760546164bb9a118308f04d46e86,
+        pmde:d8989654d6854266956dc5a1b41326a1 .
+
+pmde:867d78e45c9544afa0112deb2a20aef7 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "867d78 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:86c20ba05ed84721bd85b174c81dbf42 a ipsen:OilFlowUp ;
+    rdfs:label "86c20b Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:86d848b30ded426cbb4684f1291085cc a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "86d848 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:87d04b0c573042748f530f2b1993f5dd a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "87d04b Overheat" ;
+    pmdco:value 1200 .
+
+pmde:881c5f6cc2c546e0a3c2181f0ec1a049 a pmdco:ProvidedIdentifier ;
+    rdfs:label "881c5f Provided Identifier" ;
+    pmdco:value "Durchwärmen bei 900°" .
+
+pmde:882708664d3c426c8a5be374ec5863de a ipsen:GasIngressFront ;
+    rdfs:label "882708 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:8863d5e6a6034d19a15b29c8b68d1d7c a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "8863d5 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:89c03ce2802e47fab4274e6df28eda64 a pmdco:ProvidedIdentifier ;
+    rdfs:label "89c03c Provided Identifier" ;
+    pmdco:value "Aufkohlen 2min 500l/" .
+
+pmde:89edcc6ec33d4a21a278580a9e01e5ad a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "89edcc Temperature" ;
+    pmdco:value 1100 .
+
+pmde:8a03dbfa3df54dafb4388832858a650c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "8a03db Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:8b21c05ffbd940f785fb71140ce3daf8 a ipsen:OilFlow ;
+    rdfs:label "8b21c0 Oil Flow" ;
+    pmdco:value true .
+
+pmde:8c16f704f883497fa0b70654430d2929 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "8c16f7 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:8c3f8a335ddf40eba923421de3caa95e a pmdco:NodeName ;
+    rdfs:label "8c3f8a Node Name" ;
+    pmdco:value "HK" .
+
+pmde:8c5adc5179fb4036a53331ad5e4f9749 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "8c5adc Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:8c71a550a6e64445b56cffa9930135c2 a ipsen:GasIngressFront ;
+    rdfs:label "8c71a5 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:8c7466d6d62c4a32950e693311d7a1fc a ipsen:GasCooling ;
+    rdfs:label "8c7466 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:8cb88615461742f2b77705be25b17a64 a pmdco:NodeName ;
+    rdfs:label "8cb886 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:8cb88cd44c134a4882f350ee87605620 a hto:SequenceNumber ;
+    rdfs:label "8cb88c Sequence Number" ;
+    pmdco:value 22 .
+
+pmde:8dfb02c79a1c4a33a77708375066ba5b a ipsen:GasCooling ;
+    rdfs:label "8dfb02 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:8e3820117dce4a6bbc18ec82bbb915e8 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "8e3820 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:8e533ed10d8040f6a02ff5502642b1ca a ipsen:VacuumCooling ;
+    rdfs:label "8e533e Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:8e852db4ff08471eb0b155012715dbd3 a ipsen:OilFlowFast ;
+    rdfs:label "8e852d Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:8eb114fa964a43fc9da81a9bfd10e78b a ipsen:OilFlowFast ;
+    rdfs:label "8eb114 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:8f10c69afef44adcbcc1404720887f99 a pmdco:ProvidedIdentifier ;
+    rdfs:label "8f10c6 Provided Identifier" ;
+    pmdco:value "Carbourising" .
+
+pmde:8fdabbe4ea67486bb5c3b5dbd1e4e3bd a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "8fdabb Temperature" ;
+    pmdco:value 940 .
+
+pmde:8fe90328e3944e6eb09220f50c076dff a ipsen:VacuumCooling ;
+    rdfs:label "8fe903 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:9087a3a67eda466d8b3e504248a298ce a ipsen:OilFlow ;
+    rdfs:label "9087a3 Oil Flow" ;
+    pmdco:value true .
+
+pmde:90ad61687ea646279eb70011c01f8c63 a ipsen:GasCooling ;
+    rdfs:label "90ad61 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:90dd53b216f04c328b7db163237c8dcf a pmdco:StartTime ;
+    rdfs:label "90dd53 Start Time" ;
+    pmdco:value 1.610971e+09 .
+
+pmde:91b0d321e2634761bf36bf2f4431f68e a hto:SequenceNumber ;
+    rdfs:label "91b0d3 Sequence Number" ;
+    pmdco:value 19 .
+
+pmde:924942c3529e4d2498fb0614e1712c55 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "924942 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:9297010a5b1e4119bb2097bad0f3b9e5 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "929701 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:929f9f79cba942739953227285ef40b1 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "929f9f Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:934249e8ab55491c8775c26ca13c7404 a ipsen:VacuumCooling ;
+    rdfs:label "934249 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:93b7e3c285284700b2bcb0b5c99cbab7 a pmdco:StartTime ;
+    rdfs:label "93b7e3 Start Time" ;
+    pmdco:value 1.610978e+09 .
+
+pmde:93bf2c8509af48b78a332589de8d3163 a ipsen:GasIngressBack ;
+    rdfs:label "93bf2c Gas Ingress Back" ;
+    pmdco:value true .
+
+pmde:9400da0f143d48fb8e1ce9ead9861938 a pmdco:EndTime ;
+    rdfs:label "9400da End Time" ;
+    pmdco:value 1.610995e+09 .
+
+pmde:94a31126b7684c398b19214d1519febb a ipsen:GasCooling ;
+    rdfs:label "94a311 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:94ca07307c6b47f2b41fd1c8a29c344d a pmdco:Identifier ;
+    rdfs:label "94ca07 Identifier" ;
+    pmdco:value "Charge 3353" .
+
+pmde:9501fcda72f6471e96e1a91a204a51e1 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "9501fc Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:9587f130efd342e1b4a0dff6cba8600c a ipsen:OilFlow ;
+    rdfs:label "9587f1 Oil Flow" ;
+    pmdco:value true .
+
+pmde:967a18e665f84b93afa520a35beea54a a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "967a18 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 4e+02 .
+
+pmde:969318c78651412281bd8abe8346a670 a pmdco:ProvidedIdentifier ;
+    rdfs:label "969318 Provided Identifier" ;
+    pmdco:value "Heizen auf 1100°C mi" .
+
+pmde:96a272d1c2b34492849abfb7e8c1c3f5 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "96a272 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:97c2c720158e467389f148e9c20067cf a pmdco:HeatTreatmentProcess ;
+    rdfs:label "97c2c7 Heat Treatment Process" ;
+    pmdco:characteristic pmde:0acd3e463441490d90a94d779f5871e7,
+        pmde:1084cdeb8f1746f18cb6c9f9997fba89,
+        pmde:18586dbcc6954695b3b177736f772308,
+        pmde:189cf26f5b824f5ca8ba568ece176a4e,
+        pmde:290dfe67bf9246588732d270483c6086,
+        pmde:2bebe91758fb440f83af62ec8135bf0e,
+        pmde:2fad4b3e501544438134f70650ca8cfb,
+        pmde:3c0a9b1af3674fe8b95f9869105e2bf8,
+        pmde:4cde5bbc75784951aa6c4b670005eb89,
+        pmde:5253d2e1149e4a459dd8925707e1cd77,
+        pmde:636987594dee42d18f86e7f14b95e4b8,
+        pmde:641d019a5a5b45faa4fd4f8fd735dc51,
+        pmde:6ba428974fa04a719a02ea2e52309c17,
+        pmde:6d0879fb7cf049d1aef524cdeebd6f7e,
+        pmde:7a29248cd33f49b28fb8183974a635c2,
+        pmde:7d72a107966d46e2a1269dcde5747ae2,
+        pmde:7f4fa3e1c615497caf7ca1c51e99ac79,
+        pmde:83b4c6c12662460e8a5ed2768349e8bd,
+        pmde:9297010a5b1e4119bb2097bad0f3b9e5,
+        pmde:b647af0488f940bc937f3731d7b2927c,
+        pmde:c7317abc776c493081fb60771540f054,
+        pmde:da0bfcdabc374a76835a5e138c29e249,
+        pmde:f317ffd618684adda022e9f3e5ba11c6 .
+
+pmde:97e1628ccd88424f84958bd413a6bd05 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "97e162 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:9875ca8536c7413e9c8f202e81d34346 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "9875ca Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 2.7e+03 .
+
+pmde:991af74519e843b8bb2daf50a72932c3 a pmdco:NodeName ;
+    rdfs:label "991af7 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:9a38cb2180934c1c9e14e98a74ef5b7b a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "9a38cb Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:9a6076dc432e4e5dba2e141c6c02b7fc a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "9a6076 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:9aba67fbef05409aacd0a91325e43cae a pmdco:EndTime ;
+    rdfs:label "9aba67 End Time" ;
+    pmdco:value 1.610969e+09 .
+
+pmde:9abc8ada02cf4b5eb76c71f3431eb280 a pmdco:EndTime ;
+    rdfs:label "9abc8a End Time" ;
+    pmdco:value 1.61098e+09 .
+
+pmde:9b94400090604b488464dde98f96047e a ipsen:GasCooling ;
+    rdfs:label "9b9440 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:9cf39e9ff6e1483ea15653c469d3ffe1 a pmdco:ProvidedIdentifier ;
+    rdfs:label "9cf39e Provided Identifier" ;
+    pmdco:value "Aufkohlen 2min 500l/" .
+
+pmde:9d079dd913c64c27b85cd040f0136583 a ipsen:VacuumCooling ;
+    rdfs:label "9d079d Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:9d0ac0494859421c9aef3c8c7fc33c93 a pmdco:StartTime ;
+    rdfs:label "9d0ac0 Start Time" ;
+    pmdco:value 1.610983e+09 .
+
+pmde:9dbaa056fff54ab7baf3dc3461f5a169 a pmdco:ProcessDuration,
+        pmdco:SetPoint ;
+    rdfs:label "9dbaa0 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:9ddef6c5c2c44645925d19252677c377 a pmdco:ProvidedIdentifier ;
+    rdfs:label "9ddef6 Provided Identifier" ;
+    pmdco:value "Absenken auf 940°C/3" .
+
+pmde:9f3610fe1765478597dc8b2a45480652 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "9f3610 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:9f9ccb883a23414eb136b5926954f636 a ipsen:GasIngressFront ;
+    rdfs:label "9f9ccb Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:a048cbb7886a4076986fd97d37a0356d a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "a048cb Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:a1420d8888114e82af63bca87a95c87b a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "a1420d Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:a1b5fb5eb4864cbd8e60af4d89528204 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "a1b5fb Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.8e+03 .
+
+pmde:a20b2edfa8c541878969344e9c43b757 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "a20b2e Temperature" ;
+    pmdco:value 940 .
+
+pmde:a24636c25daf46fbad5ff8b40006e6dc a ipsen:GasIngressBack ;
+    rdfs:label "a24636 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:a269c718cf6d45cba64029976962d30c a ipsen:OilFlowFast ;
+    rdfs:label "a269c7 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:a4a97e9b54984d9ea837674fda41b083 a ipsen:GasIngressBack ;
+    rdfs:label "a4a97e Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:a4cf39d8f3a04c7eb5992c3091850c9e a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "a4cf39 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:a632730e68b94da6b98050f168c27061 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "a63273 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:a67539af8c7748d79932887db7cce6b3 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "a67539 Heat Treatment Process" ;
+    pmdco:characteristic pmde:070b3b32875840d5a3b8f407fc80bfe6,
+        pmde:0e558a2423ec495d917b696e55866137,
+        pmde:10a0a4211ee0431b82d06111807a6b9d,
+        pmde:16a9330b91bb441f820904ee3124c76d,
+        pmde:1718168d825741949d569da0b6f4e752,
+        pmde:19aba500ef664e6ba27cd9811f755feb,
+        pmde:19c8ff73f2e14beeab23aa2de67032d1,
+        pmde:325d7b8ab65844cc9e0c019f03ee7de1,
+        pmde:41952fc0bd5945b2af7d14ddd4bb7ad0,
+        pmde:41a6480023e249f4948b68c3bb434e5c,
+        pmde:520d9c27515a46b6b8ddcbde7883477c,
+        pmde:592cd7d02f814409a711bfbcf92764aa,
+        pmde:663b0e9925c44ae482a4ddfd354d3035,
+        pmde:67e143b65aed465e95c7c458c04f57b3,
+        pmde:6be58a76e3404c81a749e322674b052d,
+        pmde:77f74812e547480f9fc0676683e53eee,
+        pmde:826e833eea0d4408a2d524dc228ea09b,
+        pmde:8c3f8a335ddf40eba923421de3caa95e,
+        pmde:8e852db4ff08471eb0b155012715dbd3,
+        pmde:d2433bdfe0c84d75969001778f5495c3,
+        pmde:dfbd08a9988c44efaa1b941da5b28b48,
+        pmde:e1c4cdb6804946ff9f58feb2c36841e5,
+        pmde:f9c01c4217524d199912d29ed3c709d3 .
+
+pmde:a72f7c815a4d47a987b866af167ca219 a pmdco:NodeName ;
+    rdfs:label "a72f7c Node Name" ;
+    pmdco:value "HK" .
+
+pmde:a737ffcb61b1430a8329464946a49fef a pmdco:EndTime ;
+    rdfs:label "a737ff End Time" ;
+    pmdco:value 1.610988e+09 .
+
+pmde:a7fd16a048564a8199044c34633f661e a ipsen:GasIngressBack ;
+    rdfs:label "a7fd16 Gas Ingress Back" ;
+    pmdco:value true .
+
+pmde:a80e521336a349d88d5d13799cc7fc38 a ipsen:OilFlowFast ;
+    rdfs:label "a80e52 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:a8cc25b6f2c843c39d46e63f2304d184 a pmdco:EndTime ;
+    rdfs:label "a8cc25 End Time" ;
+    pmdco:value 1.610953e+09 .
+
+pmde:a918bfacba2c4ac88aba7fda85f0107c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "a918bf Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:aa8af231d3954089be580d2e2e661171 a pmdco:SetPoint,
+        hto:TargetTemperature ;
+    rdfs:label "aa8af2 Target Temperature" ;
+    pmdco:value 1095 .
+
+pmde:ab898aac81894ccaa4310c620e780474 a pmdco:EndTime ;
+    rdfs:label "ab898a End Time" ;
+    pmdco:value 1.610985e+09 .
+
+pmde:abc442cae46f48d1b7ab1ff2a0fe00f1 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "abc442 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:abd62b2ed22246b7aac94ad17e8205d2 a pmdco:ProcessDuration,
+        pmdco:SetPoint ;
+    rdfs:label "abd62b Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:ad2cb654996d4c97bdc5a3b670b3025d a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ad2cb6 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:ad48ce2dba3841c7a528f68b0a484e37 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ad48ce Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:ae30307a70124e429d163f8f037e2caa a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "ae3030 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:aeab682939b54dc085f831754ca31bb1 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "aeab68 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:af56d5603b3a46b5ae3b77f7a3150dc5 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "af56d5 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:b0b8432aa48f43859fe52de10102292f a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "b0b843 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:b1427d503ef74607b58fda431f82ab0e a pmdco:EndTime ;
+    rdfs:label "b1427d End Time" ;
+    pmdco:value 1.610994e+09 .
+
+pmde:b15375bf0d26436397d9b85af9a3f044 a ipsen:OilFlowFast ;
+    rdfs:label "b15375 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:b415621ac6294d62827bb17fc30247c1 a ipsen:GasCooling ;
+    rdfs:label "b41562 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:b49b8314442247b8b4ff7ca9509cb8c8 a pmdco:ProvidedIdentifier ;
+    rdfs:label "b49b83 Provided Identifier" ;
+    pmdco:value "20°C warten" .
+
+pmde:b49d71cd32934c62bca1e7cc762d582b a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "b49d71 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:b5b6d939df69441b838ada5e63678e36 a ipsen:GasIngressFront ;
+    rdfs:label "b5b6d9 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:b5e47a5c13e247fdb055c5da544064dc a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "b5e47a Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:b647af0488f940bc937f3731d7b2927c a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "b647af Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:b69ce1a05f4e463c8262a42006d52fea a pmdco:NodeName ;
+    rdfs:label "b69ce1 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:b6b0aa02c9654942a44b4ab1bb3ac91b a pmdco:EndTime ;
+    rdfs:label "b6b0aa End Time" ;
+    pmdco:value 1.610983e+09 .
+
+pmde:b766b524e6f04b689b72a93e89e2b54a a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "b766b5 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:b7d9f73c6fa94f629152230e691229d6 a ipsen:GasIngressBack ;
+    rdfs:label "b7d9f7 Gas Ingress Back" ;
+    pmdco:value true .
+
+pmde:b7f271d40ed4495c8c4248a6f3b2f725 a hto:SequenceNumber ;
+    rdfs:label "b7f271 Sequence Number" ;
+    pmdco:value 10 .
+
+pmde:b8d33ccc4e8f4e059182650b4a032723 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "b8d33c Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:b97c54ec98dc4626b6c5e9eede45c4dd a hto:SequenceNumber ;
+    rdfs:label "b97c54 Sequence Number" ;
+    pmdco:value 3 .
+
+pmde:ba98121118a94c3f812bf135496b9277 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ba9812 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:baccbe4255e24b6ea864e8a2f5c8d0d6 a pmdco:EndTime ;
+    rdfs:label "baccbe End Time" ;
+    pmdco:value 1.610975e+09 .
+
+pmde:bbc7fa7c53e74e269ed36adb35fb41bf a hto:SequenceNumber ;
+    rdfs:label "bbc7fa Sequence Number" ;
+    pmdco:value 18 .
+
+pmde:bbe6feb32a4a49eea3efcfe99bf226e8 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "bbe6fe Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:bc11f8c983964244b2f3df57219bcd97 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "bc11f8 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:bc5b5477c88346d1a44a0427bfd2c956 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "bc5b54 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:bd195d0ff3574c9d92aaef1a852db22e a ipsen:OilFlow ;
+    rdfs:label "bd195d Oil Flow" ;
+    pmdco:value true .
+
+pmde:be38b48ee5f44723b82b44b9e7539665 a ipsen:OilFlowFast ;
+    rdfs:label "be38b4 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:be6e00a2048b41258a81d0c1f5f4a3ff a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "be6e00 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:bf9f1b1d022f4026b9d278afa7718b09 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "bf9f1b Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 6e+01 .
+
+pmde:c003b3a03b144d329886c8d919d7ad15 a pmdco:NodeName ;
+    rdfs:label "c003b3 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:c0045cf7c3a248aeb9145ac3b153183f a pmdco:NodeName ;
+    rdfs:label "c0045c Node Name" ;
+    pmdco:value "HK" .
+
+pmde:c0fbb8cfbcf647a8a3589b7972c856b8 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "c0fbb8 Temperature" ;
+    pmdco:value 940 .
+
+pmde:c17b978c82694313a3775ac4746abf66 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "c17b97 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:c184140e3e404c97b7c13701055a8805 a ipsen:GasIngressBack ;
+    rdfs:label "c18414 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:c1867cfc63a44176bfc3ece4cea9bf77 a ipsen:OilFlowUp ;
+    rdfs:label "c1867c Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:c1a3c68863734e2e8d3f8fd31cf73e95 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "c1a3c6 Temperature" ;
+    pmdco:value 900 .
+
+pmde:c2c34ab7fbd749d7a895905419c284d6 a pmdco:SetPoint,
+        hto:TemperatureDifference ;
+    rdfs:label "c2c34a Temperature Difference" ;
+    pmdco:unit unit:DEG_C-PER-MIN ;
+    pmdco:value 15 .
+
+pmde:c411f8cad57c489c8bad58fe074cd97c a ipsen:OilFlowUp ;
+    rdfs:label "c411f8 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:c41daf61db3e4bc3ac98cb413d1928ba a ipsen:OilFlowUp ;
+    rdfs:label "c41daf Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:c51d0fb8cb7a4a089aa7a82618df6421 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "c51d0f Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:c523a49f2f9e43e4a2ae652f6574c111 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "c523a4 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:c5640aec3f1f422dbc68a975c8924b4c a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "c5640a Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:c62d53ba7dfc4abeaf1fc67d1f430398 a ipsen:OilFlowUp ;
+    rdfs:label "c62d53 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:c684cd39892946d28945b0343f6f3c6e a hto:SequenceNumber ;
+    rdfs:label "c684cd Sequence Number" ;
+    pmdco:value 6 .
+
+pmde:c69c81eb49c64b6782fb93399bb5a08e a ipsen:OilFlowFast ;
+    rdfs:label "c69c81 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:c702dad1941e4f88949374af1a8099b8 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "c702da Overheat" ;
+    pmdco:value 1200 .
+
+pmde:c72d624a37d74bad8e9ce2b7d9b28a0c a ipsen:OilFlowUp ;
+    rdfs:label "c72d62 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:c7317abc776c493081fb60771540f054 a ipsen:VacuumCooling ;
+    rdfs:label "c7317a Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:c7980503a8ce4688a3d6e312d8357e5d a ipsen:GasIngressFront ;
+    rdfs:label "c79805 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:c7e24aae2a0b418eaa198854f76610d3 a pmdco:NodeName ;
+    rdfs:label "c7e24a Node Name" ;
+    pmdco:value "HK" .
+
+pmde:c98b2c38d7a84edf84e9aadc8f0325da a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "c98b2c Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:c9bc95da8e884c2ebe953ea5536f1b63 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "c9bc95 Heat Treatment Process" ;
+    pmdco:characteristic pmde:14b28d1dfdb34cda9f4a6b436f9ac87c,
+        pmde:1790a9b02a31439880bf2e81d104fc15,
+        pmde:30ef7d449c2b4671877aebf3b9384b28,
+        pmde:40e9976a6d23487891430eb2a6facc85,
+        pmde:41ace90d21894f1599e4d0a5eb968ba9,
+        pmde:51cba3bd0cf8407bb829e7c59ec327ca,
+        pmde:70ea83bc8e684cce9cbc4b3b364dcb0d,
+        pmde:719b65683758467194710a8ef478e1f4,
+        pmde:7d7f4486e1664ac99d5d5f0de0cf51ae,
+        pmde:7e390f2e3aba4253815d386a83830bc5,
+        pmde:835eaf5831d04880b314e8e640b4ed64,
+        pmde:8cb88cd44c134a4882f350ee87605620,
+        pmde:94a31126b7684c398b19214d1519febb,
+        pmde:cc400590d7ac4707a1b45cfdc6a27d59,
+        pmde:d45a844266b845c380272481316f3ce4,
+        pmde:e33f53e81d514c9fb44fbef213e901d8,
+        pmde:ebf8b82201e749f78ee8e4ee50a5d685 .
+
+pmde:c9ed86fb9f6f4038a2a2cf8aef106262 a hto:SequenceNumber ;
+    rdfs:label "c9ed86 Sequence Number" ;
+    pmdco:value 8 .
+
+pmde:ca773f3f631341838f785be5f49c1803 a ipsen:OilFlowUp ;
+    rdfs:label "ca773f Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:cc400590d7ac4707a1b45cfdc6a27d59 a pmdco:StartTime ;
+    rdfs:label "cc4005 Start Time" ;
+    pmdco:value 1.610994e+09 .
+
+pmde:cd4f0bb87d8648a0b1b3a4b71283f290 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "cd4f0b Overheat" ;
+    pmdco:value 1200 .
+
+pmde:ce28fce8842b40049a92e317b6434d33 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ce28fc Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 500 .
+
+pmde:ce403932559c4ae29cdfc448b1734acc a pmdco:ProvidedIdentifier ;
+    rdfs:label "ce4039 Provided Identifier" ;
+    pmdco:value "PROG-ENDE" .
+
+pmde:cea831cc64db454881c1736df98c07fb a pmdco:NodeName ;
+    rdfs:label "cea831 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:d0170855d36e4c76912db6b698ae2db3 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "d01708 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 9e+02 .
+
+pmde:d05cdc6bac6843e0ba74046cb77f1605 a ipsen:OilFlow ;
+    rdfs:label "d05cdc Oil Flow" ;
+    pmdco:value true .
+
+pmde:d07a3e2aa5ed4ec685101b19d3bdff71 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d07a3e Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d08e99d603d74d89a60dad0b34627186 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d08e99 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d11d585bcc4a43d8b3a7b2870227d6e1 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "d11d58 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 3.6e+03 .
+
+pmde:d146e575952544c19bd40ea6905572e3 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d146e5 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d1827a108f264bf293877c3ca17a6564 a pmdco:EndTime ;
+    rdfs:label "d1827a End Time" ;
+    pmdco:value 1.610988e+09 .
+
+pmde:d1938d0cf4e74e009bb94687a71c57c0 a pmdco:StartTime ;
+    rdfs:label "d1938d Start Time" ;
+    pmdco:value 1.610995e+09 .
+
+pmde:d2433bdfe0c84d75969001778f5495c3 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "d2433b Overheat" ;
+    pmdco:value 1200 .
+
+pmde:d2a76e9b8317445cbf90a11e34f21bf6 a ipsen:OilFlowUp ;
+    rdfs:label "d2a76e Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:d2b01390b2f54b87bbefe228730f14c1 a ipsen:GasIngressFront ;
+    rdfs:label "d2b013 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:d2bea561e7334574858deb011bf2172e a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d2bea5 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d32568674356466dbe63f58beac1fd31 a pmdco:SetPoint,
+        hto:TargetTemperature ;
+    rdfs:label "d32568 Target Temperature" ;
+    pmdco:value 895 .
+
+pmde:d363833c1c934dc49bc23a86ee18dbc1 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "d36383 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.8e+03 .
+
+pmde:d3910dc9668b4d3fab532d554df164b0 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d3910d Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d45a844266b845c380272481316f3ce4 a pmdco:SetPoint,
+        hto:OilQuenchingDuration ;
+    rdfs:label "d45a84 Oil Quenching Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 15 .
+
+pmde:d4c39b682c99499fa418c4a4b6a90a2f a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d4c39b Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d59811aac9cc4a229319fe3c11dffdfb a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "d59811 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:d6157c72621d47a882c0cdb12bb51dba a hto:SequenceNumber ;
+    rdfs:label "d6157c Sequence Number" ;
+    pmdco:value 11 .
+
+pmde:d61f760546164bb9a118308f04d46e86 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d61f76 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d7527538fba1457f8c944fa2379bbc11 a pmdco:EndTime ;
+    rdfs:label "d75275 End Time" ;
+    pmdco:value 1.610983e+09 .
+
+pmde:d78bab0d49f84463b84416791101488f a ipsen:GasIngressFront ;
+    rdfs:label "d78bab Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:d7dbcb70a142496eacd59e72b9327481 a ipsen:GasIngressFront ;
+    rdfs:label "d7dbcb Gas Ingress Front" ;
+    pmdco:value true .
+
+pmde:d85804b4128e4621bad0a16c54a65b98 a ipsen:OilFlow ;
+    rdfs:label "d85804 Oil Flow" ;
+    pmdco:value false .
+
+pmde:d8989654d6854266956dc5a1b41326a1 a pmdco:EndTime ;
+    rdfs:label "d89896 End Time" ;
+    pmdco:value 1.610972e+09 .
+
+pmde:d89efb29c9f24a72972febff4a3635a3 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "d89efb Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:d8b305c1c56b40a991146eb06e070d28 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "d8b305 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:d8f94a7b81314f2cba8ba61a65b128a2 a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "d8f94a Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:da0bfcdabc374a76835a5e138c29e249 a ipsen:OilFlowFast ;
+    rdfs:label "da0bfc Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:da20ba45a24d4578a3c4a8bebff48bda a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "da20ba Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:da76c3c694da4e108549c5604d50b788 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "da76c3 Heat Treatment Process" ;
+    pmdco:characteristic pmde:01a2feac878d45aab05845f46660fbda,
+        pmde:048b9e8964d040008b831eae1903195a,
+        pmde:04ac07b7d8ef4d039b638ae28065658b,
+        pmde:0cee82d6a0fb42a982a63cb962da1042,
+        pmde:21daebebebb341f08d12f7f01ed93f8c,
+        pmde:2bf0e92ae1c84177b3ee38708f6b9b56,
+        pmde:3b258b7c27704dfba5a162ac619c457c,
+        pmde:3bc9e26a6f6249ab84cb43863ec16a68,
+        pmde:451d1d9829c7453c843624215e0a7e5d,
+        pmde:51a2f91024db495b9806da10e990450f,
+        pmde:6aca1cd6961e495cb928d7bff5e96a5e,
+        pmde:7ae2f6cf6f9d4702ac441c6914001cd0,
+        pmde:86c20ba05ed84721bd85b174c81dbf42,
+        pmde:86d848b30ded426cbb4684f1291085cc,
+        pmde:8c7466d6d62c4a32950e693311d7a1fc,
+        pmde:8e533ed10d8040f6a02ff5502642b1ca,
+        pmde:a737ffcb61b1430a8329464946a49fef,
+        pmde:bbc7fa7c53e74e269ed36adb35fb41bf,
+        pmde:ce28fce8842b40049a92e317b6434d33,
+        pmde:dc440e769f0f4f7caba300b64cd6fba6,
+        pmde:e43082e4ac0f4e4691bebbaf5ed11157,
+        pmde:ee8af95e89104fc7a060a37458c90317,
+        pmde:f08ce3e6a8304493ac8858c7e405f3db,
+        pmde:ff5ed3196051439db7cea0ef68b58955 .
+
+pmde:dabb10fcba704ff3b5b3da048d557121 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "dabb10 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:dade924471994685b45d09367f15be9f a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "dade92 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:daff641c37974a24b168e753090d53d6 a ipsen:GasIngressFront ;
+    rdfs:label "daff64 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:dbaf69166adb4d7cbdbfd59d54239b9e a ipsen:OilFlowUp ;
+    rdfs:label "dbaf69 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:dc1a03c9edde4a97a15f342c8e11e9ae a pmdco:NodeName ;
+    rdfs:label "dc1a03 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:dc440e769f0f4f7caba300b64cd6fba6 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "dc440e Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:dcea2bc0408d41768376131d0d4fad50 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "dcea2b Overheat" ;
+    pmdco:value 1200 .
+
+pmde:ddce296cdab14971b23f4f9acd0ad2e8 a ipsen:OilFlowUp ;
+    rdfs:label "ddce29 Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:ddd4fa9c31984e59ad1f27257bbdf30d a pmdco:ProvidedIdentifier ;
+    rdfs:label "ddd4fa Provided Identifier" ;
+    pmdco:value "Halten unter Vakuum" .
+
+pmde:de9a18ede5f84db79e517f6917baaf16 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "de9a18 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:dee85a744245467a8bf24d0cb189bc1b a hto:SequenceNumber ;
+    rdfs:label "dee85a Sequence Number" ;
+    pmdco:value 13 .
+
+pmde:dfbd08a9988c44efaa1b941da5b28b48 a ipsen:GasIngressBack ;
+    rdfs:label "dfbd08 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:dff991f36b8342c7932283841ee5bef6 a ipsen:OilFlowFast ;
+    rdfs:label "dff991 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:e057bd83579b4837907cc359bc9f6a90 a ipsen:GasIngressBack ;
+    rdfs:label "e057bd Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:e07de73a63d849618a8b53c3122526b8 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "e07de7 Heat Treatment Process" ;
+    pmdco:characteristic pmde:04f1c08955ce4fa5a053b7eb5da03da4,
+        pmde:09c7e55478424b0c9ba9d0935cb47e7a,
+        pmde:166e7aa7df0e465ea306d58105c47883,
+        pmde:21ab6143205a4cc8ad061b4cadca0261,
+        pmde:2bb71a82efca4c41a191d50609727b5d,
+        pmde:3252501f03ce4875b1f46667f73e3068,
+        pmde:367d6d6435264603ad3fe2d88cdc54ee,
+        pmde:519629e7761a45d38045b74020460731,
+        pmde:64c99dc02ac64d649f856763703d3e22,
+        pmde:6671e2e148424854bd1dba079bd1b641,
+        pmde:71ba53b0453a47688965abc7349f135f,
+        pmde:784d1ff7993947a49f1f328c70f62171,
+        pmde:7af2b4b21c664977b5e4c99ccd41619b,
+        pmde:82218c7ae75d4d9ebd8457b763e34972,
+        pmde:824715cf8e7640a69c713b949fdf13bd,
+        pmde:882708664d3c426c8a5be374ec5863de,
+        pmde:8e3820117dce4a6bbc18ec82bbb915e8,
+        pmde:9d079dd913c64c27b85cd040f0136583,
+        pmde:ab898aac81894ccaa4310c620e780474,
+        pmde:bc5b5477c88346d1a44a0427bfd2c956,
+        pmde:d59811aac9cc4a229319fe3c11dffdfb,
+        pmde:ddce296cdab14971b23f4f9acd0ad2e8,
+        pmde:dff991f36b8342c7932283841ee5bef6 .
+
+pmde:e0908f6eae604d6ca3232dd60ec3a8f8 a ipsen:OilFlow ;
+    rdfs:label "e0908f Oil Flow" ;
+    pmdco:value true .
+
+pmde:e0b4b0762f2e46db87fe9fda947655b0 a ipsen:GasIngressBack ;
+    rdfs:label "e0b4b0 Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:e160066929cd49ca9d43f22c7d18413b a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "e16006 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:e174747fcfcf4ba783eff6a128a24af8 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "e17474 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 5e+02 .
+
+pmde:e181cd53348044b8aa33f6997efa9d66 a pmdco:NodeName ;
+    rdfs:label "e181cd Node Name" ;
+    pmdco:value "HK" .
+
+pmde:e1c4cdb6804946ff9f58feb2c36841e5 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "e1c4cd Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:e20ca33acf5c4d02a90841d7644f91be a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "e20ca3 Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:e226a443fd3c47a5b02acdc7cb684e08 a pmdco:NodeName ;
+    rdfs:label "e226a4 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:e244daf802a948ab9c9c4b75948fa8f8 a ipsen:GasIngressBack ;
+    rdfs:label "e244da Gas Ingress Back" ;
+    pmdco:value false .
+
+pmde:e33f53e81d514c9fb44fbef213e901d8 a pmdco:ProvidedIdentifier ;
+    rdfs:label "e33f53 Provided Identifier" ;
+    pmdco:value "Ölabschrecken" .
+
+pmde:e399d951c5cb4134979df9f2b99188d1 a pmdco:EndTime ;
+    rdfs:label "e399d9 End Time" ;
+    pmdco:value 1.610985e+09 .
+
+pmde:e3b202831f354f3d82224caa2c016d72 a ipsen:GasIngressFront ;
+    rdfs:label "e3b202 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:e3d98a371b004185b4fea0b4e513287c a ipsen:GasCooling ;
+    rdfs:label "e3d98a Gas Cooling" ;
+    pmdco:value false .
+
+pmde:e40c43f9cd524b7f9739fb8a9163da38 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "e40c43 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:e43082e4ac0f4e4691bebbaf5ed11157 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "e43082 Overheat" ;
+    pmdco:value 1200 .
+
+pmde:e466b359f511423297560e1d88c943c5 a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "e466b3 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:e7e224b1d3de4c3ebbff200bdbdf14a6 a ipsen:OilFlow ;
+    rdfs:label "e7e224 Oil Flow" ;
+    pmdco:value true .
+
+pmde:e84d1c8063a745d8bbf6abb64c1ff8c3 a pmdco:SetPoint,
+        hto:Overheat ;
+    rdfs:label "e84d1c Overheat" ;
+    pmdco:value 1200 .
+
+pmde:e894fe4f15574c8581032b23de514c28 a pmdco:SetPoint,
+        hto:VacuumHeating ;
+    rdfs:label "e894fe Vacuum Heating" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 2.5e+03 .
+
+pmde:e8caea80a34542cea43ebbbb7c9c344a a pmdco:ProcessDuration,
+        pmdco:SetPoint ;
+    rdfs:label "e8caea Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:e8d3bd478d484161a76f75c3ccd12bb6 a ipsen:OilFlow ;
+    rdfs:label "e8d3bd Oil Flow" ;
+    pmdco:value true .
+
+pmde:e99b847a41f349289a4b9cacaef4be4f a pmdco:ProvidedIdentifier ;
+    rdfs:label "e99b84 Provided Identifier" ;
+    pmdco:value "Aufkohlen 2min 500l/" .
+
+pmde:ea29a9c2f1044b9489bfcb349721a14d a ipsen:VacuumCooling ;
+    rdfs:label "ea29a9 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:ea96bdce2c82463f9fe4cb72b55a5263 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ea96bd Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:eb1575f4990f45af917fc3e4266aae9c a ipsen:OilFlowFast ;
+    rdfs:label "eb1575 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:eb177f5af431413aa4ae57b2bc6b478b a ipsen:GasIngressBack ;
+    rdfs:label "eb177f Gas Ingress Back" ;
+    pmdco:value true .
+
+pmde:eb5fcbf7e0dd4acc90540be85ed689f4 a ipsen:GasCooling ;
+    rdfs:label "eb5fcb Gas Cooling" ;
+    pmdco:value false .
+
+pmde:ebf8b82201e749f78ee8e4ee50a5d685 a ipsen:VacuumCooling ;
+    rdfs:label "ebf8b8 Vacuum Cooling" ;
+    pmdco:value false .
+
+pmde:ebf94796a8b5449a8c3d7aa85c2c4778 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ebf947 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:ec3abe8b44384bdea98993435e63a099 a pmdco:ProvidedIdentifier ;
+    rdfs:label "ec3abe Provided Identifier" ;
+    pmdco:value "Durchwärmen bei 1100" .
+
+pmde:ecbec379e80f4453bcae8e4dfbb30cb3 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ecbec3 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_16183 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:ed02dcc127574c609935a5bc5adf5364 a ipsen:OilFlowFast ;
+    rdfs:label "ed02dc Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:ed48c7405fd84431843a4196999110f9 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ed48c7 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:ed923384b57147fd91274f310e4d099a a ipsen:OilFlow ;
+    rdfs:label "ed9233 Oil Flow" ;
+    pmdco:value true .
+
+pmde:edada77e7961411292c925205ddfc6ec a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "edada7 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 4e+02 .
+
+pmde:edd136414d934509ac22a6e7045adb9a a pmdco:SetPoint,
+        hto:PartialPressure ;
+    rdfs:label "edd136 Partial Pressure" ;
+    pmdco:unit unit:PA ;
+    pmdco:value 0e+00 .
+
+pmde:edd74d3d9ca64a6eb7bc79a822caad80 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "edd74d Heat Treatment Process" ;
+    pmdco:characteristic pmde:2193d1b91ebf4351a4e3f92bb2524680,
+        pmde:26133aeb5c414228b4aa0357c8ba8e2c,
+        pmde:27ef82463f014bec996af5b81ee5813d,
+        pmde:2dade93758774fcbbe52fafe1d80b15b,
+        pmde:5f4c3ecade0a4ede9437f894babe575f,
+        pmde:61c90db9ec464f8695a2f4a6c1b18c54,
+        pmde:695e6608f08445f7ad37fc89866823a8,
+        pmde:7ab539001edc4396b20dd3550133deb7,
+        pmde:830777797040483ba0823fd5f90a1488,
+        pmde:9087a3a67eda466d8b3e504248a298ce,
+        pmde:a20b2edfa8c541878969344e9c43b757,
+        pmde:b6b0aa02c9654942a44b4ab1bb3ac91b,
+        pmde:bc11f8c983964244b2f3df57219bcd97,
+        pmde:be38b48ee5f44723b82b44b9e7539665,
+        pmde:c41daf61db3e4bc3ac98cb413d1928ba,
+        pmde:d2b01390b2f54b87bbefe228730f14c1,
+        pmde:dade924471994685b45d09367f15be9f,
+        pmde:dc1a03c9edde4a97a15f342c8e11e9ae,
+        pmde:ddd4fa9c31984e59ad1f27257bbdf30d,
+        pmde:dee85a744245467a8bf24d0cb189bc1b,
+        pmde:e160066929cd49ca9d43f22c7d18413b,
+        pmde:ea96bdce2c82463f9fe4cb72b55a5263,
+        pmde:fb27aa6d2dda4e8799865b451abdc590 .
+
+pmde:ee2ace738b3d4375aa64cbdf2eb5d638 a pmdco:ProvidedIdentifier ;
+    rdfs:label "ee2ace Provided Identifier" ;
+    pmdco:value "Aufkohlen 2min 500l/" .
+
+pmde:ee5d8e2864f54b2896e7309dedf0cd7e a pmdco:EndTime ;
+    rdfs:label "ee5d8e End Time" ;
+    pmdco:value 1.61098e+09 .
+
+pmde:ee8af95e89104fc7a060a37458c90317 a pmdco:ProvidedIdentifier ;
+    rdfs:label "ee8af9 Provided Identifier" ;
+    pmdco:value "Aufkohlen 2min 500l/" .
+
+pmde:efa94f7381cd453596d2504d6db8f444 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "efa94f Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.2e+02 .
+
+pmde:f05969c0d1244e53a79c002550ff2337 a pmdco:EndTime ;
+    rdfs:label "f05969 End Time" ;
+    pmdco:value 1.610981e+09 .
+
+pmde:f08ce3e6a8304493ac8858c7e405f3db a pmdco:ProcessDuration,
+        pmdco:SetPoint ;
+    rdfs:label "f08ce3 Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 0 .
+
+pmde:f20720377348439b8cbe1ac6404b6300 a pmdco:SetPoint,
+        hto:TemperatureDifference ;
+    rdfs:label "f20720 Temperature Difference" ;
+    pmdco:unit unit:DEG_C-PER-MIN ;
+    pmdco:value 8e-01 .
+
+pmde:f210a8f701ad4a1a9e2bb4b4c5fe7b82 a pmdco:HeatTreatmentProcess ;
+    rdfs:label "f210a8 Heat Treatment Process" ;
+    pmdco:characteristic pmde:084c00df0b1841b7900e06d4f10d6134,
+        pmde:142f1ddc981c4dafbceffb6819336647,
+        pmde:1d5364441a8d48b4bd3826ad8e6cab1e,
+        pmde:2215026a18d74282b110a068c7794d9e,
+        pmde:2c7e3c760aab4425b6dc215b55b7a439,
+        pmde:2e478776c2a04331ae859011d9c7c679,
+        pmde:403465d6d69743d7ac3542deda4f3e1f,
+        pmde:47508eebc934452f836c29786cf8f291,
+        pmde:73973cd21a6e43ed92c6d5d5fa50fc33,
+        pmde:812dc25a153049cd8a6c7b9f3c91a1e3,
+        pmde:881c5f6cc2c546e0a3c2181f0ec1a049,
+        pmde:934249e8ab55491c8775c26ca13c7404,
+        pmde:991af74519e843b8bb2daf50a72932c3,
+        pmde:a1b5fb5eb4864cbd8e60af4d89528204,
+        pmde:b8d33ccc4e8f4e059182650b4a032723,
+        pmde:c1a3c68863734e2e8d3f8fd31cf73e95,
+        pmde:d2a76e9b8317445cbf90a11e34f21bf6,
+        pmde:e057bd83579b4837907cc359bc9f6a90,
+        pmde:ebf94796a8b5449a8c3d7aa85c2c4778,
+        pmde:ed923384b57147fd91274f310e4d099a,
+        pmde:f22ea5901fd7482eb4d9b72b94c71abf,
+        pmde:f81f6c314fac4257928dd3c0c375cac7,
+        pmde:fdbff97f0d92416e951e2fa10cb0142f .
+
+pmde:f22ea5901fd7482eb4d9b72b94c71abf a ipsen:GasIngressFront ;
+    rdfs:label "f22ea5 Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:f28e84acddec4c2ab01f56bda9d765d3 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "f28e84 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_36908 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:f2ee2790090f4063b203fded5f13fcad a ipsen:GasIngressFront ;
+    rdfs:label "f2ee27 Gas Ingress Front" ;
+    pmdco:value true .
+
+pmde:f317ffd618684adda022e9f3e5ba11c6 a pmdco:EndTime ;
+    rdfs:label "f317ff End Time" ;
+    pmdco:value 1.610951e+09 .
+
+pmde:f4bd26d8d4de488c8fc8923d062f088d a pmdco:NodeName ;
+    rdfs:label "f4bd26 Node Name" ;
+    pmdco:value "HK" .
+
+pmde:f713b3a3940f4193bb54ac97a813fe84 a pmdco:SetPoint,
+        pmdco:Temperature ;
+    rdfs:label "f713b3 Temperature" ;
+    pmdco:value 940 .
+
+pmde:f81f6c314fac4257928dd3c0c375cac7 a pmdco:EndTime ;
+    rdfs:label "f81f6c End Time" ;
+    pmdco:value 1.610971e+09 .
+
+pmde:f8a95282b9794c83a2a5bc8e00efa495 a ipsen:GasCooling ;
+    rdfs:label "f8a952 Gas Cooling" ;
+    pmdco:value false .
+
+pmde:f925cb3666cf4d7dabc5bede700a2e83 a ipsen:GasIngressFront ;
+    rdfs:label "f925cb Gas Ingress Front" ;
+    pmdco:value false .
+
+pmde:f9a3f708cb75437e9e7f3f293de5007d a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "f9a3f7 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_33608 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:f9c01c4217524d199912d29ed3c709d3 a ipsen:GasCooling ;
+    rdfs:label "f9c01c Gas Cooling" ;
+    pmdco:value false .
+
+pmde:fb27aa6d2dda4e8799865b451abdc590 a pmdco:Measurement,
+        pmdco:ProcessDuration ;
+    rdfs:label "fb27aa Process Duration" ;
+    pmdco:unit unit:SEC ;
+    pmdco:value 1.5e+03 .
+
+pmde:fc048f960783419c9e1f264c8818de03 a ipsen:OilFlow ;
+    rdfs:label "fc048f Oil Flow" ;
+    pmdco:value true .
+
+pmde:fd4eff579e4c44fcb3e2cda3150bdb43 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "fd4eff Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:fd803a6855214555ba1f3ad47e59c130 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "fd803a Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:fdbff97f0d92416e951e2fa10cb0142f a pmdco:SetPoint,
+        hto:OilTemperature ;
+    rdfs:label "fdbff9 Oil Temperature" ;
+    pmdco:value 55 .
+
+pmde:fe24b11cc0924ba59d74ec6dbc71a602 a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "fe24b1 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_32879 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 500 .
+
+pmde:ff321bc1284e4007be4baade0226fd9c a ipsen:OilFlowUp ;
+    rdfs:label "ff321b Oil Flow Up" ;
+    pmdco:value false .
+
+pmde:ff5ed3196051439db7cea0ef68b58955 a ipsen:OilFlowFast ;
+    rdfs:label "ff5ed3 Oil Flow Fast" ;
+    pmdco:value false .
+
+pmde:ffc411a0157243bb80f1e3342f912c3a a pmdco:SetPoint,
+        hto:FlowRate ;
+    rdfs:label "ffc411 Flow Rate" ;
+    pmdco:relatesToElement obo:CHEBI_51143 ;
+    pmdco:unit unit:L-PER-HR ;
+    pmdco:value 0 .
+
+pmde:21dc63938d8849baa37f75872ac83e08 a pmdco:Object ;
+    rdfs:label "21dc63 Object" .
+
